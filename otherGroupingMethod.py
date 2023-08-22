@@ -28,7 +28,7 @@ def modifyWeight(std_keys, local_weights):
             param_update = sub_res if len(param_update) == 0 else torch.cat((param_update, sub_res), 0)
     # print("param_update size is ",param_update.size())
         param_updates = param_update.clone().unsqueeze(0) if len(param_updates) == 0 else torch.cat((param_updates, param_update.clone().unsqueeze(0)), dim=0)  # 先用unsqueeze(0)增加维度
-        print("param_updates type is ", type(param_updates))
+        # print("param_updates type is ", type(param_updates))
         # print("param_updates shape is ", type(param_updates))
     return param_updates
 
@@ -207,7 +207,7 @@ Adaptive federated average（AFA）：对所有的logits求平均，
 '''
 
 
-def AFA(para_updates, interfere_idx):  #
+def AFA(para_updates, interfere_idx, device):  #
     # 两个向量有相同的指向时，余弦相似度的值为1；
     # 两个向量夹角为90°时，余弦相似度的值为0；
     # 两个向量指向完全相反的方向时，余弦相似度的值为-1。
@@ -252,13 +252,13 @@ def AFA(para_updates, interfere_idx):  #
     
         
 
-    agg_para_update = torch.mean(torch.tensor([item.cpu().detach().numpy() for item in filter_clients]).cuda(), dim=0)  # 。原因是：要转换的list里面的元素包含多维的tensor。
+    agg_para_update = torch.mean(torch.tensor([item.cpu().detach().numpy() for item in filter_clients]).to(device), dim=0)  # 。原因是：要转换的list里面的元素包含多维的tensor。
 
     return agg_para_update, filter_left
 
 
-def pre_AFA(std_keys, current_epoch_updates, current_index):
+def pre_AFA(std_keys, current_epoch_updates, current_index, device):
     weight_updates = modifyWeight(std_keys, current_epoch_updates)
-    AFA_avg, remain_index = AFA(weight_updates, current_index)
+    AFA_avg, remain_index = AFA(weight_updates, current_index, device)
 
     return AFA_avg, remain_index

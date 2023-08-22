@@ -377,8 +377,8 @@ def self_distillation(model, args, train_dataset, benign_models, num_attacker):
             
             pre_post_distance = model_dist_norm(modelAvg(benign_models, num_attacker, student_model), model.state_dict())
             
-                    1. benign  -> weighted_average ->  当前轮的聚合结果 - > 参考模型梯度
-                    2. weighted_average
+                    # 1. benign  -> weighted_average ->  当前轮的聚合结果 - > 参考模型梯度
+                    # 2. weighted_average
             
             constrain_distance = alpha * sorted_distance + beta * pre_post_distance  ### 本轮的更新情况 1-5   1 2 4 -> 
             print("____________________________________")

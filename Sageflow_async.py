@@ -290,7 +290,7 @@ if __name__ == '__main__':
                     std_dict = copy.deepcopy(global_weights) # 标准字典值
                     std_keys = get_key_list(std_dict.keys())
                     # 调用AFA同时保留对应index
-                    w_res, remain_index = pre_AFA(std_keys, local_weights_delay[i], local_index_delay[i])
+                    w_res, remain_index = pre_AFA(std_keys, local_weights_delay[i], local_index_delay[i], device)
                     w_avg = restoreWeight(std_dict, std_keys, w_res)
                     print("left index is ", remain_index)
                     len_delay = len(remain_index)
@@ -345,27 +345,11 @@ if __name__ == '__main__':
             std_dict = copy.deepcopy(global_weights) # 标准字典值
             # std_keys = std_dict.keys()
             std_keys = get_key_list(std_dict.keys())
-            # user_num = len(list(local_weights_delay[0])) + len(list(local_delay_ew))
-            # attacker_num = int(user_num * args.attack_ratio)
-            # print("attacker_num ", attacker_num)
-            # weight_updates = preKrumGrouping(std_keys, copy.deepcopy(local_weights_delay[0]), local_delay_ew)# 第二个参数实际上是上一轮的pre_weights[1]
-            # if(len(local_index_ew) > 0):
-            #     print(local_index_ew)
-            #     interfere_idx = copy.deepcopy(local_index_delay[0])
-            #     for item in local_index_ew:
-            #         interfere_idx = interfere_idx + copy.deepcopy(item)
-            # else:
-            #     interfere_idx = copy.deepcopy(local_index_delay[0]) + copy.deepcopy(local_index_ew)
-            
-            print("interfere_idx is ",interfere_idx)
-            w_res, remain_index = pre_AFA(std_keys, local_weights_delay[0], interfere_idx)
-            w_avg = restoreWeight(std_dict, std_keys, w_res)
-            # global_update = AFA(weight_updates,user_num - attacker_num, interfere_idx)
-            # 重新恢复dict
-            # global_weights = restoreWeight(std_dict, std_keys, global_update)
 
-            # Staleness-aware grouping
-            global_weights = Sag(epoch, sync_weights, len(remain_index), local_delay_ew,
+            w_res, remain_index = pre_AFA(std_keys, local_weights_delay[0], local_index_delay[0], device)
+            w_avg = restoreWeight(std_dict, std_keys, w_res)
+            print("left index is ", remain_index)
+            global_weights = Sag(epoch, w_avg, len(remain_index), local_delay_ew,
                                                      copy.deepcopy(global_weights))
         
         elif args.update_rule == 'Bulyan':
