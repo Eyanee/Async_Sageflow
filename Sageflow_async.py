@@ -276,7 +276,7 @@ if __name__ == '__main__':
                         w_avg_delay, len_delay, num_attacker_1 = Eflow(local_weights_delay[i], loss_on_public[i], entropy_on_public[i], epoch)
                         pre_weights[i].append({epoch: [w_avg_delay, len_delay]})
                         print("num1 of attacker is ",num_attacker_1)
-                    pre_index[i].append(local_index_delay[i])
+                        pre_index[i].append(local_index_delay[i])
                 elif args.update_rule == 'Krum':
                     # pre_weights[i].append({epoch: [average_weights(local_weights_delay[i]), len(local_weights_delay[i])]})
                     pre_weights[i].append(local_weights_delay[i]) # 修改为记录每一次的，不进行提前聚合, local_weights_delay[i]是List格式
@@ -286,16 +286,19 @@ if __name__ == '__main__':
                     pre_weights[i].append(local_weights_delay[i]) # 修改为记录每一次的，不进行提前聚合, local_weights_delay[i]是List格式
                     pre_index[i].append(local_index_delay[i])
                 elif args.update_rule == 'AFA':
-                    # 在这一步将所有staleness != 1 的轮次进行对应的聚合
-                    std_dict = copy.deepcopy(global_weights) # 标准字典值
-                    std_keys = get_key_list(std_dict.keys())
-                    # 调用AFA同时保留对应index
-                    w_res, remain_index = pre_AFA(std_keys, local_weights_delay[i], local_index_delay[i], device)
-                    w_avg = restoreWeight(std_dict, std_keys, w_res)
-                    print("left index is ", remain_index)
-                    len_delay = len(remain_index)
-                    pre_weights[i].append({epoch: [w_avg, len_delay]})
-                    pre_index[i].append(remain_index)
+                    if len(local_weights_delay[i]) > 0:
+                        # 在这一步将所有staleness != 1 的轮次进行对应的聚合
+                        std_dict = copy.deepcopy(global_weights) # 标准字典值
+                        std_keys = get_key_list(std_dict.keys())
+                        # 调用AFA同时保留对应index
+                        print("i is ", i)
+                        print("local_weights_delay[i] length is ", len(local_weights_delay[i]))
+                        w_res, remain_index = pre_AFA(std_keys, local_weights_delay[i], local_index_delay[i], device)
+                        w_avg = restoreWeight(std_dict, std_keys, w_res)
+                        print("left index is ", remain_index)
+                        len_delay = len(remain_index)
+                        pre_weights[i].append({epoch: [w_avg, len_delay]})
+                        pre_index[i].append(remain_index)
                 elif args.update_rule == 'Bulyan':
                     pre_weights[i].append(local_weights_delay[i])
                     pre_index[i].append(local_index_delay[i])
@@ -345,7 +348,7 @@ if __name__ == '__main__':
             std_dict = copy.deepcopy(global_weights) # 标准字典值
             # std_keys = std_dict.keys()
             std_keys = get_key_list(std_dict.keys())
-
+            print(" stop here")
             w_res, remain_index = pre_AFA(std_keys, local_weights_delay[0], local_index_delay[0], device)
             w_avg = restoreWeight(std_dict, std_keys, w_res)
             print("left index is ", remain_index)

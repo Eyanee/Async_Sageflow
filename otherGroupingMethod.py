@@ -17,6 +17,7 @@ def modifyWeight(std_keys, local_weights):
     """
     param_updates = list()
     param_update = list()
+    print("local weights len is ", len(local_weights))
     for update_item in local_weights:
         param_new = []
         for key in std_keys:
@@ -259,6 +260,8 @@ def AFA(para_updates, interfere_idx, device):  #
 
 def pre_AFA(std_keys, current_epoch_updates, current_index, device):
     weight_updates = modifyWeight(std_keys, current_epoch_updates)
+    # weight_updates = torch.tensor(weight_updates).to(device)
+    print("weight_updates type is ", type(weight_updates))
     AFA_avg, remain_index = AFA(weight_updates, current_index, device)
 
     return AFA_avg, remain_index
