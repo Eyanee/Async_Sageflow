@@ -214,7 +214,6 @@ def AFA(para_updates, interfere_idx, device):  #
     # 两个向量指向完全相反的方向时，余弦相似度的值为-1。
     # 这结果是与向量的长度无关的，仅仅与向量的指向方向相关。
     # 余弦相似度通常用于正空间，因此给出的值为-1到1之间。
-    print("para updates length is ", len(para_updates))
     avg_para_update = torch.mean(para_updates, dim=0)
     attention_scores = []
     # print("avg size is",avg_para_update.size())
@@ -261,7 +260,6 @@ def AFA(para_updates, interfere_idx, device):  #
 def pre_AFA(std_keys, current_epoch_updates, current_index, device):
     weight_updates = modifyWeight(std_keys, current_epoch_updates)
     # weight_updates = torch.tensor(weight_updates).to(device)
-    print("weight_updates type is ", type(weight_updates))
     AFA_avg, remain_index = AFA(weight_updates, current_index, device)
 
     return AFA_avg, remain_index

@@ -361,47 +361,48 @@ def self_distillation(model, args, train_dataset, benign_models, num_attacker):
             distance = model_dist_norm(model.state_dict(), student_model.state_dict())
             print("++++++++++++++++++++")
             print("after training ",epoch)
-            print("before scale ")
             print("avg test entropy is ", avg_entropy)
             print("avg test loss is ", avg_loss)
             print("avg distance is ", distance)
             print("avg accuracy is ", acc)
             print("++++++++++++++++++++")
 
-            alpha = 0.5
-            # C = 5.0
-            beta = 0.2
-            cur_distance = model_dist_norm(student_model.state_dict(), model.state_dict())
-            # 计算 distance是否与良性距离在一定范围内，如果超出该范围，则再次进行放缩
-            # Loss = 自蒸馏Loss + alpha*[D"同一个陈旧度内的"(恶意模型梯度， 参考模型梯度) - C * 第2C大的良性梯度与参考模型之间的Distance] - beta * D(投毒前全局模型，投毒后全局模型)
-            
-            pre_post_distance = model_dist_norm(modelAvg(benign_models, num_attacker, student_model), model.state_dict())
-            
-                    # 1. benign  -> weighted_average ->  当前轮的聚合结果 - > 参考模型梯度
-                    # 2. weighted_average
-            
-            constrain_distance = alpha * sorted_distance + beta * pre_post_distance  ### 本轮的更新情况 1-5   1 2 4 -> 
-            print("____________________________________")
-            print("cur_distance is ", cur_distance)
-            print("sorted_distance is ", sorted_distance)
-            print("pre_post_distance is ", pre_post_distance)
-            print("constrain_distance is ",constrain_distance)
-            print("____________________________________")
 
-            if cur_distance > constrain_distance:
-                w_rand = narrowingDistance(student_model, model, upper_distance = constrain_distance)
-                student_model.load_state_dict(w_rand)
+            #### scale part
+            # alpha = 0.5
+            # # C = 5.0
+            # beta = 0.2
+            # cur_distance = model_dist_norm(student_model.state_dict(), model.state_dict())
+            # # 计算 distance是否与良性距离在一定范围内，如果超出该范围，则再次进行放缩
+            # # Loss = 自蒸馏Loss + alpha*[D"同一个陈旧度内的"(恶意模型梯度， 参考模型梯度) - C * 第2C大的良性梯度与参考模型之间的Distance] - beta * D(投毒前全局模型，投毒后全局模型)
+            
+            # pre_post_distance = model_dist_norm(modelAvg(benign_models, num_attacker, student_model), model.state_dict())
+            
+            #         # 1. benign  -> weighted_average ->  当前轮的聚合结果 - > 参考模型梯度
+            #         # 2. weighted_average
+            
+            # constrain_distance = alpha * sorted_distance + beta * pre_post_distance  ### 本轮的更新情况 1-5   1 2 4 -> 
+            # print("____________________________________")
+            # print("cur_distance is ", cur_distance)
+            # print("sorted_distance is ", sorted_distance)
+            # print("pre_post_distance is ", pre_post_distance)
+            # print("constrain_distance is ",constrain_distance)
+            # print("____________________________________")
 
-            acc,avg_loss, avg_entropy = test_inference(args, student_model, train_dataset, model)
-            distance = model_dist_norm(model.state_dict(), student_model.state_dict())
-            print("++++++++++++++++++++")   
-            print("after training ",epoch)
-            print("after scale ")
-            print("avg test entropy is ", avg_entropy)
-            print("avg test loss is ", avg_loss)
-            print("avg distance is ", distance)
-            print("avg accuracy is ", acc)
-            print("++++++++++++++++++++")
+            # if cur_distance > constrain_distance:
+            #     w_rand = narrowingDistance(student_model, model, upper_distance = constrain_distance)
+            #     student_model.load_state_dict(w_rand)
+
+            # acc,avg_loss, avg_entropy = test_inference(args, student_model, train_dataset, model)
+            # distance = model_dist_norm(model.state_dict(), student_model.state_dict())
+            # print("++++++++++++++++++++")   
+            # print("after training ",epoch)
+            # print("after scale ")
+            # print("avg test entropy is ", avg_entropy)
+            # print("avg test loss is ", avg_loss)
+            # print("avg distance is ", distance)
+            # print("avg accuracy is ", acc)
+            # print("++++++++++++++++++++")
             
             
         teacher_model.load_state_dict(student_model.state_dict()) # 这一步是不是必须的

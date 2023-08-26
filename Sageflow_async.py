@@ -96,7 +96,7 @@ if __name__ == '__main__':
     clientStaleness = {}
     
     # 目标Staleness设定
-    TARGET_STALENESS  = 1
+    TARGET_STALENESS  = 3
  
     for l in range(args.num_users):
         scheduler[l] = 0
@@ -209,7 +209,7 @@ if __name__ == '__main__':
                 model=copy.deepcopy(global_model), global_round=epoch
 
             )
-            if idx in attack_users and epoch > 3 and args.model_poison == True:
+            if idx in attack_users and epoch > 19 and args.model_poison == True:
                 benign_models = local_weights_delay[0][0:n] # 只有sheduler = 0 的时候才会进入到这段代码
                 if idx == attack_users[0]:
                     malicious_dict = self_distillation(copy.deepcopy(global_model), args, train_dataset, benign_models, num_attacker = m)
@@ -291,8 +291,6 @@ if __name__ == '__main__':
                         std_dict = copy.deepcopy(global_weights) # 标准字典值
                         std_keys = get_key_list(std_dict.keys())
                         # 调用AFA同时保留对应index
-                        print("i is ", i)
-                        print("local_weights_delay[i] length is ", len(local_weights_delay[i]))
                         w_res, remain_index = pre_AFA(std_keys, local_weights_delay[i], local_index_delay[i], device)
                         w_avg = restoreWeight(std_dict, std_keys, w_res)
                         print("left index is ", remain_index)
@@ -348,11 +346,10 @@ if __name__ == '__main__':
             std_dict = copy.deepcopy(global_weights) # 标准字典值
             # std_keys = std_dict.keys()
             std_keys = get_key_list(std_dict.keys())
-            print(" stop here")
             w_res, remain_index = pre_AFA(std_keys, local_weights_delay[0], local_index_delay[0], device)
             w_avg = restoreWeight(std_dict, std_keys, w_res)
             print("left index is ", remain_index)
-            global_weights = Sag(epoch, w_avg, len(remain_index), local_delay_ew,
+            global_weights = Sag(epoch, w_avg, len(remain_index), local_delay_ew, # local_delay_ew 实际上是上一轮的pre_weights[1]
                                                      copy.deepcopy(global_weights))
         
         elif args.update_rule == 'Bulyan':
