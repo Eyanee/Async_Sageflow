@@ -281,7 +281,7 @@ def self_distillation(model, args, train_dataset, benign_models, num_attacker):
     device = f'cuda:{args.gpu_number}' if args.gpu else 'cpu'
     trainloader = DataLoader(train_dataset, batch_size=64, shuffle=False)
     b4_posion_dict = modelAvg(benign_models, num_attacker = 0, malicious_model = None)
-    ref_distance = computeTargetDistance(benign_models, model, ratio = 0.8)
+    ref_distance = computeTargetDistance(benign_models, model, ratio = 0.8) * 1.5
     print("ref distance is ", ref_distance)
     w_rand = add_small_perturbation(model, args, ref_distance)
 
@@ -318,7 +318,7 @@ def self_distillation(model, args, train_dataset, benign_models, num_attacker):
     print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
 
     
-    sorted_distance = computeTargetDistance(benign_models, model, ratio = 0.8)
+    sorted_distance = computeTargetDistance(benign_models, model, ratio = 0.8) 
 
     # 模型训练
     num_epochs = 20
