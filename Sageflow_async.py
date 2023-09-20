@@ -96,7 +96,7 @@ if __name__ == '__main__':
     clientStaleness = {}
     
     # 目标Staleness设定
-    TARGET_STALENESS  = 3
+    TARGET_STALENESS  = 1
  
     for l in range(args.num_users):
         scheduler[l] = 0
@@ -234,7 +234,7 @@ if __name__ == '__main__':
 
             common_acc, common_loss_sync, common_entropy_sample = test_inference(args, global_model,
                                                                                  DatasetSplit(train_dataset,
-                                                                                       dict_common), global_model_rep)
+                                                                                       dict_common))
             local_weights_delay[ scheduler[idx] - 1 ].append(copy.deepcopy(w))
             local_index_delay[ scheduler[idx] - 1 ].append(idx)
             loss_on_public[scheduler[idx] - 1].append(common_loss_sync)
@@ -412,7 +412,7 @@ if __name__ == '__main__':
 
             print('Train Accuracy: {:.2f}% \n'.format(100 * train_accuracy[-1]))
 
-        test_acc, test_loss, _ = test_inference(args, global_model, test_dataset, global_model_rep)
+        test_acc, test_loss, _ = test_inference(args, global_model, test_dataset)
         final_test_acc.append(test_acc)
         print('Test Accuracy: {:.2f}% \n'.format(100 * test_acc))
 

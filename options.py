@@ -15,7 +15,7 @@ def args_parser():
     # Training parameter
     parser.add_argument('--epochs', type=int, default=300,
                         help="number of training rounds")
-    parser.add_argument('--num_users', type=int, default=50,
+    parser.add_argument('--num_users', type=int, default=45,
                         help="number of users: K")
     parser.add_argument('--frac', type=float, default=0.2,
                         help='the fraction of clients: C')

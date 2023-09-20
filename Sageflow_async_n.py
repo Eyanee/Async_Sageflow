@@ -1,3 +1,4 @@
+
 #The codes are based on Ubuntu 16.04 with Python 3.7 and Pytorch 1.0.1
 
 import os
@@ -96,7 +97,7 @@ if __name__ == '__main__':
     clientStaleness = {}
     
     # 目标Staleness设定
-    TARGET_STALENESS  = 3
+    TARGET_STALENESS  = 1
  
     for l in range(args.num_users):
         scheduler[l] = 0

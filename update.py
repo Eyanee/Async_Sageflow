@@ -111,7 +111,7 @@ class LocalUpdate(object):
         return accuracy, loss
 
 # def test_inference(args, model, test_dataset):
-def test_inference(args, model, test_dataset, global_model):
+def test_inference(args, model, test_dataset):
 
     model.eval()
     loss, total, correct = 0.0, 0.0, 0.0
@@ -129,26 +129,7 @@ def test_inference(args, model, test_dataset, global_model):
             output, out = model(images)
             # 构造[batches,categaries]的真实分布向量
             categaries = output.shape[1]
-            # real_distribute = []
-            # for l in labels:
-            #     temp = [0] * categaries
-            #     idx = int(l)
-            #     temp[idx] = 1
-            #     real_distribute.append(copy.deepcopy(temp))
-            # real_distribute = torch.tensor(real_distribute).float().to(device)
-            # log_pre = F.softmax(out, dim=1)
-            # real_distribute = F.log_softmax(real_distribute, dim =1)
-            # KL_loss = F.kl_div(real_distribute, log_pre, reduction='batchmean') 
-            # log_pre = F.log_softmax(out, dim=1)
-            # real_distribute = F.softmax(real_distribute, dim =1)
-            # KL_loss = F.kl_div(log_pre, real_distribute,  reduction='batchmean') 
-            # print("out is ", out)
-            # labels_test = F.softmax(labels_test,dim = 0)
-            
-            # print("KL_loss is ", KL_loss)
-            # batch_KL.append(KL_loss)
-            # print("output is ", F.softmax(out, dim=1))
-            # print("out is ", out)
+
             
             Information = F.softmax(out, dim=1) * F.log_softmax(out, dim=1)
             # print("Information is ", Information)
@@ -174,7 +155,7 @@ def test_inference(args, model, test_dataset, global_model):
             total += len(labels)
             
 
-        distance = model_dist_norm(global_model.state_dict(), model.state_dict())
+        # distance = model_dist_norm(global_model.state_dict(), model.state_dict())
         accuracy  = correct/total
         # print("--------------------")
         # print("average entropy is ", sum(batch_entropy)/len(batch_entropy))
@@ -201,14 +182,6 @@ def model_dist_norm(ori_params, mod_params):
 
 
 def modifyLabel(args, model, train_dataset, global_model):
-    # testloader = DataLoader(test_dataset, batch_size=64, shuffle=False)
-    # device = f'cuda:{args.gpu_number}' if args.gpu else 'cpu'
-    # allres = []
-
-   
-    # for batch_idx, (images, labels) in enumerate(testloader):
-    #     images, labels = images.to(device), labels.to(device)
-    #     output, out = global_model(images) # 看一下test时的输出
 
     model.eval()
     device = f'cuda:{args.gpu_number}' if args.gpu else 'cpu'
@@ -232,12 +205,7 @@ def modifyLabel(args, model, train_dataset, global_model):
                 # print("current out is ",out)
                 allres[int(labels[i])].append(out[i])
 
-            # result = torch.mean(out, dim = 0)
-            # pred_labels = torch.max(out, -1)
-            # pred_not = torch.min(out, -1)
-            # print("result is ", pred_not)
-            # print("label is ", type(labels))
-            # allres.append(result)
+
     
     labelmap = {}
     for j in range(1,11):
@@ -279,11 +247,12 @@ def self_distillation(model, args, train_dataset, benign_models, num_attacker):
     自蒸馏随机恶意梯度
     """
     device = f'cuda:{args.gpu_number}' if args.gpu else 'cpu'
-    trainloader = DataLoader(train_dataset, batch_size=64, shuffle=False)
+    trainloader = DataLoader(train_dataset, batch_size=16, shuffle=False)
     b4_posion_dict = modelAvg(benign_models, num_attacker = 0, malicious_model = None)
-    ref_distance = computeTargetDistance(benign_models, model, ratio = 0.8) * 1.5
-    print("ref distance is ", ref_distance)
-    w_rand = add_small_perturbation(model, args, ref_distance)
+    # ref_distance = computeTargetDistance(benign_models, model, ratio = 0.8)  
+    # print("ref distance is ", ref_distance)
+    target_accuracy = 0.75
+    w_rand = add_small_perturbation(model, args, target_accuracy, train_dataset)
 
 
     # print("after is ")
@@ -308,7 +277,7 @@ def self_distillation(model, args, train_dataset, benign_models, num_attacker):
     student_model.to(device)
 
 
-    acc,avg_loss, avg_entropy = test_inference(args, teacher_model, train_dataset, model)
+    acc,avg_loss, avg_entropy = test_inference(args, teacher_model, train_dataset)
     distance = model_dist_norm(model.state_dict(), teacher_model.state_dict())
     print("xxxxxxxx  teacher model  xxxxxxxxxxxxxx")
     print("avg test entropy is ", avg_entropy)
@@ -325,6 +294,16 @@ def self_distillation(model, args, train_dataset, benign_models, num_attacker):
     student_model.train()
     for epoch in range(num_epochs):
         optimizer.zero_grad()
+        if epoch%2 == 0 or epoch%2 == 1:
+            acc,avg_loss, avg_entropy = test_inference(args, student_model, train_dataset)
+            distance = model_dist_norm(model.state_dict(), student_model.state_dict())
+            print("++++++++++++++++++++")
+            print("after training ",epoch)
+            print("avg test entropy is ", avg_entropy)
+            print("avg test loss is ", avg_loss)
+            print("avg distance is ", distance)
+            print("avg accuracy is ", acc)
+            print("++++++++++++++++++++")
 
         for batch_idx, (images, labels) in enumerate(trainloader):
             images, labels = images.to(device), labels.to(device)
@@ -337,35 +316,14 @@ def self_distillation(model, args, train_dataset, benign_models, num_attacker):
                 teacher_labels.append(pred_label)
             pred_is = torch.tensor(teacher_labels)
             pred_is = pred_is.to(device)
-
-            #######
-            
-
-
-            ####
-
             stu_out, student_outputs = student_model(images)
+            loss_1 = criterion1(stu_out, pred_is) # 尝试换成student_outputs
 
-            
-            # loss_1 = distillation_loss(student_outputs, teacher_outputs, temperature = 10.0)
-            loss_1 = criterion1(stu_out, pred_is)
-            
             loss =  loss_1
-                                                                                                                                              
+                                                                                                                           
             # print("distillation loss is ", loss)
             loss.backward()
             optimizer.step()
-
-        if epoch%4 == 0:
-            acc,avg_loss, avg_entropy = test_inference(args, student_model, train_dataset, model)
-            distance = model_dist_norm(model.state_dict(), student_model.state_dict())
-            print("++++++++++++++++++++")
-            print("after training ",epoch)
-            print("avg test entropy is ", avg_entropy)
-            print("avg test loss is ", avg_loss)
-            print("avg distance is ", distance)
-            print("avg accuracy is ", acc)
-            print("++++++++++++++++++++")
 
 
             #### scale part
@@ -405,15 +363,16 @@ def self_distillation(model, args, train_dataset, benign_models, num_attacker):
             # print("++++++++++++++++++++")
             
             
-        teacher_model.load_state_dict(student_model.state_dict()) # 这一步是不是必须的
+        # teacher_model.load_state_dict(student_model.state_dict()) # 这一步是不是必须的
 
     print("finish training-----------------")
     # 测试恶意梯度的熵值
-    acc,avg_loss, avg_entropy = test_inference(args, student_model, train_dataset, model)
+    acc,avg_loss, avg_entropy = test_inference(args, student_model, train_dataset)
     distance = model_dist_norm(model.state_dict(), student_model.state_dict())
     print("++++++++++++++++++++")
     print("final test entropy is ", avg_entropy)
     print("final test loss is ", avg_loss)
+    print("final accuracy is ", acc)
     print("final distance is ", distance)
     print("++++++++++++++++++++")
 
@@ -442,7 +401,7 @@ def distillation_loss(student_outputs, teacher_outputs, temperature):
     return loss
     
 
-def add_small_perturbation(original_model, args, target_distance, perturbation_range=(-0.01, 0.01)):
+def add_small_perturbation(original_model, args, target_accuracy, train_dataset, perturbation_range=(-0.01, 0.01)):
     """
     在原有张量上添加较小的扰动，使得新生成的张量在
     1. 欧氏距离
@@ -451,6 +410,7 @@ def add_small_perturbation(original_model, args, target_distance, perturbation_r
     # std_keys = original_model.state_dict().keys()
 
     orignal_state_dict = original_model.state_dict()
+    test_model = copy.deepcopy(original_model)
     perturbed_dict = copy.deepcopy(orignal_state_dict)
     device = f'cuda:{args.gpu_number}' if args.gpu else 'cpu'
 
@@ -458,7 +418,7 @@ def add_small_perturbation(original_model, args, target_distance, perturbation_r
     iteration = 0
     while iteration < max_iterations:
         # 计算当前扰动范围的中点
-        mid_min = perturbation_range[0]  / 2.0
+        mid_min = perturbation_range[0] * 1.1
         mid_max = mid_min * -1
 
         # 生成中点扰动张量
@@ -470,17 +430,16 @@ def add_small_perturbation(original_model, args, target_distance, perturbation_r
             perturbed_dict[key] = perturbs
 
         # 计算新张量和原张量之间的相似性
-        distance = model_dist_norm(orignal_state_dict, perturbed_dict)
+        test_model.load_state_dict(perturbed_dict)
+        acc, loss, entropy = test_inference(args, test_model, train_dataset)
         print("====================")
         print("iteration is ", iteration)
-        print("distance is ", distance)
+        print("accuracy is ", acc)
         print("====================")
 
         # 判断是否达到目标相似性
-        if distance <= target_distance :
-            # 相似性满足要求，返回新张量
-            # print("perturbation shape is ", perturbed_tensor.shape)
-            # print(perturbed_tensor)
+        if acc <= target_accuracy:
+            
             return perturbed_dict
         else:
             # 相似性不满足要求，更新扰动范围，继续迭代
