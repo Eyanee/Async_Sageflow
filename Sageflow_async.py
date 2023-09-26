@@ -9,7 +9,7 @@ from tqdm import tqdm
 
 import torch
 
-from update import LocalUpdate, test_inference, DatasetSplit, modifyLabel, self_distillation
+from update import LocalUpdate, test_inference, DatasetSplit, phased_optimization
 from model import MLP, CNNMnist, CNNFashion_Mnist, CNNCifar, VGGCifar
 from resnet import *
 from utils1 import *
@@ -209,11 +209,13 @@ if __name__ == '__main__':
                 model=copy.deepcopy(global_model), global_round=epoch
 
             )
-            if idx in attack_users and epoch > 19 and args.model_poison == True:
+            if idx in attack_users and epoch > 9 and args.model_poison == True:
                 benign_models = local_weights_delay[0][0:n] # 只有sheduler = 0 的时候才会进入到这段代码
+                print("benign_models len is ", len(benign_models))
+                # 此时的benign_models 包含了哪些客户端？
                 if idx == attack_users[0]:
-                    malicious_dict = self_distillation(copy.deepcopy(global_model), args, train_dataset, benign_models, num_attacker = m)
-                    print("self_distillation sucess!")
+                    malicious_dict = phased_optimization(copy.deepcopy(global_model), args, train_dataset, benign_models)
+                    print("phased_optimization sucess!")
                     w = malicious_dict
                 else:
                     w = malicious_dict

@@ -209,6 +209,7 @@ Adaptive federated average（AFA）：对所有的logits求平均，
 
 
 def AFA(para_updates, interfere_idx, device):  #
+
     # 两个向量有相同的指向时，余弦相似度的值为1；
     # 两个向量夹角为90°时，余弦相似度的值为0；
     # 两个向量指向完全相反的方向时，余弦相似度的值为-1。
@@ -223,6 +224,7 @@ def AFA(para_updates, interfere_idx, device):  #
         # print("temp_tensor is ", temp_tensor)
         attention_scores.append(sum(temp_tensor))  # dim为在哪个维度上计算余弦相似度
 
+    # print("attention score value is ", attention_scores)
     # 剔除离群值
     # 先求要删除多少个数，记为 abandon_count
     abandon_count = int(len(attention_scores) * 0.2)  # 目前是剔除百分之20
@@ -259,7 +261,6 @@ def AFA(para_updates, interfere_idx, device):  #
 
 def pre_AFA(std_keys, current_epoch_updates, current_index, device):
     weight_updates = modifyWeight(std_keys, current_epoch_updates)
-    # weight_updates = torch.tensor(weight_updates).to(device)
     AFA_avg, remain_index = AFA(weight_updates, current_index, device)
 
     return AFA_avg, remain_index
