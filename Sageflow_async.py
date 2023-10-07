@@ -154,6 +154,7 @@ if __name__ == '__main__':
         loss_on_public = {}
         entropy_on_public = {}
         local_index_delay = {}
+        malicious_models = []
 
         for i in range(args.staleness + 1):
             loss_on_public[i] = []
@@ -209,42 +210,51 @@ if __name__ == '__main__':
                 model=copy.deepcopy(global_model), global_round=epoch
 
             )
-            if idx in attack_users and epoch > 9 and args.model_poison == True:
-                benign_models = local_weights_delay[0][0:n] # 只有sheduler = 0 的时候才会进入到这段代码
-                print("benign_models len is ", len(benign_models))
-                # 此时的benign_models 包含了哪些客户端？
-                if idx == attack_users[0]:
-                    malicious_dict = phased_optimization(copy.deepcopy(global_model), args, train_dataset, benign_models)
-                    print("phased_optimization sucess!")
-                    w = malicious_dict
-                else:
-                    w = malicious_dict
+            # if idx in attack_users and epoch > 5 and args.model_poison == True:
+            #     # benign_models = local_weights_delay[0][0:n] # 只有sheduler = 0 的时候才会进入到这段代码
+            #     print("benign_models len is ", len(benign_models))
+            #     # 此时的benign_models 包含了哪些客户端？
+            #     if idx == attack_users[0]:
+            #         malicious_dict = phased_optimization(copy.deepcopy(global_model), args, train_dataset, malicious_models)
+            #         print("phased_optimization sucess!")
+            #         w = malicious_dict
+            #     else:
+            #         w = malicious_dict
+
+            if idx in attack_users and epoch > 5 and args.model_poison == True:
+                malicious_models.append(w)
                 
+            else:     
+                ensure_1 += 1 # 平均分布
+                
+                global_model_rep = copy.deepcopy(global_model)
+                test_model = copy.deepcopy(global_model)
+                test_model.load_state_dict(w)
 
-            ensure_1 += 1 # 平均分布
+                # Compute the loss and entropy for each device on public dataset
+
+                common_acc, common_loss_sync, common_entropy_sample = test_inference(args, test_model,
+                                                                                    DatasetSplit(train_dataset,
+                                                                                        dict_common))
+                local_weights_delay[ scheduler[idx] - 1 ].append(copy.deepcopy(w))
+                local_index_delay[ scheduler[idx] - 1 ].append(idx)
+                loss_on_public[scheduler[idx] - 1].append(common_loss_sync)
+                entropy_on_public[scheduler[idx] - 1].append(common_entropy_sample)
             
-            global_model_rep = copy.deepcopy(global_model)
+        print("finish loop")
+        if idx in attack_users and epoch > 5 and args.model_poison == True:
+            malicious_dict = phased_optimization(copy.deepcopy(global_model), args, train_dataset, malicious_models)
+            test_model.load_state_dict(malicious_dict)
+            mal_acc, mal_loss_sync, mal_entropy_sample = test_inference(args, test_model,
+                                                                                        DatasetSplit(train_dataset,
+                                                                                            dict_common))
+        
+            for idx in attack_users:
+                local_weights_delay[ scheduler[idx] - 1 ].append(copy.deepcopy(w))
+                local_index_delay[ scheduler[idx] - 1 ].append(idx)
+                loss_on_public[scheduler[idx] - 1].append(mal_loss_sync)
+                entropy_on_public[scheduler[idx] - 1].append(mal_entropy_sample)
 
-            global_model.load_state_dict(w)
-
-
-
-
-            # Compute the loss and entropy for each device on public dataset
-            
-
-
-            common_acc, common_loss_sync, common_entropy_sample = test_inference(args, global_model,
-                                                                                 DatasetSplit(train_dataset,
-                                                                                       dict_common))
-            local_weights_delay[ scheduler[idx] - 1 ].append(copy.deepcopy(w))
-            local_index_delay[ scheduler[idx] - 1 ].append(idx)
-            loss_on_public[scheduler[idx] - 1].append(common_loss_sync)
-            entropy_on_public[scheduler[idx] - 1].append(common_entropy_sample)
-
-            global_model.load_state_dict(global_weights_rep)
-            
-            
         # 重新考虑PosionMean方式投毒的接入
         if epoch/TARGET_STALENESS == 0 and args.new_poison == True:
             std_dict = copy.deepcopy(global_weights) # 标准字典值

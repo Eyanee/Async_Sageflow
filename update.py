@@ -216,9 +216,13 @@ def get_distance_list(ori_state_dict, mod_state_dict):
     return distance_list
 
     
+"""
+修改中
+主要将benign models的参照换成 malicious model
+改变 distance threshold的计算方式
+"""
 
-
-def phased_optimization(model, args, train_dataset, benign_models):
+def phased_optimization(model, args, train_dataset, malicious_models, POISONED = True ):
     """
     分阶段优化函数
     """
@@ -234,9 +238,9 @@ def phased_optimization(model, args, train_dataset, benign_models):
 
     # initialization
     ref_model = copy.deepcopy(model) # 上一轮进行聚合的全局模型
-    target_accuracy = 0.75 # 如何选择
+    target_accuracy = 0.80 # 如何选择
     rank_ratio = 0.8 ## AFA是去掉20%的 consine similarity 离群值
-    distance_threshold = computeTargetDistance(benign_models, ref_model, rank_ratio)
+    distance_threshold = computeTargetDistance(malicious_models, ref_model, rank_ratio)
     print(" distance_threshold is ", distance_threshold)
     
     w_rand = add_small_perturbation(ref_model, args, target_accuracy, train_dataset)
@@ -273,7 +277,7 @@ def phased_optimization(model, args, train_dataset, benign_models):
             print("scale....")
             w_scale = parameter_scaling(distance_threshold, compute_distance, student_model, ref_model)
             student_model.load_state_dict(w_scale)
-            # 
+        # 
         elif compute_entropy > entropy_threshold:
             # self_distillation part
             print("self_distillation....")
@@ -283,6 +287,7 @@ def phased_optimization(model, args, train_dataset, benign_models):
             else:
                 print("self_distillation reaches max round! go to reinitialization")
                 round = MAX_ROUND
+        
         else:
             res, w_distillation = self_distillation(args, teacher_model, student_model, train_dataset, entropy_threshold, ref_model, target_accuracy, distillation_round = 5)
             student_model.load_state_dict(w_distillation)
@@ -297,7 +302,7 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
     """
     自蒸馏函数主体
     """
-    # 定义优化器
+    ### 自蒸馏参数
     lr = args.lr * 0.001
     device = f'cuda:{args.gpu_number}' if args.gpu else 'cpu'
     trainloader = DataLoader(train_dataset, batch_size=128, shuffle=False)
@@ -307,6 +312,11 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
     student_model.to(device)
 
     num_epochs = distillation_round
+    temperature = 5
+    alpha = 0.5
+    beta = 0.5
+
+
     student_model.train()
     for epoch in range(num_epochs):
         optimizer.zero_grad()
@@ -337,7 +347,8 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
             pred_is = torch.tensor(teacher_labels)
             pred_is = pred_is.to(device)
             stu_out, student_outputs = student_model(images)
-            loss = criterion1(stu_out, pred_is)
+            _ , teacher_outputs = teacher_model(images)
+            loss = alpha * criterion1(stu_out, pred_is)  + beta * temperature** 2 * soft_loss(student_outputs, teacher_outputs, temperature = 5)
 
             loss.backward()
             optimizer.step()
@@ -368,9 +379,11 @@ def parameter_scaling(distance_threshold, compute_distance, student_model, ref_m
 
     return model_dict
 
-def distillation_loss(student_outputs, teacher_outputs, temperature):
+def soft_loss(student_outputs, teacher_outputs, temperature):
     """
     自蒸馏的损失函数
+    使用hard targets 和 soft targets相结合
+    L = α * L_soft + β * L_hard
 
     Args:
         student_outputs (torch.Tensor): 学生模型的输出
@@ -386,7 +399,7 @@ def distillation_loss(student_outputs, teacher_outputs, temperature):
     teacher_s = F.softmax(teacher_outputs/temperature, dim = 1)
 
     # loss 采用的是KL散度来计算差异
-    loss = F.kl_div(stu_s, teacher_s, size_average=False) * (temperature ** 2) / student_outputs.shape[0]
+    loss = F.kl_div(stu_s, teacher_s, size_average=False) * (temperature) / student_outputs.shape[0]
     
     return loss
     
@@ -405,6 +418,7 @@ def add_small_perturbation(original_model, args, target_accuracy, train_dataset,
     device = f'cuda:{args.gpu_number}' if args.gpu else 'cpu'
 
     max_iterations = 100
+    MAX_ROUND = 3
     iteration = 0
     while iteration < max_iterations:
         # 计算当前扰动范围的中点
@@ -412,29 +426,31 @@ def add_small_perturbation(original_model, args, target_accuracy, train_dataset,
         mid_max = mid_min * -1
 
         # 生成中点扰动张量
-        
-        for key in orignal_state_dict.keys():
-            temp_original = orignal_state_dict[key]
-            perturbs = torch.tensor(np.random.uniform(low=mid_min, high=mid_max, size=temp_original.shape)).to(device)
-            perturbs = torch.add(perturbs, temp_original)
-            perturbed_dict[key] = perturbs
+        for round in range(MAX_ROUND):
+            for key in orignal_state_dict.keys():
+                temp_original = orignal_state_dict[key]
+                perturbs = torch.tensor(np.random.uniform(low=mid_min, high=mid_max, size=temp_original.shape)).to(device)
+                perturbs = torch.add(perturbs, temp_original)
+                perturbed_dict[key] = perturbs
 
-        # 计算新张量和原张量之间的相似性
-        test_model.load_state_dict(perturbed_dict)
-        acc, loss, entropy = test_inference(args, test_model, train_dataset)
-        print("====================")
-        print("iteration is ", iteration)
-        print("accuracy is ", acc)
-        print("====================")
+            # 计算新张量和原张量之间的相似性
+            test_model.load_state_dict(perturbed_dict)
+            acc, loss, entropy = test_inference(args, test_model, train_dataset)
+            print("====================")
+            print("iteration is ", iteration)
+            print("round is ",round )
+            print("accuracy is ", acc)
+            print("====================")
 
-        # 判断是否达到目标相似性
-        if acc <= target_accuracy:
-            
-            return perturbed_dict
-        else:
-            # 相似性不满足要求，更新扰动范围，继续迭代
-            perturbation_range = (mid_min, mid_max)
-            iteration += 1
+            # 判断是否达到目标相似性
+            if acc <= target_accuracy:
+                
+                return perturbed_dict
+            else:
+                # 相似性不满足要求，更新扰动范围，继续迭代
+                perturbation_range = (mid_min, mid_max)
+
+        iteration = iteration + 1
 
         # 若迭代次数超过最大迭代次数仍未找到满足要求的扰动，返回最后得到的新张量
     return perturbed_dict
@@ -501,9 +517,9 @@ def gradient2dict(weights, std_keys, std_dict):
     return update_dict
 
 
-def computeTargetDistance(benign_model_dicts, global_model, ratio):
+def computeTargetDistance(model_dicts, global_model, ratio):
     """
-    计算在目标范围内的良性用户聚全局模型的欧氏距离的门槛值
+    计算在目标范围内的恶意用户聚合全局模型的欧氏距离的门槛值
 
     Args:
         benign_models(list): 同一分组内良性用户的集合
@@ -515,15 +531,19 @@ def computeTargetDistance(benign_model_dicts, global_model, ratio):
     """
     res_distance = []
 
-    for model_dict in benign_model_dicts:
+    print("len of model dicts is ", len(model_dicts))
+
+    for model_dict in model_dicts:
         tmp_distance = model_dist_norm(model_dict, global_model.state_dict())
         res_distance.append(tmp_distance)
         print("compute distance is ", tmp_distance)
     res_distance.sort()
 
-    idx = int(ratio * len(benign_model_dicts)) - 1
+    max_idx = int(len(model_dicts)) - 1
 
-    return res_distance[idx]
+    target_distance = (res_distance[max_idx] - res_distance[0]) * ratio + res_distance[0]
+
+    return target_distance
 
 
 def modelAvg(benign_model_dicts, num_attacker, malicious_model):
