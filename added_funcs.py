@@ -40,7 +40,7 @@ def poison_Mean(para_updates, avg_update, args, user_number ,benign_user_number)
         mal_update = avg_update - lamda * deviation  #恶意梯度等于平均良性梯度减去偏差
         for client_num in range(user_number):
             if client_num >= benign_user_number:  #将恶意用户的梯度替换成上面构造的恶意梯度，这里是选取最后几个用户作为恶意用户
-                para_updates[client_num] = mal_update.clone().detach() #在这个地方不兼容
+                para_updates[client_num] = mal_update.clone().detach() 
 
         agg_grads = grads_Mean(para_updates, args) # 每次重构之后的新的聚合梯度
 
@@ -66,16 +66,13 @@ def grads_Mean(para_updates, args):
 
 def scale_attack(global_grad, ori_grad, scale_weight, current_number_of_adversaries):
    
-    ## clip_rate = (helper.params['scale_weights'] / current_number_of_adversaries)
+
     clip_rate = (scale_weight/ current_number_of_adversaries) * -1
     print(f"Scaling by  {clip_rate}")
     mod_grad = copy.deepcopy(ori_grad)
-    #####
-    ## 这个位置进行了梯度放缩
+
     for key in mod_grad.keys(): ## model.state_dict()
-        #### don't scale tied weights:
-        # if helper.params.get('tied', False) and key == 'decoder.weight' or '__'in key:
-        #     continue
+
         target_value = mod_grad[key]
         value = global_grad[key]
         new_value = target_value + (value - target_value) * clip_rate 
@@ -120,14 +117,12 @@ def scale_attack_mod(args, model, train_dataset, global_grad, ori_grad, current_
             entropy  = -1.0 * Information.sum(dim=1) # size [64]
             average_entropy = entropy.mean().item()
             batch_entropy.append(average_entropy)
-            # print(f"batch_entropy len is {len(batch_entropy)}")
+  
         
         avg_batch_entropy = sum(batch_entropy)/len(batch_entropy)
-        # print(f"avg_batch_entropy is {avg_batch_entropy}")
+
         
-    # distance = model_dist_norm(ori_grad, mod_grad)
-    # print("jump out of loop....")
-    # print(f" distance is  {distance}")
+
     return new_grad
 
 

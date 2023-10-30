@@ -22,27 +22,29 @@ def modifyWeight(std_keys, local_weights):
         param_new = []
         for key in std_keys:
             param_new.append(copy.deepcopy(update_item[key]))
-            # print("update_item[key] is",update_item[key].size())
+
         param_update = [] # 清空
         for j in range(len(param_new)):
             sub_res = torch.sub(param_new[j], 0).reshape(-1)
             param_update = sub_res if len(param_update) == 0 else torch.cat((param_update, sub_res), 0)
-    # print("param_update size is ",param_update.size())
+
         param_updates = param_update.clone().unsqueeze(0) if len(param_updates) == 0 else torch.cat((param_updates, param_update.clone().unsqueeze(0)), dim=0)  # 先用unsqueeze(0)增加维度
-        # print("param_updates type is ", type(param_updates))
-        # print("param_updates shape is ", type(param_updates))
+
     return param_updates
 
 
 def restoreWeight(std_dict, std_keys, update_weights):
     # 重构张量，重构字典 
-    update_dict = {}
+    update_dict = copy.deepcopy(std_dict)
     front_idx = 0
     end_idx = 0
     # mal_update张量重构
+    print("update_weights length", len(update_weights))
     for k in std_keys:
         tmp_len = len(list(std_dict[k].reshape(-1)))
         end_idx = front_idx + tmp_len
+        print("update_weights shape", type(update_weights))
+        print("front idx and end idx", front_idx, end_idx)
         tmp_tensor = update_weights[front_idx:end_idx].view(std_dict[k].shape)
         update_dict[k] = copy.deepcopy(tmp_tensor)
         front_idx = end_idx
@@ -80,13 +82,10 @@ def Krum(para_updates, benign_user_number):  #
     clients_l2_filter = [[] for _ in range(len(para_updates))]
     for index, client_l2 in enumerate(clients_l2):
         list.sort(client_l2)  # 升序排列，前面的就是最小的
-        # print(client_l2)
+
         client_l2_minN = sum(client_l2[0:benign_user_number - 2])  # 对于单个用户client_l2，对它的前m-c-2个最近的clients求和，作为它与其他client的距离
-        # print(client_l2_minN)
         clients_l2_filter[index].append(client_l2_minN)
 
-    # print(clients_l2_filter)
-    # 在clients_l2_filter找到最小的
     selected_client_index = clients_l2_filter.index(min(clients_l2_filter))
     print("krum_selected_client_index:", selected_client_index)
     agg_para_update = para_updates[selected_client_index]
@@ -255,7 +254,7 @@ def AFA(para_updates, interfere_idx, device):  #
         
 
     agg_para_update = torch.mean(torch.tensor([item.cpu().detach().numpy() for item in filter_clients]).to(device), dim=0)  # 。原因是：要转换的list里面的元素包含多维的tensor。
-
+    print("agg_para_update shape", type(agg_para_update))
     return agg_para_update, filter_left
 
 

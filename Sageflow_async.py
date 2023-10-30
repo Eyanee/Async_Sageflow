@@ -9,11 +9,11 @@ from tqdm import tqdm
 
 import torch
 
-from update import LocalUpdate, test_inference, DatasetSplit, phased_optimization
+from update import LocalUpdate, test_inference, DatasetSplit, Outline_Poisoning
 from model import MLP, CNNMnist, CNNFashion_Mnist, CNNCifar, VGGCifar
 from resnet import *
 from utils1 import *
-from added_funcs import poison_Mean, scale_attack, scale_attack_mod
+from added_funcs import poison_Mean
 import csv
 from torch.utils.data import DataLoader, Dataset
 from options import args_parser
@@ -58,10 +58,6 @@ if __name__ == '__main__':
             elif args.detail_model == 'resnet':
                 global_model = ResNet18()
 
-
-
-
-
     elif args.model == 'MLP':
         img_size = train_dataset[0][0].shape
         len_in = 1
@@ -75,7 +71,7 @@ if __name__ == '__main__':
     global_model.train()
     print(global_model)
 
-    global_weights = global_model.state_dict() # 保存模型参数 返回一个Python字典对象
+    global_weights = global_model.state_dict()
 
     train_accuracy = []
     final_test_acc = []
@@ -97,6 +93,9 @@ if __name__ == '__main__':
     
     # 目标Staleness设定
     TARGET_STALENESS  = 1
+
+    # 投毒指使
+    poisoned = False
  
     for l in range(args.num_users):
         scheduler[l] = 0
@@ -106,8 +105,6 @@ if __name__ == '__main__':
     
     all_users = np.arange(args.num_users)
     m = int(args.num_users * args.attack_ratio)
-    # n = args.num_users
-    # attack_users = all_users[-m:]
     n = args.num_users - m
     attack_users = all_users[-m:]
     print("attack user num is ",m)
@@ -122,26 +119,6 @@ if __name__ == '__main__':
         for j in range(front_idx, end_idx):
             clientStaleness[j] = i + 1 
             
-
-        
-    
-    # 修改正常用户的staleness分布
-    # alist = []
-    # for i in range(args.staleness):
-    #     front_idx = int(t * i)
-    #     end_idx = front_idx + t
-    #     if i + 1 == TARGET_STALENESS:
-    #         # continue
-    #         for j in range(front_idx, end_idx):
-    #             clientStaleness[j] = TARGET_STALENESS
-    #             alist.append(j)
-    #     else:
-    #         for j in range(front_idx, end_idx):
-    #             clientStaleness[j] = i + 1 
-    
-    # attack_users = np.array(alist)
-
-        
         
     print("attack_user is", attack_users)
     # 为恶意用户赋目标的Staleness值     
@@ -186,10 +163,7 @@ if __name__ == '__main__':
         for idx in all_users:
 
             if scheduler[idx] == 0: # 当前轮次提交
-                if idx in attack_users and args.data_poison == True:
-                # if idx in attack_users and args.inverse_poison == True:
-                    # 在这里对传入的dataset做修改
-                    # labelmap = modifyLabel(args, global_model_rep,DatasetSplit(train_dataset,dict_common), global_model_rep)
+                if idx in attack_users and args.data_poison == True: # 原 data_posion 入口
                     local_model = LocalUpdate(args=args, dataset=train_dataset, idxs=user_groups[idx], idx=idx,
                                               data_poison=True, inverse_poison= False)
 
@@ -210,19 +184,8 @@ if __name__ == '__main__':
                 model=copy.deepcopy(global_model), global_round=epoch
 
             )
-            # if idx in attack_users and epoch > 5 and args.model_poison == True:
-            #     # benign_models = local_weights_delay[0][0:n] # 只有sheduler = 0 的时候才会进入到这段代码
-            #     print("benign_models len is ", len(benign_models))
-            #     # 此时的benign_models 包含了哪些客户端？
-            #     if idx == attack_users[0]:
-            #         malicious_dict = phased_optimization(copy.deepcopy(global_model), args, train_dataset, malicious_models)
-            #         print("phased_optimization sucess!")
-            #         w = malicious_dict
-            #     else:
-            #         w = malicious_dict
-
-            if idx in attack_users and epoch > 5 and args.model_poison == True:
-                malicious_models.append(w)
+            if idx in attack_users and epoch > 15 and args.model_poison == True:
+                malicious_models.append(w) #
                 
             else:     
                 ensure_1 += 1 # 平均分布
@@ -230,8 +193,6 @@ if __name__ == '__main__':
                 global_model_rep = copy.deepcopy(global_model)
                 test_model = copy.deepcopy(global_model)
                 test_model.load_state_dict(w)
-
-                # Compute the loss and entropy for each device on public dataset
 
                 common_acc, common_loss_sync, common_entropy_sample = test_inference(args, test_model,
                                                                                     DatasetSplit(train_dataset,
@@ -241,13 +202,16 @@ if __name__ == '__main__':
                 loss_on_public[scheduler[idx] - 1].append(common_loss_sync)
                 entropy_on_public[scheduler[idx] - 1].append(common_entropy_sample)
             
-        print("finish loop")
-        if idx in attack_users and epoch > 5 and args.model_poison == True:
-            malicious_dict = phased_optimization(copy.deepcopy(global_model), args, train_dataset, malicious_models)
+        if idx in attack_users and epoch > 1 and args.model_poison == True:
+
+            malicious_dict = Outline_Poisoning(copy.deepcopy(global_model), args, train_dataset, malicious_models, poisoned)
             test_model.load_state_dict(malicious_dict)
             mal_acc, mal_loss_sync, mal_entropy_sample = test_inference(args, test_model,
                                                                                         DatasetSplit(train_dataset,
                                                                                             dict_common))
+
+            if not poisoned:
+                poisoned = True
         
             for idx in attack_users:
                 local_weights_delay[ scheduler[idx] - 1 ].append(copy.deepcopy(w))
@@ -255,10 +219,15 @@ if __name__ == '__main__':
                 loss_on_public[scheduler[idx] - 1].append(mal_loss_sync)
                 entropy_on_public[scheduler[idx] - 1].append(mal_entropy_sample)
 
+            
+
+
+
+            
         # 重新考虑PosionMean方式投毒的接入
         if epoch/TARGET_STALENESS == 0 and args.new_poison == True:
-            std_dict = copy.deepcopy(global_weights) # 标准字典值
-            std_keys = std_dict.keys()
+            std_dict = copy.deepcopy(global_weights)
+            std_keys = get_key_list(std_dict.keys())
             ts = TARGET_STALENESS - 1
             param_updates = modifyWeight(std_keys, local_weights_delay[ts])
             avg_update = torch.mean(param_updates, 0) # 计算平均值
