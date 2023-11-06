@@ -17,7 +17,6 @@ def modifyWeight(std_keys, local_weights):
     """
     param_updates = list()
     param_update = list()
-    print("local weights len is ", len(local_weights))
     for update_item in local_weights:
         param_new = []
         for key in std_keys:
@@ -39,12 +38,12 @@ def restoreWeight(std_dict, std_keys, update_weights):
     front_idx = 0
     end_idx = 0
     # mal_update张量重构
-    print("update_weights length", len(update_weights))
+
     for k in std_keys:
         tmp_len = len(list(std_dict[k].reshape(-1)))
         end_idx = front_idx + tmp_len
-        print("update_weights shape", type(update_weights))
-        print("front idx and end idx", front_idx, end_idx)
+        # print("update_weights shape", type(update_weights))
+        # print("front idx and end idx", front_idx, end_idx)
         tmp_tensor = update_weights[front_idx:end_idx].view(std_dict[k].shape)
         update_dict[k] = copy.deepcopy(tmp_tensor)
         front_idx = end_idx
@@ -250,11 +249,7 @@ def AFA(para_updates, interfere_idx, device):  #
     for index in filter_index:
         filter_clients.append(para_updates[index])
 
-    
-        
-
     agg_para_update = torch.mean(torch.tensor([item.cpu().detach().numpy() for item in filter_clients]).to(device), dim=0)  # 。原因是：要转换的list里面的元素包含多维的tensor。
-    print("agg_para_update shape", type(agg_para_update))
     return agg_para_update, filter_left
 
 

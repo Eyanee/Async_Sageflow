@@ -9,7 +9,8 @@ from tqdm import tqdm
 
 import torch
 
-from update import LocalUpdate, test_inference, DatasetSplit, Outline_Poisoning
+from update import LocalUpdate, test_inference, DatasetSplit
+from poison_optimization import Outline_Poisoning
 from model import MLP, CNNMnist, CNNFashion_Mnist, CNNCifar, VGGCifar
 from resnet import *
 from utils1 import *
@@ -67,9 +68,11 @@ if __name__ == '__main__':
     else:
         exit('Error: unrecognized model')
 
+
     global_model.to(device)
     global_model.train()
     print(global_model)
+    pre_global_model = copy.deepcopy(global_model)
 
     global_weights = global_model.state_dict()
 
@@ -94,8 +97,13 @@ if __name__ == '__main__':
     # 目标Staleness设定
     TARGET_STALENESS  = 1
 
-    # 投毒指使
+    # 投毒状态标志
     poisoned = False
+    # 其他参数
+    distance_ratio = 0.8
+    adaptive_accuracy_threshold = 0.8
+    pinned_accuracy_threshold = 0.8
+
  
     for l in range(args.num_users):
         scheduler[l] = 0
@@ -184,13 +192,12 @@ if __name__ == '__main__':
                 model=copy.deepcopy(global_model), global_round=epoch
 
             )
-            if idx in attack_users and epoch > 15 and args.model_poison == True:
+            if idx in attack_users and epoch > 29 and args.model_poison == True:
                 malicious_models.append(w) #
                 
             else:     
                 ensure_1 += 1 # 平均分布
                 
-                global_model_rep = copy.deepcopy(global_model)
                 test_model = copy.deepcopy(global_model)
                 test_model.load_state_dict(w)
 
@@ -202,16 +209,22 @@ if __name__ == '__main__':
                 loss_on_public[scheduler[idx] - 1].append(common_loss_sync)
                 entropy_on_public[scheduler[idx] - 1].append(common_entropy_sample)
             
-        if idx in attack_users and epoch > 1 and args.model_poison == True:
+        if idx in attack_users and epoch > 29 and args.model_poison == True:
+            if not poisoned:
+                poisoned = True
+                pinned_accuracy_threshold = test_acc - 0.15# 上一轮全局模型的精度
+                print("poisoned accuracy threshold is ",pinned_accuracy_threshold)
+                adaptive_accuracy_threshold = pinned_accuracy_threshold
+                malicious_dict, distance_ratio = Outline_Poisoning(args, pre_global_model, copy.deepcopy(global_model), malicious_models, train_dataset, distance_ratio, pinned_accuracy_threshold,
+                                               adaptive_accuracy_threshold, False)
+            else:
+                malicious_dict, distance_ratio = Outline_Poisoning(args, pre_global_model, copy.deepcopy(global_model), malicious_models, train_dataset, distance_ratio, pinned_accuracy_threshold,
+                                               adaptive_accuracy_threshold, True)
 
-            malicious_dict = Outline_Poisoning(copy.deepcopy(global_model), args, train_dataset, malicious_models, poisoned)
             test_model.load_state_dict(malicious_dict)
             mal_acc, mal_loss_sync, mal_entropy_sample = test_inference(args, test_model,
                                                                                         DatasetSplit(train_dataset,
                                                                                             dict_common))
-
-            if not poisoned:
-                poisoned = True
         
             for idx in attack_users:
                 local_weights_delay[ scheduler[idx] - 1 ].append(copy.deepcopy(w))
@@ -222,8 +235,6 @@ if __name__ == '__main__':
             
 
 
-
-            
         # 重新考虑PosionMean方式投毒的接入
         if epoch/TARGET_STALENESS == 0 and args.new_poison == True:
             std_dict = copy.deepcopy(global_weights)
@@ -288,8 +299,9 @@ if __name__ == '__main__':
                     pre_weights[i].append(local_weights_delay[i])
                     pre_index[i].append(local_index_delay[i])
                 else:
-                    pre_weights[i].append({epoch: [average_weights(local_weights_delay[i]), len(local_weights_delay[i])]})
-                    pre_index[i].append(local_index_delay[i])
+                    if len(local_weights_delay[i]) > 0:
+                        pre_weights[i].append({epoch: [average_weights(local_weights_delay[i]), len(local_weights_delay[i])]})
+                        pre_index[i].append(local_index_delay[i])
 
         if args.update_rule == 'Sageflow':
             # Averaging current local weights via entropy-based filtering and loss-wegithed averaging
@@ -323,7 +335,6 @@ if __name__ == '__main__':
         elif args.update_rule == 'AFA':
             # 待做  ——————————  加入staleness aware grouping
 
-            
             std_dict = copy.deepcopy(global_weights) # 标准字典值
             # std_keys = std_dict.keys()
             std_keys = get_key_list(std_dict.keys())
@@ -370,6 +381,7 @@ if __name__ == '__main__':
                                                  local_delay_ew, copy.deepcopy(global_weights))
 
         # Update global weights
+        pre_global_model.load_state_dict(global_model.state_dict())
         global_model.load_state_dict(global_weights)
 
         list_acc, list_loss = [], []
