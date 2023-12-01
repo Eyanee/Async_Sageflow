@@ -1,0 +1,4234 @@
+
+Experimental details:
+    Dataset     : mnist
+    Model     : cnn
+    detailed Model     : vgg
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 150
+
+    Federated parameters:
+    Non-IID with common data
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.2
+     None of attack is done!
+
+CNNMnist(
+  (conv1): Conv2d(1, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+  (conv2): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+  (fc1): Linear(in_features=3136, out_features=1024, bias=True)
+  (fc2): Linear(in_features=1024, out_features=10, bias=True)
+)
+
+ | Global Training Round : 1 | 
+
+m is  20
+attack_user is [43 17 74 86]
+local weights len is  20
+agg_para_update shape torch.Size([3274634])
+update_weights shape torch.Size([3274634])
+front idx and end idx 0 800
+update_weights shape torch.Size([3274634])
+front idx and end idx 800 832
+update_weights shape torch.Size([3274634])
+front idx and end idx 832 52032
+update_weights shape torch.Size([3274634])
+front idx and end idx 52032 52096
+update_weights shape torch.Size([3274634])
+front idx and end idx 52096 3263360
+update_weights shape torch.Size([3274634])
+front idx and end idx 3263360 3264384
+update_weights shape torch.Size([3274634])
+front idx and end idx 3264384 3274624
+update_weights shape torch.Size([3274634])
+front idx and end idx 3274624 3274634
+left index is  [86, 79, 17, 50, 33, 39, 29, 48, 22, 65, 43, 77, 1, 73, 19, 0]
+ 
+Avg Training Stats after 1 global rounds:
+Train Accuracy: 44.65% 
+
+Test Accuracy: 43.44% 
+
+
+ | Global Training Round : 2 | 
+
+m is  20
+attack_user is [27 16 82  4]
+local weights len is  20
+agg_para_update shape torch.Size([3274634])
+update_weights shape torch.Size([3274634])
+front idx and end idx 0 800
+update_weights shape torch.Size([3274634])
+front idx and end idx 800 832
+update_weights shape torch.Size([3274634])
+front idx and end idx 832 52032
+update_weights shape torch.Size([3274634])
+front idx and end idx 52032 52096
+update_weights shape torch.Size([3274634])
+front idx and end idx 52096 3263360
+update_weights shape torch.Size([3274634])
+front idx and end idx 3263360 3264384
+update_weights shape torch.Size([3274634])
+front idx and end idx 3264384 3274624
+update_weights shape torch.Size([3274634])
+front idx and end idx 3274624 3274634
+left index is  [63, 94, 4, 16, 81, 26, 47, 85, 11, 82, 96, 58, 72, 46, 33, 64]
+ 
+Avg Training Stats after 2 global rounds:
+Train Accuracy: 61.40% 
+
+Test Accuracy: 61.04% 
+
+
+ | Global Training Round : 3 | 
+
+m is  20
+attack_user is [63 66 21 50]
+local weights len is  20
+agg_para_update shape torch.Size([3274634])
+update_weights shape torch.Size([3274634])
+front idx and end idx 0 800
+update_weights shape torch.Size([3274634])
+front idx and end idx 800 832
+update_weights shape torch.Size([3274634])
+front idx and end idx 832 52032
+update_weights shape torch.Size([3274634])
+front idx and end idx 52032 52096
+update_weights shape torch.Size([3274634])
+front idx and end idx 52096 3263360
+update_weights shape torch.Size([3274634])
+front idx and end idx 3263360 3264384
+update_weights shape torch.Size([3274634])
+front idx and end idx 3264384 3274624
+update_weights shape torch.Size([3274634])
+front idx and end idx 3274624 3274634
+left index is  [16, 48, 86, 21, 63, 97, 3, 72, 13, 50, 83, 85, 7, 51, 2, 58]
+ 
+Avg Training Stats after 3 global rounds:
+Train Accuracy: 67.53% 
+
+Test Accuracy: 69.29% 
+
+
+ | Global Training Round : 4 | 
+
+m is  20
+attack_user is [ 3 69 19 78]
+local weights len is  20
+agg_para_update shape torch.Size([3274634])
+update_weights shape torch.Size([3274634])
+front idx and end idx 0 800
+update_weights shape torch.Size([3274634])
+front idx and end idx 800 832
+update_weights shape torch.Size([3274634])
+front idx and end idx 832 52032
+update_weights shape torch.Size([3274634])
+front idx and end idx 52032 52096
+update_weights shape torch.Size([3274634])
+front idx and end idx 52096 3263360
+update_weights shape torch.Size([3274634])
+front idx and end idx 3263360 3264384
+update_weights shape torch.Size([3274634])
+front idx and end idx 3264384 3274624
+update_weights shape torch.Size([3274634])
+front idx and end idx 3274624 3274634
+left index is  [69, 13, 58, 4, 29, 19, 79, 39, 90, 10, 84, 83, 43, 85, 74, 27]
+ 
+Avg Training Stats after 4 global rounds:
+Train Accuracy: 82.19% 
+
+Test Accuracy: 84.27% 
+
+
+ | Global Training Round : 5 | 
+
+m is  20
+attack_user is [20 25 79 31]
+local weights len is  20
+agg_para_update shape torch.Size([3274634])
+update_weights shape torch.Size([3274634])
+front idx and end idx 0 800
+update_weights shape torch.Size([3274634])
+front idx and end idx 800 832
+update_weights shape torch.Size([3274634])
+front idx and end idx 832 52032
+update_weights shape torch.Size([3274634])
+front idx and end idx 52032 52096
+update_weights shape torch.Size([3274634])
+front idx and end idx 52096 3263360
+update_weights shape torch.Size([3274634])
+front idx and end idx 3263360 3264384
+update_weights shape torch.Size([3274634])
+front idx and end idx 3264384 3274624
+update_weights shape torch.Size([3274634])
+front idx and end idx 3274624 3274634
+left index is  [97, 95, 10, 71, 34, 13, 80, 31, 79, 81, 35, 55, 61, 25, 84, 49]
+ 
+Avg Training Stats after 5 global rounds:
+Train Accuracy: 88.41% 
+
+Test Accuracy: 90.07% 
+
+
+ | Global Training Round : 6 | 
+
+m is  20
+attack_user is [ 4 25 63 94]
+local weights len is  20
+agg_para_update shape torch.Size([3274634])
+update_weights shape torch.Size([3274634])
+front idx and end idx 0 800
+update_weights shape torch.Size([3274634])
+front idx and end idx 800 832
+update_weights shape torch.Size([3274634])
+front idx and end idx 832 52032
+update_weights shape torch.Size([3274634])
+front idx and end idx 52032 52096
+update_weights shape torch.Size([3274634])
+front idx and end idx 52096 3263360
+update_weights shape torch.Size([3274634])
+front idx and end idx 3263360 3264384
+update_weights shape torch.Size([3274634])
+front idx and end idx 3264384 3274624
+update_weights shape torch.Size([3274634])
+front idx and end idx 3274624 3274634
+left index is  [94, 29, 63, 99, 86, 77, 48, 22, 47, 84, 41, 19, 25, 79, 18, 43]
+ 
+Avg Training Stats after 6 global rounds:
+Train Accuracy: 82.75% 
+
+Test Accuracy: 85.11% 
+
+
+ | Global Training Round : 7 | 
+
+m is  20
+attack_user is [29 21 82 35]
+local weights len is  20
+agg_para_update shape torch.Size([3274634])
+update_weights shape torch.Size([3274634])
+front idx and end idx 0 800
+update_weights shape torch.Size([3274634])
+front idx and end idx 800 832
+update_weights shape torch.Size([3274634])
+front idx and end idx 832 52032
+update_weights shape torch.Size([3274634])
+front idx and end idx 52032 52096
+update_weights shape torch.Size([3274634])
+front idx and end idx 52096 3263360
+update_weights shape torch.Size([3274634])
+front idx and end idx 3263360 3264384
+update_weights shape torch.Size([3274634])
+front idx and end idx 3264384 3274624
+update_weights shape torch.Size([3274634])
+front idx and end idx 3274624 3274634
+left index is  [21, 46, 29, 81, 56, 22, 28, 82, 83, 86, 19, 23, 99, 35, 69, 50]
+ 
+Avg Training Stats after 7 global rounds:
+Train Accuracy: 90.16% 
+
+Test Accuracy: 91.77% 
+
+
+ | Global Training Round : 8 | 
+
+m is  20
+attack_user is [28 35 94 39]
+local weights len is  20
+agg_para_update shape torch.Size([3274634])
+update_weights shape torch.Size([3274634])
+front idx and end idx 0 800
+update_weights shape torch.Size([3274634])
+front idx and end idx 800 832
+update_weights shape torch.Size([3274634])
+front idx and end idx 832 52032
+update_weights shape torch.Size([3274634])
+front idx and end idx 52032 52096
+update_weights shape torch.Size([3274634])
+front idx and end idx 52096 3263360
+update_weights shape torch.Size([3274634])
+front idx and end idx 3263360 3264384
+update_weights shape torch.Size([3274634])
+front idx and end idx 3264384 3274624
+update_weights shape torch.Size([3274634])
+front idx and end idx 3274624 3274634
+left index is  [44, 74, 86, 52, 18, 85, 43, 28, 12, 55, 39, 19, 83, 69, 94, 35]
+ 
+Avg Training Stats after 8 global rounds:
+Train Accuracy: 92.18% 
+
+Test Accuracy: 93.51% 
+
+
+ | Global Training Round : 9 | 
+
+m is  20
+attack_user is [15 39 56 17]
+local weights len is  20
+agg_para_update shape torch.Size([3274634])
+update_weights shape torch.Size([3274634])
+front idx and end idx 0 800
+update_weights shape torch.Size([3274634])
+front idx and end idx 800 832
+update_weights shape torch.Size([3274634])
+front idx and end idx 832 52032
+update_weights shape torch.Size([3274634])
+front idx and end idx 52032 52096
+update_weights shape torch.Size([3274634])
+front idx and end idx 52096 3263360
+update_weights shape torch.Size([3274634])
+front idx and end idx 3263360 3264384
+update_weights shape torch.Size([3274634])
+front idx and end idx 3264384 3274624
+update_weights shape torch.Size([3274634])
+front idx and end idx 3274624 3274634
+left index is  [0, 50, 82, 83, 90, 3, 39, 86, 73, 15, 35, 9, 76, 48, 53, 34]
+ 
+Avg Training Stats after 9 global rounds:
+Train Accuracy: 92.13% 
+
+Test Accuracy: 93.50% 
+
+
+ | Global Training Round : 10 | 
+
+m is  20
+attack_user is [39 21 32 16]
+local weights len is  20
+agg_para_update shape torch.Size([3274634])
+update_weights shape torch.Size([3274634])
+front idx and end idx 0 800
+update_weights shape torch.Size([3274634])
+front idx and end idx 800 832
+update_weights shape torch.Size([3274634])
+front idx and end idx 832 52032
+update_weights shape torch.Size([3274634])
+front idx and end idx 52032 52096
+update_weights shape torch.Size([3274634])
+front idx and end idx 52096 3263360
+update_weights shape torch.Size([3274634])
+front idx and end idx 3263360 3264384
+update_weights shape torch.Size([3274634])
+front idx and end idx 3264384 3274624
+update_weights shape torch.Size([3274634])
+front idx and end idx 3274624 3274634
+left index is  [13, 85, 90, 16, 39, 27, 49, 21, 97, 22, 47, 31, 92, 33, 63, 7]
+ 
+Avg Training Stats after 10 global rounds:
+Train Accuracy: 92.26% 
+
+Test Accuracy: 93.06% 
+
+
+ | Global Training Round : 11 | 
+
+m is  20
+attack_user is [51 49 55 43]
+local weights len is  20
+agg_para_update shape torch.Size([3274634])
+update_weights shape torch.Size([3274634])
+front idx and end idx 0 800
+update_weights shape torch.Size([3274634])
+front idx and end idx 800 832
+update_weights shape torch.Size([3274634])
+front idx and end idx 832 52032
+update_weights shape torch.Size([3274634])
+front idx and end idx 52032 52096
+update_weights shape torch.Size([3274634])
+front idx and end idx 52096 3263360
+update_weights shape torch.Size([3274634])
+front idx and end idx 3263360 3264384
+update_weights shape torch.Size([3274634])
+front idx and end idx 3264384 3274624
+update_weights shape torch.Size([3274634])
+front idx and end idx 3274624 3274634
+left index is  [51, 12, 13, 49, 4, 97, 55, 21, 44, 43, 53, 39, 25, 86, 46, 85]
+ 
+Avg Training Stats after 11 global rounds:
+Train Accuracy: 94.15% 
+
+Test Accuracy: 94.66% 
+
+
+ | Global Training Round : 12 | 
+
+m is  20
+attack_user is [16 86 81 78]
+local weights len is  20
+agg_para_update shape torch.Size([3274634])
+update_weights shape torch.Size([3274634])
+front idx and end idx 0 800
+update_weights shape torch.Size([3274634])
+front idx and end idx 800 832
+update_weights shape torch.Size([3274634])
+front idx and end idx 832 52032
+update_weights shape torch.Size([3274634])
+front idx and end idx 52032 52096
+update_weights shape torch.Size([3274634])
+front idx and end idx 52096 3263360
+update_weights shape torch.Size([3274634])
+front idx and end idx 3263360 3264384
+update_weights shape torch.Size([3274634])
+front idx and end idx 3264384 3274624
+update_weights shape torch.Size([3274634])
+front idx and end idx 3274624 3274634
+left index is  [70, 43, 45, 34, 13, 80, 25, 97, 49, 69, 86, 29, 16, 7, 47, 84]
+ 
+Avg Training Stats after 12 global rounds:
+Train Accuracy: 93.25% 
+
+Test Accuracy: 94.28% 
+
+
+ | Global Training Round : 13 | 
+
+m is  20
+attack_user is [64 32 78 22]
+local weights len is  20
+agg_para_update shape torch.Size([3274634])
+update_weights shape torch.Size([3274634])
+front idx and end idx 0 800
+update_weights shape torch.Size([3274634])
+front idx and end idx 800 832
+update_weights shape torch.Size([3274634])
+front idx and end idx 832 52032
+update_weights shape torch.Size([3274634])
+front idx and end idx 52032 52096
+update_weights shape torch.Size([3274634])
+front idx and end idx 52096 3263360
+update_weights shape torch.Size([3274634])
+front idx and end idx 3263360 3264384
+update_weights shape torch.Size([3274634])
+front idx and end idx 3264384 3274624
+update_weights shape torch.Size([3274634])
+front idx and end idx 3274624 3274634
+left index is  [47, 64, 22, 76, 83, 28, 32, 69, 23, 10, 18, 9, 41, 16, 70, 29]
+ 
+Avg Training Stats after 13 global rounds:
+Train Accuracy: 94.14% 
+
+Test Accuracy: 95.25% 
+
+
+ | Global Training Round : 14 | 
+
+m is  20
+attack_user is [51 13 55 18]
+local weights len is  20
+agg_para_update shape torch.Size([3274634])
+update_weights shape torch.Size([3274634])
+front idx and end idx 0 800
+update_weights shape torch.Size([3274634])
+front idx and end idx 800 832
+update_weights shape torch.Size([3274634])
+front idx and end idx 832 52032
+update_weights shape torch.Size([3274634])
+front idx and end idx 52032 52096
+update_weights shape torch.Size([3274634])
+front idx and end idx 52096 3263360
+update_weights shape torch.Size([3274634])
+front idx and end idx 3263360 3264384
+update_weights shape torch.Size([3274634])
+front idx and end idx 3264384 3274624
+update_weights shape torch.Size([3274634])
+front idx and end idx 3274624 3274634
+left index is  [16, 63, 18, 23, 72, 53, 4, 55, 81, 13, 51, 52, 45, 95, 82, 80]
+ 
+Avg Training Stats after 14 global rounds:
+Train Accuracy: 95.09% 
+
+Test Accuracy: 95.53% 
+
+
+ | Global Training Round : 15 | 
+
+m is  20
+attack_user is [74 25 55 85]
+local weights len is  20
+agg_para_update shape torch.Size([3274634])
+update_weights shape torch.Size([3274634])
+front idx and end idx 0 800
+update_weights shape torch.Size([3274634])
+front idx and end idx 800 832
+update_weights shape torch.Size([3274634])
+front idx and end idx 832 52032
+update_weights shape torch.Size([3274634])
+front idx and end idx 52032 52096
+update_weights shape torch.Size([3274634])
+front idx and end idx 52096 3263360
+update_weights shape torch.Size([3274634])
+front idx and end idx 3263360 3264384
+update_weights shape torch.Size([3274634])
+front idx and end idx 3264384 3274624
+update_weights shape torch.Size([3274634])
+front idx and end idx 3274624 3274634
+left index is  [48, 86, 63, 25, 71, 80, 90, 20, 47, 10, 94, 85, 72, 55, 46, 73]
+ 
+Avg Training Stats after 15 global rounds:
+Train Accuracy: 92.82% 
+
+Test Accuracy: 93.56% 
+
+
+ | Global Training Round : 16 | 
+
+m is  20
+attack_user is [93 90 16 99]
+local weights len is  20
+agg_para_update shape torch.Size([3274634])
+update_weights shape torch.Size([3274634])
+front idx and end idx 0 800
+update_weights shape torch.Size([3274634])
+front idx and end idx 800 832
+update_weights shape torch.Size([3274634])
+front idx and end idx 832 52032
+update_weights shape torch.Size([3274634])
+front idx and end idx 52032 52096
+update_weights shape torch.Size([3274634])
+front idx and end idx 52096 3263360
+update_weights shape torch.Size([3274634])
+front idx and end idx 3263360 3264384
+update_weights shape torch.Size([3274634])
+front idx and end idx 3264384 3274624
+update_weights shape torch.Size([3274634])
+front idx and end idx 3274624 3274634
+left index is  [49, 85, 9, 16, 77, 7, 94, 76, 50, 90, 39, 28, 93, 99, 18, 63]
+ 
+Avg Training Stats after 16 global rounds:
+Train Accuracy: 91.10% 
+
+Test Accuracy: 92.07% 
+
+
+ | Global Training Round : 17 | 
+
+m is  20
+attack_user is [34 73  1 46]
+local weights len is  20
+agg_para_update shape torch.Size([3274634])
+update_weights shape torch.Size([3274634])
+front idx and end idx 0 800
+update_weights shape torch.Size([3274634])
+front idx and end idx 800 832
+update_weights shape torch.Size([3274634])
+front idx and end idx 832 52032
+update_weights shape torch.Size([3274634])
+front idx and end idx 52032 52096
+update_weights shape torch.Size([3274634])
+front idx and end idx 52096 3263360
+update_weights shape torch.Size([3274634])
+front idx and end idx 3263360 3264384
+update_weights shape torch.Size([3274634])
+front idx and end idx 3264384 3274624
+update_weights shape torch.Size([3274634])
+front idx and end idx 3274624 3274634
+left index is  [79, 4, 73, 1, 76, 97, 70, 9, 25, 83, 46, 39, 34, 69, 80, 22]
+ 
+Avg Training Stats after 17 global rounds:
+Train Accuracy: 90.00% 
+
+Test Accuracy: 91.20% 
+
+
+ | Global Training Round : 18 | 
+
+m is  20
+attack_user is [97 33 48 18]
+local weights len is  20
+agg_para_update shape torch.Size([3274634])
+update_weights shape torch.Size([3274634])
+front idx and end idx 0 800
+update_weights shape torch.Size([3274634])
+front idx and end idx 800 832
+update_weights shape torch.Size([3274634])
+front idx and end idx 832 52032
+update_weights shape torch.Size([3274634])
+front idx and end idx 52032 52096
+update_weights shape torch.Size([3274634])
+front idx and end idx 52096 3263360
+update_weights shape torch.Size([3274634])
+front idx and end idx 3263360 3264384
+update_weights shape torch.Size([3274634])
+front idx and end idx 3264384 3274624
+update_weights shape torch.Size([3274634])
+front idx and end idx 3274624 3274634
+left index is  [55, 80, 48, 94, 97, 29, 63, 4, 36, 13, 18, 3, 44, 82, 33, 76]
+ 
+Avg Training Stats after 18 global rounds:
+Train Accuracy: 90.35% 
+
+Test Accuracy: 90.95% 
+
+
+ | Global Training Round : 19 | 
+
+m is  20
+attack_user is [41 55 36 80]
+local weights len is  20
+agg_para_update shape torch.Size([3274634])
+update_weights shape torch.Size([3274634])
+front idx and end idx 0 800
+update_weights shape torch.Size([3274634])
+front idx and end idx 800 832
+update_weights shape torch.Size([3274634])
+front idx and end idx 832 52032
+update_weights shape torch.Size([3274634])
+front idx and end idx 52032 52096
+update_weights shape torch.Size([3274634])
+front idx and end idx 52096 3263360
+update_weights shape torch.Size([3274634])
+front idx and end idx 3263360 3264384
+update_weights shape torch.Size([3274634])
+front idx and end idx 3264384 3274624
+update_weights shape torch.Size([3274634])
+front idx and end idx 3274624 3274634
+left index is  [79, 10, 77, 42, 22, 41, 61, 80, 53, 51, 25, 16, 28, 55, 39, 36]
+ 
+Avg Training Stats after 19 global rounds:
+Train Accuracy: 91.38% 
+
+Test Accuracy: 91.86% 
+
+
+ | Global Training Round : 20 | 
+
+m is  20
+attack_user is [53 32 43 17]
+local weights len is  20
+agg_para_update shape torch.Size([3274634])
+update_weights shape torch.Size([3274634])
+front idx and end idx 0 800
+update_weights shape torch.Size([3274634])
+front idx and end idx 800 832
+update_weights shape torch.Size([3274634])
+front idx and end idx 832 52032
+update_weights shape torch.Size([3274634])
+front idx and end idx 52032 52096
+update_weights shape torch.Size([3274634])
+front idx and end idx 52096 3263360
+update_weights shape torch.Size([3274634])
+front idx and end idx 3263360 3264384
+update_weights shape torch.Size([3274634])
+front idx and end idx 3264384 3274624
+update_weights shape torch.Size([3274634])
+front idx and end idx 3274624 3274634
+left index is  [43, 86, 53, 21, 4, 25, 99, 63, 65, 36, 75, 97, 11, 88, 15, 27]
+ 
+Avg Training Stats after 20 global rounds:
+Train Accuracy: 95.58% 
+
+Test Accuracy: 95.96% 
+
+
+ | Global Training Round : 21 | 
+
+m is  20
+attack_user is [28 49 83 84]
+
+Experimental details:
+    Dataset     : mnist
+    Model     : cnn
+    detailed Model     : vgg
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 150
+
+    Federated parameters:
+    Non-IID with common data
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.2
+     None of attack is done!
+
+CNNMnist(
+  (conv1): Conv2d(1, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+  (conv2): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+  (fc1): Linear(in_features=3136, out_features=1024, bias=True)
+  (fc2): Linear(in_features=1024, out_features=10, bias=True)
+)
+
+ | Global Training Round : 1 | 
+
+m is  20
+attack_user is [43 17 74 86]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [86, 79, 17, 50, 33, 39, 29, 48, 22, 65, 43, 77, 1, 73, 19, 0]
+ 
+Avg Training Stats after 1 global rounds:
+Train Accuracy: 44.49% 
+
+Test Accuracy: 43.32% 
+
+
+ | Global Training Round : 2 | 
+
+m is  20
+attack_user is [27 16 82  4]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [63, 94, 4, 16, 81, 79, 26, 47, 11, 82, 96, 58, 72, 46, 33, 64]
+ 
+Avg Training Stats after 2 global rounds:
+Train Accuracy: 54.57% 
+
+Test Accuracy: 52.84% 
+
+
+ | Global Training Round : 3 | 
+
+m is  20
+attack_user is [63 66 21 50]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [16, 48, 86, 21, 63, 97, 3, 72, 50, 84, 83, 7, 51, 2, 58, 74]
+ 
+Avg Training Stats after 3 global rounds:
+Train Accuracy: 70.14% 
+
+Test Accuracy: 72.60% 
+
+
+ | Global Training Round : 4 | 
+
+m is  20
+attack_user is [ 3 69 19 78]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [69, 13, 58, 3, 29, 19, 79, 39, 90, 10, 84, 83, 43, 85, 74, 27]
+ 
+Avg Training Stats after 4 global rounds:
+Train Accuracy: 80.84% 
+
+Test Accuracy: 83.03% 
+
+
+ | Global Training Round : 5 | 
+
+m is  20
+attack_user is [20 25 79 31]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [97, 95, 10, 71, 34, 85, 13, 31, 79, 81, 35, 55, 61, 25, 84, 49]
+ 
+Avg Training Stats after 5 global rounds:
+Train Accuracy: 89.77% 
+
+Test Accuracy: 91.71% 
+
+
+ | Global Training Round : 6 | 
+
+m is  20
+attack_user is [ 4 25 63 94]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [94, 29, 63, 99, 86, 77, 48, 47, 84, 41, 19, 25, 79, 18, 43, 20]
+ 
+Avg Training Stats after 6 global rounds:
+Train Accuracy: 86.78% 
+
+Test Accuracy: 89.14% 
+
+
+ | Global Training Round : 7 | 
+
+m is  20
+attack_user is [29 21 82 35]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [21, 46, 29, 81, 22, 28, 82, 83, 86, 19, 23, 99, 35, 69, 49, 50]
+ 
+Avg Training Stats after 7 global rounds:
+Train Accuracy: 90.19% 
+
+Test Accuracy: 91.67% 
+
+
+ | Global Training Round : 8 | 
+
+m is  20
+attack_user is [28 35 94 39]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [44, 74, 86, 52, 18, 85, 43, 28, 12, 55, 39, 19, 83, 69, 94, 35]
+ 
+Avg Training Stats after 8 global rounds:
+Train Accuracy: 91.46% 
+
+Test Accuracy: 92.87% 
+
+
+ | Global Training Round : 9 | 
+
+m is  20
+attack_user is [15 39 56 17]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [50, 82, 83, 90, 3, 39, 86, 73, 15, 56, 35, 9, 76, 48, 53, 34]
+ 
+Avg Training Stats after 9 global rounds:
+Train Accuracy: 91.16% 
+
+Test Accuracy: 92.64% 
+
+
+ | Global Training Round : 10 | 
+
+m is  20
+attack_user is [39 21 32 16]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [58, 13, 85, 90, 16, 39, 49, 21, 97, 22, 47, 31, 92, 33, 63, 7]
+ 
+Avg Training Stats after 10 global rounds:
+Train Accuracy: 92.18% 
+
+Test Accuracy: 93.34% 
+
+
+ | Global Training Round : 11 | 
+
+m is  20
+attack_user is [51 49 55 43]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [51, 12, 20, 13, 49, 97, 55, 21, 44, 43, 53, 39, 25, 86, 46, 85]
+ 
+Avg Training Stats after 11 global rounds:
+Train Accuracy: 94.31% 
+
+Test Accuracy: 95.07% 
+
+
+ | Global Training Round : 12 | 
+
+m is  20
+attack_user is [16 86 81 78]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [70, 43, 45, 34, 13, 80, 25, 97, 49, 69, 86, 29, 16, 7, 47, 84]
+ 
+Avg Training Stats after 12 global rounds:
+Train Accuracy: 93.43% 
+
+Test Accuracy: 94.21% 
+
+
+ | Global Training Round : 13 | 
+
+m is  20
+attack_user is [64 32 78 22]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [47, 64, 22, 76, 83, 28, 32, 69, 23, 96, 10, 9, 41, 16, 70, 29]
+ 
+Avg Training Stats after 13 global rounds:
+Train Accuracy: 95.13% 
+
+Test Accuracy: 95.84% 
+
+
+ | Global Training Round : 14 | 
+
+m is  20
+attack_user is [51 13 55 18]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [16, 63, 18, 23, 72, 53, 4, 55, 81, 13, 51, 52, 45, 95, 82, 80]
+ 
+Avg Training Stats after 14 global rounds:
+Train Accuracy: 95.03% 
+
+Test Accuracy: 95.76% 
+
+
+ | Global Training Round : 15 | 
+
+m is  20
+attack_user is [74 25 55 85]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [48, 86, 63, 25, 71, 80, 90, 20, 47, 10, 94, 85, 72, 55, 46, 73]
+ 
+Avg Training Stats after 15 global rounds:
+Train Accuracy: 92.83% 
+
+Test Accuracy: 93.66% 
+
+
+ | Global Training Round : 16 | 
+
+m is  20
+attack_user is [93 90 16 99]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [49, 85, 9, 16, 77, 7, 94, 76, 50, 90, 39, 28, 93, 99, 18, 63]
+ 
+Avg Training Stats after 16 global rounds:
+Train Accuracy: 91.26% 
+
+Test Accuracy: 92.16% 
+
+
+ | Global Training Round : 17 | 
+
+m is  20
+attack_user is [34 73  1 46]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [79, 4, 1, 76, 97, 70, 9, 25, 83, 46, 82, 39, 34, 69, 80, 22]
+ 
+Avg Training Stats after 17 global rounds:
+Train Accuracy: 90.32% 
+
+Test Accuracy: 91.32% 
+
+
+ | Global Training Round : 18 | 
+
+m is  20
+attack_user is [97 33 48 18]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [55, 80, 48, 94, 97, 29, 63, 4, 36, 13, 18, 3, 44, 82, 33, 76]
+ 
+Avg Training Stats after 18 global rounds:
+Train Accuracy: 90.42% 
+
+Test Accuracy: 91.05% 
+
+
+ | Global Training Round : 19 | 
+
+m is  20
+attack_user is [41 55 36 80]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [79, 10, 77, 42, 22, 41, 61, 80, 20, 53, 25, 16, 28, 55, 39, 36]
+ 
+Avg Training Stats after 19 global rounds:
+Train Accuracy: 91.13% 
+
+Test Accuracy: 91.58% 
+
+
+ | Global Training Round : 20 | 
+
+m is  20
+attack_user is [53 32 43 17]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [43, 86, 53, 21, 4, 25, 99, 63, 65, 36, 75, 97, 11, 88, 15, 27]
+ 
+Avg Training Stats after 20 global rounds:
+Train Accuracy: 95.39% 
+
+Test Accuracy: 95.98% 
+
+
+ | Global Training Round : 21 | 
+
+m is  20
+attack_user is [28 49 83 84]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [83, 23, 61, 42, 77, 28, 80, 79, 51, 21, 69, 52, 9, 29, 35, 49]
+ 
+Avg Training Stats after 21 global rounds:
+Train Accuracy: 94.47% 
+
+Test Accuracy: 95.35% 
+
+
+ | Global Training Round : 22 | 
+
+m is  20
+attack_user is [20 41 17 66]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [92, 46, 84, 20, 41, 47, 77, 25, 72, 26, 10, 74, 15, 42, 35, 82]
+ 
+Avg Training Stats after 22 global rounds:
+Train Accuracy: 95.42% 
+
+Test Accuracy: 96.15% 
+
+
+ | Global Training Round : 23 | 
+
+m is  20
+attack_user is [27 80 53  3]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [9, 59, 3, 41, 4, 79, 46, 63, 53, 94, 22, 80, 43, 69, 39, 28]
+ 
+Avg Training Stats after 23 global rounds:
+Train Accuracy: 94.42% 
+
+Test Accuracy: 95.61% 
+
+
+ | Global Training Round : 24 | 
+
+m is  20
+attack_user is [81 35 84 21]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [6, 9, 46, 35, 0, 61, 42, 15, 18, 3, 84, 63, 99, 48, 20, 21]
+ 
+Avg Training Stats after 24 global rounds:
+Train Accuracy: 94.75% 
+
+Test Accuracy: 95.80% 
+
+
+ | Global Training Round : 25 | 
+
+m is  20
+attack_user is [76 85 61 46]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [25, 93, 61, 55, 82, 29, 53, 19, 85, 74, 1, 46, 72, 76, 7, 97]
+ 
+Avg Training Stats after 25 global rounds:
+Train Accuracy: 94.14% 
+
+Test Accuracy: 95.30% 
+
+
+ | Global Training Round : 26 | 
+
+m is  20
+attack_user is [52  7 92 11]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [45, 7, 52, 92, 21, 4, 43, 25, 86, 76, 28, 61, 18, 85, 29, 49]
+ 
+Avg Training Stats after 26 global rounds:
+Train Accuracy: 95.25% 
+
+Test Accuracy: 96.21% 
+
+
+ | Global Training Round : 27 | 
+
+m is  20
+attack_user is [84 65 92 35]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [7, 92, 77, 21, 84, 28, 65, 16, 29, 59, 86, 35, 72, 85, 22, 45]
+ 
+Avg Training Stats after 27 global rounds:
+Train Accuracy: 95.92% 
+
+Test Accuracy: 96.59% 
+
+
+ | Global Training Round : 28 | 
+
+m is  20
+attack_user is [72 77 46 69]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [77, 88, 7, 97, 69, 18, 46, 22, 79, 34, 23, 3, 12, 96, 72, 64]
+ 
+Avg Training Stats after 28 global rounds:
+Train Accuracy: 96.38% 
+
+Test Accuracy: 96.90% 
+
+
+ | Global Training Round : 29 | 
+
+m is  20
+attack_user is [78 86 92 22]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [80, 84, 86, 36, 49, 13, 43, 9, 7, 0, 79, 48, 28, 22, 25, 92]
+ 
+Avg Training Stats after 29 global rounds:
+Train Accuracy: 96.69% 
+
+Test Accuracy: 97.10% 
+
+
+ | Global Training Round : 30 | 
+
+m is  20
+attack_user is [ 2  3 49  7]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [28, 88, 18, 48, 7, 43, 72, 51, 34, 81, 49, 67, 70, 79, 41, 3]
+ 
+Avg Training Stats after 30 global rounds:
+Train Accuracy: 96.44% 
+
+Test Accuracy: 96.97% 
+
+
+ | Global Training Round : 31 | 
+
+m is  20
+attack_user is [91 53 18 21]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [47, 25, 13, 70, 94, 48, 9, 53, 23, 18, 21, 67, 85, 3, 16, 76]
+ 
+Avg Training Stats after 31 global rounds:
+Train Accuracy: 95.98% 
+
+Test Accuracy: 96.70% 
+
+
+ | Global Training Round : 32 | 
+
+m is  20
+attack_user is [50 85 34 96]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [7, 9, 65, 90, 69, 50, 28, 16, 85, 23, 74, 34, 79, 22, 61, 25]
+ 
+Avg Training Stats after 32 global rounds:
+Train Accuracy: 95.16% 
+
+Test Accuracy: 96.14% 
+
+
+ | Global Training Round : 33 | 
+
+m is  20
+attack_user is [50  3 69 39]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [3, 50, 80, 43, 53, 85, 41, 16, 5, 51, 48, 69, 63, 39, 9, 26]
+ 
+Avg Training Stats after 33 global rounds:
+Train Accuracy: 94.70% 
+
+Test Accuracy: 95.81% 
+
+
+ | Global Training Round : 34 | 
+
+m is  20
+attack_user is [48 84 28 85]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [25, 28, 83, 94, 64, 48, 86, 9, 59, 85, 22, 72, 47, 7, 84, 76]
+ 
+Avg Training Stats after 34 global rounds:
+Train Accuracy: 94.85% 
+
+Test Accuracy: 96.04% 
+
+
+ | Global Training Round : 35 | 
+
+m is  20
+attack_user is [11 77 58 54]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [22, 25, 29, 54, 94, 17, 55, 77, 85, 84, 7, 96, 82, 50, 58, 21]
+ 
+Avg Training Stats after 35 global rounds:
+Train Accuracy: 95.98% 
+
+Test Accuracy: 96.77% 
+
+
+ | Global Training Round : 36 | 
+
+m is  20
+attack_user is [ 9 68  2 73]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [20, 96, 69, 63, 54, 26, 22, 9, 68, 13, 39, 58, 7, 43, 1, 34]
+ 
+Avg Training Stats after 36 global rounds:
+Train Accuracy: 95.74% 
+
+Test Accuracy: 96.45% 
+
+
+ | Global Training Round : 37 | 
+
+m is  20
+attack_user is [36 46 53 79]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [69, 16, 96, 46, 63, 81, 94, 79, 4, 9, 20, 47, 58, 29, 77, 53]
+ 
+Avg Training Stats after 37 global rounds:
+Train Accuracy: 95.45% 
+
+Test Accuracy: 96.33% 
+
+
+ | Global Training Round : 38 | 
+
+m is  20
+attack_user is [73 22  7  5]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [3, 97, 7, 5, 26, 28, 22, 46, 76, 96, 85, 84, 29, 43, 4, 80]
+ 
+Avg Training Stats after 38 global rounds:
+Train Accuracy: 95.39% 
+
+Test Accuracy: 96.34% 
+
+
+ | Global Training Round : 39 | 
+
+m is  20
+attack_user is [19  3 29 65]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [85, 58, 26, 86, 3, 16, 46, 28, 18, 83, 54, 44, 19, 65, 29, 39]
+ 
+Avg Training Stats after 39 global rounds:
+Train Accuracy: 96.03% 
+
+Test Accuracy: 96.83% 
+
+
+ | Global Training Round : 40 | 
+
+m is  20
+attack_user is [48 78 99 67]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [9, 97, 55, 99, 82, 90, 77, 72, 16, 79, 8, 85, 48, 13, 46, 83]
+ 
+Avg Training Stats after 40 global rounds:
+Train Accuracy: 95.56% 
+
+Test Accuracy: 96.51% 
+
+
+ | Global Training Round : 41 | 
+
+m is  20
+attack_user is [25 90 65  9]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [82, 25, 23, 8, 34, 90, 5, 85, 71, 10, 9, 81, 93, 76, 65, 22]
+ 
+Avg Training Stats after 41 global rounds:
+Train Accuracy: 96.03% 
+
+Test Accuracy: 96.74% 
+
+
+ | Global Training Round : 42 | 
+
+m is  20
+attack_user is [32 84 77  1]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [77, 74, 25, 7, 1, 12, 43, 63, 55, 34, 48, 10, 46, 84, 64, 85]
+ 
+Avg Training Stats after 42 global rounds:
+Train Accuracy: 96.32% 
+
+Test Accuracy: 96.99% 
+
+
+ | Global Training Round : 43 | 
+
+m is  20
+attack_user is [42 82  9 28]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [28, 22, 7, 70, 71, 34, 18, 85, 9, 64, 46, 99, 94, 83, 42, 45]
+ 
+Avg Training Stats after 43 global rounds:
+Train Accuracy: 96.05% 
+
+Test Accuracy: 96.76% 
+
+
+ | Global Training Round : 44 | 
+
+m is  20
+attack_user is [74 43 20 25]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [46, 22, 1, 20, 90, 74, 43, 18, 69, 25, 13, 93, 79, 21, 80, 33]
+ 
+Avg Training Stats after 44 global rounds:
+Train Accuracy: 95.88% 
+
+Test Accuracy: 96.62% 
+
+
+ | Global Training Round : 45 | 
+
+m is  20
+attack_user is [28 77 92 58]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [77, 97, 7, 8, 46, 41, 16, 20, 18, 25, 76, 39, 28, 55, 48, 63]
+ 
+Avg Training Stats after 45 global rounds:
+Train Accuracy: 95.35% 
+
+Test Accuracy: 96.31% 
+
+
+ | Global Training Round : 46 | 
+
+m is  20
+attack_user is [ 9 21  7 73]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [12, 9, 33, 82, 39, 15, 26, 7, 80, 73, 77, 23, 44, 53, 21, 63]
+ 
+Avg Training Stats after 46 global rounds:
+Train Accuracy: 96.02% 
+
+Test Accuracy: 96.69% 
+
+
+ | Global Training Round : 47 | 
+
+m is  20
+attack_user is [29 48 28 20]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [3, 20, 54, 28, 83, 46, 16, 55, 85, 29, 45, 48, 53, 2, 61, 8]
+ 
+Avg Training Stats after 47 global rounds:
+Train Accuracy: 95.81% 
+
+Test Accuracy: 96.58% 
+
+
+ | Global Training Round : 48 | 
+
+m is  20
+attack_user is [23 46 12  2]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [72, 12, 84, 25, 33, 76, 96, 79, 2, 16, 55, 94, 69, 46, 48, 45]
+ 
+Avg Training Stats after 48 global rounds:
+Train Accuracy: 96.03% 
+
+Test Accuracy: 96.83% 
+
+
+ | Global Training Round : 49 | 
+
+m is  20
+attack_user is [55 74 81 46]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [2, 94, 77, 25, 29, 74, 45, 13, 8, 22, 48, 42, 69, 34, 55, 46]
+ 
+Avg Training Stats after 49 global rounds:
+Train Accuracy: 95.79% 
+
+Test Accuracy: 96.80% 
+
+
+ | Global Training Round : 50 | 
+
+m is  20
+attack_user is [15 81 69 28]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [19, 15, 23, 4, 69, 79, 34, 28, 20, 90, 25, 36, 41, 86, 74, 53]
+ 
+Avg Training Stats after 50 global rounds:
+Train Accuracy: 96.49% 
+
+Test Accuracy: 97.12% 
+
+
+ | Global Training Round : 51 | 
+
+m is  20
+attack_user is [92 80 97 82]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [97, 58, 46, 92, 25, 82, 35, 70, 85, 84, 80, 2, 93, 78, 22, 12]
+ 
+Avg Training Stats after 51 global rounds:
+Train Accuracy: 96.53% 
+
+Test Accuracy: 97.09% 
+
+
+ | Global Training Round : 52 | 
+
+m is  20
+attack_user is [45 77 82 42]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [45, 71, 93, 25, 82, 63, 80, 53, 85, 77, 28, 23, 42, 83, 5, 26]
+ 
+Avg Training Stats after 52 global rounds:
+Train Accuracy: 96.85% 
+
+Test Accuracy: 97.40% 
+
+
+ | Global Training Round : 53 | 
+
+m is  20
+attack_user is [20 32  4 53]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [28, 4, 47, 18, 7, 9, 43, 63, 85, 16, 20, 90, 46, 64, 50, 53]
+ 
+Avg Training Stats after 53 global rounds:
+Train Accuracy: 96.33% 
+
+Test Accuracy: 97.10% 
+
+
+ | Global Training Round : 54 | 
+
+m is  20
+attack_user is [51 96 81  3]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [3, 76, 93, 52, 45, 64, 94, 25, 97, 28, 2, 17, 84, 82, 8, 39]
+ 
+Avg Training Stats after 54 global rounds:
+Train Accuracy: 96.34% 
+
+Test Accuracy: 97.11% 
+
+
+ | Global Training Round : 55 | 
+
+m is  20
+attack_user is [25 58 82 43]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [22, 43, 9, 93, 82, 12, 18, 76, 99, 1, 39, 4, 53, 25, 71, 35]
+ 
+Avg Training Stats after 55 global rounds:
+Train Accuracy: 95.97% 
+
+Test Accuracy: 96.79% 
+
+
+ | Global Training Round : 56 | 
+
+m is  20
+attack_user is [93 49 47 85]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [69, 46, 94, 85, 39, 97, 47, 93, 3, 34, 4, 90, 13, 63, 7, 84]
+ 
+Avg Training Stats after 56 global rounds:
+Train Accuracy: 95.68% 
+
+Test Accuracy: 96.59% 
+
+
+ | Global Training Round : 57 | 
+
+m is  20
+attack_user is [83 16 74 10]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [39, 46, 18, 2, 97, 55, 15, 28, 73, 90, 69, 7, 74, 83, 16, 20]
+ 
+Avg Training Stats after 57 global rounds:
+Train Accuracy: 95.73% 
+
+Test Accuracy: 96.60% 
+
+
+ | Global Training Round : 58 | 
+
+m is  20
+attack_user is [93 65  0 81]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [36, 99, 65, 85, 56, 77, 73, 20, 2, 39, 7, 34, 25, 93, 76, 51]
+ 
+Avg Training Stats after 58 global rounds:
+Train Accuracy: 96.51% 
+
+Test Accuracy: 97.09% 
+
+
+ | Global Training Round : 59 | 
+
+m is  20
+attack_user is [ 9 69 76 77]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [55, 85, 86, 16, 77, 9, 48, 5, 20, 76, 7, 83, 25, 69, 34, 97]
+ 
+Avg Training Stats after 59 global rounds:
+Train Accuracy: 96.52% 
+
+Test Accuracy: 97.08% 
+
+
+ | Global Training Round : 60 | 
+
+m is  20
+attack_user is [23 13 18 19]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [18, 69, 21, 92, 79, 46, 26, 22, 13, 2, 50, 3, 25, 7, 97, 10]
+ 
+Avg Training Stats after 60 global rounds:
+Train Accuracy: 96.65% 
+
+Test Accuracy: 97.26% 
+
+
+ | Global Training Round : 61 | 
+
+m is  20
+attack_user is [48 25 46 33]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [25, 86, 7, 22, 45, 3, 33, 16, 97, 74, 77, 2, 48, 69, 8, 46]
+ 
+Avg Training Stats after 61 global rounds:
+Train Accuracy: 96.64% 
+
+Test Accuracy: 97.22% 
+
+
+ | Global Training Round : 62 | 
+
+m is  20
+attack_user is [42 27 63 95]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [63, 4, 64, 7, 16, 10, 13, 42, 95, 45, 22, 9, 94, 80, 21, 61]
+ 
+Avg Training Stats after 62 global rounds:
+Train Accuracy: 96.74% 
+
+Test Accuracy: 97.29% 
+
+
+ | Global Training Round : 63 | 
+
+m is  20
+attack_user is [67 49 74 41]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [74, 36, 46, 26, 67, 13, 16, 69, 75, 3, 83, 23, 7, 41, 20, 63]
+ 
+Avg Training Stats after 63 global rounds:
+Train Accuracy: 97.02% 
+
+Test Accuracy: 97.40% 
+
+
+ | Global Training Round : 64 | 
+
+m is  20
+attack_user is [49 15 33 93]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [43, 18, 97, 67, 9, 25, 5, 73, 91, 19, 93, 52, 33, 86, 3, 63]
+ 
+Avg Training Stats after 64 global rounds:
+Train Accuracy: 97.08% 
+
+Test Accuracy: 97.49% 
+
+
+ | Global Training Round : 65 | 
+
+m is  20
+attack_user is [43 64  4 10]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [25, 4, 79, 21, 26, 47, 63, 74, 10, 43, 16, 99, 29, 64, 61, 23]
+ 
+Avg Training Stats after 65 global rounds:
+Train Accuracy: 96.98% 
+
+Test Accuracy: 97.47% 
+
+
+ | Global Training Round : 66 | 
+
+m is  20
+attack_user is [ 5 32 29 48]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [22, 23, 5, 18, 28, 42, 97, 29, 93, 1, 86, 48, 74, 79, 2, 77]
+ 
+Avg Training Stats after 66 global rounds:
+Train Accuracy: 97.02% 
+
+Test Accuracy: 97.47% 
+
+
+ | Global Training Round : 67 | 
+
+m is  20
+attack_user is [39 58 54 97]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [44, 7, 83, 69, 9, 18, 71, 39, 90, 94, 22, 99, 85, 80, 25, 97]
+ 
+Avg Training Stats after 67 global rounds:
+Train Accuracy: 96.91% 
+
+Test Accuracy: 97.36% 
+
+
+ | Global Training Round : 68 | 
+
+m is  20
+attack_user is [59 21 85 70]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [46, 21, 28, 59, 72, 76, 80, 83, 63, 19, 69, 70, 34, 93, 5, 85]
+ 
+Avg Training Stats after 68 global rounds:
+Train Accuracy: 96.89% 
+
+Test Accuracy: 97.30% 
+
+
+ | Global Training Round : 69 | 
+
+m is  20
+attack_user is [73 63 93 64]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [91, 18, 42, 20, 69, 73, 63, 86, 46, 5, 93, 43, 64, 16, 29, 59]
+ 
+Avg Training Stats after 69 global rounds:
+Train Accuracy: 96.77% 
+
+Test Accuracy: 97.25% 
+
+
+ | Global Training Round : 70 | 
+
+m is  20
+attack_user is [91 20 21  9]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [71, 45, 79, 46, 41, 4, 44, 20, 0, 91, 72, 28, 9, 47, 21, 3]
+ 
+Avg Training Stats after 70 global rounds:
+Train Accuracy: 96.69% 
+
+Test Accuracy: 97.15% 
+
+
+ | Global Training Round : 71 | 
+
+m is  20
+attack_user is [11 84 22 81]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [42, 69, 22, 47, 5, 0, 94, 55, 63, 64, 7, 85, 97, 80, 46, 77]
+ 
+Avg Training Stats after 71 global rounds:
+Train Accuracy: 96.64% 
+
+Test Accuracy: 97.15% 
+
+
+ | Global Training Round : 72 | 
+
+m is  20
+attack_user is [41 49 72 50]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [94, 48, 22, 47, 39, 25, 28, 72, 61, 41, 50, 99, 79, 6, 18, 46]
+ 
+Avg Training Stats after 72 global rounds:
+Train Accuracy: 96.52% 
+
+Test Accuracy: 97.08% 
+
+
+ | Global Training Round : 73 | 
+
+m is  20
+attack_user is [55 23 20 83]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [18, 77, 55, 23, 20, 47, 97, 50, 83, 74, 46, 2, 73, 82, 59, 27]
+ 
+Avg Training Stats after 73 global rounds:
+Train Accuracy: 96.53% 
+
+Test Accuracy: 97.13% 
+
+
+ | Global Training Round : 74 | 
+
+m is  20
+attack_user is [49 28 58 85]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [97, 6, 82, 80, 85, 53, 67, 27, 7, 69, 28, 2, 76, 1, 8, 63]
+ 
+Avg Training Stats after 74 global rounds:
+Train Accuracy: 96.70% 
+
+Test Accuracy: 97.19% 
+
+
+ | Global Training Round : 75 | 
+
+m is  20
+attack_user is [58 34 92 32]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [26, 86, 5, 85, 28, 34, 69, 48, 46, 79, 31, 63, 55, 94, 88, 19]
+ 
+Avg Training Stats after 75 global rounds:
+Train Accuracy: 96.76% 
+
+Test Accuracy: 97.26% 
+
+
+ | Global Training Round : 76 | 
+
+m is  20
+attack_user is [63 82 85 22]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [46, 9, 25, 93, 26, 47, 63, 31, 5, 22, 3, 69, 8, 45, 18, 85]
+ 
+Avg Training Stats after 76 global rounds:
+Train Accuracy: 96.64% 
+
+Test Accuracy: 97.13% 
+
+
+ | Global Training Round : 77 | 
+
+m is  20
+attack_user is [ 3 79 86 48]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [97, 3, 86, 93, 1, 2, 72, 4, 46, 69, 48, 22, 80, 45, 79, 61]
+ 
+Avg Training Stats after 77 global rounds:
+Train Accuracy: 96.76% 
+
+Test Accuracy: 97.22% 
+
+
+ | Global Training Round : 78 | 
+
+m is  20
+attack_user is [10 12 71 90]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [69, 29, 8, 85, 5, 7, 46, 23, 9, 90, 79, 71, 48, 10, 80]
+ 
+Avg Training Stats after 78 global rounds:
+Train Accuracy: 96.76% 
+
+Test Accuracy: 97.23% 
+
+
+ | Global Training Round : 79 | 
+
+m is  20
+attack_user is [35 91 25 58]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [45, 91, 79, 35, 80, 65, 2, 25, 47, 7, 22, 5, 74, 76, 97, 41]
+ 
+Avg Training Stats after 79 global rounds:
+Train Accuracy: 96.81% 
+
+Test Accuracy: 97.24% 
+
+
+ | Global Training Round : 80 | 
+
+m is  20
+attack_user is [ 1 34 66 39]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [97, 94, 34, 18, 61, 1, 69, 93, 48, 70, 7, 25, 82, 39, 23, 8]
+ 
+Avg Training Stats after 80 global rounds:
+Train Accuracy: 96.78% 
+
+Test Accuracy: 97.18% 
+
+
+ | Global Training Round : 81 | 
+
+m is  20
+attack_user is [74 63 81  3]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [3, 2, 64, 63, 83, 22, 72, 7, 28, 50, 74, 26, 99, 35, 4, 85]
+ 
+Avg Training Stats after 81 global rounds:
+Train Accuracy: 96.81% 
+
+Test Accuracy: 97.16% 
+
+
+ | Global Training Round : 82 | 
+
+m is  20
+attack_user is [12 71 97 16]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [44, 85, 52, 22, 46, 77, 71, 80, 19, 45, 73, 3, 16, 20, 34, 97]
+ 
+Avg Training Stats after 82 global rounds:
+Train Accuracy: 96.85% 
+
+Test Accuracy: 97.24% 
+
+
+ | Global Training Round : 83 | 
+
+m is  20
+attack_user is [26 92 77 16]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [56, 43, 28, 34, 74, 79, 77, 26, 16, 36, 19, 73, 9, 70, 94, 61]
+ 
+Avg Training Stats after 83 global rounds:
+Train Accuracy: 96.87% 
+
+Test Accuracy: 97.29% 
+
+
+ | Global Training Round : 84 | 
+
+m is  20
+attack_user is [ 9 13 55 76]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [20, 76, 93, 36, 16, 3, 43, 97, 46, 13, 18, 1, 9, 55, 69]
+ 
+Avg Training Stats after 84 global rounds:
+Train Accuracy: 96.85% 
+
+Test Accuracy: 97.25% 
+
+
+ | Global Training Round : 85 | 
+
+m is  20
+attack_user is [85  4 48 45]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [28, 23, 13, 47, 16, 6, 93, 45, 69, 4, 44, 48, 41, 85, 94]
+ 
+Avg Training Stats after 85 global rounds:
+Train Accuracy: 96.83% 
+
+Test Accuracy: 97.23% 
+
+
+ | Global Training Round : 86 | 
+
+m is  20
+attack_user is [77  3 74 80]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [73, 85, 21, 77, 99, 16, 20, 80, 79, 63, 3, 7, 45, 74, 9, 46]
+ 
+Avg Training Stats after 86 global rounds:
+Train Accuracy: 96.81% 
+
+Test Accuracy: 97.22% 
+
+
+ | Global Training Round : 87 | 
+
+m is  20
+attack_user is [12 28  4 44]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [36, 22, 13, 46, 4, 3, 69, 9, 94, 28, 21, 44, 82, 99]
+ 
+Avg Training Stats after 87 global rounds:
+Train Accuracy: 96.81% 
+
+Test Accuracy: 97.20% 
+
+
+ | Global Training Round : 88 | 
+
+m is  20
+attack_user is [ 7 69 72 20]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [29, 93, 9, 22, 20, 44, 7, 63, 18, 73, 21, 25, 94, 72, 69, 39]
+ 
+Avg Training Stats after 88 global rounds:
+Train Accuracy: 96.77% 
+
+Test Accuracy: 97.21% 
+
+
+ | Global Training Round : 89 | 
+
+m is  20
+attack_user is [32 18 28 94]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [29, 18, 99, 86, 94, 4, 69, 28, 13, 46, 8, 93, 85, 64, 59, 63]
+ 
+Avg Training Stats after 89 global rounds:
+Train Accuracy: 96.77% 
+
+Test Accuracy: 97.18% 
+
+
+ | Global Training Round : 90 | 
+
+m is  20
+attack_user is [ 9 93 19 82]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [29, 74, 39, 69, 63, 3, 76, 99, 41, 4, 85, 82, 18, 9, 47, 93]
+ 
+Avg Training Stats after 90 global rounds:
+Train Accuracy: 96.75% 
+
+Test Accuracy: 97.14% 
+
+
+ | Global Training Round : 91 | 
+
+m is  20
+attack_user is [44 58 22 36]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [76, 22, 97, 35, 28, 53, 59, 74, 63, 29, 20, 55, 93, 44, 26, 7]
+ 
+Avg Training Stats after 91 global rounds:
+Train Accuracy: 96.72% 
+
+Test Accuracy: 97.12% 
+
+
+ | Global Training Round : 92 | 
+
+m is  20
+attack_user is [47 81 80 74]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [73, 25, 80, 13, 3, 18, 76]
+ 
+Avg Training Stats after 92 global rounds:
+Train Accuracy: 96.71% 
+
+Test Accuracy: 97.12% 
+
+
+ | Global Training Round : 93 | 
+
+m is  20
+attack_user is [46 70 31 50]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [70, 86, 23, 8, 16, 39, 31, 50, 95, 18]
+ 
+Avg Training Stats after 93 global rounds:
+Train Accuracy: 96.74% 
+
+Test Accuracy: 97.12% 
+
+
+ | Global Training Round : 94 | 
+
+m is  20
+attack_user is [85 49 79 80]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [69, 97, 27, 49, 47, 73, 5, 79, 25, 18, 85, 16, 20]
+ 
+Avg Training Stats after 94 global rounds:
+Train Accuracy: 96.71% 
+
+Test Accuracy: 97.12% 
+
+
+ | Global Training Round : 95 | 
+
+m is  20
+attack_user is [48  5 36 43]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [46, 22, 85, 13, 48, 34]
+ 
+Avg Training Stats after 95 global rounds:
+Train Accuracy: 96.71% 
+
+Test Accuracy: 97.14% 
+
+
+ | Global Training Round : 96 | 
+
+m is  20
+attack_user is [20 16 78 26]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [34, 16, 46, 2, 69, 94, 25, 39, 88, 1, 83, 26, 48, 4, 7, 20]
+ 
+Avg Training Stats after 96 global rounds:
+Train Accuracy: 96.73% 
+
+Test Accuracy: 97.12% 
+
+
+ | Global Training Round : 97 | 
+
+m is  20
+attack_user is [18 83 68  3]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [18, 70, 34, 85, 79, 4, 25, 83]
+ 
+Avg Training Stats after 97 global rounds:
+Train Accuracy: 96.73% 
+
+Test Accuracy: 97.14% 
+
+
+ | Global Training Round : 98 | 
+
+m is  20
+attack_user is [13 79 20 82]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [79, 34, 65, 85, 20, 74, 18, 4, 33, 26, 93, 29, 35, 27, 13]
+ 
+Avg Training Stats after 98 global rounds:
+Train Accuracy: 96.73% 
+
+Test Accuracy: 97.12% 
+
+
+ | Global Training Round : 99 | 
+
+m is  20
+attack_user is [97 64  2 34]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [34, 2, 49, 29, 80, 63, 64, 97, 85, 83, 47, 69, 15]
+ 
+Avg Training Stats after 99 global rounds:
+Train Accuracy: 96.75% 
+
+Test Accuracy: 97.15% 
+
+
+ | Global Training Round : 100 | 
+
+m is  20
+attack_user is [19 85 86 27]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [10, 48, 61, 4, 85, 64, 22]
+ 
+Avg Training Stats after 100 global rounds:
+Train Accuracy: 96.75% 
+
+Test Accuracy: 97.15% 
+
+
+ | Global Training Round : 101 | 
+
+m is  20
+attack_user is [80 84 94 68]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [79, 54, 46, 34, 94, 11, 90]
+ 
+Avg Training Stats after 101 global rounds:
+Train Accuracy: 96.81% 
+
+Test Accuracy: 97.20% 
+
+
+ | Global Training Round : 102 | 
+
+m is  20
+attack_user is [27 48 11 66]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [49, 80, 55, 26, 48, 27, 83, 39, 19, 46, 78, 18, 94, 73, 11]
+ 
+Avg Training Stats after 102 global rounds:
+Train Accuracy: 96.85% 
+
+Test Accuracy: 97.27% 
+
+
+ | Global Training Round : 103 | 
+
+m is  20
+attack_user is [50 46 75 61]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [46]
+ 
+Avg Training Stats after 103 global rounds:
+Train Accuracy: 96.83% 
+
+Test Accuracy: 97.27% 
+
+
+ | Global Training Round : 104 | 
+
+m is  20
+attack_user is [48 76 39  1]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [21, 35, 67, 18, 1, 22, 69, 54, 12, 79, 39, 48, 11, 76, 82, 77]
+ 
+Avg Training Stats after 104 global rounds:
+Train Accuracy: 96.89% 
+
+Test Accuracy: 97.29% 
+
+
+ | Global Training Round : 105 | 
+
+m is  20
+attack_user is [58 41  7 13]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [9, 8, 34, 48, 23, 58, 41, 80, 97, 70, 13, 7, 72, 45, 27]
+ 
+Avg Training Stats after 105 global rounds:
+Train Accuracy: 96.91% 
+
+Test Accuracy: 97.32% 
+
+
+ | Global Training Round : 106 | 
+
+m is  20
+attack_user is [64 82 13 58]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [97, 81, 82, 20, 33, 2, 92, 58, 55]
+ 
+Avg Training Stats after 106 global rounds:
+Train Accuracy: 96.92% 
+
+Test Accuracy: 97.34% 
+
+
+ | Global Training Round : 107 | 
+
+m is  20
+attack_user is [21 50 92  0]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [92, 51, 29, 81, 50, 18, 7, 94, 34, 25, 78, 20, 76, 4]
+ 
+Avg Training Stats after 107 global rounds:
+Train Accuracy: 96.92% 
+
+Test Accuracy: 97.34% 
+
+
+ | Global Training Round : 108 | 
+
+m is  20
+attack_user is [63 48 34 68]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [32, 84, 28, 53, 4, 55, 46, 61, 79, 68, 34, 80, 13]
+ 
+Avg Training Stats after 108 global rounds:
+Train Accuracy: 96.91% 
+
+Test Accuracy: 97.38% 
+
+
+ | Global Training Round : 109 | 
+
+m is  20
+attack_user is [86  8 99 29]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [19, 9, 75]
+ 
+Avg Training Stats after 109 global rounds:
+Train Accuracy: 96.95% 
+
+Test Accuracy: 97.43% 
+
+
+ | Global Training Round : 110 | 
+
+m is  20
+attack_user is [93 67  3 97]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [73, 23, 65, 72, 77, 35, 92, 58, 51, 36, 94, 97]
+ 
+Avg Training Stats after 110 global rounds:
+Train Accuracy: 96.98% 
+
+Test Accuracy: 97.45% 
+
+
+ | Global Training Round : 111 | 
+
+m is  20
+attack_user is [84 59 79 46]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [72, 79, 59, 94, 78, 49, 7, 61, 86]
+ 
+Avg Training Stats after 111 global rounds:
+Train Accuracy: 97.01% 
+
+Test Accuracy: 97.45% 
+
+
+ | Global Training Round : 112 | 
+
+m is  20
+attack_user is [22 13 73 46]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [13, 45, 72, 73, 81, 93]
+ 
+Avg Training Stats after 112 global rounds:
+Train Accuracy: 97.01% 
+
+Test Accuracy: 97.45% 
+
+
+ | Global Training Round : 113 | 
+
+m is  20
+attack_user is [ 9 80 77 78]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [86, 66]
+ 
+Avg Training Stats after 113 global rounds:
+Train Accuracy: 97.03% 
+
+Test Accuracy: 97.47% 
+
+
+ | Global Training Round : 114 | 
+
+m is  20
+attack_user is [75 46 67 28]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [39, 35, 27, 26, 21, 45, 83, 86, 43, 51, 67, 48]
+ 
+Avg Training Stats after 114 global rounds:
+Train Accuracy: 97.03% 
+
+Test Accuracy: 97.47% 
+
+
+ | Global Training Round : 115 | 
+
+m is  20
+attack_user is [63 39 55 28]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [9, 13, 10, 44, 39]
+ 
+Avg Training Stats after 115 global rounds:
+Train Accuracy: 97.03% 
+
+Test Accuracy: 97.47% 
+
+
+ | Global Training Round : 116 | 
+
+m is  20
+attack_user is [69 78 22 16]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [22, 17, 78]
+ 
+Avg Training Stats after 116 global rounds:
+Train Accuracy: 97.06% 
+
+Test Accuracy: 97.49% 
+
+
+ | Global Training Round : 117 | 
+
+m is  20
+attack_user is [11 63 17 46]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [11, 69, 17]
+ 
+Avg Training Stats after 117 global rounds:
+Train Accuracy: 97.08% 
+
+Test Accuracy: 97.52% 
+
+
+ | Global Training Round : 118 | 
+
+m is  20
+attack_user is [69 52 16 64]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [69, 17]
+ 
+Avg Training Stats after 118 global rounds:
+Train Accuracy: 97.07% 
+
+Test Accuracy: 97.54% 
+
+
+ | Global Training Round : 119 | 
+
+m is  20
+attack_user is [68 29 43 63]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 800 832
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 832 52032
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52032 52096
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 52096 3263360
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3263360 3264384
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3264384 3274624
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 3274624 3274634
+left index is  [63, 61, 47, 49, 22]
+ 
+Avg Training Stats after 119 global rounds:
+Train Accuracy: 97.08% 
+
+Test Accuracy: 97.54% 
+
+
+ | Global Training Round : 120 | 
+
+m is  20
+attack_user is [49 16 72 18]
+local weights len is  20
+agg_para_update shape <class 'torch.Tensor'>
+update_weights shape <class 'torch.Tensor'>
+front idx and end idx 0 800

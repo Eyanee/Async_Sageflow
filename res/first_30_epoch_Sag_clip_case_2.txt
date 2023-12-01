@@ -1,0 +1,1279 @@
+
+Experimental details:
+    Dataset     : mnist
+    Model     : cnn
+    detailed Model     : vgg
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 50
+
+    Federated parameters:
+    Non-IID with common data
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.2
+     Model attack is done!
+CNNMnist(
+  (conv1): Conv2d(1, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+  (conv2): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+  (fc1): Linear(in_features=3136, out_features=1024, bias=True)
+  (fc2): Linear(in_features=1024, out_features=10, bias=True)
+)
+attack user num is  10
+ t is  8
+attack_user is [40 41 42 43 44 45 46 47 48 49]
+
+ | Global Training Round : 1 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  2
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+current aggregation staleness i is  4
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 1 global rounds:
+Train Accuracy: 28.58% 
+
+Test Accuracy: 33.05% 
+
+
+ | Global Training Round : 2 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 2 global rounds:
+Train Accuracy: 75.95% 
+
+Test Accuracy: 75.06% 
+
+
+ | Global Training Round : 3 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 3 global rounds:
+Train Accuracy: 80.67% 
+
+Test Accuracy: 80.88% 
+
+
+ | Global Training Round : 4 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  2
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 4 global rounds:
+Train Accuracy: 86.47% 
+
+Test Accuracy: 86.23% 
+
+
+ | Global Training Round : 5 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 5 global rounds:
+Train Accuracy: 89.31% 
+
+Test Accuracy: 89.33% 
+
+
+ | Global Training Round : 6 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  4
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 6 global rounds:
+Train Accuracy: 93.26% 
+
+Test Accuracy: 93.14% 
+
+
+ | Global Training Round : 7 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  2
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 7 global rounds:
+Train Accuracy: 92.02% 
+
+Test Accuracy: 92.22% 
+
+
+ | Global Training Round : 8 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 8 global rounds:
+Train Accuracy: 94.04% 
+
+Test Accuracy: 94.20% 
+
+
+ | Global Training Round : 9 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 9 global rounds:
+Train Accuracy: 95.22% 
+
+Test Accuracy: 95.47% 
+
+
+ | Global Training Round : 10 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  2
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 10 global rounds:
+Train Accuracy: 95.71% 
+
+Test Accuracy: 95.33% 
+
+
+ | Global Training Round : 11 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  4
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 11 global rounds:
+Train Accuracy: 95.03% 
+
+Test Accuracy: 95.28% 
+
+
+ | Global Training Round : 12 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+num2 of attacker is  0
+the length of epoch_weights is  3
+ 
+Avg Training Stats after 12 global rounds:
+Train Accuracy: 95.92% 
+
+Test Accuracy: 96.15% 
+
+
+ | Global Training Round : 13 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  2
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 13 global rounds:
+Train Accuracy: 96.39% 
+
+Test Accuracy: 96.22% 
+
+
+ | Global Training Round : 14 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 14 global rounds:
+Train Accuracy: 96.72% 
+
+Test Accuracy: 96.55% 
+
+
+ | Global Training Round : 15 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 15 global rounds:
+Train Accuracy: 96.39% 
+
+Test Accuracy: 96.39% 
+
+
+ | Global Training Round : 16 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  2
+num1 of attacker is  0
+current aggregation staleness i is  4
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 16 global rounds:
+Train Accuracy: 96.64% 
+
+Test Accuracy: 96.52% 
+
+
+ | Global Training Round : 17 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 17 global rounds:
+Train Accuracy: 96.71% 
+
+Test Accuracy: 96.60% 
+
+
+ | Global Training Round : 18 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 18 global rounds:
+Train Accuracy: 96.90% 
+
+Test Accuracy: 96.73% 
+
+
+ | Global Training Round : 19 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  2
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 19 global rounds:
+Train Accuracy: 96.63% 
+
+Test Accuracy: 96.73% 
+
+
+ | Global Training Round : 20 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+num2 of attacker is  0
+the length of epoch_weights is  3
+ 
+Avg Training Stats after 20 global rounds:
+Train Accuracy: 96.92% 
+
+Test Accuracy: 96.78% 
+
+
+ | Global Training Round : 21 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+current aggregation staleness i is  4
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 21 global rounds:
+Train Accuracy: 96.92% 
+
+Test Accuracy: 96.84% 
+
+
+ | Global Training Round : 22 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  2
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 22 global rounds:
+Train Accuracy: 97.11% 
+
+Test Accuracy: 96.84% 
+
+
+ | Global Training Round : 23 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 23 global rounds:
+Train Accuracy: 97.03% 
+
+Test Accuracy: 96.90% 
+
+
+ | Global Training Round : 24 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+num2 of attacker is  0
+the length of epoch_weights is  3
+ 
+Avg Training Stats after 24 global rounds:
+Train Accuracy: 97.10% 
+
+Test Accuracy: 96.95% 
+
+
+ | Global Training Round : 25 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  2
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 25 global rounds:
+Train Accuracy: 97.10% 
+
+Test Accuracy: 96.92% 
+
+
+ | Global Training Round : 26 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  4
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 26 global rounds:
+Train Accuracy: 97.17% 
+
+Test Accuracy: 96.92% 
+
+
+ | Global Training Round : 27 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 27 global rounds:
+Train Accuracy: 96.97% 
+
+Test Accuracy: 96.99% 
+
+
+ | Global Training Round : 28 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  2
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 28 global rounds:
+Train Accuracy: 97.20% 
+
+Test Accuracy: 97.05% 
+
+
+ | Global Training Round : 29 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 29 global rounds:
+Train Accuracy: 97.10% 
+
+Test Accuracy: 97.04% 
+
+
+ | Global Training Round : 30 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is 

@@ -1,0 +1,1370 @@
+
+Experimental details:
+    Dataset     : mnist
+    Model     : cnn
+    detailed Model     : vgg
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 15
+
+    Federated parameters:
+    Non-IID with common data
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.12
+     Model attack is done!
+CNNMnist(
+  (conv1): Conv2d(1, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+  (conv2): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+  (fc1): Linear(in_features=3136, out_features=1024, bias=True)
+  (fc2): Linear(in_features=1024, out_features=10, bias=True)
+)
+attack user num is  5
+ t is  8
+attack_user is [40 41 42 43 44]
+
+ | Global Training Round : 1 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+local weights len is  8
+left index is  [8, 9, 10, 11, 13, 14, 15]
+local weights len is  8
+left index is  [16, 17, 18, 20, 21, 22, 23]
+local weights len is  8
+left index is  [24, 26, 27, 28, 29, 30, 31]
+local weights len is  8
+left index is  [33, 34, 35, 36, 37, 38, 39]
+local weights len is  13
+left index is  [1, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44]
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 1 global rounds:
+Train Accuracy: 49.10% 
+
+Test Accuracy: 49.14% 
+
+
+ | Global Training Round : 2 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+local weights len is  13
+left index is  [0, 1, 2, 4, 6, 7, 40, 41, 42, 43, 44]
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 2 global rounds:
+Train Accuracy: 53.42% 
+
+Test Accuracy: 54.39% 
+
+
+ | Global Training Round : 3 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+local weights len is  8
+left index is  [8, 9, 10, 11, 12, 14, 15]
+local weights len is  13
+left index is  [0, 2, 4, 5, 6, 7, 40, 41, 42, 43, 44]
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 3 global rounds:
+Train Accuracy: 59.00% 
+
+Test Accuracy: 58.39% 
+
+
+ | Global Training Round : 4 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+local weights len is  8
+left index is  [16, 18, 19, 20, 21, 22, 23]
+local weights len is  13
+left index is  [1, 2, 3, 4, 5, 6, 7, 41, 42, 43, 44]
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 4 global rounds:
+Train Accuracy: 83.53% 
+
+Test Accuracy: 83.71% 
+
+
+ | Global Training Round : 5 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+local weights len is  8
+left index is  [8, 9, 10, 11, 13, 14, 15]
+local weights len is  8
+left index is  [24, 25, 26, 27, 28, 29, 31]
+local weights len is  13
+left index is  [0, 1, 3, 4, 5, 6, 7, 41, 42, 43, 44]
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 5 global rounds:
+Train Accuracy: 82.33% 
+
+Test Accuracy: 81.65% 
+
+
+ | Global Training Round : 6 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+local weights len is  8
+left index is  [32, 33, 35, 36, 37, 38, 39]
+local weights len is  13
+left index is  [0, 1, 4, 5, 6, 7, 40, 41, 42, 43, 44]
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 6 global rounds:
+Train Accuracy: 89.09% 
+
+Test Accuracy: 89.65% 
+
+
+ | Global Training Round : 7 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+local weights len is  8
+left index is  [8, 9, 11, 12, 13, 14, 15]
+local weights len is  8
+left index is  [16, 18, 19, 20, 21, 22, 23]
+local weights len is  13
+left index is  [0, 1, 3, 4, 5, 6, 7, 40, 41, 42, 43]
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 7 global rounds:
+Train Accuracy: 83.03% 
+
+Test Accuracy: 81.15% 
+
+
+ | Global Training Round : 8 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+local weights len is  13
+left index is  [1, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44]
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 8 global rounds:
+Train Accuracy: 93.02% 
+
+Test Accuracy: 93.63% 
+
+
+ | Global Training Round : 9 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+local weights len is  8
+left index is  [8, 9, 10, 11, 13, 14, 15]
+local weights len is  8
+left index is  [24, 26, 27, 28, 29, 30, 31]
+local weights len is  13
+left index is  [1, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44]
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 9 global rounds:
+Train Accuracy: 91.74% 
+
+Test Accuracy: 91.98% 
+
+
+ | Global Training Round : 10 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+local weights len is  8
+left index is  [16, 18, 19, 20, 21, 22, 23]
+local weights len is  13
+left index is  [1, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44]
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 10 global rounds:
+Train Accuracy: 92.94% 
+
+Test Accuracy: 93.09% 
+
+
+ | Global Training Round : 11 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+benign_models len is  8
+compute distance is  2.478184021755611
+compute distance is  1.0361093415991496
+compute distance is  2.7434977908646117
+compute distance is  1.4214044987186656
+compute distance is  1.5466269091862046
+compute distance is  1.4795082217313889
+compute distance is  0.6670092109976402
+compute distance is  0.868027907037167
+ distance_threshold is  1.5466269091862046
+====================
+iteration is  0
+accuracy is  0.9214000001563206
+====================
+====================
+iteration is  1
+accuracy is  0.9227166668229874
+====================
+====================
+iteration is  2
+accuracy is  0.9243166668229872
+====================
+====================
+iteration is  3
+accuracy is  0.9200666668229874
+====================
+====================
+iteration is  4
+accuracy is  0.9197666668229875
+====================
+====================
+iteration is  5
+accuracy is  0.9127833334896542
+====================
+====================
+iteration is  6
+accuracy is  0.918833333489654
+====================
+====================
+iteration is  7
+accuracy is  0.9076000001563211
+====================
+====================
+iteration is  8
+accuracy is  0.9110333334896543
+====================
+====================
+iteration is  9
+accuracy is  0.9040000001563213
+====================
+====================
+iteration is  10
+accuracy is  0.8630833334896563
+====================
+====================
+iteration is  11
+accuracy is  0.8579166668229896
+====================
+====================
+iteration is  12
+accuracy is  0.9060500001563212
+====================
+====================
+iteration is  13
+accuracy is  0.8720166668229892
+====================
+====================
+iteration is  14
+accuracy is  0.77428333348966
+====================
+====================
+iteration is  15
+accuracy is  0.8801500001563222
+====================
+====================
+iteration is  16
+accuracy is  0.7865333334896595
+====================
+====================
+iteration is  17
+accuracy is  0.804866666822992
+====================
+====================
+iteration is  18
+accuracy is  0.7460833334896616
+====================
+++++++++++++++++++++
+Round:   0
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.89588852432134
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   1
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.858451715248705
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   2
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.82099103339257
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   3
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.78351026433576
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   4
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.74601320254271
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   5
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.70848449063712
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   6
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.67093749309806
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   7
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.633368340881105
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   8
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.59577891419465
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   9
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.55816533585103
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   10
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.520527562946135
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   11
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.482871321104206
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   12
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.44519080535675
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   13
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.40748982277251
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   14
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.36976448418638
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   15
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.33201667353962
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   16
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.29424442200985
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   17
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.256453475119834
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   18
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.218639937496874
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   19
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.18080183650034
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   20
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.14293719473402
+++++++++++++++++++++
+scale....
+++++++++++++++++++++
+Round:   21
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.10505563641474
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+accuracy is  0.9263833334896538
+====================
+====================
+iteration is  1
+accuracy is  0.9178500001563208
+====================
+====================
+iteration is  2
+accuracy is  0.9233500001563205
+====================
+====================
+iteration is  3
+accuracy is  0.9180833334896541
+====================
+====================
+iteration is  4
+accuracy is  0.911800000156321
+====================
+====================
+iteration is  5
+accuracy is  0.9036333334896546
+====================
+====================
+iteration is  6
+accuracy is  0.909900000156321
+====================
+====================
+iteration is  7
+accuracy is  0.9243333334896539
+====================
+====================
+iteration is  8
+accuracy is  0.8992500001563215
+====================
+====================
+iteration is  9
+accuracy is  0.9033833334896547
+====================
+====================
+iteration is  10
+accuracy is  0.9304833334896537
+====================
+====================
+iteration is  11
+accuracy is  0.9046666668229879
+====================
+====================
+iteration is  12
+accuracy is  0.8614333334896562
+====================
+====================
+iteration is  13
+accuracy is  0.8813500001563221
+====================
+====================
+iteration is  14
+accuracy is  0.902666666822988
+====================
+====================
+iteration is  15
+accuracy is  0.8688833334896561
+====================
+====================
+iteration is  16
+accuracy is  0.7578000001563278
+====================
+====================
+iteration is  17
+accuracy is  0.8343166668229907
+====================
+====================
+iteration is  18
+accuracy is  0.7847500001563262
+====================
+====================
+iteration is  19
+accuracy is  0.7895333334896594
+====================
+====================
+iteration is  20
+accuracy is  0.46428333348967504
+====================
+scale....
+++++++++++++++++++++
+Round:   22
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.06715132437706
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+accuracy is  0.919383333489654
+====================
+====================
+iteration is  1
+accuracy is  0.9174500001563208
+====================
+====================
+iteration is  2
+accuracy is  0.9209500001563207
+====================
+====================
+iteration is  3
+accuracy is  0.9170166668229874
+====================
+====================
+iteration is  4
+accuracy is  0.9155166668229875
+====================
+====================
+iteration is  5
+accuracy is  0.9198000001563208
+====================
+====================
+iteration is  6
+accuracy is  0.9172166668229874
+====================
+====================
+iteration is  7
+accuracy is  0.9185000001563208
+====================
+====================
+iteration is  8
+accuracy is  0.8944000001563216
+====================
+====================
+iteration is  9
+accuracy is  0.8741000001563224
+====================
+====================
+iteration is  10
+accuracy is  0.9166000001563208
+====================
+====================
+iteration is  11
+accuracy is  0.8667333334896561
+====================
+====================
+iteration is  12
+accuracy is  0.8964666668229881
+====================
+====================
+iteration is  13
+accuracy is  0.8592333334896565
+====================
+====================
+iteration is  14
+accuracy is  0.8888333334896552
+====================
+====================
+iteration is  15
+accuracy is  0.869783333489656
+====================
+====================
+iteration is  16
+accuracy is  0.8217833334896579
+====================
+====================
+iteration is  17
+accuracy is  0.8041500001563254
+====================
+====================
+iteration is  18
+accuracy is  0.6699333334896659
+====================
+scale....
+++++++++++++++++++++
+Round:   23
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  63.029222280844664
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+accuracy is  0.9256166668229873
+====================
+====================
+iteration is  1
+accuracy is  0.9244500001563205
+====================
+====================
+iteration is  2
+accuracy is  0.9166000001563208
+====================
+====================
+iteration is  3
+accuracy is  0.9260500001563206
+====================
+====================
+iteration is  4
+accuracy is  0.9253333334896539
+====================
+====================
+iteration is  5
+accuracy is  0.9161333334896541
+====================
+====================
+iteration is  6
+accuracy is  0.9169500001563208
+====================
+====================
+iteration is  7
+accuracy is  0.9220000001563207
+====================
+====================
+iteration is  8
+accuracy is  0.9094333334896545
+====================
+====================
+iteration is  9
+accuracy is  0.9130500001563209
+====================
+====================
+iteration is  10
+accuracy is  0.9086833334896545
+====================
+====================
+iteration is  11
+accuracy is  0.8783500001563223
+====================
+====================
+iteration is  12
+accuracy is  0.8733500001563224
+====================
+====================
+iteration is  13
+accuracy is  0.8758666668229891
+====================
+====================
+iteration is  14
+accuracy is  0.812700000156325
+====================
+====================
+iteration is  15
+accuracy is  0.8535500001563232
+====================
+====================
+iteration is  16
+accuracy is  0.8021500001563254
+====================
+====================
+iteration is  17
+accuracy is  0.8302000001563242
+====================
+====================
+iteration is  18
+accuracy is  0.7906666668229926
+====================
+====================
+iteration is  19
+accuracy is  0.7888166668229927
+====================
+====================
+iteration is  20
+accuracy is  0.5481666668230089
+====================
+scale....
+++++++++++++++++++++
+Round:   24
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  62.991268461142695
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+accuracy is  0.9247666668229872
+====================
+====================
+iteration is  1
+accuracy is  0.9212666668229873
+====================
+====================
+iteration is  2
+accuracy is  0.9266500001563205
+====================
+====================
+iteration is  3
+accuracy is  0.9201833334896541
+====================
+====================
+iteration is  4
+accuracy is  0.9220500001563207
+====================
+====================
+iteration is  5
+accuracy is  0.9091833334896545
+====================
+====================
+iteration is  6
+accuracy is  0.9076833334896545
+====================
+====================
+iteration is  7
+accuracy is  0.9079333334896545
+====================
+====================
+iteration is  8
+accuracy is  0.9236666668229874
+====================
+====================
+iteration is  9
+accuracy is  0.8965000001563217
+====================
+====================
+iteration is  10
+accuracy is  0.8842500001563219
+====================
+====================
+iteration is  11
+accuracy is  0.8974500001563215
+====================
+====================
+iteration is  12
+accuracy is  0.8839666668229886
+====================
+====================
+iteration is  13
+accuracy is  0.8654166668229895
+====================
+====================
+iteration is  14
+accuracy is  0.8688000001563226
+====================
+====================
+iteration is  15
+accuracy is  0.8353666668229907
+====================
+====================
+iteration is  16
+accuracy is  0.8289500001563241
+====================
+====================
+iteration is  17
+accuracy is  0.8193166668229914
+====================
+====================
+iteration is  18
+accuracy is  0.8248500001563245
+====================
+====================
+iteration is  19
+accuracy is  0.692416666822998
+====================
+scale....
+++++++++++++++++++++
+Round:   25
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  62.953293698582605
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+accuracy is  0.9222500001563206
+====================
+====================
+iteration is  1
+accuracy is  0.9227500001563207
+====================
+====================
+iteration is  2
+accuracy is  0.921183333489654
+====================
+====================
+iteration is  3
+accuracy is  0.9151666668229874
+====================
+====================
+iteration is  4
+accuracy is  0.9256500001563206
+====================
+====================
+iteration is  5
+accuracy is  0.9164000001563208
+====================
+====================
+iteration is  6
+accuracy is  0.914250000156321
+====================
+====================
+iteration is  7
+accuracy is  0.9168166668229875
+====================
+====================
+iteration is  8
+accuracy is  0.9129000001563209
+====================
+====================
+iteration is  9
+accuracy is  0.9002500001563214
+====================
+====================
+iteration is  10
+accuracy is  0.9076000001563211
+====================
+====================
+iteration is  11
+accuracy is  0.8782833334896556
+====================
+====================
+iteration is  12
+accuracy is  0.8642166668229895
+====================
+====================
+iteration is  13
+accuracy is  0.9055166668229879
+====================
+====================
+iteration is  14
+accuracy is  0.8439166668229903
+====================
+====================
+iteration is  15
+accuracy is  0.9105833334896544
+====================
+====================
+iteration is  16
+accuracy is  0.8139166668229916
+====================
+====================
+iteration is  17
+accuracy is  0.7282500001563291
+====================
+scale....
+++++++++++++++++++++
+Round:   26
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  62.915299895474554
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+accuracy is  0.9260500001563206
+====================
+====================
+iteration is  1
+accuracy is  0.9166666668229875
+====================
+====================
+iteration is  2
+accuracy is  0.927616666822987
+====================
+====================
+iteration is  3
+accuracy is  0.9240500001563206
+====================
+====================
+iteration is  4
+accuracy is  0.9194500001563208
+====================
+====================
+iteration is  5
+accuracy is  0.9126000001563209
+====================
+====================
+iteration is  6
+accuracy is  0.9278500001563205
+====================
+====================
+iteration is  7
+accuracy is  0.9170833334896541
+====================
+====================
+iteration is  8
+accuracy is  0.903866666822988
+====================
+====================
+iteration is  9
+accuracy is  0.9246333334896539
+====================
+====================
+iteration is  10
+accuracy is  0.9208000001563208
+====================
+====================
+iteration is  11
+accuracy is  0.9122833334896544
+====================
+====================
+iteration is  12
+accuracy is  0.8478666668229902
+====================
+====================
+iteration is  13
+accuracy is  0.9227166668229874
+====================
+====================
+iteration is  14
+accuracy is  0.8168333334896581
+====================
+====================
+iteration is  15
+accuracy is  0.8429166668229904
+====================
+====================
+iteration is  16
+accuracy is  0.7875166668229929
+====================
+====================
+iteration is  17
+accuracy is  0.8327666668229907
+====================
+====================
+iteration is  18
+accuracy is  0.7470333334896615
+====================
+scale....
+++++++++++++++++++++
+Round:   27
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  62.877279251680015
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+accuracy is  0.9262833334896539
+====================
+====================
+iteration is  1
+accuracy is  0.923133333489654
+====================
+====================
+iteration is  2
+accuracy is  0.9254000001563205
+====================
+====================
+iteration is  3
+accuracy is  0.9185500001563208
+====================
+====================
+iteration is  4
+accuracy is  0.9175833334896542
+====================
+====================
+iteration is  5
+accuracy is  0.921733333489654
+====================
+====================
+iteration is  6
+accuracy is  0.911450000156321
+====================
+====================
+iteration is  7
+accuracy is  0.9148666668229876
+====================
+====================
+iteration is  8
+accuracy is  0.9188833334896541
+====================
+====================
+iteration is  9
+accuracy is  0.9194000001563208
+====================
+====================
+iteration is  10
+accuracy is  0.8840666668229886
+====================
+====================
+iteration is  11
+accuracy is  0.867733333489656
+====================
+====================
+iteration is  12
+accuracy is  0.9248333334896539
+====================
+====================
+iteration is  13
+accuracy is  0.9022166668229881
+====================
+====================
+iteration is  14
+accuracy is  0.8134833334896584
+====================
+====================
+iteration is  15
+accuracy is  0.8534666668229899
+====================
+====================
+iteration is  16
+accuracy is  0.7090500001563302
+====================
+scale....
+++++++++++++++++++++
+Round:   28
+compute_entropy is  0.4343022610396465
+compute_loss is  0.25474862979133245
+compute_acc is  0.9267666668229871
+compute_distance is  62.839233661060625
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+accuracy is  0.9214166668229874
+====================
+====================
+iteration is  1
+accuracy is  0.9241333334896539
+====================
+====================
+iteration is  2
+accuracy is  0.9179500001563208
+====================
+====================
+iteration is  3
+accuracy is  0.911850000156321
+====================
+====================
+iteration is  4
+accuracy is  0.9171833334896541
+====================
+====================
+iteration is  5
+accuracy is  0.923133333489654
+====================
+====================
+iteration is  6
+accuracy is  0.9099833334896543
+====================
+====================
+iteration is  7
+accuracy is  0.9275000001563204
+====================
+====================
+iteration is  8
+accuracy is  0.9094666668229877
+====================
+====================
+iteration is  9
+accuracy is  0.9271666668229871
+====================
+====================
+iteration is  10
+accuracy is  0.9214166668229874
+====================
+====================
+iteration is  11
+accuracy is  0.909750000156321
+====================
+====================
+iteration is  12
+accuracy is  0.9031500001563213
+====================
+====================
+iteration is  13
+accuracy is  0.8521500001563234
+====================
+====================
+iteration is  14
+accuracy is  0.7945333334896593
+====================

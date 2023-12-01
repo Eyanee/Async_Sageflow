@@ -15,7 +15,7 @@ def args_parser():
     # Training parameter
     parser.add_argument('--epochs', type=int, default=300,
                         help="number of training rounds")
-    parser.add_argument('--num_users', type=int, default=50,
+    parser.add_argument('--num_users', type=int, default=60,
                         help="number of users: K")
     parser.add_argument('--frac', type=float, default=0.2,
                         help='the fraction of clients: C')
@@ -72,7 +72,7 @@ def args_parser():
                         of optimizer")
 
     # Data distribution setting
-    parser.add_argument('--iid', type=int, default=2,
+    parser.add_argument('--iid', type=int, default=1,
                         help='Set to 1 for IID. Set to 0 for non-IID. Set to 2 for non-iid with public data')
 
     # Detailed settings

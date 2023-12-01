@@ -10,7 +10,7 @@ from tqdm import tqdm
 import torch
 
 from update import LocalUpdate, test_inference, DatasetSplit
-from poison_optimization import Outline_Poisoning
+from poison_optimization import Outline_Poisoning, Indicator, Outline_Poisoning_compare
 from model import MLP, CNNMnist, CNNFashion_Mnist, CNNCifar, VGGCifar
 from resnet import *
 from utils1 import *
@@ -71,8 +71,9 @@ if __name__ == '__main__':
 
     global_model.to(device)
     global_model.train()
-    print(global_model)
+    fi_global_model = copy.deepcopy(global_model)
     pre_global_model = copy.deepcopy(global_model)
+    last_round_poison_w = copy.deepcopy(global_model.state_dict())
 
     global_weights = global_model.state_dict()
 
@@ -100,7 +101,7 @@ if __name__ == '__main__':
     # 投毒状态标志
     poisoned = False
     # 其他参数
-    distance_ratio = 0.8
+    distance_ratio = 2
     adaptive_accuracy_threshold = 0.8
     pinned_accuracy_threshold = 0.8
 
@@ -153,6 +154,7 @@ if __name__ == '__main__':
         global_model.train()
 
         global_weights_rep = copy.deepcopy(global_model.state_dict())
+        
 
         # After round, each staleness group is adjusted
         local_delay_ew = copy.deepcopy(pre_weights[1])
@@ -173,11 +175,11 @@ if __name__ == '__main__':
             if scheduler[idx] == 0: # 当前轮次提交
                 if idx in attack_users and args.data_poison == True: # 原 data_posion 入口
                     local_model = LocalUpdate(args=args, dataset=train_dataset, idxs=user_groups[idx], idx=idx,
-                                              data_poison=True, inverse_poison= False)
+                                              data_poison=True)
 
                 else:
                     local_model = LocalUpdate(args=args, dataset=train_dataset, idxs=user_groups[idx], idx=idx,
-                                              data_poison=False, inverse_poison= False)
+                                              data_poison=False)
 
                 # Ensure each staleness group has at least one element
                 scheduler[idx] = clientStaleness[idx]  # 重新赋值staleness
@@ -192,7 +194,7 @@ if __name__ == '__main__':
                 model=copy.deepcopy(global_model), global_round=epoch
 
             )
-            if idx in attack_users and epoch > 29 and args.model_poison == True:
+            if idx in attack_users and args.model_poison == True:
                 malicious_models.append(w) #
                 
             else:     
@@ -209,31 +211,34 @@ if __name__ == '__main__':
                 loss_on_public[scheduler[idx] - 1].append(common_loss_sync)
                 entropy_on_public[scheduler[idx] - 1].append(common_entropy_sample)
             
-        if idx in attack_users and epoch > 29 and args.model_poison == True:
+        if idx in attack_users and args.model_poison == True:
             if not poisoned:
                 poisoned = True
-                pinned_accuracy_threshold = test_acc - 0.15# 上一轮全局模型的精度
+                pinned_accuracy_threshold = 0.5 # 上一轮全局模型的精度
+                fi_global_model.load_state_dict(global_model.state_dict())
                 print("poisoned accuracy threshold is ",pinned_accuracy_threshold)
                 adaptive_accuracy_threshold = pinned_accuracy_threshold
-                malicious_dict, distance_ratio = Outline_Poisoning(args, pre_global_model, copy.deepcopy(global_model), malicious_models, train_dataset, distance_ratio, pinned_accuracy_threshold,
-                                               adaptive_accuracy_threshold, False)
+                malicious_dict, distance_ratio = Outline_Poisoning(args, fi_global_model, copy.deepcopy(global_model), malicious_models, train_dataset, distance_ratio, pinned_accuracy_threshold,
+                                               adaptive_accuracy_threshold, last_round_poison_w, False)
             else:
-                malicious_dict, distance_ratio = Outline_Poisoning(args, pre_global_model, copy.deepcopy(global_model), malicious_models, train_dataset, distance_ratio, pinned_accuracy_threshold,
-                                               adaptive_accuracy_threshold, True)
-
+                malicious_dict, distance_ratio = Outline_Poisoning(args, fi_global_model, copy.deepcopy(global_model), malicious_models, train_dataset, distance_ratio, pinned_accuracy_threshold,
+                                               adaptive_accuracy_threshold, last_round_poison_w, True)
+            last_round_poison_w =  malicious_dict
             test_model.load_state_dict(malicious_dict)
             mal_acc, mal_loss_sync, mal_entropy_sample = test_inference(args, test_model,
-                                                                                        DatasetSplit(train_dataset,
+                                                                                         DatasetSplit(train_dataset,
                                                                                             dict_common))
         
             for idx in attack_users:
-                local_weights_delay[ scheduler[idx] - 1 ].append(copy.deepcopy(w))
+                local_weights_delay[ scheduler[idx] - 1 ].append(copy.deepcopy(malicious_dict))
                 local_index_delay[ scheduler[idx] - 1 ].append(idx)
                 loss_on_public[scheduler[idx] - 1].append(mal_loss_sync)
                 entropy_on_public[scheduler[idx] - 1].append(mal_entropy_sample)
 
-            
-
+        else:
+            _, indicator_em_res = Indicator(pre_global_model, global_model)
+            print(" benign empirical indicaor res is ", indicator_em_res)
+            print(" benign loss is ", common_loss_sync)
 
         # 重新考虑PosionMean方式投毒的接入
         if epoch/TARGET_STALENESS == 0 and args.new_poison == True:
@@ -253,7 +258,7 @@ if __name__ == '__main__':
             global_model.load_state_dict(global_weights_rep)
                 
             for client_num in range(user_num-attacker_num, user_num):
-                if client_num >= user_num-attacker_num:  #将恶意用户的梯度替换成上面构造的恶意梯度，这里是选取最后几个用户作为恶意用户
+                if client_num >= user_num-attacker_num:  #将恶意用户的梯度替换成上面构造的恶意梯度，这里是选--------------------------------------------取0最后几个用户作为恶意用户
                     local_weights_delay[ts][client_num] = copy.deepcopy(mal_dict) #在这个地方不
                     loss_on_public[ts][client_num] = mal_common_loss # 更新loss_on_public 列表
                     entropy_on_public[ts][client_num] = mal_common_entropy # 更新entropy_on_public列表
@@ -264,7 +269,7 @@ if __name__ == '__main__':
                 if args.update_rule == 'Sageflow':
                     # Averaging delayed local weights via entropy-based filtering and loss-wegithed averaging
                     if len(local_weights_delay[i]) > 0:
-                        print("current aggregation staleness i is ",i)
+                        # print("current aggregation staleness i is ",i)
                         w_avg_delay, len_delay, num_attacker_1 = Eflow(local_weights_delay[i], loss_on_public[i], entropy_on_public[i], epoch)
                         pre_weights[i].append({epoch: [w_avg_delay, len_delay]})
                         print("num1 of attacker is ",num_attacker_1)
@@ -278,17 +283,8 @@ if __name__ == '__main__':
                     pre_weights[i].append(local_weights_delay[i]) # 修改为记录每一次的，不进行提前聚合, local_weights_delay[i]是List格式
                     pre_index[i].append(local_index_delay[i])
                 elif args.update_rule == 'AFA':
-                    if len(local_weights_delay[i]) > 0:
-                        # 在这一步将所有staleness != 1 的轮次进行对应的聚合
-                        std_dict = copy.deepcopy(global_weights) # 标准字典值
-                        std_keys = get_key_list(std_dict.keys())
-                        # 调用AFA同时保留对应index
-                        w_res, remain_index = pre_AFA(std_keys, local_weights_delay[i], local_index_delay[i], device)
-                        w_avg = restoreWeight(std_dict, std_keys, w_res)
-                        print("left index is ", remain_index)
-                        len_delay = len(remain_index)
-                        pre_weights[i].append({epoch: [w_avg, len_delay]})
-                        pre_index[i].append(remain_index)
+                    pre_weights[i].append(local_weights_delay[i])
+                    pre_index[i].append(local_index_delay[i])
                 elif args.update_rule == 'Bulyan':
                     pre_weights[i].append(local_weights_delay[i])
                     pre_index[i].append(local_index_delay[i])
@@ -300,9 +296,11 @@ if __name__ == '__main__':
                     pre_index[i].append(local_index_delay[i])
                 else:
                     if len(local_weights_delay[i]) > 0:
-                        pre_weights[i].append({epoch: [average_weights(local_weights_delay[i]), len(local_weights_delay[i])]})
+                        w_avg_delay = average_weights(local_weights_delay[i])
+                        len_delay = len(local_weights_delay[i])
+                        pre_weights[i].append({epoch: [w_avg_delay, len_delay]})
                         pre_index[i].append(local_index_delay[i])
-
+                        
         if args.update_rule == 'Sageflow':
             # Averaging current local weights via entropy-based filtering and loss-wegithed averaging
             sync_weights, len_sync, num_attacker_2 = Eflow(local_weights_delay[0], loss_on_public[0], entropy_on_public[0], epoch)
@@ -317,7 +315,7 @@ if __name__ == '__main__':
             # std_keys = std_dict.keys()
             user_num = len(list(local_weights_delay[0])) + len(list(local_delay_ew))
             attacker_num = int(user_num * args.attack_ratio)
-            weight_updates = preKrumGrouping(std_keys, copy.deepcopy(local_weights_delay[0]), local_delay_ew)# 第二个参数实际上是上一轮的pre_weights[1]
+            weight_updates = preGrouping(std_keys, copy.deepcopy(local_weights_delay[0]), local_delay_ew)# 第二个参数实际上是上一轮的pre_weights[1]
             global_update, _ = Krum(weight_updates, user_num - attacker_num)
             # 重新恢复dict
             global_weights = restoreWeight(std_dict, std_keys, global_update)
@@ -327,7 +325,8 @@ if __name__ == '__main__':
             # std_keys = std_dict.keys()
             user_num = len(list(local_weights_delay[0])) + len(list(local_delay_ew))
             attacker_num = int(user_num * args.attack_ratio)
-            weight_updates = preKrumGrouping(std_keys, copy.deepcopy(local_weights_delay[0]), local_delay_ew)# 第二个参数实际上是上一轮的pre_weights[1]
+            weight_updates = preGrouping(std_keys, copy.deepcopy(local_weights_delay[0]), local_delay_ew)# 第二个参数实际上是上一轮的pre_weights[1]
+            index_updates = preGroupingIndex(local_index_delay)
             global_update= Trimmed_mean(weight_updates, attacker_num)
             # 重新恢复dict
             global_weights = restoreWeight(std_dict, std_keys, global_update)
@@ -338,8 +337,10 @@ if __name__ == '__main__':
             std_dict = copy.deepcopy(global_weights) # 标准字典值
             # std_keys = std_dict.keys()
             std_keys = get_key_list(std_dict.keys())
-            w_res, remain_index = pre_AFA(std_keys, local_weights_delay[0], local_index_delay[0], device)
-            w_avg = restoreWeight(std_dict, std_keys, w_res)
+            param_updates = preGrouping(std_keys, copy.deepcopy(local_weights_delay[0]), local_delay_ew)
+            index_set = preGroupingIndex(local_index_delay[0], local_index_ew)
+            global_update, remain_index= AFA(param_updates, index_set, device)
+            global_weights = restoreWeight(std_dict, std_keys, global_update)
             print("left index is ", remain_index)
             global_weights = Sag(epoch, w_avg, len(remain_index), local_delay_ew, # local_delay_ew 实际上是上一轮的pre_weights[1]
                                                      copy.deepcopy(global_weights))
@@ -350,7 +351,7 @@ if __name__ == '__main__':
             std_keys = get_key_list(std_dict.keys())
             user_num = len(list(local_weights_delay[0])) + len(list(local_delay_ew))
             attacker_num = int(user_num * args.attack_ratio)
-            weight_updates = preKrumGrouping(std_keys, copy.deepcopy(local_weights_delay[0]), local_delay_ew)# 第二个参数实际上是上一轮的pre_weights[1]
+            weight_updates = preGrouping(std_keys, copy.deepcopy(local_weights_delay[0]), local_delay_ew)# 第二个参数实际上是上一轮的pre_weights[1]
             global_update = Bulyan(weight_updates, user_num, user_num - attacker_num)
             # 重新恢复dict
             global_weights = restoreWeight(std_dict, std_keys, global_update)
@@ -360,7 +361,7 @@ if __name__ == '__main__':
             std_keys = get_key_list(std_dict.keys())
             user_num = len(list(local_weights_delay[0])) + len(list(local_delay_ew))
             attacker_num = int(user_num * args.attack_ratio)
-            weight_updates = preKrumGrouping(std_keys, copy.deepcopy(local_weights_delay[0]), local_delay_ew)# 第二个参数实际上是上一轮的pre_weights[1]
+            weight_updates = preGrouping(std_keys, copy.deepcopy(local_weights_delay[0]), local_delay_ew)# 第二个参数实际上是上一轮的pre_weights[1]
             global_update = Median(weight_updates)
             print("global update type is", type(global_update))
             # 重新恢复dict
@@ -371,7 +372,7 @@ if __name__ == '__main__':
             std_keys = get_key_list(std_dict.keys())
             user_num = len(list(local_weights_delay[0])) + len(list(local_delay_ew))
             attacker_num = int(user_num * args.attack_ratio)
-            weight_updates = preKrumGrouping(std_keys, copy.deepcopy(local_weights_delay[0]), local_delay_ew)# 第二个参数实际上是上一轮的pre_weights[1]
+            weight_updates = preGrouping(std_keys, copy.deepcopy(local_weights_delay[0]), local_delay_ew)# 第二个参数实际上是上一轮的pre_weights[1]
             global_update = Mean(weight_updates)
             # 重新恢复dict
             print("global update type is", type(global_update))
@@ -379,7 +380,10 @@ if __name__ == '__main__':
         else:
             global_weights = Sag(epoch, average_weights(local_weights_delay[0]), len(local_weights_delay[0]),
                                                  local_delay_ew, copy.deepcopy(global_weights))
-
+            # current_weights_set = local_weights_delay[0]
+            # for item in local_delay_ew:
+            #     current_weights_set.extend(item)
+            # global_weights = average_weights(current_weights_set)
         # Update global weights
         pre_global_model.load_state_dict(global_model.state_dict())
         global_model.load_state_dict(global_weights)
@@ -389,10 +393,10 @@ if __name__ == '__main__':
         for c in range(args.num_users):
             if c in attack_users and args.inverse_poison == True:
                 local_model = LocalUpdate(args=args, dataset=train_dataset,
-                                          idxs=user_groups[c], data_poison=False,  inverse_poison = True, idx=c)
+                                          idxs=user_groups[c], data_poison=False,  idx=c)
             else:
                 local_model = LocalUpdate(args=args, dataset=train_dataset,
-                                          idxs=user_groups[c], data_poison=False, inverse_poison = False, idx=c)
+                                          idxs=user_groups[c], data_poison=False, idx=c)
 
             acc, loss = local_model.inference(model=global_model)
             list_acc.append(acc)

@@ -144,7 +144,7 @@ def Sag(current_epoch, current_average, current_length, epoch_weights, global_we
     if len(weights_d) > 0 and current_epoch >=args.staleness:
         if current_average is None:
             alpha_for_attack[0] = 0
-        # print("the length of weights_d is ", len(weights_d))
+        print("the length of weights_d is ", len(weights_d))
         # for i in range(args.staleness + 1):
         #     print("i is ",i)
         #     if i != 0 and weights_d[i-1] is None:
@@ -225,17 +225,16 @@ def Eflow(w, loss, entropy, current_epoch, num_device=[]):
     alpha = []
 
     for j in range(0, len(loss)):
+
         if entropy[j] >= args.eth:
             norm_q = 0
-            # norm_q = 1 # norm_q仍然赋1
-            num_attack = num_attack + 1
+            num_attack += 1
         else:
             norm_q = 1
 
         if len(num_device) == 0:
-            # alpha.append(1)
             alpha.append(norm_q / loss[j] ** args.delta)
-            # alpha.append(norm_q)
+
 
     sum_alpha = sum(alpha)
 
@@ -254,20 +253,8 @@ def Eflow(w, loss, entropy, current_epoch, num_device=[]):
 
                 else:
                     w_avg[key] += w[i][key] * alpha[i]
-    
-    # for k in range(0, len(alpha)):
-    #     alpha[k] = alpha[k] / sum_alpha
 
-    # for key in w_avg.keys():
-    #     for i in range(0, len(w)):
-    #         if i == 0:
-    #             w_avg[key] = w_avg[key] * alpha[i]
-
-    #         else:
-    #             w_avg[key] += w[i][key] * alpha[i]
-    
     return w_avg, len(loss) - num_attack, num_attack
-    # return w_avg, len(loss) - num_attack # 正常投毒时的返回值
 
 
 
@@ -316,7 +303,6 @@ def exp_details(args):
         print('     None of attack is done!\n')
 
     return
-
 
 
 

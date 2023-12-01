@@ -7,8 +7,19 @@ import copy
 import math
 from update import test_inference
 from otherGroupingMethod import get_key_list
+from p_Optimizer import MyPOptimizer
 
 
+
+def cal_similarity(ori_params, mod_params):
+    std_keys = get_key_list(ori_params.keys())
+    params1 = torch.cat([ori_params[k].view(-1) for k in std_keys])
+    params2 = torch.cat([mod_params[k].view(-1) for k in std_keys])
+
+    # 计算余弦相似度
+    cos_similarity = F.cosine_similarity(params1, params2, dim=0)
+
+    return cos_similarity
 
 def model_dist_norm(ori_params, mod_params):
     squared_sum = 0
@@ -55,25 +66,44 @@ def get_distance_list(ori_state_dict, mod_state_dict):
 """
 流程框架函数
 """
-def Outline_Poisoning(args, pre_global_model, global_model, malicious_models, train_dataset, distance_ratio, pinned_accuracy_threshold, adaptive_accuracy_threshold, poisoned):
+def Outline_Poisoning(args, pre_global_model, global_model, malicious_models, train_dataset, distance_ratio, pinned_accuracy_threshold, adaptive_accuracy_threshold, last_round_poison_w, poisoned):
 
     ref_model = global_model # 已经在调用阶段deepcopy过的  恶意用户本地训练结果的加权结果（本轮）
-    new_distance_ratio = test_attack_result(pre_global_model, ref_model, distance_ratio, poisoned)
-    distance_threshold = cal_ref_distance(malicious_models, ref_model, distance_ratio) # 计算参考L2 distance 门槛 
-    
-    print("calculated distance threshold is ", distance_threshold)
-    print("pinned_accuracy threshold is ", pinned_accuracy_threshold)
+    pre_distance_ratio = distance_ratio
+    # indicator_res, new_distance_ratio = test_attack_result(pre_global_model, ref_model, distance_ratio, poisoned)
+    new_distance_ratio = distance_ratio
+    # if indicator_res:
+    #     print("using last round poisoned parameters")
+    #     global_model.load_state_dict(last_round_poison_w)
+    #     test_acc, test_loss, test_entropy = test_inference(args, global_model, train_dataset)
+    #     print("test_acc is ",test_acc)
+    #     return last_round_poison_w, new_distance_ratio
+    distance_threshold = cal_ref_distance(malicious_models, ref_model, new_distance_ratio) # 计算参考L2 distance 门槛 
 
-    w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, perturbation_range=(-0.01, 0.01))
+    print("calculated distance threshold is ", distance_threshold)
+    # print("pinned_accuracy threshold is ", pinned_accuracy_threshold)
+
+    w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, perturbation_range=(-0.1, 0.1))
     #使用accuracy_list 更新adaptive accuracy threshold?  暂时先不用accuracy list
 
-    w_poison = phased_optimization(args, global_model, w_rand, train_dataset, distance_threshold, adaptive_accuracy_threshold, pinned_accuracy_threshold)
-    if new_distance_ratio == None:
-        new_distance_ratio = distance_ratio
+    w_poison, optimization_res = phased_optimization(args, global_model, w_rand, train_dataset, distance_threshold, adaptive_accuracy_threshold, pinned_accuracy_threshold)
+    # 如果没有成功优化，则下一轮的distance不应该被改变
+    if not optimization_res:
+        # distance ratio 不应该被改变
+        new_distance_ratio = pre_distance_ratio
+        # 重新生成 参考恶意模型
+        # adaptive_accuracy_threshold
+    # else accuracy 试着降低
+    else:
+        return w_poison, new_distance_ratio
+
     print("new distance ratio is", new_distance_ratio)
     return w_poison, new_distance_ratio
 
+def Outline_Poisoning_compare(args, pre_global_model, global_model, malicious_models, train_dataset, distance_ratio, pinned_accuracy_threshold, adaptive_accuracy_threshold, poisoned):
+    w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, perturbation_range=(-0.1, 0.1))
 
+    return w_rand, distance_ratio
 """
 用于检测上轮投毒是否生效的函数
 distance增加幅度可能需要调整
@@ -83,38 +113,73 @@ distance增加幅度可能需要调整
 def test_attack_result(pre_global_model, global_model, distance_ratio, poisoned):
     print("distance ratio is" , type(distance_ratio))
     if poisoned :
-        attack_res = Indicator(pre_global_model, global_model)
-         
+        attack_res, _ = Indicator(pre_global_model, global_model)
+        print("attack res is" , attack_res)
         if attack_res:
             distance_ratio = distance_ratio * 1.1
 
         else :
             distance_ratio = distance_ratio / 1.1
-
+        return attack_res, distance_ratio
     else:
-        return distance_ratio
+        return False, distance_ratio
 
-def Indicator(pre_global_model, global_model):
+def Indicator(fi_global_model, global_model):
     """
     通过 FGNV 来判断本轮投毒是否生效
     
     返回 投毒是否生效 True/ False
     
-    需要确定门槛值 δ
+    需要确定门槛值 δ 需要重新确定
     
     """
-    delta = 0.005
-    FGNV_pre = cal_FGNV(pre_global_model.state_dict())
-    FGNV_cur = cal_FGNV(global_model.state_dict())
-    
-    compare_res = math.fabs((FGNV_cur - FGNV_pre)/FGNV_pre) # 取绝对值
-    print("compare_res is ", compare_res)
+    case = 1
 
-    if compare_res > delta:
-        return True
-    else:
-        return False
+    if case == 1:
+        delta = 0.002
+        FGNV_pre = cal_FGNV(fi_global_model.state_dict())
+        FGNV_cur = cal_FGNV(global_model.state_dict())
     
+        compare_res = math.fabs((FGNV_cur - FGNV_pre)/FGNV_pre) # 取绝对值
+        print("compare_res is ", compare_res)
+
+        if compare_res > delta:
+            return True, compare_res
+        else:
+            return False, compare_res
+    elif case == 2:
+        delta = 0.005
+        FGNV_sum = 0
+        std_keys = get_key_list(global_model.state_dict())
+        fi_dict = fi_global_model.state_dict()
+        cur_dict = global_model.state_dict()
+        for key in std_keys:
+            FGNV_sum += torch.sum(torch.abs(torch.sub(fi_dict[key], cur_dict[key])))
+            
+
+        FGNV_base = cal_FGNV(fi_dict)
+        compare_res = math.fabs(FGNV_sum / FGNV_base) # 改变量的比例
+        if FGNV_sum > delta:
+            return True, compare_res
+        else:
+            return False, compare_res
+    
+    elif case == 3:
+        delta = 0.005
+        FGNV_sum = 0
+        std_keys = get_key_list(global_model.state_dict())
+        fi_dict = fi_global_model.state_dict()
+        cur_dict = global_model.state_dict()
+        for key in std_keys:
+            FGNV_sum += torch.sum(torch.pow(torch.sub(fi_dict[key], cur_dict[key]), 2))
+
+
+        FGNV_base = cal_FGNV(fi_dict)
+        compare_res = math.fabs(FGNV_sum / FGNV_base) # 改变量的比例
+        if FGNV_sum > delta:
+            return True, compare_res
+        else:
+            return False, compare_res
 
 def cal_FGNV(model_dict):
     res = 0
@@ -126,7 +191,7 @@ def cal_ref_distance(malicious_models, global_model, distance_ratio):
     
     distance_res = computeTargetDistance(malicious_models, global_model, distance_ratio)
 
-    # ref_distance = (distance_res[-1] - distance_res[0]) * distance_ratio + distance_ratio[0]
+    
 
     return distance_res
 
@@ -139,8 +204,8 @@ def phased_optimization(args, global_model, w_rand, train_dataset, distance_thre
 
     # parameter determination
     round = 0
-    MAX_ROUND = 100
-    entropy_threshold = 1.0
+    MAX_ROUND = 10
+    entropy_threshold = 2.0
      # 准备教师模型
     teacher_model = copy.deepcopy(global_model)
     # 准备学生模型 
@@ -154,18 +219,21 @@ def phased_optimization(args, global_model, w_rand, train_dataset, distance_thre
 
         test_acc, test_loss, test_entropy = test_inference(args, student_model, train_dataset)
         test_distance = model_dist_norm(student_model.state_dict(), global_model.state_dict())
+        test_simliarity = cal_similarity(student_model.state_dict(), global_model.state_dict())
         print("________________________________")
         print("test distance is ", test_distance)
+        print("test similarity is ", test_simliarity)
         print("test acc is ", test_acc)
+        print("test loss is", test_loss)
         print("test entropy is ", test_entropy)
         print("________________________________")
         if test_distance <= distance_threshold and test_acc <= pinned_accuracy_threshold and test_entropy  <= entropy_threshold:
-            return student_model.state_dict()
+            return student_model.state_dict(), True
+        elif test_entropy > entropy_threshold:
+            distillation_res, w_rand = self_distillation(args, teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distillation_round = 10)
         elif test_distance > distance_threshold:
             w_rand = adaptive_scaling(w_rand, global_model.state_dict(), distance_threshold, test_distance)
             student_model.load_state_dict(w_rand)
-        elif test_entropy > entropy_threshold:
-            distillation_res, w_rand = self_distillation(args, teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distillation_round = 10)
         else:
             distillation_res, w_rand = self_distillation(args, teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distillation_round = 10)
             # 只有accuracy 不满足条件
@@ -173,14 +241,14 @@ def phased_optimization(args, global_model, w_rand, train_dataset, distance_thre
         student_model.load_state_dict(w_rand)
     # 返回值为模型参数
     print("reach max round") # accuracy在这里调整
-    return student_model.state_dict()
+    return student_model.state_dict(), False
 
 
 """
 接入两种方案进行尝试
 """
 def adaptive_scaling(w_rand, ref_model_dict, distance_threshold, test_distance):
-    use_case = 2
+    use_case = 5
     """
     case 1 按照distance进行排序
     优先保留差距较大的向量值
@@ -238,6 +306,7 @@ def adaptive_scaling(w_rand, ref_model_dict, distance_threshold, test_distance):
         pdlist= nn.PairwiseDistance(p=2)
         distance_diff = test_distance - distance_threshold
         sum_d = 0
+        sum_s = 0
         keys = get_key_list(ref_model_dict)
         for key in keys:
             t1 = ref_model_dict[key]
@@ -248,14 +317,18 @@ def adaptive_scaling(w_rand, ref_model_dict, distance_threshold, test_distance):
             diff = torch.sum(pdlist(t1, t2))
             print("diff is ",diff)
             distance_list.append(diff)
-        
-        sorted_list = sorted(distance_list, reverse = True)  # 降序排列
+            sum_s += diff
+        print("sum_s is", sum_s)
+        sorted_list = sorted(distance_list, reverse = False)  # 降序排列
         for item in sorted_list:
-            sum_d += item
+            sum_d = sum_d + item
             if sum_d >= distance_diff:
-                ratio = math.sqrt(distance_diff/sum_d)
-                threshold = item
-        print("threshold is ", threshold)
+                sum_d = sum_d - item
+                break
+            threshold = item
+            print("item is", item)
+        ratio = math.sqrt((distance_threshold - sum_d) /(sum_s - sum_d).double())
+  
         if sum_d < distance_diff:
             print("fail to generate")
         for key in keys:
@@ -322,8 +395,17 @@ def adaptive_scaling(w_rand, ref_model_dict, distance_threshold, test_distance):
             if key == target_key:
                 break
         return w_rand
-
-        
+    elif use_case == 5:
+        pdlist= nn.PairwiseDistance(p=2)
+        cal_distance = test_distance
+        while cal_distance > distance_threshold:
+            ratio = math.sqrt((distance_threshold / test_distance).double())
+            keys = reversed(get_key_list(ref_model_dict))
+            for key in keys:
+                w_rand[key] = torch.sub(w_rand[key], ref_model_dict[key]) * ratio + ref_model_dict[key]
+            cal_distance = model_dist_norm(w_rand, ref_model_dict)
+            print("cal_distance is ", cal_distance)
+        return w_rand
     return w_rand
 
 
@@ -332,17 +414,19 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
     自蒸馏函数主体
     """
     ### 自蒸馏参数
-    lr = args.lr * 0.001
+    lr = args.lr
     device = f'cuda:{args.gpu_number}' if args.gpu else 'cpu'
     trainloader = DataLoader(train_dataset, batch_size=128, shuffle=False)
-    optimizer = torch.optim.Adam(student_model.parameters(), lr=lr, weight_decay=1e-4)
+    # optimizer = torch.optim.Adam(student_model.parameters(), lr=lr, weight_decay=1e-4)
+    optimizer = MyPOptimizer(student_model.parameters(),lr=lr)
     criterion1 = nn.NLLLoss().to(device)
+    # criterion2 = nn.functional.kl_div().to(device)
     teacher_model.to(device)
     student_model.to(device)
-
+    
     num_epochs = distillation_round
-    temperature = 5 ### 增大
-    alpha = 0.5
+    temperature = 50 ### 增大
+    alpha = 0.01
     beta = 0.5
 
 
@@ -376,11 +460,17 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
             pred_is = torch.tensor(teacher_labels)
             pred_is = pred_is.to(device)
             stu_out, student_outputs = student_model(images)
+            ref_out, ref_outputs = ref_model(images)
             _ , teacher_outputs = teacher_model(images)
-            loss = alpha * criterion1(stu_out, pred_is)  + beta * temperature** 2 * soft_loss(student_outputs, teacher_outputs, temperature = 5)
+            # loss = alpha * criterion1(stu_out, pred_is)  + beta * temperature** 2 * soft_loss(student_outputs, teacher_outputs, temperature = 5)
+            # d_loss = model_dist_norm(ref_model.state_dict(), student_model.state_dict())
+            # print("d_loss is", d_loss)
+            l_loss = criterion1(stu_out, pred_is)
 
+            loss = l_loss
+            
             loss.backward()
-            optimizer.step()
+            optimizer.step(list(ref_model.parameters()))
 
     # 设置False出口
     return True, student_model.state_dict()
@@ -430,18 +520,25 @@ def add_small_perturbation(original_model, args, target_accuracy, train_dataset,
     succ_round = 0
     iteration = 0
     min_acc = 1
+    # reverse_keys = reversed(list(orignal_state_dict.keys())) 
+    reverse_keys = list(orignal_state_dict.keys())
+
     while iteration < max_iterations:
         # 计算当前扰动范围的中点
-        mid_min = perturbation_range[0] * 1.1
+        mid_min = perturbation_range[0] * 2
+        print("mid_min is", mid_min)
         mid_max = mid_min * -1
 
         # 生成中点扰动张量
         for round in range(MAX_ROUND):
-            for key in orignal_state_dict.keys():
-                temp_original = orignal_state_dict[key]
-                perturbs = torch.tensor(np.random.uniform(low=mid_min, high=mid_max, size=temp_original.shape)).to(device)
-                perturbs = torch.add(perturbs, temp_original)
-                perturbed_dict[key] = perturbs
+            for idx, key in enumerate(reverse_keys):
+                if idx == 2 or idx == 3:
+                    temp_original = orignal_state_dict[key]
+                    perturbs = torch.tensor(np.random.uniform(low=mid_min, high=mid_max, size=temp_original.shape)).to(device)
+                    # perturbs = torch.randn_like(temp_original)* (mid_max - mid_min) + (mid_min + mid_max) / 2
+                    # perturbs = perturbs.to(device)
+                    perturbs = torch.add(perturbs, temp_original)
+                    perturbed_dict[key] = perturbs
 
             # 计算新张量和原张量之间的相似性
             test_model.load_state_dict(perturbed_dict)
@@ -551,8 +648,10 @@ def computeTargetDistance(model_dicts, global_model, ratio):
 
     for model_dict in model_dicts:
         tmp_distance = model_dist_norm(model_dict, global_model.state_dict())
+        tmp_similarity = cal_similarity(model_dict, global_model.state_dict())
         res_distance.append(tmp_distance)
         print("compute distance is ", tmp_distance)
+        print("compute similarity is ", tmp_similarity)
     res_distance.sort()
 
     max_idx = int(len(model_dicts)) - 1

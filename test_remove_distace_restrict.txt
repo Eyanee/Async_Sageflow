@@ -1,0 +1,2291 @@
+
+Experimental details:
+    Dataset     : mnist
+    Model     : cnn
+    detailed Model     : vgg
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 30
+
+    Federated parameters:
+    Non-IID with common data
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.2
+     Model attack is done!
+CNNMnist(
+  (conv1): Conv2d(1, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+  (conv2): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+  (fc1): Linear(in_features=3136, out_features=1024, bias=True)
+  (fc2): Linear(in_features=1024, out_features=10, bias=True)
+)
+attack user num is  10
+ t is  8
+attack_user is [40 41 42 43 44 45 46 47 48 49]
+
+ | Global Training Round : 1 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [8, 10, 11, 12, 13, 14, 15]
+local weights len is  8
+left index is  [17, 18, 19, 20, 21, 22, 23]
+local weights len is  8
+left index is  [25, 26, 27, 28, 29, 30, 31]
+local weights len is  8
+left index is  [32, 33, 34, 35, 36, 37, 39]
+local weights len is  18
+left index is  [0, 1, 2, 4, 5, 6, 7, 41, 42, 43, 44, 45, 46, 47, 48]
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 1 global rounds:
+Train Accuracy: 41.28% 
+
+Test Accuracy: 47.22% 
+
+
+ | Global Training Round : 2 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  18
+left index is  [0, 1, 2, 3, 4, 5, 40, 41, 42, 43, 44, 45, 46, 47, 48]
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 2 global rounds:
+Train Accuracy: 73.89% 
+
+Test Accuracy: 75.87% 
+
+
+ | Global Training Round : 3 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [8, 9, 10, 11, 12, 14, 15]
+local weights len is  18
+left index is  [0, 2, 3, 4, 5, 6, 40, 41, 43, 44, 45, 46, 47, 48, 49]
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 3 global rounds:
+Train Accuracy: 84.85% 
+
+Test Accuracy: 86.41% 
+
+
+ | Global Training Round : 4 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [17, 18, 19, 20, 21, 22, 23]
+local weights len is  18
+left index is  [0, 1, 2, 4, 5, 6, 40, 41, 43, 44, 45, 46, 47, 48, 49]
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 4 global rounds:
+Train Accuracy: 85.38% 
+
+Test Accuracy: 84.97% 
+
+
+ | Global Training Round : 5 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [8, 9, 10, 11, 12, 13, 15]
+local weights len is  8
+left index is  [24, 25, 26, 28, 29, 30, 31]
+local weights len is  18
+left index is  [1, 2, 4, 5, 6, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 5 global rounds:
+Train Accuracy: 82.71% 
+
+Test Accuracy: 84.01% 
+
+
+ | Global Training Round : 6 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [32, 33, 34, 35, 36, 37, 39]
+local weights len is  18
+left index is  [0, 1, 2, 4, 5, 6, 7, 40, 41, 43, 44, 45, 46, 47, 49]
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 6 global rounds:
+Train Accuracy: 89.69% 
+
+Test Accuracy: 89.08% 
+
+
+ | Global Training Round : 7 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [8, 9, 11, 12, 13, 14, 15]
+local weights len is  8
+left index is  [17, 18, 19, 20, 21, 22, 23]
+local weights len is  18
+left index is  [0, 1, 2, 4, 5, 6, 40, 41, 42, 43, 44, 45, 46, 47, 48]
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 7 global rounds:
+Train Accuracy: 81.71% 
+
+Test Accuracy: 82.82% 
+
+
+ | Global Training Round : 8 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  18
+left index is  [0, 1, 2, 4, 5, 6, 7, 40, 41, 43, 44, 45, 46, 47, 48]
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 8 global rounds:
+Train Accuracy: 91.97% 
+
+Test Accuracy: 92.16% 
+
+
+ | Global Training Round : 9 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [8, 9, 11, 12, 13, 14, 15]
+local weights len is  8
+left index is  [24, 25, 26, 27, 28, 29, 31]
+local weights len is  18
+left index is  [0, 1, 2, 4, 5, 6, 7, 40, 41, 43, 44, 45, 46, 47, 49]
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 9 global rounds:
+Train Accuracy: 95.40% 
+
+Test Accuracy: 95.51% 
+
+
+ | Global Training Round : 10 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [16, 17, 18, 19, 20, 21, 22]
+local weights len is  18
+left index is  [0, 1, 2, 4, 5, 6, 7, 40, 41, 43, 44, 45, 46, 47, 49]
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 10 global rounds:
+Train Accuracy: 94.44% 
+
+Test Accuracy: 94.55% 
+
+
+ | Global Training Round : 11 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [8, 9, 10, 11, 12, 14, 15]
+local weights len is  8
+left index is  [32, 34, 35, 36, 37, 38, 39]
+local weights len is  18
+left index is  [0, 1, 2, 4, 5, 6, 7, 40, 41, 43, 44, 45, 46, 47, 49]
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 11 global rounds:
+Train Accuracy: 95.07% 
+
+Test Accuracy: 95.45% 
+
+
+ | Global Training Round : 12 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  18
+left index is  [0, 1, 2, 4, 5, 6, 7, 40, 41, 43, 44, 45, 46, 47, 49]
+the length of epoch_weights is  3
+ 
+Avg Training Stats after 12 global rounds:
+Train Accuracy: 96.02% 
+
+Test Accuracy: 95.93% 
+
+
+ | Global Training Round : 13 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [8, 9, 11, 12, 13, 14, 15]
+local weights len is  8
+left index is  [16, 17, 18, 19, 20, 21, 23]
+local weights len is  8
+left index is  [24, 26, 27, 28, 29, 30, 31]
+local weights len is  18
+left index is  [0, 1, 2, 4, 5, 6, 7, 40, 41, 43, 44, 45, 46, 47, 49]
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 13 global rounds:
+Train Accuracy: 95.74% 
+
+Test Accuracy: 95.83% 
+
+
+ | Global Training Round : 14 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  18
+left index is  [0, 2, 4, 5, 6, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 14 global rounds:
+Train Accuracy: 96.21% 
+
+Test Accuracy: 96.48% 
+
+
+ | Global Training Round : 15 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [8, 9, 10, 11, 12, 14, 15]
+local weights len is  18
+left index is  [0, 2, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 49]
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 15 global rounds:
+Train Accuracy: 96.62% 
+
+Test Accuracy: 96.59% 
+
+
+ | Global Training Round : 16 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [16, 17, 18, 19, 20, 21, 23]
+local weights len is  8
+left index is  [32, 33, 34, 35, 36, 37, 39]
+local weights len is  18
+left index is  [0, 1, 2, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47]
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 16 global rounds:
+Train Accuracy: 96.75% 
+
+Test Accuracy: 96.78% 
+
+
+ | Global Training Round : 17 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [8, 9, 10, 11, 12, 14, 15]
+local weights len is  8
+left index is  [24, 26, 27, 28, 29, 30, 31]
+local weights len is  18
+left index is  [0, 1, 2, 4, 5, 6, 7, 40, 41, 43, 44, 45, 46, 47, 49]
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 17 global rounds:
+Train Accuracy: 96.65% 
+
+Test Accuracy: 96.64% 
+
+
+ | Global Training Round : 18 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  18
+left index is  [0, 2, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 49]
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 18 global rounds:
+Train Accuracy: 97.08% 
+
+Test Accuracy: 97.12% 
+
+
+ | Global Training Round : 19 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [8, 9, 10, 11, 12, 14, 15]
+local weights len is  8
+left index is  [16, 17, 18, 19, 21, 22, 23]
+local weights len is  18
+left index is  [0, 2, 4, 5, 6, 7, 40, 41, 43, 44, 45, 46, 47, 48, 49]
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 19 global rounds:
+Train Accuracy: 97.15% 
+
+Test Accuracy: 97.01% 
+
+
+ | Global Training Round : 20 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  18
+left index is  [0, 1, 2, 4, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 49]
+the length of epoch_weights is  3
+ 
+Avg Training Stats after 20 global rounds:
+Train Accuracy: 97.24% 
+
+Test Accuracy: 97.13% 
+
+
+ | Global Training Round : 21 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+ref distance is  12.414384898950129
+====================
+iteration is  0
+distance is  9.4047549899911
+====================
+xxxxxxxx  teacher model  xxxxxxxxxxxxxx
+avg test entropy is  0.17303909272003148
+avg test loss is  0.10413327563438875
+avg distance is  9.404755026807333
+avg accuracy is  0.9691833334896525
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.1275411701060212
+avg test loss is  0.3034215602829659
+avg distance is  41.51542946651356
+avg accuracy is  0.9159666668229876
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.10698795841156897
+avg test loss is  0.21373140125864074
+avg distance is  36.491209879058545
+avg accuracy is  0.9410166668229866
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.09689190884782022
+avg test loss is  0.21593862196886296
+avg distance is  36.77644735531322
+avg accuracy is  0.94220000015632
+++++++++++++++++++++
+++++++++++++++++++++
+after training  6
+avg test entropy is  0.12548251205614444
+avg test loss is  0.30634360303327857
+avg distance is  38.95547526002442
+avg accuracy is  0.9156833334896541
+++++++++++++++++++++
+++++++++++++++++++++
+after training  8
+avg test entropy is  0.08896990527541859
+avg test loss is  0.2064798204253104
+avg distance is  37.404579118906014
+avg accuracy is  0.9442333334896532
+++++++++++++++++++++
+++++++++++++++++++++
+after training  10
+avg test entropy is  0.08491415363142708
+avg test loss is  0.21600447786807606
+avg distance is  38.58739668100438
+avg accuracy is  0.94315000015632
+++++++++++++++++++++
+++++++++++++++++++++
+after training  12
+avg test entropy is  0.08966772012891117
+avg test loss is  0.15324156351776214
+avg distance is  35.07842949478087
+avg accuracy is  0.9559833334896528
+++++++++++++++++++++
+++++++++++++++++++++
+after training  14
+avg test entropy is  0.08130494976785582
+avg test loss is  0.24733083602251993
+avg distance is  41.641305107016336
+avg accuracy is  0.93995000015632
+++++++++++++++++++++
+++++++++++++++++++++
+after training  16
+avg test entropy is  0.07947050590963681
+avg test loss is  0.1626445506455817
+avg distance is  37.340755633088094
+avg accuracy is  0.9551333334896529
+++++++++++++++++++++
+++++++++++++++++++++
+after training  18
+avg test entropy is  0.09245934873682334
+avg test loss is  0.1568134726158086
+avg distance is  33.98116004908087
+avg accuracy is  0.9559000001563196
+++++++++++++++++++++
+finish training-----------------
+++++++++++++++++++++
+final test entropy is  0.07440867819619784
+final test loss is  0.16452326473260515
+final accuracy is  0.9556500001563196
+final distance is  35.73556888856063
+++++++++++++++++++++
+self_distillation sucess!
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [8, 9, 11, 12, 13, 14, 15]
+local weights len is  8
+left index is  [24, 26, 27, 28, 29, 30, 31]
+local weights len is  8
+left index is  [32, 33, 34, 35, 36, 37, 39]
+local weights len is  18
+left index is  [0, 3, 4, 5, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 21 global rounds:
+Train Accuracy: 94.81% 
+
+Test Accuracy: 95.04% 
+
+
+ | Global Training Round : 22 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+ref distance is  18.99616330710809
+====================
+iteration is  0
+distance is  9.405268051749863
+====================
+xxxxxxxx  teacher model  xxxxxxxxxxxxxx
+avg test entropy is  1.2692865634650818
+avg test loss is  0.5515447090238904
+avg distance is  9.405268519703963
+avg accuracy is  0.9397833334896534
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.1504726083651344
+avg test loss is  0.24650155840965826
+avg distance is  40.87230167173501
+avg accuracy is  0.9278500001563206
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.12166893561241596
+avg test loss is  0.33485293483931516
+avg distance is  31.21118487855656
+avg accuracy is  0.9121333334896544
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.09914531639423659
+avg test loss is  0.38157152040256637
+avg distance is  31.779834577011055
+avg accuracy is  0.9095833334896544
+++++++++++++++++++++
+++++++++++++++++++++
+after training  6
+avg test entropy is  0.0978800989811553
+avg test loss is  0.24887979286418768
+avg distance is  31.61491721834261
+avg accuracy is  0.9355500001563202
+++++++++++++++++++++
+++++++++++++++++++++
+after training  8
+avg test entropy is  0.0862478727414243
+avg test loss is  0.2629608157209244
+avg distance is  31.46658732948431
+avg accuracy is  0.9331333334896537
+++++++++++++++++++++
+++++++++++++++++++++
+after training  10
+avg test entropy is  0.10139424051009198
+avg test loss is  0.23214619264090017
+avg distance is  32.561978912577246
+avg accuracy is  0.9381500001563201
+++++++++++++++++++++
+++++++++++++++++++++
+after training  12
+avg test entropy is  0.10376367196718704
+avg test loss is  0.42181269197450727
+avg distance is  33.038780775873825
+avg accuracy is  0.9063500001563213
+++++++++++++++++++++
+++++++++++++++++++++
+after training  14
+avg test entropy is  0.09113007508960963
+avg test loss is  0.3008100237823459
+avg distance is  37.222426481935926
+avg accuracy is  0.9251333334896539
+++++++++++++++++++++
+++++++++++++++++++++
+after training  16
+avg test entropy is  0.08960434366792028
+avg test loss is  0.33869152942742864
+avg distance is  37.79743695324294
+avg accuracy is  0.9198500001563208
+++++++++++++++++++++
+++++++++++++++++++++
+after training  18
+avg test entropy is  0.07214314003176153
+avg test loss is  0.32740735779790064
+avg distance is  32.45348609572822
+avg accuracy is  0.9268333334896539
+++++++++++++++++++++
+finish training-----------------
+++++++++++++++++++++
+final test entropy is  0.13316630989487874
+final test loss is  1.0814056750764247
+final accuracy is  0.7983166668229923
+final distance is  35.283753163526804
+++++++++++++++++++++
+self_distillation sucess!
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [16, 17, 18, 19, 20, 21, 23]
+local weights len is  18
+left index is  [0, 2, 4, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 22 global rounds:
+Train Accuracy: 84.80% 
+
+Test Accuracy: 86.69% 
+
+
+ | Global Training Round : 23 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+ref distance is  20.121746250385847
+====================
+iteration is  0
+distance is  9.40491358419622
+====================
+xxxxxxxx  teacher model  xxxxxxxxxxxxxx
+avg test entropy is  1.469619028985119
+avg test loss is  0.7988298543607757
+avg distance is  9.404913620417762
+avg accuracy is  0.8593833334896565
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.15474604039208723
+avg test loss is  0.8625542037069861
+avg distance is  36.906030045386046
+avg accuracy is  0.8397833334896573
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.14416180848916457
+avg test loss is  1.302201224550573
+avg distance is  26.78613920328887
+avg accuracy is  0.8062833334896587
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.12016046377045832
+avg test loss is  0.9694212980028282
+avg distance is  26.884333635400584
+avg accuracy is  0.8361500001563239
+++++++++++++++++++++
+++++++++++++++++++++
+after training  6
+avg test entropy is  0.14269149231948833
+avg test loss is  0.9276215323268859
+avg distance is  27.573416072836917
+avg accuracy is  0.833850000156324
+++++++++++++++++++++
+++++++++++++++++++++
+after training  8
+avg test entropy is  0.13269328598830618
+avg test loss is  0.9986686677709699
+avg distance is  29.255548977862194
+avg accuracy is  0.8364833334896574
+++++++++++++++++++++
+++++++++++++++++++++
+after training  10
+avg test entropy is  0.12079126982967546
+avg test loss is  0.9085818514116665
+avg distance is  28.774512944876125
+avg accuracy is  0.842883333489657
+++++++++++++++++++++
+++++++++++++++++++++
+after training  12
+avg test entropy is  0.13998397570381413
+avg test loss is  0.7946737408518855
+avg distance is  30.333337916559007
+avg accuracy is  0.8462666668229902
+++++++++++++++++++++
+++++++++++++++++++++
+after training  14
+avg test entropy is  0.1151300580508864
+avg test loss is  0.8586888810448936
+avg distance is  31.435776892700716
+avg accuracy is  0.8516500001563233
+++++++++++++++++++++
+++++++++++++++++++++
+after training  16
+avg test entropy is  0.11619506145257559
+avg test loss is  0.8522590962506688
+avg distance is  37.994943382722
+avg accuracy is  0.8551333334896566
+++++++++++++++++++++
+++++++++++++++++++++
+after training  18
+avg test entropy is  0.1225687800837097
+avg test loss is  0.9657811111152999
+avg distance is  29.16874794936515
+avg accuracy is  0.8415666668229905
+++++++++++++++++++++
+finish training-----------------
+++++++++++++++++++++
+final test entropy is  0.1150138029165423
+final test loss is  0.9640864352983579
+final accuracy is  0.8440000001563237
+final distance is  31.474507991711523
+++++++++++++++++++++
+self_distillation sucess!
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [8, 9, 11, 12, 13, 14, 15]
+local weights len is  18
+left index is  [0, 2, 4, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 23 global rounds:
+Train Accuracy: 83.32% 
+
+Test Accuracy: 85.36% 
+
+
+ | Global Training Round : 24 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+ref distance is  21.389536772104144
+====================
+iteration is  0
+distance is  9.40144301688281
+====================
+xxxxxxxx  teacher model  xxxxxxxxxxxxxx
+avg test entropy is  0.7913196724551573
+avg test loss is  0.5463172359221271
+avg distance is  9.401443013564709
+avg accuracy is  0.844383333489657
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.13062800726354884
+avg test loss is  1.2092585429978142
+avg distance is  21.855251967758658
+avg accuracy is  0.8136333334896584
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.12022447341016487
+avg test loss is  1.2541881940289856
+avg distance is  25.20596310740526
+avg accuracy is  0.8071333334896587
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.10482923444241349
+avg test loss is  1.260014371211722
+avg distance is  25.21973622413295
+avg accuracy is  0.8148333334896583
+++++++++++++++++++++
+++++++++++++++++++++
+after training  6
+avg test entropy is  0.10184004585117673
+avg test loss is  1.106593962989128
+avg distance is  42.33210604433044
+avg accuracy is  0.8286000001563244
+++++++++++++++++++++
+++++++++++++++++++++
+after training  8
+avg test entropy is  0.1145782859555122
+avg test loss is  1.2735225161446182
+avg distance is  31.000732413222917
+avg accuracy is  0.807116666822992
+++++++++++++++++++++
+++++++++++++++++++++
+after training  10
+avg test entropy is  0.10500135872739433
+avg test loss is  1.1036493785774657
+avg distance is  28.151431807156253
+avg accuracy is  0.8305333334896576
+++++++++++++++++++++
+++++++++++++++++++++
+after training  12
+avg test entropy is  0.09341156017432399
+avg test loss is  1.1878263441396992
+avg distance is  27.92340729217492
+avg accuracy is  0.8278166668229912
+++++++++++++++++++++
+++++++++++++++++++++
+after training  14
+avg test entropy is  0.09491381009639517
+avg test loss is  1.424405099415004
+avg distance is  24.272842817385442
+avg accuracy is  0.8094500001563253
+++++++++++++++++++++
+++++++++++++++++++++
+after training  16
+avg test entropy is  0.09881596776174266
+avg test loss is  1.2479413808234083
+avg distance is  27.628354796649244
+avg accuracy is  0.8220166668229913
+++++++++++++++++++++
+++++++++++++++++++++
+after training  18
+avg test entropy is  0.09964007335002108
+avg test loss is  1.2131486465808934
+avg distance is  32.003358664682565
+avg accuracy is  0.8247666668229913
+++++++++++++++++++++
+finish training-----------------
+++++++++++++++++++++
+final test entropy is  0.09400455573616402
+final test loss is  1.123130285941652
+final accuracy is  0.8356000001563241
+final distance is  26.6265289870542
+++++++++++++++++++++
+self_distillation sucess!
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  18
+left index is  [0, 2, 4, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+the length of epoch_weights is  3
+ 
+Avg Training Stats after 24 global rounds:
+Train Accuracy: 84.18% 
+
+Test Accuracy: 86.19% 
+
+
+ | Global Training Round : 25 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+ref distance is  22.19874567148349
+====================
+iteration is  0
+distance is  9.402313189117843
+====================
+xxxxxxxx  teacher model  xxxxxxxxxxxxxx
+avg test entropy is  0.6832261355256221
+avg test loss is  0.48060107258146506
+avg distance is  9.402312915404362
+avg accuracy is  0.8566500001563232
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.14462900274534468
+avg test loss is  0.6389100599978397
+avg distance is  24.721691858362846
+avg accuracy is  0.8581500001563231
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.10549490231730695
+avg test loss is  0.806811164389414
+avg distance is  26.32197164739469
+avg accuracy is  0.8534166668229899
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.09905192168103828
+avg test loss is  0.7109561692287863
+avg distance is  29.889710192483047
+avg accuracy is  0.8680333334896561
+++++++++++++++++++++
+++++++++++++++++++++
+after training  6
+avg test entropy is  0.09922618306140656
+avg test loss is  0.6920273527423583
+avg distance is  27.739498866477046
+avg accuracy is  0.8703833334896559
+++++++++++++++++++++
+++++++++++++++++++++
+after training  8
+avg test entropy is  0.09296289117220463
+avg test loss is  0.7959326352677873
+avg distance is  27.969088248652966
+avg accuracy is  0.8634500001563229
+++++++++++++++++++++
+++++++++++++++++++++
+after training  10
+avg test entropy is  0.08238820332898768
+avg test loss is  0.7833542982851074
+avg distance is  27.99675949963618
+avg accuracy is  0.8692000001563227
+++++++++++++++++++++
+++++++++++++++++++++
+after training  12
+avg test entropy is  0.09978466914561607
+avg test loss is  0.7639896830837769
+avg distance is  39.945424805484606
+avg accuracy is  0.8623166668229897
+++++++++++++++++++++
+++++++++++++++++++++
+after training  14
+avg test entropy is  0.11956249538268934
+avg test loss is  0.7901704176339005
+avg distance is  28.898800771574525
+avg accuracy is  0.8499500001563235
+++++++++++++++++++++
+++++++++++++++++++++
+after training  16
+avg test entropy is  0.11220394605611846
+avg test loss is  0.8268501360390359
+avg distance is  33.391447550701514
+avg accuracy is  0.85106666682299
+++++++++++++++++++++
+++++++++++++++++++++
+after training  18
+avg test entropy is  0.0980315932692257
+avg test loss is  0.8338348272401513
+avg distance is  30.727041217984507
+avg accuracy is  0.8565833334896564
+++++++++++++++++++++
+finish training-----------------
+++++++++++++++++++++
+final test entropy is  0.11463860095913476
+final test loss is  0.7104738750961671
+final accuracy is  0.8613833334896563
+final distance is  26.96387693154839
+++++++++++++++++++++
+self_distillation sucess!
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [8, 10, 11, 12, 13, 14, 15]
+local weights len is  8
+left index is  [16, 17, 18, 19, 20, 21, 23]
+local weights len is  8
+left index is  [24, 25, 26, 28, 29, 30, 31]
+local weights len is  18
+left index is  [0, 2, 4, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 25 global rounds:
+Train Accuracy: 83.77% 
+
+Test Accuracy: 86.00% 
+
+
+ | Global Training Round : 26 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+ref distance is  21.719104571844348
+====================
+iteration is  0
+distance is  9.401311097589362
+====================
+xxxxxxxx  teacher model  xxxxxxxxxxxxxx
+avg test entropy is  0.5194783527205493
+avg test loss is  0.46108331991188817
+avg distance is  9.401311141754752
+avg accuracy is  0.8550500001563233
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.13011312867596206
+avg test loss is  1.0705212994075533
+avg distance is  21.51147722365319
+avg accuracy is  0.8129166668229917
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.10634035147678877
+avg test loss is  0.9767018326722992
+avg distance is  33.41963782542852
+avg accuracy is  0.8392000001563239
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.10325632337480783
+avg test loss is  1.0848212249314926
+avg distance is  26.62972880174876
+avg accuracy is  0.8276666668229911
+++++++++++++++++++++
+++++++++++++++++++++
+after training  6
+avg test entropy is  0.08911414550585565
+avg test loss is  1.134172431286623
+avg distance is  27.545500134082133
+avg accuracy is  0.834900000156324
+++++++++++++++++++++
+++++++++++++++++++++
+after training  8
+avg test entropy is  0.08710882705308672
+avg test loss is  1.049225896350674
+avg distance is  25.09492111798658
+avg accuracy is  0.8438166668229904
+++++++++++++++++++++
+++++++++++++++++++++
+after training  10
+avg test entropy is  0.09254694455213892
+avg test loss is  1.1467566035632322
+avg distance is  25.842316408998876
+avg accuracy is  0.8300000001563244
+++++++++++++++++++++
+++++++++++++++++++++
+after training  12
+avg test entropy is  0.10071753926559297
+avg test loss is  1.0483277436973317
+avg distance is  25.49890613079682
+avg accuracy is  0.8356500001563241
+++++++++++++++++++++
+++++++++++++++++++++
+after training  14
+avg test entropy is  0.09810882206879128
+avg test loss is  1.119043506213279
+avg distance is  28.067731407912518
+avg accuracy is  0.828316666822991
+++++++++++++++++++++
+++++++++++++++++++++
+after training  16
+avg test entropy is  0.11211924434010027
+avg test loss is  1.2114886834558203
+avg distance is  26.586776590123236
+avg accuracy is  0.8107500001563251
+++++++++++++++++++++
+++++++++++++++++++++
+after training  18
+avg test entropy is  0.10579205575440802
+avg test loss is  1.2036976220129905
+avg distance is  29.102276627144008
+avg accuracy is  0.8194666668229915
+++++++++++++++++++++
+finish training-----------------
+++++++++++++++++++++
+final test entropy is  0.11538093465009033
+final test loss is  1.1235053929756444
+final accuracy is  0.812600000156325
+final distance is  33.32955890902717
+++++++++++++++++++++
+self_distillation sucess!
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [32, 34, 35, 36, 37, 38, 39]
+local weights len is  18
+left index is  [0, 2, 4, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 26 global rounds:
+Train Accuracy: 86.14% 
+
+Test Accuracy: 87.81% 
+
+
+ | Global Training Round : 27 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+ref distance is  30.10842756236732
+====================
+iteration is  0
+distance is  9.405339937103953
+====================
+xxxxxxxx  teacher model  xxxxxxxxxxxxxx
+avg test entropy is  0.274680014779128
+avg test loss is  0.41499709276391117
+avg distance is  9.40533990354266
+avg accuracy is  0.8729500001563225
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.08723127910160403
+avg test loss is  0.8143520516230226
+avg distance is  22.10996783105381
+avg accuracy is  0.8678333334896561
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.07423132116884501
+avg test loss is  0.9769233472303731
+avg distance is  28.44223861618491
+avg accuracy is  0.8642000001563228
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.07042372852081318
+avg test loss is  0.8987605103950844
+avg distance is  28.285012482803392
+avg accuracy is  0.8669333334896561
+++++++++++++++++++++
+++++++++++++++++++++
+after training  6
+avg test entropy is  0.07282801997115108
+avg test loss is  0.9198452391193064
+avg distance is  27.886867306387472
+avg accuracy is  0.8647166668229895
+++++++++++++++++++++
+++++++++++++++++++++
+after training  8
+avg test entropy is  0.07582225670530669
+avg test loss is  0.7968210498901652
+avg distance is  27.731501831809545
+avg accuracy is  0.8731166668229892
+++++++++++++++++++++
+++++++++++++++++++++
+after training  10
+avg test entropy is  0.07402155656558174
+avg test loss is  0.8449087772242375
+avg distance is  29.604110885950558
+avg accuracy is  0.869533333489656
+++++++++++++++++++++
+++++++++++++++++++++
+after training  12
+avg test entropy is  0.0781215801919455
+avg test loss is  0.8217219751713468
+avg distance is  23.625640698984228
+avg accuracy is  0.8685166668229894
+++++++++++++++++++++
+++++++++++++++++++++
+after training  14
+avg test entropy is  0.06878204696895138
+avg test loss is  0.9588980298153739
+avg distance is  28.08126808367991
+avg accuracy is  0.8651833334896561
+++++++++++++++++++++
+++++++++++++++++++++
+after training  16
+avg test entropy is  0.0641828895996271
+avg test loss is  0.9392278491497548
+avg distance is  28.262459227082488
+avg accuracy is  0.8711000001563225
+++++++++++++++++++++
+++++++++++++++++++++
+after training  18
+avg test entropy is  0.0622848531073416
+avg test loss is  0.9258176081159564
+avg distance is  23.882624661920797
+avg accuracy is  0.8747666668229891
+++++++++++++++++++++
+finish training-----------------
+++++++++++++++++++++
+final test entropy is  0.06574866192009268
+final test loss is  0.9225849588649836
+final accuracy is  0.8712333334896559
+final distance is  23.625879664922664
+++++++++++++++++++++
+self_distillation sucess!
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [8, 9, 11, 12, 13, 14, 15]
+local weights len is  18
+left index is  [1, 2, 3, 4, 6, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 27 global rounds:
+Train Accuracy: 87.10% 
+
+Test Accuracy: 88.57% 
+
+
+ | Global Training Round : 28 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+ref distance is  28.37195755700433
+====================
+iteration is  0
+distance is  9.401544109222941
+====================
+xxxxxxxx  teacher model  xxxxxxxxxxxxxx
+avg test entropy is  0.17275472257786723
+avg test loss is  0.43920927975318835
+avg distance is  9.401544046407642
+avg accuracy is  0.8812166668229888
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.09201752684110882
+avg test loss is  0.6766403693475449
+avg distance is  22.14922355858207
+avg accuracy is  0.8750333334896557
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.08655023813021304
+avg test loss is  0.731666621938745
+avg distance is  23.215787264710894
+avg accuracy is  0.8730166668229892
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.08036122756150327
+avg test loss is  0.7174813186353657
+avg distance is  33.35187452272642
+avg accuracy is  0.8789000001563223
+++++++++++++++++++++
+++++++++++++++++++++
+after training  6
+avg test entropy is  0.09283393141138417
+avg test loss is  0.7802356101596343
+avg distance is  24.489570733416933
+avg accuracy is  0.8641500001563228
+++++++++++++++++++++
+++++++++++++++++++++
+after training  8
+avg test entropy is  0.07502225236391336
+avg test loss is  0.7467993224587745
+avg distance is  25.19319758565482
+avg accuracy is  0.8797666668229889
+++++++++++++++++++++
+++++++++++++++++++++
+after training  10
+avg test entropy is  0.08324437611686714
+avg test loss is  0.6616291577981384
+avg distance is  27.495635085054296
+avg accuracy is  0.8818833334896554
+++++++++++++++++++++
+++++++++++++++++++++
+after training  12
+avg test entropy is  0.07346069742280092
+avg test loss is  0.7679962551952012
+avg distance is  26.53398975474076
+avg accuracy is  0.8773666668229889
+++++++++++++++++++++
+++++++++++++++++++++
+after training  14
+avg test entropy is  0.07745674397570015
+avg test loss is  0.8530106991132312
+avg distance is  23.128200000300634
+avg accuracy is  0.8663666668229894
+++++++++++++++++++++
+++++++++++++++++++++
+after training  16
+avg test entropy is  0.08605920378444419
+avg test loss is  0.7764972209382349
+avg distance is  35.952114895089096
+avg accuracy is  0.8685500001563227
+++++++++++++++++++++
+++++++++++++++++++++
+after training  18
+avg test entropy is  0.08308439032792218
+avg test loss is  0.764620786860907
+avg distance is  24.779884252639654
+avg accuracy is  0.8699000001563226
+++++++++++++++++++++
+finish training-----------------
+++++++++++++++++++++
+final test entropy is  0.07330869368539611
+final test loss is  0.8836224321097231
+final accuracy is  0.8674666668229895
+final distance is  23.113941084569234
+++++++++++++++++++++
+self_distillation sucess!
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [16, 17, 18, 19, 21, 22, 23]
+local weights len is  18
+left index is  [0, 3, 4, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 28 global rounds:
+Train Accuracy: 88.38% 
+
+Test Accuracy: 89.48% 
+
+
+ | Global Training Round : 29 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+ref distance is  25.450122784991002
+====================
+iteration is  0
+distance is  9.405830004845283
+====================
+xxxxxxxx  teacher model  xxxxxxxxxxxxxx
+avg test entropy is  0.1504276332232966
+avg test loss is  0.40381314305822924
+avg distance is  9.405829841633626
+avg accuracy is  0.8938166668229883
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.10486052185694165
+avg test loss is  0.6711447682839308
+avg distance is  23.363421994748276
+avg accuracy is  0.8717166668229892
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.0912454954779415
+avg test loss is  0.7106844865804367
+avg distance is  30.456150239357957
+avg accuracy is  0.8750333334896557
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.09072776223673845
+avg test loss is  0.7548378780186336
+avg distance is  24.879914224850886
+avg accuracy is  0.8711333334896559
+++++++++++++++++++++
+++++++++++++++++++++
+after training  6
+avg test entropy is  0.07724925840714339
+avg test loss is  0.8762921307331273
+avg distance is  28.355401753347632
+avg accuracy is  0.8655000001563229
+++++++++++++++++++++
+++++++++++++++++++++
+after training  8
+avg test entropy is  0.09429938236930605
+avg test loss is  0.7375173852828615
+avg distance is  33.74867257227497
+avg accuracy is  0.8737666668229891
+++++++++++++++++++++
+++++++++++++++++++++
+after training  10
+avg test entropy is  0.08462869543939638
+avg test loss is  0.7397806729055516
+avg distance is  29.51787374804406
+avg accuracy is  0.8745500001563223
+++++++++++++++++++++
+++++++++++++++++++++
+after training  12
+avg test entropy is  0.07422844509977394
+avg test loss is  0.7566491058706911
+avg distance is  26.06374233587305
+avg accuracy is  0.8832000001563222
+++++++++++++++++++++
+++++++++++++++++++++
+after training  14
+avg test entropy is  0.0786168200027412
+avg test loss is  0.7866655843136813
+avg distance is  26.9394575854823
+avg accuracy is  0.8756000001563223
+++++++++++++++++++++
+++++++++++++++++++++
+after training  16
+avg test entropy is  0.08501998107455401
+avg test loss is  0.7594047630948426
+avg distance is  24.942196358374044
+avg accuracy is  0.8739500001563225
+++++++++++++++++++++
+++++++++++++++++++++
+after training  18
+avg test entropy is  0.08152597819143204
+avg test loss is  0.8216314403278662
+avg distance is  32.68994784990774
+avg accuracy is  0.8681500001563227
+++++++++++++++++++++
+finish training-----------------
+++++++++++++++++++++
+final test entropy is  0.07274803966244082
+final test loss is  0.7053993194640032
+final accuracy is  0.8864166668229887
+final distance is  24.771678331580226
+++++++++++++++++++++
+self_distillation sucess!
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  8
+left index is  [8, 9, 10, 12, 13, 14, 15]
+local weights len is  8
+left index is  [24, 25, 26, 27, 28, 30, 31]
+local weights len is  18
+left index is  [0, 2, 4, 5, 6, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 29 global rounds:
+Train Accuracy: 88.28% 
+
+Test Accuracy: 89.05% 
+
+
+ | Global Training Round : 30 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+ref distance is  39.355713495671985
+====================
+iteration is  0
+distance is  9.405107919204598
+====================
+xxxxxxxx  teacher model  xxxxxxxxxxxxxx
+avg test entropy is  0.12817347265764087
+avg test loss is  0.44799965739285924
+avg distance is  9.4051083096844
+avg accuracy is  0.8928500001563217
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.09008196834871955
+avg test loss is  0.7424947665607148
+avg distance is  22.09847415127237
+avg accuracy is  0.8721833334896558
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.07620689609467285
+avg test loss is  0.8030996176241431
+avg distance is  27.163387295677982
+avg accuracy is  0.8731333334896558
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.07951540294101339
+avg test loss is  0.7588384515468849
+avg distance is  32.48575033163579
+avg accuracy is  0.8760666668229891
+++++++++++++++++++++
+++++++++++++++++++++
+after training  6
+avg test entropy is  0.06975604218295785
+avg test loss is  0.7568669648767054
+avg distance is  25.640533354117142
+avg accuracy is  0.8829333334896554
+++++++++++++++++++++
+++++++++++++++++++++
+after training  8
+avg test entropy is  0.07010277831899141
+avg test loss is  0.7186321547755828
+avg distance is  25.97902009051306
+avg accuracy is  0.885500000156322
+++++++++++++++++++++
+++++++++++++++++++++
+after training  10
+avg test entropy is  0.06773303557973681
+avg test loss is  0.9323485699881401
+avg distance is  23.319050949964307
+avg accuracy is  0.8727166668229892
+++++++++++++++++++++
+++++++++++++++++++++
+after training  12
+avg test entropy is  0.068258980824761
+avg test loss is  0.9018672337012885
+avg distance is  22.9161480469252
+avg accuracy is  0.8723666668229891
+++++++++++++++++++++
+++++++++++++++++++++
+after training  14
+avg test entropy is  0.07211809955102437
+avg test loss is  0.7411913563495379
+avg distance is  24.036712541541274
+avg accuracy is  0.8842166668229887
+++++++++++++++++++++
+++++++++++++++++++++
+after training  16
+avg test entropy is  0.07542200032413117
+avg test loss is  0.7680880437984363
+avg distance is  23.00415930250101
+avg accuracy is  0.8803666668229888
+++++++++++++++++++++
+++++++++++++++++++++
+after training  18
+avg test entropy is  0.0757742330917457
+avg test loss is  0.7828104291309808
+avg distance is  24.66243040806831
+avg accuracy is  0.8768166668229891
+++++++++++++++++++++
+finish training-----------------
+++++++++++++++++++++
+final test entropy is  0.08150437630431008
+final test loss is  0.6951953870182765
+final accuracy is  0.8842833334896554
+final distance is  31.897861554927843
+++++++++++++++++++++
+self_distillation sucess!
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+local weights len is  18
+left index is  [2, 3, 4, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+the length of epoch_weights is  3
+ 
+Avg Training Stats after 30 global rounds:
+Train Accuracy: 89.65% 
+
+Test Accuracy: 90.54% 
+
+ 
+ Results after 30 global rounds of training:
+|---- Avg testing Accuracy across each device's data: 89.65%
+|----0th round Training Accuracy : 41.28%
+|----1th round Training Accuracy : 73.89%
+|----2th round Training Accuracy : 84.85%
+|----3th round Training Accuracy : 85.38%
+|----4th round Training Accuracy : 82.71%
+|----5th round Training Accuracy : 89.69%
+|----6th round Training Accuracy : 81.71%
+|----7th round Training Accuracy : 91.97%
+|----8th round Training Accuracy : 95.40%
+|----9th round Training Accuracy : 94.44%
+|----10th round Training Accuracy : 95.07%
+|----11th round Training Accuracy : 96.02%
+|----12th round Training Accuracy : 95.74%
+|----13th round Training Accuracy : 96.21%
+|----14th round Training Accuracy : 96.62%
+|----15th round Training Accuracy : 96.75%
+|----16th round Training Accuracy : 96.65%
+|----17th round Training Accuracy : 97.08%
+|----18th round Training Accuracy : 97.15%
+|----19th round Training Accuracy : 97.24%
+|----20th round Training Accuracy : 94.81%
+|----21th round Training Accuracy : 84.80%
+|----22th round Training Accuracy : 83.32%
+|----23th round Training Accuracy : 84.18%
+|----24th round Training Accuracy : 83.77%
+|----25th round Training Accuracy : 86.14%
+|----26th round Training Accuracy : 87.10%
+|----27th round Training Accuracy : 88.38%
+|----28th round Training Accuracy : 88.28%
+|----29th round Training Accuracy : 89.65%
+|----Final Test Accuracy: 90.54%
+|----0th round Final Test Accuracy : 47.22%
+|----1th round Final Test Accuracy : 75.87%
+|----2th round Final Test Accuracy : 86.41%
+|----3th round Final Test Accuracy : 84.97%
+|----4th round Final Test Accuracy : 84.01%
+|----5th round Final Test Accuracy : 89.08%
+|----6th round Final Test Accuracy : 82.82%
+|----7th round Final Test Accuracy : 92.16%
+|----8th round Final Test Accuracy : 95.51%
+|----9th round Final Test Accuracy : 94.55%
+|----10th round Final Test Accuracy : 95.45%
+|----11th round Final Test Accuracy : 95.93%
+|----12th round Final Test Accuracy : 95.83%
+|----13th round Final Test Accuracy : 96.48%
+|----14th round Final Test Accuracy : 96.59%
+|----15th round Final Test Accuracy : 96.78%
+|----16th round Final Test Accuracy : 96.64%
+|----17th round Final Test Accuracy : 97.12%
+|----18th round Final Test Accuracy : 97.01%
+|----19th round Final Test Accuracy : 97.13%
+|----20th round Final Test Accuracy : 95.04%
+|----21th round Final Test Accuracy : 86.69%
+|----22th round Final Test Accuracy : 85.36%
+|----23th round Final Test Accuracy : 86.19%
+|----24th round Final Test Accuracy : 86.00%
+|----25th round Final Test Accuracy : 87.81%
+|----26th round Final Test Accuracy : 88.57%
+|----27th round Final Test Accuracy : 89.48%
+|----28th round Final Test Accuracy : 89.05%
+|----29th round Final Test Accuracy : 90.54%
+
+Experimental details:
+    Dataset     : mnist
+    Model     : cnn
+    detailed Model     : vgg
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 30
+
+    Federated parameters:
+    Non-IID with common data
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.2
+     Model attack is done!
+
+ Total Run Time: 5394.3229

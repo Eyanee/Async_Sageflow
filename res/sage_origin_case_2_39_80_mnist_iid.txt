@@ -1,0 +1,1945 @@
+
+Experimental details:
+    Dataset     : mnist
+    Model     : cnn
+    detailed Model     : vgg
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 80
+
+    Federated parameters:
+    IID
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.2
+     Model attack is done!
+attack user num is  10
+ t is  8
+attack_user is [40 41 42 43 44 45 46 47 48 49]
+
+ | Global Training Round : 1 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0
+ benign empirical indicaor res is  0.0
+ benign loss is  0.309846941185625
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  2
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+current aggregation staleness i is  4
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 1 global rounds:
+Train Accuracy: 96.12% 
+
+Test Accuracy: 96.51% 
+
+
+ | Global Training Round : 2 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.1284119039773941
+ benign empirical indicaor res is  0.1284119039773941
+ benign loss is  0.2268847740794483
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 2 global rounds:
+Train Accuracy: 97.30% 
+
+Test Accuracy: 97.60% 
+
+
+ | Global Training Round : 3 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.02795730158686638
+ benign empirical indicaor res is  0.02795730158686638
+ benign loss is  0.13552743245504403
+current aggregation staleness i is  1
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 3 global rounds:
+Train Accuracy: 97.81% 
+
+Test Accuracy: 98.09% 
+
+
+ | Global Training Round : 4 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.009206750430166721
+ benign empirical indicaor res is  0.009206750430166721
+ benign loss is  0.122883554842127
+current aggregation staleness i is  2
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 4 global rounds:
+Train Accuracy: 97.98% 
+
+Test Accuracy: 98.12% 
+
+
+ | Global Training Round : 5 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.008042177185416222
+ benign empirical indicaor res is  0.008042177185416222
+ benign loss is  0.11478819237335731
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 5 global rounds:
+Train Accuracy: 98.08% 
+
+Test Accuracy: 98.27% 
+
+
+ | Global Training Round : 6 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.006028825882822275
+ benign empirical indicaor res is  0.006028825882822275
+ benign loss is  0.10028071142733097
+current aggregation staleness i is  4
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 6 global rounds:
+Train Accuracy: 98.30% 
+
+Test Accuracy: 98.48% 
+
+
+ | Global Training Round : 7 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.013200598768889904
+ benign empirical indicaor res is  0.013200598768889904
+ benign loss is  0.08511486058858664
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  2
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 7 global rounds:
+Train Accuracy: 98.40% 
+
+Test Accuracy: 98.63% 
+
+
+ | Global Training Round : 8 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.011548103764653206
+ benign empirical indicaor res is  0.011548103764653206
+ benign loss is  0.05463583342191812
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 8 global rounds:
+Train Accuracy: 98.52% 
+
+Test Accuracy: 98.69% 
+
+
+ | Global Training Round : 9 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0043760500848293304
+ benign empirical indicaor res is  0.0043760500848293304
+ benign loss is  0.061913145552879495
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 9 global rounds:
+Train Accuracy: 98.55% 
+
+Test Accuracy: 98.78% 
+
+
+ | Global Training Round : 10 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.006682669278234243
+ benign empirical indicaor res is  0.006682669278234243
+ benign loss is  0.05828998506216234
+current aggregation staleness i is  2
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 10 global rounds:
+Train Accuracy: 98.60% 
+
+Test Accuracy: 98.82% 
+
+
+ | Global Training Round : 11 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0027383859269320965
+ benign empirical indicaor res is  0.0027383859269320965
+ benign loss is  0.057986540750502365
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  4
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 11 global rounds:
+Train Accuracy: 98.67% 
+
+Test Accuracy: 98.87% 
+
+
+ | Global Training Round : 12 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.006535057909786701
+ benign empirical indicaor res is  0.006535057909786701
+ benign loss is  0.06329874335910733
+num2 of attacker is  0
+the length of epoch_weights is  3
+ 
+Avg Training Stats after 12 global rounds:
+Train Accuracy: 98.68% 
+
+Test Accuracy: 98.91% 
+
+
+ | Global Training Round : 13 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0032929726876318455
+ benign empirical indicaor res is  0.0032929726876318455
+ benign loss is  0.07994121619451203
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  2
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 13 global rounds:
+Train Accuracy: 98.67% 
+
+Test Accuracy: 98.89% 
+
+
+ | Global Training Round : 14 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.006806406658142805
+ benign empirical indicaor res is  0.006806406658142805
+ benign loss is  0.07263394504001267
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 14 global rounds:
+Train Accuracy: 98.73% 
+
+Test Accuracy: 98.96% 
+
+
+ | Global Training Round : 15 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.004892644472420216
+ benign empirical indicaor res is  0.004892644472420216
+ benign loss is  0.20257380938059405
+current aggregation staleness i is  1
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 15 global rounds:
+Train Accuracy: 98.79% 
+
+Test Accuracy: 98.99% 
+
+
+ | Global Training Round : 16 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0012094848789274693
+ benign empirical indicaor res is  0.0012094848789274693
+ benign loss is  0.0374205007193316
+current aggregation staleness i is  2
+num1 of attacker is  0
+current aggregation staleness i is  4
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 16 global rounds:
+Train Accuracy: 98.79% 
+
+Test Accuracy: 99.02% 
+
+
+ | Global Training Round : 17 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0019900419283658266
+ benign empirical indicaor res is  0.0019900419283658266
+ benign loss is  0.05132366673971869
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 17 global rounds:
+Train Accuracy: 98.77% 
+
+Test Accuracy: 99.01% 
+
+
+ | Global Training Round : 18 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0024016352836042643
+ benign empirical indicaor res is  0.0024016352836042643
+ benign loss is  0.044217216244616886
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 18 global rounds:
+Train Accuracy: 98.80% 
+
+Test Accuracy: 99.00% 
+
+
+ | Global Training Round : 19 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.002271199831739068
+ benign empirical indicaor res is  0.002271199831739068
+ benign loss is  0.050682465426354226
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  2
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 19 global rounds:
+Train Accuracy: 98.81% 
+
+Test Accuracy: 99.00% 
+
+
+ | Global Training Round : 20 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0021623196080327034
+ benign empirical indicaor res is  0.0021623196080327034
+ benign loss is  0.03915503337262444
+num2 of attacker is  0
+the length of epoch_weights is  3
+ 
+Avg Training Stats after 20 global rounds:
+Train Accuracy: 98.82% 
+
+Test Accuracy: 99.03% 
+
+
+ | Global Training Round : 21 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0015105914790183306
+ benign empirical indicaor res is  0.0015105914790183306
+ benign loss is  0.048809515851500784
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+current aggregation staleness i is  4
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 21 global rounds:
+Train Accuracy: 98.85% 
+
+Test Accuracy: 99.05% 
+
+
+ | Global Training Round : 22 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0017548807663843036
+ benign empirical indicaor res is  0.0017548807663843036
+ benign loss is  0.03500996840777684
+current aggregation staleness i is  2
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 22 global rounds:
+Train Accuracy: 98.82% 
+
+Test Accuracy: 99.06% 
+
+
+ | Global Training Round : 23 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0019172470783814788
+ benign empirical indicaor res is  0.0019172470783814788
+ benign loss is  0.033752543654133514
+current aggregation staleness i is  1
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 23 global rounds:
+Train Accuracy: 98.86% 
+
+Test Accuracy: 99.08% 
+
+
+ | Global Training Round : 24 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0018624444492161274
+ benign empirical indicaor res is  0.0018624444492161274
+ benign loss is  0.03806774740376951
+num2 of attacker is  0
+the length of epoch_weights is  3
+ 
+Avg Training Stats after 24 global rounds:
+Train Accuracy: 98.85% 
+
+Test Accuracy: 99.07% 
+
+
+ | Global Training Round : 25 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0012659840285778046
+ benign empirical indicaor res is  0.0012659840285778046
+ benign loss is  0.04985096925520338
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  2
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 25 global rounds:
+Train Accuracy: 98.89% 
+
+Test Accuracy: 99.09% 
+
+
+ | Global Training Round : 26 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.001105919829569757
+ benign empirical indicaor res is  0.001105919829569757
+ benign loss is  0.03218789153336394
+current aggregation staleness i is  4
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 26 global rounds:
+Train Accuracy: 98.88% 
+
+Test Accuracy: 99.11% 
+
+
+ | Global Training Round : 27 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0019445425132289529
+ benign empirical indicaor res is  0.0019445425132289529
+ benign loss is  0.03213129751384258
+current aggregation staleness i is  1
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 27 global rounds:
+Train Accuracy: 98.90% 
+
+Test Accuracy: 99.13% 
+
+
+ | Global Training Round : 28 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0013429910177364945
+ benign empirical indicaor res is  0.0013429910177364945
+ benign loss is  0.02870243073189876
+current aggregation staleness i is  2
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 28 global rounds:
+Train Accuracy: 98.94% 
+
+Test Accuracy: 99.15% 
+
+
+ | Global Training Round : 29 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.001201574457809329
+ benign empirical indicaor res is  0.001201574457809329
+ benign loss is  0.03306560386064168
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 29 global rounds:
+Train Accuracy: 98.91% 
+
+Test Accuracy: 99.15% 
+
+
+ | Global Training Round : 30 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0012674520257860422
+ benign empirical indicaor res is  0.0012674520257860422
+ benign loss is  0.03330015617202183
+num2 of attacker is  0
+the length of epoch_weights is  3
+ 
+Avg Training Stats after 30 global rounds:
+Train Accuracy: 98.92% 
+
+Test Accuracy: 99.12% 
+
+
+ | Global Training Round : 31 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.001094660023227334
+ benign empirical indicaor res is  0.001094660023227334
+ benign loss is  0.031969309047685544
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  2
+num1 of attacker is  0
+current aggregation staleness i is  4
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 31 global rounds:
+Train Accuracy: 98.91% 
+
+Test Accuracy: 99.13% 
+
+
+ | Global Training Round : 32 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0007701513823121786
+ benign empirical indicaor res is  0.0007701513823121786
+ benign loss is  0.03363175771013821
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 32 global rounds:
+Train Accuracy: 98.92% 
+
+Test Accuracy: 99.13% 
+
+
+ | Global Training Round : 33 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0007013509748503566
+ benign empirical indicaor res is  0.0007013509748503566
+ benign loss is  0.02862864110092663
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 33 global rounds:
+Train Accuracy: 98.92% 
+
+Test Accuracy: 99.14% 
+
+
+ | Global Training Round : 34 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0006621390348300338
+ benign empirical indicaor res is  0.0006621390348300338
+ benign loss is  0.030063603353674376
+current aggregation staleness i is  2
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 34 global rounds:
+Train Accuracy: 98.93% 
+
+Test Accuracy: 99.14% 
+
+
+ | Global Training Round : 35 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0006882287561893463
+ benign empirical indicaor res is  0.0006882287561893463
+ benign loss is  0.04425949476870684
+current aggregation staleness i is  1
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 35 global rounds:
+Train Accuracy: 98.92% 
+
+Test Accuracy: 99.15% 
+
+
+ | Global Training Round : 36 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0005653726402670145
+ benign empirical indicaor res is  0.0005653726402670145
+ benign loss is  0.03355352589460381
+current aggregation staleness i is  4
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  3
+ 
+Avg Training Stats after 36 global rounds:
+Train Accuracy: 98.92% 
+
+Test Accuracy: 99.14% 
+
+
+ | Global Training Round : 37 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.000832688994705677
+ benign empirical indicaor res is  0.000832688994705677
+ benign loss is  0.025818306806429877
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  2
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 37 global rounds:
+Train Accuracy: 98.95% 
+
+Test Accuracy: 99.14% 
+
+
+ | Global Training Round : 38 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0005606022314168513
+ benign empirical indicaor res is  0.0005606022314168513
+ benign loss is  0.025293383969351692
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 38 global rounds:
+Train Accuracy: 98.95% 
+
+Test Accuracy: 99.13% 
+
+
+ | Global Training Round : 39 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0006485138437710702
+ benign empirical indicaor res is  0.0006485138437710702
+ benign loss is  0.02707263587427932
+current aggregation staleness i is  1
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 39 global rounds:
+Train Accuracy: 98.95% 
+
+Test Accuracy: 99.12% 
+
+
+ | Global Training Round : 40 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0005929260514676571
+ benign empirical indicaor res is  0.0005929260514676571
+ benign loss is  0.02855644040659842
+current aggregation staleness i is  2
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  3
+ 
+Avg Training Stats after 40 global rounds:
+Train Accuracy: 98.97% 
+
+Test Accuracy: 99.13% 
+
+
+ | Global Training Round : 41 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+poisoned accuracy threshold is  0.8413000001570009
+distance ratio is <class 'float'>
+len of model dicts is  10
+compute distance is  tensor(13.0053, device='cuda:2')
+compute distance is  tensor(24.6279, device='cuda:2')
+compute distance is  tensor(50.8860, device='cuda:2')
+compute distance is  tensor(83.2140, device='cuda:2')
+compute distance is  tensor(29.5423, device='cuda:2')
+compute distance is  tensor(71.5947, device='cuda:2')
+compute distance is  tensor(35.9444, device='cuda:2')
+compute distance is  tensor(38.2341, device='cuda:2')
+compute distance is  tensor(47.0484, device='cuda:2')
+compute distance is  tensor(30.7017, device='cuda:2')
+calculated distance threshold is  tensor(82.5119, device='cuda:2')
+pinned_accuracy threshold is  0.8413000001570009
+====================
+iteration is  0
+round is  0
+accuracy is  0.8436000001563237
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.9074666668229878
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8736833334896557
+====================
+====================
+iteration is  1
+round is  0
+accuracy is  0.831900000156324
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.733100000156329
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  2
+accuracy is  0.8269333334896575
+====================
+====================
+iteration is  2
+round is  0
+accuracy is  0.7730500001563269
+====================
+====================
+iteration is  2
+round is  1
+accuracy is  0.77473333348966
+====================
+________________________________
+test distance is  tensor(4711.3770, device='cuda:2')
+test acc is  0.733100000156329
+test loss is 1.5178295727541198
+test entropy is  0.1868140557761004
+________________________________
+diff is  tensor(49.9783, device='cuda:2', dtype=torch.float64)
+diff is  tensor(0.3924, device='cuda:2', dtype=torch.float64)
+diff is  tensor(629.7672, device='cuda:2', dtype=torch.float64)
+diff is  tensor(0.5531, device='cuda:2', dtype=torch.float64)
+diff is  tensor(4005.9539, device='cuda:2', dtype=torch.float64)
+diff is  tensor(2.2395, device='cuda:2', dtype=torch.float64)
+diff is  tensor(22.2966, device='cuda:2', dtype=torch.float64)
+diff is  tensor(0.1962, device='cuda:2', dtype=torch.float64)
+sum_s is tensor(4711.3772, device='cuda:2', dtype=torch.float64)
+item is tensor(0.1962, device='cuda:2', dtype=torch.float64)
+item is tensor(0.3924, device='cuda:2', dtype=torch.float64)
+item is tensor(0.5531, device='cuda:2', dtype=torch.float64)
+item is tensor(2.2395, device='cuda:2', dtype=torch.float64)
+item is tensor(22.2966, device='cuda:2', dtype=torch.float64)
+item is tensor(49.9783, device='cuda:2', dtype=torch.float64)
+item is tensor(629.7672, device='cuda:2', dtype=torch.float64)

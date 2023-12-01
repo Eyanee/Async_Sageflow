@@ -1,0 +1,4431 @@
+
+Experimental details:
+    Dataset     : mnist
+    Model     : cnn
+    detailed Model     : vgg
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 50
+
+    Federated parameters:
+    Non-IID with common data
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.2
+     Model attack is done!
+CNNMnist(
+  (conv1): Conv2d(1, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+  (conv2): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+  (fc1): Linear(in_features=3136, out_features=1024, bias=True)
+  (fc2): Linear(in_features=1024, out_features=10, bias=True)
+)
+attack user num is  10
+ t is  8
+attack_user is [40 41 42 43 44 45 46 47 48 49]
+
+ | Global Training Round : 1 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  2
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+current aggregation staleness i is  4
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 1 global rounds:
+Train Accuracy: 23.20% 
+
+Test Accuracy: 27.41% 
+
+
+ | Global Training Round : 2 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 2 global rounds:
+Train Accuracy: 72.36% 
+
+Test Accuracy: 72.32% 
+
+
+ | Global Training Round : 3 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 3 global rounds:
+Train Accuracy: 86.01% 
+
+Test Accuracy: 86.64% 
+
+
+ | Global Training Round : 4 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  2
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 4 global rounds:
+Train Accuracy: 86.42% 
+
+Test Accuracy: 86.40% 
+
+
+ | Global Training Round : 5 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 5 global rounds:
+Train Accuracy: 90.62% 
+
+Test Accuracy: 90.59% 
+
+
+ | Global Training Round : 6 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  4
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 6 global rounds:
+Train Accuracy: 93.36% 
+
+Test Accuracy: 93.12% 
+
+
+ | Global Training Round : 7 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  2
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 7 global rounds:
+Train Accuracy: 91.92% 
+
+Test Accuracy: 91.98% 
+
+
+ | Global Training Round : 8 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 8 global rounds:
+Train Accuracy: 94.32% 
+
+Test Accuracy: 94.52% 
+
+
+ | Global Training Round : 9 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 9 global rounds:
+Train Accuracy: 95.16% 
+
+Test Accuracy: 95.34% 
+
+
+ | Global Training Round : 10 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  2
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 10 global rounds:
+Train Accuracy: 96.03% 
+
+Test Accuracy: 95.54% 
+
+
+ | Global Training Round : 11 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  4
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 11 global rounds:
+Train Accuracy: 95.27% 
+
+Test Accuracy: 95.48% 
+
+
+ | Global Training Round : 12 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+num2 of attacker is  0
+the length of epoch_weights is  3
+ 
+Avg Training Stats after 12 global rounds:
+Train Accuracy: 96.08% 
+
+Test Accuracy: 96.20% 
+
+
+ | Global Training Round : 13 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  2
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 13 global rounds:
+Train Accuracy: 96.48% 
+
+Test Accuracy: 96.32% 
+
+
+ | Global Training Round : 14 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 14 global rounds:
+Train Accuracy: 96.69% 
+
+Test Accuracy: 96.39% 
+
+
+ | Global Training Round : 15 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 15 global rounds:
+Train Accuracy: 96.53% 
+
+Test Accuracy: 96.46% 
+
+
+ | Global Training Round : 16 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  2
+num1 of attacker is  0
+current aggregation staleness i is  4
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 16 global rounds:
+Train Accuracy: 96.69% 
+
+Test Accuracy: 96.57% 
+
+
+ | Global Training Round : 17 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 17 global rounds:
+Train Accuracy: 96.74% 
+
+Test Accuracy: 96.56% 
+
+
+ | Global Training Round : 18 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 18 global rounds:
+Train Accuracy: 97.02% 
+
+Test Accuracy: 96.78% 
+
+
+ | Global Training Round : 19 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  2
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 19 global rounds:
+Train Accuracy: 96.80% 
+
+Test Accuracy: 96.79% 
+
+
+ | Global Training Round : 20 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+num2 of attacker is  0
+the length of epoch_weights is  3
+ 
+Avg Training Stats after 20 global rounds:
+Train Accuracy: 97.01% 
+
+Test Accuracy: 96.76% 
+
+
+ | Global Training Round : 21 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+current aggregation staleness i is  4
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 21 global rounds:
+Train Accuracy: 97.04% 
+
+Test Accuracy: 96.92% 
+
+
+ | Global Training Round : 22 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  2
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 22 global rounds:
+Train Accuracy: 97.18% 
+
+Test Accuracy: 96.90% 
+
+
+ | Global Training Round : 23 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 23 global rounds:
+Train Accuracy: 97.13% 
+
+Test Accuracy: 96.94% 
+
+
+ | Global Training Round : 24 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+num2 of attacker is  0
+the length of epoch_weights is  3
+ 
+Avg Training Stats after 24 global rounds:
+Train Accuracy: 97.19% 
+
+Test Accuracy: 97.05% 
+
+
+ | Global Training Round : 25 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  2
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 25 global rounds:
+Train Accuracy: 97.07% 
+
+Test Accuracy: 96.91% 
+
+
+ | Global Training Round : 26 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  4
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 26 global rounds:
+Train Accuracy: 97.21% 
+
+Test Accuracy: 97.04% 
+
+
+ | Global Training Round : 27 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 27 global rounds:
+Train Accuracy: 97.05% 
+
+Test Accuracy: 97.03% 
+
+
+ | Global Training Round : 28 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  2
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 28 global rounds:
+Train Accuracy: 97.31% 
+
+Test Accuracy: 97.18% 
+
+
+ | Global Training Round : 29 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current aggregation staleness i is  1
+num1 of attacker is  0
+current aggregation staleness i is  3
+num1 of attacker is  0
+num2 of attacker is  0
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 29 global rounds:
+Train Accuracy: 97.20% 
+
+Test Accuracy: 97.10% 
+
+
+ | Global Training Round : 30 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+num2 of attacker is  0
+the length of epoch_weights is  3
+ 
+Avg Training Stats after 30 global rounds:
+Train Accuracy: 97.36% 
+
+Test Accuracy: 97.20% 
+
+
+ | Global Training Round : 31 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+poisoned accuracy threshold is  0.8720000001570009
+distance ratio is <class 'float'>
+len of model dicts is  10
+compute distance is  tensor(22.7319, device='cuda:0')
+compute distance is  tensor(34.6641, device='cuda:0')
+compute distance is  tensor(56.7076, device='cuda:0')
+compute distance is  tensor(43.5364, device='cuda:0')
+compute distance is  tensor(42.4155, device='cuda:0')
+compute distance is  tensor(25.9924, device='cuda:0')
+compute distance is  tensor(53.5128, device='cuda:0')
+compute distance is  tensor(48.4545, device='cuda:0')
+compute distance is  tensor(61.7328, device='cuda:0')
+compute distance is  tensor(43.3543, device='cuda:0')
+calculated distance threshold is  tensor(53.9326, device='cuda:0')
+pinned_accuracy threshold is  0.8720000001570009
+====================
+iteration is  0
+round is  0
+accuracy is  0.9708166668229856
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.970300000156319
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.9698333334896524
+====================
+====================
+iteration is  1
+round is  0
+accuracy is  0.9673500001563191
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.9709000001563189
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.970150000156319
+====================
+====================
+iteration is  2
+round is  0
+accuracy is  0.9681833334896525
+====================
+====================
+iteration is  2
+round is  1
+accuracy is  0.9684833334896524
+====================
+====================
+iteration is  2
+round is  2
+accuracy is  0.9693833334896524
+====================
+====================
+iteration is  3
+round is  0
+accuracy is  0.970650000156319
+====================
+====================
+iteration is  3
+round is  1
+accuracy is  0.9694500001563191
+====================
+====================
+iteration is  3
+round is  2
+accuracy is  0.9674166668229858
+====================
+====================
+iteration is  4
+round is  0
+accuracy is  0.9673000001563191
+====================
+====================
+iteration is  4
+round is  1
+accuracy is  0.9684000001563191
+====================
+====================
+iteration is  4
+round is  2
+accuracy is  0.9667666668229857
+====================
+====================
+iteration is  5
+round is  0
+accuracy is  0.9697000001563191
+====================
+====================
+iteration is  5
+round is  1
+accuracy is  0.9675666668229858
+====================
+====================
+iteration is  5
+round is  2
+accuracy is  0.9698500001563191
+====================
+====================
+iteration is  6
+round is  0
+accuracy is  0.9684500001563191
+====================
+====================
+iteration is  6
+round is  1
+accuracy is  0.9678666668229857
+====================
+====================
+iteration is  6
+round is  2
+accuracy is  0.9666166668229857
+====================
+====================
+iteration is  7
+round is  0
+accuracy is  0.9649166668229859
+====================
+====================
+iteration is  7
+round is  1
+accuracy is  0.9682500001563191
+====================
+====================
+iteration is  7
+round is  2
+accuracy is  0.9654500001563192
+====================
+====================
+iteration is  8
+round is  0
+accuracy is  0.9697166668229857
+====================
+====================
+iteration is  8
+round is  1
+accuracy is  0.9662166668229858
+====================
+====================
+iteration is  8
+round is  2
+accuracy is  0.9664833334896524
+====================
+====================
+iteration is  9
+round is  0
+accuracy is  0.9668500001563191
+====================
+====================
+iteration is  9
+round is  1
+accuracy is  0.9682166668229858
+====================
+====================
+iteration is  9
+round is  2
+accuracy is  0.9647000001563192
+====================
+====================
+iteration is  10
+round is  0
+accuracy is  0.9631833334896526
+====================
+====================
+iteration is  10
+round is  1
+accuracy is  0.9609000001563194
+====================
+====================
+iteration is  10
+round is  2
+accuracy is  0.950983333489653
+====================
+====================
+iteration is  11
+round is  0
+accuracy is  0.9635000001563192
+====================
+====================
+iteration is  11
+round is  1
+accuracy is  0.9680833334896525
+====================
+====================
+iteration is  11
+round is  2
+accuracy is  0.959466666822986
+====================
+====================
+iteration is  12
+round is  0
+accuracy is  0.9636500001563192
+====================
+====================
+iteration is  12
+round is  1
+accuracy is  0.9552166668229861
+====================
+====================
+iteration is  12
+round is  2
+accuracy is  0.9599000001563194
+====================
+====================
+iteration is  13
+round is  0
+accuracy is  0.9485833334896531
+====================
+====================
+iteration is  13
+round is  1
+accuracy is  0.9566166668229862
+====================
+====================
+iteration is  13
+round is  2
+accuracy is  0.9210500001563207
+====================
+====================
+iteration is  14
+round is  0
+accuracy is  0.9589333334896527
+====================
+====================
+iteration is  14
+round is  1
+accuracy is  0.9575000001563194
+====================
+====================
+iteration is  14
+round is  2
+accuracy is  0.9479166668229865
+====================
+====================
+iteration is  15
+round is  0
+accuracy is  0.9405333334896533
+====================
+====================
+iteration is  15
+round is  1
+accuracy is  0.9228666668229872
+====================
+====================
+iteration is  15
+round is  2
+accuracy is  0.9472333334896531
+====================
+====================
+iteration is  16
+round is  0
+accuracy is  0.9107333334896544
+====================
+====================
+iteration is  16
+round is  1
+accuracy is  0.9503000001563197
+====================
+====================
+iteration is  16
+round is  2
+accuracy is  0.9294333334896536
+====================
+====================
+iteration is  17
+round is  0
+accuracy is  0.9429500001563199
+====================
+====================
+iteration is  17
+round is  1
+accuracy is  0.8791500001563222
+====================
+====================
+iteration is  17
+round is  2
+accuracy is  0.8983333334896547
+====================
+====================
+iteration is  18
+round is  0
+accuracy is  0.8777666668229889
+====================
+====================
+iteration is  18
+round is  1
+accuracy is  0.8764333334896556
+====================
+====================
+iteration is  18
+round is  2
+accuracy is  0.8283000001563242
+====================
+succ_min + 1
+====================
+iteration is  19
+round is  0
+accuracy is  0.8468500001563235
+====================
+====================
+iteration is  19
+round is  1
+accuracy is  0.7003000001563308
+====================
+succ_min + 1
+====================
+iteration is  19
+round is  2
+accuracy is  0.8372833334896571
+====================
+====================
+iteration is  20
+round is  0
+accuracy is  0.7673000001563272
+====================
+________________________________
+test distance is  tensor(2621.7991, device='cuda:0')
+test acc is  0.7003000001563308
+test entropy is  0.54009820161852
+________________________________
+diff is  tensor(28.3516, device='cuda:0', dtype=torch.float64)
+diff is  tensor(0.2091, device='cuda:0', dtype=torch.float64)
+diff is  tensor(351.8175, device='cuda:0', dtype=torch.float64)
+diff is  tensor(0.3234, device='cuda:0', dtype=torch.float64)
+diff is  tensor(2227.3027, device='cuda:0', dtype=torch.float64)
+diff is  tensor(1.2437, device='cuda:0', dtype=torch.float64)
+diff is  tensor(12.4272, device='cuda:0', dtype=torch.float64)
+diff is  tensor(0.1240, device='cuda:0', dtype=torch.float64)
+threshold is  tensor(2567.8665, device='cuda:0')
+sum is tensor(0.1240, device='cuda:0', dtype=torch.float64)
+sum is tensor(0.3331, device='cuda:0', dtype=torch.float64)
+sum is tensor(0.6565, device='cuda:0', dtype=torch.float64)
+sum is tensor(1.9002, device='cuda:0', dtype=torch.float64)
+sum is tensor(14.3274, device='cuda:0', dtype=torch.float64)
+sum is tensor(42.6790, device='cuda:0', dtype=torch.float64)
+sum is tensor(394.4964, device='cuda:0', dtype=torch.float64)
+sum is tensor(2621.7991, device='cuda:0', dtype=torch.float64)
+ratio is tensor(0.0242, device='cuda:0', dtype=torch.float64)
+threshold is tensor(2227.3027, device='cuda:0', dtype=torch.float64)
+cal diff is tensor(28.3516, device='cuda:0')
+discard
+cal diff is tensor(0.2091, device='cuda:0')
+discard
+cal diff is tensor(351.8175, device='cuda:0')
+discard
+cal diff is tensor(0.3234, device='cuda:0')
+discard
+cal diff is tensor(2227.3027, device='cuda:0')
+clipping
+cal diff is tensor(1.2437, device='cuda:0')
+discard
+cal diff is tensor(12.4272, device='cuda:0')
+discard
+cal diff is tensor(0.1240, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9429, device='cuda:0')
+test acc is  0.9710666668229856
+test entropy is  0.11862804321870049
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9327, device='cuda:0', dtype=torch.float64)
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0103, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+sum is tensor(53.9429, device='cuda:0')
+ratio is tensor(1.0000, device='cuda:0', dtype=torch.float64)
+threshold is tensor(53.9327, device='cuda:0', dtype=torch.float64)
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+discard
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9327, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9428, device='cuda:0')
+test acc is  0.9710666668229856
+test entropy is  0.11862802168906433
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9326, device='cuda:0', dtype=torch.float64)
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0102, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(2.3461e-05, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9326, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(0.0676, device='cuda:0')
+test acc is  0.9710666668229856
+test entropy is  0.11825926003775108
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.11825926003775108
+avg test loss is  0.09290813714780136
+avg accuracy is  0.9710666668229856
+compute_distance is  tensor(0.0676, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5188479770475359
+avg test loss is  0.8756468313843456
+avg accuracy is  0.7243000001563293
+compute_distance is  tensor(94.7599, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(94.7599, device='cuda:0')
+test acc is  0.7243000001563293
+test entropy is  0.5188479770475359
+________________________________
+diff is  tensor(0.6228, device='cuda:0')
+diff is  tensor(0.0055, device='cuda:0')
+diff is  tensor(10.8614, device='cuda:0')
+diff is  tensor(0.0128, device='cuda:0')
+diff is  tensor(82.8776, device='cuda:0')
+diff is  tensor(0.0326, device='cuda:0')
+diff is  tensor(0.3460, device='cuda:0')
+diff is  tensor(0.0023, device='cuda:0')
+threshold is  tensor(40.8273, device='cuda:0')
+sum is tensor(0.0023, device='cuda:0')
+sum is tensor(0.0077, device='cuda:0')
+sum is tensor(0.0205, device='cuda:0')
+sum is tensor(0.0531, device='cuda:0')
+sum is tensor(0.3991, device='cuda:0')
+sum is tensor(1.0220, device='cuda:0')
+sum is tensor(11.8833, device='cuda:0')
+sum is tensor(94.7609, device='cuda:0')
+ratio is tensor(0.6508, device='cuda:0')
+threshold is tensor(82.8776, device='cuda:0')
+cal diff is tensor(0.6228, device='cuda:0')
+discard
+cal diff is tensor(0.0055, device='cuda:0')
+discard
+cal diff is tensor(10.8614, device='cuda:0')
+discard
+cal diff is tensor(0.0128, device='cuda:0')
+discard
+cal diff is tensor(82.8776, device='cuda:0')
+clipping
+cal diff is tensor(0.0326, device='cuda:0')
+discard
+cal diff is tensor(0.3460, device='cuda:0')
+discard
+cal diff is tensor(0.0023, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9412, device='cuda:0')
+test acc is  0.9253833334896538
+test entropy is  0.24109324401439125
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9342, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0086, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.1737, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9342, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(9.3752, device='cuda:0')
+test acc is  0.9697833334896524
+test entropy is  0.12677375553870823
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.12677375553870823
+avg test loss is  0.09755593651770623
+avg accuracy is  0.9697833334896524
+compute_distance is  tensor(9.3752, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5209599684105753
+avg test loss is  0.8805120608000867
+avg accuracy is  0.7224666668229961
+compute_distance is  tensor(101.2590, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(101.2590, device='cuda:0')
+test acc is  0.7224666668229961
+test entropy is  0.5209599684105753
+________________________________
+diff is  tensor(0.5786, device='cuda:0')
+diff is  tensor(0.0049, device='cuda:0')
+diff is  tensor(11.0467, device='cuda:0')
+diff is  tensor(0.0131, device='cuda:0')
+diff is  tensor(89.2693, device='cuda:0')
+diff is  tensor(0.0290, device='cuda:0')
+diff is  tensor(0.3143, device='cuda:0')
+diff is  tensor(0.0020, device='cuda:0')
+threshold is  tensor(47.3265, device='cuda:0')
+sum is tensor(0.0020, device='cuda:0')
+sum is tensor(0.0069, device='cuda:0')
+sum is tensor(0.0200, device='cuda:0')
+sum is tensor(0.0490, device='cuda:0')
+sum is tensor(0.3633, device='cuda:0')
+sum is tensor(0.9420, device='cuda:0')
+sum is tensor(11.9887, device='cuda:0')
+sum is tensor(101.2580, device='cuda:0')
+ratio is tensor(0.6041, device='cuda:0')
+threshold is tensor(89.2693, device='cuda:0')
+cal diff is tensor(0.5786, device='cuda:0')
+discard
+cal diff is tensor(0.0049, device='cuda:0')
+discard
+cal diff is tensor(11.0467, device='cuda:0')
+discard
+cal diff is tensor(0.0131, device='cuda:0')
+discard
+cal diff is tensor(89.2693, device='cuda:0')
+clipping
+cal diff is tensor(0.0290, device='cuda:0')
+discard
+cal diff is tensor(0.3143, device='cuda:0')
+discard
+cal diff is tensor(0.0020, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9396, device='cuda:0')
+test acc is  0.9341666668229869
+test entropy is  0.22588350505494614
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9321, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0070, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.3511, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9321, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(18.9444, device='cuda:0')
+test acc is  0.9666333334896524
+test entropy is  0.1379986238012563
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.1379986238012563
+avg test loss is  0.10521957684637927
+avg accuracy is  0.9666333334896524
+compute_distance is  tensor(18.9444, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5226652434131484
+avg test loss is  0.8836220080600873
+avg accuracy is  0.7214500001563295
+compute_distance is  tensor(108.0008, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(108.0008, device='cuda:0')
+test acc is  0.7214500001563295
+test entropy is  0.5226652434131484
+________________________________
+diff is  tensor(0.5413, device='cuda:0')
+diff is  tensor(0.0045, device='cuda:0')
+diff is  tensor(11.1371, device='cuda:0')
+diff is  tensor(0.0130, device='cuda:0')
+diff is  tensor(95.9858, device='cuda:0')
+diff is  tensor(0.0260, device='cuda:0')
+diff is  tensor(0.2883, device='cuda:0')
+diff is  tensor(0.0018, device='cuda:0')
+threshold is  tensor(54.0682, device='cuda:0')
+sum is tensor(0.0018, device='cuda:0')
+sum is tensor(0.0063, device='cuda:0')
+sum is tensor(0.0193, device='cuda:0')
+sum is tensor(0.0453, device='cuda:0')
+sum is tensor(0.3337, device='cuda:0')
+sum is tensor(0.8749, device='cuda:0')
+sum is tensor(12.0121, device='cuda:0')
+sum is tensor(107.9978, device='cuda:0')
+ratio is tensor(0.5619, device='cuda:0')
+threshold is tensor(95.9858, device='cuda:0')
+cal diff is tensor(0.5413, device='cuda:0')
+discard
+cal diff is tensor(0.0045, device='cuda:0')
+discard
+cal diff is tensor(11.1371, device='cuda:0')
+discard
+cal diff is tensor(0.0130, device='cuda:0')
+discard
+cal diff is tensor(95.9858, device='cuda:0')
+clipping
+cal diff is tensor(0.0260, device='cuda:0')
+discard
+cal diff is tensor(0.2883, device='cuda:0')
+discard
+cal diff is tensor(0.0018, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9382, device='cuda:0')
+test acc is  0.94040000015632
+test entropy is  0.21379147869532805
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9302, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0056, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.5100, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9302, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(27.5130, device='cuda:0')
+test acc is  0.9635833334896525
+test entropy is  0.14933835353646704
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.14933835353646704
+avg test loss is  0.11361765881269567
+avg accuracy is  0.9635833334896525
+compute_distance is  tensor(27.5130, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5239655706864684
+avg test loss is  0.885214357519709
+avg accuracy is  0.7202166668229962
+compute_distance is  tensor(114.2353, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(114.2353, device='cuda:0')
+test acc is  0.7202166668229962
+test entropy is  0.5239655706864684
+________________________________
+diff is  tensor(0.5128, device='cuda:0')
+diff is  tensor(0.0042, device='cuda:0')
+diff is  tensor(11.1779, device='cuda:0')
+diff is  tensor(0.0129, device='cuda:0')
+diff is  tensor(102.2286, device='cuda:0')
+diff is  tensor(0.0239, device='cuda:0')
+diff is  tensor(0.2689, device='cuda:0')
+diff is  tensor(0.0016, device='cuda:0')
+threshold is  tensor(60.3027, device='cuda:0')
+sum is tensor(0.0016, device='cuda:0')
+sum is tensor(0.0058, device='cuda:0')
+sum is tensor(0.0188, device='cuda:0')
+sum is tensor(0.0427, device='cuda:0')
+sum is tensor(0.3116, device='cuda:0')
+sum is tensor(0.8244, device='cuda:0')
+sum is tensor(12.0023, device='cuda:0')
+sum is tensor(114.2308, device='cuda:0')
+ratio is tensor(0.5275, device='cuda:0')
+threshold is tensor(102.2286, device='cuda:0')
+cal diff is tensor(0.5128, device='cuda:0')
+discard
+cal diff is tensor(0.0042, device='cuda:0')
+discard
+cal diff is tensor(11.1779, device='cuda:0')
+discard
+cal diff is tensor(0.0129, device='cuda:0')
+discard
+cal diff is tensor(102.2286, device='cuda:0')
+clipping
+cal diff is tensor(0.0239, device='cuda:0')
+discard
+cal diff is tensor(0.2689, device='cuda:0')
+discard
+cal diff is tensor(0.0016, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9371, device='cuda:0')
+test acc is  0.9451166668229865
+test entropy is  0.20512552314729832
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9286, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0045, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.6339, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9286, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(34.1948, device='cuda:0')
+test acc is  0.961166666822986
+test entropy is  0.15844293967731346
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.15844293967731346
+avg test loss is  0.12051149095589322
+avg accuracy is  0.961166666822986
+compute_distance is  tensor(34.1948, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.524883892585728
+avg test loss is  0.8859420125481925
+avg accuracy is  0.7199000001563296
+compute_distance is  tensor(119.2696, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(119.2696, device='cuda:0')
+test acc is  0.7199000001563296
+test entropy is  0.524883892585728
+________________________________
+diff is  tensor(0.4948, device='cuda:0')
+diff is  tensor(0.0042, device='cuda:0')
+diff is  tensor(11.1783, device='cuda:0')
+diff is  tensor(0.0128, device='cuda:0')
+diff is  tensor(107.2938, device='cuda:0')
+diff is  tensor(0.0225, device='cuda:0')
+diff is  tensor(0.2561, device='cuda:0')
+diff is  tensor(0.0015, device='cuda:0')
+threshold is  tensor(65.3370, device='cuda:0')
+sum is tensor(0.0015, device='cuda:0')
+sum is tensor(0.0057, device='cuda:0')
+sum is tensor(0.0185, device='cuda:0')
+sum is tensor(0.0410, device='cuda:0')
+sum is tensor(0.2971, device='cuda:0')
+sum is tensor(0.7919, device='cuda:0')
+sum is tensor(11.9702, device='cuda:0')
+sum is tensor(119.2640, device='cuda:0')
+ratio is tensor(0.5026, device='cuda:0')
+threshold is tensor(107.2938, device='cuda:0')
+cal diff is tensor(0.4948, device='cuda:0')
+discard
+cal diff is tensor(0.0042, device='cuda:0')
+discard
+cal diff is tensor(11.1783, device='cuda:0')
+discard
+cal diff is tensor(0.0128, device='cuda:0')
+discard
+cal diff is tensor(107.2938, device='cuda:0')
+clipping
+cal diff is tensor(0.0225, device='cuda:0')
+discard
+cal diff is tensor(0.2561, device='cuda:0')
+discard
+cal diff is tensor(0.0015, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9362, device='cuda:0')
+test acc is  0.9476000001563197
+test entropy is  0.19926081122810652
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9274, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0037, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.7249, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9274, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(39.1037, device='cuda:0')
+test acc is  0.9595000001563193
+test entropy is  0.16509399279110085
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.16509399279110085
+avg test loss is  0.1256014986702406
+avg accuracy is  0.9595000001563193
+compute_distance is  tensor(39.1037, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5254870640443586
+avg test loss is  0.886350169269515
+avg accuracy is  0.7193500001563297
+compute_distance is  tensor(123.0024, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(123.0024, device='cuda:0')
+test acc is  0.7193500001563297
+test entropy is  0.5254870640443586
+________________________________
+diff is  tensor(0.4840, device='cuda:0')
+diff is  tensor(0.0042, device='cuda:0')
+diff is  tensor(11.1670, device='cuda:0')
+diff is  tensor(0.0128, device='cuda:0')
+diff is  tensor(111.0570, device='cuda:0')
+diff is  tensor(0.0216, device='cuda:0')
+diff is  tensor(0.2480, device='cuda:0')
+diff is  tensor(0.0015, device='cuda:0')
+threshold is  tensor(69.0698, device='cuda:0')
+sum is tensor(0.0015, device='cuda:0')
+sum is tensor(0.0057, device='cuda:0')
+sum is tensor(0.0184, device='cuda:0')
+sum is tensor(0.0401, device='cuda:0')
+sum is tensor(0.2880, device='cuda:0')
+sum is tensor(0.7720, device='cuda:0')
+sum is tensor(11.9390, device='cuda:0')
+sum is tensor(122.9960, device='cuda:0')
+ratio is tensor(0.4856, device='cuda:0')
+threshold is tensor(111.0570, device='cuda:0')
+cal diff is tensor(0.4840, device='cuda:0')
+discard
+cal diff is tensor(0.0042, device='cuda:0')
+discard
+cal diff is tensor(11.1670, device='cuda:0')
+discard
+cal diff is tensor(0.0128, device='cuda:0')
+discard
+cal diff is tensor(111.0570, device='cuda:0')
+clipping
+cal diff is tensor(0.0216, device='cuda:0')
+discard
+cal diff is tensor(0.2480, device='cuda:0')
+discard
+cal diff is tensor(0.0015, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9356, device='cuda:0')
+test acc is  0.949733333489653
+test entropy is  0.1953980726743939
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9265, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0030, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.7941, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9265, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(42.8307, device='cuda:0')
+test acc is  0.9580333334896528
+test entropy is  0.17024294147962954
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.17024294147962954
+avg test loss is  0.12960999190453876
+avg accuracy is  0.9580333334896528
+compute_distance is  tensor(42.8307, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5259268256519903
+avg test loss is  0.8868680567121201
+avg accuracy is  0.7189666668229964
+compute_distance is  tensor(125.8697, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(125.8697, device='cuda:0')
+test acc is  0.7189666668229964
+test entropy is  0.5259268256519903
+________________________________
+diff is  tensor(0.4772, device='cuda:0')
+diff is  tensor(0.0042, device='cuda:0')
+diff is  tensor(11.1547, device='cuda:0')
+diff is  tensor(0.0127, device='cuda:0')
+diff is  tensor(113.9492, device='cuda:0')
+diff is  tensor(0.0210, device='cuda:0')
+diff is  tensor(0.2422, device='cuda:0')
+diff is  tensor(0.0014, device='cuda:0')
+threshold is  tensor(71.9371, device='cuda:0')
+sum is tensor(0.0014, device='cuda:0')
+sum is tensor(0.0057, device='cuda:0')
+sum is tensor(0.0184, device='cuda:0')
+sum is tensor(0.0394, device='cuda:0')
+sum is tensor(0.2816, device='cuda:0')
+sum is tensor(0.7588, device='cuda:0')
+sum is tensor(11.9135, device='cuda:0')
+sum is tensor(125.8627, device='cuda:0')
+ratio is tensor(0.4732, device='cuda:0')
+threshold is tensor(113.9492, device='cuda:0')
+cal diff is tensor(0.4772, device='cuda:0')
+discard
+cal diff is tensor(0.0042, device='cuda:0')
+discard
+cal diff is tensor(11.1547, device='cuda:0')
+discard
+cal diff is tensor(0.0127, device='cuda:0')
+discard
+cal diff is tensor(113.9492, device='cuda:0')
+clipping
+cal diff is tensor(0.0210, device='cuda:0')
+discard
+cal diff is tensor(0.2422, device='cuda:0')
+discard
+cal diff is tensor(0.0014, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9352, device='cuda:0')
+test acc is  0.9508000001563197
+test entropy is  0.19268204131995692
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9258, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0026, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.8409, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9258, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(45.3531, device='cuda:0')
+test acc is  0.9572500001563194
+test entropy is  0.17353823585217315
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.17353823585217315
+avg test loss is  0.13215277929986907
+avg accuracy is  0.9572500001563194
+compute_distance is  tensor(45.3531, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5261772098635306
+avg test loss is  0.886884662197597
+avg accuracy is  0.7188833334896629
+compute_distance is  tensor(127.8671, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(127.8671, device='cuda:0')
+test acc is  0.7188833334896629
+test entropy is  0.5261772098635306
+________________________________
+diff is  tensor(0.4730, device='cuda:0')
+diff is  tensor(0.0043, device='cuda:0')
+diff is  tensor(11.1435, device='cuda:0')
+diff is  tensor(0.0127, device='cuda:0')
+diff is  tensor(115.9656, device='cuda:0')
+diff is  tensor(0.0206, device='cuda:0')
+diff is  tensor(0.2385, device='cuda:0')
+diff is  tensor(0.0014, device='cuda:0')
+threshold is  tensor(73.9345, device='cuda:0')
+sum is tensor(0.0014, device='cuda:0')
+sum is tensor(0.0057, device='cuda:0')
+sum is tensor(0.0184, device='cuda:0')
+sum is tensor(0.0390, device='cuda:0')
+sum is tensor(0.2775, device='cuda:0')
+sum is tensor(0.7505, device='cuda:0')
+sum is tensor(11.8940, device='cuda:0')
+sum is tensor(127.8596, device='cuda:0')
+ratio is tensor(0.4650, device='cuda:0')
+threshold is tensor(115.9656, device='cuda:0')
+cal diff is tensor(0.4730, device='cuda:0')
+discard
+cal diff is tensor(0.0043, device='cuda:0')
+discard
+cal diff is tensor(11.1435, device='cuda:0')
+discard
+cal diff is tensor(0.0127, device='cuda:0')
+discard
+cal diff is tensor(115.9656, device='cuda:0')
+clipping
+cal diff is tensor(0.0206, device='cuda:0')
+discard
+cal diff is tensor(0.2385, device='cuda:0')
+discard
+cal diff is tensor(0.0014, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9349, device='cuda:0')
+test acc is  0.9514166668229862
+test entropy is  0.19084996039043867
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9253, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0023, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.8741, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9253, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(47.1484, device='cuda:0')
+test acc is  0.9566833334896528
+test entropy is  0.17587041391778602
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.17587041391778602
+avg test loss is  0.1339771031354393
+avg accuracy is  0.9566833334896528
+compute_distance is  tensor(47.1484, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5263673976413222
+avg test loss is  0.8870977267527631
+avg accuracy is  0.7186500001563296
+compute_distance is  tensor(129.2576, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(129.2576, device='cuda:0')
+test acc is  0.7186500001563296
+test entropy is  0.5263673976413222
+________________________________
+diff is  tensor(0.4707, device='cuda:0')
+diff is  tensor(0.0043, device='cuda:0')
+diff is  tensor(11.1271, device='cuda:0')
+diff is  tensor(0.0127, device='cuda:0')
+diff is  tensor(117.3773, device='cuda:0')
+diff is  tensor(0.0204, device='cuda:0')
+diff is  tensor(0.2359, device='cuda:0')
+diff is  tensor(0.0014, device='cuda:0')
+threshold is  tensor(75.3250, device='cuda:0')
+sum is tensor(0.0014, device='cuda:0')
+sum is tensor(0.0057, device='cuda:0')
+sum is tensor(0.0184, device='cuda:0')
+sum is tensor(0.0388, device='cuda:0')
+sum is tensor(0.2746, device='cuda:0')
+sum is tensor(0.7454, device='cuda:0')
+sum is tensor(11.8725, device='cuda:0')
+sum is tensor(129.2498, device='cuda:0')
+ratio is tensor(0.4594, device='cuda:0')
+threshold is tensor(117.3773, device='cuda:0')
+cal diff is tensor(0.4707, device='cuda:0')
+discard
+cal diff is tensor(0.0043, device='cuda:0')
+discard
+cal diff is tensor(11.1271, device='cuda:0')
+discard
+cal diff is tensor(0.0127, device='cuda:0')
+discard
+cal diff is tensor(117.3773, device='cuda:0')
+clipping
+cal diff is tensor(0.0204, device='cuda:0')
+discard
+cal diff is tensor(0.2359, device='cuda:0')
+discard
+cal diff is tensor(0.0014, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9347, device='cuda:0')
+test acc is  0.9520000001563196
+test entropy is  0.18961258608299786
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9249, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0021, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.8994, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9249, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(48.5119, device='cuda:0')
+test acc is  0.9561666668229861
+test entropy is  0.1777128136273958
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.1777128136273958
+avg test loss is  0.1354540575887444
+avg accuracy is  0.9561666668229861
+compute_distance is  tensor(48.5119, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.52649192550162
+avg test loss is  0.8872586058210462
+avg accuracy is  0.7185000001563296
+compute_distance is  tensor(130.3085, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(130.3085, device='cuda:0')
+test acc is  0.7185000001563296
+test entropy is  0.52649192550162
+________________________________
+diff is  tensor(0.4688, device='cuda:0')
+diff is  tensor(0.0043, device='cuda:0')
+diff is  tensor(11.1080, device='cuda:0')
+diff is  tensor(0.0127, device='cuda:0')
+diff is  tensor(118.4512, device='cuda:0')
+diff is  tensor(0.0202, device='cuda:0')
+diff is  tensor(0.2339, device='cuda:0')
+diff is  tensor(0.0014, device='cuda:0')
+threshold is  tensor(76.3759, device='cuda:0')
+sum is tensor(0.0014, device='cuda:0')
+sum is tensor(0.0057, device='cuda:0')
+sum is tensor(0.0184, device='cuda:0')
+sum is tensor(0.0386, device='cuda:0')
+sum is tensor(0.2725, device='cuda:0')
+sum is tensor(0.7413, device='cuda:0')
+sum is tensor(11.8493, device='cuda:0')
+sum is tensor(130.3005, device='cuda:0')
+ratio is tensor(0.4552, device='cuda:0')
+threshold is tensor(118.4512, device='cuda:0')
+cal diff is tensor(0.4688, device='cuda:0')
+discard
+cal diff is tensor(0.0043, device='cuda:0')
+discard
+cal diff is tensor(11.1080, device='cuda:0')
+discard
+cal diff is tensor(0.0127, device='cuda:0')
+discard
+cal diff is tensor(118.4512, device='cuda:0')
+clipping
+cal diff is tensor(0.0202, device='cuda:0')
+discard
+cal diff is tensor(0.2339, device='cuda:0')
+discard
+cal diff is tensor(0.0014, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9345, device='cuda:0')
+test acc is  0.9523000001563195
+test entropy is  0.18870092530065635
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9247, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0019, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.9146, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9247, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(49.3299, device='cuda:0')
+test acc is  0.9559000001563195
+test entropy is  0.17866223233976344
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.17866223233976344
+avg test loss is  0.13618603554854133
+avg accuracy is  0.9559000001563195
+compute_distance is  tensor(49.3299, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5265721381028324
+avg test loss is  0.887365731094946
+avg accuracy is  0.7185000001563296
+compute_distance is  tensor(130.9907, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(130.9907, device='cuda:0')
+test acc is  0.7185000001563296
+test entropy is  0.5265721381028324
+________________________________
+diff is  tensor(0.4678, device='cuda:0')
+diff is  tensor(0.0043, device='cuda:0')
+diff is  tensor(11.1103, device='cuda:0')
+diff is  tensor(0.0126, device='cuda:0')
+diff is  tensor(119.1331, device='cuda:0')
+diff is  tensor(0.0201, device='cuda:0')
+diff is  tensor(0.2329, device='cuda:0')
+diff is  tensor(0.0014, device='cuda:0')
+threshold is  tensor(77.0582, device='cuda:0')
+sum is tensor(0.0014, device='cuda:0')
+sum is tensor(0.0057, device='cuda:0')
+sum is tensor(0.0183, device='cuda:0')
+sum is tensor(0.0384, device='cuda:0')
+sum is tensor(0.2713, device='cuda:0')
+sum is tensor(0.7391, device='cuda:0')
+sum is tensor(11.8495, device='cuda:0')
+sum is tensor(130.9825, device='cuda:0')
+ratio is tensor(0.4526, device='cuda:0')
+threshold is tensor(119.1331, device='cuda:0')
+cal diff is tensor(0.4678, device='cuda:0')
+discard
+cal diff is tensor(0.0043, device='cuda:0')
+discard
+cal diff is tensor(11.1103, device='cuda:0')
+discard
+cal diff is tensor(0.0126, device='cuda:0')
+discard
+cal diff is tensor(119.1331, device='cuda:0')
+clipping
+cal diff is tensor(0.0201, device='cuda:0')
+discard
+cal diff is tensor(0.2329, device='cuda:0')
+discard
+cal diff is tensor(0.0014, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9344, device='cuda:0')
+test acc is  0.9525500001563196
+test entropy is  0.18811045046935457
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9245, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0018, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.9281, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9245, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(50.0571, device='cuda:0')
+test acc is  0.9555833334896527
+test entropy is  0.17968060127469396
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.17968060127469396
+avg test loss is  0.1370286853559045
+avg accuracy is  0.9555833334896527
+compute_distance is  tensor(50.0571, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5266444764729502
+avg test loss is  0.887479559031885
+avg accuracy is  0.7184666668229963
+compute_distance is  tensor(131.5647, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(131.5647, device='cuda:0')
+test acc is  0.7184666668229963
+test entropy is  0.5266444764729502
+________________________________
+diff is  tensor(0.4670, device='cuda:0')
+diff is  tensor(0.0044, device='cuda:0')
+diff is  tensor(11.1057, device='cuda:0')
+diff is  tensor(0.0126, device='cuda:0')
+diff is  tensor(119.7135, device='cuda:0')
+diff is  tensor(0.0200, device='cuda:0')
+diff is  tensor(0.2319, device='cuda:0')
+diff is  tensor(0.0014, device='cuda:0')
+threshold is  tensor(77.6322, device='cuda:0')
+sum is tensor(0.0014, device='cuda:0')
+sum is tensor(0.0057, device='cuda:0')
+sum is tensor(0.0183, device='cuda:0')
+sum is tensor(0.0383, device='cuda:0')
+sum is tensor(0.2702, device='cuda:0')
+sum is tensor(0.7372, device='cuda:0')
+sum is tensor(11.8430, device='cuda:0')
+sum is tensor(131.5564, device='cuda:0')
+ratio is tensor(0.4504, device='cuda:0')
+threshold is tensor(119.7135, device='cuda:0')
+cal diff is tensor(0.4670, device='cuda:0')
+discard
+cal diff is tensor(0.0044, device='cuda:0')
+discard
+cal diff is tensor(11.1057, device='cuda:0')
+discard
+cal diff is tensor(0.0126, device='cuda:0')
+discard
+cal diff is tensor(119.7135, device='cuda:0')
+clipping
+cal diff is tensor(0.0200, device='cuda:0')
+discard
+cal diff is tensor(0.2319, device='cuda:0')
+discard
+cal diff is tensor(0.0014, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9343, device='cuda:0')
+test acc is  0.9528000001563196
+test entropy is  0.1876336474265498
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9244, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0018, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.9357, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9244, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(50.4661, device='cuda:0')
+test acc is  0.9554333334896528
+test entropy is  0.18011972737877863
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.18011972737877863
+avg test loss is  0.1373750154139486
+avg accuracy is  0.9554333334896528
+compute_distance is  tensor(50.4661, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5266511910187919
+avg test loss is  0.8874987737456365
+avg accuracy is  0.7183666668229963
+compute_distance is  tensor(131.8867, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(131.8867, device='cuda:0')
+test acc is  0.7183666668229963
+test entropy is  0.5266511910187919
+________________________________
+diff is  tensor(0.4666, device='cuda:0')
+diff is  tensor(0.0044, device='cuda:0')
+diff is  tensor(11.1002, device='cuda:0')
+diff is  tensor(0.0126, device='cuda:0')
+diff is  tensor(120.0418, device='cuda:0')
+diff is  tensor(0.0199, device='cuda:0')
+diff is  tensor(0.2314, device='cuda:0')
+diff is  tensor(0.0014, device='cuda:0')
+threshold is  tensor(77.9541, device='cuda:0')
+sum is tensor(0.0014, device='cuda:0')
+sum is tensor(0.0057, device='cuda:0')
+sum is tensor(0.0183, device='cuda:0')
+sum is tensor(0.0383, device='cuda:0')
+sum is tensor(0.2697, device='cuda:0')
+sum is tensor(0.7363, device='cuda:0')
+sum is tensor(11.8365, device='cuda:0')
+sum is tensor(131.8782, device='cuda:0')
+ratio is tensor(0.4492, device='cuda:0')
+threshold is tensor(120.0418, device='cuda:0')
+cal diff is tensor(0.4666, device='cuda:0')
+discard
+cal diff is tensor(0.0044, device='cuda:0')
+discard
+cal diff is tensor(11.1002, device='cuda:0')
+discard
+cal diff is tensor(0.0126, device='cuda:0')
+discard
+cal diff is tensor(120.0418, device='cuda:0')
+clipping
+cal diff is tensor(0.0199, device='cuda:0')
+discard
+cal diff is tensor(0.2314, device='cuda:0')
+discard
+cal diff is tensor(0.0014, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9343, device='cuda:0')
+test acc is  0.9529000001563196
+test entropy is  0.18735463245273398
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9242, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0017, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.9441, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9242, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(50.9206, device='cuda:0')
+test acc is  0.9552833334896529
+test entropy is  0.18082654356225722
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.18082654356225722
+avg test loss is  0.13797550752206938
+avg accuracy is  0.9552833334896529
+compute_distance is  tensor(50.9206, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5266848382538062
+avg test loss is  0.8875796755493831
+avg accuracy is  0.7183166668229963
+compute_distance is  tensor(132.2312, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(132.2312, device='cuda:0')
+test acc is  0.7183166668229963
+test entropy is  0.5266848382538062
+________________________________
+diff is  tensor(0.4659, device='cuda:0')
+diff is  tensor(0.0044, device='cuda:0')
+diff is  tensor(11.0973, device='cuda:0')
+diff is  tensor(0.0126, device='cuda:0')
+diff is  tensor(120.3905, device='cuda:0')
+diff is  tensor(0.0199, device='cuda:0')
+diff is  tensor(0.2308, device='cuda:0')
+diff is  tensor(0.0014, device='cuda:0')
+threshold is  tensor(78.2987, device='cuda:0')
+sum is tensor(0.0014, device='cuda:0')
+sum is tensor(0.0057, device='cuda:0')
+sum is tensor(0.0183, device='cuda:0')
+sum is tensor(0.0382, device='cuda:0')
+sum is tensor(0.2690, device='cuda:0')
+sum is tensor(0.7349, device='cuda:0')
+sum is tensor(11.8322, device='cuda:0')
+sum is tensor(132.2227, device='cuda:0')
+ratio is tensor(0.4479, device='cuda:0')
+threshold is tensor(120.3905, device='cuda:0')
+cal diff is tensor(0.4659, device='cuda:0')
+discard
+cal diff is tensor(0.0044, device='cuda:0')
+discard
+cal diff is tensor(11.0973, device='cuda:0')
+discard
+cal diff is tensor(0.0126, device='cuda:0')
+discard
+cal diff is tensor(120.3905, device='cuda:0')
+clipping
+cal diff is tensor(0.0199, device='cuda:0')
+discard
+cal diff is tensor(0.2308, device='cuda:0')
+discard
+cal diff is tensor(0.0014, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9342, device='cuda:0')
+test acc is  0.9529666668229863
+test entropy is  0.18707094824056764
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9241, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0016, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.9517, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9241, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(51.3296, device='cuda:0')
+test acc is  0.9551000001563196
+test entropy is  0.1814336726930477
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.1814336726930477
+avg test loss is  0.13848106604395136
+avg accuracy is  0.9551000001563196
+compute_distance is  tensor(51.3296, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5266982146354118
+avg test loss is  0.8876575033293604
+avg accuracy is  0.7182666668229963
+compute_distance is  tensor(132.5452, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(132.5452, device='cuda:0')
+test acc is  0.7182666668229963
+test entropy is  0.5266982146354118
+________________________________
+diff is  tensor(0.4654, device='cuda:0')
+diff is  tensor(0.0044, device='cuda:0')
+diff is  tensor(11.0940, device='cuda:0')
+diff is  tensor(0.0126, device='cuda:0')
+diff is  tensor(120.7089, device='cuda:0')
+diff is  tensor(0.0198, device='cuda:0')
+diff is  tensor(0.2302, device='cuda:0')
+diff is  tensor(0.0014, device='cuda:0')
+threshold is  tensor(78.6126, device='cuda:0')
+sum is tensor(0.0014, device='cuda:0')
+sum is tensor(0.0057, device='cuda:0')
+sum is tensor(0.0183, device='cuda:0')
+sum is tensor(0.0381, device='cuda:0')
+sum is tensor(0.2683, device='cuda:0')
+sum is tensor(0.7337, device='cuda:0')
+sum is tensor(11.8277, device='cuda:0')
+sum is tensor(132.5366, device='cuda:0')
+ratio is tensor(0.4467, device='cuda:0')
+threshold is tensor(120.7089, device='cuda:0')
+cal diff is tensor(0.4654, device='cuda:0')
+discard
+cal diff is tensor(0.0044, device='cuda:0')
+discard
+cal diff is tensor(11.0940, device='cuda:0')
+discard
+cal diff is tensor(0.0126, device='cuda:0')
+discard
+cal diff is tensor(120.7089, device='cuda:0')
+clipping
+cal diff is tensor(0.0198, device='cuda:0')
+discard
+cal diff is tensor(0.2302, device='cuda:0')
+discard
+cal diff is tensor(0.0014, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9341, device='cuda:0')
+test acc is  0.9529833334896529
+test entropy is  0.1868053211657795
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9240, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0016, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.9568, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9240, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(51.6023, device='cuda:0')
+test acc is  0.9549666668229863
+test entropy is  0.18176813973292613
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.18176813973292613
+avg test loss is  0.13874553059285352
+avg accuracy is  0.9549666668229863
+compute_distance is  tensor(51.6023, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5267272033671072
+avg test loss is  0.8877041559102439
+avg accuracy is  0.7182500001563297
+compute_distance is  tensor(132.7729, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(132.7729, device='cuda:0')
+test acc is  0.7182500001563297
+test entropy is  0.5267272033671072
+________________________________
+diff is  tensor(0.4650, device='cuda:0')
+diff is  tensor(0.0044, device='cuda:0')
+diff is  tensor(11.0942, device='cuda:0')
+diff is  tensor(0.0126, device='cuda:0')
+diff is  tensor(120.9370, device='cuda:0')
+diff is  tensor(0.0198, device='cuda:0')
+diff is  tensor(0.2298, device='cuda:0')
+diff is  tensor(0.0013, device='cuda:0')
+threshold is  tensor(78.8403, device='cuda:0')
+sum is tensor(0.0013, device='cuda:0')
+sum is tensor(0.0057, device='cuda:0')
+sum is tensor(0.0183, device='cuda:0')
+sum is tensor(0.0381, device='cuda:0')
+sum is tensor(0.2679, device='cuda:0')
+sum is tensor(0.7330, device='cuda:0')
+sum is tensor(11.8272, device='cuda:0')
+sum is tensor(132.7642, device='cuda:0')
+ratio is tensor(0.4459, device='cuda:0')
+threshold is tensor(120.9370, device='cuda:0')
+cal diff is tensor(0.4650, device='cuda:0')
+discard
+cal diff is tensor(0.0044, device='cuda:0')
+discard
+cal diff is tensor(11.0942, device='cuda:0')
+discard
+cal diff is tensor(0.0126, device='cuda:0')
+discard
+cal diff is tensor(120.9370, device='cuda:0')
+clipping
+cal diff is tensor(0.0198, device='cuda:0')
+discard
+cal diff is tensor(0.2298, device='cuda:0')
+discard
+cal diff is tensor(0.0013, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9341, device='cuda:0')
+test acc is  0.9530333334896529
+test entropy is  0.18661019298980738
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9240, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0015, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.9614, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9240, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(51.8523, device='cuda:0')
+test acc is  0.9548166668229863
+test entropy is  0.18211520672130432
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.18211520672130432
+avg test loss is  0.1390257595118874
+avg accuracy is  0.9548166668229863
+compute_distance is  tensor(51.8523, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5267347304869309
+avg test loss is  0.8877325048451739
+avg accuracy is  0.7182500001563297
+compute_distance is  tensor(132.9578, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(132.9578, device='cuda:0')
+test acc is  0.7182500001563297
+test entropy is  0.5267347304869309
+________________________________
+diff is  tensor(0.4647, device='cuda:0')
+diff is  tensor(0.0044, device='cuda:0')
+diff is  tensor(11.0915, device='cuda:0')
+diff is  tensor(0.0126, device='cuda:0')
+diff is  tensor(121.1253, device='cuda:0')
+diff is  tensor(0.0197, device='cuda:0')
+diff is  tensor(0.2295, device='cuda:0')
+diff is  tensor(0.0013, device='cuda:0')
+threshold is  tensor(79.0252, device='cuda:0')
+sum is tensor(0.0013, device='cuda:0')
+sum is tensor(0.0057, device='cuda:0')
+sum is tensor(0.0183, device='cuda:0')
+sum is tensor(0.0381, device='cuda:0')
+sum is tensor(0.2676, device='cuda:0')
+sum is tensor(0.7323, device='cuda:0')
+sum is tensor(11.8238, device='cuda:0')
+sum is tensor(132.9491, device='cuda:0')
+ratio is tensor(0.4452, device='cuda:0')
+threshold is tensor(121.1253, device='cuda:0')
+cal diff is tensor(0.4647, device='cuda:0')
+discard
+cal diff is tensor(0.0044, device='cuda:0')
+discard
+cal diff is tensor(11.0915, device='cuda:0')
+discard
+cal diff is tensor(0.0126, device='cuda:0')
+discard
+cal diff is tensor(121.1253, device='cuda:0')
+clipping
+cal diff is tensor(0.0197, device='cuda:0')
+discard
+cal diff is tensor(0.2295, device='cuda:0')
+discard
+cal diff is tensor(0.0013, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9341, device='cuda:0')
+test acc is  0.9532000001563196
+test entropy is  0.18644139209170457
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9239, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0015, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.9639, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9239, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(51.9886, device='cuda:0')
+test acc is  0.9548166668229863
+test entropy is  0.18224734966275788
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.18224734966275788
+avg test loss is  0.1391257273771965
+avg accuracy is  0.9548166668229863
+compute_distance is  tensor(51.9886, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5267591552058263
+avg test loss is  0.8878272122411586
+avg accuracy is  0.7182000001563297
+compute_distance is  tensor(133.0698, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(133.0698, device='cuda:0')
+test acc is  0.7182000001563297
+test entropy is  0.5267591552058263
+________________________________
+diff is  tensor(0.4647, device='cuda:0')
+diff is  tensor(0.0044, device='cuda:0')
+diff is  tensor(11.0896, device='cuda:0')
+diff is  tensor(0.0126, device='cuda:0')
+diff is  tensor(121.2395, device='cuda:0')
+diff is  tensor(0.0197, device='cuda:0')
+diff is  tensor(0.2293, device='cuda:0')
+diff is  tensor(0.0013, device='cuda:0')
+threshold is  tensor(79.1372, device='cuda:0')
+sum is tensor(0.0013, device='cuda:0')
+sum is tensor(0.0057, device='cuda:0')
+sum is tensor(0.0183, device='cuda:0')
+sum is tensor(0.0380, device='cuda:0')
+sum is tensor(0.2674, device='cuda:0')
+sum is tensor(0.7320, device='cuda:0')
+sum is tensor(11.8216, device='cuda:0')
+sum is tensor(133.0611, device='cuda:0')
+ratio is tensor(0.4448, device='cuda:0')
+threshold is tensor(121.2395, device='cuda:0')
+cal diff is tensor(0.4647, device='cuda:0')
+discard
+cal diff is tensor(0.0044, device='cuda:0')
+discard
+cal diff is tensor(11.0896, device='cuda:0')
+discard
+cal diff is tensor(0.0126, device='cuda:0')
+discard
+cal diff is tensor(121.2395, device='cuda:0')
+clipping
+cal diff is tensor(0.0197, device='cuda:0')
+discard
+cal diff is tensor(0.2293, device='cuda:0')
+discard
+cal diff is tensor(0.0013, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9341, device='cuda:0')
+test acc is  0.9532166668229862
+test entropy is  0.18633072230734551
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9239, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0015, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.9669, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9239, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(52.1477, device='cuda:0')
+test acc is  0.9547000001563196
+test entropy is  0.18247852171820872
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.18247852171820872
+avg test loss is  0.1393232011833965
+avg accuracy is  0.9547000001563196
+compute_distance is  tensor(52.1477, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5267732961218494
+avg test loss is  0.8879333502575278
+avg accuracy is  0.7182166668229963
+compute_distance is  tensor(133.1922, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(133.1922, device='cuda:0')
+test acc is  0.7182166668229963
+test entropy is  0.5267732961218494
+________________________________
+diff is  tensor(0.4645, device='cuda:0')
+diff is  tensor(0.0044, device='cuda:0')
+diff is  tensor(11.0863, device='cuda:0')
+diff is  tensor(0.0126, device='cuda:0')
+diff is  tensor(121.3655, device='cuda:0')
+diff is  tensor(0.0197, device='cuda:0')
+diff is  tensor(0.2290, device='cuda:0')
+diff is  tensor(0.0013, device='cuda:0')
+threshold is  tensor(79.2596, device='cuda:0')
+sum is tensor(0.0013, device='cuda:0')
+sum is tensor(0.0057, device='cuda:0')
+sum is tensor(0.0183, device='cuda:0')
+sum is tensor(0.0380, device='cuda:0')
+sum is tensor(0.2671, device='cuda:0')
+sum is tensor(0.7316, device='cuda:0')
+sum is tensor(11.8179, device='cuda:0')
+sum is tensor(133.1834, device='cuda:0')
+ratio is tensor(0.4443, device='cuda:0')
+threshold is tensor(121.3655, device='cuda:0')
+cal diff is tensor(0.4645, device='cuda:0')
+discard
+cal diff is tensor(0.0044, device='cuda:0')
+discard
+cal diff is tensor(11.0863, device='cuda:0')
+discard
+cal diff is tensor(0.0126, device='cuda:0')
+discard
+cal diff is tensor(121.3655, device='cuda:0')
+clipping
+cal diff is tensor(0.0197, device='cuda:0')
+discard
+cal diff is tensor(0.2290, device='cuda:0')
+discard
+cal diff is tensor(0.0013, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9341, device='cuda:0')
+test acc is  0.9532500001563196
+test entropy is  0.18621465439465382
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9238, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0015, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.9669, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9238, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(52.1477, device='cuda:0')
+test acc is  0.9548000001563196
+test entropy is  0.18237045424769938
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.18237045424769938
+avg test loss is  0.13921947504328228
+avg accuracy is  0.9548000001563196
+compute_distance is  tensor(52.1477, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.526764756263192
+avg test loss is  0.8879637031921191
+avg accuracy is  0.7181000001563297
+compute_distance is  tensor(133.2000, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(133.2000, device='cuda:0')
+test acc is  0.7181000001563297
+test entropy is  0.526764756263192
+________________________________
+diff is  tensor(0.4645, device='cuda:0')
+diff is  tensor(0.0044, device='cuda:0')
+diff is  tensor(11.0865, device='cuda:0')
+diff is  tensor(0.0126, device='cuda:0')
+diff is  tensor(121.3731, device='cuda:0')
+diff is  tensor(0.0197, device='cuda:0')
+diff is  tensor(0.2290, device='cuda:0')
+diff is  tensor(0.0013, device='cuda:0')
+threshold is  tensor(79.2674, device='cuda:0')
+sum is tensor(0.0013, device='cuda:0')
+sum is tensor(0.0057, device='cuda:0')
+sum is tensor(0.0183, device='cuda:0')
+sum is tensor(0.0380, device='cuda:0')
+sum is tensor(0.2671, device='cuda:0')
+sum is tensor(0.7316, device='cuda:0')
+sum is tensor(11.8181, device='cuda:0')
+sum is tensor(133.1912, device='cuda:0')
+ratio is tensor(0.4443, device='cuda:0')
+threshold is tensor(121.3731, device='cuda:0')
+cal diff is tensor(0.4645, device='cuda:0')
+discard
+cal diff is tensor(0.0044, device='cuda:0')
+discard
+cal diff is tensor(11.0865, device='cuda:0')
+discard
+cal diff is tensor(0.0126, device='cuda:0')
+discard
+cal diff is tensor(121.3731, device='cuda:0')
+clipping
+cal diff is tensor(0.0197, device='cuda:0')
+discard
+cal diff is tensor(0.2290, device='cuda:0')
+discard
+cal diff is tensor(0.0013, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9340, device='cuda:0')
+test acc is  0.9532833334896529
+test entropy is  0.1861855366718032
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9238, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0014, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.9694, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9238, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(52.2840, device='cuda:0')
+test acc is  0.954633333489653
+test entropy is  0.18263247792225784
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.18263247792225784
+avg test loss is  0.13944985626785678
+avg accuracy is  0.954633333489653
+compute_distance is  tensor(52.2840, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5267865204417121
+avg test loss is  0.8880347831925349
+avg accuracy is  0.7181166668229964
+compute_distance is  tensor(133.2975, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(133.2975, device='cuda:0')
+test acc is  0.7181166668229964
+test entropy is  0.5267865204417121
+________________________________
+diff is  tensor(0.4644, device='cuda:0')
+diff is  tensor(0.0044, device='cuda:0')
+diff is  tensor(11.0833, device='cuda:0')
+diff is  tensor(0.0126, device='cuda:0')
+diff is  tensor(121.4742, device='cuda:0')
+diff is  tensor(0.0197, device='cuda:0')
+diff is  tensor(0.2288, device='cuda:0')
+diff is  tensor(0.0013, device='cuda:0')
+threshold is  tensor(79.3649, device='cuda:0')
+sum is tensor(0.0013, device='cuda:0')
+sum is tensor(0.0058, device='cuda:0')
+sum is tensor(0.0183, device='cuda:0')
+sum is tensor(0.0380, device='cuda:0')
+sum is tensor(0.2668, device='cuda:0')
+sum is tensor(0.7312, device='cuda:0')
+sum is tensor(11.8144, device='cuda:0')
+sum is tensor(133.2887, device='cuda:0')
+ratio is tensor(0.4439, device='cuda:0')
+threshold is tensor(121.4742, device='cuda:0')
+cal diff is tensor(0.4644, device='cuda:0')
+discard
+cal diff is tensor(0.0044, device='cuda:0')
+discard
+cal diff is tensor(11.0833, device='cuda:0')
+discard
+cal diff is tensor(0.0126, device='cuda:0')
+discard
+cal diff is tensor(121.4742, device='cuda:0')
+clipping
+cal diff is tensor(0.0197, device='cuda:0')
+discard
+cal diff is tensor(0.2288, device='cuda:0')
+discard
+cal diff is tensor(0.0013, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9340, device='cuda:0')
+test acc is  0.9532666668229862
+test entropy is  0.18610700544740347
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9238, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0014, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.9715, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9238, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(52.3976, device='cuda:0')
+test acc is  0.9545166668229863
+test entropy is  0.18279981320854952
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.18279981320854952
+avg test loss is  0.13959082623701424
+avg accuracy is  0.9545166668229863
+compute_distance is  tensor(52.3976, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5267914892958679
+avg test loss is  0.8880916175875329
+avg accuracy is  0.7180500001563297
+compute_distance is  tensor(133.3755, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(133.3755, device='cuda:0')
+test acc is  0.7180500001563297
+test entropy is  0.5267914892958679
+________________________________
+diff is  tensor(0.4642, device='cuda:0')
+diff is  tensor(0.0044, device='cuda:0')
+diff is  tensor(11.0790, device='cuda:0')
+diff is  tensor(0.0126, device='cuda:0')
+diff is  tensor(121.5568, device='cuda:0')
+diff is  tensor(0.0197, device='cuda:0')
+diff is  tensor(0.2286, device='cuda:0')
+diff is  tensor(0.0013, device='cuda:0')
+threshold is  tensor(79.4429, device='cuda:0')
+sum is tensor(0.0013, device='cuda:0')
+sum is tensor(0.0058, device='cuda:0')
+sum is tensor(0.0183, device='cuda:0')
+sum is tensor(0.0380, device='cuda:0')
+sum is tensor(0.2666, device='cuda:0')
+sum is tensor(0.7308, device='cuda:0')
+sum is tensor(11.8098, device='cuda:0')
+sum is tensor(133.3666, device='cuda:0')
+ratio is tensor(0.4436, device='cuda:0')
+threshold is tensor(121.5568, device='cuda:0')
+cal diff is tensor(0.4642, device='cuda:0')
+discard
+cal diff is tensor(0.0044, device='cuda:0')
+discard
+cal diff is tensor(11.0790, device='cuda:0')
+discard
+cal diff is tensor(0.0126, device='cuda:0')
+discard
+cal diff is tensor(121.5568, device='cuda:0')
+clipping
+cal diff is tensor(0.0197, device='cuda:0')
+discard
+cal diff is tensor(0.2286, device='cuda:0')
+discard
+cal diff is tensor(0.0013, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9340, device='cuda:0')
+test acc is  0.9532666668229862
+test entropy is  0.1860392130712774
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9237, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0014, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.9719, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9237, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(52.4204, device='cuda:0')
+test acc is  0.9544833334896529
+test entropy is  0.18278473718906008
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.18278473718906008
+avg test loss is  0.13957526598935888
+avg accuracy is  0.9544833334896529
+compute_distance is  tensor(52.4204, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5268057864675644
+avg test loss is  0.8881117189680335
+avg accuracy is  0.7180166668229964
+compute_distance is  tensor(133.3885, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(133.3885, device='cuda:0')
+test acc is  0.7180166668229964
+test entropy is  0.5268057864675644
+________________________________
+diff is  tensor(0.4642, device='cuda:0')
+diff is  tensor(0.0044, device='cuda:0')
+diff is  tensor(11.0841, device='cuda:0')
+diff is  tensor(0.0126, device='cuda:0')
+diff is  tensor(121.5647, device='cuda:0')
+diff is  tensor(0.0197, device='cuda:0')
+diff is  tensor(0.2285, device='cuda:0')
+diff is  tensor(0.0013, device='cuda:0')
+threshold is  tensor(79.4560, device='cuda:0')
+sum is tensor(0.0013, device='cuda:0')
+sum is tensor(0.0058, device='cuda:0')
+sum is tensor(0.0184, device='cuda:0')
+sum is tensor(0.0380, device='cuda:0')
+sum is tensor(0.2666, device='cuda:0')
+sum is tensor(0.7308, device='cuda:0')
+sum is tensor(11.8149, device='cuda:0')
+sum is tensor(133.3797, device='cuda:0')
+ratio is tensor(0.4436, device='cuda:0')
+threshold is tensor(121.5647, device='cuda:0')
+cal diff is tensor(0.4642, device='cuda:0')
+discard
+cal diff is tensor(0.0044, device='cuda:0')
+discard
+cal diff is tensor(11.0841, device='cuda:0')
+discard
+cal diff is tensor(0.0126, device='cuda:0')
+discard
+cal diff is tensor(121.5647, device='cuda:0')
+clipping
+cal diff is tensor(0.0197, device='cuda:0')
+discard
+cal diff is tensor(0.2285, device='cuda:0')
+discard
+cal diff is tensor(0.0013, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9340, device='cuda:0')
+test acc is  0.9532833334896529
+test entropy is  0.18602682178272112
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9237, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0014, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.9732, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9237, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(52.4885, device='cuda:0')
+test acc is  0.9544500001563195
+test entropy is  0.18291909820330676
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.18291909820330676
+avg test loss is  0.13969075060816907
+avg accuracy is  0.9544500001563195
+compute_distance is  tensor(52.4885, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5268026390182439
+avg test loss is  0.8881222017919586
+avg accuracy is  0.7179666668229965
+compute_distance is  tensor(133.4411, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(133.4411, device='cuda:0')
+test acc is  0.7179666668229965
+test entropy is  0.5268026390182439
+________________________________
+diff is  tensor(0.4642, device='cuda:0')
+diff is  tensor(0.0044, device='cuda:0')
+diff is  tensor(11.0823, device='cuda:0')
+diff is  tensor(0.0126, device='cuda:0')
+diff is  tensor(121.6193, device='cuda:0')
+diff is  tensor(0.0197, device='cuda:0')
+diff is  tensor(0.2284, device='cuda:0')
+diff is  tensor(0.0013, device='cuda:0')
+threshold is  tensor(79.5085, device='cuda:0')
+sum is tensor(0.0013, device='cuda:0')
+sum is tensor(0.0058, device='cuda:0')
+sum is tensor(0.0184, device='cuda:0')
+sum is tensor(0.0380, device='cuda:0')
+sum is tensor(0.2664, device='cuda:0')
+sum is tensor(0.7306, device='cuda:0')
+sum is tensor(11.8129, device='cuda:0')
+sum is tensor(133.4322, device='cuda:0')
+ratio is tensor(0.4434, device='cuda:0')
+threshold is tensor(121.6193, device='cuda:0')
+cal diff is tensor(0.4642, device='cuda:0')
+discard
+cal diff is tensor(0.0044, device='cuda:0')
+discard
+cal diff is tensor(11.0823, device='cuda:0')
+discard
+cal diff is tensor(0.0126, device='cuda:0')
+discard
+cal diff is tensor(121.6193, device='cuda:0')
+clipping
+cal diff is tensor(0.0197, device='cuda:0')
+discard
+cal diff is tensor(0.2284, device='cuda:0')
+discard
+cal diff is tensor(0.0013, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9340, device='cuda:0')
+test acc is  0.9533000001563195
+test entropy is  0.18598418096616579
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9237, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0014, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.9728, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9237, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(52.4658, device='cuda:0')
+test acc is  0.9544666668229862
+test entropy is  0.18282924797425645
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.18282924797425645
+avg test loss is  0.13960338959188412
+avg accuracy is  0.9544666668229862
+compute_distance is  tensor(52.4658, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5268109348346429
+avg test loss is  0.888130936255333
+avg accuracy is  0.7179500001563298
+compute_distance is  tensor(133.4236, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(133.4236, device='cuda:0')
+test acc is  0.7179500001563298
+test entropy is  0.5268109348346429
+________________________________
+diff is  tensor(0.4642, device='cuda:0')
+diff is  tensor(0.0044, device='cuda:0')
+diff is  tensor(11.0803, device='cuda:0')
+diff is  tensor(0.0126, device='cuda:0')
+diff is  tensor(121.6037, device='cuda:0')
+diff is  tensor(0.0197, device='cuda:0')
+diff is  tensor(0.2284, device='cuda:0')
+diff is  tensor(0.0013, device='cuda:0')
+threshold is  tensor(79.4910, device='cuda:0')
+sum is tensor(0.0013, device='cuda:0')
+sum is tensor(0.0058, device='cuda:0')
+sum is tensor(0.0184, device='cuda:0')
+sum is tensor(0.0380, device='cuda:0')
+sum is tensor(0.2664, device='cuda:0')
+sum is tensor(0.7306, device='cuda:0')
+sum is tensor(11.8110, device='cuda:0')
+sum is tensor(133.4147, device='cuda:0')
+ratio is tensor(0.4434, device='cuda:0')
+threshold is tensor(121.6037, device='cuda:0')
+cal diff is tensor(0.4642, device='cuda:0')
+discard
+cal diff is tensor(0.0044, device='cuda:0')
+discard
+cal diff is tensor(11.0803, device='cuda:0')
+discard
+cal diff is tensor(0.0126, device='cuda:0')
+discard
+cal diff is tensor(121.6037, device='cuda:0')
+clipping
+cal diff is tensor(0.0197, device='cuda:0')
+discard
+cal diff is tensor(0.2284, device='cuda:0')
+discard
+cal diff is tensor(0.0013, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9340, device='cuda:0')
+test acc is  0.9532833334896529
+test entropy is  0.1859904522620348
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9237, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0014, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.9753, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9237, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(52.6021, device='cuda:0')
+test acc is  0.9543333334896529
+test entropy is  0.18312600965915457
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.18312600965915457
+avg test loss is  0.1398685692743992
+avg accuracy is  0.9543333334896529
+compute_distance is  tensor(52.6021, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5268121263238666
+avg test loss is  0.8881928668792314
+avg accuracy is  0.7179500001563298
+compute_distance is  tensor(133.5194, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(133.5194, device='cuda:0')
+test acc is  0.7179500001563298
+test entropy is  0.5268121263238666
+________________________________
+diff is  tensor(0.4641, device='cuda:0')
+diff is  tensor(0.0044, device='cuda:0')
+diff is  tensor(11.0733, device='cuda:0')
+diff is  tensor(0.0126, device='cuda:0')
+diff is  tensor(121.7070, device='cuda:0')
+diff is  tensor(0.0196, device='cuda:0')
+diff is  tensor(0.2282, device='cuda:0')
+diff is  tensor(0.0013, device='cuda:0')
+threshold is  tensor(79.5868, device='cuda:0')
+sum is tensor(0.0013, device='cuda:0')
+sum is tensor(0.0058, device='cuda:0')
+sum is tensor(0.0184, device='cuda:0')
+sum is tensor(0.0380, device='cuda:0')
+sum is tensor(0.2662, device='cuda:0')
+sum is tensor(0.7302, device='cuda:0')
+sum is tensor(11.8035, device='cuda:0')
+sum is tensor(133.5105, device='cuda:0')
+ratio is tensor(0.4431, device='cuda:0')
+threshold is tensor(121.7070, device='cuda:0')
+cal diff is tensor(0.4641, device='cuda:0')
+discard
+cal diff is tensor(0.0044, device='cuda:0')
+discard
+cal diff is tensor(11.0733, device='cuda:0')
+discard
+cal diff is tensor(0.0126, device='cuda:0')
+discard
+cal diff is tensor(121.7070, device='cuda:0')
+clipping
+cal diff is tensor(0.0196, device='cuda:0')
+discard
+cal diff is tensor(0.2282, device='cuda:0')
+discard
+cal diff is tensor(0.0013, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9340, device='cuda:0')
+test acc is  0.9533000001563195
+test entropy is  0.18591693206144166
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9237, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0014, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.9766, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9237, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(52.6703, device='cuda:0')
+test acc is  0.9543000001563196
+test entropy is  0.18320112852558398
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.18320112852558398
+avg test loss is  0.139926626609126
+avg accuracy is  0.9543000001563196
+compute_distance is  tensor(52.6703, device='cuda:0')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5268153687720614
+avg test loss is  0.8882242736341094
+avg accuracy is  0.7179833334896631
+compute_distance is  tensor(133.5720, device='cuda:0')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(133.5720, device='cuda:0')
+test acc is  0.7179833334896631
+test entropy is  0.5268153687720614
+________________________________
+diff is  tensor(0.4641, device='cuda:0')
+diff is  tensor(0.0044, device='cuda:0')
+diff is  tensor(11.0741, device='cuda:0')
+diff is  tensor(0.0126, device='cuda:0')
+diff is  tensor(121.7589, device='cuda:0')
+diff is  tensor(0.0196, device='cuda:0')
+diff is  tensor(0.2281, device='cuda:0')
+diff is  tensor(0.0013, device='cuda:0')
+threshold is  tensor(79.6394, device='cuda:0')
+sum is tensor(0.0013, device='cuda:0')
+sum is tensor(0.0058, device='cuda:0')
+sum is tensor(0.0184, device='cuda:0')
+sum is tensor(0.0380, device='cuda:0')
+sum is tensor(0.2661, device='cuda:0')
+sum is tensor(0.7301, device='cuda:0')
+sum is tensor(11.8042, device='cuda:0')
+sum is tensor(133.5631, device='cuda:0')
+ratio is tensor(0.4429, device='cuda:0')
+threshold is tensor(121.7589, device='cuda:0')
+cal diff is tensor(0.4641, device='cuda:0')
+discard
+cal diff is tensor(0.0044, device='cuda:0')
+discard
+cal diff is tensor(11.0741, device='cuda:0')
+discard
+cal diff is tensor(0.0126, device='cuda:0')
+discard
+cal diff is tensor(121.7589, device='cuda:0')
+clipping
+cal diff is tensor(0.0196, device='cuda:0')
+discard
+cal diff is tensor(0.2281, device='cuda:0')
+discard
+cal diff is tensor(0.0013, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(53.9340, device='cuda:0')
+test acc is  0.9533333334896529
+test entropy is  0.18587483825094536
+________________________________
+diff is  tensor(0.0008, device='cuda:0')
+diff is  tensor(5.6569e-06, device='cuda:0')
+diff is  tensor(0.0091, device='cuda:0')
+diff is  tensor(8.0000e-06, device='cuda:0')
+diff is  tensor(53.9237, device='cuda:0')
+diff is  tensor(3.2000e-05, device='cuda:0')
+diff is  tensor(0.0003, device='cuda:0')
+diff is  tensor(3.1623e-06, device='cuda:0')
+threshold is  tensor(0.0014, device='cuda:0')
+sum is tensor(3.1623e-06, device='cuda:0')
+sum is tensor(8.8191e-06, device='cuda:0')
+sum is tensor(1.6819e-05, device='cuda:0')
+sum is tensor(4.8819e-05, device='cuda:0')
+sum is tensor(0.0004, device='cuda:0')
+sum is tensor(0.0012, device='cuda:0')
+sum is tensor(0.0102, device='cuda:0')
+ratio is tensor(0.9783, device='cuda:0')
+threshold is tensor(0.0091, device='cuda:0')
+cal diff is tensor(0.0008, device='cuda:0')
+discard
+cal diff is tensor(5.6569e-06, device='cuda:0')
+discard
+cal diff is tensor(0.0091, device='cuda:0')
+clipping
+cal diff is tensor(8.0000e-06, device='cuda:0')
+discard
+cal diff is tensor(53.9237, device='cuda:0')
+clipping
+cal diff is tensor(3.2000e-05, device='cuda:0')
+discard
+cal diff is tensor(0.0003, device='cuda:0')
+discard
+cal diff is tensor(3.1623e-06, device='cuda:0')
+discard
+________________________________
+test distance is  tensor(52.7612, device='cuda:0')
+test acc is  0.9542000001563196
+test entropy is  0.1833526943284057
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.1833526943284057
+avg test loss is  0.14005549589215693
+avg accuracy is  0.9542000001563196
+compute_distance is  tensor(52.7612, device='cuda:0')
+++++++++++++++++++++

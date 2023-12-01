@@ -51,7 +51,7 @@ def restoreWeight(std_dict, std_keys, update_weights):
 
 
 
-def preKrumGrouping(std_keys, local_weights_delay, local_delay_ew):
+def preGrouping(std_keys, local_weights_delay, local_delay_ew):
     for l in local_delay_ew:
         local_weights_delay.extend(l)
         
@@ -258,3 +258,11 @@ def pre_AFA(std_keys, current_epoch_updates, current_index, device):
     AFA_avg, remain_index = AFA(weight_updates, current_index, device)
 
     return AFA_avg, remain_index
+
+
+def preGroupingIndex(local_index_delay, local_index_ew):
+    index = local_index_delay
+    for idx in local_index_ew:
+        index.extend(idx)
+    print(index)
+    return index

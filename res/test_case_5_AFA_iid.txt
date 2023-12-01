@@ -1,0 +1,2421 @@
+
+Experimental details:
+    Dataset     : mnist
+    Model     : cnn
+    detailed Model     : vgg
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 30
+
+    Federated parameters:
+    IID
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.2
+     Model attack is done!
+attack user num is  10
+ t is  8
+attack_user is [40 41 42 43 44 45 46 47 48 49]
+
+ | Global Training Round : 1 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0
+ benign empirical indicaor res is  0.0
+ benign loss is  0.2480479596476806
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+left index is  [0, 1, 2, 4, 5, 6, 7, 40, 41, 43, 45, 46, 47, 48, 49]
+ 
+Avg Training Stats after 1 global rounds:
+Train Accuracy: 96.46% 
+
+Test Accuracy: 96.93% 
+
+
+ | Global Training Round : 2 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.1269175261259079
+ benign empirical indicaor res is  0.1269175261259079
+ benign loss is  0.2452851635845084
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 8, 9, 10, 11, 12, 13, 14, 15]
+left index is  [0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 10, 12, 13]
+ 
+Avg Training Stats after 2 global rounds:
+Train Accuracy: 97.47% 
+
+Test Accuracy: 97.77% 
+
+
+ | Global Training Round : 3 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.03027324005961418
+ benign empirical indicaor res is  0.03027324005961418
+ benign loss is  0.14718509073320188
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 16, 17, 18, 19, 20, 21, 22, 23]
+left index is  [0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 16, 20, 22]
+ 
+Avg Training Stats after 3 global rounds:
+Train Accuracy: 97.84% 
+
+Test Accuracy: 98.10% 
+
+
+ | Global Training Round : 4 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.012946520000696182
+ benign empirical indicaor res is  0.012946520000696182
+ benign loss is  0.13568347937574513
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 24, 25, 26, 27, 28, 29, 30, 31, 8, 9, 10, 11, 12, 13, 14, 15]
+left index is  [0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 24, 27, 8, 9, 10, 11, 12, 13, 14, 15]
+ 
+Avg Training Stats after 4 global rounds:
+Train Accuracy: 98.14% 
+
+Test Accuracy: 98.27% 
+
+
+ | Global Training Round : 5 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.01007094420492649
+ benign empirical indicaor res is  0.01007094420492649
+ benign loss is  0.13507267519047386
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 32, 33, 34, 35, 36, 37, 38, 39]
+left index is  [0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 32, 34, 39]
+ 
+Avg Training Stats after 5 global rounds:
+Train Accuracy: 98.13% 
+
+Test Accuracy: 98.42% 
+
+
+ | Global Training Round : 6 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.003848653519526124
+ benign empirical indicaor res is  0.003848653519526124
+ benign loss is  0.1395995165466478
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 16, 17, 18, 19, 20, 21, 22, 23, 8, 9, 10, 11, 12, 13, 14, 15]
+left index is  [0, 1, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 46, 47, 48, 49, 16, 17, 18, 20, 21, 22, 23, 9, 10, 11, 13, 15]
+ 
+Avg Training Stats after 6 global rounds:
+Train Accuracy: 98.35% 
+
+Test Accuracy: 98.54% 
+
+
+ | Global Training Round : 7 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.010172723792493343
+ benign empirical indicaor res is  0.010172723792493343
+ benign loss is  0.12741321320400426
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+left index is  [0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 46, 49]
+ 
+Avg Training Stats after 7 global rounds:
+Train Accuracy: 98.48% 
+
+Test Accuracy: 98.69% 
+
+
+ | Global Training Round : 8 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.011234397068619728
+ benign empirical indicaor res is  0.011234397068619728
+ benign loss is  0.09603504753230434
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 24, 25, 26, 27, 28, 29, 30, 31, 8, 9, 10, 11, 12, 13, 14, 15]
+left index is  [0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 43, 44, 45, 46, 47, 48, 49, 24, 25, 26, 30, 31, 9, 10, 11, 13, 14, 15]
+ 
+Avg Training Stats after 8 global rounds:
+Train Accuracy: 98.62% 
+
+Test Accuracy: 98.70% 
+
+
+ | Global Training Round : 9 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0027368708979338408
+ benign empirical indicaor res is  0.0027368708979338408
+ benign loss is  0.10670881110586618
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 16, 17, 18, 19, 20, 21, 22, 23]
+left index is  [0, 2, 3, 4, 5, 6, 40, 41, 43, 44, 45, 46, 47, 48, 49, 16, 17, 18, 20, 22, 23]
+ 
+Avg Training Stats after 9 global rounds:
+Train Accuracy: 98.64% 
+
+Test Accuracy: 98.75% 
+
+
+ | Global Training Round : 10 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0057948287576437
+ benign empirical indicaor res is  0.0057948287576437
+ benign loss is  0.08665928148701296
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 32, 33, 34, 35, 36, 37, 38, 39, 8, 9, 10, 11, 12, 13, 14, 15]
+left index is  [0, 1, 3, 4, 5, 6, 7, 40, 41, 42, 44, 45, 46, 47, 48, 49, 33, 34, 35, 36, 37, 39, 9, 10, 11, 12, 14, 15]
+ 
+Avg Training Stats after 10 global rounds:
+Train Accuracy: 98.53% 
+
+Test Accuracy: 98.78% 
+
+
+ | Global Training Round : 11 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0013961518416181207
+ benign empirical indicaor res is  0.0013961518416181207
+ benign loss is  0.08045055492977171
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+left index is  [1, 3, 4, 5, 6, 7, 40, 41, 42, 44, 45, 46, 47, 48, 49]
+ 
+Avg Training Stats after 11 global rounds:
+Train Accuracy: 98.74% 
+
+Test Accuracy: 98.79% 
+
+
+ | Global Training Round : 12 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.00687768729403615
+ benign empirical indicaor res is  0.00687768729403615
+ benign loss is  0.08929257643850226
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 24, 25, 26, 27, 28, 29, 30, 31, 16, 17, 18, 19, 20, 21, 22, 23, 8, 9, 10, 11, 12, 13, 14, 15]
+left index is  [0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 44, 45, 46, 47, 48, 49, 24, 25, 26, 27, 28, 30, 16, 17, 18, 20, 21, 22, 23, 9, 10, 11, 13, 15]
+ 
+Avg Training Stats after 12 global rounds:
+Train Accuracy: 98.73% 
+
+Test Accuracy: 98.90% 
+
+
+ | Global Training Round : 13 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.002579993102699518
+ benign empirical indicaor res is  0.002579993102699518
+ benign loss is  0.08990681286607134
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+left index is  [1, 2, 3, 4, 5, 6, 7, 40, 42, 43, 44, 45, 46, 47, 49]
+ 
+Avg Training Stats after 13 global rounds:
+Train Accuracy: 98.77% 
+
+Test Accuracy: 98.89% 
+
+
+ | Global Training Round : 14 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.006462644319981337
+ benign empirical indicaor res is  0.006462644319981337
+ benign loss is  0.08919040559742011
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 8, 9, 10, 11, 12, 13, 14, 15]
+left index is  [0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 10, 11, 14]
+ 
+Avg Training Stats after 14 global rounds:
+Train Accuracy: 98.78% 
+
+Test Accuracy: 98.93% 
+
+
+ | Global Training Round : 15 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.005371681414544582
+ benign empirical indicaor res is  0.005371681414544582
+ benign loss is  0.0884684524253795
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 32, 33, 34, 35, 36, 37, 38, 39, 16, 17, 18, 19, 20, 21, 22, 23]
+left index is  [0, 1, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 33, 34, 38, 16, 17, 18, 19, 20, 21, 22, 23]
+ 
+Avg Training Stats after 15 global rounds:
+Train Accuracy: 98.77% 
+
+Test Accuracy: 98.98% 
+
+
+ | Global Training Round : 16 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0006645538960583508
+ benign empirical indicaor res is  0.0006645538960583508
+ benign loss is  0.07416137983091176
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 24, 25, 26, 27, 28, 29, 30, 31, 8, 9, 10, 11, 12, 13, 14, 15]
+left index is  [0, 1, 2, 3, 4, 5, 6, 7, 40, 42, 43, 44, 45, 46, 47, 48, 49, 24, 25, 26, 27, 28, 30, 9, 10, 11, 13, 15]
+ 
+Avg Training Stats after 16 global rounds:
+Train Accuracy: 98.85% 
+
+Test Accuracy: 99.01% 
+
+
+ | Global Training Round : 17 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.0034626817796379328
+ benign empirical indicaor res is  0.0034626817796379328
+ benign loss is  0.06859001662202277
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+left index is  [1, 3, 4, 5, 6, 7, 40, 42, 43, 44, 45, 46, 47, 48, 49]
+ 
+Avg Training Stats after 17 global rounds:
+Train Accuracy: 98.86% 
+
+Test Accuracy: 99.01% 
+
+
+ | Global Training Round : 18 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.004996553063392639
+ benign empirical indicaor res is  0.004996553063392639
+ benign loss is  0.0918886026759681
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 16, 17, 18, 19, 20, 21, 22, 23, 8, 9, 10, 11, 12, 13, 14, 15]
+left index is  [0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 16, 17, 20, 22, 23, 9, 10, 12, 13, 15]
+ 
+Avg Training Stats after 18 global rounds:
+Train Accuracy: 98.90% 
+
+Test Accuracy: 99.04% 
+
+
+ | Global Training Round : 19 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.002604040550068021
+ benign empirical indicaor res is  0.002604040550068021
+ benign loss is  0.10123409720529851
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+left index is  [0, 1, 2, 3, 4, 5, 7, 40, 41, 42, 44, 45, 46, 47, 48]
+ 
+Avg Training Stats after 19 global rounds:
+Train Accuracy: 98.82% 
+
+Test Accuracy: 99.06% 
+
+
+ | Global Training Round : 20 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+compare_res is  0.004366969224065542
+ benign empirical indicaor res is  0.004366969224065542
+ benign loss is  0.06466878712863515
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 32, 33, 34, 35, 36, 37, 38, 39, 24, 25, 26, 27, 28, 29, 30, 31, 8, 9, 10, 11, 12, 13, 14, 15]
+left index is  [0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 48, 49, 33, 34, 35, 38, 39, 25, 26, 27, 29, 31, 9, 10, 11, 12, 13, 14, 15]
+ 
+Avg Training Stats after 20 global rounds:
+Train Accuracy: 98.90% 
+
+Test Accuracy: 99.07% 
+
+
+ | Global Training Round : 21 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+poisoned accuracy threshold is  0.840700000157001
+distance ratio is <class 'float'>
+len of model dicts is  10
+compute distance is  tensor(53.3800, device='cuda:2')
+compute distance is  tensor(89.4041, device='cuda:2')
+compute distance is  tensor(48.4671, device='cuda:2')
+compute distance is  tensor(96.6306, device='cuda:2')
+compute distance is  tensor(49.8704, device='cuda:2')
+compute distance is  tensor(56.1726, device='cuda:2')
+compute distance is  tensor(57.5998, device='cuda:2')
+compute distance is  tensor(51.1279, device='cuda:2')
+compute distance is  tensor(79.2421, device='cuda:2')
+compute distance is  tensor(36.6740, device='cuda:2')
+calculated distance threshold is  tensor(96.0311, device='cuda:2')
+pinned_accuracy threshold is  0.840700000157001
+====================
+iteration is  0
+round is  0
+accuracy is  0.8288500001563243
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.8972000001563216
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8529833334896564
+====================
+====================
+iteration is  1
+round is  0
+accuracy is  0.8308666668229907
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.690716666822998
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  2
+accuracy is  0.8275666668229908
+====================
+====================
+iteration is  2
+round is  0
+accuracy is  0.7339333334896623
+====================
+________________________________
+test distance is  tensor(4711.3770, device='cuda:2')
+test acc is  0.690716666822998
+test loss is 1.6508295447079104
+test entropy is  0.22270693714176415
+________________________________
+cal_distance is  tensor(672.6355, device='cuda:2', dtype=torch.float64)
+cal_distance is  tensor(96.0310, device='cuda:2', dtype=torch.float64)
+________________________________
+test distance is  tensor(96.0310, device='cuda:2')
+test acc is  0.9913333334896517
+test loss is 0.030711594971765465
+test entropy is  0.014714119227184578
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.014714119227184578
+avg test loss is  0.030711594971765465
+avg accuracy is  0.9913333334896517
+compute_distance is  tensor(96.0310, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.21650623541269728
+avg test loss is  0.8783778166100542
+avg accuracy is  0.7783333334896599
+compute_distance is  tensor(137.8482, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(137.8482, device='cuda:2')
+test acc is  0.7783333334896599
+test loss is 0.8783778166100542
+test entropy is  0.21650623541269728
+________________________________
+cal_distance is  tensor(115.0548, device='cuda:2')
+cal_distance is  tensor(96.0303, device='cuda:2')
+________________________________
+test distance is  tensor(96.0303, device='cuda:2')
+test acc is  0.970350000156319
+test loss is 0.09894680366247283
+test entropy is  0.06702221147500094
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.06702221147500094
+avg test loss is  0.09894680366247283
+avg accuracy is  0.970350000156319
+compute_distance is  tensor(96.0303, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.22264746367645416
+avg test loss is  1.0886084547778692
+avg accuracy is  0.7537666668229945
+compute_distance is  tensor(149.8062, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(149.8062, device='cuda:2')
+test acc is  0.7537666668229945
+test loss is 1.0886084547778692
+test entropy is  0.22264746367645416
+________________________________
+cal_distance is  tensor(119.9424, device='cuda:2')
+cal_distance is  tensor(96.0321, device='cuda:2')
+cal_distance is  tensor(76.8883, device='cuda:2')
+________________________________
+test distance is  tensor(76.8883, device='cuda:2')
+test acc is  0.9872166668229851
+test loss is 0.044525354885217215
+test entropy is  0.02886680462569217
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.02886680462569217
+avg test loss is  0.044525354885217215
+avg accuracy is  0.9872166668229851
+compute_distance is  tensor(76.8883, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.2237424227013898
+avg test loss is  1.0922851619689957
+avg accuracy is  0.7523333334896612
+compute_distance is  tensor(141.6833, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(141.6833, device='cuda:2')
+test acc is  0.7523333334896612
+test loss is 1.0922851619689957
+test entropy is  0.2237424227013898
+________________________________
+cal_distance is  tensor(116.6455, device='cuda:2')
+cal_distance is  tensor(96.0323, device='cuda:2')
+cal_distance is  tensor(79.0620, device='cuda:2')
+________________________________
+test distance is  tensor(79.0620, device='cuda:2')
+test acc is  0.9854666668229852
+test loss is 0.04960556722312649
+test entropy is  0.03197099698903183
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.03197099698903183
+avg test loss is  0.04960556722312649
+avg accuracy is  0.9854666668229852
+compute_distance is  tensor(79.0620, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.2250095084786161
+avg test loss is  1.1157224393253133
+avg accuracy is  0.7490666668229947
+compute_distance is  tensor(142.6030, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(142.6030, device='cuda:2')
+test acc is  0.7490666668229947
+test loss is 1.1157224393253133
+test entropy is  0.2250095084786161
+________________________________
+cal_distance is  tensor(117.0236, device='cuda:2')
+cal_distance is  tensor(96.0326, device='cuda:2')
+cal_distance is  tensor(78.8070, device='cuda:2')
+________________________________
+test distance is  tensor(78.8070, device='cuda:2')
+test acc is  0.9862166668229853
+test loss is 0.04778924210671736
+test entropy is  0.030519085606999584
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.030519085606999584
+avg test loss is  0.04778924210671736
+avg accuracy is  0.9862166668229853
+compute_distance is  tensor(78.8070, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.22556133491239314
+avg test loss is  1.1230575618054122
+avg accuracy is  0.7478666668229949
+compute_distance is  tensor(141.6072, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(141.6072, device='cuda:2')
+test acc is  0.7478666668229949
+test loss is 1.1230575618054122
+test entropy is  0.22556133491239314
+________________________________
+cal_distance is  tensor(116.6143, device='cuda:2')
+cal_distance is  tensor(96.0327, device='cuda:2')
+cal_distance is  tensor(79.0838, device='cuda:2')
+________________________________
+test distance is  tensor(79.0838, device='cuda:2')
+test acc is  0.9861333334896519
+test loss is 0.04805486811567077
+test entropy is  0.03054838467673309
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.03054838467673309
+avg test loss is  0.04805486811567077
+avg accuracy is  0.9861333334896519
+compute_distance is  tensor(79.0838, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.22586560812490836
+avg test loss is  1.1302458032298444
+avg accuracy is  0.7469333334896615
+compute_distance is  tensor(141.7126, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(141.7126, device='cuda:2')
+test acc is  0.7469333334896615
+test loss is 1.1302458032298444
+test entropy is  0.22586560812490836
+________________________________
+cal_distance is  tensor(116.6577, device='cuda:2')
+cal_distance is  tensor(96.0328, device='cuda:2')
+cal_distance is  tensor(79.0544, device='cuda:2')
+________________________________
+test distance is  tensor(79.0544, device='cuda:2')
+test acc is  0.9863666668229851
+test loss is 0.04744854628433207
+test entropy is  0.030052931840093545
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.030052931840093545
+avg test loss is  0.04744854628433207
+avg accuracy is  0.9863666668229851
+compute_distance is  tensor(79.0544, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.22590664424685272
+avg test loss is  1.132582435424108
+avg accuracy is  0.7466166668229949
+compute_distance is  tensor(141.6335, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(141.6335, device='cuda:2')
+test acc is  0.7466166668229949
+test loss is 1.132582435424108
+test entropy is  0.22590664424685272
+________________________________
+cal_distance is  tensor(116.6252, device='cuda:2')
+cal_distance is  tensor(96.0328, device='cuda:2')
+cal_distance is  tensor(79.0765, device='cuda:2')
+________________________________
+test distance is  tensor(79.0765, device='cuda:2')
+test acc is  0.9864833334896518
+test loss is 0.04709758894301725
+test entropy is  0.029770621107669044
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.029770621107669044
+avg test loss is  0.04709758894301725
+avg accuracy is  0.9864833334896518
+compute_distance is  tensor(79.0765, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.22591111998059857
+avg test loss is  1.134578954122627
+avg accuracy is  0.7463166668229949
+compute_distance is  tensor(141.6446, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(141.6446, device='cuda:2')
+test acc is  0.7463166668229949
+test loss is 1.134578954122627
+test entropy is  0.22591111998059857
+________________________________
+cal_distance is  tensor(116.6298, device='cuda:2')
+cal_distance is  tensor(96.0328, device='cuda:2')
+cal_distance is  tensor(79.0735, device='cuda:2')
+________________________________
+test distance is  tensor(79.0735, device='cuda:2')
+test acc is  0.9864833334896518
+test loss is 0.046766484240998794
+test entropy is  0.029540382534433564
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.029540382534433564
+avg test loss is  0.046766484240998794
+avg accuracy is  0.9864833334896518
+compute_distance is  tensor(79.0735, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.22592521863959747
+avg test loss is  1.1357208666508831
+avg accuracy is  0.7461500001563283
+compute_distance is  tensor(141.6825, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(141.6825, device='cuda:2')
+test acc is  0.7461500001563283
+test loss is 1.1357208666508831
+test entropy is  0.22592521863959747
+________________________________
+cal_distance is  tensor(116.6454, device='cuda:2')
+cal_distance is  tensor(96.0329, device='cuda:2')
+cal_distance is  tensor(79.0629, device='cuda:2')
+________________________________
+test distance is  tensor(79.0629, device='cuda:2')
+test acc is  0.9866000001563185
+test loss is 0.04651391544469669
+test entropy is  0.02937551660336063
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.02937551660336063
+avg test loss is  0.04651391544469669
+avg accuracy is  0.9866000001563185
+compute_distance is  tensor(79.0629, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.22594081478586583
+avg test loss is  1.1370210552742994
+avg accuracy is  0.745916666822995
+compute_distance is  tensor(141.7314, device='cuda:2')
+++++++++++++++++++++
+reach max round
+new distance ratio is 0.99
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 16, 17, 18, 19, 20, 21, 22, 23]
+left index is  [0, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 18, 20, 22, 23]
+ 
+Avg Training Stats after 21 global rounds:
+Train Accuracy: 98.77% 
+
+Test Accuracy: 98.78% 
+
+
+ | Global Training Round : 22 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+distance ratio is <class 'float'>
+compare_res is  0.004088246263563633
+attack res is False
+len of model dicts is  10
+compute distance is  tensor(45.4176, device='cuda:2')
+compute distance is  tensor(62.9748, device='cuda:2')
+compute distance is  tensor(82.3371, device='cuda:2')
+compute distance is  tensor(86.8048, device='cuda:2')
+compute distance is  tensor(65.4872, device='cuda:2')
+compute distance is  tensor(86.8555, device='cuda:2')
+compute distance is  tensor(74.4238, device='cuda:2')
+compute distance is  tensor(64.7670, device='cuda:2')
+compute distance is  tensor(59.8713, device='cuda:2')
+compute distance is  tensor(29.7003, device='cuda:2')
+calculated distance threshold is  tensor(81.1400, device='cuda:2')
+pinned_accuracy threshold is  0.840700000157001
+====================
+iteration is  0
+round is  0
+accuracy is  0.6692166668229995
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.45368333348967493
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  2
+accuracy is  0.5455500001563424
+====================
+====================
+iteration is  1
+round is  0
+accuracy is  0.8473166668229901
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.7267333334896626
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.747150000156328
+====================
+________________________________
+test distance is  tensor(4279.3438, device='cuda:2')
+test acc is  0.45368333348967493
+test loss is 5.133450006116936
+test entropy is  0.16327707433719624
+________________________________
+cal_distance is  tensor(589.2588, device='cuda:2', dtype=torch.float64)
+cal_distance is  tensor(81.1400, device='cuda:2', dtype=torch.float64)
+cal_distance is  tensor(11.1731, device='cuda:2', dtype=torch.float64)
+________________________________
+test distance is  tensor(11.1730, device='cuda:2')
+test acc is  0.9893000001563185
+test loss is 0.03753400022946723
+test entropy is  0.022814721907493965
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.022814721907493965
+avg test loss is  0.03753400022946723
+avg accuracy is  0.9893000001563185
+compute_distance is  tensor(11.1730, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.1716771601343841
+avg test loss is  3.9966944203193764
+avg accuracy is  0.45610000015634167
+compute_distance is  tensor(77.8127, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(77.8127, device='cuda:2')
+test acc is  0.45610000015634167
+test loss is 3.9966944203193764
+test entropy is  0.1716771601343841
+________________________________
+new distance ratio is 0.8999999999999999
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 8, 9, 10, 11, 12, 13, 14, 15]
+left index is  [0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 10, 13, 15]
+ 
+Avg Training Stats after 22 global rounds:
+Train Accuracy: 98.06% 
+
+Test Accuracy: 98.33% 
+
+
+ | Global Training Round : 23 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+distance ratio is <class 'float'>
+compare_res is  0.003102727700024843
+attack res is False
+len of model dicts is  10
+compute distance is  tensor(47.4933, device='cuda:2')
+compute distance is  tensor(92.1007, device='cuda:2')
+compute distance is  tensor(94.1048, device='cuda:2')
+compute distance is  tensor(70.9680, device='cuda:2')
+compute distance is  tensor(65.9500, device='cuda:2')
+compute distance is  tensor(69.1050, device='cuda:2')
+compute distance is  tensor(87.3049, device='cuda:2')
+compute distance is  tensor(46.2378, device='cuda:2')
+compute distance is  tensor(80.8666, device='cuda:2')
+compute distance is  tensor(41.7724, device='cuda:2')
+calculated distance threshold is  tensor(84.5898, device='cuda:2')
+pinned_accuracy threshold is  0.840700000157001
+====================
+iteration is  0
+round is  0
+accuracy is  0.45595000015634174
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.6135000001563367
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.41070000015634117
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  0
+accuracy is  0.6725500001563325
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.6656333334896662
+====================
+________________________________
+test distance is  tensor(4284.0430, device='cuda:2')
+test acc is  0.41070000015634117
+test loss is 7.330724532670303
+test entropy is  0.10059858316273641
+________________________________
+cal_distance is  tensor(601.9855, device='cuda:2', dtype=torch.float64)
+cal_distance is  tensor(84.5899, device='cuda:2', dtype=torch.float64)
+cal_distance is  tensor(11.8866, device='cuda:2', dtype=torch.float64)
+________________________________
+test distance is  tensor(11.8866, device='cuda:2')
+test acc is  0.9830166668229853
+test loss is 0.05820521869092291
+test entropy is  0.03295549505055378
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.03295549505055378
+avg test loss is  0.05820521869092291
+avg accuracy is  0.9830166668229853
+compute_distance is  tensor(11.8866, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.08931242961730403
+avg test loss is  6.43606813248795
+avg accuracy is  0.4116333334896745
+compute_distance is  tensor(75.8183, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(75.8183, device='cuda:2')
+test acc is  0.4116333334896745
+test loss is 6.43606813248795
+test entropy is  0.08931242961730403
+________________________________
+new distance ratio is 0.818181818181818
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+left index is  [3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+ 
+Avg Training Stats after 23 global rounds:
+Train Accuracy: 85.40% 
+
+Test Accuracy: 85.77% 
+
+
+ | Global Training Round : 24 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+distance ratio is <class 'float'>
+compare_res is  0.0031700902618467808
+attack res is False
+len of model dicts is  10
+compute distance is  tensor(89.3503, device='cuda:2')
+compute distance is  tensor(114.3652, device='cuda:2')
+compute distance is  tensor(106.1605, device='cuda:2')
+compute distance is  tensor(141.0860, device='cuda:2')
+compute distance is  tensor(113.3648, device='cuda:2')
+compute distance is  tensor(133.0546, device='cuda:2')
+compute distance is  tensor(87.7896, device='cuda:2')
+compute distance is  tensor(95.0150, device='cuda:2')
+compute distance is  tensor(101.3218, device='cuda:2')
+compute distance is  tensor(111.7383, device='cuda:2')
+calculated distance threshold is  tensor(127.4315, device='cuda:2')
+pinned_accuracy threshold is  0.840700000157001
+====================
+iteration is  0
+round is  0
+accuracy is  0.3803833334896742
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.46580000015634176
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.26951666682300546
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  0
+accuracy is  0.5116000001563421
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.2100666668230034
+====================
+succ_min + 1
+________________________________
+test distance is  tensor(4278.1660, device='cuda:2')
+test acc is  0.2100666668230034
+test loss is 18.578443282194485
+test entropy is  0.04504808982405295
+________________________________
+cal_distance is  tensor(738.3585, device='cuda:2', dtype=torch.float64)
+cal_distance is  tensor(127.4316, device='cuda:2', dtype=torch.float64)
+cal_distance is  tensor(21.9932, device='cuda:2', dtype=torch.float64)
+________________________________
+test distance is  tensor(21.9932, device='cuda:2')
+test acc is  0.856900000156323
+test loss is 0.5773248203924851
+test entropy is  0.11549210265628311
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.11549210265628311
+avg test loss is  0.5773248203924851
+avg accuracy is  0.856900000156323
+compute_distance is  tensor(21.9932, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.04335033380042221
+avg test loss is  15.101199545585779
+avg accuracy is  0.20943333348967005
+compute_distance is  tensor(65.4297, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(65.4297, device='cuda:2')
+test acc is  0.20943333348967005
+test loss is 15.101199545585779
+test entropy is  0.04335033380042221
+________________________________
+new distance ratio is 0.7438016528925617
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 24, 25, 26, 27, 28, 29, 30, 31, 16, 17, 18, 19, 20, 21, 22, 23, 8, 9, 10, 11, 12, 13, 14, 15]
+left index is  [0, 1, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 25, 16, 17, 18, 19, 20, 21, 22, 23, 8, 9, 10, 11, 12, 13, 14, 15]
+ 
+Avg Training Stats after 24 global rounds:
+Train Accuracy: 98.64% 
+
+Test Accuracy: 98.70% 
+
+
+ | Global Training Round : 25 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+distance ratio is <class 'float'>
+compare_res is  0.0002057342353509739
+attack res is False
+len of model dicts is  10
+compute distance is  tensor(58.8261, device='cuda:2')
+compute distance is  tensor(73.7721, device='cuda:2')
+compute distance is  tensor(61.0784, device='cuda:2')
+compute distance is  tensor(75.9539, device='cuda:2')
+compute distance is  tensor(56.6045, device='cuda:2')
+compute distance is  tensor(59.0268, device='cuda:2')
+compute distance is  tensor(60.8767, device='cuda:2')
+compute distance is  tensor(55.8228, device='cuda:2')
+compute distance is  tensor(67.9018, device='cuda:2')
+compute distance is  tensor(78.5692, device='cuda:2')
+calculated distance threshold is  tensor(71.2035, device='cuda:2')
+pinned_accuracy threshold is  0.840700000157001
+====================
+iteration is  0
+round is  0
+accuracy is  0.596250000156338
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.6646333334896662
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.5222833334896755
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  0
+accuracy is  0.6939333334896646
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.5889000001563387
+====================
+________________________________
+test distance is  tensor(4281.6890, device='cuda:2')
+test acc is  0.5222833334896755
+test loss is 3.614075976267044
+test entropy is  0.20764583964814257
+________________________________
+cal_distance is  tensor(552.1516, device='cuda:2', dtype=torch.float64)
+cal_distance is  tensor(71.2036, device='cuda:2', dtype=torch.float64)
+cal_distance is  tensor(9.1824, device='cuda:2', dtype=torch.float64)
+________________________________
+test distance is  tensor(9.1824, device='cuda:2')
+test acc is  0.9889166668229852
+test loss is 0.04090370492883309
+test entropy is  0.02037832703934285
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.02037832703934285
+avg test loss is  0.04090370492883309
+avg accuracy is  0.9889166668229852
+compute_distance is  tensor(9.1824, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.22383067015804717
+avg test loss is  2.9377417420781753
+avg accuracy is  0.5407333334896757
+compute_distance is  tensor(82.3525, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(82.3525, device='cuda:2')
+test acc is  0.5407333334896757
+test loss is 2.9377417420781753
+test entropy is  0.22383067015804717
+________________________________
+cal_distance is  tensor(76.5754, device='cuda:2')
+cal_distance is  tensor(71.2036, device='cuda:2')
+cal_distance is  tensor(66.2086, device='cuda:2')
+________________________________
+test distance is  tensor(66.2086, device='cuda:2')
+test acc is  0.7783666668229933
+test loss is 0.9398777839312675
+test entropy is  0.1869108475554091
+________________________________
+new distance ratio is 0.6761833208114197
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 32, 33, 34, 35, 36, 37, 38, 39]
+left index is  [0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 33, 34, 38]
+ 
+Avg Training Stats after 25 global rounds:
+Train Accuracy: 98.33% 
+
+Test Accuracy: 98.37% 
+
+
+ | Global Training Round : 26 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+distance ratio is <class 'float'>
+compare_res is  0.00012581089686136693
+attack res is False
+len of model dicts is  10
+compute distance is  tensor(44.6808, device='cuda:2')
+compute distance is  tensor(90.4167, device='cuda:2')
+compute distance is  tensor(82.0517, device='cuda:2')
+compute distance is  tensor(113.8551, device='cuda:2')
+compute distance is  tensor(78.8458, device='cuda:2')
+compute distance is  tensor(80.2681, device='cuda:2')
+compute distance is  tensor(79.4021, device='cuda:2')
+compute distance is  tensor(58.1448, device='cuda:2')
+compute distance is  tensor(91.4375, device='cuda:2')
+compute distance is  tensor(79.4500, device='cuda:2')
+calculated distance threshold is  tensor(87.2031, device='cuda:2')
+pinned_accuracy threshold is  0.840700000157001
+====================
+iteration is  0
+round is  0
+accuracy is  0.34373333348967366
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.6548166668230004
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.39396666682300757
+====================
+====================
+iteration is  1
+round is  0
+accuracy is  0.5986166668230045
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.483500000156342
+====================
+________________________________
+test distance is  tensor(4280.0742, device='cuda:2')
+test acc is  0.34373333348967366
+test loss is 6.904310678622362
+test entropy is  0.13680901447100552
+________________________________
+cal_distance is  tensor(610.9302, device='cuda:2', dtype=torch.float64)
+cal_distance is  tensor(87.2031, device='cuda:2', dtype=torch.float64)
+cal_distance is  tensor(12.4474, device='cuda:2', dtype=torch.float64)
+________________________________
+test distance is  tensor(12.4474, device='cuda:2')
+test acc is  0.9860333334896518
+test loss is 0.04992122613161601
+test entropy is  0.0262017491736699
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.0262017491736699
+avg test loss is  0.04992122613161601
+avg accuracy is  0.9860333334896518
+compute_distance is  tensor(12.4474, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.12718215750367529
+avg test loss is  5.91637137500462
+avg accuracy is  0.3250333334896733
+compute_distance is  tensor(78.4827, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(78.4827, device='cuda:2')
+test acc is  0.3250333334896733
+test loss is 5.91637137500462
+test entropy is  0.12718215750367529
+________________________________
+new distance ratio is 0.6147121098285634
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 8, 9, 10, 11, 12, 13, 14, 15]
+left index is  [0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 10, 11, 15]
+ 
+Avg Training Stats after 26 global rounds:
+Train Accuracy: 97.20% 
+
+Test Accuracy: 97.47% 
+
+
+ | Global Training Round : 27 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+distance ratio is <class 'float'>
+compare_res is  0.0019587804563343525
+attack res is False
+len of model dicts is  10
+compute distance is  tensor(61.2681, device='cuda:2')
+compute distance is  tensor(76.0556, device='cuda:2')
+compute distance is  tensor(96.6996, device='cuda:2')
+compute distance is  tensor(86.9575, device='cuda:2')
+compute distance is  tensor(73.0595, device='cuda:2')
+compute distance is  tensor(68.7787, device='cuda:2')
+compute distance is  tensor(79.9299, device='cuda:2')
+compute distance is  tensor(94.7557, device='cuda:2')
+compute distance is  tensor(94.6332, device='cuda:2')
+compute distance is  tensor(108.6973, device='cuda:2')
+calculated distance threshold is  tensor(87.7729, device='cuda:2')
+pinned_accuracy threshold is  0.840700000157001
+====================
+iteration is  0
+round is  0
+accuracy is  0.38256666682300755
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.5281500001563423
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.5316333334896756
+====================
+====================
+iteration is  1
+round is  0
+accuracy is  0.35580000015634045
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.4826500001563419
+====================
+________________________________
+test distance is  tensor(4281.7847, device='cuda:2')
+test acc is  0.35580000015634045
+test loss is 9.890028066980813
+test entropy is  0.08419063536009427
+________________________________
+cal_distance is  tensor(613.0455, device='cuda:2', dtype=torch.float64)
+cal_distance is  tensor(87.7730, device='cuda:2', dtype=torch.float64)
+cal_distance is  tensor(12.5671, device='cuda:2', dtype=torch.float64)
+________________________________
+test distance is  tensor(12.5671, device='cuda:2')
+test acc is  0.9742333334896522
+test loss is 0.0929636872677405
+test entropy is  0.04029764208515961
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.04029764208515961
+avg test loss is  0.0929636872677405
+avg accuracy is  0.9742333334896522
+compute_distance is  tensor(12.5671, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.08813425520462777
+avg test loss is  8.496104204832617
+avg accuracy is  0.36645000015634066
+compute_distance is  tensor(72.4703, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(72.4703, device='cuda:2')
+test acc is  0.36645000015634066
+test loss is 8.496104204832617
+test entropy is  0.08813425520462777
+________________________________
+new distance ratio is 0.5588291907532394
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 16, 17, 18, 19, 20, 21, 22, 23]
+left index is  [1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 16, 17, 20, 23]
+ 
+Avg Training Stats after 27 global rounds:
+Train Accuracy: 96.78% 
+
+Test Accuracy: 97.12% 
+
+
+ | Global Training Round : 28 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+distance ratio is <class 'float'>
+compare_res is  0.0037986382376402617
+attack res is False
+len of model dicts is  10
+compute distance is  tensor(80.9052, device='cuda:2')
+compute distance is  tensor(106.0194, device='cuda:2')
+compute distance is  tensor(96.5183, device='cuda:2')
+compute distance is  tensor(86.3678, device='cuda:2')
+compute distance is  tensor(65.1089, device='cuda:2')
+compute distance is  tensor(79.9915, device='cuda:2')
+compute distance is  tensor(85.0465, device='cuda:2')
+compute distance is  tensor(89.3048, device='cuda:2')
+compute distance is  tensor(102.1196, device='cuda:2')
+compute distance is  tensor(74.1034, device='cuda:2')
+calculated distance threshold is  tensor(85.8925, device='cuda:2')
+pinned_accuracy threshold is  0.840700000157001
+====================
+iteration is  0
+round is  0
+accuracy is  0.33173333348967343
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.3639166668230072
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.6627166668229997
+====================
+====================
+iteration is  1
+round is  0
+accuracy is  0.4655000001563418
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.35320000015634045
+====================
+________________________________
+test distance is  tensor(4282.4409, device='cuda:2')
+test acc is  0.33173333348967343
+test loss is 7.3803286806606785
+test entropy is  0.11359784448507435
+________________________________
+cal_distance is  tensor(606.4898, device='cuda:2', dtype=torch.float64)
+cal_distance is  tensor(85.8926, device='cuda:2', dtype=torch.float64)
+cal_distance is  tensor(12.1646, device='cuda:2', dtype=torch.float64)
+________________________________
+test distance is  tensor(12.1646, device='cuda:2')
+test acc is  0.9700166668229856
+test loss is 0.10803493409663727
+test entropy is  0.041021891715521834
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.041021891715521834
+avg test loss is  0.10803493409663727
+avg accuracy is  0.9700166668229856
+compute_distance is  tensor(12.1646, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.10604530781793442
+avg test loss is  6.2184148704065185
+avg accuracy is  0.3188833334896732
+compute_distance is  tensor(68.5948, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(68.5948, device='cuda:2')
+test acc is  0.3188833334896732
+test loss is 6.2184148704065185
+test entropy is  0.10604530781793442
+________________________________
+new distance ratio is 0.5080265370483995
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 24, 25, 26, 27, 28, 29, 30, 31, 8, 9, 10, 11, 12, 13, 14, 15]
+left index is  [0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 24, 25, 27, 8, 9, 10, 11, 12, 13, 15]
+ 
+Avg Training Stats after 28 global rounds:
+Train Accuracy: 98.46% 
+
+Test Accuracy: 98.60% 
+
+
+ | Global Training Round : 29 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+distance ratio is <class 'float'>
+compare_res is  0.006008837837725878
+attack res is True
+len of model dicts is  10
+compute distance is  tensor(54.3060, device='cuda:2')
+compute distance is  tensor(91.5153, device='cuda:2')
+compute distance is  tensor(86.0401, device='cuda:2')
+compute distance is  tensor(113.5129, device='cuda:2')
+compute distance is  tensor(74.6302, device='cuda:2')
+compute distance is  tensor(87.1511, device='cuda:2')
+compute distance is  tensor(80.8934, device='cuda:2')
+compute distance is  tensor(60.4297, device='cuda:2')
+compute distance is  tensor(78.3738, device='cuda:2')
+compute distance is  tensor(89.5513, device='cuda:2')
+calculated distance threshold is  tensor(87.3926, device='cuda:2')
+pinned_accuracy threshold is  0.840700000157001
+====================
+iteration is  0
+round is  0
+accuracy is  0.4935166668230086
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.5689333334896737
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.5651666668230073
+====================
+====================
+iteration is  1
+round is  0
+accuracy is  0.46598333348967513
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.606366666823004
+====================
+________________________________
+test distance is  tensor(4279.6460, device='cuda:2')
+test acc is  0.46598333348967513
+test loss is 5.5860455679232635
+test entropy is  0.12856249638330708
+________________________________
+cal_distance is  tensor(611.5628, device='cuda:2', dtype=torch.float64)
+cal_distance is  tensor(87.3925, device='cuda:2', dtype=torch.float64)
+________________________________
+test distance is  tensor(87.3925, device='cuda:2')
+test acc is  0.9876833334896519
+test loss is 0.04451200544347049
+test entropy is  0.021875298715986573
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.021875298715986573
+avg test loss is  0.04451200544347049
+avg accuracy is  0.9876833334896519
+compute_distance is  tensor(87.3925, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.12436723158653103
+avg test loss is  4.902601247911514
+avg accuracy is  0.46801666682300846
+compute_distance is  tensor(114.5156, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(114.5156, device='cuda:2')
+test acc is  0.46801666682300846
+test loss is 4.902601247911514
+test entropy is  0.12436723158653103
+________________________________
+cal_distance is  tensor(100.0395, device='cuda:2')
+cal_distance is  tensor(87.3934, device='cuda:2')
+cal_distance is  tensor(76.3460, device='cuda:2')
+________________________________
+test distance is  tensor(76.3460, device='cuda:2')
+test acc is  0.8194500001563246
+test loss is 0.7670671206468077
+test entropy is  0.14932518641450512
+________________________________
+new distance ratio is 0.5588291907532396
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+left index is  [2, 3, 4, 5, 6, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+ 
+Avg Training Stats after 29 global rounds:
+Train Accuracy: 97.00% 
+
+Test Accuracy: 97.16% 
+
+
+ | Global Training Round : 30 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+distance ratio is <class 'float'>
+compare_res is  0.00782813224941492
+attack res is True
+len of model dicts is  10
+compute distance is  tensor(103.9518, device='cuda:2')
+compute distance is  tensor(90.9939, device='cuda:2')
+compute distance is  tensor(102.2446, device='cuda:2')
+compute distance is  tensor(99.3032, device='cuda:2')
+compute distance is  tensor(77.3895, device='cuda:2')
+compute distance is  tensor(71.4425, device='cuda:2')
+compute distance is  tensor(104.1106, device='cuda:2')
+compute distance is  tensor(84.1456, device='cuda:2')
+compute distance is  tensor(99.8701, device='cuda:2')
+compute distance is  tensor(52.3601, device='cuda:2')
+calculated distance threshold is  tensor(84.1718, device='cuda:2')
+pinned_accuracy threshold is  0.840700000157001
+====================
+iteration is  0
+round is  0
+accuracy is  0.3993833334896744
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.22326666682300395
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  2
+accuracy is  0.34181666682300693
+====================
+====================
+iteration is  1
+round is  0
+accuracy is  0.34903333348967364
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.586683333489672
+====================
+________________________________
+test distance is  tensor(4280.0215, device='cuda:2')
+test acc is  0.22326666682300395
+test loss is 21.159897265403764
+test entropy is  0.04754945657688624
+________________________________
+cal_distance is  tensor(600.2142, device='cuda:2', dtype=torch.float64)
+cal_distance is  tensor(84.1718, device='cuda:2', dtype=torch.float64)
+cal_distance is  tensor(11.8042, device='cuda:2', dtype=torch.float64)
+________________________________
+test distance is  tensor(11.8042, device='cuda:2')
+test acc is  0.9722833334896523
+test loss is 0.0984584619437344
+test entropy is  0.0411346140716633
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.0411346140716633
+avg test loss is  0.0984584619437344
+avg accuracy is  0.9722833334896523
+compute_distance is  tensor(11.8042, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.04697477231189402
+avg test loss is  16.97367754165552
+avg accuracy is  0.22841666682300413
+compute_distance is  tensor(75.8030, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(75.8030, device='cuda:2')
+test acc is  0.22841666682300413
+test loss is 16.97367754165552
+test entropy is  0.04697477231189402
+________________________________
+new distance ratio is 0.6147121098285636
+[0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 32, 33, 34, 35, 36, 37, 38, 39, 16, 17, 18, 19, 20, 21, 22, 23, 8, 9, 10, 11, 12, 13, 14, 15]
+left index is  [0, 1, 2, 3, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 34, 16, 17, 18, 19, 20, 22, 23, 8, 9, 10, 11, 12, 13, 14, 15]
+ 
+Avg Training Stats after 30 global rounds:
+Train Accuracy: 98.45% 
+
+Test Accuracy: 98.65% 
+
+ 
+ Results after 30 global rounds of training:
+|---- Avg testing Accuracy across each device's data: 98.45%
+|----0th round Training Accuracy : 96.46%
+|----1th round Training Accuracy : 97.47%
+|----2th round Training Accuracy : 97.84%
+|----3th round Training Accuracy : 98.14%
+|----4th round Training Accuracy : 98.13%
+|----5th round Training Accuracy : 98.35%
+|----6th round Training Accuracy : 98.48%
+|----7th round Training Accuracy : 98.62%
+|----8th round Training Accuracy : 98.64%
+|----9th round Training Accuracy : 98.53%
+|----10th round Training Accuracy : 98.74%
+|----11th round Training Accuracy : 98.73%
+|----12th round Training Accuracy : 98.77%
+|----13th round Training Accuracy : 98.78%
+|----14th round Training Accuracy : 98.77%
+|----15th round Training Accuracy : 98.85%
+|----16th round Training Accuracy : 98.86%
+|----17th round Training Accuracy : 98.90%
+|----18th round Training Accuracy : 98.82%
+|----19th round Training Accuracy : 98.90%
+|----20th round Training Accuracy : 98.77%
+|----21th round Training Accuracy : 98.06%
+|----22th round Training Accuracy : 85.40%
+|----23th round Training Accuracy : 98.64%
+|----24th round Training Accuracy : 98.33%
+|----25th round Training Accuracy : 97.20%
+|----26th round Training Accuracy : 96.78%
+|----27th round Training Accuracy : 98.46%
+|----28th round Training Accuracy : 97.00%
+|----29th round Training Accuracy : 98.45%
+|----Final Test Accuracy: 98.65%
+|----0th round Final Test Accuracy : 96.93%
+|----1th round Final Test Accuracy : 97.77%
+|----2th round Final Test Accuracy : 98.10%
+|----3th round Final Test Accuracy : 98.27%
+|----4th round Final Test Accuracy : 98.42%
+|----5th round Final Test Accuracy : 98.54%
+|----6th round Final Test Accuracy : 98.69%
+|----7th round Final Test Accuracy : 98.70%
+|----8th round Final Test Accuracy : 98.75%
+|----9th round Final Test Accuracy : 98.78%
+|----10th round Final Test Accuracy : 98.79%
+|----11th round Final Test Accuracy : 98.90%
+|----12th round Final Test Accuracy : 98.89%
+|----13th round Final Test Accuracy : 98.93%
+|----14th round Final Test Accuracy : 98.98%
+|----15th round Final Test Accuracy : 99.01%
+|----16th round Final Test Accuracy : 99.01%
+|----17th round Final Test Accuracy : 99.04%
+|----18th round Final Test Accuracy : 99.06%
+|----19th round Final Test Accuracy : 99.07%
+|----20th round Final Test Accuracy : 98.78%
+|----21th round Final Test Accuracy : 98.33%
+|----22th round Final Test Accuracy : 85.77%
+|----23th round Final Test Accuracy : 98.70%
+|----24th round Final Test Accuracy : 98.37%
+|----25th round Final Test Accuracy : 97.47%
+|----26th round Final Test Accuracy : 97.12%
+|----27th round Final Test Accuracy : 98.60%
+|----28th round Final Test Accuracy : 97.16%
+|----29th round Final Test Accuracy : 98.65%
+
+Experimental details:
+    Dataset     : mnist
+    Model     : cnn
+    detailed Model     : vgg
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 30
+
+    Federated parameters:
+    IID
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.2
+     Model attack is done!
+
+ Total Run Time: 4981.6128

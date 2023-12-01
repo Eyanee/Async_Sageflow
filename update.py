@@ -27,7 +27,7 @@ class DatasetSplit(Dataset):
 
 
 class LocalUpdate(object):
-    def __init__(self, args, dataset, idxs, idx,data_poison, inverse_poison, labelmap = {}, delay=False):
+    def __init__(self, args, dataset, idxs, idx,data_poison, labelmap = {}, delay=False):
         self.args = args
         self.idx= idx
         self.trainloader, self.testloader = self.train_val_test(dataset, list(idxs))
@@ -36,7 +36,6 @@ class LocalUpdate(object):
         self.criterion = nn.NLLLoss().to(self.device)
         self.delay = delay
         self.data_poison = data_poison
-        self.inverse_poison = inverse_poison
         self.labelmap = labelmap
 
     def train_val_test(self, dataset, idxs):
@@ -74,12 +73,10 @@ class LocalUpdate(object):
             for batch_idx, (images, labels) in enumerate(self.trainloader):
                 images, labels = images.to(self.device), labels.to(self.device)
                 # print("label is ", labels) # 在这个地方对label进行对应的反转 使用list对应下标进行修改
-                if self.inverse_poison == True:
-                    # 按照字典中对应的值进行修改
-                    for i in range(1,11):
-                        labels = torch.where(labels == i, self.labelmap[i], labels)
                     
+                if self.data_poison ==True:
 
+                    labels = (labels+1)%10
                 model.zero_grad()
                 log_probs,_ = model(images)
                 loss = self.criterion(log_probs, labels)

@@ -1,0 +1,2983 @@
+
+Experimental details:
+    Dataset     : mnist
+    Model     : cnn
+    detailed Model     : vgg
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 30
+
+    Federated parameters:
+    Non-IID with common data
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.2
+     Model attack is done!
+CNNMnist(
+  (conv1): Conv2d(1, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+  (conv2): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+  (fc1): Linear(in_features=3136, out_features=1024, bias=True)
+  (fc2): Linear(in_features=1024, out_features=10, bias=True)
+)
+attack user num is  10
+ t is  8
+attack_user is [40 41 42 43 44 45 46 47 48 49]
+
+ | Global Training Round : 1 | 
+
+current submit client idx and staleness is  0 1
+
+Experimental details:
+    Dataset     : mnist
+    Model     : cnn
+    detailed Model     : vgg
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 30
+
+    Federated parameters:
+    Non-IID with common data
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.2
+     Model attack is done!
+CNNMnist(
+  (conv1): Conv2d(1, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+  (conv2): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+  (fc1): Linear(in_features=3136, out_features=1024, bias=True)
+  (fc2): Linear(in_features=1024, out_features=10, bias=True)
+)
+attack user num is  10
+ t is  8
+attack_user is [40 41 42 43 44 45 46 47 48 49]
+
+ | Global Training Round : 1 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+finish loop
+local weights len is  8
+left index is  [8, 10, 11, 12, 13, 14, 15]
+local weights len is  8
+left index is  [17, 18, 19, 20, 21, 22, 23]
+local weights len is  8
+left index is  [25, 26, 27, 28, 29, 30, 31]
+local weights len is  8
+left index is  [32, 33, 34, 35, 36, 37, 39]
+local weights len is  18
+left index is  [0, 1, 2, 4, 5, 6, 7, 41, 42, 43, 44, 45, 46, 47, 48]
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 1 global rounds:
+Train Accuracy: 40.29% 
+
+Test Accuracy: 46.38% 
+
+
+ | Global Training Round : 2 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+finish loop
+local weights len is  18
+left index is  [0, 1, 2, 3, 4, 5, 6, 41, 42, 43, 44, 45, 46, 47, 48]
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 2 global rounds:
+Train Accuracy: 63.32% 
+
+Test Accuracy: 67.68% 
+
+
+ | Global Training Round : 3 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+finish loop
+local weights len is  8
+left index is  [8, 9, 10, 11, 12, 14, 15]
+local weights len is  18
+left index is  [0, 2, 3, 4, 5, 6, 40, 41, 42, 43, 44, 46, 47, 48, 49]
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 3 global rounds:
+Train Accuracy: 67.64% 
+
+Test Accuracy: 70.74% 
+
+
+ | Global Training Round : 4 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+finish loop
+local weights len is  8
+left index is  [17, 18, 19, 20, 21, 22, 23]
+local weights len is  18
+left index is  [0, 1, 2, 4, 5, 6, 40, 41, 42, 43, 44, 45, 46, 47, 48]
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 4 global rounds:
+Train Accuracy: 86.28% 
+
+Test Accuracy: 86.78% 
+
+
+ | Global Training Round : 5 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+finish loop
+local weights len is  8
+left index is  [8, 9, 10, 11, 12, 13, 15]
+local weights len is  8
+left index is  [24, 25, 26, 28, 29, 30, 31]
+local weights len is  18
+left index is  [0, 2, 3, 4, 6, 7, 40, 41, 42, 43, 44, 46, 47, 48, 49]
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 5 global rounds:
+Train Accuracy: 74.34% 
+
+Test Accuracy: 76.92% 
+
+
+ | Global Training Round : 6 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+finish loop
+local weights len is  8
+left index is  [32, 33, 34, 35, 36, 37, 39]
+local weights len is  18
+left index is  [0, 1, 2, 4, 5, 6, 7, 40, 41, 42, 43, 44, 45, 46, 47]
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 6 global rounds:
+Train Accuracy: 92.44% 
+
+Test Accuracy: 92.05% 
+
+
+ | Global Training Round : 7 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+finish loop
+local weights len is  8
+left index is  [8, 9, 10, 11, 12, 14, 15]
+local weights len is  8
+left index is  [16, 17, 18, 19, 21, 22, 23]
+local weights len is  8
+left index is  [0, 1, 2, 4, 5, 6, 7]
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 7 global rounds:
+Train Accuracy: 82.37% 
+
+Test Accuracy: 81.73% 
+
+
+ | Global Training Round : 8 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+finish loop
+local weights len is  8
+left index is  [0, 1, 2, 4, 5, 6, 7]
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 8 global rounds:
+Train Accuracy: 88.29% 
+
+Test Accuracy: 87.72% 
+
+
+ | Global Training Round : 9 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+finish loop
+local weights len is  8
+left index is  [8, 9, 11, 12, 13, 14, 15]
+local weights len is  8
+left index is  [24, 25, 26, 27, 29, 30, 31]
+local weights len is  8
+left index is  [0, 1, 2, 4, 5, 6, 7]
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 9 global rounds:
+Train Accuracy: 91.73% 
+
+Test Accuracy: 91.84% 
+
+
+ | Global Training Round : 10 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+finish loop
+local weights len is  8
+left index is  [17, 18, 19, 20, 21, 22, 23]
+local weights len is  8
+left index is  [0, 1, 2, 4, 5, 6, 7]
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 10 global rounds:
+Train Accuracy: 93.75% 
+
+Test Accuracy: 93.02% 
+
+
+ | Global Training Round : 11 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+finish loop
+local weights len is  8
+left index is  [8, 9, 10, 11, 12, 14, 15]
+local weights len is  8
+left index is  [32, 34, 35, 36, 37, 38, 39]
+local weights len is  8
+left index is  [0, 1, 2, 4, 5, 6, 7]
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 11 global rounds:
+Train Accuracy: 85.67% 
+
+Test Accuracy: 85.77% 
+
+
+ | Global Training Round : 12 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+finish loop
+local weights len is  8
+left index is  [0, 1, 2, 4, 5, 6, 7]
+the length of epoch_weights is  3
+ 
+Avg Training Stats after 12 global rounds:
+Train Accuracy: 93.22% 
+
+Test Accuracy: 92.84% 
+
+
+ | Global Training Round : 13 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+finish loop
+local weights len is  8
+left index is  [8, 9, 10, 11, 12, 14, 15]
+local weights len is  8
+left index is  [16, 17, 18, 19, 20, 21, 23]
+local weights len is  8
+left index is  [24, 25, 26, 27, 28, 30, 31]
+local weights len is  8
+left index is  [0, 1, 2, 4, 5, 6, 7]
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 13 global rounds:
+Train Accuracy: 87.74% 
+
+Test Accuracy: 86.97% 
+
+
+ | Global Training Round : 14 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+finish loop
+local weights len is  8
+left index is  [0, 1, 2, 4, 5, 6, 7]
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 14 global rounds:
+Train Accuracy: 90.46% 
+
+Test Accuracy: 88.61% 
+
+
+ | Global Training Round : 15 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+finish loop
+local weights len is  8
+left index is  [8, 9, 11, 12, 13, 14, 15]
+local weights len is  8
+left index is  [0, 1, 2, 4, 5, 6, 7]
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 15 global rounds:
+Train Accuracy: 95.15% 
+
+Test Accuracy: 94.97% 
+
+
+ | Global Training Round : 16 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 3
+current submit client idx and staleness is  19 3
+current submit client idx and staleness is  20 3
+current submit client idx and staleness is  21 3
+current submit client idx and staleness is  22 3
+current submit client idx and staleness is  23 3
+current submit client idx and staleness is  32 5
+current submit client idx and staleness is  33 5
+current submit client idx and staleness is  34 5
+current submit client idx and staleness is  35 5
+current submit client idx and staleness is  36 5
+current submit client idx and staleness is  37 5
+current submit client idx and staleness is  38 5
+current submit client idx and staleness is  39 5
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+finish loop
+local weights len is  8
+left index is  [16, 17, 18, 19, 20, 21, 23]
+local weights len is  8
+left index is  [32, 34, 35, 36, 37, 38, 39]
+local weights len is  8
+left index is  [0, 1, 2, 4, 5, 6, 7]
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 16 global rounds:
+Train Accuracy: 95.42% 
+
+Test Accuracy: 94.95% 
+
+
+ | Global Training Round : 17 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 1
+current submit client idx and staleness is  7 1
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 2
+current submit client idx and staleness is  13 2
+current submit client idx and staleness is  14 2
+current submit client idx and staleness is  15 2
+current submit client idx and staleness is  24 4
+current submit client idx and staleness is  25 4
+current submit client idx and staleness is  26 4
+current submit client idx and staleness is  27 4
+current submit client idx and staleness is  28 4
+current submit client idx and staleness is  29 4
+current submit client idx and staleness is  30 4
+current submit client idx and staleness is  31 4
+current submit client idx and staleness is  40 1
+current submit client idx and staleness is  41 1
+current submit client idx and staleness is  42 1
+current submit client idx and staleness is  43 1
+current submit client idx and staleness is  44 1
+current submit client idx and staleness is  45 1
+current submit client idx and staleness is  46 1
+current submit client idx and staleness is  47 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+finish loop
+len of model dicts is  10
+compute distance is  tensor(43.6418, device='cuda:1')
+compute distance is  tensor(39.3570, device='cuda:1')
+compute distance is  tensor(67.4086, device='cuda:1')
+compute distance is  tensor(49.0643, device='cuda:1')
+compute distance is  tensor(27.3200, device='cuda:1')
+compute distance is  tensor(51.1164, device='cuda:1')
+compute distance is  tensor(54.6630, device='cuda:1')
+compute distance is  tensor(41.3266, device='cuda:1')
+compute distance is  tensor(88.2085, device='cuda:1')
+compute distance is  tensor(83.2725, device='cuda:1')
+ distance_threshold is  tensor(76.0308, device='cuda:1')
+====================
+iteration is  0
+round is  0
+accuracy is  0.8302500001563242
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8098333334896584
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8210333334896579
+====================
+====================
+iteration is  1
+round is  0
+accuracy is  0.7025666668229974
+====================
+++++++++++++++++++++
+Round:   0
+compute_entropy is  0.5527824138972297
+compute_loss is  0.8400316417598521
+compute_acc is  0.7025666668229974
+compute_distance is  tensor(2354.5173, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.9677, device='cuda:1')
+scaled distance is  tensor(76.0309, device='cuda:1')
+ratio is  tensor(2.0069e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+ratio is  tensor(1.0035e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+ratio is  tensor(1.0035e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+ratio is  tensor(1.0035e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+ratio is  tensor(1.0035e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   1
+compute_entropy is  0.2862970647829047
+compute_loss is  0.18118769227306664
+compute_acc is  0.9493000001563197
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.2862970647829047
+avg test loss is  0.18118769227306664
+avg accuracy is  0.9493000001563197
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5157017553729544
+avg test loss is  0.7930653331948242
+avg accuracy is  0.7200000001563297
+compute_distance is  tensor(103.6985, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   2
+compute_entropy is  0.5157017553729544
+compute_loss is  0.7930653331948242
+compute_acc is  0.7200000001563297
+compute_distance is  tensor(103.6985, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.2668, device='cuda:1')
+scaled distance is  tensor(76.0320, device='cuda:1')
+ratio is  tensor(1.5754e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   3
+compute_entropy is  0.4595796257130373
+compute_loss is  0.46300224183020056
+compute_acc is  0.8361166668229906
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.4595796257130373
+avg test loss is  0.46300224183020056
+avg accuracy is  0.8361166668229906
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5220109511222413
+avg test loss is  0.8141470921954621
+avg accuracy is  0.7162666668229966
+compute_distance is  tensor(112.2848, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   4
+compute_entropy is  0.5220109511222413
+compute_loss is  0.8141470921954621
+compute_acc is  0.7162666668229966
+compute_distance is  tensor(112.2848, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.3229, device='cuda:1')
+scaled distance is  tensor(76.0329, device='cuda:1')
+ratio is  tensor(2.7193e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   5
+compute_entropy is  0.44062141851702735
+compute_loss is  0.41588661745826067
+compute_acc is  0.8566500001563231
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.44062141851702735
+avg test loss is  0.41588661745826067
+avg accuracy is  0.8566500001563231
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5226714353698657
+avg test loss is  0.8168790497060524
+avg accuracy is  0.7155166668229965
+compute_distance is  tensor(114.8982, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   6
+compute_entropy is  0.5226714353698657
+compute_loss is  0.8168790497060524
+compute_acc is  0.7155166668229965
+compute_distance is  tensor(114.8982, device='cuda:1')
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+round is  0
+accuracy is  0.8203000001563245
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8624000001563229
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8337666668229906
+====================
+====================
+iteration is  1
+round is  0
+accuracy is  0.7410833334896616
+====================
+scale....
+ratio is  tensor(0.3383, device='cuda:1')
+scaled distance is  tensor(76.0333, device='cuda:1')
+ratio is  tensor(3.2912e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   1
+compute_entropy is  0.43080799853496715
+compute_loss is  0.3979451008824143
+compute_acc is  0.8643000001563229
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.43080799853496715
+avg test loss is  0.3979451008824143
+avg accuracy is  0.8643000001563229
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5084817965528858
+avg test loss is  0.6775055542302284
+avg accuracy is  0.7488166668229946
+compute_distance is  tensor(104.9874, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   2
+compute_entropy is  0.5084817965528858
+compute_loss is  0.6775055542302284
+compute_acc is  0.7488166668229946
+compute_distance is  tensor(104.9874, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.2758, device='cuda:1')
+scaled distance is  tensor(76.0322, device='cuda:1')
+ratio is  tensor(1.7460e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   3
+compute_entropy is  0.4272214226059314
+compute_loss is  0.38435833640634887
+compute_acc is  0.8544166668229898
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.4272214226059314
+avg test loss is  0.38435833640634887
+avg accuracy is  0.8544166668229898
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5076784209401877
+avg test loss is  0.6956905975207083
+avg accuracy is  0.7456500001563281
+compute_distance is  tensor(115.0184, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   4
+compute_entropy is  0.5076784209401877
+compute_loss is  0.6956905975207083
+compute_acc is  0.7456500001563281
+compute_distance is  tensor(115.0184, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.3390, device='cuda:1')
+scaled distance is  tensor(76.0330, device='cuda:1')
+ratio is  tensor(2.8497e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   5
+compute_entropy is  0.40213892162481607
+compute_loss is  0.3373548775545951
+compute_acc is  0.8762666668229889
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.40213892162481607
+avg test loss is  0.3373548775545951
+avg accuracy is  0.8762666668229889
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5077876785734315
+avg test loss is  0.6983160630090913
+avg accuracy is  0.745250000156328
+compute_distance is  tensor(116.8713, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   6
+compute_entropy is  0.5077876785734315
+compute_loss is  0.6983160630090913
+compute_acc is  0.745250000156328
+compute_distance is  tensor(116.8713, device='cuda:1')
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+round is  0
+accuracy is  0.8370000001563239
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8213666668229912
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8374833334896573
+====================
+====================
+iteration is  1
+round is  0
+accuracy is  0.7864333334896595
+====================
+scale....
+ratio is  tensor(0.3494, device='cuda:1')
+scaled distance is  tensor(76.0333, device='cuda:1')
+ratio is  tensor(3.1809e-05, device='cuda:1')
+scaled distance is  tensor(76.0309, device='cuda:1')
+ratio is  tensor(2.0069e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   1
+compute_entropy is  0.3946303364310437
+compute_loss is  0.32679742782799676
+compute_acc is  0.8815666668229888
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.3946303364310437
+avg test loss is  0.32679742782799676
+avg accuracy is  0.8815666668229888
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5299663949114427
+avg test loss is  0.5536394873216971
+avg accuracy is  0.7989833334896589
+compute_distance is  tensor(107.1022, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   2
+compute_entropy is  0.5299663949114427
+compute_loss is  0.5536394873216971
+compute_acc is  0.7989833334896589
+compute_distance is  tensor(107.1022, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.2901, device='cuda:1')
+scaled distance is  tensor(76.0329, device='cuda:1')
+ratio is  tensor(2.7193e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   3
+compute_entropy is  0.42577979302228386
+compute_loss is  0.3238935673208252
+compute_acc is  0.8922666668229884
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.42577979302228386
+avg test loss is  0.3238935673208252
+avg accuracy is  0.8922666668229884
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5275015334076465
+avg test loss is  0.5618926487497683
+avg accuracy is  0.796433333489659
+compute_distance is  tensor(114.5057, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   4
+compute_entropy is  0.5275015334076465
+compute_loss is  0.5618926487497683
+compute_acc is  0.796433333489659
+compute_distance is  tensor(114.5057, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.3360, device='cuda:1')
+scaled distance is  tensor(76.0335, device='cuda:1')
+ratio is  tensor(3.4418e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   5
+compute_entropy is  0.4054164479790466
+compute_loss is  0.3001765475662024
+compute_acc is  0.902166666822988
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.4054164479790466
+avg test loss is  0.3001765475662024
+avg accuracy is  0.902166666822988
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5276086020317159
+avg test loss is  0.5661655506536142
+avg accuracy is  0.7954000001563256
+compute_distance is  tensor(116.1310, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   6
+compute_entropy is  0.5276086020317159
+compute_loss is  0.5661655506536142
+compute_acc is  0.7954000001563256
+compute_distance is  tensor(116.1310, device='cuda:1')
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+round is  0
+accuracy is  0.8537166668229899
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.868383333489656
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.6958333334896645
+====================
+scale....
+ratio is  tensor(0.3453, device='cuda:1')
+scaled distance is  tensor(76.0336, device='cuda:1')
+ratio is  tensor(3.6826e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   1
+compute_entropy is  0.39964979181665855
+compute_loss is  0.29462076508318946
+compute_acc is  0.904316666822988
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.39964979181665855
+avg test loss is  0.29462076508318946
+avg accuracy is  0.904316666822988
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5133587441274098
+avg test loss is  0.767542143842813
+avg accuracy is  0.7056833334896638
+compute_distance is  tensor(105.3950, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   2
+compute_entropy is  0.5133587441274098
+compute_loss is  0.767542143842813
+compute_acc is  0.7056833334896638
+compute_distance is  tensor(105.3950, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.2786, device='cuda:1')
+scaled distance is  tensor(76.0333, device='cuda:1')
+ratio is  tensor(3.1909e-05, device='cuda:1')
+scaled distance is  tensor(76.0309, device='cuda:1')
+ratio is  tensor(2.0069e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   3
+compute_entropy is  0.4451934739407192
+compute_loss is  0.3573189265867159
+compute_acc is  0.8732166668229892
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.4451934739407192
+avg test loss is  0.3573189265867159
+avg accuracy is  0.8732166668229892
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5138980477476425
+avg test loss is  0.7847044231540867
+avg accuracy is  0.7032166668229973
+compute_distance is  tensor(112.9417, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   4
+compute_entropy is  0.5138980477476425
+compute_loss is  0.7847044231540867
+compute_acc is  0.7032166668229973
+compute_distance is  tensor(112.9417, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.3268, device='cuda:1')
+scaled distance is  tensor(76.0337, device='cuda:1')
+ratio is  tensor(3.7528e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   5
+compute_entropy is  0.4298597146897936
+compute_loss is  0.3277243911219177
+compute_acc is  0.8879000001563219
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.4298597146897936
+avg test loss is  0.3277243911219177
+avg accuracy is  0.8879000001563219
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5133635623177994
+avg test loss is  0.784586383176765
+avg accuracy is  0.7038500001563306
+compute_distance is  tensor(115.0484, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   6
+compute_entropy is  0.5133635623177994
+compute_loss is  0.784586383176765
+compute_acc is  0.7038500001563306
+compute_distance is  tensor(115.0484, device='cuda:1')
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+round is  0
+accuracy is  0.7568500001563276
+====================
+scale....
+ratio is  tensor(0.3391, device='cuda:1')
+scaled distance is  tensor(76.0338, device='cuda:1')
+ratio is  tensor(3.9535e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   1
+compute_entropy is  0.423390084921297
+compute_loss is  0.3181772960195028
+compute_acc is  0.8924000001563216
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.423390084921297
+avg test loss is  0.3181772960195028
+avg accuracy is  0.8924000001563216
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5548005725211426
+avg test loss is  0.5669913265242505
+avg accuracy is  0.758033333489661
+compute_distance is  tensor(105.5078, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   2
+compute_entropy is  0.5548005725211426
+compute_loss is  0.5669913265242505
+compute_acc is  0.758033333489661
+compute_distance is  tensor(105.5078, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.2794, device='cuda:1')
+scaled distance is  tensor(76.0329, device='cuda:1')
+ratio is  tensor(2.6792e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+ratio is  tensor(1.0035e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+ratio is  tensor(1.0035e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   3
+compute_entropy is  0.45479704922577463
+compute_loss is  0.3038966081925292
+compute_acc is  0.9137666668229876
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.45479704922577463
+avg test loss is  0.3038966081925292
+avg accuracy is  0.9137666668229876
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5563368758857886
+avg test loss is  0.5882189199169562
+avg accuracy is  0.7529500001563278
+compute_distance is  tensor(113.4513, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   4
+compute_entropy is  0.5563368758857886
+compute_loss is  0.5882189199169562
+compute_acc is  0.7529500001563278
+compute_distance is  tensor(113.4513, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.3298, device='cuda:1')
+scaled distance is  tensor(76.0335, device='cuda:1')
+ratio is  tensor(3.5622e-05, device='cuda:1')
+scaled distance is  tensor(76.0309, device='cuda:1')
+ratio is  tensor(2.0069e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   5
+compute_entropy is  0.4302216703767207
+compute_loss is  0.28045055012045894
+compute_acc is  0.9213666668229873
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.4302216703767207
+avg test loss is  0.28045055012045894
+avg accuracy is  0.9213666668229873
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5552669948796982
+avg test loss is  0.5906962981419777
+avg accuracy is  0.7526500001563279
+compute_distance is  tensor(114.7133, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   6
+compute_entropy is  0.5552669948796982
+compute_loss is  0.5906962981419777
+compute_acc is  0.7526500001563279
+compute_distance is  tensor(114.7133, device='cuda:1')
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+round is  0
+accuracy is  0.7963333334896591
+====================
+scale....
+ratio is  tensor(0.3372, device='cuda:1')
+scaled distance is  tensor(76.0337, device='cuda:1')
+ratio is  tensor(3.7729e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   1
+compute_entropy is  0.42421586481111645
+compute_loss is  0.2756737680958786
+compute_acc is  0.9230500001563207
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.42421586481111645
+avg test loss is  0.2756737680958786
+avg accuracy is  0.9230500001563207
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5202067633236903
+avg test loss is  0.5114012888944479
+avg accuracy is  0.8071500001563253
+compute_distance is  tensor(106.5962, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.5223897919535383
+avg test loss is  0.5210861306327746
+avg accuracy is  0.8050333334896587
+compute_distance is  tensor(122.8150, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.521962233856797
+avg test loss is  0.5251879096825494
+avg accuracy is  0.804516666822992
+compute_distance is  tensor(133.3664, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.521186572592904
+avg test loss is  0.5266765914619096
+avg accuracy is  0.8037500001563254
+compute_distance is  tensor(141.2990, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   2
+compute_entropy is  0.5205684681055642
+compute_loss is  0.5271866803389114
+compute_acc is  0.8041333334896588
+compute_distance is  tensor(148.0857, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.4866, device='cuda:1')
+scaled distance is  tensor(76.0347, device='cuda:1')
+ratio is  tensor(5.0472e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+ratio is  tensor(1.0035e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   3
+compute_entropy is  0.3403476035830054
+compute_loss is  0.23121233272558844
+compute_acc is  0.933166666822987
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.3403476035830054
+avg test loss is  0.23121233272558844
+avg accuracy is  0.933166666822987
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5207317737119792
+avg test loss is  0.52453804835836
+avg accuracy is  0.8043666668229921
+compute_distance is  tensor(117.1671, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.5208681660738073
+avg test loss is  0.5267954744350936
+avg accuracy is  0.8035833334896587
+compute_distance is  tensor(135.0188, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.5202098787784069
+avg test loss is  0.5265164632977707
+avg accuracy is  0.8043500001563253
+compute_distance is  tensor(145.6066, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.5194471821284243
+avg test loss is  0.5263220309130927
+avg accuracy is  0.805166666822992
+compute_distance is  tensor(153.2133, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   4
+compute_entropy is  0.5188124552210257
+compute_loss is  0.5265201070288351
+compute_acc is  0.8056166668229919
+compute_distance is  tensor(159.6562, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.5238, device='cuda:1')
+scaled distance is  tensor(76.0346, device='cuda:1')
+ratio is  tensor(4.9669e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   5
+compute_entropy is  0.3246889840374623
+compute_loss is  0.21946920234082476
+compute_acc is  0.9372833334896534
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.3246889840374623
+avg test loss is  0.21946920234082476
+avg accuracy is  0.9372833334896534
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5202074496667268
+avg test loss is  0.525108699907245
+avg accuracy is  0.8040500001563254
+compute_distance is  tensor(117.6626, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.520392060406935
+avg test loss is  0.5269012209385443
+avg accuracy is  0.8038833334896588
+compute_distance is  tensor(136.5979, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.519613974320609
+avg test loss is  0.526255871361888
+avg accuracy is  0.8051000001563253
+compute_distance is  tensor(147.9026, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.5188295326825144
+avg test loss is  0.5262675332044487
+avg accuracy is  0.805466666822992
+compute_distance is  tensor(155.8138, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   6
+compute_entropy is  0.5182084983218708
+compute_loss is  0.5266205434288297
+compute_acc is  0.8056500001563253
+compute_distance is  tensor(162.3031, device='cuda:1')
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+round is  0
+accuracy is  0.8463333334896568
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.9070000001563212
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8062000001563253
+====================
+====================
+iteration is  1
+round is  0
+accuracy is  0.7625833334896606
+====================
+scale....
+ratio is  tensor(0.5316, device='cuda:1')
+scaled distance is  tensor(76.0346, device='cuda:1')
+ratio is  tensor(4.9267e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   1
+compute_entropy is  0.3199251854915355
+compute_loss is  0.21640581922379257
+compute_acc is  0.9381166668229868
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.3199251854915355
+avg test loss is  0.21640581922379257
+avg accuracy is  0.9381166668229868
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5205739282850009
+avg test loss is  0.7159742063233084
+avg accuracy is  0.7795666668229931
+compute_distance is  tensor(108.0358, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   2
+compute_entropy is  0.5205739282850009
+compute_loss is  0.7159742063233084
+compute_acc is  0.7795666668229931
+compute_distance is  tensor(108.0358, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.2962, device='cuda:1')
+scaled distance is  tensor(76.0325, device='cuda:1')
+ratio is  tensor(2.2377e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   3
+compute_entropy is  0.4134916935934187
+compute_loss is  0.35539699990802737
+compute_acc is  0.8701666668229893
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.4134916935934187
+avg test loss is  0.35539699990802737
+avg accuracy is  0.8701666668229893
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5225406809529262
+avg test loss is  0.7312929269188503
+avg accuracy is  0.7776500001563265
+compute_distance is  tensor(113.3471, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   4
+compute_entropy is  0.5225406809529262
+compute_loss is  0.7312929269188503
+compute_acc is  0.7776500001563265
+compute_distance is  tensor(113.3471, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.3292, device='cuda:1')
+scaled distance is  tensor(76.0331, device='cuda:1')
+ratio is  tensor(3.0304e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   5
+compute_entropy is  0.40473624433218036
+compute_loss is  0.34107697358740163
+compute_acc is  0.8757500001563224
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.40473624433218036
+avg test loss is  0.34107697358740163
+avg accuracy is  0.8757500001563224
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5226978107111286
+avg test loss is  0.7330663395461752
+avg accuracy is  0.7764333334896598
+compute_distance is  tensor(115.1613, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   6
+compute_entropy is  0.5226978107111286
+compute_loss is  0.7330663395461752
+compute_acc is  0.7764333334896598
+compute_distance is  tensor(115.1613, device='cuda:1')
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+round is  0
+accuracy is  0.8049500001563251
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8590166668229896
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8391500001563237
+====================
+====================
+iteration is  1
+round is  0
+accuracy is  0.8236166668229912
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.6915166668229981
+====================
+scale....
+ratio is  tensor(0.3398, device='cuda:1')
+scaled distance is  tensor(76.0334, device='cuda:1')
+ratio is  tensor(3.3314e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   1
+compute_entropy is  0.401005486213068
+compute_loss is  0.3349019999045934
+compute_acc is  0.8782333334896556
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.401005486213068
+avg test loss is  0.3349019999045934
+avg accuracy is  0.8782333334896556
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5241038900321481
+avg test loss is  0.842127650499598
+avg accuracy is  0.7043500001563306
+compute_distance is  tensor(108.4260, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   2
+compute_entropy is  0.5241038900321481
+compute_loss is  0.842127650499598
+compute_acc is  0.7043500001563306
+compute_distance is  tensor(108.4260, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.2988, device='cuda:1')
+scaled distance is  tensor(76.0335, device='cuda:1')
+ratio is  tensor(3.4919e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+ratio is  tensor(1.0035e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+ratio is  tensor(1.0035e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   3
+compute_entropy is  0.42752479982655694
+compute_loss is  0.37795480266848863
+compute_acc is  0.8687000001563226
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.42752479982655694
+avg test loss is  0.37795480266848863
+avg accuracy is  0.8687000001563226
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5228267398787968
+avg test loss is  0.8584019950330893
+avg accuracy is  0.6998666668229975
+compute_distance is  tensor(113.6279, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   4
+compute_entropy is  0.5228267398787968
+compute_loss is  0.8584019950330893
+compute_acc is  0.6998666668229975
+compute_distance is  tensor(113.6279, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.3309, device='cuda:1')
+scaled distance is  tensor(76.0338, device='cuda:1')
+ratio is  tensor(3.9434e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+ratio is  tensor(1.0035e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   5
+compute_entropy is  0.41342871477291276
+compute_loss is  0.35389512975904736
+compute_acc is  0.8795500001563221
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.41342871477291276
+avg test loss is  0.35389512975904736
+avg accuracy is  0.8795500001563221
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5218296822454376
+avg test loss is  0.8671221197413992
+avg accuracy is  0.6977666668229976
+compute_distance is  tensor(115.0651, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   6
+compute_entropy is  0.5218296822454376
+compute_loss is  0.8671221197413992
+compute_acc is  0.6977666668229976
+compute_distance is  tensor(115.0651, device='cuda:1')
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+round is  0
+accuracy is  0.8328833334896573
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.9081666668229877
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8668666668229894
+====================
+====================
+iteration is  1
+round is  0
+accuracy is  0.7980333334896589
+====================
+scale....
+ratio is  tensor(0.3392, device='cuda:1')
+scaled distance is  tensor(76.0340, device='cuda:1')
+ratio is  tensor(4.1140e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   1
+compute_entropy is  0.4087937533664805
+compute_loss is  0.3480595011494434
+compute_acc is  0.8820833334896554
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.4087937533664805
+avg test loss is  0.3480595011494434
+avg accuracy is  0.8820833334896554
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5851696238461842
+avg test loss is  0.5241656735666526
+avg accuracy is  0.8202833334896579
+compute_distance is  tensor(105.0240, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.5864704922318205
+avg test loss is  0.5399885498034929
+avg accuracy is  0.8155333334896582
+compute_distance is  tensor(121.9740, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.5848848680888158
+avg test loss is  0.5446700819773969
+avg accuracy is  0.8146000001563248
+compute_distance is  tensor(133.2093, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.5832072977762995
+avg test loss is  0.545974100576535
+avg accuracy is  0.8144333334896582
+compute_distance is  tensor(141.8164, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   2
+compute_entropy is  0.58265787401179
+compute_loss is  0.5475633664330694
+compute_acc is  0.8135500001563248
+compute_distance is  tensor(149.1594, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.4903, device='cuda:1')
+scaled distance is  tensor(76.0347, device='cuda:1')
+ratio is  tensor(5.1074e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   3
+compute_entropy is  0.3574386159462461
+compute_loss is  0.23950938908244246
+compute_acc is  0.9295833334896536
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.3574386159462461
+avg test loss is  0.23950938908244246
+avg accuracy is  0.9295833334896536
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5845320501815535
+avg test loss is  0.5422057629203492
+avg accuracy is  0.8154833334896582
+compute_distance is  tensor(118.5616, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.5836830164260193
+avg test loss is  0.5459833893853464
+avg accuracy is  0.8144500001563248
+compute_distance is  tensor(137.2390, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.5830048906650624
+avg test loss is  0.5483120671435714
+avg accuracy is  0.8142500001563248
+compute_distance is  tensor(148.4588, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.5824050930326682
+avg test loss is  0.550370731730578
+avg accuracy is  0.8135500001563248
+compute_distance is  tensor(156.4689, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   4
+compute_entropy is  0.5820779535752624
+compute_loss is  0.5519275028091758
+compute_acc is  0.8127666668229916
+compute_distance is  tensor(163.1262, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.5339, device='cuda:1')
+scaled distance is  tensor(76.0348, device='cuda:1')
+ratio is  tensor(5.2177e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   5
+compute_entropy is  0.337458120782111
+compute_loss is  0.22598508483708413
+compute_acc is  0.9339666668229869
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.337458120782111
+avg test loss is  0.22598508483708413
+avg accuracy is  0.9339666668229869
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5839969686099461
+avg test loss is  0.5428586054934876
+avg accuracy is  0.8150833334896581
+compute_distance is  tensor(119.1402, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.5836658121934578
+avg test loss is  0.5471505262195937
+avg accuracy is  0.8142666668229914
+compute_distance is  tensor(138.9926, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.582776735713487
+avg test loss is  0.5491635003990964
+avg accuracy is  0.8138500001563248
+compute_distance is  tensor(150.9621, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.5822983823224172
+avg test loss is  0.5510287795906891
+avg accuracy is  0.8131333334896581
+compute_distance is  tensor(159.2559, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   6
+compute_entropy is  0.5819115148170162
+compute_loss is  0.5526478573965874
+compute_acc is  0.812550000156325
+compute_distance is  tensor(165.9077, device='cuda:1')
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+round is  0
+accuracy is  0.8649000001563228
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8329833334896574
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.7599166668229941
+====================
+scale....
+ratio is  tensor(0.5417, device='cuda:1')
+scaled distance is  tensor(76.0348, device='cuda:1')
+ratio is  tensor(5.2077e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   1
+compute_entropy is  0.33259590481644247
+compute_loss is  0.222967407028717
+compute_acc is  0.9350333334896536
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.33259590481644247
+avg test loss is  0.222967407028717
+avg accuracy is  0.9350333334896536
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5184494877166586
+avg test loss is  0.6794022738234575
+avg accuracy is  0.7693833334896603
+compute_distance is  tensor(107.1677, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   2
+compute_entropy is  0.5184494877166586
+compute_loss is  0.6794022738234575
+compute_acc is  0.7693833334896603
+compute_distance is  tensor(107.1677, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.2905, device='cuda:1')
+scaled distance is  tensor(76.0332, device='cuda:1')
+ratio is  tensor(3.0705e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   3
+compute_entropy is  0.4200090934663439
+compute_loss is  0.3707337807268222
+compute_acc is  0.8783333334896555
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.4200090934663439
+avg test loss is  0.3707337807268222
+avg accuracy is  0.8783333334896555
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5191835973943982
+avg test loss is  0.6889690643529902
+avg accuracy is  0.7659000001563271
+compute_distance is  tensor(112.8372, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   4
+compute_entropy is  0.5191835973943982
+compute_loss is  0.6889690643529902
+compute_acc is  0.7659000001563271
+compute_distance is  tensor(112.8372, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.3262, device='cuda:1')
+scaled distance is  tensor(76.0337, device='cuda:1')
+ratio is  tensor(3.7127e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   5
+compute_entropy is  0.4080593352760079
+compute_loss is  0.3510451513265115
+compute_acc is  0.8854666668229887
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.4080593352760079
+avg test loss is  0.3510451513265115
+avg accuracy is  0.8854666668229887
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5183661216294079
+avg test loss is  0.6902633406110664
+avg accuracy is  0.7655500001563271
+compute_distance is  tensor(114.6378, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   6
+compute_entropy is  0.5183661216294079
+compute_loss is  0.6902633406110664
+compute_acc is  0.7655500001563271
+compute_distance is  tensor(114.6378, device='cuda:1')
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+round is  0
+accuracy is  0.8076166668229918
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.9016166668229879
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8872500001563219
+====================
+====================
+iteration is  1
+round is  0
+accuracy is  0.8074166668229917
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.8057333334896586
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.8078000001563251
+====================
+====================
+iteration is  2
+round is  0
+accuracy is  0.7882833334896594
+====================
+scale....
+ratio is  tensor(0.3368, device='cuda:1')
+scaled distance is  tensor(76.0338, device='cuda:1')
+ratio is  tensor(3.9434e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   1
+compute_entropy is  0.403393471959049
+compute_loss is  0.34427614994585387
+compute_acc is  0.8876666668229886
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.403393471959049
+avg test loss is  0.34427614994585387
+avg accuracy is  0.8876666668229886
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.47867665593939296
+avg test loss is  0.5477959802473532
+avg accuracy is  0.8091166668229917
+compute_distance is  tensor(109.4750, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.483123824063903
+avg test loss is  0.5644214472600392
+avg accuracy is  0.8054666668229918
+compute_distance is  tensor(127.2088, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.48195223230670003
+avg test loss is  0.5689966742799226
+avg accuracy is  0.8056333334896585
+compute_distance is  tensor(138.8519, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.48028831056821575
+avg test loss is  0.5703409051240634
+avg accuracy is  0.8062833334896585
+compute_distance is  tensor(147.7194, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   2
+compute_entropy is  0.4793510725821005
+compute_loss is  0.570379671892886
+compute_acc is  0.8061666668229919
+compute_distance is  tensor(155.3157, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.5105, device='cuda:1')
+scaled distance is  tensor(76.0352, device='cuda:1')
+ratio is  tensor(5.7796e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   3
+compute_entropy is  0.30871620307217784
+compute_loss is  0.21958118042886765
+compute_acc is  0.930316666822987
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.30871620307217784
+avg test loss is  0.21958118042886765
+avg accuracy is  0.930316666822987
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.4814174391631124
+avg test loss is  0.565229473671298
+avg accuracy is  0.806550000156325
+compute_distance is  tensor(119.5257, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.48036546242643774
+avg test loss is  0.5701366313961523
+avg accuracy is  0.8063333334896585
+compute_distance is  tensor(138.9495, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.4793749564746295
+avg test loss is  0.5700518310483076
+avg accuracy is  0.8063166668229919
+compute_distance is  tensor(150.7677, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.4789866759006911
+avg test loss is  0.5713234442288179
+avg accuracy is  0.8059666668229918
+compute_distance is  tensor(159.2012, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   4
+compute_entropy is  0.47877702390207155
+compute_loss is  0.5735492659752557
+compute_acc is  0.8052833334896585
+compute_distance is  tensor(166.1598, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.5424, device='cuda:1')
+scaled distance is  tensor(76.0352, device='cuda:1')
+ratio is  tensor(5.7395e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   5
+compute_entropy is  0.29694777269607414
+compute_loss is  0.20893711391002384
+compute_acc is  0.9346500001563202
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.29694777269607414
+avg test loss is  0.20893711391002384
+avg accuracy is  0.9346500001563202
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.4810415450126123
+avg test loss is  0.565010906044227
+avg accuracy is  0.8064666668229918
+compute_distance is  tensor(120.1163, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.4801852197916523
+avg test loss is  0.56993009240579
+avg accuracy is  0.8062166668229919
+compute_distance is  tensor(140.5357, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.47934623529661946
+avg test loss is  0.57013392848755
+avg accuracy is  0.8062000001563252
+compute_distance is  tensor(152.9398, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.4789301658045254
+avg test loss is  0.5721857767305902
+avg accuracy is  0.8055333334896585
+compute_distance is  tensor(161.5967, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   6
+compute_entropy is  0.4787064871744815
+compute_loss is  0.5748845157561018
+compute_acc is  0.805016666822992
+compute_distance is  tensor(168.5362, device='cuda:1')
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+round is  0
+accuracy is  0.8905500001563218
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.7139166668229967
+====================
+scale....
+ratio is  tensor(0.5489, device='cuda:1')
+scaled distance is  tensor(76.0352, device='cuda:1')
+ratio is  tensor(5.7495e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   1
+compute_entropy is  0.2930842906014243
+compute_loss is  0.20567369207279132
+compute_acc is  0.9359500001563202
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.2930842906014243
+avg test loss is  0.20567369207279132
+avg accuracy is  0.9359500001563202
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5119857163444511
+avg test loss is  0.7904231649344918
+avg accuracy is  0.7246000001563293
+compute_distance is  tensor(105.0588, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   2
+compute_entropy is  0.5119857163444511
+compute_loss is  0.7904231649344918
+compute_acc is  0.7246000001563293
+compute_distance is  tensor(105.0588, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.2763, device='cuda:1')
+scaled distance is  tensor(76.0326, device='cuda:1')
+ratio is  tensor(2.3581e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+ratio is  tensor(1.0035e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   3
+compute_entropy is  0.40920612786306754
+compute_loss is  0.3873426549470247
+compute_acc is  0.8545333334896564
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.40920612786306754
+avg test loss is  0.3873426549470247
+avg accuracy is  0.8545333334896564
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5107300095975018
+avg test loss is  0.793474406480535
+avg accuracy is  0.7228333334896627
+compute_distance is  tensor(110.8668, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   4
+compute_entropy is  0.5107300095975018
+compute_loss is  0.793474406480535
+compute_acc is  0.7228333334896627
+compute_distance is  tensor(110.8668, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.3142, device='cuda:1')
+scaled distance is  tensor(76.0333, device='cuda:1')
+ratio is  tensor(3.2009e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   5
+compute_entropy is  0.39945023228873067
+compute_loss is  0.3583873373660833
+compute_acc is  0.8661500001563227
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.39945023228873067
+avg test loss is  0.3583873373660833
+avg accuracy is  0.8661500001563227
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5091213725650234
+avg test loss is  0.7959540793572916
+avg accuracy is  0.7221333334896627
+compute_distance is  tensor(112.9873, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   6
+compute_entropy is  0.5091213725650234
+compute_loss is  0.7959540793572916
+compute_acc is  0.7221333334896627
+compute_distance is  tensor(112.9873, device='cuda:1')
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+round is  0
+accuracy is  0.8377833334896572
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8880500001563217
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8610000001563228
+====================
+====================
+iteration is  1
+round is  0
+accuracy is  0.6876166668229983
+====================
+scale....
+ratio is  tensor(0.3271, device='cuda:1')
+scaled distance is  tensor(76.0336, device='cuda:1')
+ratio is  tensor(3.5923e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   1
+compute_entropy is  0.39572290947505917
+compute_loss is  0.3496038821508
+compute_acc is  0.8699000001563225
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.39572290947505917
+avg test loss is  0.3496038821508
+avg accuracy is  0.8699000001563225
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5481198279461118
+avg test loss is  0.8294481981092933
+avg accuracy is  0.6937500001563313
+compute_distance is  tensor(107.3625, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   2
+compute_entropy is  0.5481198279461118
+compute_loss is  0.8294481981092933
+compute_acc is  0.6937500001563313
+compute_distance is  tensor(107.3625, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.2918, device='cuda:1')
+scaled distance is  tensor(76.0331, device='cuda:1')
+ratio is  tensor(2.9401e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   3
+compute_entropy is  0.4299659949502965
+compute_loss is  0.39478702815388567
+compute_acc is  0.8615166668229896
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.4299659949502965
+avg test loss is  0.39478702815388567
+avg accuracy is  0.8615166668229896
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5473909400610019
+avg test loss is  0.8789622695334176
+avg accuracy is  0.6826833334896653
+compute_distance is  tensor(113.9355, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   4
+compute_entropy is  0.5473909400610019
+compute_loss is  0.8789622695334176
+compute_acc is  0.6826833334896653
+compute_distance is  tensor(113.9355, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.3327, device='cuda:1')
+scaled distance is  tensor(76.0336, device='cuda:1')
+ratio is  tensor(3.6123e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+ratio is  tensor(1.0035e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+ratio is  tensor(1.0035e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   5
+compute_entropy is  0.41510408087325756
+compute_loss is  0.37580180759909054
+compute_acc is  0.869733333489656
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.41510408087325756
+avg test loss is  0.37580180759909054
+avg accuracy is  0.869733333489656
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5471954336489188
+avg test loss is  0.8836313003797267
+avg accuracy is  0.6816833334896653
+compute_distance is  tensor(115.8675, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   6
+compute_entropy is  0.5471954336489188
+compute_loss is  0.8836313003797267
+compute_acc is  0.6816833334896653
+compute_distance is  tensor(115.8675, device='cuda:1')
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+round is  0
+accuracy is  0.8329833334896574
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8951666668229883
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.812350000156325
+====================
+====================
+iteration is  1
+round is  0
+accuracy is  0.8326333334896573
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.8239166668229913
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.8460666668229903
+====================
+====================
+iteration is  2
+round is  0
+accuracy is  0.7481500001563279
+====================
+scale....
+ratio is  tensor(0.3438, device='cuda:1')
+scaled distance is  tensor(76.0338, device='cuda:1')
+ratio is  tensor(3.8531e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+ratio is  tensor(1.0035e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   1
+compute_entropy is  0.4090953752048997
+compute_loss is  0.3675546262389434
+compute_acc is  0.8729666668229891
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.4090953752048997
+avg test loss is  0.3675546262389434
+avg accuracy is  0.8729666668229891
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5404885078925313
+avg test loss is  0.7606742540592832
+avg accuracy is  0.7775166668229931
+compute_distance is  tensor(109.0189, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   2
+compute_entropy is  0.5404885078925313
+compute_loss is  0.7606742540592832
+compute_acc is  0.7775166668229931
+compute_distance is  tensor(109.0189, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.3026, device='cuda:1')
+scaled distance is  tensor(76.0335, device='cuda:1')
+ratio is  tensor(3.5421e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+ratio is  tensor(1.0035e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   3
+compute_entropy is  0.4262347912102112
+compute_loss is  0.3789911280467566
+compute_acc is  0.8712666668229891
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.4262347912102112
+avg test loss is  0.3789911280467566
+avg accuracy is  0.8712666668229891
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5429222644773374
+avg test loss is  0.7838009790316828
+avg accuracy is  0.7692833334896602
+compute_distance is  tensor(116.1010, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   4
+compute_entropy is  0.5429222644773374
+compute_loss is  0.7838009790316828
+compute_acc is  0.7692833334896602
+compute_distance is  tensor(116.1010, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.3451, device='cuda:1')
+scaled distance is  tensor(76.0341, device='cuda:1')
+ratio is  tensor(4.3247e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   5
+compute_entropy is  0.41128967441856734
+compute_loss is  0.3463474182622519
+compute_acc is  0.8828166668229886
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.41128967441856734
+avg test loss is  0.3463474182622519
+avg accuracy is  0.8828166668229886
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5423531534193929
+avg test loss is  0.7892608835753093
+avg accuracy is  0.767700000156327
+compute_distance is  tensor(117.3503, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   6
+compute_entropy is  0.5423531534193929
+compute_loss is  0.7892608835753093
+compute_acc is  0.767700000156327
+compute_distance is  tensor(117.3503, device='cuda:1')
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+round is  0
+accuracy is  0.8095166668229917
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8503000001563233
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8483833334896567
+====================
+====================
+iteration is  1
+round is  0
+accuracy is  0.7918166668229927
+====================
+scale....
+ratio is  tensor(0.3521, device='cuda:1')
+scaled distance is  tensor(76.0343, device='cuda:1')
+ratio is  tensor(4.5455e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+ratio is  tensor(1.0035e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+ratio is  tensor(1.0035e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   1
+compute_entropy is  0.4060546864610491
+compute_loss is  0.33807152395309414
+compute_acc is  0.8857833334896552
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.4060546864610491
+avg test loss is  0.33807152395309414
+avg accuracy is  0.8857833334896552
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.528788399912401
+avg test loss is  0.4833745426460624
+avg accuracy is  0.8221833334896579
+compute_distance is  tensor(105.6674, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.5300105574733412
+avg test loss is  0.5001428056595676
+avg accuracy is  0.8161166668229914
+compute_distance is  tensor(123.2557, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.5297019305323233
+avg test loss is  0.5106567555843894
+avg accuracy is  0.8117166668229917
+compute_distance is  tensor(134.9026, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.5289587632679482
+avg test loss is  0.5161279043806261
+avg accuracy is  0.8095833334896584
+compute_distance is  tensor(143.5856, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   2
+compute_entropy is  0.5282455316738788
+compute_loss is  0.5190493168829601
+compute_acc is  0.8082833334896585
+compute_distance is  tensor(150.8906, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.4961, device='cuda:1')
+scaled distance is  tensor(76.0349, device='cuda:1')
+ratio is  tensor(5.3582e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+ratio is  tensor(1.0035e-07, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   3
+compute_entropy is  0.3230920950296337
+compute_loss is  0.20778978571319567
+compute_acc is  0.9404666668229866
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.3230920950296337
+avg test loss is  0.20778978571319567
+avg accuracy is  0.9404666668229866
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5283372618877558
+avg test loss is  0.5054185512001073
+avg accuracy is  0.8137500001563249
+compute_distance is  tensor(118.2143, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.5284832783027499
+avg test loss is  0.5152200373378135
+avg accuracy is  0.809850000156325
+compute_distance is  tensor(137.0225, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.5278807908042408
+avg test loss is  0.5188287589818176
+avg accuracy is  0.8084333334896585
+compute_distance is  tensor(148.2890, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.5274563973773517
+avg test loss is  0.5213006167634845
+avg accuracy is  0.8073666668229919
+compute_distance is  tensor(156.2702, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   4
+compute_entropy is  0.5274104053404793
+compute_loss is  0.5236595943014124
+compute_acc is  0.806416666822992
+compute_distance is  tensor(162.8977, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.5333, device='cuda:1')
+scaled distance is  tensor(76.0349, device='cuda:1')
+ratio is  tensor(5.3883e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   5
+compute_entropy is  0.31008809291795375
+compute_loss is  0.19996682780264602
+compute_acc is  0.94235000015632
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.31008809291795375
+avg test loss is  0.19996682780264602
+avg accuracy is  0.94235000015632
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5279345895245131
+avg test loss is  0.5059127607849488
+avg accuracy is  0.8134166668229916
+compute_distance is  tensor(118.7054, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.5279374286564175
+avg test loss is  0.5158608210271102
+avg accuracy is  0.8091833334896584
+compute_distance is  tensor(138.5587, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.5273773486235502
+avg test loss is  0.5197899243566019
+avg accuracy is  0.8076666668229918
+compute_distance is  tensor(150.5119, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.5271895317825427
+avg test loss is  0.5225890022017428
+avg accuracy is  0.8066000001563252
+compute_distance is  tensor(158.7981, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   6
+compute_entropy is  0.527173446630364
+compute_loss is  0.5248700591848731
+compute_acc is  0.8054333334896586
+compute_distance is  tensor(165.4249, device='cuda:1')
+++++++++++++++++++++
+reinitialization....
+====================
+iteration is  0
+round is  0
+accuracy is  0.8695000001563226
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.7849833334896595
+====================
+scale....
+ratio is  tensor(0.5404, device='cuda:1')
+scaled distance is  tensor(76.0349, device='cuda:1')
+ratio is  tensor(5.3983e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   1
+compute_entropy is  0.3068570957811021
+compute_loss is  0.198344183966581
+compute_acc is  0.9427500001563199
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.3068570957811021
+avg test loss is  0.198344183966581
+avg accuracy is  0.9427500001563199
+compute_distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.6639700937372789
+avg test loss is  0.5612795669069168
+avg accuracy is  0.8108833334896584
+compute_distance is  tensor(106.1973, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.6655450465201315
+avg test loss is  0.5726165455033276
+avg accuracy is  0.8051333334896587
+compute_distance is  tensor(123.1842, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.664492692456825
+avg test loss is  0.5788955639388516
+avg accuracy is  0.802516666822992
+compute_distance is  tensor(134.2514, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.663544667586843
+avg test loss is  0.5827730863269712
+avg accuracy is  0.8010833334896589
+compute_distance is  tensor(142.3244, device='cuda:1')
+++++++++++++++++++++
+++++++++++++++++++++
+Round:   2
+compute_entropy is  0.6620491787886569
+compute_loss is  0.584073885560417
+compute_acc is  0.8006833334896588
+compute_distance is  tensor(149.0595, device='cuda:1')
+++++++++++++++++++++
+scale....
+ratio is  tensor(0.4899, device='cuda:1')
+scaled distance is  tensor(76.0337, device='cuda:1')
+ratio is  tensor(3.7628e-05, device='cuda:1')
+scaled distance is  tensor(76.0308, device='cuda:1')
+++++++++++++++++++++
+Round:   3
+compute_entropy is  0.3574353311774827
+compute_loss is 
