@@ -233,7 +233,8 @@ def Eflow(w, loss, entropy, current_epoch, num_device=[]):
             norm_q = 1
 
         if len(num_device) == 0:
-            alpha.append(norm_q / loss[j] ** args.delta)
+            # alpha.append(norm_q / loss[j] ** args.delta)
+            alpha.append(1)
 
 
     sum_alpha = sum(alpha)

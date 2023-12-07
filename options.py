@@ -110,6 +110,9 @@ def args_parser():
     parser.add_argument('--new_poison', type=str2bool, default=False,
                         help='True: new poisoning attack, False: no attack')
     
+    parser.add_argument('--poison_epoch', type=int, default=10,
+                        help='the number of epoch when started attack')
+    
     # scale attack
     parser.add_argument('--scale_weight', type=int, default=100,
                         help='scale attack L = scale_weight / num_attacker * (ori- global) + ori ')

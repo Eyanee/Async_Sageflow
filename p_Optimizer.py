@@ -47,7 +47,7 @@ class FEDLOptimizer(Optimizer):
         return loss
 
 class MyPOptimizer(Optimizer):
-    def __init__(self, params, lr=0.01, lamda=0.05 , mu = 0.001):
+    def __init__(self, params, lr=0.01, lamda=0.0 , mu = 0.001):
         #self.local_weight_updated = local_weight # w_i,K
         if lr < 0.0:
             raise ValueError("Invalid learning rate: {}".format(lr))

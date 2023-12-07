@@ -102,8 +102,8 @@ if __name__ == '__main__':
     poisoned = False
     # 其他参数
     distance_ratio = 2
-    adaptive_accuracy_threshold = 0.8
-    pinned_accuracy_threshold = 0.8
+    adaptive_accuracy_threshold = 0.5
+    pinned_accuracy_threshold = 0.5
 
  
     for l in range(args.num_users):
@@ -283,18 +283,8 @@ if __name__ == '__main__':
                     pre_weights[i].append(local_weights_delay[i]) # 修改为记录每一次的，不进行提前聚合, local_weights_delay[i]是List格式
                     pre_index[i].append(local_index_delay[i])
                 elif args.update_rule == 'AFA':
-                    if len(local_weights_delay[i]) > 0:
-                        # 在这一步将所有staleness != 1 的轮次进行对应的聚合
-                        std_dict = copy.deepcopy(global_weights) # 标准字典值
-                        std_keys = get_key_list(std_dict.keys())
-                        # 调用AFA同时保留对应index
-                        w_res, remain_index = pre_AFA(std_keys, local_weights_delay[i], local_index_delay[i], device)
-                        w_avg = restoreWeight(std_dict, std_keys, w_res)
-                        print("left index is ", remain_index)
-                        len_delay = len(remain_index)
-                        pre_weights[i].append({epoch: [w_avg, len_delay]})
-                        pre_index[i].append(remain_index)
-
+                    pre_weights[i].append(local_weights_delay[i])
+                    pre_index[i].append(local_index_delay[i])
                 elif args.update_rule == 'Bulyan':
                     pre_weights[i].append(local_weights_delay[i])
                     pre_index[i].append(local_index_delay[i])
@@ -310,6 +300,7 @@ if __name__ == '__main__':
                         len_delay = len(local_weights_delay[i])
                         pre_weights[i].append({epoch: [w_avg_delay, len_delay]})
                         pre_index[i].append(local_index_delay[i])
+                        
         if args.update_rule == 'Sageflow':
             # Averaging current local weights via entropy-based filtering and loss-wegithed averaging
             sync_weights, len_sync, num_attacker_2 = Eflow(local_weights_delay[0], loss_on_public[0], entropy_on_public[0], epoch)
@@ -346,12 +337,14 @@ if __name__ == '__main__':
             std_dict = copy.deepcopy(global_weights) # 标准字典值
             # std_keys = std_dict.keys()
             std_keys = get_key_list(std_dict.keys())
-            w_res, remain_index = pre_AFA(std_keys, local_weights_delay[0], local_index_delay[0], device)
+            param_updates = preGrouping(std_keys, copy.deepcopy(local_weights_delay[0]), local_delay_ew)
+            index_set = preGroupingIndex(local_index_delay[0], local_index_ew)
+            global_update, remain_index= AFA(param_updates, index_set, device)
+            global_weights = restoreWeight(std_dict, std_keys, global_update)
             print("left index is ", remain_index)
-            w_avg = restoreWeight(std_dict, std_keys, w_res)
             global_weights = Sag(epoch, w_avg, len(remain_index), local_delay_ew, # local_delay_ew 实际上是上一轮的pre_weights[1]
                                                      copy.deepcopy(global_weights))
-            
+        
         elif args.update_rule == 'Bulyan':
             std_dict = copy.deepcopy(global_weights) # 标准字典值
             # std_keys = std_dict.keys()
@@ -387,7 +380,10 @@ if __name__ == '__main__':
         else:
             global_weights = Sag(epoch, average_weights(local_weights_delay[0]), len(local_weights_delay[0]),
                                                  local_delay_ew, copy.deepcopy(global_weights))
-
+            # current_weights_set = local_weights_delay[0]
+            # for item in local_delay_ew:
+            #     current_weights_set.extend(item)
+            # global_weights = average_weights(current_weights_set)
         # Update global weights
         pre_global_model.load_state_dict(global_model.state_dict())
         global_model.load_state_dict(global_weights)
@@ -459,7 +455,6 @@ if __name__ == '__main__':
         wr.writerow([i + 1, final_test_acc[i] * 100])
 
     f.close()
-
 
 
 

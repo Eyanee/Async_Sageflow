@@ -73,7 +73,7 @@ if __name__ == '__main__':
     global_model.train()
     fi_global_model = copy.deepcopy(global_model)
     pre_global_model = copy.deepcopy(global_model)
-    last_round_poison_w = copy.deepcopy(global_model.state_dict())
+    primitive_malicious = copy.deepcopy(global_model.state_dict())
 
     global_weights = global_model.state_dict()
 
@@ -101,9 +101,9 @@ if __name__ == '__main__':
     # 投毒状态标志
     poisoned = False
     # 其他参数
-    distance_ratio = 2
-    adaptive_accuracy_threshold = 0.8
-    pinned_accuracy_threshold = 0.8
+    distance_ratio = 1
+    adaptive_accuracy_threshold = 0.8 ## 需要调整
+    pinned_accuracy_threshold = 0.8 ## 需要调整
 
  
     for l in range(args.num_users):
@@ -127,12 +127,25 @@ if __name__ == '__main__':
         end_idx = front_idx + t
         for j in range(front_idx, end_idx):
             clientStaleness[j] = i + 1 
-            
-        
     print("attack_user is", attack_users)
+    
     # 为恶意用户赋目标的Staleness值     
     for l in attack_users:
         clientStaleness[l] = TARGET_STALENESS   
+        
+        
+    # 恶意用户的历史存储
+    MAX_STALENESS = args.staleness
+    mal_parameters_list = {}
+    for i in range(MAX_STALENESS):
+        mal_parameters_list[i] = {}
+    
+    test_mal_list = []
+    test_mal_list_pre = []
+    
+    
+    
+    
             
     for epoch in tqdm(range(args.epochs)):
 
@@ -194,8 +207,9 @@ if __name__ == '__main__':
                 model=copy.deepcopy(global_model), global_round=epoch
 
             )
-            if idx in attack_users and args.model_poison == True:
-                malicious_models.append(w) #
+            if idx in attack_users and args.model_poison == True and epoch > args.poison_epoch - MAX_STALENESS:
+                mal_parameters_list[0][idx] = w # 加入malicious_list
+                test_mal_list.append(w)
                 
             else:     
                 ensure_1 += 1 # 平均分布
@@ -211,19 +225,30 @@ if __name__ == '__main__':
                 loss_on_public[scheduler[idx] - 1].append(common_loss_sync)
                 entropy_on_public[scheduler[idx] - 1].append(common_entropy_sample)
             
-        if idx in attack_users and args.model_poison == True:
+        if args.model_poison == True and epoch > args.poison_epoch:
+            malicious_models = list(mal_parameters_list[MAX_STALENESS - 1].values()) #本地模拟的陈旧度上限
+            local_dict = mal_parameters_list[0][attack_users[0]]
+            previous_dict = mal_parameters_list[1][attack_users[0]]
+            print("len of malicious models is", len(malicious_models))
+            keys = get_key_list(local_dict.keys())
+            res = 0
+            for key in keys:
+                diff1 = torch.sum((local_dict[key] - previous_dict[key]).view(-1))
+                diff2 = torch.sum((test_mal_list[0][key] - test_mal_list_pre[0][key]).view(-1))
+                print("diff1 is", diff1)
+                print("diff2 is", diff2)
+
             if not poisoned:
                 poisoned = True
-                pinned_accuracy_threshold = 0.5 # 上一轮全局模型的精度
+                pinned_accuracy_threshold = 0.7 # 
                 fi_global_model.load_state_dict(global_model.state_dict())
-                print("poisoned accuracy threshold is ",pinned_accuracy_threshold)
                 adaptive_accuracy_threshold = pinned_accuracy_threshold
-                malicious_dict, distance_ratio = Outline_Poisoning(args, fi_global_model, copy.deepcopy(global_model), malicious_models, train_dataset, distance_ratio, pinned_accuracy_threshold,
-                                               adaptive_accuracy_threshold, last_round_poison_w, False)
+                malicious_dict, distance_ratio = Outline_Poisoning(args, fi_global_model, copy.deepcopy(global_model), malicious_models, local_dict, previous_dict,
+                                                                   train_dataset, distance_ratio, pinned_accuracy_threshold, adaptive_accuracy_threshold, primitive_malicious, False)
             else:
-                malicious_dict, distance_ratio = Outline_Poisoning(args, fi_global_model, copy.deepcopy(global_model), malicious_models, train_dataset, distance_ratio, pinned_accuracy_threshold,
-                                               adaptive_accuracy_threshold, last_round_poison_w, True)
-            last_round_poison_w =  malicious_dict
+                malicious_dict, distance_ratio = Outline_Poisoning(args, fi_global_model, copy.deepcopy(global_model), malicious_models, local_dict, previous_dict,
+                                                                   train_dataset, distance_ratio, pinned_accuracy_threshold, adaptive_accuracy_threshold, primitive_malicious, True)
+            primitive_malicious =  malicious_dict
             test_model.load_state_dict(malicious_dict)
             mal_acc, mal_loss_sync, mal_entropy_sample = test_inference(args, test_model,
                                                                                          DatasetSplit(train_dataset,
@@ -414,11 +439,19 @@ if __name__ == '__main__':
         print('Test Accuracy: {:.2f}% \n'.format(100 * test_acc))
 
         # Schedular Update
-        # for l in range(args.num_users):
-        #     scheduler[l] = (scheduler[l] - 1) * ((scheduler[l] - 1) > 0)
         for l in all_users:
             if(scheduler[l] > 0):
                 scheduler[l] = (scheduler[l] - 1)   
+                
+        # Mal_parameters_list Update
+        
+        if idx in attack_users and args.model_poison == True and epoch > args.poison_epoch - MAX_STALENESS:
+            for i in range(MAX_STALENESS-1 , 0 , -1):
+                mal_parameters_list[i] = copy.copy(mal_parameters_list[i-1])
+            mal_parameters_list[0] = {}
+            test_mal_list_pre = copy.copy(test_mal_list)
+            test_mal_list = []
+            
 
 
     print(f' \n Results after {args.epochs} global rounds of training:')

@@ -1,0 +1,4351 @@
+
+Experimental details:
+    Dataset     : fmnist
+    Model     : cnn
+    detailed Model     : vgg
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 30
+
+    Federated parameters:
+    IID
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.2
+     Model attack is done!
+attack user num is  12
+ t is  6
+attack_user is [48 49 50 51 52 53 54 55 56 57 58 59]
+
+ | Global Training Round : 1 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 2
+current submit client idx and staleness is  7 2
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 3
+current submit client idx and staleness is  13 3
+current submit client idx and staleness is  14 3
+current submit client idx and staleness is  15 3
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 4
+current submit client idx and staleness is  19 4
+current submit client idx and staleness is  20 4
+current submit client idx and staleness is  21 4
+current submit client idx and staleness is  22 4
+current submit client idx and staleness is  23 4
+current submit client idx and staleness is  24 5
+current submit client idx and staleness is  25 5
+current submit client idx and staleness is  26 5
+current submit client idx and staleness is  27 5
+current submit client idx and staleness is  28 5
+current submit client idx and staleness is  29 5
+current submit client idx and staleness is  30 6
+current submit client idx and staleness is  31 6
+current submit client idx and staleness is  32 6
+current submit client idx and staleness is  33 6
+current submit client idx and staleness is  34 6
+current submit client idx and staleness is  35 6
+current submit client idx and staleness is  36 7
+current submit client idx and staleness is  37 7
+current submit client idx and staleness is  38 7
+current submit client idx and staleness is  39 7
+current submit client idx and staleness is  40 7
+current submit client idx and staleness is  41 7
+current submit client idx and staleness is  42 8
+current submit client idx and staleness is  43 8
+current submit client idx and staleness is  44 8
+current submit client idx and staleness is  45 8
+current submit client idx and staleness is  46 8
+current submit client idx and staleness is  47 8
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+poisoned accuracy threshold is  0.7
+len of model dicts is  12
+compute distance is  tensor(128.7714, device='cuda:2')
+compute similarity is  tensor(0.5994, device='cuda:2')
+compute distance is  tensor(133.7567, device='cuda:2')
+compute similarity is  tensor(0.5900, device='cuda:2')
+compute distance is  tensor(135.5792, device='cuda:2')
+compute similarity is  tensor(0.6033, device='cuda:2')
+compute distance is  tensor(120.4097, device='cuda:2')
+compute similarity is  tensor(0.6148, device='cuda:2')
+compute distance is  tensor(123.7912, device='cuda:2')
+compute similarity is  tensor(0.6145, device='cuda:2')
+compute distance is  tensor(123.0308, device='cuda:2')
+compute similarity is  tensor(0.6176, device='cuda:2')
+compute distance is  tensor(119.1732, device='cuda:2')
+compute similarity is  tensor(0.6387, device='cuda:2')
+compute distance is  tensor(131.5635, device='cuda:2')
+compute similarity is  tensor(0.6043, device='cuda:2')
+compute distance is  tensor(126.7773, device='cuda:2')
+compute similarity is  tensor(0.6136, device='cuda:2')
+compute distance is  tensor(127.4864, device='cuda:2')
+compute similarity is  tensor(0.6114, device='cuda:2')
+compute distance is  tensor(121.5672, device='cuda:2')
+compute similarity is  tensor(0.6224, device='cuda:2')
+compute distance is  tensor(131.0167, device='cuda:2')
+compute similarity is  tensor(0.5976, device='cuda:2')
+calculated distance threshold is  tensor(151.9853, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.12963333348966524
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.10318333348966531
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  2
+accuracy is  0.14225000015633246
+====================
+mid_min is -0.2
+====================
+iteration is  1
+round is  0
+accuracy is  0.11466666682299861
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.13210000015633191
+====================
+________________________________
+test distance is  tensor(40.1209, device='cuda:2')
+test similarity is  tensor(0.8824, device='cuda:2')
+test acc is  0.10318333348966531
+test loss is 2.285555047267027
+test entropy is  2.259825042824247
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  2.259825042824247
+avg test loss is  2.285555047267027
+avg accuracy is  0.10318333348966531
+compute_distance is  tensor(40.1209, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.6951830830019928
+avg test loss is  6.554724101064556
+avg accuracy is  0.08283333348966536
+compute_distance is  tensor(40.3863, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(40.3863, device='cuda:2')
+test similarity is  tensor(0.9258, device='cuda:2')
+test acc is  0.08283333348966536
+test loss is 6.554724101064556
+test entropy is  0.6951830830019928
+________________________________
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 1 global rounds:
+Train Accuracy: 46.56% 
+
+Test Accuracy: 45.96% 
+
+
+ | Global Training Round : 2 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(112.2820, device='cuda:2')
+compute similarity is  tensor(0.7796, device='cuda:2')
+compute distance is  tensor(110.4933, device='cuda:2')
+compute similarity is  tensor(0.7786, device='cuda:2')
+compute distance is  tensor(114.7688, device='cuda:2')
+compute similarity is  tensor(0.7733, device='cuda:2')
+compute distance is  tensor(106.4208, device='cuda:2')
+compute similarity is  tensor(0.7793, device='cuda:2')
+compute distance is  tensor(111.5388, device='cuda:2')
+compute similarity is  tensor(0.7831, device='cuda:2')
+compute distance is  tensor(114.2335, device='cuda:2')
+compute similarity is  tensor(0.7694, device='cuda:2')
+compute distance is  tensor(107.2145, device='cuda:2')
+compute similarity is  tensor(0.7859, device='cuda:2')
+compute distance is  tensor(115.6140, device='cuda:2')
+compute similarity is  tensor(0.7713, device='cuda:2')
+compute distance is  tensor(112.3781, device='cuda:2')
+compute similarity is  tensor(0.7772, device='cuda:2')
+compute distance is  tensor(104.6605, device='cuda:2')
+compute similarity is  tensor(0.7921, device='cuda:2')
+compute distance is  tensor(104.6849, device='cuda:2')
+compute similarity is  tensor(0.7905, device='cuda:2')
+compute distance is  tensor(116.3512, device='cuda:2')
+compute similarity is  tensor(0.7663, device='cuda:2')
+calculated distance threshold is  tensor(128.0420, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.3982500001563411
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.44490000015634157
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.4403333334896749
+====================
+mid_min is -0.2
+====================
+iteration is  1
+round is  0
+accuracy is  0.4734666668230086
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.44550000015634167
+====================
+________________________________
+test distance is  tensor(38.7085, device='cuda:2')
+test similarity is  tensor(0.9129, device='cuda:2')
+test acc is  0.3982500001563411
+test loss is 1.5480453843501076
+test entropy is  1.512100931169636
+________________________________
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 2 global rounds:
+Train Accuracy: 81.85% 
+
+Test Accuracy: 80.63% 
+
+
+ | Global Training Round : 3 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 2
+current submit client idx and staleness is  7 2
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(101.8080, device='cuda:2')
+compute similarity is  tensor(0.8536, device='cuda:2')
+compute distance is  tensor(98.5051, device='cuda:2')
+compute similarity is  tensor(0.8589, device='cuda:2')
+compute distance is  tensor(106.6396, device='cuda:2')
+compute similarity is  tensor(0.8499, device='cuda:2')
+compute distance is  tensor(93.9733, device='cuda:2')
+compute similarity is  tensor(0.8583, device='cuda:2')
+compute distance is  tensor(96.8182, device='cuda:2')
+compute similarity is  tensor(0.8648, device='cuda:2')
+compute distance is  tensor(96.3784, device='cuda:2')
+compute similarity is  tensor(0.8546, device='cuda:2')
+compute distance is  tensor(94.0827, device='cuda:2')
+compute similarity is  tensor(0.8679, device='cuda:2')
+compute distance is  tensor(97.1618, device='cuda:2')
+compute similarity is  tensor(0.8627, device='cuda:2')
+compute distance is  tensor(97.7141, device='cuda:2')
+compute similarity is  tensor(0.8627, device='cuda:2')
+compute distance is  tensor(97.4341, device='cuda:2')
+compute similarity is  tensor(0.8600, device='cuda:2')
+compute distance is  tensor(91.6575, device='cuda:2')
+compute similarity is  tensor(0.8688, device='cuda:2')
+compute distance is  tensor(98.8704, device='cuda:2')
+compute similarity is  tensor(0.8588, device='cuda:2')
+calculated distance threshold is  tensor(121.6217, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.7490333334896612
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8063166668229919
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.7932666668229923
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.5917833334896715
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.5635666668230074
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  2
+accuracy is  0.6402500001563344
+====================
+mid_min is -0.4
+====================
+iteration is  2
+round is  0
+accuracy is  0.7412333334896615
+====================
+====================
+iteration is  2
+round is  1
+accuracy is  0.6741333334896655
+====================
+====================
+iteration is  2
+round is  2
+accuracy is  0.7302000001563288
+====================
+mid_min is -0.8
+====================
+iteration is  3
+round is  0
+accuracy is  0.44543333348967495
+====================
+succ_min + 1
+________________________________
+test distance is  tensor(157.4690, device='cuda:2')
+test similarity is  tensor(0.5417, device='cuda:2')
+test acc is  0.44543333348967495
+test loss is 1.5893516527818465
+test entropy is  1.8293315221760065
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  1.8293315221760065
+avg test loss is  1.5893516527818465
+avg accuracy is  0.44543333348967495
+compute_distance is  tensor(157.4690, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5009928955706452
+avg test loss is  2.582722792874521
+avg accuracy is  0.43311666682300815
+compute_distance is  tensor(112.8796, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(112.8796, device='cuda:2')
+test similarity is  tensor(0.7212, device='cuda:2')
+test acc is  0.43311666682300815
+test loss is 2.582722792874521
+test entropy is  0.5009928955706452
+________________________________
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 3 global rounds:
+Train Accuracy: 76.29% 
+
+Test Accuracy: 74.91% 
+
+
+ | Global Training Round : 4 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  12 3
+current submit client idx and staleness is  13 3
+current submit client idx and staleness is  14 3
+current submit client idx and staleness is  15 3
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(101.4740, device='cuda:2')
+compute similarity is  tensor(0.8772, device='cuda:2')
+compute distance is  tensor(102.3990, device='cuda:2')
+compute similarity is  tensor(0.8736, device='cuda:2')
+compute distance is  tensor(106.9209, device='cuda:2')
+compute similarity is  tensor(0.8724, device='cuda:2')
+compute distance is  tensor(105.2278, device='cuda:2')
+compute similarity is  tensor(0.8699, device='cuda:2')
+compute distance is  tensor(107.1368, device='cuda:2')
+compute similarity is  tensor(0.8720, device='cuda:2')
+compute distance is  tensor(99.8181, device='cuda:2')
+compute similarity is  tensor(0.8755, device='cuda:2')
+compute distance is  tensor(101.0902, device='cuda:2')
+compute similarity is  tensor(0.8756, device='cuda:2')
+compute distance is  tensor(102.4186, device='cuda:2')
+compute similarity is  tensor(0.8784, device='cuda:2')
+compute distance is  tensor(99.1188, device='cuda:2')
+compute similarity is  tensor(0.8795, device='cuda:2')
+compute distance is  tensor(98.0335, device='cuda:2')
+compute similarity is  tensor(0.8847, device='cuda:2')
+compute distance is  tensor(98.1536, device='cuda:2')
+compute similarity is  tensor(0.8811, device='cuda:2')
+compute distance is  tensor(101.4554, device='cuda:2')
+compute similarity is  tensor(0.8775, device='cuda:2')
+calculated distance threshold is  tensor(116.2400, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.7439333334896614
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.6099500001563367
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  2
+accuracy is  0.7536833334896609
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.7077833334896635
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.5103333334896755
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  2
+accuracy is  0.6569500001563333
+====================
+mid_min is -0.8
+====================
+iteration is  2
+round is  0
+accuracy is  0.29471666682300607
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  1
+accuracy is  0.10528333348966532
+====================
+succ_min + 1
+________________________________
+test distance is  tensor(167.0960, device='cuda:2')
+test similarity is  tensor(0.6208, device='cuda:2')
+test acc is  0.10528333348966532
+test loss is 19.636074559266632
+test entropy is  0.07563806855892226
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.07563806855892226
+avg test loss is  19.636074559266632
+avg accuracy is  0.10528333348966532
+compute_distance is  tensor(167.0960, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.03606532342469584
+avg test loss is  25.05769138295513
+avg accuracy is  0.10490000015633198
+compute_distance is  tensor(107.5759, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(107.5759, device='cuda:2')
+test similarity is  tensor(0.7806, device='cuda:2')
+test acc is  0.10490000015633198
+test loss is 25.05769138295513
+test entropy is  0.03606532342469584
+________________________________
+the length of epoch_weights is  2
+ 
+Avg Training Stats after 4 global rounds:
+Train Accuracy: 41.96% 
+
+Test Accuracy: 41.33% 
+
+
+ | Global Training Round : 5 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 2
+current submit client idx and staleness is  7 2
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  18 4
+current submit client idx and staleness is  19 4
+current submit client idx and staleness is  20 4
+current submit client idx and staleness is  21 4
+current submit client idx and staleness is  22 4
+current submit client idx and staleness is  23 4
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(138.1311, device='cuda:2')
+compute similarity is  tensor(0.8379, device='cuda:2')
+compute distance is  tensor(173.2336, device='cuda:2')
+compute similarity is  tensor(0.7783, device='cuda:2')
+compute distance is  tensor(134.9206, device='cuda:2')
+compute similarity is  tensor(0.8430, device='cuda:2')
+compute distance is  tensor(119.5014, device='cuda:2')
+compute similarity is  tensor(0.8633, device='cuda:2')
+compute distance is  tensor(115.4278, device='cuda:2')
+compute similarity is  tensor(0.8693, device='cuda:2')
+compute distance is  tensor(111.5273, device='cuda:2')
+compute similarity is  tensor(0.8786, device='cuda:2')
+compute distance is  tensor(127.9929, device='cuda:2')
+compute similarity is  tensor(0.8530, device='cuda:2')
+compute distance is  tensor(142.7861, device='cuda:2')
+compute similarity is  tensor(0.8329, device='cuda:2')
+compute distance is  tensor(137.1046, device='cuda:2')
+compute similarity is  tensor(0.8431, device='cuda:2')
+compute distance is  tensor(128.7591, device='cuda:2')
+compute similarity is  tensor(0.8581, device='cuda:2')
+compute distance is  tensor(120.3517, device='cuda:2')
+compute similarity is  tensor(0.8673, device='cuda:2')
+compute distance is  tensor(138.2898, device='cuda:2')
+compute similarity is  tensor(0.8405, device='cuda:2')
+calculated distance threshold is  tensor(234.9399, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.4935833334896753
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.2807500001563391
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  2
+accuracy is  0.37463333348967415
+====================
+mid_min is -0.2
+====================
+iteration is  1
+round is  0
+accuracy is  0.5512666668230084
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.4716333334896752
+====================
+________________________________
+test distance is  tensor(37.9006, device='cuda:2')
+test similarity is  tensor(0.9629, device='cuda:2')
+test acc is  0.2807500001563391
+test loss is 3.0398478955348165
+test entropy is  0.6547246487664261
+________________________________
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 5 global rounds:
+Train Accuracy: 84.45% 
+
+Test Accuracy: 82.85% 
+
+
+ | Global Training Round : 6 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  24 5
+current submit client idx and staleness is  25 5
+current submit client idx and staleness is  26 5
+current submit client idx and staleness is  27 5
+current submit client idx and staleness is  28 5
+current submit client idx and staleness is  29 5
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(95.2279, device='cuda:2')
+compute similarity is  tensor(0.9050, device='cuda:2')
+compute distance is  tensor(93.6428, device='cuda:2')
+compute similarity is  tensor(0.9049, device='cuda:2')
+compute distance is  tensor(92.5472, device='cuda:2')
+compute similarity is  tensor(0.9074, device='cuda:2')
+compute distance is  tensor(92.2013, device='cuda:2')
+compute similarity is  tensor(0.9052, device='cuda:2')
+compute distance is  tensor(93.2512, device='cuda:2')
+compute similarity is  tensor(0.9070, device='cuda:2')
+compute distance is  tensor(89.5313, device='cuda:2')
+compute similarity is  tensor(0.9089, device='cuda:2')
+compute distance is  tensor(90.6266, device='cuda:2')
+compute similarity is  tensor(0.9123, device='cuda:2')
+compute distance is  tensor(91.8593, device='cuda:2')
+compute similarity is  tensor(0.9095, device='cuda:2')
+compute distance is  tensor(89.9362, device='cuda:2')
+compute similarity is  tensor(0.9128, device='cuda:2')
+compute distance is  tensor(91.2672, device='cuda:2')
+compute similarity is  tensor(0.9124, device='cuda:2')
+compute distance is  tensor(90.5434, device='cuda:2')
+compute similarity is  tensor(0.9097, device='cuda:2')
+compute distance is  tensor(92.1618, device='cuda:2')
+compute similarity is  tensor(0.9102, device='cuda:2')
+calculated distance threshold is  tensor(100.9246, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.8291666668229908
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8277333334896575
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8351500001563239
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.8027333334896586
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.6225166668230023
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  2
+accuracy is  0.7194500001563295
+====================
+mid_min is -0.8
+====================
+iteration is  2
+round is  0
+accuracy is  0.14986666682299987
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  1
+accuracy is  0.6513833334896671
+====================
+====================
+iteration is  2
+round is  2
+accuracy is  0.6066000001563371
+====================
+mid_min is -0.8
+====================
+iteration is  3
+round is  0
+accuracy is  0.664200000156333
+====================
+________________________________
+test distance is  tensor(168.4627, device='cuda:2')
+test similarity is  tensor(0.6054, device='cuda:2')
+test acc is  0.14986666682299987
+test loss is 2.2001303804200343
+test entropy is  2.0048565595134744
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  2.0048565595134744
+avg test loss is  2.2001303804200343
+avg accuracy is  0.14986666682299987
+compute_distance is  tensor(168.4627, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.3901951455993693
+avg test loss is  5.558576720609848
+avg accuracy is  0.140766666822999
+compute_distance is  tensor(117.7496, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.39041557666589455
+avg test loss is  5.192602595286583
+avg accuracy is  0.14396666682299933
+compute_distance is  tensor(82.1742, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(82.1742, device='cuda:2')
+test similarity is  tensor(0.8901, device='cuda:2')
+test acc is  0.14396666682299933
+test loss is 5.192602595286583
+test entropy is  0.39041557666589455
+________________________________
+the length of epoch_weights is  3
+ 
+Avg Training Stats after 6 global rounds:
+Train Accuracy: 83.53% 
+
+Test Accuracy: 82.99% 
+
+
+ | Global Training Round : 7 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 2
+current submit client idx and staleness is  7 2
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 3
+current submit client idx and staleness is  13 3
+current submit client idx and staleness is  14 3
+current submit client idx and staleness is  15 3
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  30 6
+current submit client idx and staleness is  31 6
+current submit client idx and staleness is  32 6
+current submit client idx and staleness is  33 6
+current submit client idx and staleness is  34 6
+current submit client idx and staleness is  35 6
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(87.5749, device='cuda:2')
+compute similarity is  tensor(0.9193, device='cuda:2')
+compute distance is  tensor(92.6184, device='cuda:2')
+compute similarity is  tensor(0.9156, device='cuda:2')
+compute distance is  tensor(89.4439, device='cuda:2')
+compute similarity is  tensor(0.9195, device='cuda:2')
+compute distance is  tensor(91.0308, device='cuda:2')
+compute similarity is  tensor(0.9129, device='cuda:2')
+compute distance is  tensor(90.2540, device='cuda:2')
+compute similarity is  tensor(0.9157, device='cuda:2')
+compute distance is  tensor(90.0276, device='cuda:2')
+compute similarity is  tensor(0.9147, device='cuda:2')
+compute distance is  tensor(84.9768, device='cuda:2')
+compute similarity is  tensor(0.9233, device='cuda:2')
+compute distance is  tensor(91.3752, device='cuda:2')
+compute similarity is  tensor(0.9173, device='cuda:2')
+compute distance is  tensor(89.4363, device='cuda:2')
+compute similarity is  tensor(0.9218, device='cuda:2')
+compute distance is  tensor(87.9039, device='cuda:2')
+compute similarity is  tensor(0.9197, device='cuda:2')
+compute distance is  tensor(89.1817, device='cuda:2')
+compute similarity is  tensor(0.9182, device='cuda:2')
+compute distance is  tensor(87.9882, device='cuda:2')
+compute similarity is  tensor(0.9212, device='cuda:2')
+calculated distance threshold is  tensor(100.2599, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.7524833334896609
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8407833334896571
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8193166668229912
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.7552333334896609
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.6314166668230017
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  2
+accuracy is  0.7987000001563254
+====================
+mid_min is -0.8
+====================
+iteration is  2
+round is  0
+accuracy is  0.24838333348967156
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  1
+accuracy is  0.6508666668230004
+====================
+====================
+iteration is  2
+round is  2
+accuracy is  0.4188500001563413
+====================
+mid_min is -0.8
+====================
+iteration is  3
+round is  0
+accuracy is  0.47183333348967516
+====================
+________________________________
+test distance is  tensor(158.1983, device='cuda:2')
+test similarity is  tensor(0.6678, device='cuda:2')
+test acc is  0.24838333348967156
+test loss is 2.0222933814723865
+test entropy is  1.9240090254781597
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  1.9240090254781597
+avg test loss is  2.0222933814723865
+avg accuracy is  0.24838333348967156
+compute_distance is  tensor(158.1983, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.549533860515684
+avg test loss is  4.637350696744695
+avg accuracy is  0.24186666682300467
+compute_distance is  tensor(111.7547, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.5436874590893545
+avg test loss is  4.60100640823592
+avg accuracy is  0.24413333348967142
+compute_distance is  tensor(78.9900, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(78.9900, device='cuda:2')
+test similarity is  tensor(0.9103, device='cuda:2')
+test acc is  0.24413333348967142
+test loss is 4.60100640823592
+test entropy is  0.5436874590893545
+________________________________
+the length of epoch_weights is  1
+ 
+Avg Training Stats after 7 global rounds:
+Train Accuracy: 62.06% 
+
+Test Accuracy: 62.38% 
+
+
+ | Global Training Round : 8 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  36 7
+current submit client idx and staleness is  37 7
+current submit client idx and staleness is  38 7
+current submit client idx and staleness is  39 7
+current submit client idx and staleness is  40 7
+current submit client idx and staleness is  41 7
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(99.3275, device='cuda:2')
+compute similarity is  tensor(0.9080, device='cuda:2')
+compute distance is  tensor(97.6111, device='cuda:2')
+compute similarity is  tensor(0.9091, device='cuda:2')
+compute distance is  tensor(94.4114, device='cuda:2')
+compute similarity is  tensor(0.9142, device='cuda:2')
+compute distance is  tensor(102.5282, device='cuda:2')
+compute similarity is  tensor(0.9028, device='cuda:2')
+compute distance is  tensor(98.3655, device='cuda:2')
+compute similarity is  tensor(0.9127, device='cuda:2')
+compute distance is  tensor(92.0733, device='cuda:2')
+compute similarity is  tensor(0.9155, device='cuda:2')
+compute distance is  tensor(92.5937, device='cuda:2')
+compute similarity is  tensor(0.9130, device='cuda:2')
+compute distance is  tensor(100.0730, device='cuda:2')
+compute similarity is  tensor(0.9120, device='cuda:2')
+compute distance is  tensor(92.9066, device='cuda:2')
+compute similarity is  tensor(0.9169, device='cuda:2')
+compute distance is  tensor(95.8266, device='cuda:2')
+compute similarity is  tensor(0.9176, device='cuda:2')
+compute distance is  tensor(92.0300, device='cuda:2')
+compute similarity is  tensor(0.9180, device='cuda:2')
+compute distance is  tensor(96.5428, device='cuda:2')
+compute similarity is  tensor(0.9154, device='cuda:2')
+calculated distance threshold is  tensor(113.0264, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.46135000015634176
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.5616500001563409
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.6130000001563366
+====================
+mid_min is -0.2
+====================
+iteration is  1
+round is  0
+accuracy is  0.564733333489674
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.6326333334896683
+====================
+________________________________
+test distance is  tensor(39.6075, device='cuda:2')
+test similarity is  tensor(0.9671, device='cuda:2')
+test acc is  0.46135000015634176
+test loss is 1.3663915161893312
+test entropy is  1.1919986606915114
+________________________________
+the length of epoch_weights is  3
+ 
+Avg Training Stats after 8 global rounds:
+Train Accuracy: 85.72% 
+
+Test Accuracy: 84.63% 
+
+
+ | Global Training Round : 9 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 2
+current submit client idx and staleness is  7 2
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  18 4
+current submit client idx and staleness is  19 4
+current submit client idx and staleness is  20 4
+current submit client idx and staleness is  21 4
+current submit client idx and staleness is  22 4
+current submit client idx and staleness is  23 4
+current submit client idx and staleness is  42 8
+current submit client idx and staleness is  43 8
+current submit client idx and staleness is  44 8
+current submit client idx and staleness is  45 8
+current submit client idx and staleness is  46 8
+current submit client idx and staleness is  47 8
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(85.0875, device='cuda:2')
+compute similarity is  tensor(0.9268, device='cuda:2')
+compute distance is  tensor(88.0159, device='cuda:2')
+compute similarity is  tensor(0.9256, device='cuda:2')
+compute distance is  tensor(86.7282, device='cuda:2')
+compute similarity is  tensor(0.9272, device='cuda:2')
+compute distance is  tensor(91.7195, device='cuda:2')
+compute similarity is  tensor(0.9179, device='cuda:2')
+compute distance is  tensor(91.2837, device='cuda:2')
+compute similarity is  tensor(0.9232, device='cuda:2')
+compute distance is  tensor(85.1594, device='cuda:2')
+compute similarity is  tensor(0.9284, device='cuda:2')
+compute distance is  tensor(82.0353, device='cuda:2')
+compute similarity is  tensor(0.9326, device='cuda:2')
+compute distance is  tensor(82.8868, device='cuda:2')
+compute similarity is  tensor(0.9304, device='cuda:2')
+compute distance is  tensor(85.3272, device='cuda:2')
+compute similarity is  tensor(0.9302, device='cuda:2')
+compute distance is  tensor(82.7337, device='cuda:2')
+compute similarity is  tensor(0.9317, device='cuda:2')
+compute distance is  tensor(84.9873, device='cuda:2')
+compute similarity is  tensor(0.9280, device='cuda:2')
+compute distance is  tensor(83.4231, device='cuda:2')
+compute similarity is  tensor(0.9324, device='cuda:2')
+calculated distance threshold is  tensor(101.4037, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.8363833334896572
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.817183333489658
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8377833334896571
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.8135333334896582
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.7966500001563255
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.7913500001563257
+====================
+mid_min is -0.8
+====================
+iteration is  2
+round is  0
+accuracy is  0.6132166668230032
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  1
+accuracy is  0.5802666668230059
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  2
+accuracy is  0.6441333334896676
+====================
+mid_min is -0.8
+====================
+iteration is  3
+round is  0
+accuracy is  0.2438000001563381
+====================
+succ_min + 1
+====================
+iteration is  3
+round is  1
+accuracy is  0.49091666682300866
+====================
+________________________________
+test distance is  tensor(158.0323, device='cuda:2')
+test similarity is  tensor(0.6803, device='cuda:2')
+test acc is  0.2438000001563381
+test loss is 2.2678620118830506
+test entropy is  1.650411917965041
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  1.650411917965041
+avg test loss is  2.2678620118830506
+avg accuracy is  0.2438000001563381
+compute_distance is  tensor(158.0323, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5350935311396239
+avg test loss is  4.160104587642369
+avg accuracy is  0.25330000015633836
+compute_distance is  tensor(112.8744, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.5275734986768348
+avg test loss is  4.166303299383314
+avg accuracy is  0.2543000001563384
+compute_distance is  tensor(80.4318, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(80.4318, device='cuda:2')
+test similarity is  tensor(0.9161, device='cuda:2')
+test acc is  0.2543000001563384
+test loss is 4.166303299383314
+test entropy is  0.5275734986768348
+________________________________
+the length of epoch_weights is  1
+the length of weights_d is  1
+ 
+Avg Training Stats after 9 global rounds:
+Train Accuracy: 75.63% 
+
+Test Accuracy: 75.13% 
+
+
+ | Global Training Round : 10 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  12 3
+current submit client idx and staleness is  13 3
+current submit client idx and staleness is  14 3
+current submit client idx and staleness is  15 3
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(89.6951, device='cuda:2')
+compute similarity is  tensor(0.9280, device='cuda:2')
+compute distance is  tensor(92.5826, device='cuda:2')
+compute similarity is  tensor(0.9257, device='cuda:2')
+compute distance is  tensor(98.8717, device='cuda:2')
+compute similarity is  tensor(0.9184, device='cuda:2')
+compute distance is  tensor(93.4289, device='cuda:2')
+compute similarity is  tensor(0.9227, device='cuda:2')
+compute distance is  tensor(93.8547, device='cuda:2')
+compute similarity is  tensor(0.9248, device='cuda:2')
+compute distance is  tensor(94.2268, device='cuda:2')
+compute similarity is  tensor(0.9229, device='cuda:2')
+compute distance is  tensor(89.6047, device='cuda:2')
+compute similarity is  tensor(0.9308, device='cuda:2')
+compute distance is  tensor(90.4809, device='cuda:2')
+compute similarity is  tensor(0.9313, device='cuda:2')
+compute distance is  tensor(91.2648, device='cuda:2')
+compute similarity is  tensor(0.9307, device='cuda:2')
+compute distance is  tensor(91.6806, device='cuda:2')
+compute similarity is  tensor(0.9304, device='cuda:2')
+compute distance is  tensor(91.5787, device='cuda:2')
+compute similarity is  tensor(0.9255, device='cuda:2')
+compute distance is  tensor(90.2255, device='cuda:2')
+compute similarity is  tensor(0.9290, device='cuda:2')
+calculated distance threshold is  tensor(108.1387, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.5320833334896756
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.7749833334896599
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.6659666668229993
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.7862000001563262
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.5726166668230065
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.5175500001563422
+====================
+succ_min + 1
+mid_min is -0.8
+====================
+iteration is  2
+round is  0
+accuracy is  0.4785500001563419
+====================
+succ_min + 1
+________________________________
+test distance is  tensor(164.1924, device='cuda:2')
+test similarity is  tensor(0.7013, device='cuda:2')
+test acc is  0.4785500001563419
+test loss is 1.5061636180765847
+test entropy is  1.177036503548307
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  1.177036503548307
+avg test loss is  1.5061636180765847
+avg accuracy is  0.4785500001563419
+compute_distance is  tensor(164.1924, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.48096684374407667
+avg test loss is  2.0861562102842433
+avg accuracy is  0.5013000001563421
+compute_distance is  tensor(113.9567, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.4845424831421899
+avg test loss is  2.064130982102107
+avg accuracy is  0.5043333334896755
+compute_distance is  tensor(80.8559, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(80.8559, device='cuda:2')
+test similarity is  tensor(0.9220, device='cuda:2')
+test acc is  0.5043333334896755
+test loss is 2.064130982102107
+test entropy is  0.4845424831421899
+________________________________
+the length of epoch_weights is  2
+the length of weights_d is  2
+ 
+Avg Training Stats after 10 global rounds:
+Train Accuracy: 85.71% 
+
+Test Accuracy: 84.58% 
+
+
+ | Global Training Round : 11 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 2
+current submit client idx and staleness is  7 2
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  24 5
+current submit client idx and staleness is  25 5
+current submit client idx and staleness is  26 5
+current submit client idx and staleness is  27 5
+current submit client idx and staleness is  28 5
+current submit client idx and staleness is  29 5
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(94.9242, device='cuda:2')
+compute similarity is  tensor(0.9263, device='cuda:2')
+compute distance is  tensor(94.4737, device='cuda:2')
+compute similarity is  tensor(0.9289, device='cuda:2')
+compute distance is  tensor(94.3835, device='cuda:2')
+compute similarity is  tensor(0.9306, device='cuda:2')
+compute distance is  tensor(96.8695, device='cuda:2')
+compute similarity is  tensor(0.9250, device='cuda:2')
+compute distance is  tensor(99.5973, device='cuda:2')
+compute similarity is  tensor(0.9256, device='cuda:2')
+compute distance is  tensor(92.4850, device='cuda:2')
+compute similarity is  tensor(0.9299, device='cuda:2')
+compute distance is  tensor(88.4512, device='cuda:2')
+compute similarity is  tensor(0.9350, device='cuda:2')
+compute distance is  tensor(85.5977, device='cuda:2')
+compute similarity is  tensor(0.9402, device='cuda:2')
+compute distance is  tensor(90.1227, device='cuda:2')
+compute similarity is  tensor(0.9366, device='cuda:2')
+compute distance is  tensor(91.3280, device='cuda:2')
+compute similarity is  tensor(0.9358, device='cuda:2')
+compute distance is  tensor(97.5353, device='cuda:2')
+compute similarity is  tensor(0.9243, device='cuda:2')
+compute distance is  tensor(87.5813, device='cuda:2')
+compute similarity is  tensor(0.9380, device='cuda:2')
+calculated distance threshold is  tensor(113.5968, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.8228000001563245
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8373666668229905
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.838283333489657
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.8284166668229909
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.7456166668229948
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.5392166668230091
+====================
+succ_min + 1
+mid_min is -0.8
+====================
+iteration is  2
+round is  0
+accuracy is  0.27630000015633904
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  1
+accuracy is  0.7245333334896625
+====================
+====================
+iteration is  2
+round is  2
+accuracy is  0.5493833334896755
+====================
+mid_min is -1.6
+====================
+iteration is  3
+round is  0
+accuracy is  0.4668333334896751
+====================
+====================
+iteration is  3
+round is  1
+accuracy is  0.144233333489666
+====================
+succ_min + 1
+________________________________
+test distance is  tensor(315.3246, device='cuda:2')
+test similarity is  tensor(0.4587, device='cuda:2')
+test acc is  0.144233333489666
+test loss is 5.356077192180447
+test entropy is  0.6987003291974953
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.6987003291974953
+avg test loss is  5.356077192180447
+avg accuracy is  0.144233333489666
+compute_distance is  tensor(315.3246, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.36289911289840365
+avg test loss is  8.495205883786623
+avg accuracy is  0.13896666682299882
+compute_distance is  tensor(206.7785, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.39428200320140133
+avg test loss is  7.82282287988073
+avg accuracy is  0.14323333348966585
+compute_distance is  tensor(138.0345, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.4195103174778444
+avg test loss is  7.443317287766349
+avg accuracy is  0.14498333348966605
+compute_distance is  tensor(96.4960, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(96.4960, device='cuda:2')
+test similarity is  tensor(0.8973, device='cuda:2')
+test acc is  0.14498333348966605
+test loss is 7.443317287766349
+test entropy is  0.4195103174778444
+________________________________
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 11 global rounds:
+Train Accuracy: 41.90% 
+
+Test Accuracy: 41.49% 
+
+
+ | Global Training Round : 12 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(110.3903, device='cuda:2')
+compute similarity is  tensor(0.9144, device='cuda:2')
+compute distance is  tensor(113.6821, device='cuda:2')
+compute similarity is  tensor(0.9165, device='cuda:2')
+compute distance is  tensor(109.5207, device='cuda:2')
+compute similarity is  tensor(0.9226, device='cuda:2')
+compute distance is  tensor(120.9369, device='cuda:2')
+compute similarity is  tensor(0.9070, device='cuda:2')
+compute distance is  tensor(115.1057, device='cuda:2')
+compute similarity is  tensor(0.9145, device='cuda:2')
+compute distance is  tensor(113.7125, device='cuda:2')
+compute similarity is  tensor(0.9177, device='cuda:2')
+compute distance is  tensor(107.6784, device='cuda:2')
+compute similarity is  tensor(0.9242, device='cuda:2')
+compute distance is  tensor(120.7316, device='cuda:2')
+compute similarity is  tensor(0.9086, device='cuda:2')
+compute distance is  tensor(114.8770, device='cuda:2')
+compute similarity is  tensor(0.9170, device='cuda:2')
+compute distance is  tensor(112.6436, device='cuda:2')
+compute similarity is  tensor(0.9160, device='cuda:2')
+compute distance is  tensor(112.8613, device='cuda:2')
+compute similarity is  tensor(0.9169, device='cuda:2')
+compute distance is  tensor(105.9096, device='cuda:2')
+compute similarity is  tensor(0.9275, device='cuda:2')
+calculated distance threshold is  tensor(135.9642, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.39153333348967434
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.585833333489672
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.3597333334896739
+====================
+succ_min + 1
+mid_min is -0.2
+====================
+iteration is  1
+round is  0
+accuracy is  0.255516666823005
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.3324333334896734
+====================
+________________________________
+test distance is  tensor(40.5876, device='cuda:2')
+test similarity is  tensor(0.9752, device='cuda:2')
+test acc is  0.255516666823005
+test loss is 2.8985812524234307
+test entropy is  0.9205139055053817
+________________________________
+the length of epoch_weights is  4
+the length of weights_d is  4
+ 
+Avg Training Stats after 12 global rounds:
+Train Accuracy: 87.09% 
+
+Test Accuracy: 86.10% 
+
+
+ | Global Training Round : 13 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 2
+current submit client idx and staleness is  7 2
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 3
+current submit client idx and staleness is  13 3
+current submit client idx and staleness is  14 3
+current submit client idx and staleness is  15 3
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 4
+current submit client idx and staleness is  19 4
+current submit client idx and staleness is  20 4
+current submit client idx and staleness is  21 4
+current submit client idx and staleness is  22 4
+current submit client idx and staleness is  23 4
+current submit client idx and staleness is  30 6
+current submit client idx and staleness is  31 6
+current submit client idx and staleness is  32 6
+current submit client idx and staleness is  33 6
+current submit client idx and staleness is  34 6
+current submit client idx and staleness is  35 6
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(81.0602, device='cuda:2')
+compute similarity is  tensor(0.9461, device='cuda:2')
+compute distance is  tensor(90.0373, device='cuda:2')
+compute similarity is  tensor(0.9405, device='cuda:2')
+compute distance is  tensor(87.9287, device='cuda:2')
+compute similarity is  tensor(0.9427, device='cuda:2')
+compute distance is  tensor(93.8197, device='cuda:2')
+compute similarity is  tensor(0.9343, device='cuda:2')
+compute distance is  tensor(94.4960, device='cuda:2')
+compute similarity is  tensor(0.9350, device='cuda:2')
+compute distance is  tensor(87.8528, device='cuda:2')
+compute similarity is  tensor(0.9410, device='cuda:2')
+compute distance is  tensor(84.2799, device='cuda:2')
+compute similarity is  tensor(0.9462, device='cuda:2')
+compute distance is  tensor(89.1728, device='cuda:2')
+compute similarity is  tensor(0.9407, device='cuda:2')
+compute distance is  tensor(89.0224, device='cuda:2')
+compute similarity is  tensor(0.9423, device='cuda:2')
+compute distance is  tensor(91.8619, device='cuda:2')
+compute similarity is  tensor(0.9395, device='cuda:2')
+compute distance is  tensor(89.9177, device='cuda:2')
+compute similarity is  tensor(0.9393, device='cuda:2')
+compute distance is  tensor(85.3157, device='cuda:2')
+compute similarity is  tensor(0.9436, device='cuda:2')
+calculated distance threshold is  tensor(107.9318, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.8617166668229895
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8466833334896566
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.864283333489656
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.6976500001563306
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.6107166668230033
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  2
+accuracy is  0.8505500001563232
+====================
+mid_min is -0.8
+====================
+iteration is  2
+round is  0
+accuracy is  0.6952333334896642
+====================
+====================
+iteration is  2
+round is  1
+accuracy is  0.5486333334896755
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  2
+accuracy is  0.5382500001563423
+====================
+succ_min + 1
+________________________________
+test distance is  tensor(162.1302, device='cuda:2')
+test similarity is  tensor(0.7522, device='cuda:2')
+test acc is  0.5382500001563423
+test loss is 1.3016180274710218
+test entropy is  1.4219772810620794
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  1.4219772810620794
+avg test loss is  1.3016180274710218
+avg accuracy is  0.5382500001563423
+compute_distance is  tensor(162.1302, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.47407501602350777
+avg test loss is  1.623119714671869
+avg accuracy is  0.5528666668230083
+compute_distance is  tensor(113.5446, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.4693225161797965
+avg test loss is  1.6032787783186573
+avg accuracy is  0.5552500001563414
+compute_distance is  tensor(80.5296, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(80.5296, device='cuda:2')
+test similarity is  tensor(0.9386, device='cuda:2')
+test acc is  0.5552500001563414
+test loss is 1.6032787783186573
+test entropy is  0.4693225161797965
+________________________________
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 13 global rounds:
+Train Accuracy: 82.42% 
+
+Test Accuracy: 81.66% 
+
+
+ | Global Training Round : 14 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(94.6822, device='cuda:2')
+compute similarity is  tensor(0.9390, device='cuda:2')
+compute distance is  tensor(100.8283, device='cuda:2')
+compute similarity is  tensor(0.9356, device='cuda:2')
+compute distance is  tensor(104.2189, device='cuda:2')
+compute similarity is  tensor(0.9310, device='cuda:2')
+compute distance is  tensor(104.2462, device='cuda:2')
+compute similarity is  tensor(0.9299, device='cuda:2')
+compute distance is  tensor(104.8442, device='cuda:2')
+compute similarity is  tensor(0.9315, device='cuda:2')
+compute distance is  tensor(102.4984, device='cuda:2')
+compute similarity is  tensor(0.9303, device='cuda:2')
+compute distance is  tensor(95.2756, device='cuda:2')
+compute similarity is  tensor(0.9402, device='cuda:2')
+compute distance is  tensor(95.2249, device='cuda:2')
+compute similarity is  tensor(0.9432, device='cuda:2')
+compute distance is  tensor(93.0145, device='cuda:2')
+compute similarity is  tensor(0.9426, device='cuda:2')
+compute distance is  tensor(102.6345, device='cuda:2')
+compute similarity is  tensor(0.9345, device='cuda:2')
+compute distance is  tensor(100.0667, device='cuda:2')
+compute similarity is  tensor(0.9333, device='cuda:2')
+compute distance is  tensor(98.5233, device='cuda:2')
+compute similarity is  tensor(0.9368, device='cuda:2')
+calculated distance threshold is  tensor(116.6739, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.7038500001563304
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8054333334896586
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8187500001563246
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.6960500001563308
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.7462833334896612
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.642066666823001
+====================
+succ_min + 1
+mid_min is -0.8
+====================
+iteration is  2
+round is  0
+accuracy is  0.539666666823009
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  1
+accuracy is  0.6218666668230025
+====================
+====================
+iteration is  2
+round is  2
+accuracy is  0.6503500001563338
+====================
+________________________________
+test distance is  tensor(159.7178, device='cuda:2')
+test similarity is  tensor(0.7593, device='cuda:2')
+test acc is  0.539666666823009
+test loss is 1.5762491217300074
+test entropy is  0.5837858518494218
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.5837858518494218
+avg test loss is  1.5762491217300074
+avg accuracy is  0.539666666823009
+compute_distance is  tensor(159.7178, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.3270982726296382
+avg test loss is  1.9816053728304945
+avg accuracy is  0.5604000001563411
+compute_distance is  tensor(108.3380, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(108.3380, device='cuda:2')
+test similarity is  tensor(0.8809, device='cuda:2')
+test acc is  0.5604000001563411
+test loss is 1.9816053728304945
+test entropy is  0.3270982726296382
+________________________________
+the length of epoch_weights is  2
+the length of weights_d is  2
+ 
+Avg Training Stats after 14 global rounds:
+Train Accuracy: 85.95% 
+
+Test Accuracy: 85.20% 
+
+
+ | Global Training Round : 15 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 2
+current submit client idx and staleness is  7 2
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  36 7
+current submit client idx and staleness is  37 7
+current submit client idx and staleness is  38 7
+current submit client idx and staleness is  39 7
+current submit client idx and staleness is  40 7
+current submit client idx and staleness is  41 7
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(94.9728, device='cuda:2')
+compute similarity is  tensor(0.9405, device='cuda:2')
+compute distance is  tensor(97.6022, device='cuda:2')
+compute similarity is  tensor(0.9424, device='cuda:2')
+compute distance is  tensor(102.5725, device='cuda:2')
+compute similarity is  tensor(0.9342, device='cuda:2')
+compute distance is  tensor(103.3489, device='cuda:2')
+compute similarity is  tensor(0.9339, device='cuda:2')
+compute distance is  tensor(100.1996, device='cuda:2')
+compute similarity is  tensor(0.9394, device='cuda:2')
+compute distance is  tensor(95.8462, device='cuda:2')
+compute similarity is  tensor(0.9408, device='cuda:2')
+compute distance is  tensor(97.4808, device='cuda:2')
+compute similarity is  tensor(0.9392, device='cuda:2')
+compute distance is  tensor(94.9641, device='cuda:2')
+compute similarity is  tensor(0.9426, device='cuda:2')
+compute distance is  tensor(93.8497, device='cuda:2')
+compute similarity is  tensor(0.9450, device='cuda:2')
+compute distance is  tensor(96.3672, device='cuda:2')
+compute similarity is  tensor(0.9440, device='cuda:2')
+compute distance is  tensor(103.4488, device='cuda:2')
+compute similarity is  tensor(0.9345, device='cuda:2')
+compute distance is  tensor(94.8559, device='cuda:2')
+compute similarity is  tensor(0.9439, device='cuda:2')
+calculated distance threshold is  tensor(113.0478, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.8567333334896563
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8625333334896562
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8614666668229896
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.721766666822996
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.786000000156326
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.7858666668229927
+====================
+mid_min is -0.8
+====================
+iteration is  2
+round is  0
+accuracy is  0.7314333334896621
+====================
+====================
+iteration is  2
+round is  1
+accuracy is  0.36885000015634073
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  2
+accuracy is  0.3995333334896744
+====================
+mid_min is -1.6
+====================
+iteration is  3
+round is  0
+accuracy is  0.4465666668230083
+====================
+====================
+iteration is  3
+round is  1
+accuracy is  0.3621000001563407
+====================
+succ_min + 1
+====================
+iteration is  3
+round is  2
+accuracy is  0.3221666668230066
+====================
+succ_min + 1
+________________________________
+test distance is  tensor(326.5551, device='cuda:2')
+test similarity is  tensor(0.4994, device='cuda:2')
+test acc is  0.3221666668230066
+test loss is 7.06554196231655
+test entropy is  0.2188953147974731
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.2188953147974731
+avg test loss is  7.06554196231655
+avg accuracy is  0.3221666668230066
+compute_distance is  tensor(326.5551, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.17534700588885146
+avg test loss is  7.587136098316738
+avg accuracy is  0.2989666668230062
+compute_distance is  tensor(210.3145, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.19360506845943964
+avg test loss is  6.9190719422501035
+avg accuracy is  0.29666666682300613
+compute_distance is  tensor(137.6036, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.21077341973177913
+avg test loss is  6.343114468842935
+avg accuracy is  0.3004500001563396
+compute_distance is  tensor(93.7796, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(93.7796, device='cuda:2')
+test similarity is  tensor(0.9198, device='cuda:2')
+test acc is  0.3004500001563396
+test loss is 6.343114468842935
+test entropy is  0.21077341973177913
+________________________________
+the length of epoch_weights is  2
+the length of weights_d is  2
+ 
+Avg Training Stats after 15 global rounds:
+Train Accuracy: 83.57% 
+
+Test Accuracy: 82.76% 
+
+
+ | Global Training Round : 16 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  12 3
+current submit client idx and staleness is  13 3
+current submit client idx and staleness is  14 3
+current submit client idx and staleness is  15 3
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  24 5
+current submit client idx and staleness is  25 5
+current submit client idx and staleness is  26 5
+current submit client idx and staleness is  27 5
+current submit client idx and staleness is  28 5
+current submit client idx and staleness is  29 5
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(95.3272, device='cuda:2')
+compute similarity is  tensor(0.9420, device='cuda:2')
+compute distance is  tensor(106.4573, device='cuda:2')
+compute similarity is  tensor(0.9335, device='cuda:2')
+compute distance is  tensor(97.9122, device='cuda:2')
+compute similarity is  tensor(0.9401, device='cuda:2')
+compute distance is  tensor(110.7841, device='cuda:2')
+compute similarity is  tensor(0.9261, device='cuda:2')
+compute distance is  tensor(106.8195, device='cuda:2')
+compute similarity is  tensor(0.9334, device='cuda:2')
+compute distance is  tensor(103.0124, device='cuda:2')
+compute similarity is  tensor(0.9339, device='cuda:2')
+compute distance is  tensor(101.6506, device='cuda:2')
+compute similarity is  tensor(0.9359, device='cuda:2')
+compute distance is  tensor(100.5813, device='cuda:2')
+compute similarity is  tensor(0.9370, device='cuda:2')
+compute distance is  tensor(103.0699, device='cuda:2')
+compute similarity is  tensor(0.9375, device='cuda:2')
+compute distance is  tensor(99.3424, device='cuda:2')
+compute similarity is  tensor(0.9411, device='cuda:2')
+compute distance is  tensor(97.9810, device='cuda:2')
+compute similarity is  tensor(0.9403, device='cuda:2')
+compute distance is  tensor(96.4069, device='cuda:2')
+compute similarity is  tensor(0.9449, device='cuda:2')
+calculated distance threshold is  tensor(126.2410, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.7582500001563274
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8272333334896576
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.7681333334896602
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.8136000001563248
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.6801000001563319
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  2
+accuracy is  0.6740666668229989
+====================
+succ_min + 1
+mid_min is -0.8
+====================
+iteration is  2
+round is  0
+accuracy is  0.10681666682299863
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  1
+accuracy is  0.4381166668230082
+====================
+====================
+iteration is  2
+round is  2
+accuracy is  0.6134666668230032
+====================
+________________________________
+test distance is  tensor(158.2866, device='cuda:2')
+test similarity is  tensor(0.7697, device='cuda:2')
+test acc is  0.10681666682299863
+test loss is 9.347061858248354
+test entropy is  0.2275481065834509
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.2275481065834509
+avg test loss is  9.347061858248354
+avg accuracy is  0.10681666682299863
+compute_distance is  tensor(158.2866, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.08823041678038931
+avg test loss is  11.824746260002478
+avg accuracy is  0.10571666682299866
+compute_distance is  tensor(104.4647, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(104.4647, device='cuda:2')
+test similarity is  tensor(0.8874, device='cuda:2')
+test acc is  0.10571666682299866
+test loss is 11.824746260002478
+test entropy is  0.08823041678038931
+________________________________
+the length of epoch_weights is  3
+the length of weights_d is  3
+ 
+Avg Training Stats after 16 global rounds:
+Train Accuracy: 82.83% 
+
+Test Accuracy: 81.58% 
+
+
+ | Global Training Round : 17 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 2
+current submit client idx and staleness is  7 2
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  18 4
+current submit client idx and staleness is  19 4
+current submit client idx and staleness is  20 4
+current submit client idx and staleness is  21 4
+current submit client idx and staleness is  22 4
+current submit client idx and staleness is  23 4
+current submit client idx and staleness is  42 8
+current submit client idx and staleness is  43 8
+current submit client idx and staleness is  44 8
+current submit client idx and staleness is  45 8
+current submit client idx and staleness is  46 8
+current submit client idx and staleness is  47 8
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(100.8028, device='cuda:2')
+compute similarity is  tensor(0.9386, device='cuda:2')
+compute distance is  tensor(102.6894, device='cuda:2')
+compute similarity is  tensor(0.9390, device='cuda:2')
+compute distance is  tensor(100.2904, device='cuda:2')
+compute similarity is  tensor(0.9411, device='cuda:2')
+compute distance is  tensor(103.4297, device='cuda:2')
+compute similarity is  tensor(0.9362, device='cuda:2')
+compute distance is  tensor(104.3456, device='cuda:2')
+compute similarity is  tensor(0.9371, device='cuda:2')
+compute distance is  tensor(99.3030, device='cuda:2')
+compute similarity is  tensor(0.9402, device='cuda:2')
+compute distance is  tensor(99.3220, device='cuda:2')
+compute similarity is  tensor(0.9429, device='cuda:2')
+compute distance is  tensor(96.2918, device='cuda:2')
+compute similarity is  tensor(0.9457, device='cuda:2')
+compute distance is  tensor(99.5310, device='cuda:2')
+compute similarity is  tensor(0.9428, device='cuda:2')
+compute distance is  tensor(101.5144, device='cuda:2')
+compute similarity is  tensor(0.9423, device='cuda:2')
+compute distance is  tensor(99.5306, device='cuda:2')
+compute similarity is  tensor(0.9405, device='cuda:2')
+compute distance is  tensor(96.0852, device='cuda:2')
+compute similarity is  tensor(0.9456, device='cuda:2')
+calculated distance threshold is  tensor(112.6059, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.8328166668229906
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8024666668229921
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8472666668229901
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.6075000001563371
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.691550000156331
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.23640000015633786
+====================
+succ_min + 1
+mid_min is -0.4
+====================
+iteration is  2
+round is  0
+accuracy is  0.7922666668229924
+====================
+====================
+iteration is  2
+round is  1
+accuracy is  0.813833333489658
+====================
+====================
+iteration is  2
+round is  2
+accuracy is  0.7625166668229939
+====================
+mid_min is -0.8
+====================
+iteration is  3
+round is  0
+accuracy is  0.5031166668230087
+====================
+====================
+iteration is  3
+round is  1
+accuracy is  0.29280000015633934
+====================
+________________________________
+test distance is  tensor(79.5537, device='cuda:2')
+test similarity is  tensor(0.9264, device='cuda:2')
+test acc is  0.23640000015633786
+test loss is 3.359171920239544
+test entropy is  0.7968467719265139
+________________________________
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 17 global rounds:
+Train Accuracy: 70.30% 
+
+Test Accuracy: 69.62% 
+
+
+ | Global Training Round : 18 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(104.6309, device='cuda:2')
+compute similarity is  tensor(0.9410, device='cuda:2')
+compute distance is  tensor(108.4792, device='cuda:2')
+compute similarity is  tensor(0.9389, device='cuda:2')
+compute distance is  tensor(112.0935, device='cuda:2')
+compute similarity is  tensor(0.9357, device='cuda:2')
+compute distance is  tensor(112.4448, device='cuda:2')
+compute similarity is  tensor(0.9327, device='cuda:2')
+compute distance is  tensor(116.8651, device='cuda:2')
+compute similarity is  tensor(0.9345, device='cuda:2')
+compute distance is  tensor(106.9896, device='cuda:2')
+compute similarity is  tensor(0.9395, device='cuda:2')
+compute distance is  tensor(105.6476, device='cuda:2')
+compute similarity is  tensor(0.9412, device='cuda:2')
+compute distance is  tensor(101.4080, device='cuda:2')
+compute similarity is  tensor(0.9453, device='cuda:2')
+compute distance is  tensor(104.9853, device='cuda:2')
+compute similarity is  tensor(0.9429, device='cuda:2')
+compute distance is  tensor(110.5491, device='cuda:2')
+compute similarity is  tensor(0.9373, device='cuda:2')
+compute distance is  tensor(111.9211, device='cuda:2')
+compute similarity is  tensor(0.9361, device='cuda:2')
+compute distance is  tensor(101.8949, device='cuda:2')
+compute similarity is  tensor(0.9459, device='cuda:2')
+calculated distance threshold is  tensor(132.3221, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.721766666822996
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.6095500001563368
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  2
+accuracy is  0.839233333489657
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.4285166668230081
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.40513333348967445
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  2
+accuracy is  0.3462500001563404
+====================
+succ_min + 1
+mid_min is -0.4
+====================
+iteration is  2
+round is  0
+accuracy is  0.8093166668229916
+====================
+====================
+iteration is  2
+round is  1
+accuracy is  0.77578333348966
+====================
+====================
+iteration is  2
+round is  2
+accuracy is  0.4965166668230087
+====================
+________________________________
+test distance is  tensor(79.7890, device='cuda:2')
+test similarity is  tensor(0.9344, device='cuda:2')
+test acc is  0.3462500001563404
+test loss is 1.9704371089620123
+test entropy is  1.1488077482943342
+________________________________
+the length of epoch_weights is  3
+the length of weights_d is  3
+ 
+Avg Training Stats after 18 global rounds:
+Train Accuracy: 86.62% 
+
+Test Accuracy: 85.99% 
+
+
+ | Global Training Round : 19 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 2
+current submit client idx and staleness is  7 2
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 3
+current submit client idx and staleness is  13 3
+current submit client idx and staleness is  14 3
+current submit client idx and staleness is  15 3
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  30 6
+current submit client idx and staleness is  31 6
+current submit client idx and staleness is  32 6
+current submit client idx and staleness is  33 6
+current submit client idx and staleness is  34 6
+current submit client idx and staleness is  35 6
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(85.2071, device='cuda:2')
+compute similarity is  tensor(0.9563, device='cuda:2')
+compute distance is  tensor(95.5286, device='cuda:2')
+compute similarity is  tensor(0.9499, device='cuda:2')
+compute distance is  tensor(99.9381, device='cuda:2')
+compute similarity is  tensor(0.9461, device='cuda:2')
+compute distance is  tensor(104.6805, device='cuda:2')
+compute similarity is  tensor(0.9401, device='cuda:2')
+compute distance is  tensor(104.4217, device='cuda:2')
+compute similarity is  tensor(0.9432, device='cuda:2')
+compute distance is  tensor(96.5505, device='cuda:2')
+compute similarity is  tensor(0.9498, device='cuda:2')
+compute distance is  tensor(90.0415, device='cuda:2')
+compute similarity is  tensor(0.9554, device='cuda:2')
+compute distance is  tensor(91.5887, device='cuda:2')
+compute similarity is  tensor(0.9537, device='cuda:2')
+compute distance is  tensor(95.9525, device='cuda:2')
+compute similarity is  tensor(0.9494, device='cuda:2')
+compute distance is  tensor(93.7980, device='cuda:2')
+compute similarity is  tensor(0.9513, device='cuda:2')
+compute distance is  tensor(93.8335, device='cuda:2')
+compute similarity is  tensor(0.9502, device='cuda:2')
+compute distance is  tensor(92.0567, device='cuda:2')
+compute similarity is  tensor(0.9530, device='cuda:2')
+calculated distance threshold is  tensor(124.1539, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.8373333334896572
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.7963666668229922
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8253833334896575
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.7867833334896593
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.7733333334896599
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.7337000001563286
+====================
+mid_min is -0.8
+====================
+iteration is  2
+round is  0
+accuracy is  0.6523166668230003
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  1
+accuracy is  0.5891000001563385
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  2
+accuracy is  0.5047333334896754
+====================
+succ_min + 1
+mid_min is -0.8
+====================
+iteration is  3
+round is  0
+accuracy is  0.34538333348967365
+====================
+succ_min + 1
+====================
+iteration is  3
+round is  1
+accuracy is  0.2633666668230053
+====================
+succ_min + 1
+________________________________
+test distance is  tensor(164.8685, device='cuda:2')
+test similarity is  tensor(0.7830, device='cuda:2')
+test acc is  0.2633666668230053
+test loss is 1.979167791317775
+test entropy is  1.8245169592818726
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  1.8245169592818726
+avg test loss is  1.979167791317775
+avg accuracy is  0.2633666668230053
+compute_distance is  tensor(164.8685, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5700703560035112
+avg test loss is  3.280494294441077
+avg accuracy is  0.27353333348967224
+compute_distance is  tensor(116.1055, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(116.1055, device='cuda:2')
+test similarity is  tensor(0.8935, device='cuda:2')
+test acc is  0.27353333348967224
+test loss is 3.280494294441077
+test entropy is  0.5700703560035112
+________________________________
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 19 global rounds:
+Train Accuracy: 74.97% 
+
+Test Accuracy: 74.64% 
+
+
+ | Global Training Round : 20 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(111.5633, device='cuda:2')
+compute similarity is  tensor(0.9394, device='cuda:2')
+compute distance is  tensor(111.6010, device='cuda:2')
+compute similarity is  tensor(0.9429, device='cuda:2')
+compute distance is  tensor(119.1058, device='cuda:2')
+compute similarity is  tensor(0.9346, device='cuda:2')
+compute distance is  tensor(115.5740, device='cuda:2')
+compute similarity is  tensor(0.9390, device='cuda:2')
+compute distance is  tensor(116.5529, device='cuda:2')
+compute similarity is  tensor(0.9411, device='cuda:2')
+compute distance is  tensor(115.5116, device='cuda:2')
+compute similarity is  tensor(0.9399, device='cuda:2')
+compute distance is  tensor(116.7195, device='cuda:2')
+compute similarity is  tensor(0.9388, device='cuda:2')
+compute distance is  tensor(107.6300, device='cuda:2')
+compute similarity is  tensor(0.9471, device='cuda:2')
+compute distance is  tensor(104.4327, device='cuda:2')
+compute similarity is  tensor(0.9487, device='cuda:2')
+compute distance is  tensor(112.6484, device='cuda:2')
+compute similarity is  tensor(0.9444, device='cuda:2')
+compute distance is  tensor(120.3875, device='cuda:2')
+compute similarity is  tensor(0.9336, device='cuda:2')
+compute distance is  tensor(112.6749, device='cuda:2')
+compute similarity is  tensor(0.9433, device='cuda:2')
+calculated distance threshold is  tensor(136.3422, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.725516666822996
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.6312666668230018
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  2
+accuracy is  0.5010666668230087
+====================
+succ_min + 1
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.7287333334896625
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.6280833334896688
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.36656666682300737
+====================
+succ_min + 1
+mid_min is -0.8
+====================
+iteration is  2
+round is  0
+accuracy is  0.5530666668230083
+====================
+________________________________
+test distance is  tensor(83.1008, device='cuda:2')
+test similarity is  tensor(0.9394, device='cuda:2')
+test acc is  0.36656666682300737
+test loss is 1.9719923465236673
+test entropy is  1.1938896366019747
+________________________________
+the length of epoch_weights is  3
+the length of weights_d is  3
+ 
+Avg Training Stats after 20 global rounds:
+Train Accuracy: 85.40% 
+
+Test Accuracy: 84.68% 
+
+
+ | Global Training Round : 21 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 2
+current submit client idx and staleness is  7 2
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  18 4
+current submit client idx and staleness is  19 4
+current submit client idx and staleness is  20 4
+current submit client idx and staleness is  21 4
+current submit client idx and staleness is  22 4
+current submit client idx and staleness is  23 4
+current submit client idx and staleness is  24 5
+current submit client idx and staleness is  25 5
+current submit client idx and staleness is  26 5
+current submit client idx and staleness is  27 5
+current submit client idx and staleness is  28 5
+current submit client idx and staleness is  29 5
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(103.0131, device='cuda:2')
+compute similarity is  tensor(0.9451, device='cuda:2')
+compute distance is  tensor(98.6279, device='cuda:2')
+compute similarity is  tensor(0.9530, device='cuda:2')
+compute distance is  tensor(101.1379, device='cuda:2')
+compute similarity is  tensor(0.9498, device='cuda:2')
+compute distance is  tensor(103.6543, device='cuda:2')
+compute similarity is  tensor(0.9459, device='cuda:2')
+compute distance is  tensor(92.0207, device='cuda:2')
+compute similarity is  tensor(0.9594, device='cuda:2')
+compute distance is  tensor(95.6060, device='cuda:2')
+compute similarity is  tensor(0.9548, device='cuda:2')
+compute distance is  tensor(91.7242, device='cuda:2')
+compute similarity is  tensor(0.9580, device='cuda:2')
+compute distance is  tensor(89.8703, device='cuda:2')
+compute similarity is  tensor(0.9587, device='cuda:2')
+compute distance is  tensor(91.4743, device='cuda:2')
+compute similarity is  tensor(0.9591, device='cuda:2')
+compute distance is  tensor(95.4220, device='cuda:2')
+compute similarity is  tensor(0.9558, device='cuda:2')
+compute distance is  tensor(95.9434, device='cuda:2')
+compute similarity is  tensor(0.9531, device='cuda:2')
+compute distance is  tensor(94.4000, device='cuda:2')
+compute similarity is  tensor(0.9570, device='cuda:2')
+calculated distance threshold is  tensor(117.4384, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.8195333334896578
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8401166668229904
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8519333334896566
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.6385000001563346
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.8131166668229914
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.6979666668229972
+====================
+mid_min is -0.8
+====================
+iteration is  2
+round is  0
+accuracy is  0.2177000001563372
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  1
+accuracy is  0.739566666822995
+====================
+====================
+iteration is  2
+round is  2
+accuracy is  0.7567000001563274
+====================
+mid_min is -1.6
+====================
+iteration is  3
+round is  0
+accuracy is  0.46815000015634184
+====================
+====================
+iteration is  3
+round is  1
+accuracy is  0.42381666682300806
+====================
+________________________________
+test distance is  tensor(164.1735, device='cuda:2')
+test similarity is  tensor(0.8055, device='cuda:2')
+test acc is  0.2177000001563372
+test loss is 2.464530259561437
+test entropy is  1.6510651869052
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  1.6510651869052
+avg test loss is  2.464530259561437
+avg accuracy is  0.2177000001563372
+compute_distance is  tensor(164.1735, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.7423873364544118
+avg test loss is  4.312875671681565
+avg accuracy is  0.2238500001563374
+compute_distance is  tensor(117.6468, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.7444040800081387
+avg test loss is  4.212375670353741
+avg accuracy is  0.22561666682300416
+compute_distance is  tensor(86.3090, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(86.3090, device='cuda:2')
+test similarity is  tensor(0.9533, device='cuda:2')
+test acc is  0.22561666682300416
+test loss is 4.212375670353741
+test entropy is  0.7444040800081387
+________________________________
+the length of epoch_weights is  2
+the length of weights_d is  2
+ 
+Avg Training Stats after 21 global rounds:
+Train Accuracy: 86.83% 
+
+Test Accuracy: 86.13% 
+
+
+ | Global Training Round : 22 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  12 3
+current submit client idx and staleness is  13 3
+current submit client idx and staleness is  14 3
+current submit client idx and staleness is  15 3
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  36 7
+current submit client idx and staleness is  37 7
+current submit client idx and staleness is  38 7
+current submit client idx and staleness is  39 7
+current submit client idx and staleness is  40 7
+current submit client idx and staleness is  41 7
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(93.9769, device='cuda:2')
+compute similarity is  tensor(0.9538, device='cuda:2')
+compute distance is  tensor(97.5047, device='cuda:2')
+compute similarity is  tensor(0.9537, device='cuda:2')
+compute distance is  tensor(98.4599, device='cuda:2')
+compute similarity is  tensor(0.9537, device='cuda:2')
+compute distance is  tensor(106.4365, device='cuda:2')
+compute similarity is  tensor(0.9441, device='cuda:2')
+compute distance is  tensor(95.2362, device='cuda:2')
+compute similarity is  tensor(0.9556, device='cuda:2')
+compute distance is  tensor(92.0041, device='cuda:2')
+compute similarity is  tensor(0.9582, device='cuda:2')
+compute distance is  tensor(93.2845, device='cuda:2')
+compute similarity is  tensor(0.9556, device='cuda:2')
+compute distance is  tensor(95.3519, device='cuda:2')
+compute similarity is  tensor(0.9569, device='cuda:2')
+compute distance is  tensor(84.6326, device='cuda:2')
+compute similarity is  tensor(0.9635, device='cuda:2')
+compute distance is  tensor(95.0523, device='cuda:2')
+compute similarity is  tensor(0.9561, device='cuda:2')
+compute distance is  tensor(96.2506, device='cuda:2')
+compute similarity is  tensor(0.9532, device='cuda:2')
+compute distance is  tensor(89.7268, device='cuda:2')
+compute similarity is  tensor(0.9588, device='cuda:2')
+calculated distance threshold is  tensor(128.2404, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.8546833334896564
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8657666668229893
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8003166668229921
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.832100000156324
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.6265500001563354
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  2
+accuracy is  0.7724166668229933
+====================
+mid_min is -0.8
+====================
+iteration is  2
+round is  0
+accuracy is  0.3656166668230074
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  1
+accuracy is  0.05715000015633221
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  2
+accuracy is  0.24643333348967156
+====================
+mid_min is -0.8
+====================
+iteration is  3
+round is  0
+accuracy is  0.5703000001563401
+====================
+________________________________
+test distance is  tensor(166.4825, device='cuda:2')
+test similarity is  tensor(0.7946, device='cuda:2')
+test acc is  0.05715000015633221
+test loss is 4.591150235011379
+test entropy is  1.2092286133562833
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  1.2092286133562833
+avg test loss is  4.591150235011379
+avg accuracy is  0.05715000015633221
+compute_distance is  tensor(166.4825, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5640007856367494
+avg test loss is  8.740413359741666
+avg accuracy is  0.05380000015633225
+compute_distance is  tensor(117.9305, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(117.9305, device='cuda:2')
+test similarity is  tensor(0.9008, device='cuda:2')
+test acc is  0.05380000015633225
+test loss is 8.740413359741666
+test entropy is  0.5640007856367494
+________________________________
+the length of epoch_weights is  1
+the length of weights_d is  1
+ 
+Avg Training Stats after 22 global rounds:
+Train Accuracy: 83.56% 
+
+Test Accuracy: 83.33% 
+
+
+ | Global Training Round : 23 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 2
+current submit client idx and staleness is  7 2
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(93.6301, device='cuda:2')
+compute similarity is  tensor(0.9553, device='cuda:2')
+compute distance is  tensor(96.9046, device='cuda:2')
+compute similarity is  tensor(0.9563, device='cuda:2')
+compute distance is  tensor(98.4256, device='cuda:2')
+compute similarity is  tensor(0.9531, device='cuda:2')
+compute distance is  tensor(105.6992, device='cuda:2')
+compute similarity is  tensor(0.9467, device='cuda:2')
+compute distance is  tensor(107.7185, device='cuda:2')
+compute similarity is  tensor(0.9474, device='cuda:2')
+compute distance is  tensor(95.1441, device='cuda:2')
+compute similarity is  tensor(0.9562, device='cuda:2')
+compute distance is  tensor(96.6957, device='cuda:2')
+compute similarity is  tensor(0.9558, device='cuda:2')
+compute distance is  tensor(94.5110, device='cuda:2')
+compute similarity is  tensor(0.9572, device='cuda:2')
+compute distance is  tensor(91.3608, device='cuda:2')
+compute similarity is  tensor(0.9597, device='cuda:2')
+compute distance is  tensor(100.3482, device='cuda:2')
+compute similarity is  tensor(0.9530, device='cuda:2')
+compute distance is  tensor(106.5367, device='cuda:2')
+compute similarity is  tensor(0.9466, device='cuda:2')
+compute distance is  tensor(96.1703, device='cuda:2')
+compute similarity is  tensor(0.9563, device='cuda:2')
+calculated distance threshold is  tensor(124.0761, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.5396333334896757
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.8502500001563233
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.833550000156324
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.7823666668229928
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.8085333334896584
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.7647500001563271
+====================
+mid_min is -0.8
+====================
+iteration is  2
+round is  0
+accuracy is  0.7648666668229938
+====================
+====================
+iteration is  2
+round is  1
+accuracy is  0.7600833334896605
+====================
+====================
+iteration is  2
+round is  2
+accuracy is  0.7075833334896635
+====================
+mid_min is -1.6
+====================
+iteration is  3
+round is  0
+accuracy is  0.16233333348966753
+====================
+succ_min + 1
+====================
+iteration is  3
+round is  1
+accuracy is  0.4927166668230087
+====================
+====================
+iteration is  3
+round is  2
+accuracy is  0.3376833334896736
+====================
+mid_min is -1.6
+====================
+iteration is  4
+round is  0
+accuracy is  0.17706666682300184
+====================
+________________________________
+test distance is  tensor(337.9352, device='cuda:2')
+test similarity is  tensor(0.5813, device='cuda:2')
+test acc is  0.16233333348966753
+test loss is 4.164402858789034
+test entropy is  0.9859667408313832
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.9859667408313832
+avg test loss is  4.164402858789034
+avg accuracy is  0.16233333348966753
+compute_distance is  tensor(337.9352, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5379308501222749
+avg test loss is  6.175881375636119
+avg accuracy is  0.16923333348966796
+compute_distance is  tensor(221.2785, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.5816954495047709
+avg test loss is  5.661885841060549
+avg accuracy is  0.17398333348966827
+compute_distance is  tensor(148.0885, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.6129637814597535
+avg test loss is  5.359899287793174
+avg accuracy is  0.1773666668230018
+compute_distance is  tensor(104.0081, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(104.0081, device='cuda:2')
+test similarity is  tensor(0.9339, device='cuda:2')
+test acc is  0.1773666668230018
+test loss is 5.359899287793174
+test entropy is  0.6129637814597535
+________________________________
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 23 global rounds:
+Train Accuracy: 78.88% 
+
+Test Accuracy: 78.65% 
+
+
+ | Global Training Round : 24 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(100.1646, device='cuda:2')
+compute similarity is  tensor(0.9524, device='cuda:2')
+compute distance is  tensor(102.9905, device='cuda:2')
+compute similarity is  tensor(0.9534, device='cuda:2')
+compute distance is  tensor(112.1276, device='cuda:2')
+compute similarity is  tensor(0.9454, device='cuda:2')
+compute distance is  tensor(108.7646, device='cuda:2')
+compute similarity is  tensor(0.9477, device='cuda:2')
+compute distance is  tensor(113.1669, device='cuda:2')
+compute similarity is  tensor(0.9440, device='cuda:2')
+compute distance is  tensor(97.6913, device='cuda:2')
+compute similarity is  tensor(0.9568, device='cuda:2')
+compute distance is  tensor(99.9154, device='cuda:2')
+compute similarity is  tensor(0.9553, device='cuda:2')
+compute distance is  tensor(102.1257, device='cuda:2')
+compute similarity is  tensor(0.9536, device='cuda:2')
+compute distance is  tensor(103.4615, device='cuda:2')
+compute similarity is  tensor(0.9528, device='cuda:2')
+compute distance is  tensor(104.3887, device='cuda:2')
+compute similarity is  tensor(0.9527, device='cuda:2')
+compute distance is  tensor(103.0340, device='cuda:2')
+compute similarity is  tensor(0.9513, device='cuda:2')
+compute distance is  tensor(101.2426, device='cuda:2')
+compute similarity is  tensor(0.9554, device='cuda:2')
+calculated distance threshold is  tensor(128.6425, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.6618666668229995
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.7039500001563304
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.6987000001563306
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.5200666668230088
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.5474166668230089
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.6663333334896661
+====================
+________________________________
+test distance is  tensor(79.7558, device='cuda:2')
+test similarity is  tensor(0.9420, device='cuda:2')
+test acc is  0.5200666668230088
+test loss is 1.2611628197657783
+test entropy is  1.133424016712571
+________________________________
+the length of epoch_weights is  5
+the length of weights_d is  5
+ 
+Avg Training Stats after 24 global rounds:
+Train Accuracy: 87.39% 
+
+Test Accuracy: 86.75% 
+
+
+ | Global Training Round : 25 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 2
+current submit client idx and staleness is  7 2
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  12 3
+current submit client idx and staleness is  13 3
+current submit client idx and staleness is  14 3
+current submit client idx and staleness is  15 3
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  18 4
+current submit client idx and staleness is  19 4
+current submit client idx and staleness is  20 4
+current submit client idx and staleness is  21 4
+current submit client idx and staleness is  22 4
+current submit client idx and staleness is  23 4
+current submit client idx and staleness is  30 6
+current submit client idx and staleness is  31 6
+current submit client idx and staleness is  32 6
+current submit client idx and staleness is  33 6
+current submit client idx and staleness is  34 6
+current submit client idx and staleness is  35 6
+current submit client idx and staleness is  42 8
+current submit client idx and staleness is  43 8
+current submit client idx and staleness is  44 8
+current submit client idx and staleness is  45 8
+current submit client idx and staleness is  46 8
+current submit client idx and staleness is  47 8
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(95.4497, device='cuda:2')
+compute similarity is  tensor(0.9555, device='cuda:2')
+compute distance is  tensor(97.4739, device='cuda:2')
+compute similarity is  tensor(0.9565, device='cuda:2')
+compute distance is  tensor(100.2528, device='cuda:2')
+compute similarity is  tensor(0.9538, device='cuda:2')
+compute distance is  tensor(94.4484, device='cuda:2')
+compute similarity is  tensor(0.9564, device='cuda:2')
+compute distance is  tensor(99.7646, device='cuda:2')
+compute similarity is  tensor(0.9548, device='cuda:2')
+compute distance is  tensor(91.7235, device='cuda:2')
+compute similarity is  tensor(0.9597, device='cuda:2')
+compute distance is  tensor(90.8673, device='cuda:2')
+compute similarity is  tensor(0.9613, device='cuda:2')
+compute distance is  tensor(92.3157, device='cuda:2')
+compute similarity is  tensor(0.9621, device='cuda:2')
+compute distance is  tensor(87.3344, device='cuda:2')
+compute similarity is  tensor(0.9640, device='cuda:2')
+compute distance is  tensor(97.0381, device='cuda:2')
+compute similarity is  tensor(0.9580, device='cuda:2')
+compute distance is  tensor(92.4947, device='cuda:2')
+compute similarity is  tensor(0.9585, device='cuda:2')
+compute distance is  tensor(91.8101, device='cuda:2')
+compute similarity is  tensor(0.9620, device='cuda:2')
+calculated distance threshold is  tensor(113.1713, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.8694333334896558
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8338500001563239
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.857600000156323
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.7386000001563284
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.8053000001563252
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.7769666668229931
+====================
+mid_min is -0.8
+====================
+iteration is  2
+round is  0
+accuracy is  0.6004666668230043
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  1
+accuracy is  0.5599666668230077
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  2
+accuracy is  0.7903333334896592
+====================
+mid_min is -1.6
+====================
+iteration is  3
+round is  0
+accuracy is  0.17053333348966807
+====================
+succ_min + 1
+====================
+iteration is  3
+round is  1
+accuracy is  0.1873666668230024
+====================
+====================
+iteration is  3
+round is  2
+accuracy is  0.2999833334896729
+====================
+________________________________
+test distance is  tensor(327.1258, device='cuda:2')
+test similarity is  tensor(0.5816, device='cuda:2')
+test acc is  0.17053333348966807
+test loss is 3.4577175236459987
+test entropy is  1.1168264856597763
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  1.1168264856597763
+avg test loss is  3.4577175236459987
+avg accuracy is  0.17053333348966807
+compute_distance is  tensor(327.1258, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.63092038616824
+avg test loss is  5.255764186255205
+avg accuracy is  0.1702500001563347
+compute_distance is  tensor(214.8354, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.663367464121725
+avg test loss is  4.887465862322972
+avg accuracy is  0.17711666682300184
+compute_distance is  tensor(144.1180, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.6963188722570822
+avg test loss is  4.614636772222864
+avg accuracy is  0.18110000015633537
+compute_distance is  tensor(101.6948, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(101.6948, device='cuda:2')
+test similarity is  tensor(0.9362, device='cuda:2')
+test acc is  0.18110000015633537
+test loss is 4.614636772222864
+test entropy is  0.6963188722570822
+________________________________
+the length of epoch_weights is  1
+the length of weights_d is  1
+ 
+Avg Training Stats after 25 global rounds:
+Train Accuracy: 83.69% 
+
+Test Accuracy: 82.75% 
+
+
+ | Global Training Round : 26 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  24 5
+current submit client idx and staleness is  25 5
+current submit client idx and staleness is  26 5
+current submit client idx and staleness is  27 5
+current submit client idx and staleness is  28 5
+current submit client idx and staleness is  29 5
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(92.2321, device='cuda:2')
+compute similarity is  tensor(0.9614, device='cuda:2')
+compute distance is  tensor(98.5360, device='cuda:2')
+compute similarity is  tensor(0.9576, device='cuda:2')
+compute distance is  tensor(101.8001, device='cuda:2')
+compute similarity is  tensor(0.9519, device='cuda:2')
+compute distance is  tensor(105.7330, device='cuda:2')
+compute similarity is  tensor(0.9504, device='cuda:2')
+compute distance is  tensor(102.8026, device='cuda:2')
+compute similarity is  tensor(0.9533, device='cuda:2')
+compute distance is  tensor(95.3803, device='cuda:2')
+compute similarity is  tensor(0.9586, device='cuda:2')
+compute distance is  tensor(96.9270, device='cuda:2')
+compute similarity is  tensor(0.9579, device='cuda:2')
+compute distance is  tensor(97.1263, device='cuda:2')
+compute similarity is  tensor(0.9573, device='cuda:2')
+compute distance is  tensor(93.3979, device='cuda:2')
+compute similarity is  tensor(0.9614, device='cuda:2')
+compute distance is  tensor(96.9940, device='cuda:2')
+compute similarity is  tensor(0.9580, device='cuda:2')
+compute distance is  tensor(102.4473, device='cuda:2')
+compute similarity is  tensor(0.9517, device='cuda:2')
+compute distance is  tensor(96.7313, device='cuda:2')
+compute similarity is  tensor(0.9587, device='cuda:2')
+calculated distance threshold is  tensor(119.2339, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.8395666668229904
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8018333334896586
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8162500001563247
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.635233333489668
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.3116333334896731
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  2
+accuracy is  0.6933166668229976
+====================
+mid_min is -0.4
+====================
+iteration is  2
+round is  0
+accuracy is  0.7635000001563271
+====================
+====================
+iteration is  2
+round is  1
+accuracy is  0.6079500001563369
+====================
+====================
+iteration is  2
+round is  2
+accuracy is  0.7087333334896635
+====================
+mid_min is -0.8
+====================
+iteration is  3
+round is  0
+accuracy is  0.584250000156339
+====================
+________________________________
+test distance is  tensor(80.7064, device='cuda:2')
+test similarity is  tensor(0.9430, device='cuda:2')
+test acc is  0.3116333334896731
+test loss is 2.016958153578264
+test entropy is  1.4465205191549209
+________________________________
+the length of epoch_weights is  1
+the length of weights_d is  1
+ 
+Avg Training Stats after 26 global rounds:
+Train Accuracy: 84.19% 
+
+Test Accuracy: 83.56% 
+
+
+ | Global Training Round : 27 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 2
+current submit client idx and staleness is  7 2
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(96.3162, device='cuda:2')
+compute similarity is  tensor(0.9574, device='cuda:2')
+compute distance is  tensor(94.4590, device='cuda:2')
+compute similarity is  tensor(0.9607, device='cuda:2')
+compute distance is  tensor(100.0451, device='cuda:2')
+compute similarity is  tensor(0.9557, device='cuda:2')
+compute distance is  tensor(105.7470, device='cuda:2')
+compute similarity is  tensor(0.9515, device='cuda:2')
+compute distance is  tensor(108.0986, device='cuda:2')
+compute similarity is  tensor(0.9508, device='cuda:2')
+compute distance is  tensor(97.3097, device='cuda:2')
+compute similarity is  tensor(0.9593, device='cuda:2')
+compute distance is  tensor(92.9393, device='cuda:2')
+compute similarity is  tensor(0.9611, device='cuda:2')
+compute distance is  tensor(94.3579, device='cuda:2')
+compute similarity is  tensor(0.9614, device='cuda:2')
+compute distance is  tensor(94.1401, device='cuda:2')
+compute similarity is  tensor(0.9617, device='cuda:2')
+compute distance is  tensor(103.6556, device='cuda:2')
+compute similarity is  tensor(0.9557, device='cuda:2')
+compute distance is  tensor(101.3483, device='cuda:2')
+compute similarity is  tensor(0.9552, device='cuda:2')
+compute distance is  tensor(101.8144, device='cuda:2')
+compute similarity is  tensor(0.9559, device='cuda:2')
+calculated distance threshold is  tensor(123.2579, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.7847666668229928
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.7978000001563256
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.7807500001563263
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.6404666668230011
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.6062833334896703
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  2
+accuracy is  0.8031833334896586
+====================
+mid_min is -0.8
+====================
+iteration is  2
+round is  0
+accuracy is  0.6680833334896659
+====================
+====================
+iteration is  2
+round is  1
+accuracy is  0.5601833334896744
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  2
+accuracy is  0.29940000015633955
+====================
+succ_min + 1
+________________________________
+test distance is  tensor(164.8528, device='cuda:2')
+test similarity is  tensor(0.8044, device='cuda:2')
+test acc is  0.29940000015633955
+test loss is 1.8863168056331463
+test entropy is  1.6491429597329992
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  1.6491429597329992
+avg test loss is  1.8863168056331463
+avg accuracy is  0.29940000015633955
+compute_distance is  tensor(164.8528, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5154644269615348
+avg test loss is  3.0226025098422444
+avg accuracy is  0.30690000015633967
+compute_distance is  tensor(114.4905, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(114.4905, device='cuda:2')
+test similarity is  tensor(0.9088, device='cuda:2')
+test acc is  0.30690000015633967
+test loss is 3.0226025098422444
+test entropy is  0.5154644269615348
+________________________________
+the length of epoch_weights is  1
+the length of weights_d is  1
+ 
+Avg Training Stats after 27 global rounds:
+Train Accuracy: 83.66% 
+
+Test Accuracy: 82.70% 
+
+
+ | Global Training Round : 28 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  12 3
+current submit client idx and staleness is  13 3
+current submit client idx and staleness is  14 3
+current submit client idx and staleness is  15 3
+current submit client idx and staleness is  16 3
+current submit client idx and staleness is  17 3
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(96.3752, device='cuda:2')
+compute similarity is  tensor(0.9570, device='cuda:2')
+compute distance is  tensor(98.3531, device='cuda:2')
+compute similarity is  tensor(0.9566, device='cuda:2')
+compute distance is  tensor(101.6732, device='cuda:2')
+compute similarity is  tensor(0.9553, device='cuda:2')
+compute distance is  tensor(108.4695, device='cuda:2')
+compute similarity is  tensor(0.9484, device='cuda:2')
+compute distance is  tensor(110.4124, device='cuda:2')
+compute similarity is  tensor(0.9495, device='cuda:2')
+compute distance is  tensor(96.6993, device='cuda:2')
+compute similarity is  tensor(0.9594, device='cuda:2')
+compute distance is  tensor(90.9362, device='cuda:2')
+compute similarity is  tensor(0.9628, device='cuda:2')
+compute distance is  tensor(94.4068, device='cuda:2')
+compute similarity is  tensor(0.9605, device='cuda:2')
+compute distance is  tensor(90.2645, device='cuda:2')
+compute similarity is  tensor(0.9635, device='cuda:2')
+compute distance is  tensor(99.5972, device='cuda:2')
+compute similarity is  tensor(0.9575, device='cuda:2')
+compute distance is  tensor(101.8797, device='cuda:2')
+compute similarity is  tensor(0.9558, device='cuda:2')
+compute distance is  tensor(95.9968, device='cuda:2')
+compute similarity is  tensor(0.9604, device='cuda:2')
+calculated distance threshold is  tensor(130.5602, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.8369666668229905
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.7560333334896608
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.8063166668229919
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.5836000001563388
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.8575166668229897
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.740966666822995
+====================
+mid_min is -0.8
+====================
+iteration is  2
+round is  0
+accuracy is  0.18388333348966882
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  1
+accuracy is  0.5559666668230081
+====================
+====================
+iteration is  2
+round is  2
+accuracy is  0.6718500001563323
+====================
+mid_min is -0.8
+====================
+iteration is  3
+round is  0
+accuracy is  0.5501333334896753
+====================
+________________________________
+test distance is  tensor(156.5669, device='cuda:2')
+test similarity is  tensor(0.8261, device='cuda:2')
+test acc is  0.18388333348966882
+test loss is 2.767722063735604
+test entropy is  1.239849581774364
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  1.239849581774364
+avg test loss is  2.767722063735604
+avg accuracy is  0.18388333348966882
+compute_distance is  tensor(156.5669, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5582621402895527
+avg test loss is  4.7109444588740494
+avg accuracy is  0.1839000001563355
+compute_distance is  tensor(109.0589, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(109.0589, device='cuda:2')
+test similarity is  tensor(0.9184, device='cuda:2')
+test acc is  0.1839000001563355
+test loss is 4.7109444588740494
+test entropy is  0.5582621402895527
+________________________________
+the length of epoch_weights is  3
+the length of weights_d is  3
+ 
+Avg Training Stats after 28 global rounds:
+Train Accuracy: 85.18% 
+
+Test Accuracy: 84.04% 
+
+
+ | Global Training Round : 29 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  6 2
+current submit client idx and staleness is  7 2
+current submit client idx and staleness is  8 2
+current submit client idx and staleness is  9 2
+current submit client idx and staleness is  10 2
+current submit client idx and staleness is  11 2
+current submit client idx and staleness is  18 4
+current submit client idx and staleness is  19 4
+current submit client idx and staleness is  20 4
+current submit client idx and staleness is  21 4
+current submit client idx and staleness is  22 4
+current submit client idx and staleness is  23 4
+current submit client idx and staleness is  36 7
+current submit client idx and staleness is  37 7
+current submit client idx and staleness is  38 7
+current submit client idx and staleness is  39 7
+current submit client idx and staleness is  40 7
+current submit client idx and staleness is  41 7
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(104.4328, device='cuda:2')
+compute similarity is  tensor(0.9513, device='cuda:2')
+compute distance is  tensor(101.2545, device='cuda:2')
+compute similarity is  tensor(0.9549, device='cuda:2')
+compute distance is  tensor(105.2134, device='cuda:2')
+compute similarity is  tensor(0.9526, device='cuda:2')
+compute distance is  tensor(105.5222, device='cuda:2')
+compute similarity is  tensor(0.9504, device='cuda:2')
+compute distance is  tensor(106.9089, device='cuda:2')
+compute similarity is  tensor(0.9528, device='cuda:2')
+compute distance is  tensor(102.9053, device='cuda:2')
+compute similarity is  tensor(0.9547, device='cuda:2')
+compute distance is  tensor(94.7714, device='cuda:2')
+compute similarity is  tensor(0.9614, device='cuda:2')
+compute distance is  tensor(99.2263, device='cuda:2')
+compute similarity is  tensor(0.9573, device='cuda:2')
+compute distance is  tensor(90.3714, device='cuda:2')
+compute similarity is  tensor(0.9647, device='cuda:2')
+compute distance is  tensor(101.5262, device='cuda:2')
+compute similarity is  tensor(0.9553, device='cuda:2')
+compute distance is  tensor(102.2868, device='cuda:2')
+compute similarity is  tensor(0.9530, device='cuda:2')
+compute distance is  tensor(97.4973, device='cuda:2')
+compute similarity is  tensor(0.9610, device='cuda:2')
+calculated distance threshold is  tensor(123.4465, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.8371000001563238
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.8022666668229921
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.7540166668229943
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.7545833334896609
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.787850000156326
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.855000000156323
+====================
+mid_min is -0.8
+====================
+iteration is  2
+round is  0
+accuracy is  0.4372500001563415
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  1
+accuracy is  0.491800000156342
+====================
+====================
+iteration is  2
+round is  2
+accuracy is  0.29565000015633947
+====================
+succ_min + 1
+mid_min is -0.8
+====================
+iteration is  3
+round is  0
+accuracy is  0.3962166668230077
+====================
+====================
+iteration is  3
+round is  1
+accuracy is  0.3578166668230072
+====================
+________________________________
+test distance is  tensor(166.8130, device='cuda:2')
+test similarity is  tensor(0.8076, device='cuda:2')
+test acc is  0.29565000015633947
+test loss is 2.964165656805547
+test entropy is  0.7319914664286794
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.7319914664286794
+avg test loss is  2.964165656805547
+avg accuracy is  0.29565000015633947
+compute_distance is  tensor(166.8130, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.38828123864461617
+avg test loss is  4.390089754610936
+avg accuracy is  0.30766666682300636
+compute_distance is  tensor(114.5618, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(114.5618, device='cuda:2')
+test similarity is  tensor(0.9093, device='cuda:2')
+test acc is  0.30766666682300636
+test loss is 4.390089754610936
+test entropy is  0.38828123864461617
+________________________________
+the length of epoch_weights is  0
+ 
+Avg Training Stats after 29 global rounds:
+Train Accuracy: 80.91% 
+
+Test Accuracy: 80.29% 
+
+
+ | Global Training Round : 30 | 
+
+current submit client idx and staleness is  0 1
+current submit client idx and staleness is  1 1
+current submit client idx and staleness is  2 1
+current submit client idx and staleness is  3 1
+current submit client idx and staleness is  4 1
+current submit client idx and staleness is  5 1
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+len of model dicts is  12
+compute distance is  tensor(98.9954, device='cuda:2')
+compute similarity is  tensor(0.9574, device='cuda:2')
+compute distance is  tensor(107.6386, device='cuda:2')
+compute similarity is  tensor(0.9528, device='cuda:2')
+compute distance is  tensor(101.1209, device='cuda:2')
+compute similarity is  tensor(0.9587, device='cuda:2')
+compute distance is  tensor(106.4836, device='cuda:2')
+compute similarity is  tensor(0.9516, device='cuda:2')
+compute distance is  tensor(107.0041, device='cuda:2')
+compute similarity is  tensor(0.9531, device='cuda:2')
+compute distance is  tensor(100.2897, device='cuda:2')
+compute similarity is  tensor(0.9582, device='cuda:2')
+compute distance is  tensor(106.3133, device='cuda:2')
+compute similarity is  tensor(0.9530, device='cuda:2')
+compute distance is  tensor(96.2765, device='cuda:2')
+compute similarity is  tensor(0.9605, device='cuda:2')
+compute distance is  tensor(91.8127, device='cuda:2')
+compute similarity is  tensor(0.9641, device='cuda:2')
+compute distance is  tensor(111.5895, device='cuda:2')
+compute similarity is  tensor(0.9478, device='cuda:2')
+compute distance is  tensor(104.0999, device='cuda:2')
+compute similarity is  tensor(0.9524, device='cuda:2')
+compute distance is  tensor(105.9643, device='cuda:2')
+compute similarity is  tensor(0.9527, device='cuda:2')
+calculated distance threshold is  tensor(131.3664, device='cuda:2')
+mid_min is -0.2
+====================
+iteration is  0
+round is  0
+accuracy is  0.7629833334896604
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.7923166668229923
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.7954166668229922
+====================
+mid_min is -0.4
+====================
+iteration is  1
+round is  0
+accuracy is  0.5928000001563382
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.6054333334896705
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.5227500001563422
+====================
+succ_min + 1
+mid_min is -0.4
+====================
+iteration is  2
+round is  0
+accuracy is  0.7980166668229922
+====================
+====================
+iteration is  2
+round is  1
+accuracy is  0.757966666822994
+====================
+====================
+iteration is  2
+round is  2
+accuracy is  0.7359666668229953
+====================
+mid_min is -0.8
+====================
+iteration is  3
+round is  0
+accuracy is  0.25581666682300513
+====================
+succ_min + 1
+====================
+iteration is  3
+round is  1
+accuracy is  0.6199000001563361
+====================
+________________________________
+test distance is  tensor(163.1049, device='cuda:2')
+test similarity is  tensor(0.8205, device='cuda:2')
+test acc is  0.25581666682300513
+test loss is 3.846338696062946
+test entropy is  0.933722719899627
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.933722719899627
+avg test loss is  3.846338696062946
+avg accuracy is  0.25581666682300513
+compute_distance is  tensor(163.1049, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.48130231539704904
+avg test loss is  5.903256962548441
+avg accuracy is  0.26086666682300524
+compute_distance is  tensor(113.6718, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(113.6718, device='cuda:2')
+test similarity is  tensor(0.9147, device='cuda:2')
+test acc is  0.26086666682300524
+test loss is 5.903256962548441
+test entropy is  0.48130231539704904
+________________________________
+the length of epoch_weights is  4
+the length of weights_d is  4
+ 
+Avg Training Stats after 30 global rounds:
+Train Accuracy: 84.44% 
+
+Test Accuracy: 83.81% 
+
+ 
+ Results after 30 global rounds of training:
+|---- Avg testing Accuracy across each device's data: 84.44%
+|----0th round Training Accuracy : 46.56%
+|----1th round Training Accuracy : 81.85%
+|----2th round Training Accuracy : 76.29%
+|----3th round Training Accuracy : 41.96%
+|----4th round Training Accuracy : 84.45%
+|----5th round Training Accuracy : 83.53%
+|----6th round Training Accuracy : 62.06%
+|----7th round Training Accuracy : 85.72%
+|----8th round Training Accuracy : 75.63%
+|----9th round Training Accuracy : 85.71%
+|----10th round Training Accuracy : 41.90%
+|----11th round Training Accuracy : 87.09%
+|----12th round Training Accuracy : 82.42%
+|----13th round Training Accuracy : 85.95%
+|----14th round Training Accuracy : 83.57%
+|----15th round Training Accuracy : 82.83%
+|----16th round Training Accuracy : 70.30%
+|----17th round Training Accuracy : 86.62%
+|----18th round Training Accuracy : 74.97%
+|----19th round Training Accuracy : 85.40%
+|----20th round Training Accuracy : 86.83%
+|----21th round Training Accuracy : 83.56%
+|----22th round Training Accuracy : 78.88%
+|----23th round Training Accuracy : 87.39%
+|----24th round Training Accuracy : 83.69%
+|----25th round Training Accuracy : 84.19%
+|----26th round Training Accuracy : 83.66%
+|----27th round Training Accuracy : 85.18%
+|----28th round Training Accuracy : 80.91%
+|----29th round Training Accuracy : 84.44%
+|----Final Test Accuracy: 83.81%
+|----0th round Final Test Accuracy : 45.96%
+|----1th round Final Test Accuracy : 80.63%
+|----2th round Final Test Accuracy : 74.91%
+|----3th round Final Test Accuracy : 41.33%
+|----4th round Final Test Accuracy : 82.85%
+|----5th round Final Test Accuracy : 82.99%
+|----6th round Final Test Accuracy : 62.38%
+|----7th round Final Test Accuracy : 84.63%
+|----8th round Final Test Accuracy : 75.13%
+|----9th round Final Test Accuracy : 84.58%
+|----10th round Final Test Accuracy : 41.49%
+|----11th round Final Test Accuracy : 86.10%
+|----12th round Final Test Accuracy : 81.66%
+|----13th round Final Test Accuracy : 85.20%
+|----14th round Final Test Accuracy : 82.76%
+|----15th round Final Test Accuracy : 81.58%
+|----16th round Final Test Accuracy : 69.62%
+|----17th round Final Test Accuracy : 85.99%
+|----18th round Final Test Accuracy : 74.64%
+|----19th round Final Test Accuracy : 84.68%
+|----20th round Final Test Accuracy : 86.13%
+|----21th round Final Test Accuracy : 83.33%
+|----22th round Final Test Accuracy : 78.65%
+|----23th round Final Test Accuracy : 86.75%
+|----24th round Final Test Accuracy : 82.75%
+|----25th round Final Test Accuracy : 83.56%
+|----26th round Final Test Accuracy : 82.70%
+|----27th round Final Test Accuracy : 84.04%
+|----28th round Final Test Accuracy : 80.29%
+|----29th round Final Test Accuracy : 83.81%
+
+Experimental details:
+    Dataset     : fmnist
+    Model     : cnn
+    detailed Model     : vgg
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 30
+
+    Federated parameters:
+    IID
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.2
+     Model attack is done!
+
+ Total Run Time: 6739.5785
