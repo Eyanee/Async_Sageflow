@@ -79,12 +79,12 @@ def Outline_Poisoning(args, unposioned_global_model, global_model, malicious_mod
     # if indicator_res:
         # 调整 distance 和 accuracy
     if not poisoned:
-        w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, perturbation_range=(-0.1, 0.1))
+        w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, distance_threshold*0.8,  perturbation_range=(-0.1, 0.1))
         initial_w_rand = w_rand
     # w_rand = add_small_perturbation(global_model, local_dict, previous_local_dict, args, pinned_accuracy_threshold, train_dataset, perturbation_range=(-0.1, 0.1))
     else:
     #     w_rand = primitive_malicious #第一轮生成的值 
-        w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, perturbation_range=(-0.1, 0.1))
+        w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, distance_threshold*0.8, perturbation_range=(-0.1, 0.1))
 
     w_poison, optimization_res = phased_optimization(args, global_model, w_rand, train_dataset, distance_threshold, adaptive_accuracy_threshold, pinned_accuracy_threshold)
     # 如果没有成功优化，则下一轮的distance不应该被改变
@@ -202,7 +202,7 @@ def phased_optimization(args, global_model, w_rand, train_dataset, distance_thre
 
     # parameter determination
     round = 0
-    MAX_ROUND = 10
+    MAX_ROUND = 2
     entropy_threshold = 1.0
      # 准备教师模型
     teacher_model = copy.deepcopy(global_model)
@@ -225,19 +225,21 @@ def phased_optimization(args, global_model, w_rand, train_dataset, distance_thre
         print("test loss is", test_loss)
         print("test entropy is ", test_entropy)
         print("________________________________")
-        if test_distance <= distance_threshold and test_acc <= pinned_accuracy_threshold and test_entropy  <= entropy_threshold:
+        if test_distance <= distance_threshold and test_acc <= pinned_accuracy_threshold and test_entropy  <= entropy_threshold and test_loss <= 1.5:
             return student_model.state_dict(), True
         elif test_entropy > entropy_threshold:
-            distillation_res, w_rand = self_distillation(args, teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 10)
+            distillation_res, w_rand = self_distillation(args,teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 20)
         elif test_distance > distance_threshold:
             w_rand = adaptive_scaling(w_rand, global_model.state_dict(), distance_threshold, test_distance)
             student_model.load_state_dict(w_rand)
             # distillation_res, w_rand = self_distillation(args, teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold,  distance_threshold, distillation_round = 10)
-        else:
-            distillation_res, w_rand = self_distillation(args, teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 10)
+        elif test_loss > 1.5:
+            distillation_res, w_rand = self_distillation(args,teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 20)
             # 只有accuracy 不满足条件
             # 暂时不处理
-        student_model.load_state_dict(w_rand)
+        else:
+            distillation_res, w_rand = self_distillation(args,  teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 20)
+            student_model.load_state_dict(w_rand)
     # 返回值为模型参数
     print("reach max round") # accuracy在这里调整
     return student_model.state_dict(), False
@@ -280,8 +282,8 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
     
     num_epochs = distillation_round
     temperature = 50 ### 增大
-    alpha = 0.88
-    beta = 0.12
+    alpha = 0.82
+    beta = 0.18
 
 
     student_model.train()
@@ -298,9 +300,17 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
         print("compute_distance is ",compute_distance)
         print("++++++++++++++++++++")
 
-        if avg_entropy <= entropy_threshold and acc <= accuracy_threshold:
+        if avg_entropy <= entropy_threshold and acc <= accuracy_threshold and loss <= 1.5:
            
             return True, student_model.state_dict()
+        elif avg_entropy <= entropy_threshold and acc <= accuracy_threshold and loss > 1.5:
+            print("change alpha")
+            alpha = 0.7
+            beta = 0.3
+        elif loss <= 1.5:
+            print("restore alpha")
+            alpha = 0.88
+            beta = 0.12
 
         for batch_idx, (images, labels) in enumerate(trainloader):
             images, labels = images.to(device), labels.to(device)
@@ -323,7 +333,7 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
             # loss = l_loss
             
             loss.backward()
-            optimizer.step(list(teacher_model.parameters()))
+            optimizer.step(list(ref_model.parameters()))
 
     # 设置False出口
     return True, student_model.state_dict()
@@ -354,7 +364,7 @@ def soft_loss(student_outputs, teacher_outputs, temperature):
     return loss
     
 
-def add_small_perturbation(original_model, args, pinned_accuracy, train_dataset, perturbation_range=(-0.1, 0.1)):
+def add_small_perturbation(original_model, args, pinned_accuracy, train_dataset, distance_threshold, perturbation_range=(-0.1, 0.1)):
     """
     在原有张量上添加较小的扰动，使得新生成的张量在
     1. 欧氏距离
@@ -394,16 +404,18 @@ def add_small_perturbation(original_model, args, pinned_accuracy, train_dataset,
             # 计算新张量和原张量之间的相似性
             test_model.load_state_dict(perturbed_dict)
             acc, loss, entropy = test_inference(args, test_model, train_dataset)
+            compute_distance = model_dist_norm(test_model.state_dict(), original_model.state_dict())
             # inner_product_res = cal_inner_product(local_dict, previous_local_dict, perturbed_dict)
             print("====================")
             print("iteration is ", iteration)
             print("round is ",round )
             print("accuracy is ", acc)
+            print("compute distance is", compute_distance )
             # print("inner product is ", inner_product_res)
             print("====================")
 
             # 判断是否达到目标相似性
-            if acc <= pinned_accuracy:
+            if acc <= pinned_accuracy and compute_distance >= distance_threshold:
                 succ_round = succ_round + 1
                 if acc < min_acc:
                     print("succ_min + 1")
