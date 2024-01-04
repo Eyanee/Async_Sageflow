@@ -76,8 +76,6 @@ def Outline_Poisoning(args, unposioned_global_model, global_model, malicious_mod
     distance_threshold = cal_ref_distance(malicious_models, ref_model, new_distance_ratio) # 计算参考L2 distance 门槛 
     print("calculated distance threshold is ", distance_threshold)
     
-    # if indicator_res:
-        # 调整 distance 和 accuracy
     if not poisoned:
         w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, distance_threshold*0.8,  perturbation_range=(-0.1, 0.1))
         initial_w_rand = w_rand

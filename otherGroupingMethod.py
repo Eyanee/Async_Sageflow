@@ -2,6 +2,8 @@ import torch
 import numpy as np
 import heapq
 import copy
+from update import test_inference, LocalUpdate
+from utils1 import average_weights
 
 
 def get_key_list(std_keys):
@@ -60,47 +62,7 @@ def preGrouping(std_keys, local_weights_delay, local_delay_ew):
     return param_updates
 
 
-'''_keys
-对于每个样本，m个clients都会生成对应的的logits，其中有c个恶意clients，
-用欧几里得距离为每个client找到m-c-2个与其最近的logits，
-最后选择与所有其他clients欧几里得距离之和最小的那个client的logits作为全局的agg_logits；
-（对logits整体）
-'''
-def Krum(para_updates, benign_user_number):  # 
-    # clients_l2存储了，某一个client对其他client的l2范式计算
-    clients_l2 = [[] for _ in range(len(para_updates))]
 
-    # 求用欧几里得距离为每个client找到m-c-2个与其最近的logits
-    for index1, client_logits1 in enumerate(para_updates):
-        for index2, client_logits2 in enumerate(para_updates):
-            if (index1 == index2):  # 自己和自己不用计算
-                continue
-            l2 = torch.dist(client_logits1, client_logits2, p=2)  # 计算二范式，就是欧几里德距离
-            clients_l2[index1].append(l2)  # clients_l2是list结构
-
-    clients_l2_filter = [[] for _ in range(len(para_updates))]
-    for index, client_l2 in enumerate(clients_l2):
-        list.sort(client_l2)  # 升序排列，前面的就是最小的
-
-        client_l2_minN = sum(client_l2[0:benign_user_number - 2])  # 对于单个用户client_l2，对它的前m-c-2个最近的clients求和，作为它与其他client的距离
-        clients_l2_filter[index].append(client_l2_minN)
-
-    selected_client_index = clients_l2_filter.index(min(clients_l2_filter))
-    print("krum_selected_client_index:", selected_client_index)
-    agg_para_update = para_updates[selected_client_index]
-
-    return agg_para_update, selected_client_index
-
-
-
-def transpose(matrix):
-    new_matrix = []
-    for i in range(len(matrix[0])):
-        matrix1 = []
-        for j in range(len(matrix)):
-            matrix1.append(matrix[j][i])
-        new_matrix.append(matrix1)
-    return new_matrix
 
 
 '''
@@ -109,84 +71,32 @@ def transpose(matrix):
 然后计算剩下的m-2β个值的logits均值；
 （对样本logits的每一维）
 '''
-def Trimmed_mean(para_updates, n_attackers):
+def Trimmed_mean(para_updates, n_attackers = 1):
     sorted_updates = torch.sort(para_updates, 0)[0]
     agg_para_update = torch.mean(sorted_updates[n_attackers:-n_attackers], 0) if n_attackers else torch.mean(sorted_updates, 0)
     return agg_para_update
 
-
-
-
-'''
-结合了Krum和Trimmed mean的一个变体。先用Krum找出 x个 ( x 小于等于 m-2c) 用于聚合的本地clients
-Krum只是找最小的一个，现在是找最小的x个
-然后用Trimmed mean的一个变体来聚合这 x 个本地clients的logits。
-聚合的方法是：对于每个样本，先将x个logits中的值进行排序，找到离中位数最近的 y（ y 小于等于alpha-2c）个值，取平均值；
-（其实在这个规则里面，就可以看出来，恶意用户的数目c，必须要小于25%；否则这个y肯定小于0）
-（对样本logits的每一维）
-'''
-
-
-def Bulyan(temp_all_result, user_number, benign_user_number):  # 在这个规则里面，就可以看出来，恶意用户的数目c，必须要小于25%；否则这个y肯定小于0
-    # clients_l2存储了，某一个client对其他client的l2范式计算
-    clients_l2 = [[] for _ in range(len(temp_all_result))]
-
-    # 求用欧几里得距离为每个client找到m-c-2个与其最近的logits
-    for index1, client_logits1 in enumerate(temp_all_result):
-        for index2, client_logits2 in enumerate(temp_all_result):
-            if (index1 == index2):
-                continue
-            l2_distance = torch.dist(client_logits1, client_logits2, p=2)
-            clients_l2[index1].append(l2_distance)
-
-    clients_l2_filter = [[] for _ in range(len(temp_all_result))]
-    for index, client_l2 in enumerate(clients_l2):
-        list.sort(client_l2)  # 升序排列，前面的就是最小的，也就是离他最近的
-        client_l2_minN = sum(
-            client_l2[0:benign_user_number - 2])  # 对于单个用户client_l2，对它的前m-c-2个最近的clients求和，作为它与其他client的距离
-        clients_l2_filter[index].append(client_l2_minN)
-
-    # 在clients_l2_filter找到最小的x个用户,把他们存在selected_clients
-    selected_clients = []
-    x = 2 * benign_user_number - user_number  # x = m - 2c = m - 2*(m-b) = 2b - m
-    for i in range(x):
-        selected_client_index = clients_l2_filter.index(min(clients_l2_filter))  # 找到当前的最小值；
-        selected_clients.append(temp_all_result[selected_client_index])  # 添加到备选
-        clients_l2_filter.pop(selected_client_index)  # 删掉这个数，相当于排除了已经被选择的client
-
-    # 用Trimmed mean的一个变体来聚合这x个本地clients的logits
-    y = x - 2 * (user_number - benign_user_number)
-    # 对于每个样本，m个clients都会生成对应的的logits;一共有batch个labels，用labels_logits表示
-    labels_logits = [[] for _ in range(len(selected_clients[1]))]
-
-    # 为每个label都找到最佳的logits
-    for label_index1, label_logits1 in enumerate(selected_clients[0]):
-        labels_temp = []
-        print("selected_clients[0][0] is", selected_clients[0][0])
-        for demission_index2, label_dimensions in enumerate(selected_clients[0][0]):
-            labels_dimission_temp = []  # 记录单个label的每一维的平均
-            for user_index3, client_logits in enumerate(selected_clients):
-                labels_dimission_temp.append(selected_clients[user_index3][label_index1][demission_index2])
-            list.sort(labels_dimission_temp)  # 排序一下
-            labels_temp.append(sum(labels_dimission_temp[int((x - y) / 2):int(-(x - y) / 2)]) / len(
-                labels_dimission_temp[int((x - y) / 2):int(-(x - y) / 2)]))  # 所有client针对某个label的某一维数据求平均
-            # 截取找到离中位数最近的 y（ y 小于等于alpha-2c）个值, 相当于截去掉最小的(x-y)/2和最大的(x-y)/2个数, 然后求他们的平均;存到labels_logits中
-        labels_logits[label_index1] = labels_temp
-    agg_avg_labels = torch.Tensor(labels_logits)  # 把list转成tensor
-    return agg_avg_labels
-
+def pre_Trimmed_mean(std_dict, std_keys, current_epoch_updates):
+    weight_updates = modifyWeight(std_keys, current_epoch_updates)
+    Median_avg = Trimmed_mean(, 1)
+    Median_avg = restoreWeight(std_dict, std_keys, Median_avg)
+    return Median_avg, len(weight_updates) - 2
 
 '''
 对于每个样本，m个clients都会生成对应的的logits，把这些logits求其中位数，作为全局的agg_logits；
 （对样本logits的每一维）
 '''
 
-
 def Median(para_updates): #
     agg_para_update = torch.median(para_updates, 0,keepdim=True)
     print("agg_para is ", agg_para_update[0].squeeze(0))
     return agg_para_update[0].squeeze(0)
 
+def pre_Median(std_dict, std_keys, current_epoch_updates):
+    weight_updates = modifyWeight(std_keys, current_epoch_updates)
+    Median_avg = Median(weight_updates)
+    Median_avg = restoreWeight(std_dict, std_keys, Median_avg)
+    return Median_avg 
 
 '''
 对于每个样本，m个clients都会生成对应的的logits，把这些logits求平均，作为全局的agg_logits；
@@ -253,10 +163,10 @@ def AFA(para_updates, interfere_idx, device):  #
     return agg_para_update, filter_left
 
 
-def pre_AFA(std_keys, current_epoch_updates, current_index, device):
+def pre_AFA(std_dict, std_keys, current_epoch_updates, current_index, device):
     weight_updates = modifyWeight(std_keys, current_epoch_updates)
     AFA_avg, remain_index = AFA(weight_updates, current_index, device)
-
+    AFA_avg = restoreWeight(std_dict, std_keys, AFA_avg)
     return AFA_avg, remain_index
 
 
@@ -266,3 +176,188 @@ def preGroupingIndex(local_index_delay, local_index_ew):
         index.extend(idx)
     print(index)
     return index
+
+# Zeno
+"""
+
+
+"""
+def compute_gradient(model1, model2, lr):
+    # 用于存储梯度模长
+    len = 0
+    # 遍历模型参数字典的键
+    for key in model1.keys():
+        # 取出对应的参数张量
+        param1 = model1[key]
+        param2 = model2[key]
+        # 根据公式计算梯度
+        grad = (param1 - param2) / lr
+        len += torch.norm(grad)
+
+    # 梯度模长
+    return len
+
+
+def Zeno(weights, loss, args, model, cmm_dataset):
+
+    common_acc, common_loss, _ = test_inference(args, model, cmm_dataset)
+    fai = 0.0
+    w = model.state_dict()
+    score = []
+
+    for i in range(0, len(weights)):
+        length = compute_gradient(w, weights[i], args.lr)
+        tmp = common_loss - loss[i] - fai * length
+        score.append(tmp.__float__())
+
+    # print("# test1", type(score[0]))
+    # 找到张量的最小值, 将score全部变为正数
+    min_value = min(score)
+    score = np.array(score) - min_value
+    score = score / sum(score)
+
+    re_model = copy.deepcopy(w)
+    for key in w.keys():
+        for i in range(0, len(score)):
+            if i == 0:
+                re_model[key] = score[i] * weights[i][key]
+            else:
+                re_model[key] += score[i] * weights[i][key]
+
+    return re_model
+
+def pre_Zeno(current_epoch_updates, args, loss, cmm_dataset, global_model):
+    # weight_updates = modifyWeight(std_keys, current_epoch_updates)
+    Zeno_avg = Zeno(current_epoch_updates, loss, args, global_model, cmm_dataset)
+    # Median_avg = restoreWeight(std_dict, std_keys, Median_avg)
+    return Zeno_avg
+
+
+# Zeno++
+"""
+
+
+"""
+def Zenoplusplus(args, global_state_dict, grad_updates):
+    # parameters for zeno++
+    zeno_rho = 0.001 #
+    zeno_epsilon = 0 #
+
+    accept_list = []
+    # scaling the update:
+    param_square = 0
+    zeno_param_square = 0
+    for param_update in grad_updates:
+        for param_g, param_u in zip(global_state_dict, param_update):
+            if param.grad_req != 'null':
+                global_param_square = param_square + torch.sum(torch.square(param_g))
+                user_param_square = zeno_param_square + torch.sum(torch.square(param_u))
+        c = torch.sqrt(user_param_square.asscalar() / global_param_square.asscalar())
+        for param in param_update:
+            if param.grad_req != 'null':
+                grad = param.grad()
+                grad[:] = grad * c
+        
+        # compute score
+        zeno_innerprod = 0
+        zeno_square = param_square
+        # 计算内积
+        for param, zeno_param in zip(global_state_dict, param_update):
+            if param.grad_req != 'null':
+                zeno_innerprod = zeno_innerprod + torch.matmul(param.grad() * zeno_param.grad())
+        #计算分数
+        score = args.lr * (zeno_innerprod.asscalar()) - zeno_rho * (zeno_square.asscalar()) + args.lr * zeno_epsilon
+        # 分数大于0则接收
+        if score >= 0:
+            print("accept")
+            accept_list.append(param_update)
+    # 怎么修改？
+    return accept_list
+
+
+
+
+
+# FLTrust
+"""
+
+"""
+def cosine_similarity(model1, model2):
+
+    # 初始化一个空列表，用于存储每个参数的余弦相似度
+    cos_sim_list = []
+    # 遍历模型参数字典的键
+    for key in model1.keys():
+        # 取出对应的参数张量
+        param1 = model1[key]
+        param2 = model2[key]
+
+        # 利用torch内置的cosine_similarity函数，计算两个张量的余弦相似度
+        # dim=0表示按列计算，eps=1e-8表示添加一个小的正数，防止除零错误
+        cos_sim = torch.cosine_similarity(param1, param2, dim=0, eps=1e-8)
+        # print("#test", cos_sim)
+        # 将计算结果添加到列表中
+        cos_sim_list.append(torch.mean(cos_sim))
+    # 返回余弦相似度列表
+    return cos_sim_list
+
+
+def normalize_update(update1, update2):
+
+    # 初始化一个空字典，用于存储缩放后的模型参数
+    scaled_model = {}
+    # 遍历模型参数字典的键
+    for key in update1.keys():
+        # 取出对应的参数张量
+        param1 = update1[key]
+        param2 = update2[key]
+        # 计算两个更新的L2范数
+        norm1 = torch.norm(param1)
+        norm2 = torch.norm(param2)
+        # 如果范数不相等，需要进行缩放
+        if norm1 != norm2:
+            # 计算缩放因子，即范数之比
+            scale_factor = norm2 / norm1
+            # 使用torch的mul函数，对update1进行缩放，使其与update2的范数相同
+            scaled_param = torch.mul(param1, scale_factor)
+        else:
+            # 如果范数相等，不需要缩放，直接复制update1
+            scaled_param = param1.clone()
+        # 将缩放后的张量存入scaled_model字典中
+        scaled_model[key] = scaled_param
+    # 返回缩放后的模型参数字典
+    return scaled_model
+
+# weights是一个list, 每个元素为一组权重
+def FLTrust(weights, args, model, cmm_dataset, dict_common, epoch):
+
+    local_model = LocalUpdate(args=args, dataset=cmm_dataset, idxs=dict_common, idx=0, data_poison=False)
+    w, loss = local_model.update_weights(model=copy.deepcopy(model), global_round=epoch)
+    TS = []
+    for i in range(0, len(weights)):
+        tt = cosine_similarity(weights[i], w)
+        TS.append(sum(tt)/len(tt))
+        weights[i] = normalize_update(weights[i], w)
+
+    relu = torch.nn.ReLU(inplace=True)
+    TS = torch.Tensor(TS)
+    TS = relu(TS)
+
+    re_model = copy.deepcopy(w)
+    for key in w.keys():
+        for i in range(0, len(TS)):
+            if i == 0:
+                re_model[key] = TS[i] * weights[i][key]
+            else:
+                re_model[key] += TS[i] * weights[i][key]
+
+        re_model[key] = re_model[key] / sum(TS)
+
+    return re_model
+
+
+# norm-clipping/ norm-clipping
+# 根据一定的阈值对于提交的参数进行裁剪
+# def mean_norm(net, nfake, sf):
+
+   

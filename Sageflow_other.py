@@ -380,11 +380,7 @@ if __name__ == '__main__':
         else:
             global_weights = Sag(epoch, average_weights(local_weights_delay[0]), len(local_weights_delay[0]),
                                                  local_delay_ew, copy.deepcopy(global_weights))
-            # current_weights_set = local_weights_delay[0]
-            # for item in local_delay_ew:
-            #     current_weights_set.extend(item)
-            # global_weights = average_weights(current_weights_set)
-        # Update global weights
+
         pre_global_model.load_state_dict(global_model.state_dict())
         global_model.load_state_dict(global_weights)
 
@@ -413,9 +409,7 @@ if __name__ == '__main__':
         final_test_acc.append(test_acc)
         print('Test Accuracy: {:.2f}% \n'.format(100 * test_acc))
 
-        # Schedular Update
-        # for l in range(args.num_users):
-        #     scheduler[l] = (scheduler[l] - 1) * ((scheduler[l] - 1) > 0)
+
         for l in all_users:
             if(scheduler[l] > 0):
                 scheduler[l] = (scheduler[l] - 1)   
