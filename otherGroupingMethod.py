@@ -1,9 +1,11 @@
 import torch
 import numpy as np
+from torch import nn
 import heapq
 import copy
-from update import test_inference, LocalUpdate
+from update import  LocalUpdate
 from utils1 import average_weights
+from torch.utils.data import DataLoader, Dataset
 
 
 def get_key_list(std_keys):
@@ -78,7 +80,7 @@ def Trimmed_mean(para_updates, n_attackers = 1):
 
 def pre_Trimmed_mean(std_dict, std_keys, current_epoch_updates):
     weight_updates = modifyWeight(std_keys, current_epoch_updates)
-    Median_avg = Trimmed_mean(, 1)
+    Median_avg = Trimmed_mean(weight_updates, 1)
     Median_avg = restoreWeight(std_dict, std_keys, Median_avg)
     return Median_avg, len(weight_updates) - 2
 
@@ -198,9 +200,42 @@ def compute_gradient(model1, model2, lr):
     return len
 
 
+def test_inference_clone(args, model, test_dataset):
+
+    model.eval()
+    loss, total, correct = 0.0, 0.0, 0.0
+    device = f'cuda:{args.gpu_number}' if args.gpu else 'cpu'
+    criterion = nn.NLLLoss().to(device)
+    testloader = DataLoader(test_dataset, batch_size=64, shuffle=False)
+
+    batch_losses = []
+    batch_entropy = []
+    batch_KL = []
+
+    with torch.no_grad():
+        for batch_idx, (images, labels) in enumerate(testloader):
+            images, labels = images.to(device), labels.to(device)
+            output, out = model(images)
+
+            batch_loss = criterion(output, labels)
+            batch_losses.append(batch_loss.item())
+
+            _, pred_labels = torch.max(output,1)
+            pred_labels = pred_labels.view(-1)
+            pred_dec = torch.eq(pred_labels, labels)
+            current_acc = torch.sum(pred_dec).item() + 1e-8
+
+
+            correct += current_acc
+            total += len(labels)
+
+        accuracy  = correct/total
+
+    return accuracy, sum(batch_losses)/len(batch_losses)
+
 def Zeno(weights, loss, args, model, cmm_dataset):
 
-    common_acc, common_loss, _ = test_inference(args, model, cmm_dataset)
+    common_acc, common_loss, _ = test_inference_clone(args, model, cmm_dataset)
     fai = 0.0
     w = model.state_dict()
     score = []
@@ -360,4 +395,5 @@ def FLTrust(weights, args, model, cmm_dataset, dict_common, epoch):
 # 根据一定的阈值对于提交的参数进行裁剪
 # def mean_norm(net, nfake, sf):
 
-   
+def flatten_parameters(model):
+    return np.concatenate([param.cpu().detach().numpy().flatten() for param in model.parameters()])

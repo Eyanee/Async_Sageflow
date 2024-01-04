@@ -6,6 +6,7 @@ import time
 import pickle
 import numpy as np
 from tqdm import tqdm
+from visualdl import LogWriter
 
 import torch
 
@@ -43,6 +44,7 @@ if __name__ == '__main__':
     gpu_number = args.gpu_number
     device = torch.device(f'cuda:{gpu_number}' if args.gpu else 'cpu')
 
+    writer = LogWriter(logdir="./log/histogram_test/train")
 
     train_dataset, test_dataset, (user_groups, dict_common) = get_dataset(args) 
 
@@ -183,7 +185,7 @@ if __name__ == '__main__':
         pre_index[args.staleness] = []
 
         ensure_1 = 0
-
+        flag =True
         for idx in all_users:
 
             if scheduler[idx] == 0: # 当前轮次提交
@@ -208,6 +210,19 @@ if __name__ == '__main__':
                 model=copy.deepcopy(global_model), global_round=epoch
 
             )
+            #### save for print test ####
+            
+            if flag:
+                # print("#########")
+                # print(list(w.items())[0],'./model_dict.txt')
+                test_model = copy.deepcopy(global_model)
+                test_model.load_state_dict(w)
+                flat_parameters = flatten_parameters(test_model)
+                writer.add_histogram(tag='default tag', values = flat_parameters, step = idx,buckets = 10)
+                flag = False
+                # print("############")
+            ###   #####
+
             if idx in attack_users and args.model_poison == True and epoch > args.poison_epoch - MAX_STALENESS:
                 mal_parameters_list[0][idx] = w # 加入malicious_list
                 test_mal_list.append(w)
