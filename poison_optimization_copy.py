@@ -77,12 +77,12 @@ def Outline_Poisoning(args, global_model, malicious_models, train_dataset, dista
     print("calculated distance threshold is ", distance_threshold)
     
     if not poisoned:
-        w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, distance_threshold,  perturbation_range=(-0.05, 0.05))
+        w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, distance_threshold,  perturbation_range=(-0.1, 0.1))
         initial_w_rand = w_rand
     # w_rand = add_small_perturbation(global_model, local_dict, previous_local_dict, args, pinned_accuracy_threshold, train_dataset, perturbation_range=(-0.1, 0.1))
     else:
     #     w_rand = primitive_malicious #第一轮生成的值 
-        w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, distance_threshold, perturbation_range=(-0.05, 0.05))
+        w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, distance_threshold, perturbation_range=(-0.1, 0.1))
 
     w_poison, optimization_res = phased_optimization(args, global_model, w_rand, train_dataset, distance_threshold,  pinned_accuracy_threshold)
     # 如果没有成功优化，则下一轮的distance不应该被改变
@@ -97,7 +97,7 @@ def Outline_Poisoning(args, global_model, malicious_models, train_dataset, dista
     return w_poison, new_distance_ratio
 
 def Outline_Poisoning_compare(args, pre_global_model, global_model, malicious_models, train_dataset, distance_ratio, pinned_accuracy_threshold, adaptive_accuracy_threshold, poisoned):
-    w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, perturbation_range=(-0.01, 0.01))
+    w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, perturbation_range=(-0.1, 0.1))
 
     return w_rand, distance_ratio
 """
@@ -201,7 +201,7 @@ def phased_optimization(args, global_model, w_rand, train_dataset, distance_thre
     # parameter determination
     round = 0
     MAX_ROUND = 3
-    entropy_threshold = 1
+    entropy_threshold = 1.5
      # 准备教师模型
     teacher_model = copy.deepcopy(global_model)
     # 准备学生模型 
@@ -303,8 +303,8 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
             return True, student_model.state_dict()
         elif avg_entropy <= entropy_threshold and acc <= accuracy_threshold and loss > 1.6:
             print("change alpha")
-            alpha = 0.69
-            beta = 0.31
+            alpha = 0.75
+            beta = 0.25
         elif loss <= 1.6: #0.7 0.3 for fmnist
             print("restore alpha")
             alpha = 0.88
@@ -384,14 +384,14 @@ def add_small_perturbation(original_model, args, pinned_accuracy, train_dataset,
 
     while iteration < max_iterations:
         # 计算当前扰动范围的中点
-        mid_min = perturbation_range[0] * 1.3
+        mid_min = perturbation_range[0] * 1.1
         print("mid_min is", mid_min)
         mid_max = mid_min * -1
 
         # 生成中点扰动张量
         for round in range(MAX_ROUND):
             for idx, key in enumerate(reverse_keys):
-                if  idx == 0 or idx == 1 : # 可能是perturbation的问题
+                if  idx == 0  or idx == 1 : # 可能是perturbation的问题
                     temp_original = orignal_state_dict[key]
                     perturbs = torch.tensor(np.random.uniform(low=mid_min, high=mid_max, size=temp_original.shape)).to(device)
                     perturbs = torch.add(perturbs, temp_original)
@@ -414,7 +414,6 @@ def add_small_perturbation(original_model, args, pinned_accuracy, train_dataset,
             if acc <= pinned_accuracy and compute_distance >= distance_threshold:
                 if acc < min_acc:
                     return perturbed_dict
-
             else:
                 # 相似性不满足要求，更新扰动范围，继续迭代
                 perturbation_range = (mid_min, mid_max)

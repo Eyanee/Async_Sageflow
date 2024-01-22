@@ -97,7 +97,7 @@ def Outline_Poisoning(args, global_model, malicious_models, train_dataset, dista
     return w_poison, new_distance_ratio
 
 def Outline_Poisoning_compare(args, pre_global_model, global_model, malicious_models, train_dataset, distance_ratio, pinned_accuracy_threshold, adaptive_accuracy_threshold, poisoned):
-    w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, perturbation_range=(-0.01, 0.01))
+    w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, perturbation_range=(-0.05, 0.05))
 
     return w_rand, distance_ratio
 """
@@ -201,7 +201,7 @@ def phased_optimization(args, global_model, w_rand, train_dataset, distance_thre
     # parameter determination
     round = 0
     MAX_ROUND = 3
-    entropy_threshold = 1
+    entropy_threshold = 1.5
      # 准备教师模型
     teacher_model = copy.deepcopy(global_model)
     # 准备学生模型 
@@ -280,8 +280,8 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
     
     num_epochs = distillation_round
     temperature = 50 ### 增大
-    alpha = 0.88
-    beta = 0.12
+    alpha = 0.9
+    beta = 0.1
 
 
     student_model.train()
@@ -303,12 +303,12 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
             return True, student_model.state_dict()
         elif avg_entropy <= entropy_threshold and acc <= accuracy_threshold and loss > 1.6:
             print("change alpha")
-            alpha = 0.69
-            beta = 0.31
+            alpha = 0.5
+            beta = 0.5
         elif loss <= 1.6: #0.7 0.3 for fmnist
             print("restore alpha")
-            alpha = 0.88
-            beta = 0.12 #0.88 0.12 for fmnist
+            alpha = 0.9
+            beta = 0.1 #0.88 0.12 for fmnist
 
         for batch_idx, (images, labels) in enumerate(trainloader):
             images, labels = images.to(device), labels.to(device)
@@ -384,7 +384,7 @@ def add_small_perturbation(original_model, args, pinned_accuracy, train_dataset,
 
     while iteration < max_iterations:
         # 计算当前扰动范围的中点
-        mid_min = perturbation_range[0] * 1.3
+        mid_min = perturbation_range[0] * 1.1
         print("mid_min is", mid_min)
         mid_max = mid_min * -1
 

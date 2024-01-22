@@ -7,7 +7,7 @@ import copy
 import math
 from model import MLP, CNNMnist, CNNFashion_Mnist, CNNCifar, VGGCifar
 from customLossFuncs import CustomDistance1
-from otherGroupingMethod import get_key_list
+
 
 
 
@@ -49,43 +49,62 @@ class LocalUpdate(object):
         return trainloader, testloader
 
 # 修改这一部分的梯度更新方式
-    def update_weights(self,model, global_round):
+    def update_weights(self, model, global_round):
         model.train()
         epoch_loss = []
-
+        epoch_grad = []
 
         if self.args.optimizer == 'sgd':
 
             lr = self.args.lr
-
-            lr = lr * (0.5)**(global_round//self.args.lrdecay)
+            lr = lr * (0.5) ** (global_round // self.args.lrdecay)
             optimizer = torch.optim.SGD(model.parameters(), lr=lr, momentum=0.9)
 
         elif self.args.optimizer == 'adam':
 
             lr = self.args.lr
-            lr = lr * (0.5)**(global_round//self.args.lrdecay)
-
+            lr = lr * (0.5) ** (global_round // self.args.lrdecay)
             optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=1e-4)
 
         for iter in range(self.args.local_ep):
             batch_loss = []
+            batch_grad = []
             for batch_idx, (images, labels) in enumerate(self.trainloader):
                 images, labels = images.to(self.device), labels.to(self.device)
-                # print("label is ", labels) # 在这个地方对label进行对应的反转 使用list对应下标进行修改
-                    
-                if self.data_poison ==True:
 
-                    labels = (labels+1)%10
                 model.zero_grad()
-                log_probs,_ = model(images)
+                log_probs, _ = model(images)
                 loss = self.criterion(log_probs, labels)
                 loss.backward()
                 optimizer.step()
+                
+                grad = torch.cat([p.grad.view(-1) for p in model.parameters()])
+                # print(grad)
+                batch_grad.append(grad)               
 
                 batch_loss.append(loss.item())
-            epoch_loss.append(sum(batch_loss)/len(batch_loss))
-        return model.state_dict(), sum(epoch_loss) / len(epoch_loss)
+            # print(batch_grad)
+            # grad_tensor = torch.tensor(np.array([item.cpu().detach().numpy() for item in batch_grad])).cuda()
+            # grad_mean = torch.mean(grad_tensor, dim=0)
+            
+            x = batch_grad[0]
+            for i in range(1, len(batch_grad)):
+                x += batch_grad[i]
+            x = x / len(batch_grad)
+            epoch_grad.append(x)
+            # print(x)
+            epoch_loss.append(sum(batch_loss) / len(batch_loss))
+            
+        xx = epoch_grad[0]
+        for i in range(1, len(epoch_grad)):
+            xx += epoch_grad[i]
+        xx = xx / len(epoch_grad)
+        return_grad = xx
+        
+        # print(model.state_dict())
+        # print(xx)
+        
+        return model.state_dict(),  sum(epoch_loss) / len(epoch_loss) , return_grad
 
 
     def inference(self, model):
@@ -107,7 +126,7 @@ class LocalUpdate(object):
             accuracy = correct/total
         return accuracy, loss
 
-# def test_inference(args, model, test_dataset):
+
 def test_inference(args, model, test_dataset):
 
     model.eval()

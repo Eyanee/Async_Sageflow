@@ -11,7 +11,8 @@ import torch
 
 import sys
 
-sys.path.append('./drive/My Drive/federated_learning')
+from otherGroupingMethod import flatten_parameters
+from visualdl import LogWriter
 
 from update import LocalUpdate, test_inference, DatasetSplit
 from model import MLP, CNNMnist, CNNFashion_Mnist, CNNCifar, VGGCifar
@@ -37,7 +38,8 @@ if __name__ == '__main__':
     gpu_number = args.gpu_number
     device = torch.device(f'cuda:{gpu_number}' if args.gpu else 'cpu')
 
-    train_dataset, test_dataset, (, dict_common) = get_dataset(args)
+    train_dataset, test_dataset, (user_groups, dict_common) = get_dataset(args)
+    # writer = LogWriter(logdir="./log/histogram_test/sync_res_noattack_3")
 
     if args.model == 'cnn':
         if args.dataset == 'mnist':
@@ -77,8 +79,7 @@ if __name__ == '__main__':
     val_loss_pre, counter = 0, 0
 
     for epoch in tqdm(range(args.epochs)):
-        ###
-        ###
+
         local_weights, local_losses = [], []
         print(f'\n | Global Training Round : {epoch + 1} | \n')
 
@@ -95,7 +96,7 @@ if __name__ == '__main__':
         entropy_on_public = []
         global_weights_rep = copy.deepcopy(global_model.state_dict())
 
-
+        count = 0
         for idx in idxs_users:
 
             if idx in attack_users and args.data_poison==True:
@@ -108,10 +109,23 @@ if __name__ == '__main__':
                 model=copy.deepcopy(global_model), global_round=epoch
             )
 
-            if idx in attack_users and args.model_poison ==True:
+            if idx in attack_users and args.model_poison ==True and epoch > 19:
                 w = sign_attack(w, args.model_poison_scale)
 
-
+            #### save for print test ####
+            # count =0 
+            # if epoch == 15:
+            #     test_model = copy.deepcopy(global_model)
+            #     test_model.load_state_dict(w)
+            #     flat_parameters = flatten_parameters(test_model)
+            #     writer.add_histogram(tag='default tag', values = flat_parameters, step = count ,buckets = 10)
+            #     # flag = False
+            #     count = count + 1
+            #     # print("count")
+                # print("############")
+            ###   #####
+            
+            
             local_weights.append(copy.deepcopy(w))
             local_losses.append(copy.deepcopy(loss))
 

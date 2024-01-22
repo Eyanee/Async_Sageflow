@@ -169,7 +169,7 @@ def pre_AFA(std_dict, std_keys, current_epoch_updates, current_index, device):
     weight_updates = modifyWeight(std_keys, current_epoch_updates)
     AFA_avg, remain_index = AFA(weight_updates, current_index, device)
     AFA_avg = restoreWeight(std_dict, std_keys, AFA_avg)
-    return AFA_avg, remain_index
+    return AFA_avg, len(remain_index)
 
 
 def preGroupingIndex(local_index_delay, local_index_ew):
@@ -363,18 +363,29 @@ def normalize_update(update1, update2):
     # 返回缩放后的模型参数字典
     return scaled_model
 
-# weights是一个list, 每个元素为一组权重
-def FLTrust(weights, args, model, cmm_dataset, dict_common, epoch):
+def FLTrust(weights, grad, args, model, cmm_dataset, dict_common, epoch):
 
     local_model = LocalUpdate(args=args, dataset=cmm_dataset, idxs=dict_common, idx=0, data_poison=False)
-    w, loss = local_model.update_weights(model=copy.deepcopy(model), global_round=epoch)
+    w_global = model.state_dict()
+    w, loss, gd = local_model.update_weights(model=copy.deepcopy(model), global_round=epoch)
     TS = []
-    for i in range(0, len(weights)):
-        tt = cosine_similarity(weights[i], w)
-        TS.append(sum(tt)/len(tt))
-        weights[i] = normalize_update(weights[i], w)
+    # print("gd:\n")
+    # print(len(gd))
+    # print("grad[0]:\n")
+    # print(len(grad[0]))
+    for i in range(0, len(grad)):
+        tt = torch.cosine_similarity(gd, grad[i], dim=0, eps=1e-8)
+        TS.append(tt)
 
-    relu = torch.nn.ReLU(inplace=True)
+        # weights[i] = normalize_update(w_global, weights[i], w, grad[i], gd, args)
+        
+        change = torch.norm(grad[i])
+        bound = torch.norm(gd)
+        if bound < change :
+            for key in weights[i].keys():    
+                weights[i][key] = w_global[key] * (1 - bound/change) + weights[i][key] * (bound/change)
+
+    relu = nn.ReLU(inplace=True)
     TS = torch.Tensor(TS)
     TS = relu(TS)
 
@@ -388,6 +399,17 @@ def FLTrust(weights, args, model, cmm_dataset, dict_common, epoch):
 
         re_model[key] = re_model[key] / sum(TS)
 
+    alpha = 0.5
+    if args.dataset == 'cifar10' or 'cifar100':
+        alpha = 0.5 ** (epoch // 300)
+    elif args.dataset =='fmnist':
+        alpha = 0.5 ** (epoch // 20)
+    elif args.dataset =='mnist':
+        alpha = 0.5 ** (epoch // 15)
+
+    for key in w_global.keys():
+        re_model[key] = re_model[key] * (alpha) + w_global[key] * (1 - alpha)
+
     return re_model
 
 
@@ -397,3 +419,17 @@ def FLTrust(weights, args, model, cmm_dataset, dict_common, epoch):
 
 def flatten_parameters(model):
     return np.concatenate([param.cpu().detach().numpy().flatten() for param in model.parameters()])
+
+class DatasetSplit_clone(Dataset):
+
+    def __init__(self, dataset, idxs):
+        self.dataset = dataset
+        self.idxs = [int(i) for i in idxs]
+
+    def __len__(self):
+        return len(self.idxs)
+
+    def __getitem__(self, item):
+        image, label = self.dataset[self.idxs[item]]
+        return torch.tensor(image), torch.tensor(label)
+

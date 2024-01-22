@@ -17,7 +17,7 @@ def args_parser():
                         help="number of training rounds")
     parser.add_argument('--num_users', type=int, default=60,
                         help="number of users: K")
-    parser.add_argument('--frac', type=float, default=0.2,
+    parser.add_argument('--frac', type=float, default=0.5,
                         help='the fraction of clients: C')
     parser.add_argument('--local_ep', type=int, default=5,
                         help="number of local epochs: E")
@@ -110,7 +110,9 @@ def args_parser():
     parser.add_argument('--new_poison', type=str2bool, default=False,
                         help='True: new poisoning attack, False: no attack')
     
-    parser.add_argument('--poison_epoch', type=int, default=10,
+    parser.add_argument('--poison_epoch', type=int, default=19,
+                        help='the number of epoch when started attack')
+    parser.add_argument('--poison_methods', type=str, default="ourpoisonMethod",
                         help='the number of epoch when started attack')
     
     # scale attack

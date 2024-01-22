@@ -255,12 +255,12 @@ def Eflow(w, loss, entropy, current_epoch, num_device=[]):
                 else:
                     w_avg[key] += w[i][key] * alpha[i]
 
-    return w_avg, len(loss) - num_attack, num_attack
+    return w_avg, len(loss) - num_attack
 
 
 
 
-def sign_attack(w,scale=0.1):
+def sign_attack(w,scale=1):
     w_avg = copy.deepcopy(w)
     for key in w_avg.keys():
         w_avg[key] = -w[key] * scale
