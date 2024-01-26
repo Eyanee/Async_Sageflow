@@ -5,6 +5,7 @@ import heapq
 import copy
 from update import  LocalUpdate
 from utils1 import average_weights
+import torch.nn.functional as F
 from torch.utils.data import DataLoader, Dataset
 
 
@@ -210,32 +211,69 @@ def test_inference_clone(args, model, test_dataset):
 
     batch_losses = []
     batch_entropy = []
-    batch_KL = []
+    batch_grad = []
 
-    with torch.no_grad():
-        for batch_idx, (images, labels) in enumerate(testloader):
-            images, labels = images.to(device), labels.to(device)
-            output, out = model(images)
+    # with torch.no_grad():
+    for batch_idx, (images, labels) in enumerate(testloader):
+        images, labels = images.to(device), labels.to(device)
 
-            batch_loss = criterion(output, labels)
-            batch_losses.append(batch_loss.item())
-
-            _, pred_labels = torch.max(output,1)
-            pred_labels = pred_labels.view(-1)
-            pred_dec = torch.eq(pred_labels, labels)
-            current_acc = torch.sum(pred_dec).item() + 1e-8
+        model.zero_grad()
+        # 修改点1：设置模型参数需要梯度
+        for param in model.parameters():
+            param.requires_grad_(True)
 
 
-            correct += current_acc
-            total += len(labels)
+        output, out = model(images)
+        # # 构造[batches,categaries]的真实分布向量
+        # categaries = output.shape[1]
+        Information = F.softmax(out, dim=1) * F.log_softmax(out, dim=1)
+        
+        entropy  = -1.0 * Information.sum(dim=1) # size [64]
+        average_entropy = entropy.mean().item()
+        
 
-        accuracy  = correct/total
+        batch_loss = criterion(output, labels)
+        batch_loss.backward()
 
-    return accuracy, sum(batch_losses)/len(batch_losses)
+        batch_losses.append(batch_loss.item())
+
+        _, pred_labels = torch.max(output,1)
+        pred_labels = pred_labels.view(-1)
+        pred_dec = torch.eq(pred_labels, labels)
+        current_acc = torch.sum(pred_dec).item() + 1e-8
+
+        batch_entropy.append(average_entropy)
+
+        correct += current_acc
+        total += len(labels)
+        
+        # 修改点3：获取并存储梯度
+        grad = torch.cat([p.grad.view(-1) for p in model.parameters()])
+        # print(grad)
+        batch_grad.append(grad)  
+
+        # 修改点3：清零梯度，为下一个batch做准备
+        model.zero_grad()
+
+        # 修改点5：恢复模型参数不需要梯度
+        for param in model.parameters():
+            param.requires_grad_(False)
+
+    xx = batch_grad[0]
+    for i in range(1, len(batch_grad)):
+        xx += batch_grad[i]
+    xx = xx / len(batch_grad)
+    return_grad = xx
+
+    accuracy  = correct/total
+
+        
+
+    return accuracy, sum(batch_losses)/len(batch_losses), sum(batch_entropy)/len(batch_entropy), return_grad
 
 def Zeno(weights, loss, args, model, cmm_dataset):
 
-    common_acc, common_loss, _ = test_inference_clone(args, model, cmm_dataset)
+    common_acc, common_loss, _ , grad = test_inference_clone(args, model, cmm_dataset)
     fai = 0.0
     w = model.state_dict()
     score = []
@@ -363,18 +401,16 @@ def normalize_update(update1, update2):
     # 返回缩放后的模型参数字典
     return scaled_model
 
-def FLTrust(weights, grad, args, model, cmm_dataset, dict_common, epoch):
+def FLTrust(weights, grad, args, model, train_dataset, dict_common, epoch, indexes):
 
-    local_model = LocalUpdate(args=args, dataset=cmm_dataset, idxs=dict_common, idx=0, data_poison=False)
+    local_model = LocalUpdate(args=args, dataset=train_dataset, idxs=dict_common, idx=0, data_poison=False)
     w_global = model.state_dict()
-    w, loss, gd = local_model.update_weights(model=copy.deepcopy(model), global_round=epoch)
+    acc , loss, _, gd = test_inference_clone(args, model, DatasetSplit_clone(train_dataset,dict_common) )
     TS = []
-    # print("gd:\n")
-    # print(len(gd))
-    # print("grad[0]:\n")
-    # print(len(grad[0]))
+    
     for i in range(0, len(grad)):
         tt = torch.cosine_similarity(gd, grad[i], dim=0, eps=1e-8)
+        print("grad is {}, index {}".format(tt, indexes[i]))
         TS.append(tt)
 
         # weights[i] = normalize_update(w_global, weights[i], w, grad[i], gd, args)
@@ -389,8 +425,8 @@ def FLTrust(weights, grad, args, model, cmm_dataset, dict_common, epoch):
     TS = torch.Tensor(TS)
     TS = relu(TS)
 
-    re_model = copy.deepcopy(w)
-    for key in w.keys():
+    re_model = copy.deepcopy(w_global)
+    for key in w_global.keys():
         for i in range(0, len(TS)):
             if i == 0:
                 re_model[key] = TS[i] * weights[i][key]

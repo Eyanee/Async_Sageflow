@@ -77,12 +77,12 @@ def Outline_Poisoning(args, global_model, malicious_models, train_dataset, dista
     print("calculated distance threshold is ", distance_threshold)
     
     if not poisoned:
-        w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, distance_threshold,  perturbation_range=(-0.1, 0.1))
+        w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, distance_threshold,  perturbation_range=(-0.5, 0.5))
         initial_w_rand = w_rand
     # w_rand = add_small_perturbation(global_model, local_dict, previous_local_dict, args, pinned_accuracy_threshold, train_dataset, perturbation_range=(-0.1, 0.1))
     else:
     #     w_rand = primitive_malicious #第一轮生成的值 
-        w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, distance_threshold, perturbation_range=(-0.1, 0.1))
+        w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, distance_threshold, perturbation_range=(-0.5, 0.5))
 
     w_poison, optimization_res = phased_optimization(args, global_model, w_rand, train_dataset, distance_threshold,  pinned_accuracy_threshold)
     # 如果没有成功优化，则下一轮的distance不应该被改变
@@ -213,7 +213,7 @@ def phased_optimization(args, global_model, w_rand, train_dataset, distance_thre
 
     for round in range(MAX_ROUND):
 
-        test_acc, test_loss, test_entropy = test_inference(args, student_model, train_dataset)
+        test_acc, test_loss, test_entropy, _ = test_inference(args, student_model, train_dataset)
         test_distance = model_dist_norm(student_model.state_dict(), global_model.state_dict())
         test_simliarity = cal_similarity(student_model.state_dict(), global_model.state_dict())
         print("________________________________")
@@ -288,7 +288,7 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
     for epoch in range(num_epochs):
         optimizer.zero_grad()
 
-        acc, loss, avg_entropy = test_inference(args, student_model, train_dataset)
+        acc, loss, avg_entropy, _ = test_inference(args, student_model, train_dataset)
         compute_distance = model_dist_norm(student_model.state_dict(), ref_model.state_dict())
         print("++++++++++++++++++++")
         print("after training ",epoch)
@@ -313,6 +313,10 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
         for batch_idx, (images, labels) in enumerate(trainloader):
             images, labels = images.to(device), labels.to(device)
             student_model.zero_grad()
+            # 修改点1：设置模型参数需要梯度
+            for param in student_model.parameters():
+                param.requires_grad_(True)
+
             teacher_labels = list()
             _ , teacher_outputs = teacher_model(images)
             for item in teacher_outputs:
@@ -377,6 +381,8 @@ def add_small_perturbation(original_model, args, pinned_accuracy, train_dataset,
 
     max_iterations = 100
     MAX_ROUND = 3
+    MAX_SUCC_ROUND = 5
+    succ_round = 0
     iteration = 0
     min_acc = 1
     # reverse_keys = reversed(list(orignal_state_dict.keys())) 
@@ -399,7 +405,7 @@ def add_small_perturbation(original_model, args, pinned_accuracy, train_dataset,
 
             # 计算新张量和原张量之间的相似性
             test_model.load_state_dict(perturbed_dict)
-            acc, loss, entropy = test_inference(args, test_model, train_dataset)
+            acc, loss, entropy, _ = test_inference(args, test_model, train_dataset)
             compute_distance = model_dist_norm(test_model.state_dict(), original_model.state_dict())
             # inner_product_res = cal_inner_product(local_dict, previous_local_dict, perturbed_dict)
             print("====================")
@@ -410,10 +416,16 @@ def add_small_perturbation(original_model, args, pinned_accuracy, train_dataset,
             # print("inner product is ", inner_product_res)
             print("====================")
 
-            # 判断是否达到目标相似性
+             # 判断是否达到目标相似性
             if acc <= pinned_accuracy and compute_distance >= distance_threshold:
+                succ_round = succ_round + 1
                 if acc < min_acc:
-                    return perturbed_dict
+                    print("succ_min + 1")
+                    min_acc = acc
+                    final_dict = copy.deepcopy(perturbed_dict)
+                if succ_round >= MAX_SUCC_ROUND:
+                    return final_dict
+
             else:
                 # 相似性不满足要求，更新扰动范围，继续迭代
                 perturbation_range = (mid_min, mid_max)

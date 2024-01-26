@@ -3,21 +3,48 @@
 import numpy as np
 from torchvision import datasets, transforms
 
-def mnist_iid(dataset, num_users):
+# def mnist_iid(dataset, num_users):
 
-    num_items = int(len(dataset)/(num_users + 1))
-    dict_users, all_idxs = {}, [i for i in range(len(dataset))]
-    for i in range(num_users + 1):
+#     num_items = int(len(dataset)/(num_users + 1))
+#     dict_users, all_idxs = {}, [i for i in range(len(dataset))]
+#     for i in range(num_users + 1):
 
-        dict_users[i] = set(np.random.choice(all_idxs, num_items, replace=False))
-
-
-        all_idxs = list(set(all_idxs) - dict_users[i])
+#         dict_users[i] = set(np.random.choice(all_idxs, num_items, replace=False))
 
 
-    return dict_users, dict_users[num_users]
+#         all_idxs = list(set(all_idxs) - dict_users[i])
 
 
+#     return dict_users, dict_users[num_users]
+
+import numpy as np
+
+def mnist_iid(dataset, number_user):
+    # 计算每个用户的数据量（均分）
+    num_items_per_user = len(dataset) // number_user
+    
+    # 创建字典以存储每个用户的图像索引
+    dict_users = {}
+    
+    # 为前 number_user 个用户均分数据
+    for i in range(number_user):
+        start_idx = i * num_items_per_user
+        end_idx = (i + 1) * num_items_per_user
+        dict_users[i] = set(range(start_idx, end_idx))
+    
+    # 处理最后一个用户，每个类别只选择2个图像
+    last_user_idx = number_user
+    for class_idx in range(10):  # 假设类别总数为10
+        class_idxs = [idx for idx in range(class_idx * len(dataset)//10, (class_idx + 1) * len(dataset)//10)]
+        np.random.shuffle(class_idxs)
+        
+        # 选择两个图像
+        selected_idxs = class_idxs[:2]
+        
+        # 添加到最后一个用户的集合中
+        dict_users[last_user_idx] = dict_users.get(last_user_idx, set()) | set(selected_idxs)
+    
+    return dict_users, dict_users[number_user]
 
 
 

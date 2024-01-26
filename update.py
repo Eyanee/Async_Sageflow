@@ -73,6 +73,9 @@ class LocalUpdate(object):
                 images, labels = images.to(self.device), labels.to(self.device)
 
                 model.zero_grad()
+                 # 修改点1：设置模型参数需要梯度
+                for param in model.parameters():
+                    param.requires_grad_(True)
                 log_probs, _ = model(images)
                 loss = self.criterion(log_probs, labels)
                 loss.backward()
@@ -137,40 +140,66 @@ def test_inference(args, model, test_dataset):
 
     batch_losses = []
     batch_entropy = []
-    batch_KL = []
+    batch_grad = []
 
-    with torch.no_grad():
-        for batch_idx, (images, labels) in enumerate(testloader):
-            images, labels = images.to(device), labels.to(device)
-            output, out = model(images)
-            # 构造[batches,categaries]的真实分布向量
-            categaries = output.shape[1]
+    # with torch.no_grad():
+    for batch_idx, (images, labels) in enumerate(testloader):
+        images, labels = images.to(device), labels.to(device)
 
-            
-            Information = F.softmax(out, dim=1) * F.log_softmax(out, dim=1)
-            
-            entropy  = -1.0 * Information.sum(dim=1) # size [64]
-            average_entropy = entropy.mean().item()
-            
+        model.zero_grad()
+        # 修改点1：设置模型参数需要梯度
+        for param in model.parameters():
+            param.requires_grad_(True)
 
-            batch_loss = criterion(output, labels)
-            batch_losses.append(batch_loss.item())
 
-            _, pred_labels = torch.max(output,1)
-            pred_labels = pred_labels.view(-1)
-            pred_dec = torch.eq(pred_labels, labels)
-            current_acc = torch.sum(pred_dec).item() + 1e-8
+        output, out = model(images)
+        # # 构造[batches,categaries]的真实分布向量
+        # categaries = output.shape[1]
 
-            batch_entropy.append(average_entropy)
+        
+        Information = F.softmax(out, dim=1) * F.log_softmax(out, dim=1)
+        
+        entropy  = -1.0 * Information.sum(dim=1) # size [64]
+        average_entropy = entropy.mean().item()
+        
 
-            correct += current_acc
-            total += len(labels)
-            
+        batch_loss = criterion(output, labels)
+        batch_loss.backward()
 
-        accuracy  = correct/total
+        batch_losses.append(batch_loss.item())
+
+        _, pred_labels = torch.max(output,1)
+        pred_labels = pred_labels.view(-1)
+        pred_dec = torch.eq(pred_labels, labels)
+        current_acc = torch.sum(pred_dec).item() + 1e-8
+
+        batch_entropy.append(average_entropy)
+
+        correct += current_acc
+        total += len(labels)
+        
+        # 修改点3：获取并存储梯度
+        grad = torch.cat([p.grad.view(-1) for p in model.parameters()])
+        # print(grad)
+        batch_grad.append(grad)  
+
+        # 修改点3：清零梯度，为下一个batch做准备
+        model.zero_grad()
+
+        # 修改点5：恢复模型参数不需要梯度
+        for param in model.parameters():
+            param.requires_grad_(False)
+
+    xx = batch_grad[0]
+    for i in range(1, len(batch_grad)):
+        xx += batch_grad[i]
+    xx = xx / len(batch_grad)
+    return_grad = xx
+
+    accuracy  = correct/total
 
         
 
-    return accuracy, sum(batch_losses)/len(batch_losses), sum(batch_entropy)/len(batch_entropy)
+    return accuracy, sum(batch_losses)/len(batch_losses), sum(batch_entropy)/len(batch_entropy), return_grad
 
 
