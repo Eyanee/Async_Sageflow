@@ -15,6 +15,10 @@ def cal_similarity(ori_params, mod_params):
     std_keys = get_key_list(ori_params.keys())
     params1 = torch.cat([ori_params[k].view(-1) for k in std_keys])
     params2 = torch.cat([mod_params[k].view(-1) for k in std_keys])
+    # cos_similarity = 0
+    # for k in std_keys:
+    #     temp = F.cosine_similarity(ori_params[k].view(-1), mod_params[k].view(-1), dim=0)
+    #     cos_similarity = cos_similarity + temp
 
     # 计算余弦相似度
     cos_similarity = F.cosine_similarity(params1, params2, dim=0)
@@ -73,8 +77,11 @@ def Outline_Poisoning(args, global_model, malicious_models, train_dataset, dista
     pre_distance_ratio = distance_ratio
     # indicator_res, new_distance_ratio = test_attack_result(pre_global_model, ref_model, distance_ratio, poisoned)
     new_distance_ratio = distance_ratio
-    distance_threshold = cal_ref_distance(malicious_models, ref_model, new_distance_ratio) # 计算参考L2 distance 门槛 
+    distance_threshold, similarity_threshold = cal_ref_distance(malicious_models, ref_model, new_distance_ratio) # 计算参考L2 distance 门槛 
+
+
     print("calculated distance threshold is ", distance_threshold)
+    print("calculated similarity threshold is ", similarity_threshold)
     
     if not poisoned:
         w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, distance_threshold,  perturbation_range=(-0.5, 0.5))
@@ -84,7 +91,7 @@ def Outline_Poisoning(args, global_model, malicious_models, train_dataset, dista
     #     w_rand = primitive_malicious #第一轮生成的值 
         w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, distance_threshold, perturbation_range=(-0.5, 0.5))
 
-    w_poison, optimization_res = phased_optimization(args, global_model, w_rand, train_dataset, distance_threshold,  pinned_accuracy_threshold)
+    w_poison, optimization_res = phased_optimization(args, global_model, w_rand, train_dataset, distance_threshold,  pinned_accuracy_threshold, similarity_threshold)
     # 如果没有成功优化，则下一轮的distance不应该被改变
     if not optimization_res:
         # distance ratio 不应该被改变
@@ -185,18 +192,18 @@ def cal_FGNV(model_dict):
 
 def cal_ref_distance(malicious_models, global_model, distance_ratio):
     
-    distance_res = computeTargetDistance(malicious_models, global_model, distance_ratio)
+    distance_res, similarity_res = computeTargetDistance(malicious_models, global_model, distance_ratio)
 
     
 
-    return distance_res
+    return distance_res, similarity_res
 
 
 """
 自蒸馏 + adpative clipping
 得到符合要求的投毒结果
 """
-def phased_optimization(args, global_model, w_rand, train_dataset, distance_threshold, pinned_accuracy_threshold):
+def phased_optimization(args, global_model, w_rand, train_dataset, distance_threshold, pinned_accuracy_threshold, similarity_threshold):
 
     # parameter determination
     round = 0
@@ -211,6 +218,8 @@ def phased_optimization(args, global_model, w_rand, train_dataset, distance_thre
     teacher_model.load_state_dict(w_rand)
     student_model.load_state_dict(w_rand)
     teacher_model.eval()
+    device = f'cuda:{args.gpu_number}' if args.gpu else 'cpu'
+
 
     for round in range(MAX_ROUND):
 
@@ -224,7 +233,7 @@ def phased_optimization(args, global_model, w_rand, train_dataset, distance_thre
         print("test loss is", test_loss)
         print("test entropy is ", test_entropy)
         print("________________________________")
-        if test_distance <= distance_threshold and test_acc <= pinned_accuracy_threshold and test_entropy  <= entropy_threshold and test_loss <= 1.6:
+        if test_simliarity >= similarity_threshold and test_acc <= pinned_accuracy_threshold and test_entropy  <= entropy_threshold and test_loss <= 1.6:
             return w_rand, True
         elif test_entropy > entropy_threshold:
             distillation_res, w_rand = self_distillation(args,teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 10)
@@ -232,8 +241,8 @@ def phased_optimization(args, global_model, w_rand, train_dataset, distance_thre
             distillation_res, w_rand = self_distillation(args,teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 10)
             # 只有accuracy 不满足条件
             # 暂时不处理
-        elif test_distance > distance_threshold:
-            w_rand = adaptive_scaling(w_rand, global_model.state_dict(), distance_threshold, test_distance)
+        elif test_simliarity <= similarity_threshold:
+            w_rand = adaptive_clipping(w_rand, global_model, similarity_threshold, device)
             student_model.load_state_dict(w_rand)
             # distillation_res, w_rand = self_distillation(args, teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold,  distance_threshold, distillation_round = 10)
         else:
@@ -263,6 +272,41 @@ def adaptive_scaling(w_rand, ref_model_dict, distance_threshold, test_distance):
         return w_rand
     return w_rand
 
+def adaptive_clipping(w_rand, ref_model, similarity_threshold, device):
+    test_model = copy.deepcopy(ref_model)
+    test_model.load_state_dict(w_rand)
+    std_keys = get_key_list(ref_model.state_dict().keys())
+    optimizer = torch.optim.SGD(test_model.parameters(), lr=0.01)  # 可以根据需要选择其他优化器
+    criterion = nn.CosineEmbeddingLoss()
+    # 训练循环  
+    epochs = 10
+    target_cos_sim = similarity_threshold  # 目标余弦相似度
+    ref_dict = ref_model.state_dict()
+    for epoch in range(epochs):
+        optimizer.zero_grad()
+        for param in test_model.parameters():
+            param.requires_grad_(True)
+        # 计算X与A的余弦相似度
+        # 计算损失函数（均方误差）
+        
+        # for k in std_keys:
+        #     tmp = criterion(w_rand[k],ref_dict[k],0)
+        #     loss = loss + tmp
+        input1 = torch.cat([w_rand[k].view(-1) for k in std_keys])
+        input2 = torch.cat([ref_dict[k].view(-1) for k in std_keys])
+        target = torch.ones_like(input1).to(device)
+        print("target size is ",target.size())
+        input1 = input1.view(-1, 1)
+        input2 = input2.view(-1, 1)
+        print("input1.size is ",input1.size())
+        print("input2.size is ",input2.size())
+
+        loss = criterion(input1,input2,target)
+        # 反向传播和参数更新
+        print("loss shape 1 :", loss.shape)  # 打印张量的形状
+        loss.backward()
+        optimizer.step()
+    return test_model.state_dict()
 
 def self_distillation(args, teacher_model, student_model, train_dataset, entropy_threshold, ref_model, accuracy_threshold, distance_threshold,  distillation_round):
     """
@@ -297,8 +341,8 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
         print("avg test entropy is ", avg_entropy)
         print("avg test loss is ", loss)
         print("avg accuracy is ", acc) 
-        print("compute similarity  is ",cos_sim)
         print("compute_distance is ",compute_distance)
+        print("compute_similarity is ",cos_sim)
         print("++++++++++++++++++++")
 
         if avg_entropy <= entropy_threshold and acc <= accuracy_threshold and loss <= 1.6:
@@ -329,12 +373,12 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
             pred_is = torch.tensor(teacher_labels)
             pred_is = pred_is.to(device)
             stu_out, student_outputs = student_model(images)
-            ref_out, ref_outputs = ref_model(images)
-            _ , teacher_outputs = teacher_model(images)
+            # ref_out, ref_outputs = ref_model(images)
+            # _ , teacher_outputs = teacher_model(images)
             l_loss = criterion1(stu_out, pred_is)
-            t_loss = criterion1(stu_out,  labels) #  增加了正常的loss
-            loss =  alpha * l_loss + beta * t_loss
-
+            t_loss = criterion1(stu_out,  labels) 
+            cos_loss = (1 - cal_similarity(ref_model.state_dict(),student_model.state_dict()))
+            loss =  alpha * l_loss + beta * t_loss + cos_loss
             # loss = l_loss
             
             loss.backward()
@@ -517,6 +561,7 @@ def computeTargetDistance(model_dicts, global_model, ratio):
     
     """
     res_distance = []
+    res_similarity = []
 
     print("len of model dicts is ", len(model_dicts))
 
@@ -524,16 +569,18 @@ def computeTargetDistance(model_dicts, global_model, ratio):
         tmp_distance = model_dist_norm(model_dict, global_model.state_dict())
         tmp_similarity = cal_similarity(model_dict, global_model.state_dict())
         res_distance.append(tmp_distance)
+        res_similarity.append(tmp_similarity)
         print("compute distance is ", tmp_distance)
         print("compute similarity is ", tmp_similarity)
     res_distance.sort()
+    res_similarity.sort()
 
     max_idx = int(len(model_dicts)) - 1
 
     target_distance = (res_distance[max_idx] - res_distance[0]) * ratio + res_distance[0]
+    target_similarity = res_similarity[0]
 
-    return target_distance
-
+    return target_distance, target_similarity
 
 def modelAvg(benign_model_dicts, num_attacker, malicious_model):
 

@@ -155,7 +155,21 @@ def cifar_iid(dataset, num_users):
     for i in range(num_users):
         dict_users[i] = set(np.random.choice(all_idxs, num_items, replace=False ))
         all_idxs = list(set(all_idxs) - dict_users[i])
-    return dict_users, dict_users[0]
+    
+    # 处理最后一个用户，每个类别只选择2个图像
+    last_user_idx = num_users
+    for class_idx in range(10):  # 假设类别总数为10
+        class_idxs = [idx for idx in range(class_idx * len(dataset)//10, (class_idx + 1) * len(dataset)//10)]
+        np.random.shuffle(class_idxs)
+        
+        # 选择两个图像
+        selected_idxs = class_idxs[:2]
+        
+        # 添加到最后一个用户的集合中
+        dict_users[last_user_idx] = dict_users.get(last_user_idx, set()) | set(selected_idxs) 
+        
+        
+    return dict_users, dict_users[last_user_idx]
 
 def cifar_noniid(dataset, num_users):
 

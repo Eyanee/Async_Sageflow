@@ -6,7 +6,7 @@ import time
 import pickle
 import numpy as np
 from tqdm import tqdm
-from visualdl import LogWriter
+# from visualdl import LogWriter
 
 import torch
 
@@ -335,13 +335,12 @@ if __name__ == '__main__':
                         std_keys = get_key_list(global_model.state_dict().keys())
                         # w_avg_delay, len_delay = pre_Trimmed_mean(copy.deepcopy(global_model.state_dict()), std_keys, local_weights_delay[i])
                         # pre_weights[i].append({epoch: [w_avg_delay, len_delay]})
-                elif args.update_rule == 'zeno':
+                elif args.update_rule == 'Zeno':
                     if len(local_weights_delay[i]) > 0:
-                        len_delay = len(local_weights_delay[i])
-                        w_avg_delay= pre_Zeno(local_weights_delay[i], args, loss_on_public[i], 
-                                                          DatasetSplit(train_dataset, dict_common), copy.deepcopy(global_model))
-                        pre_weights[i].append({epoch: [w_avg_delay, len_delay]})
-                elif args.update_rule == 'zenoplusplus':
+                        pre_weights[i] = np.concatenate((pre_weights[i], local_weights_delay[i]), axis=0)
+                        pre_grad[i] = pre_grad[i] + local_grad_delay[i]
+                        # pre_loss[i] = np.concatenate((pre_loss[i], loss_on_public[i]), axis=0)
+                elif args.update_rule == 'Zenoplusplus':
                     if len(local_weights_delay[i]) > 0:
                         # Zeno ++ 只保留accept的参数列表
                         # std_keys = get_key_list(global_model.state_dict(),keys())
@@ -386,13 +385,15 @@ if __name__ == '__main__':
             std_keys = get_key_list(global_model.state_dict().keys())
             # global_weights = Sag(epoch, sync_weights, len_sync, local_delay_ew,
             #                                          copy.deepcopy(global_weights))
-        elif args.update_rule == 'zeno':
-            len_sync = len(local_weights_delay[0])
-            sync_weights = pre_Zeno(local_weights_delay[i], args, loss_on_public[0], 
-                                                DatasetSplit(train_dataset, dict_common), copy.deepcopy(global_model))
-            global_weights = Sag(epoch, sync_weights, len_sync, local_delay_ew,
-                                                     copy.deepcopy(global_weights))
-        elif args.update_rule == 'zenoplusplus':
+        elif args.update_rule == 'Zeno':
+            print("Zeno")
+            local_delay_ew = np.concatenate((local_delay_ew, local_weights_delay[0]), axis=0)
+            local_delay_gd = local_delay_gd + local_grad_delay[0]
+            # local_delay_loss = np.concatenate((local_delay_loss, loss_on_public[0]), axis=0)
+            global_weights = Zeno(local_delay_ew, local_delay_gd,  args,
+                                    copy.deepcopy(global_model),
+                                    DatasetSplit(train_dataset, dict_common), epoch)
+        elif args.update_rule == 'Zenoplusplus':
             w_accept_list = Zenoplusplus(args, copy.deepcopy(global_model.state_dict()), local_weights_delay[0])
             for item in local_delay_ew:
                 w_accept_list.extend(item)
