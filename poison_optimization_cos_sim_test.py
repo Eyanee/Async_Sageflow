@@ -219,6 +219,7 @@ def phased_optimization(args, global_model, w_rand, train_dataset, distance_thre
     student_model.load_state_dict(w_rand)
     teacher_model.eval()
     device = f'cuda:{args.gpu_number}' if args.gpu else 'cpu'
+    distillation_res = True
 
 
     for round in range(MAX_ROUND):
@@ -236,15 +237,24 @@ def phased_optimization(args, global_model, w_rand, train_dataset, distance_thre
         if test_simliarity >= similarity_threshold and test_acc <= pinned_accuracy_threshold and test_entropy  <= entropy_threshold and test_loss <= 1.6:
             return w_rand, True
         elif test_entropy > entropy_threshold:
+            
             distillation_res, w_rand = self_distillation(args,teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 10)
+
         elif test_loss > 1.6:
-            distillation_res, w_rand = self_distillation(args,teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 10)
+            if distillation_res == False:
+                print("skip round 2")
+            else:
+                distillation_res, w_rand = self_distillation(args,teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 10)
             # 只有accuracy 不满足条件
             # 暂时不处理
-        elif test_simliarity <= similarity_threshold:
-            w_rand = adaptive_clipping(w_rand, global_model, similarity_threshold, device)
-            student_model.load_state_dict(w_rand)
+        elif test_distance > distance_threshold:
+            
+            w_rand = adaptive_scaling(w_rand, copy.deepcopy(global_model.state_dict()), distance_threshold, test_distance)
+        # elif test_similarity <= similarity_threshold:
+            # w_rand = adaptive_clipping(w_rand, global_model, args, train_dataset,similarity_threshold )
+            # student_model.load_state_dict(w_rand)
             # distillation_res, w_rand = self_distillation(args, teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold,  distance_threshold, distillation_round = 10)
+
         else:
             distillation_res, w_rand = self_distillation(args,  teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 10)
             student_model.load_state_dict(w_rand)
@@ -272,40 +282,47 @@ def adaptive_scaling(w_rand, ref_model_dict, distance_threshold, test_distance):
         return w_rand
     return w_rand
 
-def adaptive_clipping(w_rand, ref_model, similarity_threshold, device):
+def adaptive_clipping(w_rand, ref_model, args, train_dataset, similarity_threshold):
     test_model = copy.deepcopy(ref_model)
     test_model.load_state_dict(w_rand)
     std_keys = get_key_list(ref_model.state_dict().keys())
-    optimizer = torch.optim.SGD(test_model.parameters(), lr=0.01)  # 可以根据需要选择其他优化器
-    criterion = nn.CosineEmbeddingLoss()
+    optimizer = torch.optim.SGD(test_model.parameters(), lr=0.5)  # 可以根据需要选择其他优化器
+    # criterion = nn.MSELoss()  # 使用均方误差损失函数
     # 训练循环  
-    epochs = 10
-    target_cos_sim = similarity_threshold  # 目标余弦相似度
+    epochs = 1000
     ref_dict = ref_model.state_dict()
     for epoch in range(epochs):
         optimizer.zero_grad()
-        for param in test_model.parameters():
-            param.requires_grad_(True)
-        # 计算X与A的余弦相似度
+        # for param in test_model.parameters():
+        #     param.requires_grad_(True)
         # 计算损失函数（均方误差）
-        
-        # for k in std_keys:
-        #     tmp = criterion(w_rand[k],ref_dict[k],0)
-        #     loss = loss + tmp
-        input1 = torch.cat([w_rand[k].view(-1) for k in std_keys])
-        input2 = torch.cat([ref_dict[k].view(-1) for k in std_keys])
-        target = torch.ones_like(input1).to(device)
-        print("target size is ",target.size())
-        input1 = input1.view(-1, 1)
-        input2 = input2.view(-1, 1)
-        print("input1.size is ",input1.size())
-        print("input2.size is ",input2.size())
-
-        loss = criterion(input1,input2,target)
+        loss = 0
+        for param_name, param in test_model.named_parameters():
+            param.requires_grad_(True)
+            # print("param requires_grad()",param.requires_grad)
+            # print("ref_dict requires_grad()",ref_dict[param_name].requires_grad)
+            loss +=  (1 - torch.square(nn.functional.cosine_similarity(param.view(-1), ref_dict[param_name].view(-1), dim = 0)))
         # 反向传播和参数更新
-        print("loss shape 1 :", loss.shape)  # 打印张量的形状
+        print("loss is ",loss)
+        # print("loss requires_grad()",loss.requires_grad)
         loss.backward()
         optimizer.step()
+
+        ### 测试优化训练结果 ### 
+        if epoch % 100 == 0:
+            test_acc, test_loss, test_entropy, _ = test_inference(args, test_model, train_dataset)
+            test_distance = model_dist_norm(test_model.state_dict(), ref_model.state_dict())
+            test_simliarity = cal_similarity(test_model.state_dict(), ref_model.state_dict())
+            print("_______epoch is ", epoch)
+            print("test distance is ", test_distance)
+            print("test similarity is ", test_simliarity)
+            print("test acc is ", test_acc)
+            print("test loss is", test_loss)
+            print("test entropy is ", test_entropy)
+            print("________________________________")
+            if test_simliarity > similarity_threshold:
+                return test_model.state_dict()
+
     return test_model.state_dict()
 
 def self_distillation(args, teacher_model, student_model, train_dataset, entropy_threshold, ref_model, accuracy_threshold, distance_threshold,  distillation_round):
@@ -323,6 +340,7 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
     teacher_model.to(device)
     student_model.to(device)
     
+    previous_loss = 0
     num_epochs = distillation_round
     temperature = 50 ### 增大
     alpha = 0.88
@@ -336,6 +354,14 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
         acc, loss, avg_entropy, _ = test_inference(args, student_model, train_dataset)
         compute_distance = model_dist_norm(student_model.state_dict(), ref_model.state_dict())
         cos_sim = cal_similarity(ref_model.state_dict(),student_model.state_dict())
+        
+        if epoch != 0:
+            # 防止循环太多次
+            if abs(loss - previous_loss) < 0.005:
+                print("exit early")
+                return False, student_model.state_dict()
+        previous_loss =  loss
+        
         print("++++++++++++++++++++")
         print("after training ",epoch)
         print("avg test entropy is ", avg_entropy)
@@ -444,7 +470,7 @@ def add_small_perturbation(original_model, args, pinned_accuracy, train_dataset,
         # 生成中点扰动张量
         for round in range(MAX_ROUND):
             for idx, key in enumerate(reverse_keys):
-                if  idx == 0  or idx == 1 : # 可能是perturbation的问题
+                if  idx == 4 or idx == 5 : # 可能是perturbation的问题
                     temp_original = orignal_state_dict[key]
                     perturbs = torch.tensor(np.random.uniform(low=mid_min, high=mid_max, size=temp_original.shape)).to(device)
                     perturbs = torch.add(perturbs, temp_original)

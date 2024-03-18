@@ -1,0 +1,5055 @@
+
+Experimental details:
+    Dataset     : fmnist
+    Model     : cnn
+    detailed Model     : vgg
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 30
+
+    Federated parameters:
+    IID
+    balanced
+    Fraction of users  : 0.4
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.2
+     Model attack is done!
+attack user num is  12
+ t is  8
+attack_user is [48 49 50 51 52 53 54 55 56 57 58 59]
+
+ | Global Training Round : 1 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.7263883948326111
+current submit client idx and staleness is  1 1
+ benign loss is  0.5164374709129333
+current submit client idx and staleness is  2 1
+ benign loss is  0.22964127361774445
+current submit client idx and staleness is  3 1
+ benign loss is  0.3674878478050232
+current submit client idx and staleness is  4 1
+ benign loss is  0.633618950843811
+current submit client idx and staleness is  5 1
+ benign loss is  0.5915905237197876
+current submit client idx and staleness is  6 1
+ benign loss is  0.4973917603492737
+current submit client idx and staleness is  7 1
+ benign loss is  0.5213890671730042
+current submit client idx and staleness is  8 2
+ benign loss is  0.4490014612674713
+current submit client idx and staleness is  9 2
+ benign loss is  0.4688151478767395
+current submit client idx and staleness is  10 2
+ benign loss is  0.6636756658554077
+current submit client idx and staleness is  11 2
+ benign loss is  0.5848450064659119
+current submit client idx and staleness is  12 2
+ benign loss is  0.6021904349327087
+current submit client idx and staleness is  13 2
+ benign loss is  0.281403124332428
+current submit client idx and staleness is  14 2
+ benign loss is  0.595583438873291
+current submit client idx and staleness is  15 2
+ benign loss is  0.5236406326293945
+current submit client idx and staleness is  16 3
+ benign loss is  0.47350239753723145
+current submit client idx and staleness is  17 3
+ benign loss is  0.5296317934989929
+current submit client idx and staleness is  18 3
+ benign loss is  0.6920865774154663
+current submit client idx and staleness is  19 3
+ benign loss is  0.09785573929548264
+current submit client idx and staleness is  20 3
+ benign loss is  0.28173238039016724
+current submit client idx and staleness is  21 3
+ benign loss is  0.4023309350013733
+current submit client idx and staleness is  22 3
+ benign loss is  0.46592873334884644
+current submit client idx and staleness is  23 3
+ benign loss is  0.4481043219566345
+current submit client idx and staleness is  24 4
+ benign loss is  0.2518889307975769
+current submit client idx and staleness is  25 4
+ benign loss is  0.5835765600204468
+current submit client idx and staleness is  26 4
+ benign loss is  0.6035753488540649
+current submit client idx and staleness is  27 4
+ benign loss is  0.3722369968891144
+current submit client idx and staleness is  28 4
+ benign loss is  0.5617486238479614
+current submit client idx and staleness is  29 4
+ benign loss is  0.512658953666687
+current submit client idx and staleness is  30 4
+ benign loss is  0.33939409255981445
+current submit client idx and staleness is  31 4
+ benign loss is  0.3577429950237274
+current submit client idx and staleness is  32 5
+ benign loss is  0.28620201349258423
+current submit client idx and staleness is  33 5
+ benign loss is  0.31873658299446106
+current submit client idx and staleness is  34 5
+ benign loss is  0.6753038167953491
+current submit client idx and staleness is  35 5
+ benign loss is  0.4084564745426178
+current submit client idx and staleness is  36 5
+ benign loss is  0.24023953080177307
+current submit client idx and staleness is  37 5
+ benign loss is  0.3280583620071411
+current submit client idx and staleness is  38 5
+ benign loss is  0.516231894493103
+current submit client idx and staleness is  39 5
+ benign loss is  0.4657668173313141
+current submit client idx and staleness is  40 6
+ benign loss is  0.47457289695739746
+current submit client idx and staleness is  41 6
+ benign loss is  0.6634143590927124
+current submit client idx and staleness is  42 6
+ benign loss is  0.38468286395072937
+current submit client idx and staleness is  43 6
+ benign loss is  0.6318066716194153
+current submit client idx and staleness is  44 6
+ benign loss is  0.4389376640319824
+current submit client idx and staleness is  45 6
+ benign loss is  0.5508041381835938
+current submit client idx and staleness is  46 6
+ benign loss is  0.4633670449256897
+current submit client idx and staleness is  47 6
+ benign loss is  0.2101193368434906
+current submit client idx and staleness is  48 1
+ benign loss is  0.4008292555809021
+current submit client idx and staleness is  49 1
+ benign loss is  0.4877656400203705
+current submit client idx and staleness is  50 1
+ benign loss is  0.2218782603740692
+current submit client idx and staleness is  51 1
+ benign loss is  0.7358054518699646
+current submit client idx and staleness is  52 1
+ benign loss is  0.4979630410671234
+current submit client idx and staleness is  53 1
+ benign loss is  0.48423272371292114
+current submit client idx and staleness is  54 1
+ benign loss is  0.4827447831630707
+current submit client idx and staleness is  55 1
+ benign loss is  0.40714892745018005
+current submit client idx and staleness is  56 1
+ benign loss is  0.36523503065109253
+current submit client idx and staleness is  57 1
+ benign loss is  0.4683796465396881
+current submit client idx and staleness is  58 1
+ benign loss is  0.4361245632171631
+current submit client idx and staleness is  59 1
+ benign loss is  0.5600429773330688
+len all weights is 20
+avg_weights acc is  0.9000000005000001
+ 
+Avg Training Stats after 1 global rounds:
+Train Accuracy: 82.88% 
+
+Test Accuracy: 82.41% 
+
+
+ | Global Training Round : 2 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.6922124624252319
+current submit client idx and staleness is  1 1
+ benign loss is  0.46502798795700073
+current submit client idx and staleness is  2 1
+ benign loss is  0.6453725099563599
+current submit client idx and staleness is  3 1
+ benign loss is  0.3730437457561493
+current submit client idx and staleness is  4 1
+ benign loss is  0.4802601933479309
+current submit client idx and staleness is  5 1
+ benign loss is  0.8088591694831848
+current submit client idx and staleness is  6 1
+ benign loss is  0.4207194447517395
+current submit client idx and staleness is  7 1
+ benign loss is  0.5581890344619751
+current submit client idx and staleness is  48 1
+ benign loss is  0.3296333849430084
+current submit client idx and staleness is  49 1
+ benign loss is  0.4930513799190521
+current submit client idx and staleness is  50 1
+ benign loss is  0.5971931219100952
+current submit client idx and staleness is  51 1
+ benign loss is  0.37656956911087036
+current submit client idx and staleness is  52 1
+ benign loss is  0.288131445646286
+current submit client idx and staleness is  53 1
+ benign loss is  0.3569945991039276
+current submit client idx and staleness is  54 1
+ benign loss is  0.32732927799224854
+current submit client idx and staleness is  55 1
+ benign loss is  0.45748695731163025
+current submit client idx and staleness is  56 1
+ benign loss is  0.29507213830947876
+current submit client idx and staleness is  57 1
+ benign loss is  0.33039969205856323
+current submit client idx and staleness is  58 1
+ benign loss is  0.3395456075668335
+current submit client idx and staleness is  59 1
+ benign loss is  0.4734022617340088
+len all weights is 28
+avg_weights acc is  0.9500000005
+ 
+Avg Training Stats after 2 global rounds:
+Train Accuracy: 86.33% 
+
+Test Accuracy: 85.24% 
+
+
+ | Global Training Round : 3 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.6391118764877319
+current submit client idx and staleness is  1 1
+ benign loss is  0.42712610960006714
+current submit client idx and staleness is  2 1
+ benign loss is  0.24102289974689484
+current submit client idx and staleness is  3 1
+ benign loss is  0.6023403406143188
+current submit client idx and staleness is  4 1
+ benign loss is  0.5695883631706238
+current submit client idx and staleness is  5 1
+ benign loss is  0.8756119608879089
+current submit client idx and staleness is  6 1
+ benign loss is  0.3166516423225403
+current submit client idx and staleness is  7 1
+ benign loss is  0.520885169506073
+current submit client idx and staleness is  8 2
+ benign loss is  0.3833015561103821
+current submit client idx and staleness is  9 2
+ benign loss is  0.3895549178123474
+current submit client idx and staleness is  10 2
+ benign loss is  0.8371044397354126
+current submit client idx and staleness is  11 2
+ benign loss is  0.9139901995658875
+current submit client idx and staleness is  12 2
+ benign loss is  0.3896142840385437
+current submit client idx and staleness is  13 2
+ benign loss is  0.37278950214385986
+current submit client idx and staleness is  14 2
+ benign loss is  0.4196683466434479
+current submit client idx and staleness is  15 2
+ benign loss is  0.42810043692588806
+current submit client idx and staleness is  48 1
+ benign loss is  0.4651816487312317
+current submit client idx and staleness is  49 1
+ benign loss is  0.44164353609085083
+current submit client idx and staleness is  50 1
+ benign loss is  0.5815869569778442
+current submit client idx and staleness is  51 1
+ benign loss is  0.3079952597618103
+current submit client idx and staleness is  52 1
+ benign loss is  0.8040051460266113
+current submit client idx and staleness is  53 1
+ benign loss is  0.41094082593917847
+current submit client idx and staleness is  54 1
+ benign loss is  0.2249249666929245
+current submit client idx and staleness is  55 1
+ benign loss is  0.47797369956970215
+current submit client idx and staleness is  56 1
+ benign loss is  0.4947670102119446
+current submit client idx and staleness is  57 1
+ benign loss is  0.2608741521835327
+current submit client idx and staleness is  58 1
+ benign loss is  0.2896935045719147
+current submit client idx and staleness is  59 1
+ benign loss is  0.17249348759651184
+len all weights is 28
+avg_weights acc is  0.9500000005
+ 
+Avg Training Stats after 3 global rounds:
+Train Accuracy: 86.48% 
+
+Test Accuracy: 85.91% 
+
+
+ | Global Training Round : 4 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.7281471490859985
+current submit client idx and staleness is  1 1
+ benign loss is  0.6926387548446655
+current submit client idx and staleness is  2 1
+ benign loss is  0.5988603830337524
+current submit client idx and staleness is  3 1
+ benign loss is  0.8226026296615601
+current submit client idx and staleness is  4 1
+ benign loss is  0.6221523880958557
+current submit client idx and staleness is  5 1
+ benign loss is  0.47556114196777344
+current submit client idx and staleness is  6 1
+ benign loss is  0.7428988814353943
+current submit client idx and staleness is  7 1
+ benign loss is  0.39802950620651245
+current submit client idx and staleness is  16 3
+ benign loss is  0.22947140038013458
+current submit client idx and staleness is  17 3
+ benign loss is  0.7791086435317993
+current submit client idx and staleness is  18 3
+ benign loss is  0.22018806636333466
+current submit client idx and staleness is  19 3
+ benign loss is  0.3133913278579712
+current submit client idx and staleness is  20 3
+ benign loss is  0.22350040078163147
+current submit client idx and staleness is  21 3
+ benign loss is  0.2921409010887146
+current submit client idx and staleness is  22 3
+ benign loss is  0.629555344581604
+current submit client idx and staleness is  23 3
+ benign loss is  0.4984069764614105
+current submit client idx and staleness is  48 1
+ benign loss is  0.3691907525062561
+current submit client idx and staleness is  49 1
+ benign loss is  0.5890974402427673
+current submit client idx and staleness is  50 1
+ benign loss is  0.9178177714347839
+current submit client idx and staleness is  51 1
+ benign loss is  0.7908637523651123
+current submit client idx and staleness is  52 1
+ benign loss is  0.5410183072090149
+current submit client idx and staleness is  53 1
+ benign loss is  0.34213799238204956
+current submit client idx and staleness is  54 1
+ benign loss is  0.2399604767560959
+current submit client idx and staleness is  55 1
+ benign loss is  0.5135138034820557
+current submit client idx and staleness is  56 1
+ benign loss is  0.42000293731689453
+current submit client idx and staleness is  57 1
+ benign loss is  0.15115207433700562
+current submit client idx and staleness is  58 1
+ benign loss is  0.33006417751312256
+current submit client idx and staleness is  59 1
+ benign loss is  0.281688392162323
+len all weights is 36
+avg_weights acc is  0.9000000005000001
+ 
+Avg Training Stats after 4 global rounds:
+Train Accuracy: 87.25% 
+
+Test Accuracy: 85.94% 
+
+
+ | Global Training Round : 5 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.7679389715194702
+current submit client idx and staleness is  1 1
+ benign loss is  0.48630109429359436
+current submit client idx and staleness is  2 1
+ benign loss is  0.12253911793231964
+current submit client idx and staleness is  3 1
+ benign loss is  0.8361619114875793
+current submit client idx and staleness is  4 1
+ benign loss is  0.7891737222671509
+current submit client idx and staleness is  5 1
+ benign loss is  0.4317069947719574
+current submit client idx and staleness is  6 1
+ benign loss is  0.5155438184738159
+current submit client idx and staleness is  7 1
+ benign loss is  0.4450898766517639
+current submit client idx and staleness is  8 2
+ benign loss is  0.5876666307449341
+current submit client idx and staleness is  9 2
+ benign loss is  0.5473625659942627
+current submit client idx and staleness is  10 2
+ benign loss is  0.575455904006958
+current submit client idx and staleness is  11 2
+ benign loss is  0.5091302394866943
+current submit client idx and staleness is  12 2
+ benign loss is  0.5707733631134033
+current submit client idx and staleness is  13 2
+ benign loss is  0.20684027671813965
+current submit client idx and staleness is  14 2
+ benign loss is  0.21834781765937805
+current submit client idx and staleness is  15 2
+ benign loss is  0.8210883140563965
+current submit client idx and staleness is  24 4
+ benign loss is  0.47227993607521057
+current submit client idx and staleness is  25 4
+ benign loss is  0.5456153154373169
+current submit client idx and staleness is  26 4
+ benign loss is  0.8054774403572083
+current submit client idx and staleness is  27 4
+ benign loss is  0.45465439558029175
+current submit client idx and staleness is  28 4
+ benign loss is  0.9622019529342651
+current submit client idx and staleness is  29 4
+ benign loss is  0.39108067750930786
+current submit client idx and staleness is  30 4
+ benign loss is  0.3030526041984558
+current submit client idx and staleness is  31 4
+ benign loss is  0.14230933785438538
+current submit client idx and staleness is  48 1
+ benign loss is  0.35883629322052
+current submit client idx and staleness is  49 1
+ benign loss is  0.6724444031715393
+current submit client idx and staleness is  50 1
+ benign loss is  0.5720760226249695
+current submit client idx and staleness is  51 1
+ benign loss is  0.4852142333984375
+current submit client idx and staleness is  52 1
+ benign loss is  0.49649643898010254
+current submit client idx and staleness is  53 1
+ benign loss is  0.4265224039554596
+current submit client idx and staleness is  54 1
+ benign loss is  0.24978157877922058
+current submit client idx and staleness is  55 1
+ benign loss is  0.7503622174263
+current submit client idx and staleness is  56 1
+ benign loss is  0.24312742054462433
+current submit client idx and staleness is  57 1
+ benign loss is  0.3302999436855316
+current submit client idx and staleness is  58 1
+ benign loss is  0.16261155903339386
+current submit client idx and staleness is  59 1
+ benign loss is  0.30895131826400757
+len all weights is 28
+avg_weights acc is  0.9500000005
+ 
+Avg Training Stats after 5 global rounds:
+Train Accuracy: 87.23% 
+
+Test Accuracy: 86.39% 
+
+
+ | Global Training Round : 6 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.8159472346305847
+current submit client idx and staleness is  1 1
+ benign loss is  0.49550753831863403
+current submit client idx and staleness is  2 1
+ benign loss is  0.2864723205566406
+current submit client idx and staleness is  3 1
+ benign loss is  0.7596325874328613
+current submit client idx and staleness is  4 1
+ benign loss is  0.8361393213272095
+current submit client idx and staleness is  5 1
+ benign loss is  0.5881768465042114
+current submit client idx and staleness is  6 1
+ benign loss is  0.4385666251182556
+current submit client idx and staleness is  7 1
+ benign loss is  0.4281333088874817
+current submit client idx and staleness is  32 5
+ benign loss is  0.7067855596542358
+current submit client idx and staleness is  33 5
+ benign loss is  0.18052813410758972
+current submit client idx and staleness is  34 5
+ benign loss is  0.5481966733932495
+current submit client idx and staleness is  35 5
+ benign loss is  0.3859628438949585
+current submit client idx and staleness is  36 5
+ benign loss is  0.35396629571914673
+current submit client idx and staleness is  37 5
+ benign loss is  0.2285904884338379
+current submit client idx and staleness is  38 5
+ benign loss is  0.7954762578010559
+current submit client idx and staleness is  39 5
+ benign loss is  0.19429272413253784
+current submit client idx and staleness is  48 1
+ benign loss is  0.48252949118614197
+current submit client idx and staleness is  49 1
+ benign loss is  0.44705313444137573
+current submit client idx and staleness is  50 1
+ benign loss is  0.6123212575912476
+current submit client idx and staleness is  51 1
+ benign loss is  0.4035206437110901
+current submit client idx and staleness is  52 1
+ benign loss is  0.25652238726615906
+current submit client idx and staleness is  53 1
+ benign loss is  0.31739580631256104
+current submit client idx and staleness is  54 1
+ benign loss is  0.1431294083595276
+current submit client idx and staleness is  55 1
+ benign loss is  0.7243587374687195
+current submit client idx and staleness is  56 1
+ benign loss is  0.6573910117149353
+current submit client idx and staleness is  57 1
+ benign loss is  0.5907124280929565
+current submit client idx and staleness is  58 1
+ benign loss is  0.42239004373550415
+current submit client idx and staleness is  59 1
+ benign loss is  0.3296333849430084
+len all weights is 44
+avg_weights acc is  0.9500000005
+ 
+Avg Training Stats after 6 global rounds:
+Train Accuracy: 87.57% 
+
+Test Accuracy: 86.85% 
+
+
+ | Global Training Round : 7 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.6844447255134583
+current submit client idx and staleness is  1 1
+ benign loss is  0.46188077330589294
+current submit client idx and staleness is  2 1
+ benign loss is  0.509265661239624
+current submit client idx and staleness is  3 1
+ benign loss is  0.8013449907302856
+current submit client idx and staleness is  4 1
+ benign loss is  0.5617139935493469
+current submit client idx and staleness is  5 1
+ benign loss is  0.5118910074234009
+current submit client idx and staleness is  6 1
+ benign loss is  0.42592352628707886
+current submit client idx and staleness is  7 1
+ benign loss is  0.7018306255340576
+current submit client idx and staleness is  8 2
+ benign loss is  0.7740135788917542
+current submit client idx and staleness is  9 2
+ benign loss is  0.4763612151145935
+current submit client idx and staleness is  10 2
+ benign loss is  0.7513376474380493
+current submit client idx and staleness is  11 2
+ benign loss is  0.7402339577674866
+current submit client idx and staleness is  12 2
+ benign loss is  0.5528280735015869
+current submit client idx and staleness is  13 2
+ benign loss is  0.2994944453239441
+current submit client idx and staleness is  14 2
+ benign loss is  0.6679470539093018
+current submit client idx and staleness is  15 2
+ benign loss is  1.1557234525680542
+current submit client idx and staleness is  16 3
+ benign loss is  0.29945844411849976
+current submit client idx and staleness is  17 3
+ benign loss is  0.8357321619987488
+current submit client idx and staleness is  18 3
+ benign loss is  0.5996695160865784
+current submit client idx and staleness is  19 3
+ benign loss is  0.4490218162536621
+current submit client idx and staleness is  20 3
+ benign loss is  0.47206148505210876
+current submit client idx and staleness is  21 3
+ benign loss is  0.5234276652336121
+current submit client idx and staleness is  22 3
+ benign loss is  0.6373030543327332
+current submit client idx and staleness is  23 3
+ benign loss is  0.4550611078739166
+current submit client idx and staleness is  40 6
+ benign loss is  0.26058489084243774
+current submit client idx and staleness is  41 6
+ benign loss is  0.41766422986984253
+current submit client idx and staleness is  42 6
+ benign loss is  0.13050279021263123
+current submit client idx and staleness is  43 6
+ benign loss is  0.312046080827713
+current submit client idx and staleness is  44 6
+ benign loss is  0.3859005570411682
+current submit client idx and staleness is  45 6
+ benign loss is  0.6403704881668091
+current submit client idx and staleness is  46 6
+ benign loss is  0.8835868835449219
+current submit client idx and staleness is  47 6
+ benign loss is  0.3720044791698456
+current submit client idx and staleness is  48 1
+ benign loss is  0.45593127608299255
+current submit client idx and staleness is  49 1
+ benign loss is  0.555138885974884
+current submit client idx and staleness is  50 1
+ benign loss is  0.5775741338729858
+current submit client idx and staleness is  51 1
+ benign loss is  0.7090582847595215
+current submit client idx and staleness is  52 1
+ benign loss is  0.5762107372283936
+current submit client idx and staleness is  53 1
+ benign loss is  0.5201050639152527
+current submit client idx and staleness is  54 1
+ benign loss is  0.12587110698223114
+current submit client idx and staleness is  55 1
+ benign loss is  0.9074247479438782
+current submit client idx and staleness is  56 1
+ benign loss is  0.5864638090133667
+current submit client idx and staleness is  57 1
+ benign loss is  0.543873131275177
+current submit client idx and staleness is  58 1
+ benign loss is  0.3596966862678528
+current submit client idx and staleness is  59 1
+ benign loss is  0.07570995390415192
+len all weights is 20
+avg_weights acc is  0.9000000005000001
+ 
+Avg Training Stats after 7 global rounds:
+Train Accuracy: 88.39% 
+
+Test Accuracy: 87.49% 
+
+
+ | Global Training Round : 8 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.4824398458003998
+current submit client idx and staleness is  1 1
+ benign loss is  1.2544708251953125
+current submit client idx and staleness is  2 1
+ benign loss is  0.3105691075325012
+current submit client idx and staleness is  3 1
+ benign loss is  1.0612235069274902
+current submit client idx and staleness is  4 1
+ benign loss is  0.8501895666122437
+current submit client idx and staleness is  5 1
+ benign loss is  0.8755806684494019
+current submit client idx and staleness is  6 1
+ benign loss is  0.4216674268245697
+current submit client idx and staleness is  7 1
+ benign loss is  0.9065879583358765
+current submit client idx and staleness is  48 1
+ benign loss is  0.694670557975769
+current submit client idx and staleness is  49 1
+ benign loss is  0.4956585764884949
+current submit client idx and staleness is  50 1
+ benign loss is  0.9465385675430298
+current submit client idx and staleness is  51 1
+ benign loss is  0.43233317136764526
+current submit client idx and staleness is  52 1
+ benign loss is  0.6742128729820251
+current submit client idx and staleness is  53 1
+ benign loss is  0.3365823030471802
+current submit client idx and staleness is  54 1
+ benign loss is  0.0991632491350174
+current submit client idx and staleness is  55 1
+ benign loss is  0.7336151003837585
+current submit client idx and staleness is  56 1
+ benign loss is  0.3795124590396881
+current submit client idx and staleness is  57 1
+ benign loss is  0.30475935339927673
+current submit client idx and staleness is  58 1
+ benign loss is  0.41610822081565857
+current submit client idx and staleness is  59 1
+ benign loss is  0.3179890811443329
+len all weights is 36
+avg_weights acc is  0.8500000005
+ 
+Avg Training Stats after 8 global rounds:
+Train Accuracy: 88.58% 
+
+Test Accuracy: 87.43% 
+
+
+ | Global Training Round : 9 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.9768983721733093
+current submit client idx and staleness is  1 1
+ benign loss is  0.7599430680274963
+current submit client idx and staleness is  2 1
+ benign loss is  0.43426281213760376
+current submit client idx and staleness is  3 1
+ benign loss is  0.851162314414978
+current submit client idx and staleness is  4 1
+ benign loss is  1.1621911525726318
+current submit client idx and staleness is  5 1
+ benign loss is  0.8852167129516602
+current submit client idx and staleness is  6 1
+ benign loss is  0.476554811000824
+current submit client idx and staleness is  7 1
+ benign loss is  0.6589167714118958
+current submit client idx and staleness is  8 2
+ benign loss is  0.6177960634231567
+current submit client idx and staleness is  9 2
+ benign loss is  0.8715558052062988
+current submit client idx and staleness is  10 2
+ benign loss is  0.6280712485313416
+current submit client idx and staleness is  11 2
+ benign loss is  0.9446114301681519
+current submit client idx and staleness is  12 2
+ benign loss is  0.8426153063774109
+current submit client idx and staleness is  13 2
+ benign loss is  0.41413840651512146
+current submit client idx and staleness is  14 2
+ benign loss is  0.8818861246109009
+current submit client idx and staleness is  15 2
+ benign loss is  0.6776566505432129
+current submit client idx and staleness is  24 4
+ benign loss is  0.4043735861778259
+current submit client idx and staleness is  25 4
+ benign loss is  0.9103717803955078
+current submit client idx and staleness is  26 4
+ benign loss is  0.3292701244354248
+current submit client idx and staleness is  27 4
+ benign loss is  1.094534158706665
+current submit client idx and staleness is  28 4
+ benign loss is  1.1497242450714111
+current submit client idx and staleness is  29 4
+ benign loss is  0.4190307557582855
+current submit client idx and staleness is  30 4
+ benign loss is  0.49980244040489197
+current submit client idx and staleness is  31 4
+ benign loss is  0.191139817237854
+current submit client idx and staleness is  48 1
+ benign loss is  0.6728552579879761
+current submit client idx and staleness is  49 1
+ benign loss is  0.5821976661682129
+current submit client idx and staleness is  50 1
+ benign loss is  1.0041592121124268
+current submit client idx and staleness is  51 1
+ benign loss is  0.6353353261947632
+current submit client idx and staleness is  52 1
+ benign loss is  0.4677213728427887
+current submit client idx and staleness is  53 1
+ benign loss is  0.5708515048027039
+current submit client idx and staleness is  54 1
+ benign loss is  0.14815306663513184
+current submit client idx and staleness is  55 1
+ benign loss is  0.6666727662086487
+current submit client idx and staleness is  56 1
+ benign loss is  0.16763149201869965
+current submit client idx and staleness is  57 1
+ benign loss is  0.27295470237731934
+current submit client idx and staleness is  58 1
+ benign loss is  0.4181116223335266
+current submit client idx and staleness is  59 1
+ benign loss is  0.3576839566230774
+len all weights is 28
+avg_weights acc is  0.8500000005
+ 
+Avg Training Stats after 9 global rounds:
+Train Accuracy: 88.73% 
+
+Test Accuracy: 87.91% 
+
+
+ | Global Training Round : 10 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  1.0722137689590454
+current submit client idx and staleness is  1 1
+ benign loss is  0.584597110748291
+current submit client idx and staleness is  2 1
+ benign loss is  0.3498668074607849
+current submit client idx and staleness is  3 1
+ benign loss is  0.8779171109199524
+current submit client idx and staleness is  4 1
+ benign loss is  1.116373896598816
+current submit client idx and staleness is  5 1
+ benign loss is  0.5133498907089233
+current submit client idx and staleness is  6 1
+ benign loss is  0.6675015687942505
+current submit client idx and staleness is  7 1
+ benign loss is  0.6471474170684814
+current submit client idx and staleness is  16 3
+ benign loss is  0.46115797758102417
+current submit client idx and staleness is  17 3
+ benign loss is  1.0747345685958862
+current submit client idx and staleness is  18 3
+ benign loss is  0.548794150352478
+current submit client idx and staleness is  19 3
+ benign loss is  0.5995074510574341
+current submit client idx and staleness is  20 3
+ benign loss is  0.31979653239250183
+current submit client idx and staleness is  21 3
+ benign loss is  0.6095331907272339
+current submit client idx and staleness is  22 3
+ benign loss is  0.446448415517807
+current submit client idx and staleness is  23 3
+ benign loss is  0.4856683313846588
+current submit client idx and staleness is  48 1
+ benign loss is  0.37668126821517944
+current submit client idx and staleness is  49 1
+ benign loss is  0.7771908044815063
+current submit client idx and staleness is  50 1
+ benign loss is  0.8897899389266968
+current submit client idx and staleness is  51 1
+ benign loss is  0.5079797506332397
+current submit client idx and staleness is  52 1
+ benign loss is  0.5558372735977173
+current submit client idx and staleness is  53 1
+ benign loss is  0.7035242915153503
+current submit client idx and staleness is  54 1
+ benign loss is  0.11660965532064438
+current submit client idx and staleness is  55 1
+ benign loss is  0.8756440877914429
+current submit client idx and staleness is  56 1
+ benign loss is  0.22975893318653107
+current submit client idx and staleness is  57 1
+ benign loss is  0.47855252027511597
+current submit client idx and staleness is  58 1
+ benign loss is  0.21578018367290497
+current submit client idx and staleness is  59 1
+ benign loss is  0.29946064949035645
+len all weights is 36
+avg_weights acc is  0.8500000005
+ 
+Avg Training Stats after 10 global rounds:
+Train Accuracy: 88.80% 
+
+Test Accuracy: 87.94% 
+
+
+ | Global Training Round : 11 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  1.1478922367095947
+current submit client idx and staleness is  1 1
+ benign loss is  0.3452145755290985
+current submit client idx and staleness is  2 1
+ benign loss is  0.6260825395584106
+current submit client idx and staleness is  3 1
+ benign loss is  1.0219776630401611
+current submit client idx and staleness is  4 1
+ benign loss is  0.75711590051651
+current submit client idx and staleness is  5 1
+ benign loss is  0.6371172070503235
+current submit client idx and staleness is  6 1
+ benign loss is  0.43586453795433044
+current submit client idx and staleness is  7 1
+ benign loss is  0.4752443730831146
+current submit client idx and staleness is  8 2
+ benign loss is  0.4943910539150238
+current submit client idx and staleness is  9 2
+ benign loss is  0.6310858130455017
+current submit client idx and staleness is  10 2
+ benign loss is  0.6983619928359985
+current submit client idx and staleness is  11 2
+ benign loss is  1.092355489730835
+current submit client idx and staleness is  12 2
+ benign loss is  0.7302387952804565
+current submit client idx and staleness is  13 2
+ benign loss is  0.42761436104774475
+current submit client idx and staleness is  14 2
+ benign loss is  0.5886312127113342
+current submit client idx and staleness is  15 2
+ benign loss is  0.7098530530929565
+current submit client idx and staleness is  32 5
+ benign loss is  0.5024145841598511
+current submit client idx and staleness is  33 5
+ benign loss is  0.1362638771533966
+current submit client idx and staleness is  34 5
+ benign loss is  0.3512518107891083
+current submit client idx and staleness is  35 5
+ benign loss is  0.5096107721328735
+current submit client idx and staleness is  36 5
+ benign loss is  0.5323536992073059
+current submit client idx and staleness is  37 5
+ benign loss is  0.410099595785141
+current submit client idx and staleness is  38 5
+ benign loss is  0.5405516624450684
+current submit client idx and staleness is  39 5
+ benign loss is  0.40629667043685913
+current submit client idx and staleness is  48 1
+here
+current submit client idx and staleness is  49 1
+here
+current submit client idx and staleness is  50 1
+here
+current submit client idx and staleness is  51 1
+here
+current submit client idx and staleness is  52 1
+here
+current submit client idx and staleness is  53 1
+here
+current submit client idx and staleness is  54 1
+here
+current submit client idx and staleness is  55 1
+here
+current submit client idx and staleness is  56 1
+here
+current submit client idx and staleness is  57 1
+here
+current submit client idx and staleness is  58 1
+here
+current submit client idx and staleness is  59 1
+here
+len all weights is 8
+avg_weights acc is  0.9000000005000001
+ 
+Avg Training Stats after 11 global rounds:
+Train Accuracy: 89.04% 
+
+Test Accuracy: 87.88% 
+
+
+ | Global Training Round : 12 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.7357911467552185
+current submit client idx and staleness is  1 1
+ benign loss is  0.6234819293022156
+current submit client idx and staleness is  2 1
+ benign loss is  0.307633638381958
+current submit client idx and staleness is  3 1
+ benign loss is  0.9692732691764832
+current submit client idx and staleness is  4 1
+ benign loss is  0.9796821475028992
+current submit client idx and staleness is  5 1
+ benign loss is  1.2217246294021606
+current submit client idx and staleness is  6 1
+ benign loss is  0.6984516382217407
+current submit client idx and staleness is  7 1
+ benign loss is  0.8483539819717407
+current submit client idx and staleness is  48 1
+here
+current submit client idx and staleness is  49 1
+here
+current submit client idx and staleness is  50 1
+here
+current submit client idx and staleness is  51 1
+here
+current submit client idx and staleness is  52 1
+here
+current submit client idx and staleness is  53 1
+here
+current submit client idx and staleness is  54 1
+here
+current submit client idx and staleness is  55 1
+here
+current submit client idx and staleness is  56 1
+here
+current submit client idx and staleness is  57 1
+here
+current submit client idx and staleness is  58 1
+here
+current submit client idx and staleness is  59 1
+here
+len all weights is 40
+avg_weights acc is  0.8500000005
+ 
+Avg Training Stats after 12 global rounds:
+Train Accuracy: 89.14% 
+
+Test Accuracy: 88.14% 
+
+
+ | Global Training Round : 13 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.8404766321182251
+current submit client idx and staleness is  1 1
+ benign loss is  0.5706417560577393
+current submit client idx and staleness is  2 1
+ benign loss is  0.27083665132522583
+current submit client idx and staleness is  3 1
+ benign loss is  0.7036040425300598
+current submit client idx and staleness is  4 1
+ benign loss is  0.8279446363449097
+current submit client idx and staleness is  5 1
+ benign loss is  0.7911447286605835
+current submit client idx and staleness is  6 1
+ benign loss is  0.5677234530448914
+current submit client idx and staleness is  7 1
+ benign loss is  0.44314923882484436
+current submit client idx and staleness is  8 2
+ benign loss is  0.6983439326286316
+current submit client idx and staleness is  9 2
+ benign loss is  0.6381228566169739
+current submit client idx and staleness is  10 2
+ benign loss is  0.5341285467147827
+current submit client idx and staleness is  11 2
+ benign loss is  1.022024393081665
+current submit client idx and staleness is  12 2
+ benign loss is  0.9426442980766296
+current submit client idx and staleness is  13 2
+ benign loss is  0.3012503683567047
+current submit client idx and staleness is  14 2
+ benign loss is  0.36811843514442444
+current submit client idx and staleness is  15 2
+ benign loss is  1.0637885332107544
+current submit client idx and staleness is  16 3
+ benign loss is  0.3679437041282654
+current submit client idx and staleness is  17 3
+ benign loss is  1.170852780342102
+current submit client idx and staleness is  18 3
+ benign loss is  0.685038149356842
+current submit client idx and staleness is  19 3
+ benign loss is  0.5144582986831665
+current submit client idx and staleness is  20 3
+ benign loss is  0.1801297664642334
+current submit client idx and staleness is  21 3
+ benign loss is  0.5594996809959412
+current submit client idx and staleness is  22 3
+ benign loss is  0.2972458302974701
+current submit client idx and staleness is  23 3
+ benign loss is  0.5917731523513794
+current submit client idx and staleness is  24 4
+ benign loss is  0.337942510843277
+current submit client idx and staleness is  25 4
+ benign loss is  0.7685472965240479
+current submit client idx and staleness is  26 4
+ benign loss is  0.7332051992416382
+current submit client idx and staleness is  27 4
+ benign loss is  0.4136447012424469
+current submit client idx and staleness is  28 4
+ benign loss is  1.0642921924591064
+current submit client idx and staleness is  29 4
+ benign loss is  0.3370281159877777
+current submit client idx and staleness is  30 4
+ benign loss is  0.3506408631801605
+current submit client idx and staleness is  31 4
+ benign loss is  0.47933560609817505
+current submit client idx and staleness is  40 6
+ benign loss is  0.5067419409751892
+current submit client idx and staleness is  41 6
+ benign loss is  0.14007076621055603
+current submit client idx and staleness is  42 6
+ benign loss is  0.27791455388069153
+current submit client idx and staleness is  43 6
+ benign loss is  0.3377508521080017
+current submit client idx and staleness is  44 6
+ benign loss is  1.0233163833618164
+current submit client idx and staleness is  45 6
+ benign loss is  0.7028405070304871
+current submit client idx and staleness is  46 6
+ benign loss is  0.9731240272521973
+current submit client idx and staleness is  47 6
+ benign loss is  0.41378021240234375
+current submit client idx and staleness is  48 1
+here
+current submit client idx and staleness is  49 1
+here
+current submit client idx and staleness is  50 1
+here
+current submit client idx and staleness is  51 1
+here
+current submit client idx and staleness is  52 1
+here
+current submit client idx and staleness is  53 1
+here
+current submit client idx and staleness is  54 1
+here
+current submit client idx and staleness is  55 1
+here
+current submit client idx and staleness is  56 1
+here
+current submit client idx and staleness is  57 1
+here
+current submit client idx and staleness is  58 1
+here
+current submit client idx and staleness is  59 1
+here
+len all weights is 8
+avg_weights acc is  0.9000000005000001
+ 
+Avg Training Stats after 13 global rounds:
+Train Accuracy: 89.26% 
+
+Test Accuracy: 88.25% 
+
+
+ | Global Training Round : 14 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  1.0016354322433472
+current submit client idx and staleness is  1 1
+ benign loss is  0.7915856242179871
+current submit client idx and staleness is  2 1
+ benign loss is  0.5467054843902588
+current submit client idx and staleness is  3 1
+ benign loss is  0.9943647384643555
+current submit client idx and staleness is  4 1
+ benign loss is  1.016078233718872
+current submit client idx and staleness is  5 1
+ benign loss is  0.7899121046066284
+current submit client idx and staleness is  6 1
+ benign loss is  0.5883744359016418
+current submit client idx and staleness is  7 1
+ benign loss is  0.7535971403121948
+current submit client idx and staleness is  48 1
+here
+current submit client idx and staleness is  49 1
+here
+current submit client idx and staleness is  50 1
+here
+current submit client idx and staleness is  51 1
+here
+current submit client idx and staleness is  52 1
+here
+current submit client idx and staleness is  53 1
+here
+current submit client idx and staleness is  54 1
+here
+current submit client idx and staleness is  55 1
+here
+current submit client idx and staleness is  56 1
+here
+current submit client idx and staleness is  57 1
+here
+current submit client idx and staleness is  58 1
+here
+current submit client idx and staleness is  59 1
+here
+len all weights is 16
+avg_weights acc is  0.8500000005
+ 
+Avg Training Stats after 14 global rounds:
+Train Accuracy: 89.55% 
+
+Test Accuracy: 88.37% 
+
+
+ | Global Training Round : 15 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.9314326047897339
+current submit client idx and staleness is  1 1
+ benign loss is  0.6210900545120239
+current submit client idx and staleness is  2 1
+ benign loss is  0.46239009499549866
+current submit client idx and staleness is  3 1
+ benign loss is  1.0072473287582397
+current submit client idx and staleness is  4 1
+ benign loss is  1.0887634754180908
+current submit client idx and staleness is  5 1
+ benign loss is  0.7914555668830872
+current submit client idx and staleness is  6 1
+ benign loss is  0.6949106454849243
+current submit client idx and staleness is  7 1
+ benign loss is  0.7640740275382996
+current submit client idx and staleness is  8 2
+ benign loss is  0.41787177324295044
+current submit client idx and staleness is  9 2
+ benign loss is  1.0108652114868164
+current submit client idx and staleness is  10 2
+ benign loss is  0.9379905462265015
+current submit client idx and staleness is  11 2
+ benign loss is  1.168990135192871
+current submit client idx and staleness is  12 2
+ benign loss is  1.143757939338684
+current submit client idx and staleness is  13 2
+ benign loss is  0.36288484930992126
+current submit client idx and staleness is  14 2
+ benign loss is  0.8392297029495239
+current submit client idx and staleness is  15 2
+ benign loss is  1.3060513734817505
+current submit client idx and staleness is  48 1
+here
+current submit client idx and staleness is  49 1
+here
+current submit client idx and staleness is  50 1
+here
+current submit client idx and staleness is  51 1
+here
+current submit client idx and staleness is  52 1
+here
+current submit client idx and staleness is  53 1
+here
+current submit client idx and staleness is  54 1
+here
+current submit client idx and staleness is  55 1
+here
+current submit client idx and staleness is  56 1
+here
+current submit client idx and staleness is  57 1
+here
+current submit client idx and staleness is  58 1
+here
+current submit client idx and staleness is  59 1
+here
+len all weights is 24
+avg_weights acc is  0.8500000005
+ 
+Avg Training Stats after 15 global rounds:
+Train Accuracy: 89.27% 
+
+Test Accuracy: 88.18% 
+
+
+ | Global Training Round : 16 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.7687471508979797
+current submit client idx and staleness is  1 1
+ benign loss is  0.4895889163017273
+current submit client idx and staleness is  2 1
+ benign loss is  0.2799549698829651
+current submit client idx and staleness is  3 1
+ benign loss is  1.0841996669769287
+current submit client idx and staleness is  4 1
+ benign loss is  0.8092460632324219
+current submit client idx and staleness is  5 1
+ benign loss is  0.9053710699081421
+current submit client idx and staleness is  6 1
+ benign loss is  0.5351501703262329
+current submit client idx and staleness is  7 1
+ benign loss is  0.4217580258846283
+current submit client idx and staleness is  16 3
+ benign loss is  0.2880774140357971
+current submit client idx and staleness is  17 3
+ benign loss is  1.0341469049453735
+current submit client idx and staleness is  18 3
+ benign loss is  0.35139018297195435
+current submit client idx and staleness is  19 3
+ benign loss is  0.666290819644928
+current submit client idx and staleness is  20 3
+ benign loss is  0.4859713912010193
+current submit client idx and staleness is  21 3
+ benign loss is  0.8340780138969421
+current submit client idx and staleness is  22 3
+ benign loss is  0.2271306961774826
+current submit client idx and staleness is  23 3
+ benign loss is  0.529885470867157
+current submit client idx and staleness is  32 5
+ benign loss is  0.5010719299316406
+current submit client idx and staleness is  33 5
+ benign loss is  0.16996024549007416
+current submit client idx and staleness is  34 5
+ benign loss is  0.8300610780715942
+current submit client idx and staleness is  35 5
+ benign loss is  0.33588728308677673
+current submit client idx and staleness is  36 5
+ benign loss is  0.5535815954208374
+current submit client idx and staleness is  37 5
+ benign loss is  0.7433890104293823
+current submit client idx and staleness is  38 5
+ benign loss is  0.4303131103515625
+current submit client idx and staleness is  39 5
+ benign loss is  0.354785680770874
+current submit client idx and staleness is  48 1
+here
+current submit client idx and staleness is  49 1
+here
+current submit client idx and staleness is  50 1
+here
+current submit client idx and staleness is  51 1
+here
+current submit client idx and staleness is  52 1
+here
+current submit client idx and staleness is  53 1
+here
+current submit client idx and staleness is  54 1
+here
+current submit client idx and staleness is  55 1
+here
+current submit client idx and staleness is  56 1
+here
+current submit client idx and staleness is  57 1
+here
+current submit client idx and staleness is  58 1
+here
+current submit client idx and staleness is  59 1
+here
+len all weights is 24
+avg_weights acc is  0.9000000005000001
+ 
+Avg Training Stats after 16 global rounds:
+Train Accuracy: 89.58% 
+
+Test Accuracy: 88.37% 
+
+
+ | Global Training Round : 17 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.7268697619438171
+current submit client idx and staleness is  1 1
+ benign loss is  0.5897062420845032
+current submit client idx and staleness is  2 1
+ benign loss is  0.26122909784317017
+current submit client idx and staleness is  3 1
+ benign loss is  0.7408989667892456
+current submit client idx and staleness is  4 1
+ benign loss is  1.0262744426727295
+current submit client idx and staleness is  5 1
+ benign loss is  0.9592615365982056
+current submit client idx and staleness is  6 1
+ benign loss is  0.7068800926208496
+current submit client idx and staleness is  7 1
+ benign loss is  0.8062933683395386
+current submit client idx and staleness is  8 2
+ benign loss is  0.5351775884628296
+current submit client idx and staleness is  9 2
+ benign loss is  0.8097362518310547
+current submit client idx and staleness is  10 2
+ benign loss is  0.8065385818481445
+current submit client idx and staleness is  11 2
+ benign loss is  0.8611717224121094
+current submit client idx and staleness is  12 2
+ benign loss is  0.7822694778442383
+current submit client idx and staleness is  13 2
+ benign loss is  0.4505682587623596
+current submit client idx and staleness is  14 2
+ benign loss is  0.36853811144828796
+current submit client idx and staleness is  15 2
+ benign loss is  1.2976324558258057
+current submit client idx and staleness is  24 4
+ benign loss is  0.23471245169639587
+current submit client idx and staleness is  25 4
+ benign loss is  1.080938696861267
+current submit client idx and staleness is  26 4
+ benign loss is  0.5764449834823608
+current submit client idx and staleness is  27 4
+ benign loss is  0.5998405814170837
+current submit client idx and staleness is  28 4
+ benign loss is  1.1810448169708252
+current submit client idx and staleness is  29 4
+ benign loss is  0.6978771090507507
+current submit client idx and staleness is  30 4
+ benign loss is  0.31840643286705017
+current submit client idx and staleness is  31 4
+ benign loss is  0.11014871299266815
+current submit client idx and staleness is  48 1
+here
+current submit client idx and staleness is  49 1
+here
+current submit client idx and staleness is  50 1
+here
+current submit client idx and staleness is  51 1
+here
+current submit client idx and staleness is  52 1
+here
+current submit client idx and staleness is  53 1
+here
+current submit client idx and staleness is  54 1
+here
+current submit client idx and staleness is  55 1
+here
+current submit client idx and staleness is  56 1
+here
+current submit client idx and staleness is  57 1
+here
+current submit client idx and staleness is  58 1
+here
+current submit client idx and staleness is  59 1
+here
+keys is  dict_keys([48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59])
+len of malicious models is 12
+len of model dicts is  12
+compute distance is  tensor(81.6900, device='cuda:2')
+compute similarity is  tensor(0.9544, device='cuda:2')
+compute distance is  tensor(81.1654, device='cuda:2')
+compute similarity is  tensor(0.9529, device='cuda:2')
+compute distance is  tensor(92.1287, device='cuda:2')
+compute similarity is  tensor(0.9432, device='cuda:2')
+compute distance is  tensor(81.0541, device='cuda:2')
+compute similarity is  tensor(0.9544, device='cuda:2')
+compute distance is  tensor(83.3285, device='cuda:2')
+compute similarity is  tensor(0.9483, device='cuda:2')
+compute distance is  tensor(82.9505, device='cuda:2')
+compute similarity is  tensor(0.9517, device='cuda:2')
+compute distance is  tensor(86.1395, device='cuda:2')
+compute similarity is  tensor(0.9498, device='cuda:2')
+compute distance is  tensor(85.9777, device='cuda:2')
+compute similarity is  tensor(0.9470, device='cuda:2')
+compute distance is  tensor(79.2600, device='cuda:2')
+compute similarity is  tensor(0.9539, device='cuda:2')
+compute distance is  tensor(83.4089, device='cuda:2')
+compute similarity is  tensor(0.9516, device='cuda:2')
+compute distance is  tensor(85.3259, device='cuda:2')
+compute similarity is  tensor(0.9520, device='cuda:2')
+compute distance is  tensor(84.6720, device='cuda:2')
+compute similarity is  tensor(0.9516, device='cuda:2')
+calculated distance threshold is  tensor(92.1287, device='cuda:2')
+calculated similarity threshold is  tensor(0.9432, device='cuda:2')
+mid_min is -0.55
+====================
+iteration is  0
+round is  0
+accuracy is  0.5706666668230068
+compute distance is tensor(127.7002, device='cuda:2')
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.5708500001563401
+compute distance is tensor(127.9415, device='cuda:2')
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.526716666823009
+compute distance is tensor(126.8244, device='cuda:2')
+====================
+mid_min is -0.6050000000000001
+====================
+iteration is  1
+round is  0
+accuracy is  0.4224833334896747
+compute distance is tensor(139.7209, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.4968833334896754
+compute distance is tensor(140.4059, device='cuda:2')
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.5208333334896755
+compute distance is tensor(140.1063, device='cuda:2')
+====================
+mid_min is -0.6655000000000002
+====================
+iteration is  2
+round is  0
+accuracy is  0.5079833334896754
+compute distance is tensor(154.8314, device='cuda:2')
+====================
+====================
+iteration is  2
+round is  1
+accuracy is  0.4977333334896754
+compute distance is tensor(153.7450, device='cuda:2')
+====================
+====================
+iteration is  2
+round is  2
+accuracy is  0.5186333334896756
+compute distance is tensor(154.0552, device='cuda:2')
+====================
+mid_min is -0.7320500000000003
+====================
+iteration is  3
+round is  0
+accuracy is  0.42101666682300803
+compute distance is tensor(169.7686, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  3
+round is  1
+accuracy is  0.47055000015634185
+compute distance is tensor(169.6354, device='cuda:2')
+====================
+________________________________
+test distance is  tensor(169.7686, device='cuda:2')
+test similarity is  tensor(0.2144, device='cuda:2')
+test acc is  0.42101666682300803
+test loss is 6.706702691913922
+test entropy is  0.20685316948716576
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.20685316948716576
+avg test loss is  6.706702691913922
+avg accuracy is  0.42101666682300803
+compute_distance is  tensor(169.7686, device='cuda:2')
+compute_similarity is  tensor(0.2144, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.490601457035872
+avg test loss is  1.7984743463967654
+avg accuracy is  0.5425833334896758
+compute_distance is  tensor(164.2106, device='cuda:2')
+compute_similarity is  tensor(0.2597, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.5721207628054406
+avg test loss is  1.4550539917274834
+avg accuracy is  0.5624666668230076
+compute_distance is  tensor(140.5307, device='cuda:2')
+compute_similarity is  tensor(0.3194, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.5350974899873551
+avg test loss is  1.776154334166411
+avg accuracy is  0.5131500001563422
+compute_distance is  tensor(115.6359, device='cuda:2')
+compute_similarity is  tensor(0.3921, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.5808496435504478
+avg test loss is  1.6219874779298615
+avg accuracy is  0.519766666823009
+compute_distance is  tensor(98.4849, device='cuda:2')
+compute_similarity is  tensor(0.4736, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  5
+avg test entropy is  0.6242156871981712
+avg test loss is  1.4992822653322078
+avg accuracy is  0.5266500001563423
+compute_distance is  tensor(85.6087, device='cuda:2')
+compute_similarity is  tensor(0.5603, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  6
+avg test entropy is  0.6640782724819712
+avg test loss is  1.411150987214371
+avg accuracy is  0.5315833334896757
+compute_distance is  tensor(75.7534, device='cuda:2')
+compute_similarity is  tensor(0.6467, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  7
+avg test entropy is  0.6989881608531927
+avg test loss is  1.3474905089910096
+avg accuracy is  0.5344333334896757
+compute_distance is  tensor(68.0924, device='cuda:2')
+compute_similarity is  tensor(0.7262, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  8
+avg test entropy is  0.7285016510786533
+avg test loss is  1.3047823640329244
+avg accuracy is  0.5350166668230091
+compute_distance is  tensor(62.1420, device='cuda:2')
+compute_similarity is  tensor(0.7937, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  9
+avg test entropy is  0.7529232850842384
+avg test loss is  1.2734755791072399
+avg accuracy is  0.5370333334896757
+compute_distance is  tensor(57.5598, device='cuda:2')
+compute_similarity is  tensor(0.8469, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+________________________________
+test distance is  tensor(54.0356, device='cuda:2')
+test similarity is  tensor(0.8861, device='cuda:2')
+test acc is  0.537366666823009
+test loss is 1.2517131000820763
+test entropy is  0.7719050157171831
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.7719050157171831
+avg test loss is  1.2517131000820763
+avg accuracy is  0.537366666823009
+compute_distance is  tensor(54.0356, device='cuda:2')
+compute_similarity is  tensor(0.8861, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.7889124993830602
+avg test loss is  1.2362999792165086
+avg accuracy is  0.537566666823009
+compute_distance is  tensor(51.4129, device='cuda:2')
+compute_similarity is  tensor(0.9138, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.8015819306948038
+avg test loss is  1.2251439822762251
+avg accuracy is  0.5375833334896757
+compute_distance is  tensor(49.4389, device='cuda:2')
+compute_similarity is  tensor(0.9328, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.8099099065322103
+avg test loss is  1.2164491256798253
+avg accuracy is  0.5377833334896757
+compute_distance is  tensor(47.9996, device='cuda:2')
+compute_similarity is  tensor(0.9455, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.8170791064371178
+avg test loss is  1.2110898787024686
+avg accuracy is  0.5377833334896757
+compute_distance is  tensor(47.0130, device='cuda:2')
+compute_similarity is  tensor(0.9540, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+exit early
+________________________________
+test distance is  tensor(46.3404, device='cuda:2')
+test similarity is  tensor(0.9597, device='cuda:2')
+test acc is  0.5380333334896757
+test loss is 1.2072198516143156
+test entropy is  0.822461970198129
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.822461970198129
+avg test loss is  1.2072198516143156
+avg accuracy is  0.5380333334896757
+compute_distance is  tensor(46.3404, device='cuda:2')
+compute_similarity is  tensor(0.9597, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+exit early
+reach max round
+optimization failed
+new distance ratio is 1
+mal_acc is 0.6000000005
+len all weights is 20
+avg_weights acc is  0.9000000005000001
+ 
+Avg Training Stats after 17 global rounds:
+Train Accuracy: 87.66% 
+
+Test Accuracy: 86.73% 
+
+
+ | Global Training Round : 18 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.9700590372085571
+current submit client idx and staleness is  1 1
+ benign loss is  0.7816120386123657
+current submit client idx and staleness is  2 1
+ benign loss is  0.2268459051847458
+current submit client idx and staleness is  3 1
+ benign loss is  1.1727111339569092
+current submit client idx and staleness is  4 1
+ benign loss is  1.0341761112213135
+current submit client idx and staleness is  5 1
+ benign loss is  0.7097525596618652
+current submit client idx and staleness is  6 1
+ benign loss is  0.5757373571395874
+current submit client idx and staleness is  7 1
+ benign loss is  0.6443419456481934
+current submit client idx and staleness is  48 1
+here
+current submit client idx and staleness is  49 1
+here
+current submit client idx and staleness is  50 1
+here
+current submit client idx and staleness is  51 1
+here
+current submit client idx and staleness is  52 1
+here
+current submit client idx and staleness is  53 1
+here
+current submit client idx and staleness is  54 1
+here
+current submit client idx and staleness is  55 1
+here
+current submit client idx and staleness is  56 1
+here
+current submit client idx and staleness is  57 1
+here
+current submit client idx and staleness is  58 1
+here
+current submit client idx and staleness is  59 1
+here
+keys is  dict_keys([48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59])
+len of malicious models is 12
+len of model dicts is  12
+compute distance is  tensor(88.4977, device='cuda:2')
+compute similarity is  tensor(0.9382, device='cuda:2')
+compute distance is  tensor(90.2399, device='cuda:2')
+compute similarity is  tensor(0.9346, device='cuda:2')
+compute distance is  tensor(91.3971, device='cuda:2')
+compute similarity is  tensor(0.9341, device='cuda:2')
+compute distance is  tensor(91.7903, device='cuda:2')
+compute similarity is  tensor(0.9341, device='cuda:2')
+compute distance is  tensor(87.7493, device='cuda:2')
+compute similarity is  tensor(0.9349, device='cuda:2')
+compute distance is  tensor(92.9780, device='cuda:2')
+compute similarity is  tensor(0.9314, device='cuda:2')
+compute distance is  tensor(90.9323, device='cuda:2')
+compute similarity is  tensor(0.9354, device='cuda:2')
+compute distance is  tensor(95.1412, device='cuda:2')
+compute similarity is  tensor(0.9303, device='cuda:2')
+compute distance is  tensor(85.5146, device='cuda:2')
+compute similarity is  tensor(0.9388, device='cuda:2')
+compute distance is  tensor(89.9691, device='cuda:2')
+compute similarity is  tensor(0.9372, device='cuda:2')
+compute distance is  tensor(89.1847, device='cuda:2')
+compute similarity is  tensor(0.9390, device='cuda:2')
+compute distance is  tensor(94.9193, device='cuda:2')
+compute similarity is  tensor(0.9335, device='cuda:2')
+calculated distance threshold is  tensor(95.1412, device='cuda:2')
+calculated similarity threshold is  tensor(0.9303, device='cuda:2')
+mid_min is -0.55
+====================
+iteration is  0
+round is  0
+accuracy is  0.24940000015633826
+compute distance is tensor(127.4403, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.30051666682300626
+compute distance is tensor(128.0378, device='cuda:2')
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.44008333348967493
+compute distance is tensor(127.0449, device='cuda:2')
+====================
+mid_min is -0.55
+====================
+iteration is  1
+round is  0
+accuracy is  0.4024333334896745
+compute distance is tensor(127.0329, device='cuda:2')
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.4797500001563419
+compute distance is tensor(127.9716, device='cuda:2')
+====================
+________________________________
+test distance is  tensor(127.4403, device='cuda:2')
+test similarity is  tensor(0.2793, device='cuda:2')
+test acc is  0.24940000015633826
+test loss is 6.083458332873103
+test entropy is  0.3602888631477539
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.3602888631477539
+avg test loss is  6.083458332873103
+avg accuracy is  0.24940000015633826
+compute_distance is  tensor(127.4403, device='cuda:2')
+compute_similarity is  tensor(0.2793, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.6838604563843212
+avg test loss is  2.013326300486827
+avg accuracy is  0.4125166668230079
+compute_distance is  tensor(124.8861, device='cuda:2')
+compute_similarity is  tensor(0.3373, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.7606370814446447
+avg test loss is  1.7171045609120368
+avg accuracy is  0.42853333348967476
+compute_distance is  tensor(106.6826, device='cuda:2')
+compute_similarity is  tensor(0.4103, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.8127582193946025
+avg test loss is  1.5676090405948127
+avg accuracy is  0.4373166668230082
+compute_distance is  tensor(90.0437, device='cuda:2')
+compute_similarity is  tensor(0.4939, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(90.0437, device='cuda:2')
+test similarity is  tensor(0.4939, device='cuda:2')
+test acc is  0.4373166668230082
+test loss is 1.5676090405948127
+test entropy is  0.8127582193946025
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.8127582193946025
+avg test loss is  1.5676090405948127
+avg accuracy is  0.4373166668230082
+compute_distance is  tensor(90.0437, device='cuda:2')
+compute_similarity is  tensor(0.4939, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(90.0437, device='cuda:2')
+test similarity is  tensor(0.4939, device='cuda:2')
+test acc is  0.4373166668230082
+test loss is 1.5676090405948127
+test entropy is  0.8127582193946025
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.8127582193946025
+avg test loss is  1.5676090405948127
+avg accuracy is  0.4373166668230082
+compute_distance is  tensor(90.0437, device='cuda:2')
+compute_similarity is  tensor(0.4939, device='cuda:2')
+++++++++++++++++++++
+reach max round
+optimization failed
+new distance ratio is 1
+mal_acc is 0.45000000050000005
+len all weights is 44
+avg_weights acc is  0.9000000005000001
+ 
+Avg Training Stats after 18 global rounds:
+Train Accuracy: 89.18% 
+
+Test Accuracy: 88.16% 
+
+
+ | Global Training Round : 19 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  1.074392557144165
+current submit client idx and staleness is  1 1
+ benign loss is  0.5206488370895386
+current submit client idx and staleness is  2 1
+ benign loss is  0.27831360697746277
+current submit client idx and staleness is  3 1
+ benign loss is  0.9209631085395813
+current submit client idx and staleness is  4 1
+ benign loss is  0.8519654273986816
+current submit client idx and staleness is  5 1
+ benign loss is  0.6479606628417969
+current submit client idx and staleness is  6 1
+ benign loss is  0.6069481372833252
+current submit client idx and staleness is  7 1
+ benign loss is  0.4662752151489258
+current submit client idx and staleness is  8 2
+ benign loss is  0.3845074772834778
+current submit client idx and staleness is  9 2
+ benign loss is  0.7512536644935608
+current submit client idx and staleness is  10 2
+ benign loss is  0.6428176164627075
+current submit client idx and staleness is  11 2
+ benign loss is  1.2250394821166992
+current submit client idx and staleness is  12 2
+ benign loss is  0.7590901851654053
+current submit client idx and staleness is  13 2
+ benign loss is  0.4798387587070465
+current submit client idx and staleness is  14 2
+ benign loss is  0.7608779072761536
+current submit client idx and staleness is  15 2
+ benign loss is  1.1029096841812134
+current submit client idx and staleness is  16 3
+ benign loss is  0.7879894971847534
+current submit client idx and staleness is  17 3
+ benign loss is  1.2057247161865234
+current submit client idx and staleness is  18 3
+ benign loss is  0.433967649936676
+current submit client idx and staleness is  19 3
+ benign loss is  0.5318378806114197
+current submit client idx and staleness is  20 3
+ benign loss is  0.4755457043647766
+current submit client idx and staleness is  21 3
+ benign loss is  1.003244161605835
+current submit client idx and staleness is  22 3
+ benign loss is  0.27968209981918335
+current submit client idx and staleness is  23 3
+ benign loss is  0.7125527262687683
+current submit client idx and staleness is  40 6
+ benign loss is  0.15790049731731415
+current submit client idx and staleness is  41 6
+ benign loss is  0.6123470664024353
+current submit client idx and staleness is  42 6
+ benign loss is  0.049035679548978806
+current submit client idx and staleness is  43 6
+ benign loss is  0.4543996751308441
+current submit client idx and staleness is  44 6
+ benign loss is  0.3370112180709839
+current submit client idx and staleness is  45 6
+ benign loss is  0.605744481086731
+current submit client idx and staleness is  46 6
+ benign loss is  1.066805124282837
+current submit client idx and staleness is  47 6
+ benign loss is  0.5332270860671997
+current submit client idx and staleness is  48 1
+here
+current submit client idx and staleness is  49 1
+here
+current submit client idx and staleness is  50 1
+here
+current submit client idx and staleness is  51 1
+here
+current submit client idx and staleness is  52 1
+here
+current submit client idx and staleness is  53 1
+here
+current submit client idx and staleness is  54 1
+here
+current submit client idx and staleness is  55 1
+here
+current submit client idx and staleness is  56 1
+here
+current submit client idx and staleness is  57 1
+here
+current submit client idx and staleness is  58 1
+here
+current submit client idx and staleness is  59 1
+here
+keys is  dict_keys([48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59])
+len of malicious models is 12
+len of model dicts is  12
+compute distance is  tensor(98.1714, device='cuda:2')
+compute similarity is  tensor(0.8630, device='cuda:2')
+compute distance is  tensor(96.8853, device='cuda:2')
+compute similarity is  tensor(0.8627, device='cuda:2')
+compute distance is  tensor(97.9891, device='cuda:2')
+compute similarity is  tensor(0.8630, device='cuda:2')
+compute distance is  tensor(94.8575, device='cuda:2')
+compute similarity is  tensor(0.8672, device='cuda:2')
+compute distance is  tensor(91.1069, device='cuda:2')
+compute similarity is  tensor(0.8666, device='cuda:2')
+compute distance is  tensor(94.2413, device='cuda:2')
+compute similarity is  tensor(0.8674, device='cuda:2')
+compute distance is  tensor(98.1966, device='cuda:2')
+compute similarity is  tensor(0.8640, device='cuda:2')
+compute distance is  tensor(100.9617, device='cuda:2')
+compute similarity is  tensor(0.8579, device='cuda:2')
+compute distance is  tensor(94.3881, device='cuda:2')
+compute similarity is  tensor(0.8660, device='cuda:2')
+compute distance is  tensor(89.8343, device='cuda:2')
+compute similarity is  tensor(0.8724, device='cuda:2')
+compute distance is  tensor(97.7250, device='cuda:2')
+compute similarity is  tensor(0.8648, device='cuda:2')
+compute distance is  tensor(93.6151, device='cuda:2')
+compute similarity is  tensor(0.8673, device='cuda:2')
+calculated distance threshold is  tensor(100.9617, device='cuda:2')
+calculated similarity threshold is  tensor(0.8579, device='cuda:2')
+mid_min is -0.55
+====================
+iteration is  0
+round is  0
+accuracy is  0.46776666682300844
+compute distance is tensor(127.1950, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.5767833334896728
+compute distance is tensor(127.8996, device='cuda:2')
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.6039833334896705
+compute distance is tensor(127.9590, device='cuda:2')
+====================
+mid_min is -0.6050000000000001
+====================
+iteration is  1
+round is  0
+accuracy is  0.5073500001563421
+compute distance is tensor(140.2084, device='cuda:2')
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.5045833334896754
+compute distance is tensor(140.5341, device='cuda:2')
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.5089166668230088
+compute distance is tensor(140.0364, device='cuda:2')
+====================
+mid_min is -0.6655000000000002
+====================
+iteration is  2
+round is  0
+accuracy is  0.4373833334896748
+compute distance is tensor(154.7335, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  1
+accuracy is  0.38445000015634095
+compute distance is tensor(154.8622, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  2
+round is  2
+accuracy is  0.4597833334896751
+compute distance is tensor(154.6595, device='cuda:2')
+====================
+mid_min is -0.6655000000000002
+====================
+iteration is  3
+round is  0
+accuracy is  0.4479666668230083
+compute distance is tensor(155.4740, device='cuda:2')
+====================
+________________________________
+test distance is  tensor(154.8622, device='cuda:2')
+test similarity is  tensor(0.2537, device='cuda:2')
+test acc is  0.38445000015634095
+test loss is 5.435981799290379
+test entropy is  0.3084149203384355
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.3084149203384355
+avg test loss is  5.435981799290379
+avg accuracy is  0.38445000015634095
+compute_distance is  tensor(154.8622, device='cuda:2')
+compute_similarity is  tensor(0.2537, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5664592111733422
+avg test loss is  1.7459367462185655
+avg accuracy is  0.5222333334896756
+compute_distance is  tensor(145.3119, device='cuda:2')
+compute_similarity is  tensor(0.3097, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.6509241166272397
+avg test loss is  1.4470768929290365
+avg accuracy is  0.5434000001563424
+compute_distance is  tensor(122.8898, device='cuda:2')
+compute_similarity is  tensor(0.3789, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.6450256797423495
+avg test loss is  1.7117617456897745
+avg accuracy is  0.4904333334896753
+compute_distance is  tensor(101.0575, device='cuda:2')
+compute_similarity is  tensor(0.4596, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.7434958351700545
+avg test loss is  1.1976647528249826
+avg accuracy is  0.5762166668230062
+compute_distance is  tensor(87.1796, device='cuda:2')
+compute_similarity is  tensor(0.5462, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  5
+avg test entropy is  0.7535798317715049
+avg test loss is  1.438446056931766
+avg accuracy is  0.5107666668230089
+compute_distance is  tensor(75.8612, device='cuda:2')
+compute_similarity is  tensor(0.6337, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  6
+avg test entropy is  0.7863381551399923
+avg test loss is  1.385992439253244
+avg accuracy is  0.5166000001563422
+compute_distance is  tensor(67.1882, device='cuda:2')
+compute_similarity is  tensor(0.7155, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  7
+avg test entropy is  0.8159229386844107
+avg test loss is  1.3451686916447907
+avg accuracy is  0.5213833334896756
+compute_distance is  tensor(60.7738, device='cuda:2')
+compute_similarity is  tensor(0.7858, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  8
+avg test entropy is  0.8429808102564008
+avg test loss is  1.3163463197537322
+avg accuracy is  0.5237666668230089
+compute_distance is  tensor(56.0523, device='cuda:2')
+compute_similarity is  tensor(0.8417, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  9
+avg test entropy is  0.8647488881148764
+avg test loss is  1.299287004257316
+avg accuracy is  0.5246166668230089
+compute_distance is  tensor(52.6216, device='cuda:2')
+compute_similarity is  tensor(0.8833, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+________________________________
+test distance is  tensor(50.1032, device='cuda:2')
+test similarity is  tensor(0.9129, device='cuda:2')
+test acc is  0.5253333334896756
+test loss is 1.2856685349554904
+test entropy is  0.8816998414774694
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.8816998414774694
+avg test loss is  1.2856685349554904
+avg accuracy is  0.5253333334896756
+compute_distance is  tensor(50.1032, device='cuda:2')
+compute_similarity is  tensor(0.9129, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.8944817144098058
+avg test loss is  1.2789440523586801
+avg accuracy is  0.5260000001563423
+compute_distance is  tensor(48.3147, device='cuda:2')
+compute_similarity is  tensor(0.9332, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.9043437299062448
+avg test loss is  1.2717552522479345
+avg accuracy is  0.5267833334896755
+compute_distance is  tensor(47.0526, device='cuda:2')
+compute_similarity is  tensor(0.9467, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+exit early
+________________________________
+test distance is  tensor(46.2697, device='cuda:2')
+test similarity is  tensor(0.9558, device='cuda:2')
+test acc is  0.5265833334896756
+test loss is 1.269264030558214
+test entropy is  0.9125937363232123
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.9125937363232123
+avg test loss is  1.269264030558214
+avg accuracy is  0.5265833334896756
+compute_distance is  tensor(46.2697, device='cuda:2')
+compute_similarity is  tensor(0.9558, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+exit early
+reach max round
+optimization failed
+new distance ratio is 1
+mal_acc is 0.6000000005
+len all weights is 20
+avg_weights acc is  0.9000000005000001
+ 
+Avg Training Stats after 19 global rounds:
+Train Accuracy: 87.23% 
+
+Test Accuracy: 86.35% 
+
+
+ | Global Training Round : 20 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.6736237406730652
+current submit client idx and staleness is  1 1
+ benign loss is  0.6904395222663879
+current submit client idx and staleness is  2 1
+ benign loss is  0.287371963262558
+current submit client idx and staleness is  3 1
+ benign loss is  0.9196041226387024
+current submit client idx and staleness is  4 1
+ benign loss is  1.0850484371185303
+current submit client idx and staleness is  5 1
+ benign loss is  0.94549161195755
+current submit client idx and staleness is  6 1
+ benign loss is  0.6110609769821167
+current submit client idx and staleness is  7 1
+ benign loss is  0.6377972364425659
+current submit client idx and staleness is  48 1
+here
+current submit client idx and staleness is  49 1
+here
+current submit client idx and staleness is  50 1
+here
+current submit client idx and staleness is  51 1
+here
+current submit client idx and staleness is  52 1
+here
+current submit client idx and staleness is  53 1
+here
+current submit client idx and staleness is  54 1
+here
+current submit client idx and staleness is  55 1
+here
+current submit client idx and staleness is  56 1
+here
+current submit client idx and staleness is  57 1
+here
+current submit client idx and staleness is  58 1
+here
+current submit client idx and staleness is  59 1
+here
+keys is  dict_keys([48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59])
+len of malicious models is 12
+len of model dicts is  12
+compute distance is  tensor(101.6678, device='cuda:2')
+compute similarity is  tensor(0.8572, device='cuda:2')
+compute distance is  tensor(95.6222, device='cuda:2')
+compute similarity is  tensor(0.8602, device='cuda:2')
+compute distance is  tensor(106.6791, device='cuda:2')
+compute similarity is  tensor(0.8523, device='cuda:2')
+compute distance is  tensor(93.1384, device='cuda:2')
+compute similarity is  tensor(0.8628, device='cuda:2')
+compute distance is  tensor(98.9621, device='cuda:2')
+compute similarity is  tensor(0.8544, device='cuda:2')
+compute distance is  tensor(103.3475, device='cuda:2')
+compute similarity is  tensor(0.8544, device='cuda:2')
+compute distance is  tensor(101.1093, device='cuda:2')
+compute similarity is  tensor(0.8566, device='cuda:2')
+compute distance is  tensor(107.8339, device='cuda:2')
+compute similarity is  tensor(0.8491, device='cuda:2')
+compute distance is  tensor(95.9918, device='cuda:2')
+compute similarity is  tensor(0.8589, device='cuda:2')
+compute distance is  tensor(97.0044, device='cuda:2')
+compute similarity is  tensor(0.8617, device='cuda:2')
+compute distance is  tensor(96.9068, device='cuda:2')
+compute similarity is  tensor(0.8618, device='cuda:2')
+compute distance is  tensor(101.9619, device='cuda:2')
+compute similarity is  tensor(0.8561, device='cuda:2')
+calculated distance threshold is  tensor(107.8339, device='cuda:2')
+calculated similarity threshold is  tensor(0.8491, device='cuda:2')
+mid_min is -0.55
+====================
+iteration is  0
+round is  0
+accuracy is  0.4007833334896744
+compute distance is tensor(127.1876, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.4266500001563414
+compute distance is tensor(126.5023, device='cuda:2')
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.41243333348967454
+compute distance is tensor(127.3200, device='cuda:2')
+====================
+mid_min is -0.55
+====================
+iteration is  1
+round is  0
+accuracy is  0.30100000015633954
+compute distance is tensor(127.7244, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.44570000015634165
+compute distance is tensor(127.4337, device='cuda:2')
+====================
+________________________________
+test distance is  tensor(127.7244, device='cuda:2')
+test similarity is  tensor(0.2985, device='cuda:2')
+test acc is  0.30100000015633954
+test loss is 6.207100136701994
+test entropy is  0.34216933478233913
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.34216933478233913
+avg test loss is  6.207100136701994
+avg accuracy is  0.30100000015633954
+compute_distance is  tensor(127.7244, device='cuda:2')
+compute_similarity is  tensor(0.2985, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.6830543634225564
+avg test loss is  2.0214029256977253
+avg accuracy is  0.44031666682300824
+compute_distance is  tensor(125.1360, device='cuda:2')
+compute_similarity is  tensor(0.3622, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.7554390401220017
+avg test loss is  1.7304217210456507
+avg accuracy is  0.45856666682300845
+compute_distance is  tensor(106.7828, device='cuda:2')
+compute_similarity is  tensor(0.4400, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.8049367696745817
+avg test loss is  1.5655446995550126
+avg accuracy is  0.4738833334896752
+compute_distance is  tensor(90.2392, device='cuda:2')
+compute_similarity is  tensor(0.5270, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(90.2392, device='cuda:2')
+test similarity is  tensor(0.5270, device='cuda:2')
+test acc is  0.4738833334896752
+test loss is 1.5655446995550126
+test entropy is  0.8049367696745817
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.8049367696745817
+avg test loss is  1.5655446995550126
+avg accuracy is  0.4738833334896752
+compute_distance is  tensor(90.2392, device='cuda:2')
+compute_similarity is  tensor(0.5270, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(90.2392, device='cuda:2')
+test similarity is  tensor(0.5270, device='cuda:2')
+test acc is  0.4738833334896752
+test loss is 1.5655446995550126
+test entropy is  0.8049367696745817
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.8049367696745817
+avg test loss is  1.5655446995550126
+avg accuracy is  0.4738833334896752
+compute_distance is  tensor(90.2392, device='cuda:2')
+compute_similarity is  tensor(0.5270, device='cuda:2')
+++++++++++++++++++++
+reach max round
+optimization failed
+new distance ratio is 1
+mal_acc is 0.5000000005
+len all weights is 44
+avg_weights acc is  0.9000000005000001
+ 
+Avg Training Stats after 20 global rounds:
+Train Accuracy: 88.80% 
+
+Test Accuracy: 87.77% 
+
+
+ | Global Training Round : 21 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.7691253423690796
+current submit client idx and staleness is  1 1
+ benign loss is  0.6189748048782349
+current submit client idx and staleness is  2 1
+ benign loss is  0.45976728200912476
+current submit client idx and staleness is  3 1
+ benign loss is  0.9979524612426758
+current submit client idx and staleness is  4 1
+ benign loss is  0.6226997971534729
+current submit client idx and staleness is  5 1
+ benign loss is  0.7209367156028748
+current submit client idx and staleness is  6 1
+ benign loss is  0.7075895071029663
+current submit client idx and staleness is  7 1
+ benign loss is  0.6973350048065186
+current submit client idx and staleness is  8 2
+ benign loss is  0.6943559646606445
+current submit client idx and staleness is  9 2
+ benign loss is  0.7478243708610535
+current submit client idx and staleness is  10 2
+ benign loss is  0.9419263601303101
+current submit client idx and staleness is  11 2
+ benign loss is  0.9234143495559692
+current submit client idx and staleness is  12 2
+ benign loss is  1.1099430322647095
+current submit client idx and staleness is  13 2
+ benign loss is  0.484727680683136
+current submit client idx and staleness is  14 2
+ benign loss is  0.5750764012336731
+current submit client idx and staleness is  15 2
+ benign loss is  0.8509597778320312
+current submit client idx and staleness is  24 4
+ benign loss is  0.2749958634376526
+current submit client idx and staleness is  25 4
+ benign loss is  0.7137082815170288
+current submit client idx and staleness is  26 4
+ benign loss is  0.4822901785373688
+current submit client idx and staleness is  27 4
+ benign loss is  0.43437257409095764
+current submit client idx and staleness is  28 4
+ benign loss is  0.9555642008781433
+current submit client idx and staleness is  29 4
+ benign loss is  0.35144102573394775
+current submit client idx and staleness is  30 4
+ benign loss is  0.38424980640411377
+current submit client idx and staleness is  31 4
+ benign loss is  0.3438006639480591
+current submit client idx and staleness is  32 5
+ benign loss is  0.6322284936904907
+current submit client idx and staleness is  33 5
+ benign loss is  0.08433371782302856
+current submit client idx and staleness is  34 5
+ benign loss is  0.68634432554245
+current submit client idx and staleness is  35 5
+ benign loss is  0.47935763001441956
+current submit client idx and staleness is  36 5
+ benign loss is  0.31798622012138367
+current submit client idx and staleness is  37 5
+ benign loss is  0.4797027111053467
+current submit client idx and staleness is  38 5
+ benign loss is  0.4237361550331116
+current submit client idx and staleness is  39 5
+ benign loss is  0.3087119460105896
+current submit client idx and staleness is  48 1
+here
+current submit client idx and staleness is  49 1
+here
+current submit client idx and staleness is  50 1
+here
+current submit client idx and staleness is  51 1
+here
+current submit client idx and staleness is  52 1
+here
+current submit client idx and staleness is  53 1
+here
+current submit client idx and staleness is  54 1
+here
+current submit client idx and staleness is  55 1
+here
+current submit client idx and staleness is  56 1
+here
+current submit client idx and staleness is  57 1
+here
+current submit client idx and staleness is  58 1
+here
+current submit client idx and staleness is  59 1
+here
+keys is  dict_keys([48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59])
+len of malicious models is 12
+len of model dicts is  12
+compute distance is  tensor(98.2096, device='cuda:2')
+compute similarity is  tensor(0.8420, device='cuda:2')
+compute distance is  tensor(95.2093, device='cuda:2')
+compute similarity is  tensor(0.8415, device='cuda:2')
+compute distance is  tensor(98.1291, device='cuda:2')
+compute similarity is  tensor(0.8380, device='cuda:2')
+compute distance is  tensor(97.5509, device='cuda:2')
+compute similarity is  tensor(0.8424, device='cuda:2')
+compute distance is  tensor(96.3544, device='cuda:2')
+compute similarity is  tensor(0.8399, device='cuda:2')
+compute distance is  tensor(96.9658, device='cuda:2')
+compute similarity is  tensor(0.8410, device='cuda:2')
+compute distance is  tensor(96.3997, device='cuda:2')
+compute similarity is  tensor(0.8428, device='cuda:2')
+compute distance is  tensor(107.1830, device='cuda:2')
+compute similarity is  tensor(0.8312, device='cuda:2')
+compute distance is  tensor(93.6214, device='cuda:2')
+compute similarity is  tensor(0.8445, device='cuda:2')
+compute distance is  tensor(97.5783, device='cuda:2')
+compute similarity is  tensor(0.8426, device='cuda:2')
+compute distance is  tensor(96.4661, device='cuda:2')
+compute similarity is  tensor(0.8442, device='cuda:2')
+compute distance is  tensor(102.0037, device='cuda:2')
+compute similarity is  tensor(0.8386, device='cuda:2')
+calculated distance threshold is  tensor(107.1830, device='cuda:2')
+calculated similarity threshold is  tensor(0.8312, device='cuda:2')
+mid_min is -0.55
+====================
+iteration is  0
+round is  0
+accuracy is  0.578116666823006
+compute distance is tensor(127.4043, device='cuda:2')
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.5284500001563424
+compute distance is tensor(127.8534, device='cuda:2')
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.5566500001563414
+compute distance is tensor(126.9491, device='cuda:2')
+====================
+mid_min is -0.6050000000000001
+====================
+iteration is  1
+round is  0
+accuracy is  0.36395000015634066
+compute distance is tensor(139.5205, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.5844500001563389
+compute distance is tensor(140.3654, device='cuda:2')
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.4418666668230082
+compute distance is tensor(140.6716, device='cuda:2')
+====================
+mid_min is -0.6655000000000002
+====================
+iteration is  2
+round is  0
+accuracy is  0.4046000001563412
+compute distance is tensor(154.1606, device='cuda:2')
+====================
+====================
+iteration is  2
+round is  1
+accuracy is  0.4100833334896746
+compute distance is tensor(153.3645, device='cuda:2')
+====================
+====================
+iteration is  2
+round is  2
+accuracy is  0.4423000001563416
+compute distance is tensor(153.3970, device='cuda:2')
+====================
+________________________________
+test distance is  tensor(139.5205, device='cuda:2')
+test similarity is  tensor(0.2893, device='cuda:2')
+test acc is  0.36395000015634066
+test loss is 4.943596984277656
+test entropy is  0.3747704169039787
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.3747704169039787
+avg test loss is  4.943596984277656
+avg accuracy is  0.36395000015634066
+compute_distance is  tensor(139.5205, device='cuda:2')
+compute_similarity is  tensor(0.2893, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.602928317241323
+avg test loss is  1.7978916009351897
+avg accuracy is  0.5207166668230089
+compute_distance is  tensor(130.8315, device='cuda:2')
+compute_similarity is  tensor(0.3523, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.6860303759956157
+avg test loss is  1.4657036872433702
+avg accuracy is  0.5502500001563421
+compute_distance is  tensor(111.1429, device='cuda:2')
+compute_similarity is  tensor(0.4277, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.6913564864760523
+avg test loss is  1.70536853102987
+avg accuracy is  0.4967500001563421
+compute_distance is  tensor(91.8805, device='cuda:2')
+compute_similarity is  tensor(0.5125, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.7836764916173939
+avg test loss is  1.2093279688343057
+avg accuracy is  0.5838166668230057
+compute_distance is  tensor(79.4598, device='cuda:2')
+compute_similarity is  tensor(0.6004, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  5
+avg test entropy is  0.8010453063923159
+avg test loss is  1.4408702460179197
+avg accuracy is  0.5198500001563423
+compute_distance is  tensor(69.8372, device='cuda:2')
+compute_similarity is  tensor(0.6847, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  6
+avg test entropy is  0.8365458069579688
+avg test loss is  1.3939494862993642
+avg accuracy is  0.5230833334896756
+compute_distance is  tensor(62.5144, device='cuda:2')
+compute_similarity is  tensor(0.7596, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  7
+avg test entropy is  0.87043798878503
+avg test loss is  1.350109801172956
+avg accuracy is  0.5272333334896756
+compute_distance is  tensor(57.1993, device='cuda:2')
+compute_similarity is  tensor(0.8210, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  8
+avg test entropy is  0.898654988325481
+avg test loss is  1.321044984212054
+avg accuracy is  0.530716666823009
+compute_distance is  tensor(53.3285, device='cuda:2')
+compute_similarity is  tensor(0.8678, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  9
+avg test entropy is  0.9229645278535163
+avg test loss is  1.3007453762010726
+avg accuracy is  0.5330833334896757
+compute_distance is  tensor(50.4864, device='cuda:2')
+compute_similarity is  tensor(0.9017, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+________________________________
+test distance is  tensor(48.4200, device='cuda:2')
+test similarity is  tensor(0.9252, device='cuda:2')
+test acc is  0.5351666668230091
+test loss is 1.2873414101631149
+test entropy is  0.9403835109301976
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.9403835109301976
+avg test loss is  1.2873414101631149
+avg accuracy is  0.5351666668230091
+compute_distance is  tensor(48.4200, device='cuda:2')
+compute_similarity is  tensor(0.9252, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.9555244600849111
+avg test loss is  1.2786963301172642
+avg accuracy is  0.5358500001563424
+compute_distance is  tensor(46.9365, device='cuda:2')
+compute_similarity is  tensor(0.9411, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+exit early
+________________________________
+test distance is  tensor(45.9498, device='cuda:2')
+test similarity is  tensor(0.9517, device='cuda:2')
+test acc is  0.5359500001563424
+test loss is 1.2742743861954857
+test entropy is  0.965562870126289
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.965562870126289
+avg test loss is  1.2742743861954857
+avg accuracy is  0.5359500001563424
+compute_distance is  tensor(45.9498, device='cuda:2')
+compute_similarity is  tensor(0.9517, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+exit early
+reach max round
+optimization failed
+new distance ratio is 1
+mal_acc is 0.45000000050000005
+len all weights is 28
+avg_weights acc is  0.9000000005000001
+ 
+Avg Training Stats after 21 global rounds:
+Train Accuracy: 88.97% 
+
+Test Accuracy: 87.90% 
+
+
+ | Global Training Round : 22 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.8715680837631226
+current submit client idx and staleness is  1 1
+ benign loss is  0.43493491411209106
+current submit client idx and staleness is  2 1
+ benign loss is  0.12007196992635727
+current submit client idx and staleness is  3 1
+ benign loss is  0.7049583196640015
+current submit client idx and staleness is  4 1
+ benign loss is  0.9543874859809875
+current submit client idx and staleness is  5 1
+ benign loss is  0.7635312676429749
+current submit client idx and staleness is  6 1
+ benign loss is  0.799960732460022
+current submit client idx and staleness is  7 1
+ benign loss is  0.1403418481349945
+current submit client idx and staleness is  16 3
+ benign loss is  0.32532599568367004
+current submit client idx and staleness is  17 3
+ benign loss is  1.2687819004058838
+current submit client idx and staleness is  18 3
+ benign loss is  0.8700605630874634
+current submit client idx and staleness is  19 3
+ benign loss is  0.39741820096969604
+current submit client idx and staleness is  20 3
+ benign loss is  0.26923638582229614
+current submit client idx and staleness is  21 3
+ benign loss is  0.6854990124702454
+current submit client idx and staleness is  22 3
+ benign loss is  0.3698926568031311
+current submit client idx and staleness is  23 3
+ benign loss is  0.4035714268684387
+current submit client idx and staleness is  48 1
+here
+current submit client idx and staleness is  49 1
+here
+current submit client idx and staleness is  50 1
+here
+current submit client idx and staleness is  51 1
+here
+current submit client idx and staleness is  52 1
+here
+current submit client idx and staleness is  53 1
+here
+current submit client idx and staleness is  54 1
+here
+current submit client idx and staleness is  55 1
+here
+current submit client idx and staleness is  56 1
+here
+current submit client idx and staleness is  57 1
+here
+current submit client idx and staleness is  58 1
+here
+current submit client idx and staleness is  59 1
+here
+keys is  dict_keys([48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59])
+len of malicious models is 12
+len of model dicts is  12
+compute distance is  tensor(96.8850, device='cuda:2')
+compute similarity is  tensor(0.8575, device='cuda:2')
+compute distance is  tensor(90.1103, device='cuda:2')
+compute similarity is  tensor(0.8598, device='cuda:2')
+compute distance is  tensor(97.1273, device='cuda:2')
+compute similarity is  tensor(0.8552, device='cuda:2')
+compute distance is  tensor(96.7387, device='cuda:2')
+compute similarity is  tensor(0.8575, device='cuda:2')
+compute distance is  tensor(91.1370, device='cuda:2')
+compute similarity is  tensor(0.8601, device='cuda:2')
+compute distance is  tensor(97.8097, device='cuda:2')
+compute similarity is  tensor(0.8553, device='cuda:2')
+compute distance is  tensor(98.8939, device='cuda:2')
+compute similarity is  tensor(0.8548, device='cuda:2')
+compute distance is  tensor(99.6827, device='cuda:2')
+compute similarity is  tensor(0.8540, device='cuda:2')
+compute distance is  tensor(95.2806, device='cuda:2')
+compute similarity is  tensor(0.8583, device='cuda:2')
+compute distance is  tensor(95.4424, device='cuda:2')
+compute similarity is  tensor(0.8585, device='cuda:2')
+compute distance is  tensor(99.6473, device='cuda:2')
+compute similarity is  tensor(0.8548, device='cuda:2')
+compute distance is  tensor(97.9945, device='cuda:2')
+compute similarity is  tensor(0.8577, device='cuda:2')
+calculated distance threshold is  tensor(99.6827, device='cuda:2')
+calculated similarity threshold is  tensor(0.8540, device='cuda:2')
+mid_min is -0.55
+====================
+iteration is  0
+round is  0
+accuracy is  0.490450000156342
+compute distance is tensor(128.5456, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.4439000001563415
+compute distance is tensor(127.1469, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  2
+accuracy is  0.44235000015634157
+compute distance is tensor(127.3356, device='cuda:2')
+====================
+succ_min + 1
+mid_min is -0.55
+====================
+iteration is  1
+round is  0
+accuracy is  0.4730166668230085
+compute distance is tensor(127.6864, device='cuda:2')
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.4426000001563416
+compute distance is tensor(126.6938, device='cuda:2')
+====================
+________________________________
+test distance is  tensor(127.3356, device='cuda:2')
+test similarity is  tensor(0.3124, device='cuda:2')
+test acc is  0.44235000015634157
+test loss is 4.280269475888088
+test entropy is  0.3021301790309359
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.3021301790309359
+avg test loss is  4.280269475888088
+avg accuracy is  0.44235000015634157
+compute_distance is  tensor(127.3356, device='cuda:2')
+compute_similarity is  tensor(0.3124, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.49618828566725065
+avg test loss is  1.5551332063130987
+avg accuracy is  0.5712000001563402
+compute_distance is  tensor(120.4650, device='cuda:2')
+compute_similarity is  tensor(0.3787, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.49673252624235176
+avg test loss is  1.7371422271611594
+avg accuracy is  0.5339166668230091
+compute_distance is  tensor(97.8179, device='cuda:2')
+compute_similarity is  tensor(0.4582, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.5428973314032626
+avg test loss is  1.5480752332505388
+avg accuracy is  0.5457833334896758
+compute_distance is  tensor(82.5760, device='cuda:2')
+compute_similarity is  tensor(0.5446, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.5876969031052295
+avg test loss is  1.4119626200402469
+avg accuracy is  0.5551333334896749
+compute_distance is  tensor(71.1819, device='cuda:2')
+compute_similarity is  tensor(0.6324, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  5
+avg test entropy is  0.6284560307320247
+avg test loss is  1.3179399521111934
+avg accuracy is  0.562450000156341
+compute_distance is  tensor(62.5144, device='cuda:2')
+compute_similarity is  tensor(0.7150, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  6
+avg test entropy is  0.6642519155545021
+avg test loss is  1.2550739700606128
+avg accuracy is  0.5665500001563406
+compute_distance is  tensor(55.9881, device='cuda:2')
+compute_similarity is  tensor(0.7867, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  7
+avg test entropy is  0.6925052297013655
+avg test loss is  1.2118572363340017
+avg accuracy is  0.5709833334896735
+compute_distance is  tensor(51.0654, device='cuda:2')
+compute_similarity is  tensor(0.8441, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  8
+avg test entropy is  0.7160823049702878
+avg test loss is  1.184861862074846
+avg accuracy is  0.5719666668230067
+compute_distance is  tensor(47.3739, device='cuda:2')
+compute_similarity is  tensor(0.8870, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  9
+avg test entropy is  0.7342780512024853
+avg test loss is  1.1651873382678164
+avg accuracy is  0.5740000001563398
+compute_distance is  tensor(44.5923, device='cuda:2')
+compute_similarity is  tensor(0.9176, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+________________________________
+test distance is  tensor(42.5363, device='cuda:2')
+test similarity is  tensor(0.9385, device='cuda:2')
+test acc is  0.5751166668230066
+test loss is 1.1512271142971795
+test entropy is  0.7487850125664587
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.7487850125664587
+avg test loss is  1.1512271142971795
+avg accuracy is  0.5751166668230066
+compute_distance is  tensor(42.5363, device='cuda:2')
+compute_similarity is  tensor(0.9385, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.7592630292942275
+avg test loss is  1.141716505037442
+avg accuracy is  0.5756166668230064
+compute_distance is  tensor(41.0775, device='cuda:2')
+compute_similarity is  tensor(0.9525, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.7669261326032407
+avg test loss is  1.1357580801444267
+avg accuracy is  0.5761666668230064
+compute_distance is  tensor(40.0950, device='cuda:2')
+compute_similarity is  tensor(0.9618, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.7741592153430239
+avg test loss is  1.1307563507861929
+avg accuracy is  0.5760500001563397
+compute_distance is  tensor(39.4715, device='cuda:2')
+compute_similarity is  tensor(0.9679, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+exit early
+________________________________
+test distance is  tensor(39.1090, device='cuda:2')
+test similarity is  tensor(0.9719, device='cuda:2')
+test acc is  0.5759166668230064
+test loss is 1.127800202763665
+test entropy is  0.7793388889034165
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.7793388889034165
+avg test loss is  1.127800202763665
+avg accuracy is  0.5759166668230064
+compute_distance is  tensor(39.1090, device='cuda:2')
+compute_similarity is  tensor(0.9719, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+exit early
+reach max round
+optimization failed
+new distance ratio is 1
+mal_acc is 0.5500000005000001
+len all weights is 28
+avg_weights acc is  0.9000000005000001
+ 
+Avg Training Stats after 22 global rounds:
+Train Accuracy: 89.06% 
+
+Test Accuracy: 88.01% 
+
+
+ | Global Training Round : 23 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.42898544669151306
+current submit client idx and staleness is  1 1
+ benign loss is  0.5516746044158936
+current submit client idx and staleness is  2 1
+ benign loss is  0.325798362493515
+current submit client idx and staleness is  3 1
+ benign loss is  1.1210319995880127
+current submit client idx and staleness is  4 1
+ benign loss is  0.9469609260559082
+current submit client idx and staleness is  5 1
+ benign loss is  1.1239240169525146
+current submit client idx and staleness is  6 1
+ benign loss is  0.6165280342102051
+current submit client idx and staleness is  7 1
+ benign loss is  0.6098862886428833
+current submit client idx and staleness is  8 2
+ benign loss is  0.628288209438324
+current submit client idx and staleness is  9 2
+ benign loss is  0.4243853986263275
+current submit client idx and staleness is  10 2
+ benign loss is  0.6763585209846497
+current submit client idx and staleness is  11 2
+ benign loss is  1.0546514987945557
+current submit client idx and staleness is  12 2
+ benign loss is  0.700236976146698
+current submit client idx and staleness is  13 2
+ benign loss is  0.2791996896266937
+current submit client idx and staleness is  14 2
+ benign loss is  0.4727838635444641
+current submit client idx and staleness is  15 2
+ benign loss is  0.9403623342514038
+current submit client idx and staleness is  48 1
+here
+current submit client idx and staleness is  49 1
+here
+current submit client idx and staleness is  50 1
+here
+current submit client idx and staleness is  51 1
+here
+current submit client idx and staleness is  52 1
+here
+current submit client idx and staleness is  53 1
+here
+current submit client idx and staleness is  54 1
+here
+current submit client idx and staleness is  55 1
+here
+current submit client idx and staleness is  56 1
+here
+current submit client idx and staleness is  57 1
+here
+current submit client idx and staleness is  58 1
+here
+current submit client idx and staleness is  59 1
+here
+keys is  dict_keys([48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59])
+len of malicious models is 12
+len of model dicts is  12
+compute distance is  tensor(99.5181, device='cuda:2')
+compute similarity is  tensor(0.8514, device='cuda:2')
+compute distance is  tensor(94.1269, device='cuda:2')
+compute similarity is  tensor(0.8544, device='cuda:2')
+compute distance is  tensor(98.4226, device='cuda:2')
+compute similarity is  tensor(0.8516, device='cuda:2')
+compute distance is  tensor(93.2213, device='cuda:2')
+compute similarity is  tensor(0.8576, device='cuda:2')
+compute distance is  tensor(94.2702, device='cuda:2')
+compute similarity is  tensor(0.8558, device='cuda:2')
+compute distance is  tensor(101.0185, device='cuda:2')
+compute similarity is  tensor(0.8497, device='cuda:2')
+compute distance is  tensor(104.0797, device='cuda:2')
+compute similarity is  tensor(0.8497, device='cuda:2')
+compute distance is  tensor(99.8154, device='cuda:2')
+compute similarity is  tensor(0.8502, device='cuda:2')
+compute distance is  tensor(95.5774, device='cuda:2')
+compute similarity is  tensor(0.8561, device='cuda:2')
+compute distance is  tensor(88.8939, device='cuda:2')
+compute similarity is  tensor(0.8613, device='cuda:2')
+compute distance is  tensor(95.7525, device='cuda:2')
+compute similarity is  tensor(0.8571, device='cuda:2')
+compute distance is  tensor(98.0348, device='cuda:2')
+compute similarity is  tensor(0.8533, device='cuda:2')
+calculated distance threshold is  tensor(104.0797, device='cuda:2')
+calculated similarity threshold is  tensor(0.8497, device='cuda:2')
+mid_min is -0.55
+====================
+iteration is  0
+round is  0
+accuracy is  0.3845333334896742
+compute distance is tensor(127.4307, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.39086666682300764
+compute distance is tensor(127.7417, device='cuda:2')
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.4357333334896749
+compute distance is tensor(128.4054, device='cuda:2')
+====================
+mid_min is -0.55
+====================
+iteration is  1
+round is  0
+accuracy is  0.4779000001563419
+compute distance is tensor(127.5871, device='cuda:2')
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.47686666682300854
+compute distance is tensor(127.2260, device='cuda:2')
+====================
+________________________________
+test distance is  tensor(127.4307, device='cuda:2')
+test similarity is  tensor(0.3071, device='cuda:2')
+test acc is  0.3845333334896742
+test loss is 4.920589638163031
+test entropy is  0.3183135223636495
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.3183135223636495
+avg test loss is  4.920589638163031
+avg accuracy is  0.3845333334896742
+compute_distance is  tensor(127.4307, device='cuda:2')
+compute_similarity is  tensor(0.3071, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5550886932085318
+avg test loss is  1.7529137963806387
+avg accuracy is  0.5175500001563422
+compute_distance is  tensor(120.9547, device='cuda:2')
+compute_similarity is  tensor(0.3734, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.6353669035981204
+avg test loss is  1.4469814338028304
+avg accuracy is  0.5388500001563423
+compute_distance is  tensor(103.2235, device='cuda:2')
+compute_similarity is  tensor(0.4522, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.6307496669005229
+avg test loss is  1.7222597044922396
+avg accuracy is  0.4834833334896752
+compute_distance is  tensor(85.5382, device='cuda:2')
+compute_similarity is  tensor(0.5398, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.7266873952422315
+avg test loss is  1.2115224661476323
+avg accuracy is  0.5656833334896739
+compute_distance is  tensor(74.2118, device='cuda:2')
+compute_similarity is  tensor(0.6287, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  5
+avg test entropy is  0.7276936235712536
+avg test loss is  1.4742024851633286
+avg accuracy is  0.5026666668230088
+compute_distance is  tensor(65.1453, device='cuda:2')
+compute_similarity is  tensor(0.7120, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  6
+avg test entropy is  0.7569233089494807
+avg test loss is  1.4343018603604485
+avg accuracy is  0.5059166668230088
+compute_distance is  tensor(58.1302, device='cuda:2')
+compute_similarity is  tensor(0.7842, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  7
+avg test entropy is  0.782432763243535
+avg test loss is  1.4037174373420316
+avg accuracy is  0.5086166668230088
+compute_distance is  tensor(53.1397, device='cuda:2')
+compute_similarity is  tensor(0.8416, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  8
+avg test entropy is  0.8032396215238551
+avg test loss is  1.3793946782281912
+avg accuracy is  0.5100500001563422
+compute_distance is  tensor(49.5057, device='cuda:2')
+compute_similarity is  tensor(0.8844, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  9
+avg test entropy is  0.8203478781526277
+avg test loss is  1.3620080528482954
+avg accuracy is  0.5109833334896755
+compute_distance is  tensor(46.8934, device='cuda:2')
+compute_similarity is  tensor(0.9146, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+________________________________
+test distance is  tensor(45.0170, device='cuda:2')
+test similarity is  tensor(0.9353, device='cuda:2')
+test acc is  0.5126500001563422
+test loss is 1.3494956680833659
+test entropy is  0.8326009187871205
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.8326009187871205
+avg test loss is  1.3494956680833659
+avg accuracy is  0.5126500001563422
+compute_distance is  tensor(45.0170, device='cuda:2')
+compute_similarity is  tensor(0.9353, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.8419954661113113
+avg test loss is  1.3418678385235354
+avg accuracy is  0.5137333334896755
+compute_distance is  tensor(43.7497, device='cuda:2')
+compute_similarity is  tensor(0.9491, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.8500310099963695
+avg test loss is  1.336742532596405
+avg accuracy is  0.5139000001563422
+compute_distance is  tensor(42.8874, device='cuda:2')
+compute_similarity is  tensor(0.9582, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+exit early
+________________________________
+test distance is  tensor(42.3661, device='cuda:2')
+test similarity is  tensor(0.9642, device='cuda:2')
+test acc is  0.5139333334896755
+test loss is 1.33236659589861
+test entropy is  0.8566335972819501
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.8566335972819501
+avg test loss is  1.33236659589861
+avg accuracy is  0.5139333334896755
+compute_distance is  tensor(42.3661, device='cuda:2')
+compute_similarity is  tensor(0.9642, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+exit early
+reach max round
+optimization failed
+new distance ratio is 1
+mal_acc is 0.5000000005
+len all weights is 20
+avg_weights acc is  0.8500000005
+ 
+Avg Training Stats after 23 global rounds:
+Train Accuracy: 88.58% 
+
+Test Accuracy: 87.72% 
+
+
+ | Global Training Round : 24 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.7187212109565735
+current submit client idx and staleness is  1 1
+ benign loss is  0.7039417028427124
+current submit client idx and staleness is  2 1
+ benign loss is  0.19299425184726715
+current submit client idx and staleness is  3 1
+ benign loss is  0.6347823739051819
+current submit client idx and staleness is  4 1
+ benign loss is  0.8576130867004395
+current submit client idx and staleness is  5 1
+ benign loss is  0.7699786424636841
+current submit client idx and staleness is  6 1
+ benign loss is  0.5486690998077393
+current submit client idx and staleness is  7 1
+ benign loss is  0.7496667504310608
+current submit client idx and staleness is  48 1
+here
+current submit client idx and staleness is  49 1
+here
+current submit client idx and staleness is  50 1
+here
+current submit client idx and staleness is  51 1
+here
+current submit client idx and staleness is  52 1
+here
+current submit client idx and staleness is  53 1
+here
+current submit client idx and staleness is  54 1
+here
+current submit client idx and staleness is  55 1
+here
+current submit client idx and staleness is  56 1
+here
+current submit client idx and staleness is  57 1
+here
+current submit client idx and staleness is  58 1
+here
+current submit client idx and staleness is  59 1
+here
+keys is  dict_keys([48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59])
+len of malicious models is 12
+len of model dicts is  12
+compute distance is  tensor(100.6443, device='cuda:2')
+compute similarity is  tensor(0.8883, device='cuda:2')
+compute distance is  tensor(98.2777, device='cuda:2')
+compute similarity is  tensor(0.8878, device='cuda:2')
+compute distance is  tensor(106.2198, device='cuda:2')
+compute similarity is  tensor(0.8818, device='cuda:2')
+compute distance is  tensor(101.6618, device='cuda:2')
+compute similarity is  tensor(0.8869, device='cuda:2')
+compute distance is  tensor(97.6798, device='cuda:2')
+compute similarity is  tensor(0.8885, device='cuda:2')
+compute distance is  tensor(100.0290, device='cuda:2')
+compute similarity is  tensor(0.8867, device='cuda:2')
+compute distance is  tensor(104.3884, device='cuda:2')
+compute similarity is  tensor(0.8848, device='cuda:2')
+compute distance is  tensor(104.7845, device='cuda:2')
+compute similarity is  tensor(0.8837, device='cuda:2')
+compute distance is  tensor(100.1375, device='cuda:2')
+compute similarity is  tensor(0.8878, device='cuda:2')
+compute distance is  tensor(92.4000, device='cuda:2')
+compute similarity is  tensor(0.8916, device='cuda:2')
+compute distance is  tensor(105.9562, device='cuda:2')
+compute similarity is  tensor(0.8829, device='cuda:2')
+compute distance is  tensor(106.2152, device='cuda:2')
+compute similarity is  tensor(0.8840, device='cuda:2')
+calculated distance threshold is  tensor(106.2198, device='cuda:2')
+calculated similarity threshold is  tensor(0.8818, device='cuda:2')
+mid_min is -0.55
+====================
+iteration is  0
+round is  0
+accuracy is  0.42618333348967474
+compute distance is tensor(127.8705, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.35423333348967384
+compute distance is tensor(127.8232, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  2
+accuracy is  0.4625833334896751
+compute distance is tensor(127.1402, device='cuda:2')
+====================
+mid_min is -0.55
+====================
+iteration is  1
+round is  0
+accuracy is  0.3831000001563409
+compute distance is tensor(127.1464, device='cuda:2')
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.4805166668230086
+compute distance is tensor(127.2809, device='cuda:2')
+====================
+________________________________
+test distance is  tensor(127.8232, device='cuda:2')
+test similarity is  tensor(0.3074, device='cuda:2')
+test acc is  0.35423333348967384
+test loss is 5.6488025185904265
+test entropy is  0.3532348155562303
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.3532348155562303
+avg test loss is  5.6488025185904265
+avg accuracy is  0.35423333348967384
+compute_distance is  tensor(127.8232, device='cuda:2')
+compute_similarity is  tensor(0.3074, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.633991750223296
+avg test loss is  1.9043074273097236
+avg accuracy is  0.4915333334896754
+compute_distance is  tensor(123.9588, device='cuda:2')
+compute_similarity is  tensor(0.3723, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.7141615038614537
+avg test loss is  1.5890673075530575
+avg accuracy is  0.5149833334896755
+compute_distance is  tensor(105.6406, device='cuda:2')
+compute_similarity is  tensor(0.4506, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.6938933445764249
+avg test loss is  1.9474237035078281
+avg accuracy is  0.4546666668230084
+compute_distance is  tensor(85.8845, device='cuda:2')
+compute_similarity is  tensor(0.5383, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.8048230015646929
+avg test loss is  1.3474634657028133
+avg accuracy is  0.5404333334896757
+compute_distance is  tensor(74.0921, device='cuda:2')
+compute_similarity is  tensor(0.6271, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  5
+avg test entropy is  0.8017789683362314
+avg test loss is  1.6586982934459695
+avg accuracy is  0.4716500001563419
+compute_distance is  tensor(63.7906, device='cuda:2')
+compute_similarity is  tensor(0.7109, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  6
+avg test entropy is  0.8794578033596722
+avg test loss is  1.2154801852032067
+avg accuracy is  0.5591666668230079
+compute_distance is  tensor(56.0459, device='cuda:2')
+compute_similarity is  tensor(0.7845, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  7
+avg test entropy is  0.8785747430090711
+avg test loss is  1.518549159137425
+avg accuracy is  0.48238333348967527
+compute_distance is  tensor(51.3804, device='cuda:2')
+compute_similarity is  tensor(0.8418, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(51.3804, device='cuda:2')
+test similarity is  tensor(0.8418, device='cuda:2')
+test acc is  0.48238333348967527
+test loss is 1.518549159137425
+test entropy is  0.8785747430090711
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.8785747430090711
+avg test loss is  1.518549159137425
+avg accuracy is  0.48238333348967527
+compute_distance is  tensor(51.3804, device='cuda:2')
+compute_similarity is  tensor(0.8418, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(51.3804, device='cuda:2')
+test similarity is  tensor(0.8418, device='cuda:2')
+test acc is  0.48238333348967527
+test loss is 1.518549159137425
+test entropy is  0.8785747430090711
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.8785747430090711
+avg test loss is  1.518549159137425
+avg accuracy is  0.48238333348967527
+compute_distance is  tensor(51.3804, device='cuda:2')
+compute_similarity is  tensor(0.8418, device='cuda:2')
+++++++++++++++++++++
+reach max round
+optimization failed
+new distance ratio is 1
+mal_acc is 0.6500000005000001
+len all weights is 52
+avg_weights acc is  0.9000000005000001
+ 
+Avg Training Stats after 24 global rounds:
+Train Accuracy: 89.32% 
+
+Test Accuracy: 88.16% 
+
+
+ | Global Training Round : 25 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.6261720061302185
+current submit client idx and staleness is  1 1
+ benign loss is  0.29172587394714355
+current submit client idx and staleness is  2 1
+ benign loss is  0.35716453194618225
+current submit client idx and staleness is  3 1
+ benign loss is  1.4402790069580078
+current submit client idx and staleness is  4 1
+ benign loss is  0.9785619974136353
+current submit client idx and staleness is  5 1
+ benign loss is  0.6178518533706665
+current submit client idx and staleness is  6 1
+ benign loss is  0.7181936502456665
+current submit client idx and staleness is  7 1
+ benign loss is  0.5523949861526489
+current submit client idx and staleness is  8 2
+ benign loss is  0.5732680559158325
+current submit client idx and staleness is  9 2
+ benign loss is  0.6240997314453125
+current submit client idx and staleness is  10 2
+ benign loss is  1.0146405696868896
+current submit client idx and staleness is  11 2
+ benign loss is  1.2538343667984009
+current submit client idx and staleness is  12 2
+ benign loss is  0.8890174031257629
+current submit client idx and staleness is  13 2
+ benign loss is  0.4590812623500824
+current submit client idx and staleness is  14 2
+ benign loss is  0.5218107104301453
+current submit client idx and staleness is  15 2
+ benign loss is  1.412449598312378
+current submit client idx and staleness is  16 3
+ benign loss is  0.27462461590766907
+current submit client idx and staleness is  17 3
+ benign loss is  1.155663251876831
+current submit client idx and staleness is  18 3
+ benign loss is  0.7078825831413269
+current submit client idx and staleness is  19 3
+ benign loss is  0.33605292439460754
+current submit client idx and staleness is  20 3
+ benign loss is  0.33602672815322876
+current submit client idx and staleness is  21 3
+ benign loss is  0.8562960624694824
+current submit client idx and staleness is  22 3
+ benign loss is  0.4184868335723877
+current submit client idx and staleness is  23 3
+ benign loss is  0.5911463499069214
+current submit client idx and staleness is  24 4
+ benign loss is  0.1408109962940216
+current submit client idx and staleness is  25 4
+ benign loss is  0.6890560388565063
+current submit client idx and staleness is  26 4
+ benign loss is  0.5734065175056458
+current submit client idx and staleness is  27 4
+ benign loss is  0.44735613465309143
+current submit client idx and staleness is  28 4
+ benign loss is  1.0381429195404053
+current submit client idx and staleness is  29 4
+ benign loss is  0.4532855451107025
+current submit client idx and staleness is  30 4
+ benign loss is  0.3538246154785156
+current submit client idx and staleness is  31 4
+ benign loss is  0.28715208172798157
+current submit client idx and staleness is  40 6
+ benign loss is  0.21963635087013245
+current submit client idx and staleness is  41 6
+ benign loss is  0.3931223750114441
+current submit client idx and staleness is  42 6
+ benign loss is  0.31289416551589966
+current submit client idx and staleness is  43 6
+ benign loss is  0.6255004405975342
+current submit client idx and staleness is  44 6
+ benign loss is  0.5229641795158386
+current submit client idx and staleness is  45 6
+ benign loss is  0.7412934899330139
+current submit client idx and staleness is  46 6
+ benign loss is  0.7579176425933838
+current submit client idx and staleness is  47 6
+ benign loss is  0.20533080399036407
+current submit client idx and staleness is  48 1
+here
+current submit client idx and staleness is  49 1
+here
+current submit client idx and staleness is  50 1
+here
+current submit client idx and staleness is  51 1
+here
+current submit client idx and staleness is  52 1
+here
+current submit client idx and staleness is  53 1
+here
+current submit client idx and staleness is  54 1
+here
+current submit client idx and staleness is  55 1
+here
+current submit client idx and staleness is  56 1
+here
+current submit client idx and staleness is  57 1
+here
+current submit client idx and staleness is  58 1
+here
+current submit client idx and staleness is  59 1
+here
+keys is  dict_keys([48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59])
+len of malicious models is 12
+len of model dicts is  12
+compute distance is  tensor(100.7803, device='cuda:2')
+compute similarity is  tensor(0.8944, device='cuda:2')
+compute distance is  tensor(100.0901, device='cuda:2')
+compute similarity is  tensor(0.8938, device='cuda:2')
+compute distance is  tensor(109.6089, device='cuda:2')
+compute similarity is  tensor(0.8874, device='cuda:2')
+compute distance is  tensor(96.2523, device='cuda:2')
+compute similarity is  tensor(0.8987, device='cuda:2')
+compute distance is  tensor(99.7744, device='cuda:2')
+compute similarity is  tensor(0.8951, device='cuda:2')
+compute distance is  tensor(102.9312, device='cuda:2')
+compute similarity is  tensor(0.8920, device='cuda:2')
+compute distance is  tensor(104.5374, device='cuda:2')
+compute similarity is  tensor(0.8932, device='cuda:2')
+compute distance is  tensor(103.0618, device='cuda:2')
+compute similarity is  tensor(0.8930, device='cuda:2')
+compute distance is  tensor(99.2523, device='cuda:2')
+compute similarity is  tensor(0.8960, device='cuda:2')
+compute distance is  tensor(91.9471, device='cuda:2')
+compute similarity is  tensor(0.9014, device='cuda:2')
+compute distance is  tensor(107.7945, device='cuda:2')
+compute similarity is  tensor(0.8895, device='cuda:2')
+compute distance is  tensor(99.3512, device='cuda:2')
+compute similarity is  tensor(0.8950, device='cuda:2')
+calculated distance threshold is  tensor(109.6089, device='cuda:2')
+calculated similarity threshold is  tensor(0.8874, device='cuda:2')
+mid_min is -0.55
+====================
+iteration is  0
+round is  0
+accuracy is  0.46346666682300847
+compute distance is tensor(127.1169, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.4751500001563419
+compute distance is tensor(128.2261, device='cuda:2')
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.49763333348967537
+compute distance is tensor(127.4281, device='cuda:2')
+====================
+mid_min is -0.55
+====================
+iteration is  1
+round is  0
+accuracy is  0.3363166668230069
+compute distance is tensor(128.1726, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.4544000001563417
+compute distance is tensor(127.4202, device='cuda:2')
+====================
+________________________________
+test distance is  tensor(128.1726, device='cuda:2')
+test similarity is  tensor(0.3100, device='cuda:2')
+test acc is  0.3363166668230069
+test loss is 5.626810470369579
+test entropy is  0.31998415863208934
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.31998415863208934
+avg test loss is  5.626810470369579
+avg accuracy is  0.3363166668230069
+compute_distance is  tensor(128.1726, device='cuda:2')
+compute_similarity is  tensor(0.3100, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5911697456513895
+avg test loss is  1.8784213177939213
+avg accuracy is  0.47663333348967524
+compute_distance is  tensor(124.6081, device='cuda:2')
+compute_similarity is  tensor(0.3748, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.6666574745353605
+avg test loss is  1.548820626761105
+avg accuracy is  0.5024500001563421
+compute_distance is  tensor(106.1987, device='cuda:2')
+compute_similarity is  tensor(0.4526, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.6442090815572596
+avg test loss is  1.8551757899937091
+avg accuracy is  0.44641666682300835
+compute_distance is  tensor(87.4623, device='cuda:2')
+compute_similarity is  tensor(0.5392, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.7495793261126414
+avg test loss is  1.2837408767071867
+avg accuracy is  0.532366666823009
+compute_distance is  tensor(76.0693, device='cuda:2')
+compute_similarity is  tensor(0.6272, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  5
+avg test entropy is  0.7429548446684758
+avg test loss is  1.5691792436245917
+avg accuracy is  0.4669833334896752
+compute_distance is  tensor(66.4947, device='cuda:2')
+compute_similarity is  tensor(0.7100, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(66.4947, device='cuda:2')
+test similarity is  tensor(0.7100, device='cuda:2')
+test acc is  0.4669833334896752
+test loss is 1.5691792436245917
+test entropy is  0.7429548446684758
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.7429548446684758
+avg test loss is  1.5691792436245917
+avg accuracy is  0.4669833334896752
+compute_distance is  tensor(66.4947, device='cuda:2')
+compute_similarity is  tensor(0.7100, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(66.4947, device='cuda:2')
+test similarity is  tensor(0.7100, device='cuda:2')
+test acc is  0.4669833334896752
+test loss is 1.5691792436245917
+test entropy is  0.7429548446684758
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.7429548446684758
+avg test loss is  1.5691792436245917
+avg accuracy is  0.4669833334896752
+compute_distance is  tensor(66.4947, device='cuda:2')
+compute_similarity is  tensor(0.7100, device='cuda:2')
+++++++++++++++++++++
+reach max round
+optimization failed
+new distance ratio is 1
+mal_acc is 0.7000000005
+len all weights is 28
+avg_weights acc is  0.9000000005000001
+ 
+Avg Training Stats after 25 global rounds:
+Train Accuracy: 89.10% 
+
+Test Accuracy: 87.77% 
+
+
+ | Global Training Round : 26 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.9243242144584656
+current submit client idx and staleness is  1 1
+ benign loss is  0.7508665323257446
+current submit client idx and staleness is  2 1
+ benign loss is  0.15557661652565002
+current submit client idx and staleness is  3 1
+ benign loss is  0.9797126650810242
+current submit client idx and staleness is  4 1
+ benign loss is  0.7806869149208069
+current submit client idx and staleness is  5 1
+ benign loss is  0.7740087509155273
+current submit client idx and staleness is  6 1
+ benign loss is  0.6269962191581726
+current submit client idx and staleness is  7 1
+ benign loss is  0.7229101061820984
+current submit client idx and staleness is  32 5
+ benign loss is  0.503099262714386
+current submit client idx and staleness is  33 5
+ benign loss is  0.038211606442928314
+current submit client idx and staleness is  34 5
+ benign loss is  0.6522916555404663
+current submit client idx and staleness is  35 5
+ benign loss is  0.6048190593719482
+current submit client idx and staleness is  36 5
+ benign loss is  0.5643247365951538
+current submit client idx and staleness is  37 5
+ benign loss is  0.6768018007278442
+current submit client idx and staleness is  38 5
+ benign loss is  0.5407254695892334
+current submit client idx and staleness is  39 5
+ benign loss is  0.42366307973861694
+current submit client idx and staleness is  48 1
+here
+current submit client idx and staleness is  49 1
+here
+current submit client idx and staleness is  50 1
+here
+current submit client idx and staleness is  51 1
+here
+current submit client idx and staleness is  52 1
+here
+current submit client idx and staleness is  53 1
+here
+current submit client idx and staleness is  54 1
+here
+current submit client idx and staleness is  55 1
+here
+current submit client idx and staleness is  56 1
+here
+current submit client idx and staleness is  57 1
+here
+current submit client idx and staleness is  58 1
+here
+current submit client idx and staleness is  59 1
+here
+keys is  dict_keys([48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59])
+len of malicious models is 12
+len of model dicts is  12
+compute distance is  tensor(97.7774, device='cuda:2')
+compute similarity is  tensor(0.9371, device='cuda:2')
+compute distance is  tensor(89.0433, device='cuda:2')
+compute similarity is  tensor(0.9416, device='cuda:2')
+compute distance is  tensor(102.6946, device='cuda:2')
+compute similarity is  tensor(0.9321, device='cuda:2')
+compute distance is  tensor(90.1407, device='cuda:2')
+compute similarity is  tensor(0.9417, device='cuda:2')
+compute distance is  tensor(94.9549, device='cuda:2')
+compute similarity is  tensor(0.9377, device='cuda:2')
+compute distance is  tensor(102.0400, device='cuda:2')
+compute similarity is  tensor(0.9338, device='cuda:2')
+compute distance is  tensor(94.7604, device='cuda:2')
+compute similarity is  tensor(0.9387, device='cuda:2')
+compute distance is  tensor(94.1216, device='cuda:2')
+compute similarity is  tensor(0.9371, device='cuda:2')
+compute distance is  tensor(92.3164, device='cuda:2')
+compute similarity is  tensor(0.9404, device='cuda:2')
+compute distance is  tensor(93.4196, device='cuda:2')
+compute similarity is  tensor(0.9406, device='cuda:2')
+compute distance is  tensor(96.5138, device='cuda:2')
+compute similarity is  tensor(0.9389, device='cuda:2')
+compute distance is  tensor(99.8137, device='cuda:2')
+compute similarity is  tensor(0.9340, device='cuda:2')
+calculated distance threshold is  tensor(102.6946, device='cuda:2')
+calculated similarity threshold is  tensor(0.9321, device='cuda:2')
+mid_min is -0.55
+====================
+iteration is  0
+round is  0
+accuracy is  0.522116666823009
+compute distance is tensor(127.7451, device='cuda:2')
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.48631666682300867
+compute distance is tensor(127.4897, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  2
+accuracy is  0.4068166668230078
+compute distance is tensor(127.6940, device='cuda:2')
+====================
+succ_min + 1
+mid_min is -0.6050000000000001
+====================
+iteration is  1
+round is  0
+accuracy is  0.5029666668230087
+compute distance is tensor(140.5657, device='cuda:2')
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.24198333348967135
+compute distance is tensor(141.3721, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  2
+accuracy is  0.4863833334896753
+compute distance is tensor(140.5649, device='cuda:2')
+====================
+mid_min is -0.6655000000000002
+====================
+iteration is  2
+round is  0
+accuracy is  0.4257500001563414
+compute distance is tensor(154.2385, device='cuda:2')
+====================
+________________________________
+test distance is  tensor(141.3721, device='cuda:2')
+test similarity is  tensor(0.2896, device='cuda:2')
+test acc is  0.24198333348967135
+test loss is 9.149481975701827
+test entropy is  0.29908193720937537
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.29908193720937537
+avg test loss is  9.149481975701827
+avg accuracy is  0.24198333348967135
+compute_distance is  tensor(141.3721, device='cuda:2')
+compute_similarity is  tensor(0.2896, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.7013871651976856
+avg test loss is  2.1807900786654018
+avg accuracy is  0.3968000001563411
+compute_distance is  tensor(141.9378, device='cuda:2')
+compute_similarity is  tensor(0.3496, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.7731399220317158
+avg test loss is  1.845679104073978
+avg accuracy is  0.4136000001563413
+compute_distance is  tensor(121.9326, device='cuda:2')
+compute_similarity is  tensor(0.4242, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.8210153561919483
+avg test loss is  1.6556303171969171
+avg accuracy is  0.4283333334896748
+compute_distance is  tensor(103.4592, device='cuda:2')
+compute_similarity is  tensor(0.5088, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.864957163138176
+avg test loss is  1.5274032325124436
+avg accuracy is  0.43931666682300824
+compute_distance is  tensor(88.0864, device='cuda:2')
+compute_similarity is  tensor(0.5981, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(88.0864, device='cuda:2')
+test similarity is  tensor(0.5981, device='cuda:2')
+test acc is  0.43931666682300824
+test loss is 1.5274032325124436
+test entropy is  0.864957163138176
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.864957163138176
+avg test loss is  1.5274032325124436
+avg accuracy is  0.43931666682300824
+compute_distance is  tensor(88.0864, device='cuda:2')
+compute_similarity is  tensor(0.5981, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(88.0864, device='cuda:2')
+test similarity is  tensor(0.5981, device='cuda:2')
+test acc is  0.43931666682300824
+test loss is 1.5274032325124436
+test entropy is  0.864957163138176
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.864957163138176
+avg test loss is  1.5274032325124436
+avg accuracy is  0.43931666682300824
+compute_distance is  tensor(88.0864, device='cuda:2')
+compute_similarity is  tensor(0.5981, device='cuda:2')
+++++++++++++++++++++
+reach max round
+optimization failed
+new distance ratio is 1
+mal_acc is 0.3500000005
+len all weights is 28
+avg_weights acc is  0.9000000005000001
+ 
+Avg Training Stats after 26 global rounds:
+Train Accuracy: 88.96% 
+
+Test Accuracy: 87.67% 
+
+
+ | Global Training Round : 27 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.9022003412246704
+current submit client idx and staleness is  1 1
+ benign loss is  0.5057168006896973
+current submit client idx and staleness is  2 1
+ benign loss is  0.49941205978393555
+current submit client idx and staleness is  3 1
+ benign loss is  1.2325760126113892
+current submit client idx and staleness is  4 1
+ benign loss is  0.9578279256820679
+current submit client idx and staleness is  5 1
+ benign loss is  1.0868792533874512
+current submit client idx and staleness is  6 1
+ benign loss is  0.7381986379623413
+current submit client idx and staleness is  7 1
+ benign loss is  0.6324324607849121
+current submit client idx and staleness is  8 2
+ benign loss is  0.5315250754356384
+current submit client idx and staleness is  9 2
+ benign loss is  0.7230607271194458
+current submit client idx and staleness is  10 2
+ benign loss is  0.7752154469490051
+current submit client idx and staleness is  11 2
+ benign loss is  1.0095055103302002
+current submit client idx and staleness is  12 2
+ benign loss is  0.7976144552230835
+current submit client idx and staleness is  13 2
+ benign loss is  0.49603089690208435
+current submit client idx and staleness is  14 2
+ benign loss is  0.4292726516723633
+current submit client idx and staleness is  15 2
+ benign loss is  0.9244844317436218
+current submit client idx and staleness is  48 1
+here
+current submit client idx and staleness is  49 1
+here
+current submit client idx and staleness is  50 1
+here
+current submit client idx and staleness is  51 1
+here
+current submit client idx and staleness is  52 1
+here
+current submit client idx and staleness is  53 1
+here
+current submit client idx and staleness is  54 1
+here
+current submit client idx and staleness is  55 1
+here
+current submit client idx and staleness is  56 1
+here
+current submit client idx and staleness is  57 1
+here
+current submit client idx and staleness is  58 1
+here
+current submit client idx and staleness is  59 1
+here
+keys is  dict_keys([48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59])
+len of malicious models is 12
+len of model dicts is  12
+compute distance is  tensor(97.3053, device='cuda:2')
+compute similarity is  tensor(0.9107, device='cuda:2')
+compute distance is  tensor(97.3956, device='cuda:2')
+compute similarity is  tensor(0.9100, device='cuda:2')
+compute distance is  tensor(101.3238, device='cuda:2')
+compute similarity is  tensor(0.9075, device='cuda:2')
+compute distance is  tensor(93.8193, device='cuda:2')
+compute similarity is  tensor(0.9143, device='cuda:2')
+compute distance is  tensor(97.1607, device='cuda:2')
+compute similarity is  tensor(0.9084, device='cuda:2')
+compute distance is  tensor(93.1142, device='cuda:2')
+compute similarity is  tensor(0.9148, device='cuda:2')
+compute distance is  tensor(105.1401, device='cuda:2')
+compute similarity is  tensor(0.9075, device='cuda:2')
+compute distance is  tensor(96.8763, device='cuda:2')
+compute similarity is  tensor(0.9116, device='cuda:2')
+compute distance is  tensor(93.8438, device='cuda:2')
+compute similarity is  tensor(0.9140, device='cuda:2')
+compute distance is  tensor(96.2538, device='cuda:2')
+compute similarity is  tensor(0.9135, device='cuda:2')
+compute distance is  tensor(100.7574, device='cuda:2')
+compute similarity is  tensor(0.9112, device='cuda:2')
+compute distance is  tensor(94.9840, device='cuda:2')
+compute similarity is  tensor(0.9131, device='cuda:2')
+calculated distance threshold is  tensor(105.1401, device='cuda:2')
+calculated similarity threshold is  tensor(0.9075, device='cuda:2')
+mid_min is -0.55
+====================
+iteration is  0
+round is  0
+accuracy is  0.48978333348967534
+compute distance is tensor(126.6478, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.520866666823009
+compute distance is tensor(127.7759, device='cuda:2')
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.46371666682300844
+compute distance is tensor(126.9985, device='cuda:2')
+====================
+succ_min + 1
+mid_min is -0.6050000000000001
+====================
+iteration is  1
+round is  0
+accuracy is  0.3813000001563409
+compute distance is tensor(139.2311, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.3831000001563409
+compute distance is tensor(140.4541, device='cuda:2')
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.39401666682300773
+compute distance is tensor(140.5701, device='cuda:2')
+====================
+________________________________
+test distance is  tensor(139.2311, device='cuda:2')
+test similarity is  tensor(0.3068, device='cuda:2')
+test acc is  0.3813000001563409
+test loss is 4.719533058626057
+test entropy is  0.3522851082847825
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.3522851082847825
+avg test loss is  4.719533058626057
+avg accuracy is  0.3813000001563409
+compute_distance is  tensor(139.2311, device='cuda:2')
+compute_similarity is  tensor(0.3068, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.583965868679191
+avg test loss is  1.8153265607890798
+avg accuracy is  0.5200000001563423
+compute_distance is  tensor(130.3501, device='cuda:2')
+compute_similarity is  tensor(0.3710, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.6670280578039857
+avg test loss is  1.4993612454898322
+avg accuracy is  0.5451666668230091
+compute_distance is  tensor(110.5033, device='cuda:2')
+compute_similarity is  tensor(0.4477, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.6611640840006281
+avg test loss is  1.7614364384461059
+avg accuracy is  0.4869833334896754
+compute_distance is  tensor(90.4349, device='cuda:2')
+compute_similarity is  tensor(0.5337, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.7577097451508935
+avg test loss is  1.2418138583712994
+avg accuracy is  0.574933333489673
+compute_distance is  tensor(78.0095, device='cuda:2')
+compute_similarity is  tensor(0.6215, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  5
+avg test entropy is  0.7685190551062383
+avg test loss is  1.497813657085016
+avg accuracy is  0.5043333334896755
+compute_distance is  tensor(67.7088, device='cuda:2')
+compute_similarity is  tensor(0.7051, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  6
+avg test entropy is  0.8008466472884993
+avg test loss is  1.4464714913480063
+avg accuracy is  0.5074666668230088
+compute_distance is  tensor(60.1130, device='cuda:2')
+compute_similarity is  tensor(0.7782, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  7
+avg test entropy is  0.8306230921099689
+avg test loss is  1.4078979974489476
+avg accuracy is  0.5090833334896755
+compute_distance is  tensor(54.7078, device='cuda:2')
+compute_similarity is  tensor(0.8370, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  8
+avg test entropy is  0.856056800147872
+avg test loss is  1.377979467227769
+avg accuracy is  0.5102000001563421
+compute_distance is  tensor(50.8264, device='cuda:2')
+compute_similarity is  tensor(0.8813, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  9
+avg test entropy is  0.8763771205822796
+avg test loss is  1.355309488422581
+avg accuracy is  0.5119666668230088
+compute_distance is  tensor(48.1068, device='cuda:2')
+compute_similarity is  tensor(0.9129, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+________________________________
+test distance is  tensor(46.2406, device='cuda:2')
+test similarity is  tensor(0.9345, device='cuda:2')
+test acc is  0.5125500001563422
+test loss is 1.3390802106877635
+test entropy is  0.8930292928269677
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.8930292928269677
+avg test loss is  1.3390802106877635
+avg accuracy is  0.5125500001563422
+compute_distance is  tensor(46.2406, device='cuda:2')
+compute_similarity is  tensor(0.9345, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.9040805588144738
+avg test loss is  1.329317300304421
+avg accuracy is  0.5128666668230089
+compute_distance is  tensor(45.0009, device='cuda:2')
+compute_similarity is  tensor(0.9491, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.9149414926830893
+avg test loss is  1.3181890598746504
+avg accuracy is  0.5136000001563422
+compute_distance is  tensor(44.1313, device='cuda:2')
+compute_similarity is  tensor(0.9587, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.9219882253771906
+avg test loss is  1.3110848902893473
+avg accuracy is  0.5143333334896756
+compute_distance is  tensor(43.6005, device='cuda:2')
+compute_similarity is  tensor(0.9650, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.9291691528454519
+avg test loss is  1.3055295523549957
+avg accuracy is  0.5149000001563422
+compute_distance is  tensor(43.3134, device='cuda:2')
+compute_similarity is  tensor(0.9692, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+exit early
+________________________________
+test distance is  tensor(43.2187, device='cuda:2')
+test similarity is  tensor(0.9720, device='cuda:2')
+test acc is  0.5153166668230089
+test loss is 1.300939756542889
+test entropy is  0.9335097062435231
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.9335097062435231
+avg test loss is  1.300939756542889
+avg accuracy is  0.5153166668230089
+compute_distance is  tensor(43.2187, device='cuda:2')
+compute_similarity is  tensor(0.9720, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+exit early
+reach max round
+optimization failed
+new distance ratio is 1
+mal_acc is 0.5000000005
+len all weights is 28
+avg_weights acc is  0.9000000005000001
+ 
+Avg Training Stats after 27 global rounds:
+Train Accuracy: 89.31% 
+
+Test Accuracy: 88.10% 
+
+
+ | Global Training Round : 28 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.8103256225585938
+current submit client idx and staleness is  1 1
+ benign loss is  0.46150511503219604
+current submit client idx and staleness is  2 1
+ benign loss is  0.08787158131599426
+current submit client idx and staleness is  3 1
+ benign loss is  1.0689127445220947
+current submit client idx and staleness is  4 1
+ benign loss is  0.8249984979629517
+current submit client idx and staleness is  5 1
+ benign loss is  1.2507598400115967
+current submit client idx and staleness is  6 1
+ benign loss is  0.529441237449646
+current submit client idx and staleness is  7 1
+ benign loss is  0.8398100733757019
+current submit client idx and staleness is  16 3
+ benign loss is  0.35965633392333984
+current submit client idx and staleness is  17 3
+ benign loss is  0.9688075184822083
+current submit client idx and staleness is  18 3
+ benign loss is  0.3714907169342041
+current submit client idx and staleness is  19 3
+ benign loss is  0.6884557008743286
+current submit client idx and staleness is  20 3
+ benign loss is  0.25984448194503784
+current submit client idx and staleness is  21 3
+ benign loss is  0.8169046640396118
+current submit client idx and staleness is  22 3
+ benign loss is  0.3697405457496643
+current submit client idx and staleness is  23 3
+ benign loss is  0.4723443388938904
+current submit client idx and staleness is  48 1
+here
+current submit client idx and staleness is  49 1
+here
+current submit client idx and staleness is  50 1
+here
+current submit client idx and staleness is  51 1
+here
+current submit client idx and staleness is  52 1
+here
+current submit client idx and staleness is  53 1
+here
+current submit client idx and staleness is  54 1
+here
+current submit client idx and staleness is  55 1
+here
+current submit client idx and staleness is  56 1
+here
+current submit client idx and staleness is  57 1
+here
+current submit client idx and staleness is  58 1
+here
+current submit client idx and staleness is  59 1
+here
+keys is  dict_keys([48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59])
+len of malicious models is 12
+len of model dicts is  12
+compute distance is  tensor(87.6510, device='cuda:2')
+compute similarity is  tensor(0.9301, device='cuda:2')
+compute distance is  tensor(91.4371, device='cuda:2')
+compute similarity is  tensor(0.9261, device='cuda:2')
+compute distance is  tensor(101.3156, device='cuda:2')
+compute similarity is  tensor(0.9191, device='cuda:2')
+compute distance is  tensor(94.4217, device='cuda:2')
+compute similarity is  tensor(0.9256, device='cuda:2')
+compute distance is  tensor(94.9184, device='cuda:2')
+compute similarity is  tensor(0.9220, device='cuda:2')
+compute distance is  tensor(93.5265, device='cuda:2')
+compute similarity is  tensor(0.9252, device='cuda:2')
+compute distance is  tensor(95.6925, device='cuda:2')
+compute similarity is  tensor(0.9250, device='cuda:2')
+compute distance is  tensor(93.5566, device='cuda:2')
+compute similarity is  tensor(0.9239, device='cuda:2')
+compute distance is  tensor(91.2978, device='cuda:2')
+compute similarity is  tensor(0.9273, device='cuda:2')
+compute distance is  tensor(101.5406, device='cuda:2')
+compute similarity is  tensor(0.9209, device='cuda:2')
+compute distance is  tensor(100.0258, device='cuda:2')
+compute similarity is  tensor(0.9222, device='cuda:2')
+compute distance is  tensor(92.7687, device='cuda:2')
+compute similarity is  tensor(0.9251, device='cuda:2')
+calculated distance threshold is  tensor(101.5406, device='cuda:2')
+calculated similarity threshold is  tensor(0.9191, device='cuda:2')
+mid_min is -0.55
+====================
+iteration is  0
+round is  0
+accuracy is  0.4774000001563419
+compute distance is tensor(127.6220, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.4498166668230083
+compute distance is tensor(127.6079, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  2
+accuracy is  0.43116666682300814
+compute distance is tensor(127.9018, device='cuda:2')
+====================
+succ_min + 1
+mid_min is -0.55
+====================
+iteration is  1
+round is  0
+accuracy is  0.3957833334896744
+compute distance is tensor(127.0613, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  1
+round is  1
+accuracy is  0.4735166668230086
+compute distance is tensor(127.0952, device='cuda:2')
+====================
+________________________________
+test distance is  tensor(127.0613, device='cuda:2')
+test similarity is  tensor(0.3165, device='cuda:2')
+test acc is  0.3957833334896744
+test loss is 4.820980029065471
+test entropy is  0.30798216079915763
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.30798216079915763
+avg test loss is  4.820980029065471
+avg accuracy is  0.3957833334896744
+compute_distance is  tensor(127.0613, device='cuda:2')
+compute_similarity is  tensor(0.3165, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5403575332307103
+avg test loss is  1.7588047136757166
+avg accuracy is  0.5219500001563423
+compute_distance is  tensor(120.8701, device='cuda:2')
+compute_similarity is  tensor(0.3848, device='cuda:2')
+++++++++++++++++++++
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.6163954662679355
+avg test loss is  1.4614969201560721
+avg accuracy is  0.5423833334896757
+compute_distance is  tensor(103.1712, device='cuda:2')
+compute_similarity is  tensor(0.4656, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.6015498958099117
+avg test loss is  1.730795913159466
+avg accuracy is  0.49161666682300875
+compute_distance is  tensor(84.9726, device='cuda:2')
+compute_similarity is  tensor(0.5546, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.6987536463147795
+avg test loss is  1.2196831466800877
+avg accuracy is  0.568416666823007
+compute_distance is  tensor(73.6759, device='cuda:2')
+compute_similarity is  tensor(0.6438, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  5
+avg test entropy is  0.6963531113763862
+avg test loss is  1.4677198304931747
+avg accuracy is  0.5108500001563422
+compute_distance is  tensor(64.2395, device='cuda:2')
+compute_similarity is  tensor(0.7268, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  6
+avg test entropy is  0.7250608672211165
+avg test loss is  1.421252687539119
+avg accuracy is  0.5146166668230089
+compute_distance is  tensor(57.1221, device='cuda:2')
+compute_similarity is  tensor(0.7975, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  7
+avg test entropy is  0.7506836671819056
+avg test loss is  1.3858648372103157
+avg accuracy is  0.5164500001563422
+compute_distance is  tensor(51.8953, device='cuda:2')
+compute_similarity is  tensor(0.8532, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  8
+avg test entropy is  0.772646949997843
+avg test loss is  1.3576110717711418
+avg accuracy is  0.5186666668230089
+compute_distance is  tensor(48.1362, device='cuda:2')
+compute_similarity is  tensor(0.8942, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  9
+avg test entropy is  0.7892121684703746
+avg test loss is  1.3374821107143533
+avg accuracy is  0.5204333334896756
+compute_distance is  tensor(45.4464, device='cuda:2')
+compute_similarity is  tensor(0.9230, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+________________________________
+test distance is  tensor(43.5539, device='cuda:2')
+test similarity is  tensor(0.9425, device='cuda:2')
+test acc is  0.520916666823009
+test loss is 1.3252280866032216
+test entropy is  0.8028374901458398
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.8028374901458398
+avg test loss is  1.3252280866032216
+avg accuracy is  0.520916666823009
+compute_distance is  tensor(43.5539, device='cuda:2')
+compute_similarity is  tensor(0.9425, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.8122355182414879
+avg test loss is  1.3165937846403386
+avg accuracy is  0.5210333334896756
+compute_distance is  tensor(42.2413, device='cuda:2')
+compute_similarity is  tensor(0.9554, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.8192424682030546
+avg test loss is  1.3103184427406742
+avg accuracy is  0.5211833334896756
+compute_distance is  tensor(41.3697, device='cuda:2')
+compute_similarity is  tensor(0.9639, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+exit early
+________________________________
+test distance is  tensor(40.7713, device='cuda:2')
+test similarity is  tensor(0.9695, device='cuda:2')
+test acc is  0.5216333334896756
+test loss is 1.3054168155071324
+test entropy is  0.8258214765774415
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.8258214765774415
+avg test loss is  1.3054168155071324
+avg accuracy is  0.5216333334896756
+compute_distance is  tensor(40.7713, device='cuda:2')
+compute_similarity is  tensor(0.9695, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+exit early
+reach max round
+optimization failed
+new distance ratio is 1
+mal_acc is 0.5000000005
+len all weights is 36
+avg_weights acc is  0.9000000005000001
+ 
+Avg Training Stats after 28 global rounds:
+Train Accuracy: 89.56% 
+
+Test Accuracy: 88.29% 
+
+
+ | Global Training Round : 29 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.6588334441184998
+current submit client idx and staleness is  1 1
+ benign loss is  0.8617086410522461
+current submit client idx and staleness is  2 1
+ benign loss is  0.296377956867218
+current submit client idx and staleness is  3 1
+ benign loss is  0.9246088862419128
+current submit client idx and staleness is  4 1
+ benign loss is  1.1080024242401123
+current submit client idx and staleness is  5 1
+ benign loss is  0.9771798849105835
+current submit client idx and staleness is  6 1
+ benign loss is  0.8211855888366699
+current submit client idx and staleness is  7 1
+ benign loss is  0.7931628227233887
+current submit client idx and staleness is  8 2
+ benign loss is  0.4561975598335266
+current submit client idx and staleness is  9 2
+ benign loss is  0.9416818618774414
+current submit client idx and staleness is  10 2
+ benign loss is  0.7432109117507935
+current submit client idx and staleness is  11 2
+ benign loss is  0.8640092611312866
+current submit client idx and staleness is  12 2
+ benign loss is  1.0299479961395264
+current submit client idx and staleness is  13 2
+ benign loss is  0.19656279683113098
+current submit client idx and staleness is  14 2
+ benign loss is  0.6459091305732727
+current submit client idx and staleness is  15 2
+ benign loss is  1.022189736366272
+current submit client idx and staleness is  24 4
+ benign loss is  0.516734778881073
+current submit client idx and staleness is  25 4
+ benign loss is  0.8856170773506165
+current submit client idx and staleness is  26 4
+ benign loss is  0.4015699326992035
+current submit client idx and staleness is  27 4
+ benign loss is  0.7787712216377258
+current submit client idx and staleness is  28 4
+ benign loss is  1.1590005159378052
+current submit client idx and staleness is  29 4
+ benign loss is  0.38300228118896484
+current submit client idx and staleness is  30 4
+ benign loss is  0.41017818450927734
+current submit client idx and staleness is  31 4
+ benign loss is  0.29324784874916077
+current submit client idx and staleness is  48 1
+here
+current submit client idx and staleness is  49 1
+here
+current submit client idx and staleness is  50 1
+here
+current submit client idx and staleness is  51 1
+here
+current submit client idx and staleness is  52 1
+here
+current submit client idx and staleness is  53 1
+here
+current submit client idx and staleness is  54 1
+here
+current submit client idx and staleness is  55 1
+here
+current submit client idx and staleness is  56 1
+here
+current submit client idx and staleness is  57 1
+here
+current submit client idx and staleness is  58 1
+here
+current submit client idx and staleness is  59 1
+here
+keys is  dict_keys([48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59])
+len of malicious models is 12
+len of model dicts is  12
+compute distance is  tensor(100.8881, device='cuda:2')
+compute similarity is  tensor(0.9244, device='cuda:2')
+compute distance is  tensor(88.9776, device='cuda:2')
+compute similarity is  tensor(0.9339, device='cuda:2')
+compute distance is  tensor(95.6068, device='cuda:2')
+compute similarity is  tensor(0.9273, device='cuda:2')
+compute distance is  tensor(94.6153, device='cuda:2')
+compute similarity is  tensor(0.9304, device='cuda:2')
+compute distance is  tensor(95.4596, device='cuda:2')
+compute similarity is  tensor(0.9283, device='cuda:2')
+compute distance is  tensor(94.9404, device='cuda:2')
+compute similarity is  tensor(0.9294, device='cuda:2')
+compute distance is  tensor(95.9682, device='cuda:2')
+compute similarity is  tensor(0.9302, device='cuda:2')
+compute distance is  tensor(94.7307, device='cuda:2')
+compute similarity is  tensor(0.9293, device='cuda:2')
+compute distance is  tensor(90.0331, device='cuda:2')
+compute similarity is  tensor(0.9330, device='cuda:2')
+compute distance is  tensor(95.4130, device='cuda:2')
+compute similarity is  tensor(0.9309, device='cuda:2')
+compute distance is  tensor(96.3541, device='cuda:2')
+compute similarity is  tensor(0.9302, device='cuda:2')
+compute distance is  tensor(103.0800, device='cuda:2')
+compute similarity is  tensor(0.9221, device='cuda:2')
+calculated distance threshold is  tensor(103.0800, device='cuda:2')
+calculated similarity threshold is  tensor(0.9221, device='cuda:2')
+mid_min is -0.55
+====================
+iteration is  0
+round is  0
+accuracy is  0.3578500001563406
+compute distance is tensor(126.5940, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  1
+accuracy is  0.48146666682300854
+compute distance is tensor(126.6241, device='cuda:2')
+====================
+====================
+iteration is  0
+round is  2
+accuracy is  0.43956666682300827
+compute distance is tensor(128.0538, device='cuda:2')
+====================
+mid_min is -0.55
+====================
+iteration is  1
+round is  0
+accuracy is  0.42616666682300813
+compute distance is tensor(128.0338, device='cuda:2')
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.45211666682300833
+compute distance is tensor(127.6627, device='cuda:2')
+====================
+________________________________
+test distance is  tensor(126.5940, device='cuda:2')
+test similarity is  tensor(0.3199, device='cuda:2')
+test acc is  0.3578500001563406
+test loss is 5.132351834636761
+test entropy is  0.3467341714353958
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.3467341714353958
+avg test loss is  5.132351834636761
+avg accuracy is  0.3578500001563406
+compute_distance is  tensor(126.5940, device='cuda:2')
+compute_similarity is  tensor(0.3199, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.5988576220296847
+avg test loss is  1.78844575745973
+avg accuracy is  0.4989000001563421
+compute_distance is  tensor(120.5898, device='cuda:2')
+compute_similarity is  tensor(0.3883, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.6729496757485973
+avg test loss is  1.4885599186171348
+avg accuracy is  0.5212000001563423
+compute_distance is  tensor(102.5049, device='cuda:2')
+compute_similarity is  tensor(0.4690, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.6640307040992321
+avg test loss is  1.753013211781028
+avg accuracy is  0.46963333348967523
+compute_distance is  tensor(84.0401, device='cuda:2')
+compute_similarity is  tensor(0.5575, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.7604867892860095
+avg test loss is  1.2370064371684466
+avg accuracy is  0.5510500001563419
+compute_distance is  tensor(72.5247, device='cuda:2')
+compute_similarity is  tensor(0.6461, device='cuda:2')
+++++++++++++++++++++
+restore alpha
+++++++++++++++++++++
+after training  5
+avg test entropy is  0.7652395464845304
+avg test loss is  1.4978647702284205
+avg accuracy is  0.4895333334896754
+compute_distance is  tensor(63.3581, device='cuda:2')
+compute_similarity is  tensor(0.7278, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(63.3581, device='cuda:2')
+test similarity is  tensor(0.7278, device='cuda:2')
+test acc is  0.4895333334896754
+test loss is 1.4978647702284205
+test entropy is  0.7652395464845304
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.7652395464845304
+avg test loss is  1.4978647702284205
+avg accuracy is  0.4895333334896754
+compute_distance is  tensor(63.3581, device='cuda:2')
+compute_similarity is  tensor(0.7278, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(63.3581, device='cuda:2')
+test similarity is  tensor(0.7278, device='cuda:2')
+test acc is  0.4895333334896754
+test loss is 1.4978647702284205
+test entropy is  0.7652395464845304
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.7652395464845304
+avg test loss is  1.4978647702284205
+avg accuracy is  0.4895333334896754
+compute_distance is  tensor(63.3581, device='cuda:2')
+compute_similarity is  tensor(0.7278, device='cuda:2')
+++++++++++++++++++++
+reach max round
+optimization failed
+new distance ratio is 1
+mal_acc is 0.6000000005
+len all weights is 20
+avg_weights acc is  0.8500000005
+ 
+Avg Training Stats after 29 global rounds:
+Train Accuracy: 88.60% 
+
+Test Accuracy: 87.67% 
+
+
+ | Global Training Round : 30 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.9053928256034851
+current submit client idx and staleness is  1 1
+ benign loss is  0.5193384289741516
+current submit client idx and staleness is  2 1
+ benign loss is  0.3227035403251648
+current submit client idx and staleness is  3 1
+ benign loss is  0.8809641003608704
+current submit client idx and staleness is  4 1
+ benign loss is  1.52068293094635
+current submit client idx and staleness is  5 1
+ benign loss is  1.3998024463653564
+current submit client idx and staleness is  6 1
+ benign loss is  0.6972137093544006
+current submit client idx and staleness is  7 1
+ benign loss is  0.3929597735404968
+current submit client idx and staleness is  48 1
+here
+current submit client idx and staleness is  49 1
+here
+current submit client idx and staleness is  50 1
+here
+current submit client idx and staleness is  51 1
+here
+current submit client idx and staleness is  52 1
+here
+current submit client idx and staleness is  53 1
+here
+current submit client idx and staleness is  54 1
+here
+current submit client idx and staleness is  55 1
+here
+current submit client idx and staleness is  56 1
+here
+current submit client idx and staleness is  57 1
+here
+current submit client idx and staleness is  58 1
+here
+current submit client idx and staleness is  59 1
+here
+keys is  dict_keys([48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59])
+len of malicious models is 12
+len of model dicts is  12
+compute distance is  tensor(93.6215, device='cuda:2')
+compute similarity is  tensor(0.9030, device='cuda:2')
+compute distance is  tensor(94.4402, device='cuda:2')
+compute similarity is  tensor(0.9023, device='cuda:2')
+compute distance is  tensor(101.6109, device='cuda:2')
+compute similarity is  tensor(0.8956, device='cuda:2')
+compute distance is  tensor(95.7728, device='cuda:2')
+compute similarity is  tensor(0.9014, device='cuda:2')
+compute distance is  tensor(94.1374, device='cuda:2')
+compute similarity is  tensor(0.9005, device='cuda:2')
+compute distance is  tensor(97.6677, device='cuda:2')
+compute similarity is  tensor(0.9002, device='cuda:2')
+compute distance is  tensor(101.5047, device='cuda:2')
+compute similarity is  tensor(0.8977, device='cuda:2')
+compute distance is  tensor(99.8939, device='cuda:2')
+compute similarity is  tensor(0.8977, device='cuda:2')
+compute distance is  tensor(88.0739, device='cuda:2')
+compute similarity is  tensor(0.9070, device='cuda:2')
+compute distance is  tensor(93.2828, device='cuda:2')
+compute similarity is  tensor(0.9043, device='cuda:2')
+compute distance is  tensor(93.5442, device='cuda:2')
+compute similarity is  tensor(0.9033, device='cuda:2')
+compute distance is  tensor(95.3542, device='cuda:2')
+compute similarity is  tensor(0.9028, device='cuda:2')
+calculated distance threshold is  tensor(101.6109, device='cuda:2')
+calculated similarity threshold is  tensor(0.8956, device='cuda:2')
+mid_min is -0.55
+====================
+iteration is  0
+round is  0
+accuracy is  0.5224500001563422
+compute distance is tensor(127.3331, device='cuda:2')
+====================
+====================
+iteration is  0
+round is  1
+accuracy is  0.46056666682300845
+compute distance is tensor(127.6588, device='cuda:2')
+====================
+succ_min + 1
+====================
+iteration is  0
+round is  2
+accuracy is  0.37721666682300753
+compute distance is tensor(127.3073, device='cuda:2')
+====================
+succ_min + 1
+mid_min is -0.6050000000000001
+====================
+iteration is  1
+round is  0
+accuracy is  0.415966666823008
+compute distance is tensor(140.4767, device='cuda:2')
+====================
+====================
+iteration is  1
+round is  1
+accuracy is  0.3976500001563411
+compute distance is tensor(140.2654, device='cuda:2')
+====================
+====================
+iteration is  1
+round is  2
+accuracy is  0.2678000001563387
+compute distance is tensor(139.5154, device='cuda:2')
+====================
+succ_min + 1
+________________________________
+test distance is  tensor(139.5154, device='cuda:2')
+test similarity is  tensor(0.3011, device='cuda:2')
+test acc is  0.2678000001563387
+test loss is 7.556939087951107
+test entropy is  0.3056161111351778
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.3056161111351778
+avg test loss is  7.556939087951107
+avg accuracy is  0.2678000001563387
+compute_distance is  tensor(139.5154, device='cuda:2')
+compute_similarity is  tensor(0.3011, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.660943074457681
+avg test loss is  2.0991780837969993
+avg accuracy is  0.41770000015634134
+compute_distance is  tensor(138.6794, device='cuda:2')
+compute_similarity is  tensor(0.3646, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.7429370252943751
+avg test loss is  1.755272216252935
+avg accuracy is  0.4380333334896749
+compute_distance is  tensor(118.5208, device='cuda:2')
+compute_similarity is  tensor(0.4423, device='cuda:2')
+++++++++++++++++++++
+change alpha
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.7982315048734262
+avg test loss is  1.5680331900429878
+avg accuracy is  0.45353333348967506
+compute_distance is  tensor(100.0285, device='cuda:2')
+compute_similarity is  tensor(0.5291, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(100.0285, device='cuda:2')
+test similarity is  tensor(0.5291, device='cuda:2')
+test acc is  0.45353333348967506
+test loss is 1.5680331900429878
+test entropy is  0.7982315048734262
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.7982315048734262
+avg test loss is  1.5680331900429878
+avg accuracy is  0.45353333348967506
+compute_distance is  tensor(100.0285, device='cuda:2')
+compute_similarity is  tensor(0.5291, device='cuda:2')
+++++++++++++++++++++
+________________________________
+test distance is  tensor(100.0285, device='cuda:2')
+test similarity is  tensor(0.5291, device='cuda:2')
+test acc is  0.45353333348967506
+test loss is 1.5680331900429878
+test entropy is  0.7982315048734262
+________________________________
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.7982315048734262
+avg test loss is  1.5680331900429878
+avg accuracy is  0.45353333348967506
+compute_distance is  tensor(100.0285, device='cuda:2')
+compute_similarity is  tensor(0.5291, device='cuda:2')
+++++++++++++++++++++
+reach max round
+optimization failed
+new distance ratio is 1
+mal_acc is 0.5000000005
+len all weights is 52
+avg_weights acc is  0.9000000005000001
+ 
+Avg Training Stats after 30 global rounds:
+Train Accuracy: 89.45% 
+
+Test Accuracy: 88.27% 
+
+ 
+ Results after 30 global rounds of training:
+|---- Avg testing Accuracy across each device's data: 89.45%
+|----0th round Training Accuracy : 82.88%
+|----1th round Training Accuracy : 86.33%
+|----2th round Training Accuracy : 86.48%
+|----3th round Training Accuracy : 87.25%
+|----4th round Training Accuracy : 87.23%
+|----5th round Training Accuracy : 87.57%
+|----6th round Training Accuracy : 88.39%
+|----7th round Training Accuracy : 88.58%
+|----8th round Training Accuracy : 88.73%
+|----9th round Training Accuracy : 88.80%
+|----10th round Training Accuracy : 89.04%
+|----11th round Training Accuracy : 89.14%
+|----12th round Training Accuracy : 89.26%
+|----13th round Training Accuracy : 89.55%
+|----14th round Training Accuracy : 89.27%
+|----15th round Training Accuracy : 89.58%
+|----16th round Training Accuracy : 87.66%
+|----17th round Training Accuracy : 89.18%
+|----18th round Training Accuracy : 87.23%
+|----19th round Training Accuracy : 88.80%
+|----20th round Training Accuracy : 88.97%
+|----21th round Training Accuracy : 89.06%
+|----22th round Training Accuracy : 88.58%
+|----23th round Training Accuracy : 89.32%
+|----24th round Training Accuracy : 89.10%
+|----25th round Training Accuracy : 88.96%
+|----26th round Training Accuracy : 89.31%
+|----27th round Training Accuracy : 89.56%
+|----28th round Training Accuracy : 88.60%
+|----29th round Training Accuracy : 89.45%
+|----Final Test Accuracy: 88.27%
+|----0th round Final Test Accuracy : 82.41%
+|----1th round Final Test Accuracy : 85.24%
+|----2th round Final Test Accuracy : 85.91%
+|----3th round Final Test Accuracy : 85.94%
+|----4th round Final Test Accuracy : 86.39%
+|----5th round Final Test Accuracy : 86.85%
+|----6th round Final Test Accuracy : 87.49%
+|----7th round Final Test Accuracy : 87.43%
+|----8th round Final Test Accuracy : 87.91%
+|----9th round Final Test Accuracy : 87.94%
+|----10th round Final Test Accuracy : 87.88%
+|----11th round Final Test Accuracy : 88.14%
+|----12th round Final Test Accuracy : 88.25%
+|----13th round Final Test Accuracy : 88.37%
+|----14th round Final Test Accuracy : 88.18%
+|----15th round Final Test Accuracy : 88.37%
+|----16th round Final Test Accuracy : 86.73%
+|----17th round Final Test Accuracy : 88.16%
+|----18th round Final Test Accuracy : 86.35%
+|----19th round Final Test Accuracy : 87.77%
+|----20th round Final Test Accuracy : 87.90%
+|----21th round Final Test Accuracy : 88.01%
+|----22th round Final Test Accuracy : 87.72%
+|----23th round Final Test Accuracy : 88.16%
+|----24th round Final Test Accuracy : 87.77%
+|----25th round Final Test Accuracy : 87.67%
+|----26th round Final Test Accuracy : 88.10%
+|----27th round Final Test Accuracy : 88.29%
+|----28th round Final Test Accuracy : 87.67%
+|----29th round Final Test Accuracy : 88.27%
+
+Experimental details:
+    Dataset     : fmnist
+    Model     : cnn
+    detailed Model     : vgg
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 30
+
+    Federated parameters:
+    IID
+    balanced
+    Fraction of users  : 0.4
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.2
+     Model attack is done!
+
+ Total Run Time: 10551.1328
