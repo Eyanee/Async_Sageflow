@@ -458,7 +458,7 @@ def add_small_perturbation(original_model, args, pinned_accuracy, train_dataset,
     succ_round = 0
     iteration = 0
     min_acc = 1
-    # reverse_keys = reversed(list(orignal_state_dict.keys())) 
+    reverse_keys = reversed(list(orignal_state_dict.keys())) 
     reverse_keys = list(orignal_state_dict.keys())
 
     while iteration < max_iterations:
@@ -470,7 +470,7 @@ def add_small_perturbation(original_model, args, pinned_accuracy, train_dataset,
         # 生成中点扰动张量
         for round in range(MAX_ROUND):
             for idx, key in enumerate(reverse_keys):
-                if  idx == 4 or idx == 5 : # 可能是perturbation的问题
+                if  idx == 0 or idx == 1 : # 可能是perturbation的问题
                     temp_original = orignal_state_dict[key]
                     perturbs = torch.tensor(np.random.uniform(low=mid_min, high=mid_max, size=temp_original.shape)).to(device)
                     perturbs = torch.add(perturbs, temp_original)

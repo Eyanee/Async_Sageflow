@@ -11,7 +11,7 @@ from tqdm import tqdm
 import torch
 
 from update import LocalUpdate, test_inference, DatasetSplit
-from poison_optimization_cos_sim_test import Outline_Poisoning, Indicator, Outline_Poisoning_compare
+from poison_optimization_test import Outline_Poisoning, Indicator, Outline_Poisoning_compare
 from model import MLP, CNNMnist, CNNFashion_Mnist, CNNCifar, VGGCifar
 from resnet import *
 from utils1 import *
@@ -224,18 +224,27 @@ if __name__ == '__main__':
             )
             
             ensure_1 += 1 # 平均分布
-            if idx in attack_users and args.model_poison == True and epoch > 10 - MAX_STALENESS and args.poison_methods == 'ourpoisonMethod':
+            if idx in attack_users and args.model_poison == True and epoch > 30 - MAX_STALENESS and args.poison_methods == 'ourpoisonMethod':
                 print("here")
                 mal_parameters_list[0][idx] = w # 加入malicious_list
                 test_mal_list.append(w)
-            elif idx in attack_users and args.new_poison ==True and epoch > 0:
+            elif idx in attack_users and args.new_poison == True and epoch > 0:
                 w = sign_attack(w, args.model_poison_scale)
                 print("sign attack")
+                test_model = copy.deepcopy(global_model)
+                test_model.load_state_dict(w)
 
+                common_acc, common_loss_sync, common_entropy_sample, common_grad = test_inference(args, test_model,
+                                                                                    DatasetSplit(train_dataset,
+                                                                                        dict_common))
+                local_weights_delay[ scheduler[idx] - 1 ].append(copy.deepcopy(w))
+                local_index_delay[ scheduler[idx] - 1 ].append(idx)
+                local_grad_delay[scheduler[idx] - 1].append(copy.deepcopy(common_grad))
+                loss_on_public[scheduler[idx] - 1].append(common_loss_sync)
+                entropy_on_public[scheduler[idx] - 1].append(common_entropy_sample)
+                print("sign loss is ", common_loss_sync)
                 
             else:     
-                
-                
                 test_model = copy.deepcopy(global_model)
                 test_model.load_state_dict(w)
 
@@ -249,7 +258,7 @@ if __name__ == '__main__':
                 entropy_on_public[scheduler[idx] - 1].append(common_entropy_sample)
                 print(" benign loss is ", common_loss_sync)
             
-        if args.model_poison == True and epoch > 15 :
+        if args.model_poison == True and epoch > 30 :
             if args.poison_methods == 'ourpoisonMethod':
                 malicious_models = list(mal_parameters_list[MAX_STALENESS - 1].values()) #本地模拟的陈旧度上限
                 print("keys is ", mal_parameters_list[0].keys())
@@ -353,9 +362,9 @@ if __name__ == '__main__':
                         pre_grad[i] = pre_grad[i] + local_grad_delay[i]
                 else:
                     if len(local_weights_delay[i]) > 0:
-                        w_avg_delay = average_weights(local_weights_delay[i])
-                        len_delay = len(local_weights_delay[i])
-                        pre_weights[i].append({epoch: [w_avg_delay, len_delay]})
+                        # w_avg_delay = average_weights(local_weights_delay[i])
+                        # len_delay = len(local_weights_delay[i])
+                        pre_weights[i].append(local_weights_delay[i])
                 
                         
         if args.update_rule == 'Sageflow':
@@ -377,8 +386,8 @@ if __name__ == '__main__':
             std_keys = get_key_list(global_model.state_dict().keys())
             sync_weights, len_sync = pre_Trimmed_mean(copy.deepcopy(global_model.state_dict()), std_keys, local_weights_delay[0])
             # Staleness-aware grouping
-            global_weights = Sag(epoch, sync_weights, len_sync, local_delay_ew,
-                                                     copy.deepcopy(global_weights))
+            global_weights  = sync_weights
+
         elif args.update_rule == 'norm_clipping':
             # sync_weights, len_sync = Median()
             # Staleness-aware grouping
@@ -411,13 +420,14 @@ if __name__ == '__main__':
                                     copy.deepcopy(global_model),
                                     train_dataset, dict_common, epoch, local_index_ew )
         else:
-            global_weights = Sag(epoch, average_weights(local_weights_delay[0]), len(local_weights_delay[0]),
-                                                 local_delay_ew, copy.deepcopy(global_weights))
-            # current_weights_set = local_weights_delay[0]
-            # for item in local_delay_ew:
-            #     current_weights_set.extend(item)
-            # global_weights = average_weights(current_weights_set)
-
+            all_weights = copy.deepcopy(local_weights_delay[0])
+            for item in local_index_ew:
+                all_weights.extend(item)
+            global_weights , avg_weights= Fedavg(args, epoch, all_weights, global_model)
+            test_model.load_state_dict(avg_weights)
+            avg_acc, mal_loss_sync, mal_entropy_sample, mal_grad = test_inference(args, test_model,
+                                                                                        test_dataset)
+            print("avg_weights acc is ", avg_acc)
 
         # Update global weights
         pre_global_model.load_state_dict(global_model.state_dict())
@@ -455,7 +465,7 @@ if __name__ == '__main__':
                 
         # Mal_parameters_list Update
         
-        if idx in attack_users and args.model_poison == True and epoch > 10 - MAX_STALENESS:
+        if idx in attack_users and args.model_poison == True and epoch > 30 - MAX_STALENESS:
             for i in range(MAX_STALENESS-1 , 0 , -1):
                 mal_parameters_list[i] = copy.copy(mal_parameters_list[i-1])
             mal_parameters_list[0] = {}

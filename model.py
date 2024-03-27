@@ -62,14 +62,24 @@ class CNNFashion_Mnist(nn.Module):
             #nn.BatchNorm2d(32),
             nn.ReLU(),
             nn.MaxPool2d(2))
-        self.fc = nn.Linear(7*7*32, 10)
+        # self.fc = nn.Linear(7*7*32, 10)
+        self.dropout = nn.Dropout(p=0.25)  # 在两个卷积层后添加Dropout层
+        self.flatten = nn.Flatten()  # Flatten层将特征图展平
+        self.fc1 = nn.Linear(32*7*7, 128)  # 全连接层1
+        self.fc2 = nn.Linear(128, 10)  # 全连接层2
 
     def forward(self,x):
         out = self.layer1(x)
         out = self.layer2(out)
-        out = out.view(out.size(0), -1)
-        out = self.fc(out)
-        return F.log_softmax(out, dim=1), out
+        # out = out.view(out.size(0), -1)
+        # out = self.fc(out)
+        out = self.dropout(out)  # Dropout层
+        out = self.flatten(out)  # Flatten层
+        out = F.relu(self.fc1(out))  # 全连接层1
+        out1 = self.dropout(out)  # Dropout层
+        out = self.fc2(out1)  # 全连接层2
+        ### 单独返回out1层
+        return F.log_softmax(out, dim=1), out, out1
 
 
 

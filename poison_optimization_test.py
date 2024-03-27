@@ -67,20 +67,18 @@ def get_distance_list(ori_state_dict, mod_state_dict):
 流程框架函数
 """
 def Outline_Poisoning(args, global_model, malicious_models, train_dataset, distance_threshold, pinned_accuracy_threshold,w_rand):
-    # global initial_w_rand
 
-    # distance_threshold = cal_ref_distance(malicious_models, ref_model, new_distance_ratio) # 计算参考L2 distance 门槛 
-    # print("calculated distance threshold is ", distance_threshold)
+
+    # w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, distance_threshold,  perturbation_range=(-0.5, 0.5))
 
     w_poison, optimization_res = phased_optimization(args, global_model, w_rand, train_dataset, distance_threshold,  pinned_accuracy_threshold)
     # 如果没有成功优化，则下一轮的distance不应该被改变
     if not optimization_res:
-        # distance ratio 不应该被改变
+
         print("optimization failed")
     else:
         return w_poison
 
-    # print("new distance ratio is", new_distance_ratio)
     return w_poison
 
 def Outline_Poisoning_compare(args, pre_global_model, global_model, malicious_models, train_dataset, distance_ratio, pinned_accuracy_threshold, adaptive_accuracy_threshold, poisoned):
@@ -187,7 +185,7 @@ def phased_optimization(args, global_model, w_rand, train_dataset, distance_thre
 
     # parameter determination
     round = 0
-    MAX_ROUND = 3
+    MAX_ROUND = 5
     entropy_threshold = 1
     
      # 准备教师模型
@@ -214,16 +212,18 @@ def phased_optimization(args, global_model, w_rand, train_dataset, distance_thre
         print("test loss is", test_loss)
         print("test entropy is ", test_entropy)
         print("________________________________")
-        if test_distance <= distance_threshold and test_acc <= pinned_accuracy_threshold and test_entropy  <= entropy_threshold and test_loss <= 1.6:
+        if test_acc <= pinned_accuracy_threshold and  test_loss <= 1:
             return w_rand, True
-        elif (test_entropy > entropy_threshold or test_loss > 1.6) and distillation_res == True:
-            if test_loss > 1.6:
-                distillation_res, w_rand = self_distillation(args,teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 20)
-            else:
-                distillation_res, w_rand = self_distillation(args,teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 20)
+        elif test_entropy > entropy_threshold:
+            distillation_res, w_rand = self_distillation(args,teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 10)
+            
+        elif test_loss > 1.6 and distillation_res == True:
+            distillation_res, w_rand = self_distillation(args,teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 10)
+            # 只有accuracy 不满足条件
+            # 暂时不处理
         elif test_distance > distance_threshold:
             w_rand = adaptive_scaling(w_rand, global_model.state_dict(), distance_threshold, test_distance)
-            student_model.load_state_dict(w_rand)
+            # student_model.load_state_dict(w_rand)
             # distillation_res, w_rand = self_distillation(args, teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold,  distance_threshold, distillation_round = 10)
         else:
             distillation_res, w_rand = self_distillation(args,  teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 10)
@@ -300,13 +300,13 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
         print("compute_distance is ",compute_distance)
         print("++++++++++++++++++++")
 
-        if avg_entropy <= entropy_threshold and acc <= accuracy_threshold and loss <= 1.6:
+        if  acc <= accuracy_threshold and loss <= 1:
            
             return True, student_model.state_dict()
-        elif avg_entropy <= entropy_threshold and acc <= accuracy_threshold and loss > 1.6:
+        elif acc <= accuracy_threshold and loss > 1:
             print("change alpha")
-            alpha = 0.75
-            beta = 0.25
+            alpha = 0.65
+            beta = 0.35
         elif loss <= 1.6: #0.7 0.3 for fmnist
             print("restore alpha")
             alpha = 0.88
@@ -320,16 +320,16 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
                 param.requires_grad_(True)
 
             teacher_labels = list()
-            _ , teacher_outputs , PLR= teacher_model(images)
+            _ , teacher_outputs = teacher_model(images)
             for item in teacher_outputs:
                 pred_label = int(torch.max(item, 0)[1])
                 teacher_labels.append(pred_label)
 
             pred_is = torch.tensor(teacher_labels)
             pred_is = pred_is.to(device)
-            stu_out, student_outputs, PLR = student_model(images)
-            # ref_out, ref_outputs, PLR= ref_model(images)
-            _ , teacher_outputs, PLR = teacher_model(images)
+            stu_out, student_outputs = student_model(images)
+            ref_out, ref_outputs = ref_model(images)
+            _ , teacher_outputs = teacher_model(images)
             l_loss = criterion1(stu_out, pred_is)
             t_loss = criterion1(stu_out,  labels) #  增加了正常的loss
             loss =  alpha * l_loss + beta * t_loss
@@ -387,7 +387,7 @@ def add_small_perturbation(original_model, args, pinned_accuracy, train_dataset,
     succ_round = 0
     iteration = 0
     min_acc = 1
-    # reverse_keys = reversed(list(orignal_state_dict.keys())) 
+    reverse_keys = reversed(list(orignal_state_dict.keys())) 
     reverse_keys = list(orignal_state_dict.keys())
 
     while iteration < max_iterations:
@@ -399,7 +399,7 @@ def add_small_perturbation(original_model, args, pinned_accuracy, train_dataset,
         # 生成中点扰动张量
         for round in range(MAX_ROUND):
             for idx, key in enumerate(reverse_keys):
-                if  idx != 4  and idx != 5 : # 可能是perturbation的问题
+                if  idx == 0  and idx == 1 : # 可能是perturbation的问题
                     temp_original = orignal_state_dict[key]
                     perturbs = torch.tensor(np.random.uniform(low=mid_min, high=mid_max, size=temp_original.shape)).to(device)
                     perturbs = torch.add(perturbs, temp_original)

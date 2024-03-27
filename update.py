@@ -71,12 +71,14 @@ class LocalUpdate(object):
             batch_grad = []
             for batch_idx, (images, labels) in enumerate(self.trainloader):
                 images, labels = images.to(self.device), labels.to(self.device)
-
+                if self.data_poison ==True:
+                    labels = (labels+1)%10
+                    
                 model.zero_grad()
                  # 修改点1：设置模型参数需要梯度
                 for param in model.parameters():
                     param.requires_grad_(True)
-                log_probs, _ = model(images)
+                log_probs, _ , PLR= model(images)
                 loss = self.criterion(log_probs, labels)
                 loss.backward()
                 optimizer.step()
@@ -117,7 +119,7 @@ class LocalUpdate(object):
         with torch.no_grad():
             for batch_idx, (images, labels) in enumerate(self.testloader):
                 images, labels = images.to(self.device), labels.to(self.device)
-                outputs,_ = model(images)
+                outputs,_ , PLR= model(images)
                 batch_loss = self.criterion(outputs, labels)
                 loss += batch_loss.item()
 
@@ -132,7 +134,6 @@ class LocalUpdate(object):
 
 def test_inference(args, model, test_dataset):
 
-    model.eval()
     loss, total, correct = 0.0, 0.0, 0.0
     device = f'cuda:{args.gpu_number}' if args.gpu else 'cpu'
     criterion = nn.NLLLoss().to(device)
@@ -152,7 +153,7 @@ def test_inference(args, model, test_dataset):
             param.requires_grad_(True)
 
 
-        output, out = model(images)
+        output, out, PLR = model(images)
         # # 构造[batches,categaries]的真实分布向量
         # categaries = output.shape[1]
 

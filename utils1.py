@@ -178,7 +178,7 @@ def Sag(current_epoch, current_average, current_length, epoch_weights, global_we
                 else:
                     w_semi[key] += weights_d[i - 1][key] * alphas[i]
 
-
+    
     for key in w_semi.keys():
         if args.dataset =='cifar':
             alpha = 0.5 ** (current_epoch // 300)
@@ -192,6 +192,26 @@ def Sag(current_epoch, current_average, current_length, epoch_weights, global_we
 
     return w_semi
 
+
+def Fedavg(args, current_epoch, all_weights, global_model):
+    
+    print("len all weights is", len(all_weights))
+    # print("all_weights",all_weights)
+    avg_weights = average_weights(all_weights)
+
+    w_semi = copy.deepcopy(global_model.state_dict())
+    for key in w_semi.keys():
+        if args.dataset =='cifar':
+            alpha = 0.5 ** (current_epoch // 300)
+        elif args.dataset =='fmnist':
+            alpha = 0.5 
+
+        elif args.dataset =='mnist':
+            alpha = 0.5 ** (current_epoch // 15)
+
+        w_semi[key] = w_semi[key] * (1 - alpha) + avg_weights[key] * (alpha)
+
+    return w_semi, avg_weights
 
 
 def communication_w(w, w_pre):

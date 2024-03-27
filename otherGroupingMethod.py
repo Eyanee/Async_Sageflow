@@ -79,7 +79,10 @@ def Trimmed_mean(para_updates, n_attackers = 1):
     agg_para_update = torch.mean(sorted_updates[n_attackers:-n_attackers], 0) if n_attackers else torch.mean(sorted_updates, 0)
     return agg_para_update
 
-def pre_Trimmed_mean(std_dict, std_keys, current_epoch_updates):
+def pre_Trimmed_mean(std_dict, std_keys, current_epoch_updates, local_weight_ew):
+    for item in local_weight_ew:
+        current_epoch_updates.extend(item)
+
     weight_updates = modifyWeight(std_keys, current_epoch_updates)
     Median_avg = Trimmed_mean(weight_updates, 1)
     Median_avg = restoreWeight(std_dict, std_keys, Median_avg)
@@ -92,14 +95,15 @@ def pre_Trimmed_mean(std_dict, std_keys, current_epoch_updates):
 
 def Median(para_updates): #
     agg_para_update = torch.median(para_updates, 0,keepdim=True)
-    print("agg_para is ", agg_para_update[0].squeeze(0))
+    # print("agg_para is ", agg_para_update[0].squeeze(0))
     return agg_para_update[0].squeeze(0)
 
 def pre_Median(std_dict, std_keys, current_epoch_updates):
     weight_updates = modifyWeight(std_keys, current_epoch_updates)
+    length = len(weight_updates)
     Median_avg = Median(weight_updates)
     Median_avg = restoreWeight(std_dict, std_keys, Median_avg)
-    return Median_avg 
+    return Median_avg, length
 
 '''
 对于每个样本，m个clients都会生成对应的的logits，把这些logits求平均，作为全局的agg_logits；
@@ -351,7 +355,7 @@ def pre_Zeno(current_epoch_updates, args, loss, cmm_dataset, global_model):
 
 
 """
-def Zenoplusplus(args, global_state_dict, grad_updates, indexes):
+def Zenoplusplus(args, global_state_dict, grad_updates,indexes):
     print("index is ", indexes)
     # parameters for zeno++
     zeno_rho = 0.001 #
@@ -367,6 +371,7 @@ def Zenoplusplus(args, global_state_dict, grad_updates, indexes):
             user_param_square = user_param_square + torch.sum(torch.square(param_update[key]))
 
         c = torch.sqrt(user_param_square / global_param_square)
+        print("c is ", c)
         for key in param_update.keys():
                 param_update[key] = param_update[key] * c
         
@@ -377,7 +382,8 @@ def Zenoplusplus(args, global_state_dict, grad_updates, indexes):
         for key in global_state_dict.keys():
             print("调试 - global_state_dict[key] 形状:", global_state_dict[key].shape)
             print("调试 - param_update[key] 形状:", param_update[key].shape)
-            zeno_innerprod = zeno_innerprod + torch.tensordot(global_state_dict[key], param_update[key], dims=contract_dims)
+            global_state_dict[key] = torch.transpose(global_state_dict[key])
+            zeno_innerprod = zeno_innerprod + torch.tensordot(global_state_dict[key], param_update[key])
         #计算分数
         score = args.lr * (zeno_innerprod) - zeno_rho * (zeno_square) + args.lr * zeno_epsilon
         print("score :", score)
@@ -390,12 +396,90 @@ def Zenoplusplus(args, global_state_dict, grad_updates, indexes):
 
 
 
+def compute_mmd(x, y, sigma=1.0):
+    # 计算高斯核矩阵
+    xx = torch.matmul(x, x.t())
+    yy = torch.matmul(y, y.t())
+    xy = torch.matmul(x, y.t())
+
+    # 计算高斯核函数
+    k_xx = torch.exp(-torch.sum((x.unsqueeze(1) - x.unsqueeze(0)) ** 2, dim=2) / (2 * sigma ** 2)).mean()
+    k_yy = torch.exp(-torch.sum((y.unsqueeze(1) - y.unsqueeze(0)) ** 2, dim=2) / (2 * sigma ** 2)).mean()
+    k_xy = torch.exp(-torch.sum((x.unsqueeze(1) - y.unsqueeze(0)) ** 2, dim=2) / (2 * sigma ** 2)).mean()
+
+    # 计算MMD
+    mmd = k_xx + k_yy - 2 * k_xy
+    return mmd
 
 
-# FLTrust
+# FLARE
 """
 
+
 """
+def FLARE(args, global_model, param_updates, common_dataset):
+    ### 使用客户端模型计算辅助数据集上的每张图像的PLR，组成一个矩阵
+
+    
+    device = f'cuda:{args.gpu_number}' if args.gpu else 'cpu'
+    test_model = copy.deepcopy(global_model)
+    test_dict = copy.deepcopy(global_model.state_dict())
+    user_len = len(param_updates)
+    test_model.eval()
+
+    trainloader = DataLoader(common_dataset, batch_size=64, shuffle=False) #待修改
+    user_PLR = []
+
+    for param in param_updates:
+        test_model.load_state_dict(param)
+        for batch_idx, (images, labels) in enumerate(trainloader):
+            images, labels = images.to(device), labels.to(device)
+
+            output,out, PLR = test_model(images)
+            # print("round ", batch_idx)
+            # print("PLR size ", PLR.shape)
+        user_PLR.append(PLR)
+    print("user_PLR len size", len(user_PLR))
+
+    mmd_set = np.zeros((user_len, user_len))
+    mmd_indicator = np.zeros((user_len, user_len))
+    count_indicator = np.zeros(user_len)
+    
+    ## MMD 矩阵赋值
+    for i in range(user_len):
+        for j in range(i+1, user_len):
+            mmd_value = compute_mmd(user_PLR[i], user_PLR[j])
+            print("mmd_value", mmd_value)
+            mmd_set[i,j]= mmd_value
+            mmd_set[j,i]= mmd_value
+    
+    ## 
+    k = int(user_len * 0.5)
+    for idx, row in  enumerate(mmd_set):
+        # 对张量进行降序排序  
+        sorted_row = np.sort(row)  
+        kth_largest = sorted_row[k - 1]    
+        for jdx, element in enumerate(row):
+            if element >= kth_largest:
+                mmd_indicator[idx, jdx] = 1
+                count_indicator[jdx] = count_indicator[jdx] + 1 ## 被作为最近邻
+    ## 加权聚合
+    count_tensor = torch.Tensor(count_indicator)
+    count_res = F.softmax(count_tensor, dim=-1)
+    # print("count_res", count_indicator)
+    print("count_res", count_res)
+    # print("count_sum is ", torch.sum(count_res))
+    for key in test_dict.keys():
+        for i in range(0, len(count_res)):
+            if i == 0:
+                test_dict[key] = count_res[i] * param_updates[i][key]
+            else:
+                test_dict[key] += count_res[i] * param_updates[i][key]
+
+
+        
+    return test_dict
+
 def cosine_similarity(model1, model2):
 
     # 初始化一个空列表，用于存储每个参数的余弦相似度
@@ -492,13 +576,70 @@ def FLTrust(weights, grad, args, model, train_dataset, dict_common, epoch, index
 
     return re_model
 
+def update_weights(global_model, param_update):
+    alpha = 0.5
+    return_params = copy.deepcopy(global_model.state_dict())
+    for key in param_update.keys():
+        return_params[key] =  return_params[key] * (1 - alpha) + param_update[key] * (alpha)
+
+    return return_params
+
+def AFLGuard(grad_param_updates, global_model, global_test_model, epoch, lamda):
+    global_weights = copy.deepcopy(global_model.state_dict())
+    for gd_param in grad_param_updates:
+        w, loss, gd_server = global_test_model.update_weights(
+
+                model=copy.deepcopy(global_model), global_round=epoch
+
+            )
+        # print("len(gd param)", len(gd_param[1]))
+        norm_1 = torch.norm(torch.subtract(gd_server , gd_param[1]))
+        norm_2 = torch.norm(gd_server)
+
+        if norm_1 <= norm_2 * lamda:
+            # 满足条件则更新全局模型
+            # print("param type ", gd_param[0].shape)
+            global_weights = update_weights(global_model,gd_param[0])
+            global_model.load_state_dict(global_weights)
+
+    return global_weights
+
 
 # norm-clipping/ norm-clipping
-# 根据一定的阈值对于提交的参数进行裁剪
-# def mean_norm(net, nfake, sf):
+# 根据一定Bound对参数进行剔除
+def norm_clipping(global_model, local_weights_delay ,local_delay_ew):
+    
+    params = copy.deepcopy(local_weights_delay)
+    for item in local_delay_ew:
+        params.extend(item)
+
+    number_to_consider = int(len(params)* 0.8) ### 尝试0.5
+    std_keys = get_key_list(global_model.state_dict().keys())
+    weight_updates = modifyWeight(std_keys, params)
+    print("weight size is ", weight_updates.shape)
+    norm_res = torch.norm(weight_updates, p =2 ,dim = 1)
+    print("norm res size is ", norm_res.shape)
+    sorted_norm, sorted_idx = torch.sort(norm_res)
+    used_idx = sorted_idx[:number_to_consider]
+    print("used idx is ", used_idx)
+    avg_weight =  torch.mean(weight_updates[used_idx, :],dim = 0)
+    print("weight size is ", avg_weight.shape)
+    weight_res = restoreWeight(copy.deepcopy(global_model.state_dict()),std_keys,avg_weight)
+
+    return weight_res
 
 def flatten_parameters(model):
     return np.concatenate([param.cpu().detach().numpy().flatten() for param in model.parameters()])
+
+def is_nested_list(lst):  
+
+    for item in lst:  
+
+        if isinstance(item, list):  
+
+            return True  
+
+    return False 
 
 class DatasetSplit_clone(Dataset):
 
