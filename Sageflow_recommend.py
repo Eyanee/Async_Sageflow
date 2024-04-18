@@ -6,7 +6,7 @@ import time
 import pickle
 import numpy as np
 from tqdm import tqdm
-# from visualdl import LogWriter
+from visualdl import LogWriter
 
 import torch
 
@@ -44,7 +44,8 @@ if __name__ == '__main__':
     gpu_number = args.gpu_number
     device = torch.device(f'cuda:{gpu_number}' if args.gpu else 'cpu')
 
-    # writer = LogWriter(logdir="./log/histogram_test/async_res_noattack_3")
+    writer_sync = LogWriter(logdir="./log/histogram_test/async_1")
+    writer_async = LogWriter(logdir="./log/histogram_test/async_2")
 
     train_dataset, test_dataset, (user_groups, dict_common) = get_dataset(args) 
 
@@ -151,7 +152,8 @@ if __name__ == '__main__':
     test_mal_list_pre = []
     
     
-    
+    sync_counter = 1
+    async_counter = 1
     
             
     for epoch in tqdm(range(args.epochs)):
@@ -198,6 +200,7 @@ if __name__ == '__main__':
 
         ensure_1 = 0
         count = 0 
+        print("epoch is",   epoch)
         for idx in all_users:
 
             if scheduler[idx] == 0: # 当前轮次提交
@@ -222,7 +225,22 @@ if __name__ == '__main__':
                 model=copy.deepcopy(global_model), global_round=epoch
 
             )
+
             
+            if  epoch + scheduler[idx]  == 24 :
+                
+                test_model = copy.deepcopy(global_model)
+                test_model.load_state_dict(w)
+                flat_parameters = flatten_parameters(test_model)
+                print("flat parameters: ", flat_parameters.shape)
+                if scheduler[idx] == 1:
+                    writer_sync.add_histogram(tag= 'Sync FL', values = flat_parameters, step = sync_counter,buckets = 10)
+                    sync_counter = sync_counter + 1
+                else:
+                    writer_async.add_histogram(tag= 'Async FL', values = flat_parameters, step = async_counter ,buckets = 10)
+                    async_counter = async_counter + 1
+
+
             ensure_1 += 1 # 平均分布
             if idx in attack_users and args.model_poison == True and epoch > 30 - MAX_STALENESS and args.poison_methods == 'ourpoisonMethod':
                 print("here")
@@ -299,7 +317,7 @@ if __name__ == '__main__':
             
          #### save for print test ####
 
-        # if epoch == 15:
+        # if epoch == 24:
         #     test_model = copy.deepcopy(global_model)
         #     stack_tensor = flat_parameters = flatten_parameters(test_model)
         #     for param in local_weights_delay[0]:

@@ -63,10 +63,8 @@ def LIE_attack(benign_users):
         return
     std_dict = copy.deepcopy(benign_users[0])
     std_keys = get_key_list(std_dict.keys())
-    users_grads = []
-    for usr in benign_users:
-        param = modifyWeight(std_keys, usr)
-        users_grads.append(param)
+    
+    users_grads=modifyWeight(std_keys,benign_users)
 
     params_mean = torch.mean(users_grads, axis=0) # 计算均值
     params_stdev = torch.var(users_grads, axis=0) ** 0.5  ## 计算标准差
@@ -89,12 +87,19 @@ input:
 
 output:
 """
-def min_max(all_updates, dev_type='std'):
+def min_max(args, all_updates, dev_type='std'):
     ### allupdates这边好像有问题
+    gpu_number = args.gpu_number
+    device = torch.device(f'cuda:{gpu_number}' if args.gpu else 'cpu')
+
     std_keys = all_updates[0].keys()
     std_dict = copy.deepcopy(all_updates[0])
+    print("len all_updates is ", len(all_updates))
+    # 传参有问题
     param_updates = modifyWeight(std_keys, all_updates)
-    model_re = np.mean(param_updates, axis=0) # 计算均值
+    print("param_updates type  is ", param_updates.shape)
+
+    model_re = torch.mean(param_updates, axis=0) # 计算均值
 
     if dev_type == 'unit_vec':
         deviation = model_re / torch.norm(model_re)  # unit vector, dir opp to good dir
@@ -103,23 +108,35 @@ def min_max(all_updates, dev_type='std'):
     elif dev_type == 'std':
         deviation = torch.std(param_updates, 0)
         
-
-    threshold_diff = 1e-5
-    base_grad = param_updates[0]
-    for grad in param_updates:
-        distance = torch.norm((grad - base_grad),axis = 0)**2
+    max_distance = 0
+    max_d = 0
+    lamda_succ = lamda = torch.Tensor([11.0]).to(device)
+    lamda = torch.Tensor([10.0]).to(device)
+    lamda_fail = lamda
+    threshold_diff = 1e-3
+    # base_grad = param_updates[0]
+    for grad_i in param_updates:
+        for grad_j in param_updates:
+            distance = torch.norm(grad_i - grad_j)**2
+        # print("distance is ",distance)
         max_distance = max(max_distance, distance)
+        # print("max distance is ",max_distance)
+    
 
     while torch.abs(lamda_succ - lamda) > threshold_diff: # 这个门槛值?不知道需不需要根据数据集去调
 
         mal_update = (model_re - lamda * deviation)
-        for grad in all_updates:
-            distance = torch.norm((grad - mal_update),axis = 0)**2
+        print("lamda is ",lamda)
+        for grad in param_updates:
+            distance = torch.norm(grad - mal_update)**2
             max_d = max(max_d, distance)
         if max_d <= max_distance:
+            print("there")
             lamda_succ = lamda
             lamda = lamda + lamda_fail / 2
+            break
         else:
+            print("here")
             lamda = lamda - lamda_fail / 2
 
         lamda_fail = lamda_fail / 2
@@ -139,13 +156,17 @@ output:
 mal_update:恶意梯度
 
 """
-def min_sum(param_updates, dev_type='unit_vec'):
+def min_sum(args, param_updates, dev_type='unit_vec'):
+    
+    gpu_number = args.gpu_number
+    device = torch.device(f'cuda:{gpu_number}' if args.gpu else 'cpu')
 
-    std_dict = copy.deepcopy(param_updates.values[0])
+    std_dict = copy.deepcopy(param_updates[0])
     std_keys = get_key_list(std_dict.keys())
+    print("len all_updates is ", len(param_updates))
     all_updates = modifyWeight(std_keys, param_updates)
 
-    model_re = np.mean(all_updates, axis=0) # 计算均值
+    model_re = torch.mean(all_updates, axis=0) # 计算均值s
 
     if dev_type == 'unit_vec':
         deviation = model_re / torch.norm(model_re)  # unit vector, dir opp to good dir
@@ -153,13 +174,19 @@ def min_sum(param_updates, dev_type='unit_vec'):
         deviation = torch.sign(model_re)
     elif dev_type == 'std':
         deviation = torch.std(all_updates, 0)
-        
+    
+    lamda_succ = torch.Tensor([11.0]).to(device)
+    lamda = torch.Tensor([10.0]).to(device)
+    lamda_fail = lamda
+    sum_d_i = 0
+    sum_d = 0
 
     threshold_diff = 1e-5
-    base_grad = all_updates[0]
+    # base_grad = all_updates[0]
     for grad_i in all_updates:
+        sum_d_i = 0
         for grad_j in all_updates:
-            distance = torch.norm((grad_i - grad_j),axis = 0)**2
+            distance = torch.norm(grad_i - grad_j)**2
             sum_d_i += distance
         sum_d = max(sum_d, sum_d_i)
 
@@ -168,13 +195,16 @@ def min_sum(param_updates, dev_type='unit_vec'):
         mal_update = (model_re - lamda * deviation)
         sumd_d_mal = 0
         for grad in all_updates:
-            distance = torch.norm((grad - mal_update),axis = 0)**2
+            distance = torch.norm(grad - mal_update)**2
             sum_d_mal = sumd_d_mal + distance
         if sum_d_mal <= sum_d:
             lamda_succ = lamda
             lamda = lamda + lamda_fail / 2
+            # break
+            print("there")
         else:
             lamda = lamda - lamda_fail / 2
+            print("here")
 
         lamda_fail = lamda_fail / 2
 
@@ -186,7 +216,18 @@ def min_sum(param_updates, dev_type='unit_vec'):
 
 
 
-def Grad_tailored(all_updates, model_re, n_attackers, dev_type='unit_vec'):
+def Grad_median(args, param_updates, n_attackers, dev_type='unit_vec', threshold=30):
+    ## model_re是params的均值 
+    gpu_number = args.gpu_number
+    device = torch.device(f'cuda:{gpu_number}' if args.gpu else 'cpu')
+    
+    std_dict = copy.deepcopy(param_updates[0])
+    std_keys = get_key_list(std_dict.keys())
+    all_updates = modifyWeight(std_keys, param_updates)
+
+    model_re = torch.mean(all_updates, axis=0) # 计算均值
+
+
 
     if dev_type == 'unit_vec':
         deviation = model_re / torch.norm(model_re)  # unit vector, dir opp to good dir
@@ -194,67 +235,52 @@ def Grad_tailored(all_updates, model_re, n_attackers, dev_type='unit_vec'):
         deviation = torch.sign(model_re)
     elif dev_type == 'std':
         deviation = torch.std(all_updates, 0)
-        
-    lamda = torch.Tensor([20.0]).cuda() #compute_lambda_our(all_updates, model_re, n_attackers)
-    # print(lamda)
+
+    lamda = torch.Tensor([threshold]).to(device)#compute_lambda_our(all_updates, model_re, n_attackers)
+
     threshold_diff = 1e-5
+    prev_loss = -1
     lamda_fail = lamda
     lamda_succ = 0
-
+    iters = 0 
     while torch.abs(lamda_succ - lamda) > threshold_diff:
         mal_update = (model_re - lamda * deviation)
         mal_updates = torch.stack([mal_update] * n_attackers)
         mal_updates = torch.cat((mal_updates, all_updates), 0)
 
-        agg_grads, krum_candidate = multi_krum(mal_updates, n_attackers, multi_k=True)
-
-        if np.sum(krum_candidate < n_attackers) == n_attackers:
-            # print('successful lamda is ', lamda)
+        agg_grads = torch.median(mal_updates, 0)[0]
+        
+        loss = torch.norm(agg_grads - model_re)
+        
+        if prev_loss < loss:
             lamda_succ = lamda
             lamda = lamda + lamda_fail / 2
         else:
             lamda = lamda - lamda_fail / 2
 
         lamda_fail = lamda_fail / 2
-
+        prev_loss = loss
+        
     mal_update = (model_re - lamda_succ * deviation)
 
+    mal_update = restoreWeight(std_dict, std_keys, mal_update)
     return mal_update
-
-
-def multi_krum(all_updates, n_attackers, multi_k=False):
-    nusers = all_updates.shape[0]
-    candidates = []
-    candidate_indices = []
-    remaining_updates = all_updates
-    all_indices = np.arange(len(all_updates))
-
-    while len(remaining_updates) > 2 * n_attackers + 2:
-        distances = []
-        for update in remaining_updates:
-            distance = torch.norm((remaining_updates - update), dim=1) ** 2
-            distances = distance[None, :] if not len(distances) else torch.cat((distances, distance[None, :]), 0)
-
-        distances = torch.sort(distances, dim=1)[0]
-        scores = torch.sum(distances[:, :len(remaining_updates) - 2 - n_attackers], dim=1)
-        indices = torch.argsort(scores)[:len(remaining_updates) - 2 - n_attackers]
-
-        candidate_indices.append(all_indices[indices[0]])
-        all_indices = np.delete(all_indices, indices[0])
-        candidates = remaining_updates[indices[0]][None, :] if not len(candidates) else torch.cat((candidates, remaining_updates[indices[0]][None, :]), 0)
-        remaining_updates = torch.cat((remaining_updates[:indices[0]], remaining_updates[indices[0] + 1:]), 0)
-        if not multi_k:
-            break
-    # print(len(remaining_updates))
-    aggregate = torch.mean(candidates, dim=0)
-    return aggregate, np.array(candidate_indices)
-
 
 
 
 ### LA attack
     ## on Trimmed Mean and Mean full knowledge
-def LA_attack(all_updates, n_attackers):
+def LA_attack(args, param_updates, n_attackers):
+
+    gpu_number = args.gpu_number
+    device = torch.device(f'cuda:{gpu_number}' if args.gpu else 'cpu')
+
+    std_dict = copy.deepcopy(param_updates[0])
+    std_keys = get_key_list(std_dict.keys())
+    all_updates = modifyWeight(std_keys, param_updates)
+    print("all_updates shape is ",all_updates.shape)
+    print("n_attacker is ", n_attackers)
+
     model_re = torch.mean(all_updates, 0)
     model_std = torch.std(all_updates, 0)
     deviation = torch.sign(model_re)
@@ -267,14 +293,20 @@ def LA_attack(all_updates, n_attackers):
     max_range = torch.cat((max_vector_low[:,None], max_vector_hig[:,None]), dim=1)
     min_range = torch.cat((min_vector_low[:,None], min_vector_hig[:,None]), dim=1)
 
-    rand = torch.from_numpy(np.random.uniform(0, 1, [len(deviation), n_attackers])).type(torch.FloatTensor).cuda()
+    rand = torch.from_numpy(np.random.uniform(0, 1, [len(deviation), n_attackers])).type(torch.FloatTensor).to(device)
 
     max_rand = torch.stack([max_range[:, 0]] * rand.shape[1]).T + rand * torch.stack([max_range[:, 1] - max_range[:, 0]] * rand.shape[1]).T
     min_rand = torch.stack([min_range[:, 0]] * rand.shape[1]).T + rand * torch.stack([min_range[:, 1] - min_range[:, 0]] * rand.shape[1]).T
 
-    mal_vec = (torch.stack([(deviation > 0).type(torch.FloatTensor)] * max_rand.shape[1]).T.cuda() * max_rand + torch.stack(
-        [(deviation > 0).type(torch.FloatTensor)] * min_rand.shape[1]).T.cuda() * min_rand).T
+    mal_vec = (torch.stack([(deviation > 0).type(torch.FloatTensor)] * max_rand.shape[1]).T.to(device) * max_rand + torch.stack(
+        [(deviation > 0).type(torch.FloatTensor)] * min_rand.shape[1]).T.to(device) * min_rand).T
 
-    return mal_vec
+    print("mal_vec shape is ",mal_vec.shape)
+
+    mal_updates = []
+    for item in mal_vec:
+        mal_update = restoreWeight(std_dict, std_keys, item)
+        mal_updates.append(mal_update)
+    return mal_updates
 
 

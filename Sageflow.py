@@ -44,7 +44,7 @@ if __name__ == '__main__':
     gpu_number = args.gpu_number
     device = torch.device(f'cuda:{gpu_number}' if args.gpu else 'cpu')
 
-    # writer = LogWriter(logdir="./log/histogram_test/async_res_noattack_3")
+    writer = LogWriter(logdir="./log/histogram_test/async_3")
 
     train_dataset, test_dataset, (user_groups, dict_common) = get_dataset(args) 
 
@@ -210,6 +210,12 @@ if __name__ == '__main__':
                 model=copy.deepcopy(global_model), global_round=epoch
 
             )
+
+            test_model = copy.deepcopy(global_model)
+            test_model.load_state_dict(w)
+            flat_parameters = flatten_parameters(test_model)
+            writer.add_histogram(tag='default tag', values = flat_parameters, step = idx,buckets = 10)
+
             
             ensure_1 += 1 # 平均分布
             if idx in attack_users and args.model_poison == True and epoch > 39 - MAX_STALENESS and args.poison_methods == 'ourpoisonMethod':

@@ -586,7 +586,7 @@ def update_weights(global_model, param_update):
 
 def AFLGuard(grad_param_updates, global_model, global_test_model, epoch, lamda):
     global_weights = copy.deepcopy(global_model.state_dict())
-    for gd_param in grad_param_updates:
+    for idx, gd_param in enumerate(grad_param_updates):
         w, loss, gd_server = global_test_model.update_weights(
 
                 model=copy.deepcopy(global_model), global_round=epoch
@@ -595,10 +595,12 @@ def AFLGuard(grad_param_updates, global_model, global_test_model, epoch, lamda):
         # print("len(gd param)", len(gd_param[1]))
         norm_1 = torch.norm(torch.subtract(gd_server , gd_param[1]))
         norm_2 = torch.norm(gd_server)
+        print("norm_1 is ", norm_1)
+        print("norm_2 * lamda is",norm_2 * lamda )
 
         if norm_1 <= norm_2 * lamda:
             # 满足条件则更新全局模型
-            # print("param type ", gd_param[0].shape)
+            print("satisfying", idx)
             global_weights = update_weights(global_model,gd_param[0])
             global_model.load_state_dict(global_weights)
 
@@ -613,7 +615,7 @@ def norm_clipping(global_model, local_weights_delay ,local_delay_ew):
     for item in local_delay_ew:
         params.extend(item)
 
-    number_to_consider = int(len(params)* 0.8) ### 尝试0.5
+    number_to_consider = int(len(params)* 0.5) ### 尝试0.5
     std_keys = get_key_list(global_model.state_dict().keys())
     weight_updates = modifyWeight(std_keys, params)
     print("weight size is ", weight_updates.shape)

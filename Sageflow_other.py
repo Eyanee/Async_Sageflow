@@ -6,7 +6,7 @@ import time
 import pickle
 import numpy as np
 from tqdm import tqdm
-# from visualdl import LogWriter
+from visualdl import LogWriter
 
 import torch
 
@@ -44,7 +44,7 @@ if __name__ == '__main__':
     gpu_number = args.gpu_number
     device = torch.device(f'cuda:{gpu_number}' if args.gpu else 'cpu')
 
-    # writer = LogWriter(logdir="./log/histogram_test/async_res_noattack_3")
+    writer = LogWriter(logdir="./log/histogram_test/async_3")
 
     train_dataset, test_dataset, (user_groups, dict_common) = get_dataset(args) 
 
@@ -363,9 +363,7 @@ if __name__ == '__main__':
                         pre_grad[i] = pre_grad[i] + local_grad_delay[i]
                 else:
                     if len(local_weights_delay[i]) > 0:
-                        w_avg_delay = average_weights(local_weights_delay[i])
-                        len_delay = len(local_weights_delay[i])
-                        pre_weights[i].append({epoch: [w_avg_delay, len_delay]})
+                        pre_weights[i].append(local_weights_delay[i])
                 
                         
         if args.update_rule == 'Sageflow':
@@ -418,18 +416,47 @@ if __name__ == '__main__':
                                     copy.deepcopy(global_model),
                                     train_dataset, dict_common, epoch, local_index_ew )
         else:
-            all_weights = copy.deepcopy(local_weights_delay[0])
-            for item in local_index_ew:
-                all_weights.extend(item)
-            global_weights , avg_weights= Fedavg(args, epoch, all_weights, global_model)
-            test_model.load_state_dict(avg_weights)
-            avg_acc, mal_loss_sync, mal_entropy_sample, mal_grad = test_inference(args, test_model,
-                                                                                        test_dataset)
-            print("avg_weights acc is ", avg_acc)
+            # all_weights = copy.deepcopy(local_weights_delay[0])
+            # print("len current weights",  len(all_weights))
+            # for item in local_delay_ew:
+            #     all_weights.extend(item)
+            # global_weights , avg_weights= Fedavg(args, epoch, all_weights, global_model)
+            # test_model.load_state_dict(avg_weights)
+            # avg_acc, mal_loss_sync, mal_entropy_sample, mal_grad = test_inference(args, test_model,
+            #                                                                             test_dataset)
+            # print("avg_weights acc is ", avg_acc)
+            sync_weights = average_weights(local_weights_delay[0])
+
+            global_weights = Sag(epoch, sync_weights, len_sync, local_delay_ew,
+                                                     copy.deepcopy(global_weights))
 
         # Update global weights
         pre_global_model.load_state_dict(global_model.state_dict())
         global_model.load_state_dict(global_weights)
+
+
+        # ### print parts
+        
+        # if  epoch == 23:
+        #     all_weights = []
+        #     print("len current weights",  len(all_weights))
+        #     std_keys = global_weights.keys() 
+        #     for item in local_delay_ew:
+        #         all_weights.extend(item)
+        #     for client, weights in enumerate(all_weights):
+        #         for idx,  key in enumerate(std_keys):
+        #             file_name = './visual1/layer_{}/async/client_{}.pt'.format(idx,client)
+        #             torch.save(weights[key], file_name) 
+            
+        #     all_weights = copy.deepcopy(local_weights_delay[0])
+        #     for client, weights in enumerate(all_weights):
+        #         for idx,  key in enumerate(std_keys):
+        #             file_name = './visual1/layer_{}/sync/client_{}.pt'.format(idx,client)
+        #             torch.save(weights[key], file_name) 
+            
+
+
+
 
         list_acc, list_loss = [], []
         global_model.eval()

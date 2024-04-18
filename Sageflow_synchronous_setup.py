@@ -105,11 +105,11 @@ if __name__ == '__main__':
             else:
                 local_model = LocalUpdate(args=args, dataset=train_dataset, idxs=user_groups[idx], data_poison=False, idx=idx)
 
-            w, loss = local_model.update_weights(
+            w, loss,_ = local_model.update_weights(
                 model=copy.deepcopy(global_model), global_round=epoch
             )
 
-            if idx in attack_users and args.model_poison ==True and epoch > 19:
+            if idx in attack_users and args.model_poison ==True and epoch > 15:
                 w = sign_attack(w, args.model_poison_scale)
 
             #### save for print test ####
@@ -132,7 +132,7 @@ if __name__ == '__main__':
             global_model.load_state_dict(w)
 
             # Compute the loss and entropy for each device on public dataset
-            common_acc, common_loss, common_entropy = test_inference(args, global_model, DatasetSplit(train_dataset, dict_common))
+            common_acc, common_loss, common_entropy, _ = test_inference(args, global_model, DatasetSplit(train_dataset, dict_common))
             loss_on_public.append(common_loss)
             entropy_on_public.append(common_entropy)
 
@@ -144,7 +144,8 @@ if __name__ == '__main__':
             global_weights,_ = Eflow(local_weights, loss_on_public,entropy_on_public,epoch)
 
         else:
-            global_weights = average_weights(local_weights)
+            global_weights,_ = Fedavg(args, epoch, local_weights,global_model)
+            # global_weights = average_weights(local_weights)
 
 
 
@@ -178,7 +179,7 @@ if __name__ == '__main__':
             print(f'Training Loss : {np.mean(np.array(train_loss))}')
             print('Train Accuracy: {:.2f}% \n'.format(100 * train_accuracy[-1]))
 
-        test_acc, test_loss , _= test_inference(args, global_model, test_dataset)
+        test_acc, test_loss , test_entropy, _ = test_inference(args, global_model, test_dataset)
         print('Test Accuracy: {:.2f}% \n'.format(100 * test_acc))
         final_test_acc.append(test_acc)
 
