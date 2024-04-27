@@ -6,12 +6,12 @@ import time
 import pickle
 import numpy as np
 from tqdm import tqdm
-from visualdl import LogWriter
+# from visualdl import LogWriter
 
 import torch
 
 from update import LocalUpdate, test_inference, DatasetSplit
-from poison_optimization_test import Outline_Poisoning, Indicator, Outline_Poisoning_compare
+from poison_optimization_copy import Outline_Poisoning, add_small_perturbation,cal_ref_distance
 from model import MLP, CNNMnist, CNNFashion_Mnist, CNNCifar, VGGCifar
 from resnet import *
 from utils1 import *
@@ -44,8 +44,7 @@ if __name__ == '__main__':
     gpu_number = args.gpu_number
     device = torch.device(f'cuda:{gpu_number}' if args.gpu else 'cpu')
 
-    writer_sync = LogWriter(logdir="./log/histogram_test/async_1")
-    writer_async = LogWriter(logdir="./log/histogram_test/async_2")
+    # writer = LogWriter(logdir="./log/histogram_test/async_res_noattack_3")
 
     train_dataset, test_dataset, (user_groups, dict_common) = get_dataset(args) 
 
@@ -87,14 +86,14 @@ if __name__ == '__main__':
 
     pre_weights = {} 
     pre_indexes = {}
-    pre_grad = {}
+    # pre_grad = {}
     pre_loss = {}
     # 多级staleness的存储
     for i in range(args.staleness + 1): 
         if i != 0:
             pre_weights[i] = []
             pre_indexes[i] = []
-            pre_grad[i] = []
+            # pre_grad[i] = []
             pre_loss[i] = []
 
     # Device schedular
@@ -111,7 +110,8 @@ if __name__ == '__main__':
     # 其他参数
     distance_ratio = 1
     adaptive_accuracy_threshold = 0.8 ## 需要调整
-    pinned_accuracy_threshold = 0.8 ## 需要调整
+    pinned_accuracy_threshold = 0.
+     ## 需要调整
 
  
     for l in range(args.num_users):
@@ -152,8 +152,7 @@ if __name__ == '__main__':
     test_mal_list_pre = []
     
     
-    sync_counter = 1
-    async_counter = 1
+    
     
             
     for epoch in tqdm(range(args.epochs)):
@@ -162,7 +161,7 @@ if __name__ == '__main__':
         loss_on_public = {}
         entropy_on_public = {}
         local_index_delay = {}
-        local_grad_delay = {}
+        # local_grad_delay = {}
         malicious_models = []
 
         for i in range(args.staleness + 1):
@@ -170,7 +169,7 @@ if __name__ == '__main__':
             entropy_on_public[i] = []
             local_weights_delay[i] = []
             local_index_delay[i] = []
-            local_grad_delay[i] = []
+            # local_grad_delay[i] = []
 
 
         print(f'\n | Global Training Round : {epoch + 1} | \n')
@@ -183,24 +182,23 @@ if __name__ == '__main__':
         # After round, each staleness group is adjusted
         local_delay_ew = copy.deepcopy(pre_weights[1])
         local_index_ew = copy.deepcopy(pre_indexes[1])
-        local_delay_gd = copy.deepcopy(pre_grad[1])
+        # local_delay_gd = copy.deepcopy(pre_grad[1])
         local_delay_loss = copy.deepcopy(pre_loss[1])
 
         for i in range(args.staleness):
             if i != 0:
                 pre_weights[i] = copy.deepcopy(pre_weights[i+1])
                 pre_indexes[i] = copy.deepcopy(pre_indexes[i+1])
-                pre_grad[i] = copy.deepcopy(pre_grad[i + 1])
+                # pre_grad[i] = copy.deepcopy(pre_grad[i + 1])
                 pre_loss[i] = copy.deepcopy(pre_loss[i + 1])
 
         pre_weights[args.staleness] = [] # 对staleness的权重
         pre_indexes[args.staleness] = []
-        pre_grad[args.staleness] = []
+        # pre_grad[args.staleness] = []
         pre_loss[args.staleness] = []
 
         ensure_1 = 0
         count = 0 
-        print("epoch is",   epoch)
         for idx in all_users:
 
             if scheduler[idx] == 0: # 当前轮次提交
@@ -225,113 +223,122 @@ if __name__ == '__main__':
                 model=copy.deepcopy(global_model), global_round=epoch
 
             )
-
             
-            if  epoch + scheduler[idx]  == 24 :
-                
-                test_model = copy.deepcopy(global_model)
-                test_model.load_state_dict(w)
-                flat_parameters = flatten_parameters(test_model)
-                print("flat parameters: ", flat_parameters.shape)
-                if scheduler[idx] == 1:
-                    writer_sync.add_histogram(tag= 'Sync FL', values = flat_parameters, step = sync_counter,buckets = 10)
-                    sync_counter = sync_counter + 1
-                else:
-                    writer_async.add_histogram(tag= 'Async FL', values = flat_parameters, step = async_counter ,buckets = 10)
-                    async_counter = async_counter + 1
-
-
             ensure_1 += 1 # 平均分布
-            if idx in attack_users and args.model_poison == True and epoch > 30 - MAX_STALENESS and args.poison_methods == 'ourpoisonMethod':
-                print("here")
+            if idx in attack_users and args.model_poison == True and epoch >=30 - MAX_STALENESS:
+                # if args.poison_methods == 'ourpoisonMethod':
+                #     print("here")
                 mal_parameters_list[0][idx] = w # 加入malicious_list
                 test_mal_list.append(w)
-            elif idx in attack_users and args.new_poison == True and epoch > 0:
-                w = sign_attack(w, args.model_poison_scale)
+
+            elif  idx in attack_users and args.new_poison == True and epoch >=30:
                 print("sign attack")
+                w = sign_attack(w, args.model_poison_scale)
+
                 test_model = copy.deepcopy(global_model)
                 test_model.load_state_dict(w)
 
-                common_acc, common_loss_sync, common_entropy_sample, common_grad = test_inference(args, test_model,
+                common_acc, common_loss_sync, common_entropy_sample = test_inference(args, test_model,
                                                                                     DatasetSplit(train_dataset,
                                                                                         dict_common))
                 local_weights_delay[ scheduler[idx] - 1 ].append(copy.deepcopy(w))
                 local_index_delay[ scheduler[idx] - 1 ].append(idx)
-                local_grad_delay[scheduler[idx] - 1].append(copy.deepcopy(common_grad))
+                # local_grad_delay[scheduler[idx] - 1].append(copy.deepcopy(common_grad))
                 loss_on_public[scheduler[idx] - 1].append(common_loss_sync)
                 entropy_on_public[scheduler[idx] - 1].append(common_entropy_sample)
-                print("sign loss is ", common_loss_sync)
-                
+                print(" benign loss is ", common_loss_sync)
             else:     
                 test_model = copy.deepcopy(global_model)
                 test_model.load_state_dict(w)
 
-                common_acc, common_loss_sync, common_entropy_sample, common_grad = test_inference(args, test_model,
+                common_acc, common_loss_sync, common_entropy_sample = test_inference(args, test_model,
                                                                                     DatasetSplit(train_dataset,
                                                                                         dict_common))
                 local_weights_delay[ scheduler[idx] - 1 ].append(copy.deepcopy(w))
                 local_index_delay[ scheduler[idx] - 1 ].append(idx)
-                local_grad_delay[scheduler[idx] - 1].append(copy.deepcopy(common_grad))
+                # local_grad_delay[scheduler[idx] - 1].append(copy.deepcopy(common_grad))
                 loss_on_public[scheduler[idx] - 1].append(common_loss_sync)
                 entropy_on_public[scheduler[idx] - 1].append(common_entropy_sample)
                 print(" benign loss is ", common_loss_sync)
             
-        if args.model_poison == True and epoch > 30 :
+        if args.model_poison == True and epoch >=30 :
             if args.poison_methods == 'ourpoisonMethod':
                 malicious_models = list(mal_parameters_list[MAX_STALENESS - 1].values()) #本地模拟的陈旧度上限
-                print("keys is ", mal_parameters_list[0].keys())
                 local_dict = mal_parameters_list[0][attack_users[0]]
                 previous_dict = mal_parameters_list[1][attack_users[0]]
-                print("len of malicious models is", len(malicious_models))
                 
-                poisoned = True
                 pinned_accuracy_threshold = 0.5 # 
                 adaptive_accuracy_threshold = pinned_accuracy_threshold
-                malicious_dict, distance_ratio = Outline_Poisoning(args, copy.deepcopy(global_model), malicious_models, 
-                                                                train_dataset, distance_ratio, pinned_accuracy_threshold,False)
-
-            elif args.poison_methods == 'LIE':
-                mal_grads = LIE_attack(malicious_models[0])
-
-            elif args.poison_methods == 'min_max':
-                mal_grads = min_max()
-            elif args.poison_methods == 'min_sum':
-                print("label_flipping")
-            # elif args.poison_methods == 'sign_flip':
-                # w = sign_attack(w, args.model_poison_scale)
-
-
-            test_model.load_state_dict(malicious_dict)
-            mal_acc, mal_loss_sync, mal_entropy_sample, mal_grad = test_inference(args, test_model,
-                                                                                        DatasetSplit(train_dataset,
-                                                                                            dict_common))
-            
-            print("mal_acc is", mal_acc)
-            for idx in attack_users:
-                local_weights_delay[ scheduler[idx] - 1 ].append(copy.deepcopy(malicious_dict))
-                local_index_delay[ scheduler[idx] - 1 ].append(idx)
-                loss_on_public[scheduler[idx] - 1].append(mal_loss_sync)
-                entropy_on_public[scheduler[idx] - 1].append(mal_entropy_sample)
-                #
-                local_grad_delay[scheduler[idx] - 1].append(copy.deepcopy(mal_grad))
-            
-         #### save for print test ####
-
-        # if epoch == 24:
-        #     test_model = copy.deepcopy(global_model)
-        #     stack_tensor = flat_parameters = flatten_parameters(test_model)
-        #     for param in local_weights_delay[0]:
-        #         test_model.load_state_dict(param)
-        #         flat_parameters = flatten_parameters(test_model)
-        #         stack_tensor = np.vstack([stack_tensor, flat_parameters])
+                malicious_dict = Outline_Poisoning(args, copy.deepcopy(global_model), malicious_models, 
+                                                                train_dataset, distance_ratio, pinned_accuracy_threshold)
                 
-        #     stack_tensor = stack_tensor[1:]
-        #     np.savetxt('./stacked_data.csv', stack_tensor, delimiter=',')
-        #     print("############")
-        #         ##   #####   
-       
             
+                test_model.load_state_dict(malicious_dict)
+                mal_acc, mal_loss_sync, mal_entropy_sample = test_inference(args, test_model,
+                                                                                            DatasetSplit(train_dataset,
+                                                                                                        dict_common))
+                
+                print("mal_acc is", mal_acc)
+                print("mal loss is", mal_loss_sync)
+                for idx in attack_users:
+                        
+                    local_weights_delay[ scheduler[idx] - 1 ].append(copy.deepcopy(malicious_dict))
+                    local_index_delay[ scheduler[idx] - 1 ].append(idx)
+                    loss_on_public[scheduler[idx] - 1].append(mal_loss_sync)
+                    entropy_on_public[scheduler[idx] - 1].append(mal_entropy_sample)
+                    #
+                    # local_grad_delay[scheduler[idx] - 1].append(copy.deepcopy(mal_grad))
         
+            elif args.poison_methods == 'LA':
+                    malicious_dicts= LA_attack(args, list(mal_parameters_list[0].values()), m)
+                    for num, idx in enumerate(attack_users):
+                        test_model.load_state_dict(malicious_dicts[num])
+                        mal_acc, mal_loss_sync, mal_entropy_sample = test_inference(args, test_model,
+                                                                                                    DatasetSplit(train_dataset,
+                                                                                                        dict_common))
+                
+                        print("mal_acc is", mal_acc)
+                        
+                        local_weights_delay[ scheduler[idx] - 1 ].append(copy.deepcopy(malicious_dicts[num]))
+                        local_index_delay[ scheduler[idx] - 1 ].append(idx)
+                        loss_on_public[scheduler[idx] - 1].append(mal_loss_sync)
+                        entropy_on_public[scheduler[idx] - 1].append(mal_entropy_sample)
+                        #
+                        # local_grad_delay[scheduler[idx] - 1].append(copy.deepcopy(mal_grad))
+                        
+            else:
+                for idx in attack_users  :
+                    if  scheduler[idx] == clientStaleness[idx]:
+                        if args.poison_methods == 'LIE':
+                            print("len of [max] is ", len(list(mal_parameters_list[MAX_STALENESS - 1].values())))
+                            print("len of [0] is ", len(list(mal_parameters_list[0].values())))
+                            malicious_dict = LIE_attack(list(mal_parameters_list[0].values()))
+                        
+                        elif args.poison_methods == 'min_max':
+                            print("len of [0] is ", len(list(mal_parameters_list[0].values())))
+                            malicious_dict = min_max(args, list(mal_parameters_list[0].values()))
+                        elif args.poison_methods == 'min_sum':
+                            malicious_dict = min_sum(args, list(mal_parameters_list[0].values()))
+                        elif args.poison_methods == 'Grad':
+                            malicious_dict = Grad_median(args, list(mal_parameters_list[0].values()), m)
+                        
+                        
+
+                        test_model.load_state_dict(malicious_dict)
+                        mal_acc, mal_loss_sync, mal_entropy_sample = test_inference(args, test_model,
+                                                                                                    DatasetSplit(train_dataset,
+                                                                                                        dict_common))
+                
+                        
+                        local_weights_delay[ scheduler[idx] - 1 ].append(copy.deepcopy(malicious_dict))
+                        local_index_delay[ scheduler[idx] - 1 ].append(idx)
+                        loss_on_public[scheduler[idx] - 1].append(mal_loss_sync)
+                        entropy_on_public[scheduler[idx] - 1].append(mal_entropy_sample)
+                
+                        # local_grad_delay[scheduler[idx] - 1].append(copy.deepcopy(mal_grad))
+                        print("mal_acc is", mal_acc)
+                        print("mal_loss is", mal_loss_sync)
+                        print("mal_entropy is", mal_entropy_sample)
 
         for i in range(args.staleness):
             if i != 0:
@@ -353,41 +360,36 @@ if __name__ == '__main__':
                         pre_weights[i].append({epoch: [w_avg_delay, len_delay]})
                 elif args.update_rule == 'Trimmed_mean':
                     if len(local_weights_delay[i]) > 0:
-                        std_keys = get_key_list(global_model.state_dict().keys())
-                        w_avg_delay, len_delay = pre_Trimmed_mean(copy.deepcopy(global_model.state_dict()), std_keys, local_weights_delay[i], m)
-                        pre_weights[i].append({epoch: [w_avg_delay, len_delay]})
-                elif args.update_rule == 'norm_clipping':
+                        pre_weights[i].append(local_weights_delay[i])
+                elif args.update_rule == 'norm_bounding':
                     if len(local_weights_delay[i]) > 0:
                         # 暂时还没实现
-                        std_keys = get_key_list(global_model.state_dict().keys())
-                        # w_avg_delay, len_delay = pre_Trimmed_mean(copy.deepcopy(global_model.state_dict()), std_keys, local_weights_delay[i])
-                        # pre_weights[i].append({epoch: [w_avg_delay, len_delay]})
+                        pre_weights[i].append(local_weights_delay[i])
                 elif args.update_rule == 'Zeno':
                     if len(local_weights_delay[i]) > 0:
                         pre_weights[i] = np.concatenate((pre_weights[i], local_weights_delay[i]), axis=0)
-                        pre_grad[i] = pre_grad[i] + local_grad_delay[i]
-                        pre_loss[i] = np.concatenate((pre_loss[i], loss_on_public[i]), axis=0)
-                elif args.update_rule == 'Zenoplusplus':
+                        # pre_grad[i] = pre_grad[i] + local_grad_delay[i]
+                        # pre_loss[i] = np.concatenate((pre_loss[i], loss_on_public[i]), axis=0)
+                elif args.update_rule == 'AFLGuard':
                     if len(local_weights_delay[i]) > 0:
-                        # Zeno ++ 只保留accept的参数列表
-                        # std_keys = get_key_list(global_model.state_dict(),keys())
-                        w_accept_list = Zenoplusplus(args, copy.deepcopy(global_model.state_dict()), local_weights_delay[i], local_index_delay[i])
-                        pre_weights[i].append(w_accept_list)
-                elif args.update_rule == 'FLTrust':
+                        for j in range(len(local_weights_delay[i])):
+                            pre_weights[i].append([local_weights_delay[i][j], local_grad_delay[i][j]])
+                elif args.update_rule == 'FLARE':
                     if len(local_weights_delay[i]) > 0:
-                        pre_weights[i] = np.concatenate((pre_weights[i], local_weights_delay[i]), axis=0)
-                        pre_indexes[i] = pre_indexes[i] + local_index_delay[i]
-                        pre_grad[i] = pre_grad[i] + local_grad_delay[i]
-                else:
-                    if len(local_weights_delay[i]) > 0:
-                        # w_avg_delay = average_weights(local_weights_delay[i])
-                        # len_delay = len(local_weights_delay[i])
                         pre_weights[i].append(local_weights_delay[i])
+                else:
+                    # if len(local_weights_delay[i]) > 0:
+                    #     pre_weights[i].append(local_weights_delay[i])
+                    if len(local_weights_delay[i]) > 0:
+                        w_avg_delay = average_weights(local_weights_delay[i])
+                        len_delay = len(local_weights_delay[i])
+                        pre_weights[i].append({epoch: [w_avg_delay, len_delay]})
                 
                         
         if args.update_rule == 'Sageflow':
             sync_weights, len_sync = Eflow(local_weights_delay[0], loss_on_public[0], entropy_on_public[0], epoch)
             # Staleness-aware grouping
+
             global_weights = Sag(epoch, sync_weights, len_sync, local_delay_ew,
                                                      copy.deepcopy(global_weights))
         elif args.update_rule == 'AFA':
@@ -400,52 +402,60 @@ if __name__ == '__main__':
             sync_weights, len_sync = pre_Median(copy.deepcopy(global_model.state_dict()), std_keys, local_weights_delay[0])
             global_weights = Sag(epoch, sync_weights, len_sync, local_delay_ew,
                                                      copy.deepcopy(global_weights))
+            test_model.load_state_dict(global_weights)
+            avg_acc, mal_loss_sync, mal_entropy_sample = test_inference(args, test_model,
+                                                                                        test_dataset)
+            print("median_weights acc is ", avg_acc)
+
         elif args.update_rule == 'Trimmed_mean': # ?有问题需要重新考虑
             std_keys = get_key_list(global_model.state_dict().keys())
-            sync_weights, len_sync = pre_Trimmed_mean(copy.deepcopy(global_model.state_dict()), std_keys, local_weights_delay[0])
+            sync_weights, len_sync = pre_Trimmed_mean(copy.deepcopy(global_model.state_dict()), std_keys, local_weights_delay[0], local_delay_ew)
             # Staleness-aware grouping
             global_weights  = sync_weights
 
-        elif args.update_rule == 'norm_clipping':
-            # sync_weights, len_sync = Median()
-            # Staleness-aware grouping
-            std_keys = get_key_list(global_model.state_dict().keys())
-            # global_weights = Sag(epoch, sync_weights, len_sync, local_delay_ew,
-            #                                          copy.deepcopy(global_weights))
+        elif args.update_rule == 'norm_bounding':
+            global_weights = norm_clipping(global_model, local_weights_delay[0],local_delay_ew)
         elif args.update_rule == 'Zeno':
+            print("Zeno")
             local_delay_ew = np.concatenate((local_delay_ew, local_weights_delay[0]), axis=0)
-            local_delay_gd = local_delay_gd + local_grad_delay[0]
-            local_delay_loss = np.concatenate((local_delay_loss, loss_on_public[0]), axis=0)
-            global_weights = Zeno(local_delay_ew, local_delay_gd, local_delay_loss, args,
+            # local_delay_gd = local_delay_gd + local_grad_delay[0]
+            # local_delay_loss = np.concatenate((local_delay_loss, loss_on_public[0]), axis=0)
+            global_weights = Zeno(local_delay_ew, local_delay_gd,  args,
                                     copy.deepcopy(global_model),
                                     DatasetSplit(train_dataset, dict_common), epoch)
-        elif args.update_rule == 'Zenoplusplus':
-            w_accept_list = Zenoplusplus(args, copy.deepcopy(global_model.state_dict()), local_weights_delay[0], local_index_delay[0])
-            for item in local_delay_ew:
-                w_accept_list.extend(item)
-            global_weights = average_weights(w_accept_list)
-        elif args.update_rule == 'FLTrust':
-            local_delay_ew = np.concatenate((local_delay_ew, local_weights_delay[0]), axis=0)
-            local_delay_gd = local_delay_gd + local_grad_delay[0]
-            # # print("local index ew", local_index_ew)
-            # if len(local_delay_ew) == 0 or local:
-            #     local_index_ew = local_index_delay[0]
-            # else:
-            #     local_index_ew.extend(local_index_delay[0])
-            local_index_ew = local_index_ew + local_index_delay[0]
-           
-            global_weights = FLTrust(local_delay_ew, local_delay_gd, args,
-                                    copy.deepcopy(global_model),
-                                    train_dataset, dict_common, epoch, local_index_ew )
+        elif args.update_rule == 'AFLGuard':
+            current_param = []
+            global_test_model = LocalUpdate(args=args, dataset=train_dataset, idxs=dict_common, idx=idx,
+                                              data_poison=False)
+
+            for j in range(len(local_weights_delay[0])):
+                current_param.append([local_weights_delay[0][j], local_grad_delay[0][j]])
+            current_param.extend(local_delay_ew)
+            # print("len current param", len(current_param))
+            global_weights = AFLGuard(current_param, global_model, global_test_model, epoch, lamda = 2)
+            
+        
+        elif args.update_rule == 'FLARE':
+            update_params = copy.deepcopy(local_weights_delay[0])
+            for item  in local_delay_ew:
+                update_params.extend(item)
+            global_weights = FLARE(args, global_model, update_params,DatasetSplit(train_dataset,dict_common) )
+        
         else:
-            all_weights = copy.deepcopy(local_weights_delay[0])
-            for item in local_index_ew:
-                all_weights.extend(item)
-            global_weights , avg_weights= Fedavg(args, epoch, all_weights, global_model)
-            test_model.load_state_dict(avg_weights)
-            avg_acc, mal_loss_sync, mal_entropy_sample, mal_grad = test_inference(args, test_model,
-                                                                                        test_dataset)
-            print("avg_weights acc is ", avg_acc)
+            global_weights = Sag(epoch, average_weights(local_weights_delay[0]), len(local_weights_delay[0]),
+                                                 local_delay_ew, copy.deepcopy(global_weights))
+            # Fedavg
+            # all_weights = copy.deepcopy(local_weights_delay[0])
+            # # all_weights.extend(local_delay_ew)
+            # for item in local_delay_ew:
+            #     all_weights.extend(item)
+            # global_weights , avg_weights= Fedavg(args, epoch, all_weights, global_model)
+            # test_model.load_state_dict(avg_weights)
+            # avg_acc, mal_loss_sync, mal_entropy_sample, mal_grad = test_inference(args, test_model,
+            #                                                                             test_dataset)
+            # print("avg_weights acc is ", avg_acc)
+
+            
 
         # Update global weights
         pre_global_model.load_state_dict(global_model.state_dict())
@@ -472,7 +482,7 @@ if __name__ == '__main__':
 
             print('Train Accuracy: {:.2f}% \n'.format(100 * train_accuracy[-1]))
 
-        test_acc, test_loss, _, grad = test_inference(args, global_model, test_dataset)
+        test_acc, test_loss, _ = test_inference(args, global_model, test_dataset)
         final_test_acc.append(test_acc)
         print('Test Accuracy: {:.2f}% \n'.format(100 * test_acc))
 
@@ -483,7 +493,7 @@ if __name__ == '__main__':
                 
         # Mal_parameters_list Update
         
-        if idx in attack_users and args.model_poison == True and epoch > 30 - MAX_STALENESS:
+        if idx in attack_users and args.model_poison == True and epoch >= 30 - MAX_STALENESS:
             for i in range(MAX_STALENESS-1 , 0 , -1):
                 mal_parameters_list[i] = copy.copy(mal_parameters_list[i-1])
             mal_parameters_list[0] = {}
@@ -518,7 +528,7 @@ if __name__ == '__main__':
     else:
         attack_type = 'no_attack'
 
-    file_n = f'accuracy_{args.update_rule}__{args.dataset}_{attack_type}_poison_eth_{args.eth}_delta_{args.delta}_{args.frac}_{args.seed}_{args.lam}.csv'
+    file_n = f'accuracy_{args.update_rule}__{args.poison_methods}_{attack_type}_poison_eth_{args.eth}_delta_{args.delta}_{args.frac}_{args.seed}_{args.lam}.csv'
 
     f = open(file_n, 'w', encoding='utf-8', newline='')
     wr = csv.writer(f)

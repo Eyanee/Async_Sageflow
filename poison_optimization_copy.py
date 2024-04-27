@@ -69,10 +69,10 @@ def get_distance_list(ori_state_dict, mod_state_dict):
 def Outline_Poisoning(args, global_model, malicious_models, train_dataset, distance_ratio, pinned_accuracy_threshold):
     # global initial_w_rand
     ref_model = global_model 
-    new_distance_ratio = 1.0 
+    new_distance_ratio = 2.0 
     distance_threshold = cal_ref_distance(malicious_models, ref_model, new_distance_ratio) # 计算参考L2 distance 门槛 
     print("calculated distance threshold is ", distance_threshold)
-
+    
     w_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, distance_threshold,  perturbation_range=(-0.05, 0.05))
 
 
@@ -227,21 +227,21 @@ def phased_optimization(args, global_model, w_rand, train_dataset, distance_thre
         
         if test_distance <= distance_threshold and test_acc_1 <= pinned_accuracy_threshold and test_entropy  <= entropy_threshold and test_loss <= 2 :
             return w_rand, True
-        
-              
-        elif (test_entropy > entropy_threshold or test_loss > 2) and distillation_res == True:
-            if test_loss > 1:
-                distillation_res, w_rand = self_distillation(args,teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 10)
-            else:
-                distillation_res, w_rand = self_distillation(args,teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 10)
-            # distillation_res, w_rand = self_distillation(args, teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold,  distance_threshold, distillation_round = 10)
         elif test_distance > distance_threshold:
             w_rand = adaptive_scaling(w_rand, global_model.state_dict(), distance_threshold, test_distance)
             student_model.load_state_dict(w_rand)
+              
+        elif (test_entropy > entropy_threshold or test_loss > 2) and distillation_res == True:
+            if test_loss > 1:
+                distillation_res, w_rand = self_distillation(args,teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 5)
+            else:
+                distillation_res, w_rand = self_distillation(args,teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 5)
+            # distillation_res, w_rand = self_distillation(args, teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold,  distance_threshold, distillation_round = 10)
+        
         
         
         else:
-            distillation_res, w_rand = self_distillation(args,  teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 10)
+            distillation_res, w_rand = self_distillation(args,  teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 5)
             
         student_model.load_state_dict(w_rand)
         round = round +1
@@ -397,7 +397,7 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
             # loss = l_loss
             
             loss.backward()
-            optimizer.step(list(ref_model.parameters()))
+            optimizer.step(list(student_model.parameters()))
     # 设置False出口
     return True, student_model.state_dict()
 
@@ -456,7 +456,7 @@ def add_small_perturbation(original_model, args, pinned_accuracy, train_dataset,
     reverse_keys = reversed(list(orignal_state_dict.keys())) 
     reverse_keys = list(orignal_state_dict.keys())
     
-    # return reverse_perturbed_dict
+    return perturbed_dict
     
     
     
