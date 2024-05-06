@@ -91,7 +91,7 @@ def Outline_Poisoning(args, global_model, malicious_models, train_dataset, dista
         new_distance_ratio = pre_distance_ratio
         print("optimization failed")
     else:
-        return w_poison, new_distance_ratio
+        return w_poison
 
     print("new distance ratio is", new_distance_ratio)
     return w_poison, new_distance_ratio
@@ -227,7 +227,7 @@ def phased_optimization(args, global_model, w_rand, train_dataset, distance_thre
             return w_rand, True
         elif test_entropy > entropy_threshold:
             distillation_res, w_rand = self_distillation(args,teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 10)
-        elif test_loss > 1.6:
+        elif test_loss > 1.7:
             distillation_res, w_rand = self_distillation(args,teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 10)
             # 只有accuracy 不满足条件
             # 暂时不处理
@@ -243,17 +243,178 @@ def phased_optimization(args, global_model, w_rand, train_dataset, distance_thre
     return w_rand, False
 
 
-"""
-接入两种方案进行尝试
-"""
-def adaptive_scaling(w_rand, ref_model_dict, distance_threshold, test_distance):
-    use_case = 5
+# """
+# 接入两种方案进行尝试
+# """
+# def adaptive_scaling(w_rand, ref_model_dict, distance_threshold, test_distance):
+#     use_case = 5
   
-    if use_case == 5:
+#     if use_case == 5:
+#         pdlist= nn.PairwiseDistance(p=2)
+#         cal_distance = test_distance
+#         while cal_distance > distance_threshold:
+#             ratio = math.sqrt((distance_threshold / test_distance).double()) * 0.99 # 
+#             keys = reversed(get_key_list(ref_model_dict))
+#             for key in keys:
+#                 w_rand[key] = torch.sub(w_rand[key], ref_model_dict[key]) * ratio + ref_model_dict[key]
+#             cal_distance = model_dist_norm(w_rand, ref_model_dict)
+#             print("cal_distance is ", cal_distance)
+#         return w_rand
+#     return w_rand
+
+def adaptive_scaling(w_rand, ref_model_dict, distance_threshold, test_distance):
+    use_case = 1
+    """
+    case 1 按照distance进行排序
+    优先保留差距较大的向量值
+    """
+    pdlist= nn.PairwiseDistance(p=2)
+    if use_case == 1:
+        distance_list = []
+        sum = 0
+        keys = get_key_list(ref_model_dict)
+        for key in keys:
+            t1 = ref_model_dict[key]
+            t2 = w_rand[key]
+            if w_rand[key].ndimension() == 1:
+                t1 = t1.unsqueeze(0)
+                t2 = t2.unsqueeze(0)
+            diff = torch.sum(pdlist(t1, t2))
+            print("diff is ",diff)
+            distance_list.append(diff)
+        
+        sorted_list = sorted(distance_list)
+        distance_diff = test_distance - distance_threshold
+        threshold = distance_diff #
+        print("threshold is ",threshold)
+        for i in range(len(distance_list)):
+            sum += sorted_list[i]
+            print("sum is", sum)
+            if sum >= distance_diff:
+                threshold = sorted_list[i]
+                ratio = (sum - distance_diff) / sorted_list[i]
+                print("ratio is", ratio)
+                print("threshold is", threshold)
+                break
+        if sum < distance_diff:
+            print("fail to generate ")
+            
+        for key in keys:
+            t1 = ref_model_dict[key]
+            t2 = w_rand[key]
+            if w_rand[key].ndimension() == 1:
+                t1 = t1.unsqueeze(0)
+                t2 = t2.unsqueeze(0)
+            diff = torch.sum(pdlist(t1, t2).float())
+            print("cal diff is", diff)
+            if diff < threshold: #直接舍弃
+                print("discard")
+                w_rand[key] = ref_model_dict[key]
+            elif diff >= threshold:
+                print("clipping")
+                w_rand[key] = torch.sub(w_rand[key], ref_model_dict[key]) * ratio + ref_model_dict[key]
+        return w_rand
+    
+    # case 2 优先裁剪 差异较大的向量层          
+    elif use_case == 2:
+        distance_list = []
+        pdlist= nn.PairwiseDistance(p=2)
+        distance_diff = test_distance - distance_threshold
+        sum_d = 0
+        sum_s = 0
+        keys = get_key_list(ref_model_dict)
+        for key in keys:
+            t1 = ref_model_dict[key]
+            t2 = w_rand[key]
+            if w_rand[key].ndimension() == 1:
+                t1 = t1.unsqueeze(0)
+                t2 = t2.unsqueeze(0)
+            diff = torch.sum(pdlist(t1, t2))
+            print("diff is ",diff)
+            distance_list.append(diff)
+            sum_s += diff
+        print("sum_s is", sum_s)
+        sorted_list = sorted(distance_list, reverse = False)  # 降序排列
+        for item in sorted_list:
+            sum_d = sum_d + item
+            if sum_d >= distance_diff:
+                sum_d = sum_d - item
+                break
+            threshold = item
+            print("item is", item)
+        ratio = math.sqrt((distance_threshold - sum_d) /(sum_s - sum_d).double())
+  
+        if sum_d < distance_diff:
+            print("fail to generate")
+        for key in keys:
+            t1 = ref_model_dict[key]
+            t2 = w_rand[key]
+            if w_rand[key].ndimension() == 1:
+                t1 = t1.unsqueeze(0)
+                t2 = t2.unsqueeze(0)
+            diff = torch.sum(pdlist(t1, t2).float())
+            print("cal diff is", diff)
+            if diff >= threshold:
+                print("clipping")
+                w_rand[key] = torch.sub(w_rand[key], ref_model_dict[key]) * ratio + ref_model_dict[key]
+        return w_rand
+    
+    ## use case 3: 优先裁剪靠前的层
+    elif use_case == 3:
+        pdlist= nn.PairwiseDistance(p=2)
+        distance_diff = test_distance - distance_threshold
+        sum_d = 0
+        keys = get_key_list(ref_model_dict)
+        for key in keys:
+            t1 = ref_model_dict[key]
+            t2 = w_rand[key]
+            if w_rand[key].ndimension() == 1:
+                t1 = t1.unsqueeze(0)
+                t2 = t2.unsqueeze(0)
+            diff = torch.sum(pdlist(t1, t2))
+            sum_d += diff
+            if sum_d >= distance_threshold:
+                ratio = distance_threshold/sum_d
+                target_key = key
+                break
+        if sum_d < distance_threshold:
+            print("fail to generate")
+        for key in keys:
+            w_rand[key] = torch.sub(w_rand[key], ref_model_dict[key]) * ratio + ref_model_dict[key]
+            if key == target_key:
+                break
+        return w_rand
+
+    ## use case 4: 优先裁剪靠后的层
+    elif use_case == 4:
+        pdlist= nn.PairwiseDistance(p=2)
+        distance_diff = test_distance - distance_threshold
+        sum_d = 0
+        keys = reversed(get_key_list(ref_model_dict))
+        for key in keys:
+            t1 = ref_model_dict[key]
+            t2 = w_rand[key]
+            if w_rand[key].ndimension() == 1:
+                t1 = t1.unsqueeze(0)
+                t2 = t2.unsqueeze(0)
+            diff = torch.sum(pdlist(t1, t2))
+            sum_d += diff
+            if sum_d >= distance_threshold:
+                ratio = distance_threshold/sum_d
+                target_key = key
+                break
+        if sum_d < distance_threshold:
+            print("fail to generate")
+        for key in keys:
+            w_rand[key] = torch.sub(w_rand[key], ref_model_dict[key]) * ratio + ref_model_dict[key]
+            if key == target_key:
+                break
+        return w_rand
+    elif use_case == 5:
         pdlist= nn.PairwiseDistance(p=2)
         cal_distance = test_distance
         while cal_distance > distance_threshold:
-            ratio = math.sqrt((distance_threshold / test_distance).double()) * 0.99 # 
+            ratio = math.sqrt((distance_threshold / test_distance).double())
             keys = reversed(get_key_list(ref_model_dict))
             for key in keys:
                 w_rand[key] = torch.sub(w_rand[key], ref_model_dict[key]) * ratio + ref_model_dict[key]
@@ -298,14 +459,14 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
         print("compute_distance is ",compute_distance)
         print("++++++++++++++++++++")
 
-        if avg_entropy <= entropy_threshold and acc <= accuracy_threshold and loss <= 1.6:
+        if avg_entropy <= entropy_threshold and acc <= accuracy_threshold and loss <= 1.7:
            
             return True, student_model.state_dict()
-        elif avg_entropy <= entropy_threshold and acc <= accuracy_threshold and loss > 1.6:
+        elif avg_entropy <= entropy_threshold and acc <= accuracy_threshold and loss > 1.7:
             print("change alpha")
             alpha = 0.69
             beta = 0.31
-        elif loss <= 1.6: #0.7 0.3 for fmnist
+        elif loss <= 1.7: #0.7 0.3 for fmnist
             print("restore alpha")
             alpha = 0.88
             beta = 0.12 #0.88 0.12 for fmnist

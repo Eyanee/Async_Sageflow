@@ -78,7 +78,7 @@ class LocalUpdate(object):
                  # 修改点1：设置模型参数需要梯度
                 for param in model.parameters():
                     param.requires_grad_(True)
-                log_probs, _ , PLR= model(images)
+                log_probs, _ = model(images)
                 loss = self.criterion(log_probs, labels)
                 loss.backward()
                 optimizer.step()
@@ -119,7 +119,7 @@ class LocalUpdate(object):
         with torch.no_grad():
             for batch_idx, (images, labels) in enumerate(self.testloader):
                 images, labels = images.to(self.device), labels.to(self.device)
-                outputs,_ , PLR= model(images)
+                outputs,_ = model(images)
                 batch_loss = self.criterion(outputs, labels)
                 loss += batch_loss.item()
 
@@ -153,7 +153,7 @@ def test_inference(args, model, test_dataset):
             param.requires_grad_(True)
 
 
-        output, out, PLR = model(images)
+        output, out = model(images)
         # # 构造[batches,categaries]的真实分布向量
         # categaries = output.shape[1]
 
@@ -180,9 +180,9 @@ def test_inference(args, model, test_dataset):
         total += len(labels)
         
         # 修改点3：获取并存储梯度
-        grad = torch.cat([p.grad.view(-1) for p in model.parameters()])
+        # grad = torch.cat([p.grad.view(-1) for p in model.parameters()])
         # print(grad)
-        batch_grad.append(grad)  
+        # batch_grad.append(grad)  
 
         # 修改点3：清零梯度，为下一个batch做准备
         model.zero_grad()
@@ -191,16 +191,16 @@ def test_inference(args, model, test_dataset):
         for param in model.parameters():
             param.requires_grad_(False)
 
-    xx = batch_grad[0]
-    for i in range(1, len(batch_grad)):
-        xx += batch_grad[i]
-    xx = xx / len(batch_grad)
-    return_grad = xx
+    # xx = batch_grad[0]
+    # for i in range(1, len(batch_grad)):
+    #     xx += batch_grad[i]
+    # xx = xx / len(batch_grad)
+    # return_grad = xx
 
     accuracy  = correct/total
 
         
 
-    return accuracy, sum(batch_losses)/len(batch_losses), sum(batch_entropy)/len(batch_entropy), return_grad
+    return accuracy, sum(batch_losses)/len(batch_losses), sum(batch_entropy)/len(batch_entropy)
 
 

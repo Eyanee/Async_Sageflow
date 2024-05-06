@@ -11,7 +11,7 @@ from tqdm import tqdm
 import torch
 
 from update import LocalUpdate, test_inference, DatasetSplit
-from poison_optimization_test import Outline_Poisoning, add_small_perturbation,cal_ref_distance
+from poison_optimization_copy import Outline_Poisoning, add_small_perturbation,cal_ref_distance
 from model import MLP, CNNMnist, CNNFashion_Mnist, CNNCifar, VGGCifar
 from resnet import *
 from utils1 import *
@@ -73,7 +73,16 @@ if __name__ == '__main__':
 
 
     global_model.to(device)
+    # 加载参数  
+
+    # params = torch.load('./global_model_parameters.pth')  
+
+    # # 使用加载的参数更新模型  
+
+    # global_model.load_state_dict(params)
+    
     global_model.train()
+    
     fi_global_model = copy.deepcopy(global_model)
     pre_global_model = copy.deepcopy(global_model)
     primitive_malicious = copy.deepcopy(global_model.state_dict())
@@ -152,7 +161,7 @@ if __name__ == '__main__':
     test_mal_list_pre = []
     
     
-    
+    std_keys = get_key_list(global_model.state_dict().keys())
     
             
     for epoch in tqdm(range(args.epochs)):
@@ -218,32 +227,34 @@ if __name__ == '__main__':
 
                 continue
 
-            w, loss, _ = local_model.update_weights(
+            w, loss,_ = local_model.update_weights(
 
                 model=copy.deepcopy(global_model), global_round=epoch
 
             )
             
             ensure_1 += 1 # 平均分布
-            if idx in attack_users and args.model_poison == True and epoch >=16 - MAX_STALENESS:
+            if idx in attack_users and args.model_poison == True and epoch >6 - MAX_STALENESS:
                 # if args.poison_methods == 'ourpoisonMethod':
                 #     print("here")
                 mal_parameters_list[0][idx] = w # 加入malicious_list
                 test_mal_list.append(w)
 
-            elif  idx in attack_users and args.new_poison == True and epoch >=16:
+            elif  idx in attack_users and args.new_poison == True and epoch >=6:
                 print("sign attack")
                 w = sign_attack(w, args.model_poison_scale)
 
                 test_model = copy.deepcopy(global_model)
                 test_model.load_state_dict(w)
 
-                common_acc, common_loss_sync, common_entropy_sample, common_grad = test_inference(args, test_model,
+                mal_grad = compute_gradient(w,global_model.state_dict(),std_keys,args.lr)
+
+                common_acc, common_loss_sync, common_entropy_sample = test_inference(args, test_model,
                                                                                     DatasetSplit(train_dataset,
                                                                                         dict_common))
                 local_weights_delay[ scheduler[idx] - 1 ].append(copy.deepcopy(w))
                 local_index_delay[ scheduler[idx] - 1 ].append(idx)
-                local_grad_delay[scheduler[idx] - 1].append(copy.deepcopy(common_grad))
+                local_grad_delay[scheduler[idx] - 1].append(copy.deepcopy(mal_grad))
                 loss_on_public[scheduler[idx] - 1].append(common_loss_sync)
                 entropy_on_public[scheduler[idx] - 1].append(common_entropy_sample)
                 print(" benign loss is ", common_loss_sync)
@@ -251,9 +262,10 @@ if __name__ == '__main__':
                 test_model = copy.deepcopy(global_model)
                 test_model.load_state_dict(w)
 
-                common_acc, common_loss_sync, common_entropy_sample, common_grad = test_inference(args, test_model,
+                common_acc, common_loss_sync, common_entropy_sample = test_inference(args, test_model,
                                                                                     DatasetSplit(train_dataset,
                                                                                         dict_common))
+                common_grad = compute_gradient(w,global_model.state_dict(),std_keys,args.lr)
                 local_weights_delay[ scheduler[idx] - 1 ].append(copy.deepcopy(w))
                 local_index_delay[ scheduler[idx] - 1 ].append(idx)
                 local_grad_delay[scheduler[idx] - 1].append(copy.deepcopy(common_grad))
@@ -261,7 +273,7 @@ if __name__ == '__main__':
                 entropy_on_public[scheduler[idx] - 1].append(common_entropy_sample)
                 print(" benign loss is ", common_loss_sync)
             
-        if args.model_poison == True and epoch >=16 :
+        if args.model_poison == True and epoch >=6 :
             if args.poison_methods == 'ourpoisonMethod':
                 malicious_models = list(mal_parameters_list[MAX_STALENESS - 1].values()) #本地模拟的陈旧度上限
                 local_dict = mal_parameters_list[0][attack_users[0]]
@@ -274,10 +286,11 @@ if __name__ == '__main__':
                 
             
                 test_model.load_state_dict(malicious_dict)
-                mal_acc, mal_loss_sync, mal_entropy_sample, mal_grad = test_inference(args, test_model,
+                mal_acc, mal_loss_sync, mal_entropy_sample = test_inference(args, test_model,
                                                                                             DatasetSplit(train_dataset,
                                                                                                         dict_common))
                 
+                mal_grad = compute_gradient(malicious_dict,global_model.state_dict(),std_keys,args.lr)
                 print("mal_acc is", mal_acc)
                 print("mal loss is", mal_loss_sync)
                 for idx in attack_users:
@@ -293,10 +306,11 @@ if __name__ == '__main__':
                     malicious_dicts= LA_attack(args, list(mal_parameters_list[0].values()), m)
                     for num, idx in enumerate(attack_users):
                         test_model.load_state_dict(malicious_dicts[num])
-                        mal_acc, mal_loss_sync, mal_entropy_sample, mal_grad = test_inference(args, test_model,
+                        mal_acc, mal_loss_sync, mal_entropy_sample = test_inference(args, test_model,
                                                                                                     DatasetSplit(train_dataset,
                                                                                                         dict_common))
                 
+                        mal_grad = compute_gradient(w,global_model.state_dict(),std_keys(),args.lr)
                         print("mal_acc is", mal_acc)
                         
                         local_weights_delay[ scheduler[idx] - 1 ].append(copy.deepcopy(malicious_dicts[num]))
@@ -309,6 +323,7 @@ if __name__ == '__main__':
             else:
                 for idx in attack_users  :
                     if  scheduler[idx] == clientStaleness[idx]:
+                        print("here")
                         if args.poison_methods == 'LIE':
                             print("len of [max] is ", len(list(mal_parameters_list[MAX_STALENESS - 1].values())))
                             print("len of [0] is ", len(list(mal_parameters_list[0].values())))
@@ -320,16 +335,24 @@ if __name__ == '__main__':
                         elif args.poison_methods == 'min_sum':
                             malicious_dict = min_sum(args, list(mal_parameters_list[0].values()))
                         elif args.poison_methods == 'Grad':
-                            malicious_dict = Grad_median(args, list(mal_parameters_list[0].values()), m)
-                        
+                            benign_grads  = list()
+                            for params in  list(mal_parameters_list[0].values()):
+                                grad  = compute_gradient(params,global_model.state_dict(),std_keys,args.lr)
+                                benign_grads.append(grad)
+                                
+                            benign_grads =  torch.stack(benign_grads)
+                            
+                            malicious_dict = Grad_median(args, benign_grads, m)
+                            malicious_dict = restoreWeight(copy.deepcopy(global_model.state_dict()), std_keys, args.lr * malicious_dict)
                         
 
                         test_model.load_state_dict(malicious_dict)
-                        mal_acc, mal_loss_sync, mal_entropy_sample, mal_grad = test_inference(args, test_model,
+                        mal_acc, mal_loss_sync, mal_entropy_sample = test_inference(args, test_model,
                                                                                                     DatasetSplit(train_dataset,
                                                                                                         dict_common))
                 
-                        
+                        mal_grad = compute_gradient(malicious_dict,global_model.state_dict(),std_keys,args.lr)
+
                         local_weights_delay[ scheduler[idx] - 1 ].append(copy.deepcopy(malicious_dict))
                         local_index_delay[ scheduler[idx] - 1 ].append(idx)
                         loss_on_public[scheduler[idx] - 1].append(mal_loss_sync)
@@ -368,18 +391,27 @@ if __name__ == '__main__':
                 elif args.update_rule == 'Zeno':
                     if len(local_weights_delay[i]) > 0:
                         pre_weights[i] = np.concatenate((pre_weights[i], local_weights_delay[i]), axis=0)
-                        pre_grad[i] = pre_grad[i] + local_grad_delay[i]
+                        # pre_grad[i] = pre_grad[i] + local_grad_delay[i]
                         # pre_loss[i] = np.concatenate((pre_loss[i], loss_on_public[i]), axis=0)
                 elif args.update_rule == 'AFLGuard':
                     if len(local_weights_delay[i]) > 0:
                         for j in range(len(local_weights_delay[i])):
                             pre_weights[i].append([local_weights_delay[i][j], local_grad_delay[i][j]])
+                elif args.update_rule == 'Zenoplusplus':
+                    if len(local_weights_delay[i]) > 0:
+                        pre_weights[i].append(local_weights_delay[i])
+                        pre_indexes[i].append(local_index_delay[i])
+                        pre_grad[i].append(local_grad_delay[i])
                 elif args.update_rule == 'FLARE':
                     if len(local_weights_delay[i]) > 0:
                         pre_weights[i].append(local_weights_delay[i])
                 else:
+                    # if len(local_weights_delay[i]) > 0:
+                    #     pre_weights[i].append(local_weights_delay[i])
                     if len(local_weights_delay[i]) > 0:
-                        pre_weights[i].append(local_weights_delay[i])
+                        w_avg_delay = average_weights(local_weights_delay[i])
+                        len_delay = len(local_weights_delay[i])
+                        pre_weights[i].append({epoch: [w_avg_delay, len_delay]})
                 
                         
         if args.update_rule == 'Sageflow':
@@ -399,7 +431,7 @@ if __name__ == '__main__':
             global_weights = Sag(epoch, sync_weights, len_sync, local_delay_ew,
                                                      copy.deepcopy(global_weights))
             test_model.load_state_dict(global_weights)
-            avg_acc, mal_loss_sync, mal_entropy_sample, mal_grad = test_inference(args, test_model,
+            avg_acc, mal_loss_sync, mal_entropy_sample = test_inference(args, test_model,
                                                                                         test_dataset)
             print("median_weights acc is ", avg_acc)
 
@@ -414,7 +446,7 @@ if __name__ == '__main__':
         elif args.update_rule == 'Zeno':
             print("Zeno")
             local_delay_ew = np.concatenate((local_delay_ew, local_weights_delay[0]), axis=0)
-            local_delay_gd = local_delay_gd + local_grad_delay[0]
+            # local_delay_gd = local_delay_gd + local_grad_delay[0]
             # local_delay_loss = np.concatenate((local_delay_loss, loss_on_public[0]), axis=0)
             global_weights = Zeno(local_delay_ew, local_delay_gd,  args,
                                     copy.deepcopy(global_model),
@@ -425,29 +457,55 @@ if __name__ == '__main__':
                                               data_poison=False)
 
             for j in range(len(local_weights_delay[0])):
-                current_param.append([local_weights_delay[0][j], local_grad_delay[0][j]])
+                current_param.append(local_weights_delay[0][j])
             current_param.extend(local_delay_ew)
             # print("len current param", len(current_param))
             global_weights = AFLGuard(current_param, global_model, global_test_model, epoch, lamda = 2)
-            
         
+        elif args.update_rule == 'Zenoplusplus':
+            current_grad = copy.deepcopy(local_grad_delay[0])
+            current_param = copy.deepcopy(local_weights_delay[0])
+            current_index = copy.deepcopy(local_index_delay[0])
+            global_test_model = LocalUpdate(args=args, dataset=train_dataset, idxs=dict_common, idx=idx,
+                                              data_poison=False)
+            print("len current grad ",len(current_grad))
+            for item in local_delay_gd:
+                current_grad.extend(item)
+            for item in local_delay_ew:
+                current_param.extend(item)
+            for item  in local_index_ew:
+                current_index.extend(item)
+            print("len all grad", len(current_grad))
+            global_param_update = update_weights_zeno(args,copy.deepcopy(global_model),epoch,DatasetSplit(train_dataset,
+                                                                                                        dict_common))
+            global_grad = compute_gradient(global_param_update,global_model.state_dict(),std_keys,args.lr)
+            
+            accept_list = Zenoplusplus(args, copy.deepcopy(global_model.state_dict()),current_param,current_grad,global_grad,std_keys, current_index)
+            print("len accept list", len(accept_list) )
+            global_weights , avg_weights= Fedavg(args, epoch, accept_list, global_model)
+
         elif args.update_rule == 'FLARE':
             update_params = copy.deepcopy(local_weights_delay[0])
             for item  in local_delay_ew:
                 update_params.extend(item)
             global_weights = FLARE(args, global_model, update_params,DatasetSplit(train_dataset,dict_common) )
-        
+            
+
         else:
+            global_weights = Sag(epoch, average_weights(local_weights_delay[0]), len(local_weights_delay[0]),
+                                                 local_delay_ew, copy.deepcopy(global_weights))
             # Fedavg
-            all_weights = copy.deepcopy(local_weights_delay[0])
-            # all_weights.extend(local_delay_ew)
-            for item in local_delay_ew:
-                all_weights.extend(item)
-            global_weights , avg_weights= Fedavg(args, epoch, all_weights, global_model)
-            test_model.load_state_dict(avg_weights)
-            avg_acc, mal_loss_sync, mal_entropy_sample, mal_grad = test_inference(args, test_model,
-                                                                                        test_dataset)
-            print("avg_weights acc is ", avg_acc)
+            # all_weights = copy.deepcopy(local_weights_delay[0])
+            # # all_weights.extend(local_delay_ew)
+            # for item in local_delay_ew:
+            #     all_weights.extend(item)
+            # global_weights , avg_weights= Fedavg(args, epoch, all_weights, global_model)
+            # test_model.load_state_dict(avg_weights)
+            # avg_acc, mal_loss_sync, mal_entropy_sample, mal_grad = test_inference(args, test_model,
+            #                                                                             test_dataset)
+            # print("avg_weights acc is ", avg_acc)
+
+            
 
         # Update global weights
         pre_global_model.load_state_dict(global_model.state_dict())
@@ -474,7 +532,7 @@ if __name__ == '__main__':
 
             print('Train Accuracy: {:.2f}% \n'.format(100 * train_accuracy[-1]))
 
-        test_acc, test_loss, _, grad = test_inference(args, global_model, test_dataset)
+        test_acc, test_loss, _ = test_inference(args, global_model, test_dataset)
         final_test_acc.append(test_acc)
         print('Test Accuracy: {:.2f}% \n'.format(100 * test_acc))
 
@@ -485,7 +543,7 @@ if __name__ == '__main__':
                 
         # Mal_parameters_list Update
         
-        if idx in attack_users and args.model_poison == True and epoch >= 16 - MAX_STALENESS:
+        if idx in attack_users and args.model_poison == True and epoch >=6 - MAX_STALENESS:
             for i in range(MAX_STALENESS-1 , 0 , -1):
                 mal_parameters_list[i] = copy.copy(mal_parameters_list[i-1])
             mal_parameters_list[0] = {}
@@ -510,6 +568,7 @@ if __name__ == '__main__':
     exp_details(args)
     print('\n Total Run Time: {0:0.4f}'.format(time.time() - start_time))
 
+    # torch.save(global_model.state_dict(), './old_model_parameters.pth')
 
     if args.data_poison == True:
         attack_type = 'data'

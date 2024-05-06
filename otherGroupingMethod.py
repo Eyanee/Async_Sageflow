@@ -199,20 +199,30 @@ def compute_L2_norm(params):
 
     return distance
 
-def compute_gradient(model1, model2, lr):
+def compute_gradient(model_1, model_2, std_keys,  lr):
+    grad = list()
+    for key in std_keys:
+        param1 = model_1[key]
+        param2 = model_2[key]
+    #     # 根据公式计算梯度
+        tmp = (param1 - param2) / lr
+        grad = tmp.view(-1) if len(grad)== 0 else torch.cat((grad,tmp.view(-1)),0)
+    print("grad,shape is",grad.shape)
+    return grad
+    
     # 用于存储梯度模长
-    len = 0
-    # 遍历模型参数字典的键
-    for key in model1.keys():
-        # 取出对应的参数张量
-        param1 = model1[key]
-        param2 = model2[key]
-        # 根据公式计算梯度
-        grad = (param1 - param2) / lr
-        len += torch.norm(grad)
+    # len = 0
+    # # 遍历模型参数字典的键
+    # for key in model1.keys():
+    #     # 取出对应的参数张量
+    #     param1 = model1[key]
+    #     param2 = model2[key]
+    #     # 根据公式计算梯度
+    #     grad = (param1 - param2) / lr
+    #     len += torch.norm(grad)
 
-    # 梯度模长
-    return len
+    # # 梯度模长
+    # return len
 
 
 def test_inference_clone(args, model, test_dataset):
@@ -285,9 +295,9 @@ def test_inference_clone(args, model, test_dataset):
 
     return accuracy, sum(batch_losses)/len(batch_losses), sum(batch_entropy)/len(batch_entropy), return_grad
 
-def Zeno(weights, grad, args, model, cmm_dataset, current_epoch):
+def Zeno(weights,  args, model, cmm_dataset, current_epoch):
 
-    common_acc, common_loss, _, gd = test_inference_clone(args, model, cmm_dataset)
+    common_acc, common_loss, _= test_inference_clone(args, model, cmm_dataset)
     
     test_model = copy.deepcopy(model)
     loss_list = []
@@ -296,7 +306,7 @@ def Zeno(weights, grad, args, model, cmm_dataset, current_epoch):
         for key in param.keys():
             mod_params[key] = torch.subtract(mod_params[key],param[key]*0.01)
         test_model.load_state_dict(mod_params)
-        test_acc,test_loss, _ ,gd = test_inference_clone(args, model, cmm_dataset)
+        test_acc,test_loss, _  = test_inference_clone(args, model, cmm_dataset)
         loss_list.append(test_loss)
         
     print("loss_list is", loss_list)
@@ -334,7 +344,7 @@ def Zeno(weights, grad, args, model, cmm_dataset, current_epoch):
     if args.dataset == 'cifar10' or 'cifar100':
         alpha = 0.5 ** (current_epoch // 300)
     elif args.dataset =='fmnist':
-        alpha = 0.5 ** (current_epoch // 20)
+        alpha = 0.8
     elif args.dataset =='mnist':
         alpha = 0.5 ** (current_epoch // 15)
 
@@ -350,47 +360,123 @@ def pre_Zeno(current_epoch_updates, args, loss, cmm_dataset, global_model):
     return Zeno_avg
 
 
+
+def update_weights_zeno(args, model, global_round,test_dataset):
+    model.train()
+    epoch_loss = []
+    epoch_grad = []
+    device = f'cuda:{args.gpu_number}' if args.gpu else 'cpu'
+    criterion = nn.NLLLoss().to(device)
+    testloader = DataLoader(test_dataset, batch_size=64, shuffle=False)
+
+    if args.optimizer == 'sgd':
+
+        lr = args.lr
+        lr = lr * (0.5) ** (global_round // args.lrdecay)
+        optimizer = torch.optim.SGD(model.parameters(), lr=lr, momentum=0.9)
+
+    elif args.optimizer == 'adam':
+
+        lr = args.lr
+        lr = lr * (0.5) ** (global_round // args.lrdecay)
+        optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=1e-4)
+
+    for iter in range(args.local_ep):
+        batch_loss = []
+        batch_grad = []
+        for batch_idx, (images, labels) in enumerate(testloader):
+            images, labels = images.to(device), labels.to(device)
+                
+            model.zero_grad()
+                # 修改点1：设置模型参数需要梯度
+            for param in model.parameters():
+                param.requires_grad_(True)
+            log_probs, _ = model(images)
+            loss = criterion(log_probs, labels)
+            loss.backward()
+            optimizer.step()
+            
+            grad = torch.cat([p.grad.view(-1) for p in model.parameters()])
+            # print(grad)
+            batch_grad.append(grad)               
+
+            batch_loss.append(loss.item())
+        # print(batch_grad)
+        # grad_tensor = torch.tensor(np.array([item.cpu().detach().numpy() for item in batch_grad])).cuda()
+        # grad_mean = torch.mean(grad_tensor, dim=0)
+        
+        x = batch_grad[0]
+        for i in range(1, len(batch_grad)):
+            x += batch_grad[i]
+        x = x / len(batch_grad)
+        epoch_grad.append(x)
+        # print(x)
+        epoch_loss.append(sum(batch_loss) / len(batch_loss))
+        
+    xx = epoch_grad[0]
+    for i in range(1, len(epoch_grad)):
+        xx += epoch_grad[i]
+    xx = xx / len(epoch_grad)
+    return_grad = xx
+    
+    # print(model.state_dict())
+    # print(xx)
+    
+    return model.state_dict()
 # Zeno++
+def scale_updates(param_updates,c):
+    for key in param_updates.keys():
+        param_updates[key] = c * param_updates[key]
+    return param_updates
+
 """
 
 
 """
-def Zenoplusplus(args, global_state_dict, grad_updates,indexes):
+def Zenoplusplus(args, global_state_dict, param_updates, grad_updates,global_update, std_keys, indexes):
     print("index is ", indexes)
     # parameters for zeno++
-    zeno_rho = 0.001 #
+    zeno_rho = 0.002 #
     zeno_epsilon = 0 #
 
     accept_list = []
     # scaling the update:
-    global_param_square = 0
-    user_param_square = 0
-    for param_update in grad_updates:
-        for key in global_state_dict.keys():
-            global_param_square = global_param_square + torch.sum(torch.square(global_state_dict[key]))
-            user_param_square = user_param_square + torch.sum(torch.square(param_update[key]))
 
-        c = torch.sqrt(user_param_square / global_param_square)
+
+    global_param_square =  torch.norm(global_update)
+    print("global_param_square norm is   ",global_param_square)
+    for idx, param_update in enumerate(grad_updates):
+        
+        user_param_square = torch.norm(param_update)
+        
+        print("user_param_square norm is   ",user_param_square)
+        c = torch.sqrt(global_param_square / user_param_square)
         print("c is ", c)
-        for key in param_update.keys():
-                param_update[key] = param_update[key] * c
+        user_param_square= user_param_square* c
+        user_param =  param_update *  c
         
         # compute score
         zeno_innerprod = 0
         zeno_square = global_param_square
         # 计算内积
-        for key in global_state_dict.keys():
-            print("调试 - global_state_dict[key] 形状:", global_state_dict[key].shape)
-            print("调试 - param_update[key] 形状:", param_update[key].shape)
-            global_state_dict[key] = torch.transpose(global_state_dict[key])
-            zeno_innerprod = zeno_innerprod + torch.tensordot(global_state_dict[key], param_update[key])
+        # for key in global_state_dict.keys():
+        #     print("调试 - global_state_dict[key] 形状:", global_state_dict[key].shape)
+        #     print("调试 - param_update[key] 形状:", param_update[key].shape)
+        #     global_state_dict[key] = torch.transpose(global_state_dict[key])
+        print("param_update shape", param_update.shape)
+        print("global_update shape", global_update.shape)
+        zeno_innerprod = torch.dot(user_param, global_update)
         #计算分数
         score = args.lr * (zeno_innerprod) - zeno_rho * (zeno_square) + args.lr * zeno_epsilon
         print("score :", score)
         # 分数大于0则接收
         if score >= 0:
             print("accept")
-            accept_list.append(param_update)
+            modified_updates = restoreWeight(global_state_dict, std_keys, args.lr * param_update)
+            # param_updates[index]
+            accept_list.append(modified_updates)
+        
+        
     # 怎么修改？
     return accept_list
 
@@ -567,7 +653,7 @@ def FLTrust(weights, grad, args, model, train_dataset, dict_common, epoch, index
     if args.dataset == 'cifar10' or 'cifar100':
         alpha = 0.5 ** (epoch // 300)
     elif args.dataset =='fmnist':
-        alpha = 0.5 ** (epoch // 20)
+        alpha = 0.8
     elif args.dataset =='mnist':
         alpha = 0.5 ** (epoch // 15)
 
@@ -584,14 +670,15 @@ def update_weights(global_model, param_update):
 
     return return_params
 
-def AFLGuard(grad_param_updates, global_model, global_test_model, epoch, lamda):
+def AFLGuard(grad_param_updates, global_model, global_test_model, epoch, std_keys, lr, lamda):
     global_weights = copy.deepcopy(global_model.state_dict())
     for idx, gd_param in enumerate(grad_param_updates):
-        w, loss, gd_server = global_test_model.update_weights(
+        w, loss,_  = global_test_model.update_weights(
 
                 model=copy.deepcopy(global_model), global_round=epoch
 
             )
+        gd_server = compute_gradient(w,global_model.state_dict(),std_keys,lr)
         # print("len(gd param)", len(gd_param[1]))
         norm_1 = torch.norm(torch.subtract(gd_server , gd_param[1]))
         norm_2 = torch.norm(gd_server)

@@ -201,10 +201,10 @@ def min_sum(args, param_updates, dev_type='unit_vec'):
             lamda_succ = lamda
             lamda = lamda + lamda_fail / 2
             # break
-            print("there")
+            # print("there")
         else:
             lamda = lamda - lamda_fail / 2
-            print("here")
+            # print("here")
 
         lamda_fail = lamda_fail / 2
 
@@ -221,11 +221,11 @@ def Grad_median(args, param_updates, n_attackers, dev_type='unit_vec', threshold
     gpu_number = args.gpu_number
     device = torch.device(f'cuda:{gpu_number}' if args.gpu else 'cpu')
     
-    std_dict = copy.deepcopy(param_updates[0])
-    std_keys = get_key_list(std_dict.keys())
-    all_updates = modifyWeight(std_keys, param_updates)
+    # std_dict = copy.deepcopy(param_updates[0])
+    # std_keys = get_key_list(std_dict.keys())
+    # all_updates = modifyWeight(std_keys, param_updates)
 
-    model_re = torch.mean(all_updates, axis=0) # 计算均值
+    model_re = torch.mean(param_updates, axis=0) # 计算均值
 
 
 
@@ -234,7 +234,7 @@ def Grad_median(args, param_updates, n_attackers, dev_type='unit_vec', threshold
     elif dev_type == 'sign':
         deviation = torch.sign(model_re)
     elif dev_type == 'std':
-        deviation = torch.std(all_updates, 0)
+        deviation = torch.std(param_updates, 0)
 
     lamda = torch.Tensor([threshold]).to(device)#compute_lambda_our(all_updates, model_re, n_attackers)
 
@@ -246,7 +246,8 @@ def Grad_median(args, param_updates, n_attackers, dev_type='unit_vec', threshold
     while torch.abs(lamda_succ - lamda) > threshold_diff:
         mal_update = (model_re - lamda * deviation)
         mal_updates = torch.stack([mal_update] * n_attackers)
-        mal_updates = torch.cat((mal_updates, all_updates), 0)
+        # print("shape param_updates ",param_updates.shape)
+        mal_updates = torch.cat((mal_updates, param_updates), 0)
 
         agg_grads = torch.median(mal_updates, 0)[0]
         
@@ -263,7 +264,6 @@ def Grad_median(args, param_updates, n_attackers, dev_type='unit_vec', threshold
         
     mal_update = (model_re - lamda_succ * deviation)
 
-    mal_update = restoreWeight(std_dict, std_keys, mal_update)
     return mal_update
 
 

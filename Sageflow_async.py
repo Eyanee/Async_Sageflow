@@ -11,7 +11,7 @@ from tqdm import tqdm
 import torch
 
 from update import LocalUpdate, test_inference, DatasetSplit
-from poison_optimization_copy import Outline_Poisoning, add_small_perturbation,cal_ref_distance
+from poison_optimization_cifar import Outline_Poisoning, add_small_perturbation,cal_ref_distance
 from model import MLP, CNNMnist, CNNFashion_Mnist, CNNCifar, VGGCifar
 from resnet import *
 from utils1 import *
@@ -75,11 +75,11 @@ if __name__ == '__main__':
     global_model.to(device)
     # 加载参数  
 
-    params = torch.load('./global_model_parameters.pth')  
+    # params = torch.load('./global_model_parameters.pth')  
 
     # 使用加载的参数更新模型  
 
-    global_model.load_state_dict(params)
+    # global_model.load_state_dict(params)
     
     global_model.train()
     
@@ -135,13 +135,17 @@ if __name__ == '__main__':
     attack_users = all_users[-m:]
     print("attack user num is ",m)
     
-    t = int(n/args.staleness)
+    t = int(math.ceil(n/args.staleness))
     print(" t is ",t )
     
     # 为正常用户赋固定的Staleness值
     for i in range(args.staleness):
-        front_idx = int(t * i)
-        end_idx = front_idx + t
+        if i == args.staleness +1:
+            front_idx = int(t * i)
+            end_idx = n-  1
+        else:
+            front_idx = int(t * i)
+            end_idx = front_idx + t
         for j in range(front_idx, end_idx):
             clientStaleness[j] = i + 1 
     print("attack_user is", attack_users)
@@ -162,6 +166,8 @@ if __name__ == '__main__':
     
     
     std_keys = get_key_list(global_model.state_dict().keys())
+
+    mal_rand = global_model.state_dict()
     
             
     for epoch in tqdm(range(args.epochs)):
@@ -258,6 +264,7 @@ if __name__ == '__main__':
                 loss_on_public[scheduler[idx] - 1].append(common_loss_sync)
                 entropy_on_public[scheduler[idx] - 1].append(common_entropy_sample)
                 print(" benign loss is ", common_loss_sync)
+                print(" benign entropy is ", common_entropy_sample)
             else:     
                 test_model = copy.deepcopy(global_model)
                 test_model.load_state_dict(w)
@@ -272,7 +279,7 @@ if __name__ == '__main__':
                 loss_on_public[scheduler[idx] - 1].append(common_loss_sync)
                 entropy_on_public[scheduler[idx] - 1].append(common_entropy_sample)
                 print(" benign loss is ", common_loss_sync)
-            
+                print(" benign entropy is ", common_entropy_sample)
         if args.model_poison == True and epoch >=6 :
             if args.poison_methods == 'ourpoisonMethod':
                 malicious_models = list(mal_parameters_list[MAX_STALENESS - 1].values()) #本地模拟的陈旧度上限
@@ -281,8 +288,21 @@ if __name__ == '__main__':
                 
                 pinned_accuracy_threshold = 0.5 # 
                 adaptive_accuracy_threshold = pinned_accuracy_threshold
+                if epoch ==  6:
+                    distance_threshold = cal_ref_distance(malicious_models,copy.deepcopy(global_model), 1.5) 
+                    mal_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, distance_threshold,perturbation_range=(-0.1, 0.1))
+                    test_model.load_state_dict(mal_rand)
+                    mal_acc, mal_loss_sync, mal_entropy_sample = test_inference(args, test_model,
+                                                                                        DatasetSplit(train_dataset,
+                                                                                            dict_common))   
+                    print("mal_rand_acc is", mal_acc)
+                    print("mal_rand loss is", mal_loss_sync)
+
+
+                distance_threshold = cal_ref_distance(malicious_models,copy.deepcopy(global_model), 1.5) 
+                print("distance Threshold  is ",distance_threshold)
                 malicious_dict = Outline_Poisoning(args, copy.deepcopy(global_model), malicious_models, 
-                                                                train_dataset, distance_ratio, pinned_accuracy_threshold)
+                                                                train_dataset, distance_threshold, pinned_accuracy_threshold,copy.deepcopy(mal_rand))
                 
             
                 test_model.load_state_dict(malicious_dict)
@@ -593,7 +613,7 @@ if __name__ == '__main__':
     exp_details(args)
     print('\n Total Run Time: {0:0.4f}'.format(time.time() - start_time))
 
-    # torch.save(global_model.state_dict(), './global_model_parameters.pth')
+    torch.save(global_model.state_dict(), './cifar_global_model_parameters.pth')
 
     if args.data_poison == True:
         attack_type = 'data'

@@ -68,9 +68,9 @@ def get_dataset(args):
 
             user_groups = mnist_iid(train_dataset, args.num_users)
 
-        elif args.iid == 2:
+        elif args.iid == 0:
 
-            user_groups = mnist_noniidcmm(train_dataset, args.num_users, args.num_commondata)
+            user_groups = mnist_noniidcmm(train_dataset, args.num_users, args.num_commondata, args.alpha)
 
     return train_dataset, test_dataset, user_groups
 
@@ -152,21 +152,26 @@ def Sag(current_epoch, current_average, current_length, epoch_weights, global_we
 
     #########################################################################################
 
-    #Staleness-based weight
-    alphas = (current_epoch - np.array(alpha) + 1) ** (-args.lam)
+    #Staleness-based weight *#*****
+    print("alpha 1 is",alpha)
+    alphas = 1.0  /  ((current_epoch - np.array(alpha) + 1) )
+    # alphas = ((current_epoch - np.array(alpha) + 1) )
+    # print("alphas 1 is",alphas)
 
-    alphas = alphas * np.array(num_device)
-    alphas = alphas * alpha_for_attack[1:len(alpha) + 1]
-
+    # alphas = alphas * np.array(num_device)
+    # alphas = alphas * alpha_for_attack[1:len(alpha) + 1]
+    # print("alphas 2 is",alphas)
 
     if len(alphas) == 0:
         alphas = np.array([current_length * alpha_for_attack[0]])
     else:
-        alphas = np.concatenate((np.array([current_length * alpha_for_attack[0]]), alphas), axis=0)
+        alphas = np.concatenate((np.array([1]), alphas), axis=0)
+
+    print("alphas 3 is",alphas)
 
     sum_alphas = sum(alphas)
     alphas = alphas / sum_alphas
-
+    print("alphas is ",alphas)
 
     for key in w_semi.keys():
         for i in range(0, len(weights_d) + 1):
@@ -183,7 +188,7 @@ def Sag(current_epoch, current_average, current_length, epoch_weights, global_we
         if args.dataset =='cifar':
             alpha = 0.5 ** (current_epoch // 300)
         elif args.dataset =='fmnist':
-            alpha = 0.5 ** (current_epoch // 20)
+            alpha = 0.8
 
         elif args.dataset =='mnist':
             alpha = 0.5 ** (current_epoch // 15)
@@ -204,7 +209,7 @@ def Fedavg(args, current_epoch, all_weights, global_model):
         if args.dataset =='cifar':
             alpha = 0.5 ** (current_epoch // 300)
         elif args.dataset =='fmnist':
-            alpha = 0.5 
+            alpha = 0.8
 
         elif args.dataset =='mnist':
             alpha = 0.5 ** (current_epoch // 15)
@@ -251,10 +256,10 @@ def Eflow(w, loss, entropy, current_epoch, num_device=[]):
             num_attack += 1
         else:
             norm_q = 1
-
+        # print("norm_q is  ",norm_q)
         if len(num_device) == 0:
-            # alpha.append(norm_q / loss[j] ** args.delta)
-            alpha.append(1)
+            alpha.append(norm_q / loss[j] ** args.delta)
+            # alpha.append(1)
 
 
     sum_alpha = sum(alpha)
