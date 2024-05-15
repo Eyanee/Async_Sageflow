@@ -120,6 +120,7 @@ def Sag(current_epoch, current_average, current_length, epoch_weights, global_we
     alpha_for_attack = np.ones(args.staleness+1)
 
     comm = current_length
+    print("curent length is ",current_length)
     print("the length of epoch_weights is ", len(epoch_weights))
     for i in epoch_weights:
         key = list(i.keys())[0]
@@ -163,7 +164,7 @@ def Sag(current_epoch, current_average, current_length, epoch_weights, global_we
     # print("alphas 2 is",alphas)
 
     if len(alphas) == 0:
-        alphas = np.array([current_length * alpha_for_attack[0]])
+        alphas = np.array([alpha_for_attack[0]])
     else:
         alphas = np.concatenate((np.array([1]), alphas), axis=0)
 
@@ -183,7 +184,7 @@ def Sag(current_epoch, current_average, current_length, epoch_weights, global_we
                 else:
                     w_semi[key] += weights_d[i - 1][key] * alphas[i]
 
-    
+    # w_semi_copy = copy.deepcopy(w_semi)
     for key in w_semi.keys():
         if args.dataset =='cifar':
             alpha = 0.5 ** (current_epoch // 300)
@@ -259,7 +260,7 @@ def Eflow(w, loss, entropy, current_epoch, num_device=[]):
         # print("norm_q is  ",norm_q)
         if len(num_device) == 0:
             alpha.append(norm_q / loss[j] ** args.delta)
-            # alpha.append(1)
+            # alpha.append(norm_q)
 
 
     sum_alpha = sum(alpha)
@@ -280,15 +281,15 @@ def Eflow(w, loss, entropy, current_epoch, num_device=[]):
                 else:
                     w_avg[key] += w[i][key] * alpha[i]
 
-    return w_avg, len(loss) - num_attack
+    return w_avg, len(loss) -num_attack
 
 
 
 
-def sign_attack(w,scale=1):
+def sign_attack(w,scale):
     w_avg = copy.deepcopy(w)
     for key in w_avg.keys():
-        w_avg[key] = -w[key] * scale
+        w_avg[key] = -1* w[key] * scale
     return w_avg
 
 

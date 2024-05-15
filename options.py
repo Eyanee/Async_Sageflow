@@ -37,7 +37,12 @@ def args_parser():
     # The amount of Public data
     parser.add_argument('--num_commondata', type=float, default=1000,
                         help='number of public data which server has')
-
+    
+    # The alpha of non-iid distribution
+    parser.add_argument('--alpha', type=float, default=1.0,
+                        help='alpha for dirichlet distribution')
+    
+    
     # For Adversarial attack
     parser.add_argument('--attack_ratio', type=float, default=0.1,
                         help='attack ratio')
@@ -45,7 +50,7 @@ def args_parser():
                         help='True: data poisoning attack, False: no attack')
     parser.add_argument('--model_poison', type=str2bool, default=False,
                         help='True: model poisoning attack, False: no attack')
-    parser.add_argument('--model_poison_scale', type=float, default=0.1,
+    parser.add_argument('--model_poison_scale', type=float, default=10,
                         help='scale of model poisoning attack (0.1 or 10)')
     parser.add_argument('--inverse_poison', type=str2bool, default=False,
                         help='True: data poisoning attack, False: no attack')
@@ -83,7 +88,7 @@ def args_parser():
                         help='rounds of early stopping')
     parser.add_argument('--verbose', type=int, default=1, help='verbose')
     parser.add_argument('--model', type=str, default='cnn', help='model name')
-    parser.add_argument('--detail_model', type=str, default='vgg', help='model name')
+    parser.add_argument('--detail_model', type=str, default='resnet', help='model name')
     parser.add_argument('--kernel_num', type=int, default=9,
                         help='number of each kind of kernel')
     parser.add_argument('--kernel_sizes', type=str, default='3,4,5',

@@ -73,6 +73,11 @@ class LocalUpdate(object):
                 images, labels = images.to(self.device), labels.to(self.device)
                 if self.data_poison ==True:
                     labels = (labels+1)%10
+                    # for idx,label in enumerate(labels):
+                    #     if label == 7:
+                    #         labels[idx] = 1
+                    #     elif label == 1:
+                    #         labels[idx] = 7
                     
                 model.zero_grad()
                  # 修改点1：设置模型参数需要梯度
@@ -119,7 +124,7 @@ class LocalUpdate(object):
         with torch.no_grad():
             for batch_idx, (images, labels) in enumerate(self.testloader):
                 images, labels = images.to(self.device), labels.to(self.device)
-                outputs,_ = model(images)
+                outputs,_= model(images)
                 batch_loss = self.criterion(outputs, labels)
                 loss += batch_loss.item()
 
@@ -136,66 +141,62 @@ def test_inference(args, model, test_dataset):
 
     loss, total, correct = 0.0, 0.0, 0.0
     device = f'cuda:{args.gpu_number}' if args.gpu else 'cpu'
-    criterion = nn.NLLLoss().to(device)
+    criterion = nn.CrossEntropyLoss().to(device)
     testloader = DataLoader(test_dataset, batch_size=64, shuffle=False)
 
     batch_losses = []
     batch_entropy = []
     batch_grad = []
 
-    # with torch.no_grad():
-    for batch_idx, (images, labels) in enumerate(testloader):
-        images, labels = images.to(device), labels.to(device)
+    with torch.no_grad():
+        for batch_idx, (images, labels) in enumerate(testloader):
+            images, labels = images.to(device), labels.to(device)
 
-        model.zero_grad()
-        # 修改点1：设置模型参数需要梯度
-        for param in model.parameters():
-            param.requires_grad_(True)
+            model.zero_grad()
+            # # 修改点1：设置模型参数需要梯度
+            # for param in model.parameters():
+            #     param.requires_grad_(True)
 
 
-        output, out = model(images)
-        # # 构造[batches,categaries]的真实分布向量
-        # categaries = output.shape[1]
+            output, out= model(images)
+            # # 构造[batches,categaries]的真实分布向量
+            # categaries = output.shape[1]
 
-        
-        Information = F.softmax(out, dim=1) * F.log_softmax(out, dim=1)
-        
-        entropy  = -1.0 * Information.sum(dim=1) # size [64]
-        average_entropy = entropy.mean().item()
-        
+            
+            Information = F.softmax(out, dim=1) * F.log_softmax(out, dim=1)
+            
+            entropy  = -1.0 * Information.sum(dim=1) # size [64]
+            average_entropy = entropy.mean().item()
+            
 
-        batch_loss = criterion(output, labels)
-        batch_loss.backward()
+            batch_loss = criterion(output, labels)
+            batch_losses.append(batch_loss.item())
 
-        batch_losses.append(batch_loss.item())
+            _, pred_labels = torch.max(output,1)
+            pred_labels = pred_labels.view(-1)
+            pred_dec = torch.eq(pred_labels, labels)
+            current_acc = torch.sum(pred_dec).item() + 1e-8
 
-        _, pred_labels = torch.max(output,1)
-        pred_labels = pred_labels.view(-1)
-        pred_dec = torch.eq(pred_labels, labels)
-        current_acc = torch.sum(pred_dec).item() + 1e-8
+            batch_entropy.append(average_entropy)
 
-        batch_entropy.append(average_entropy)
+            correct += current_acc
+            total += len(labels)
+            # for name, param in model.named_parameters():  
+            #     if param.grad is not None:  
+            #         print(f"{name}: {param.grad.norm(p=2).item()}")  # 计算并打印梯度的L2范数
+            # # 修改点3：获取并存储梯度
+            # grad = torch.cat([p.grad.view(-1) for p in model.parameters()])
+            # print(grad)
+            # batch_grad.append(grad)  
 
-        correct += current_acc
-        total += len(labels)
-        
-        # 修改点3：获取并存储梯度
-        # grad = torch.cat([p.grad.view(-1) for p in model.parameters()])
-        # print(grad)
-        # batch_grad.append(grad)  
+            # 修改点3：清零梯度，为下一个batch做准备
+            # model.zero_grad()
 
-        # 修改点3：清零梯度，为下一个batch做准备
-        model.zero_grad()
+        # # 修改点5：恢复模型参数不需要梯度
+        # for param in model.parameters():
+        #     param.requires_grad_(False)
 
-        # 修改点5：恢复模型参数不需要梯度
-        for param in model.parameters():
-            param.requires_grad_(False)
 
-    # xx = batch_grad[0]
-    # for i in range(1, len(batch_grad)):
-    #     xx += batch_grad[i]
-    # xx = xx / len(batch_grad)
-    # return_grad = xx
 
     accuracy  = correct/total
 

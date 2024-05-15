@@ -54,6 +54,22 @@ def restoreWeight(std_dict, std_keys, update_weights):
         front_idx = end_idx
     return update_dict
 
+def restoregradients(std_dict, std_keys, update_weights):
+    # 重构张量，重构字典 
+    update_dict = copy.deepcopy(std_dict)
+    front_idx = 0
+    end_idx = 0
+    # mal_update张量重构
+
+    for k in std_keys:
+        tmp_len = len(list(std_dict[k].reshape(-1)))
+        end_idx = front_idx + tmp_len
+        # print("update_weights shape", type(update_weights))
+        # print("front idx and end idx", front_idx, end_idx)
+        tmp_tensor = update_weights[front_idx:end_idx].view(std_dict[k].shape)
+        update_dict[k] = copy.deepcopy(tmp_tensor) +  update_dict[k]
+        front_idx = end_idx
+    return update_dict
 
 
 def preGrouping(std_keys, local_weights_delay, local_delay_ew):
@@ -205,7 +221,7 @@ def compute_gradient(model_1, model_2, std_keys,  lr):
         param1 = model_1[key]
         param2 = model_2[key]
     #     # 根据公式计算梯度
-        tmp = (param1 - param2) / lr
+        tmp = (param1 - param2) 
         grad = tmp.view(-1) if len(grad)== 0 else torch.cat((grad,tmp.view(-1)),0)
     print("grad,shape is",grad.shape)
     return grad
@@ -391,7 +407,7 @@ def update_weights_zeno(args, model, global_round,test_dataset):
                 # 修改点1：设置模型参数需要梯度
             for param in model.parameters():
                 param.requires_grad_(True)
-            log_probs, _ = model(images)
+            log_probs, _ ,out1= model(images)
             loss = criterion(log_probs, labels)
             loss.backward()
             optimizer.step()
@@ -436,8 +452,8 @@ def scale_updates(param_updates,c):
 def Zenoplusplus(args, global_state_dict, param_updates, grad_updates,global_update, std_keys, indexes):
     print("index is ", indexes)
     # parameters for zeno++
-    zeno_rho = 0.002 #
-    zeno_epsilon = 0 #
+    zeno_rho = 0.001 #
+    zeno_epsilon = 0.01 # 0.02
 
     accept_list = []
     # scaling the update:
@@ -472,7 +488,7 @@ def Zenoplusplus(args, global_state_dict, param_updates, grad_updates,global_upd
         # 分数大于0则接收
         if score >= 0:
             print("accept")
-            modified_updates = restoreWeight(global_state_dict, std_keys, args.lr * param_update)
+            modified_updates = restoregradients(global_state_dict, std_keys, args.lr * param_update)
             # param_updates[index]
             accept_list.append(modified_updates)
         
@@ -663,57 +679,86 @@ def FLTrust(weights, grad, args, model, train_dataset, dict_common, epoch, index
     return re_model
 
 def update_weights(global_model, param_update):
-    alpha = 0.5
+    alpha = 0.15
     return_params = copy.deepcopy(global_model.state_dict())
     for key in param_update.keys():
         return_params[key] =  return_params[key] * (1 - alpha) + param_update[key] * (alpha)
 
     return return_params
 
-def AFLGuard(grad_param_updates, global_model, global_test_model, epoch, std_keys, lr, lamda):
+
+def get_param_flatterned(std_keys, param):
+    param_update = []
+    for k in std_keys:
+        param_update = param[k].view(-1) if len(param_update) == 0 else torch.cat((param_update, param[k].view(-1)), 0)
+    # print("shape param_update", param_update.shape)
+    return param_update
+
+def AFLGuard(param_updates, global_model, global_test_model, epoch, std_keys, lr, lamda):
+    
     global_weights = copy.deepcopy(global_model.state_dict())
-    for idx, gd_param in enumerate(grad_param_updates):
-        w, loss,_  = global_test_model.update_weights(
+    w, loss,gd = global_test_model.update_weights(
 
                 model=copy.deepcopy(global_model), global_round=epoch
 
             )
-        gd_server = compute_gradient(w,global_model.state_dict(),std_keys,lr)
-        # print("len(gd param)", len(gd_param[1]))
-        norm_1 = torch.norm(torch.subtract(gd_server , gd_param[1]))
-        norm_2 = torch.norm(gd_server)
+    param_g = compute_gradient(w,copy.deepcopy(global_model.state_dict()),std_keys,lr)
+    norm_2 = torch.norm(param_g, p =2)
+    for idx, param in enumerate(param_updates):
+        
+        
+        # param_i = get_param_flatterned(std_keys,param)
+        # param_w = get_param_flatterned(std_keys,w)
+        # param_g = get_param_flatterned(std_keys,copy.deepcopy(global_model.state_dict()))
+        # print("torch param_i is ", torch.norm(param_i))
+        # print("torch param_w is ", torch.norm(param_w))
+        
+        
+        # norm_2 = torch.abs(torch.norm(param_g) - torch.norm(param_g))
+        # norm_2  = torch.norm(gd)
+        
+        norm_1 = torch.norm(torch.subtract(param, param_g))
+        norm_1 = torch.norm(param,p =2)
         print("norm_1 is ", norm_1)
+        print("norm_2 is ", norm_2)
         print("norm_2 * lamda is",norm_2 * lamda )
 
         if norm_1 <= norm_2 * lamda:
             # 满足条件则更新全局模型
             print("satisfying", idx)
-            global_weights = update_weights(global_model,gd_param[0])
+            # global_weights = copy.deepcopy(global_model.state_dict())
+            update_param = restoregradients(global_weights,std_keys,param)
+            global_weights = update_weights(global_model,update_param)
             global_model.load_state_dict(global_weights)
+        else:
+            print("do  not satisfying", idx)
 
-    return global_weights
-
+    return global_model.state_dict()
 
 # norm-clipping/ norm-clipping
 # 根据一定Bound对参数进行剔除
-def norm_clipping(global_model, local_weights_delay ,local_delay_ew):
+def norm_clipping(global_model, local_weights_delay ,local_delay_ew,std_keys,lr):
     
     params = copy.deepcopy(local_weights_delay)
     for item in local_delay_ew:
         params.extend(item)
 
-    number_to_consider = int(len(params)* 0.5) ### 尝试0.5
-    std_keys = get_key_list(global_model.state_dict().keys())
-    weight_updates = modifyWeight(std_keys, params)
+    number_to_consider = int(len(params)* 0.8) ### 尝试0.5
+    print("idx is",number_to_consider)
+    # std_keys = get_key_list(global_model.state_dict().keys())
+    # weight_updates = modifyWeight(std_keys, params)
+    # print("paramlen is", len(params))
+    weight_updates = torch.stack(params,dim= 0)
     print("weight size is ", weight_updates.shape)
     norm_res = torch.norm(weight_updates, p =2 ,dim = 1)
-    print("norm res size is ", norm_res.shape)
+    print("norm res is ", norm_res)
     sorted_norm, sorted_idx = torch.sort(norm_res)
+    print("sorted_norm is  ",sorted_norm)
     used_idx = sorted_idx[:number_to_consider]
     print("used idx is ", used_idx)
-    avg_weight =  torch.mean(weight_updates[used_idx, :],dim = 0)
-    print("weight size is ", avg_weight.shape)
-    weight_res = restoreWeight(copy.deepcopy(global_model.state_dict()),std_keys,avg_weight)
+    avg_grad =  torch.mean(weight_updates[used_idx,: ],dim = 0)
+    print("weight size is ", avg_grad.shape)
+    weight_res = restoregradients(copy.deepcopy(global_model.state_dict()),std_keys,avg_grad * lr)
 
     return weight_res
 

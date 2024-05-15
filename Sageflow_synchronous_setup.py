@@ -69,7 +69,14 @@ if __name__ == '__main__':
 
     global_model.to(device)
     global_model.train()
-    print(global_model)
+    # print(global_model)
+       # 加载参数  
+
+    params = torch.load('./global_model_parameters.pth')  
+
+    # 使用加载的参数更新模型  
+
+    global_model.load_state_dict(params)
 
     global_weights = global_model.state_dict()
 
@@ -100,7 +107,7 @@ if __name__ == '__main__':
         for idx in idxs_users:
 
             if idx in attack_users and args.data_poison==True:
-
+                print("hhh")
                 local_model = LocalUpdate(args=args, dataset=train_dataset, idxs=user_groups[idx], data_poison=True,idx=idx)
             else:
                 local_model = LocalUpdate(args=args, dataset=train_dataset, idxs=user_groups[idx], data_poison=False, idx=idx)
@@ -109,7 +116,7 @@ if __name__ == '__main__':
                 model=copy.deepcopy(global_model), global_round=epoch
             )
 
-            if idx in attack_users and args.model_poison ==True and epoch > 15:
+            if idx in attack_users and args.model_poison ==True and epoch >=0:
                 w = sign_attack(w, args.model_poison_scale)
 
             #### save for print test ####
@@ -132,7 +139,7 @@ if __name__ == '__main__':
             global_model.load_state_dict(w)
 
             # Compute the loss and entropy for each device on public dataset
-            common_acc, common_loss, common_entropy, _ = test_inference(args, global_model, DatasetSplit(train_dataset, dict_common))
+            common_acc, common_loss, common_entropy = test_inference(args, global_model, DatasetSplit(train_dataset, dict_common))
             loss_on_public.append(common_loss)
             entropy_on_public.append(common_entropy)
 
@@ -179,7 +186,7 @@ if __name__ == '__main__':
             print(f'Training Loss : {np.mean(np.array(train_loss))}')
             print('Train Accuracy: {:.2f}% \n'.format(100 * train_accuracy[-1]))
 
-        test_acc, test_loss , test_entropy, _ = test_inference(args, global_model, test_dataset)
+        test_acc, test_loss , test_entropy = test_inference(args, global_model, test_dataset)
         print('Test Accuracy: {:.2f}% \n'.format(100 * test_acc))
         final_test_acc.append(test_acc)
 

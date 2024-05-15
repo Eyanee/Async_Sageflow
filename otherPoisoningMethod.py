@@ -266,18 +266,66 @@ def Grad_median(args, param_updates, n_attackers, dev_type='unit_vec', threshold
 
     return mal_update
 
+def compute_gradient(model_1, model_2, std_keys,  lr):
+    grad = list()
+    for key in std_keys:
+        param1 = model_1[key]
+        param2 = model_2[key]
+    #     # 根据公式计算梯度
+        tmp = (param1 - param2).view(-1)
+        # tmp = (param1 - param2)
+        grad = tmp if len(grad)== 0 else torch.cat((grad,tmp),0)
+    print("grad,shape is",grad.shape)
+    return grad
 
+def restoregradients(std_dict, std_keys, update_weights):
+    # 重构张量，重构字典 
+    update_dict = copy.deepcopy(std_dict)
+    front_idx = 0
+    end_idx = 0
+    # mal_update张量重构
+
+    for k in std_keys:
+        tmp_len = len(list(std_dict[k].reshape(-1)))
+        end_idx = front_idx + tmp_len
+        # print("update_weights shape", type(update_weights))
+        # print("front idx and end idx", front_idx, end_idx)
+        tmp_tensor = update_weights[front_idx:end_idx].view(std_dict[k].shape)
+        update_dict[k] = copy.deepcopy(tmp_tensor) +  update_dict[k]
+        front_idx = end_idx
+    return update_dict
+
+def getAllGraidients(args, params,global_model,std_keys):
+    grads = list()
+    for param in params:
+        grad  = compute_gradient(param,global_model.state_dict(),std_keys,args.lr)
+        grads.append(grad)
+    grads =torch.stack(grads,dim  = 0)
+
+    return grads
 
 ### LA attack
     ## on Trimmed Mean and Mean full knowledge
-def LA_attack(args, param_updates, n_attackers):
+def modifyLA(std_keys, param_updates,global_model,lr):
+    res_list = []
+    for param in param_updates:
+        param_mod = compute_gradient(param,global_model.state_dict(),std_keys,lr)
+        res_list.append(param_mod)
+    return torch.stack(res_list,dim = 0)
+        
+    
+def LA_attack(args, param_updates, n_attackers,global_model,std_keys):
 
     gpu_number = args.gpu_number
     device = torch.device(f'cuda:{gpu_number}' if args.gpu else 'cpu')
 
+    # std_dict = copy.deepcopy(param_updates[0])
+    # std_keys = get_key_list(std_dict.keys())
+    # all_updates = getAllGraidients(args, param_updates,global_model,std_keys)
+
     std_dict = copy.deepcopy(param_updates[0])
-    std_keys = get_key_list(std_dict.keys())
     all_updates = modifyWeight(std_keys, param_updates)
+
     print("all_updates shape is ",all_updates.shape)
     print("n_attacker is ", n_attackers)
 

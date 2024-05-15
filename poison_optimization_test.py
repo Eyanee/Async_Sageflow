@@ -28,16 +28,18 @@ def model_dist_norm(ori_params, mod_params):
     pdlist = nn.PairwiseDistance(p=2)
     # 遍历参数字典，计算差异的平方和
     for key in ori_params.keys():
-        if ori_params[key].ndimension() == 1:
-            t1 = ori_params[key].unsqueeze(0)
-            t2 = mod_params[key].unsqueeze(0)
+        # if ori_params[key].ndimension() == 1:
+        #     t1 = ori_params[key].unsqueeze(0)
+        #     t2 = mod_params[key].unsqueeze(0)
 
-        else:
-            t1 = ori_params[key]
-            t2 = mod_params[key]
-        temp1 = torch.sum(pdlist(t1 ,t2))
-        output = torch.sum(temp1)
-        distance += output
+        # else:
+        #     t1 = ori_params[key]
+        #     t2 = mod_params[key]
+        # temp1 = torch.sum(pdlist(t1 ,t2))
+        # output = torch.sum(temp1)
+        # distance += output
+        diff = ori_params[key].float() - mod_params[key].float()  
+        distance += torch.norm(diff).item()**2  # 取平方并累加到distance中 
 
     return distance
 
@@ -353,7 +355,7 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
             # alpha = 0.1
             # beta = 0.1
             alpha = 0.5
-            beta = 0.3
+            beta = 0.4
         elif acc_1<= accuracy_threshold :
             #  loss <= 1:  #0.7 0.3 for fmnist
             print("restore alpha")
