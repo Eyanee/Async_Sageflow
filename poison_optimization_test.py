@@ -21,27 +21,40 @@ def cal_similarity(ori_params, mod_params):
 
     return cos_similarity
 
-def model_dist_norm(ori_params, mod_params):
+def  model_dist_norm(ori_params, mod_params):
     squared_sum = 0
-    distance = 0
+    distance1 = 0
+    distance2 = 0
 
     pdlist = nn.PairwiseDistance(p=2)
     # 遍历参数字典，计算差异的平方和
     for key in ori_params.keys():
-        # if ori_params[key].ndimension() == 1:
-        #     t1 = ori_params[key].unsqueeze(0)
-        #     t2 = mod_params[key].unsqueeze(0)
+        # print("key is ",key)
 
-        # else:
-        #     t1 = ori_params[key]
-        #     t2 = mod_params[key]
-        # temp1 = torch.sum(pdlist(t1 ,t2))
-        # output = torch.sum(temp1)
-        # distance += output
-        diff = ori_params[key].float() - mod_params[key].float()  
-        distance += torch.norm(diff).item()**2  # 取平方并累加到distance中 
+        if key.endswith('num_batches_tracked'):  
+            continue  
+        t1 = ori_params[key]
+        t2 = mod_params[key]
+    # # 确保t1和t2都是Tensor，并且可以进行unsqueeze
+        if isinstance(t1, torch.Tensor) and isinstance(t2, torch.Tensor):
+            if ori_params[key].ndimension() == 1:
+                t1 = ori_params[key].unsqueeze(0)
+                t2 = mod_params[key].unsqueeze(0)
 
-    return distance
+            else:
+                t1 = ori_params[key]
+                t2 = mod_params[key]
+            # print("shape t1 = ",t1.shape)
+            # print("shape t2 = ",t2.shape)
+            temp1 = torch.sum(pdlist(t1 ,t2))
+            output = torch.sum(temp1)
+            distance1 += output
+            # diff = torch.subtract(ori_params[key], mod_params[key])
+            # distance2 += torch.norm(diff,p=2)  # 取平方并累加到distance中 
+            # distance2 += torch.norm(diff.float()) 
+    # print("distance 1 is",distance1)
+    print("distance x is",distance1)
+    return distance1
 
 
 def get_distance_list(ori_state_dict, mod_state_dict):
@@ -171,7 +184,7 @@ def Indicator(fi_global_model, global_model):
 def cal_Norm(model_dict):
     res = 0
     for key in model_dict.keys():
-        res += torch.norm(model_dict[key])
+        res += torch.norm(model_dict[key].double())
     return res
 
 def cal_ref_distance(malicious_models, global_model, distance_ratio):
@@ -208,37 +221,47 @@ def phased_optimization(args, global_model, w_rand, train_dataset, distance_thre
     round = 0
 
     while round < MAX_ROUND:
-        test_acc, test_loss, test_entropy = test_inference(args, student_model, train_dataset)
-        test_distance = model_dist_norm(student_model.state_dict(), global_model.state_dict())
-        w_semi = Avg(global_model.state_dict(),student_model.state_dict())
-        test_model.load_state_dict(w_semi)
+        
+        test_acc, test_loss, test_entropy = test_inference(args, copy.deepcopy(student_model), train_dataset)
+
+        student_model.load_state_dict(w_rand)
+        test_distance = model_dist_norm( global_model.state_dict(),w_rand)
+        test_distance_1 = model_dist_norm( global_model.state_dict(),student_model.state_dict())
+        w_semi = Avg(global_model.state_dict(),w_rand)
+        # test_model.load_state_dict(w_semi)
         test_acc_1, loss_1,entropy_1 = test_inference(args, test_model, train_dataset)
-        test_simliarity = cal_similarity(student_model.state_dict(), global_model.state_dict())
+        test_simliarity = cal_similarity( global_model.state_dict(),w_rand)
         print("________________________________")
         print("test distance is ", test_distance)
+        print("test distance1 is ", test_distance_1)
         print("test similarity is ", test_simliarity)
-        print("test acc is ", test_acc_1)
+        print("test acc is ", test_acc)
         print("test loss is", test_loss)
         print("test entropy is ", test_entropy)
         print("________________________________")
         
-        if test_distance <= distance_threshold and test_acc_1 <= pinned_accuracy_threshold and test_entropy  <= entropy_threshold and test_loss <= 2 :
+        if test_distance <= distance_threshold and test_acc_1 <= pinned_accuracy_threshold and test_entropy  <= entropy_threshold and test_loss <=2:
             return w_rand, True
         elif test_distance > distance_threshold:
             w_rand = adaptive_scaling(w_rand, global_model.state_dict(), distance_threshold, test_distance)
-            student_model.load_state_dict(w_rand)
+            # student_model.load_state_dict(w_rand_1)
             round = round - 1
               
         elif (test_entropy > entropy_threshold or test_loss > 2) and distillation_res == True:
             if test_loss > 1:
+                print("0")
                 distillation_res, w_rand = self_distillation(args,teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 5)
             else:
+                print("1")
                 distillation_res, w_rand = self_distillation(args,teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 5)
             # distillation_res, w_rand = self_distillation(args, teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold,  distance_threshold, distillation_round = 10)
         
         
         
         else:
+            print("2")
+            test_distance_2 = model_dist_norm( global_model.state_dict(),student_model.state_dict())
+            print("test distance 2 is ", test_distance_2)
             distillation_res, w_rand = self_distillation(args,  teacher_model, student_model, train_dataset, entropy_threshold, global_model, pinned_accuracy_threshold, distance_threshold, distillation_round = 5)
             
         student_model.load_state_dict(w_rand)
@@ -276,20 +299,23 @@ def adaptive_scaling(w_rand, ref_model_dict, distance_threshold, test_distance):
         pdlist= nn.PairwiseDistance(p=2)
         cal_distance = test_distance
         while cal_distance > distance_threshold:
-            ratio = math.sqrt((distance_threshold / cal_distance).double()) * 0.9 # 
+            ratio = math.sqrt((distance_threshold / cal_distance)) * 0.98 # 
             print("cal ratio is ",ratio)
             keys = reversed(get_key_list(ref_model_dict))
             for key in keys:
                 w_rand[key] = torch.sub(w_rand[key], ref_model_dict[key]) * ratio + ref_model_dict[key]
             cal_distance = model_dist_norm(w_rand, ref_model_dict)
             print("cal_distance is ", cal_distance)
+        return_distance = model_dist_norm(w_rand, ref_model_dict)
+        print("return_distance is ", return_distance)
         return w_rand
+    
     return w_rand
 
 def Avg(ref_state_dict, mal_state_dict):
     res_dict = copy.deepcopy(ref_state_dict)
     for key in ref_state_dict.keys():
-        res_dict[key] = 0.5 * ref_state_dict[key] + 0.5 * mal_state_dict[key]
+        res_dict[key] = 2 * ref_state_dict[key] + 2 * mal_state_dict[key]
         
     return res_dict
 
@@ -301,7 +327,7 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
     lr = args.lr
     device = f'cuda:{args.gpu_number}' if args.gpu else 'cpu'
     trainloader = DataLoader(train_dataset, batch_size=128, shuffle=False)
-    optimizer = torch.optim.Adam(student_model.parameters(), lr=lr, weight_decay=1e-4)
+    # optimizer = torch.optim.Adam(student_model.parameters(), lr=lr, weight_decay=1e-4)
     optimizer = MyPOptimizer(student_model.parameters(),lr=lr)
     criterion1 = nn.NLLLoss().to(device)
     # criterion2 = nn.functional.kl_div().to(device)
@@ -321,13 +347,16 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
     for epoch in range(num_epochs):
         optimizer.zero_grad()
 
-        acc, loss, avg_entropy = test_inference(args, student_model, train_dataset)
+        acc, loss, avg_entropy = test_inference(args, copy.deepcopy(student_model), train_dataset)
+
         w_semi = Avg(ref_model.state_dict(),student_model.state_dict())
         test_model.load_state_dict(w_semi)
         acc_1, loss_1,entropy_1 = test_inference(args, test_model, train_dataset)
-        compute_distance = model_dist_norm(student_model.state_dict(), ref_model.state_dict())
+        compute_distance = model_dist_norm( ref_model.state_dict(),student_model.state_dict())
         compute_norm  = cal_Norm(student_model.state_dict())
         cos_sim = cal_similarity(ref_model.state_dict(),student_model.state_dict())
+
+        # loss =1
         if epoch != 0:
             # 防止循环太多次
             if abs(loss - previous_loss) < 0.005:
@@ -347,6 +376,10 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
         print("compute_norm is ",compute_norm)
         print("++++++++++++++++++++")
 
+        # acc_1 =0.8
+        # avg_entropy = 1.1
+
+
         if avg_entropy <= entropy_threshold and acc_1<= accuracy_threshold and loss <= 2:
         # if loss <=2 and avg_entropy <= entropy_threshold :
             return True, student_model.state_dict()
@@ -356,7 +389,8 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
             # beta = 0.1
             alpha = 0.5
             beta = 0.4
-        elif acc_1<= accuracy_threshold :
+        # elif 
+        elif acc_1<= accuracy_threshold:
             #  loss <= 1:  #0.7 0.3 for fmnist
             print("restore alpha")
             # alpha = 0.7
@@ -390,7 +424,7 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
             pred_is = pred_is.to(device)
             stu_out, student_outputs = student_model(images)
             # ref_out, ref_outputs, PLR= ref_model(images)
-            _ , teacher_outputs= teacher_model(images)
+            _ , teacher_outputs = teacher_model(images)
             l_loss = criterion1(stu_out, pred_is)
             t_loss = criterion1(stu_out,  labels) #  增加了正常的loss
             loss =  alpha * l_loss + beta * t_loss
@@ -446,7 +480,7 @@ def add_small_perturbation(original_model, args, pinned_accuracy, train_dataset,
     criterion = nn.NLLLoss().to(device)
     testloader = DataLoader(train_dataset, batch_size=64, shuffle=False)
     optimizer = torch.optim.Adam(test_model.parameters(), lr=args.lr, weight_decay=1e-4)
-    for round in range(10):
+    for round in range(1):
         for batch_idx, (images, labels) in enumerate(testloader):
             images, labels = images.to(device), labels.to(device)
 
@@ -456,7 +490,7 @@ def add_small_perturbation(original_model, args, pinned_accuracy, train_dataset,
                 param.requires_grad_(True)
 
 
-            output, out = test_model(images)
+            output, out= test_model(images)
             # # 构造[batches,categaries]的真实分布向量
             _, pred_labels = torch.max(output,1)
             pred_labels = pred_labels.view(-1)
@@ -565,9 +599,9 @@ def computeTargetDistance(model_dicts, global_model, ratio):
         print("compute norm is ", tmp_norm)
     res_distance.sort()
 
-    max_idx = int(len(model_dicts)) - 1
+    max_idx = int(len(model_dicts))-1
 
-    target_distance = (res_distance[max_idx] - res_distance[0]) * ratio + res_distance[0]
+    target_distance = res_distance[max_idx]
 
     return target_distance
 

@@ -34,8 +34,8 @@ def args_parser():
                         help='choose Sageflow or Fedavg')
 
 
-    # The amount of Public data
-    parser.add_argument('--num_commondata', type=float, default=1000,
+    # The amount of Public data1
+    parser.add_argument('--num_commondata', type=float, default=100,
                         help='number of public data which server has')
     
     # The alpha of non-iid distribution

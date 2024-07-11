@@ -1,3 +1,4 @@
+
 import torch
 import numpy as np
 import copy
@@ -161,10 +162,9 @@ def min_sum(args, param_updates, dev_type='unit_vec'):
     gpu_number = args.gpu_number
     device = torch.device(f'cuda:{gpu_number}' if args.gpu else 'cpu')
 
-    std_dict = copy.deepcopy(param_updates[0])
-    std_keys = get_key_list(std_dict.keys())
-    print("len all_updates is ", len(param_updates))
-    all_updates = modifyWeight(std_keys, param_updates)
+    # print("len all_updates is ", len(param_updates))
+    # all_updates = modifyWeight(std_keys, param_updates)
+    all_updates = torch.stack(param_updates,dim = 0)
 
     model_re = torch.mean(all_updates, axis=0) # 计算均值s
 
@@ -175,8 +175,8 @@ def min_sum(args, param_updates, dev_type='unit_vec'):
     elif dev_type == 'std':
         deviation = torch.std(all_updates, 0)
     
-    lamda_succ = torch.Tensor([11.0]).to(device)
-    lamda = torch.Tensor([10.0]).to(device)
+    lamda_succ = torch.Tensor([0]).to(device)
+    lamda = torch.Tensor([50.0]).to(device)
     lamda_fail = lamda
     sum_d_i = 0
     sum_d = 0
@@ -210,13 +210,11 @@ def min_sum(args, param_updates, dev_type='unit_vec'):
 
     mal_update = (model_re - lamda_succ * deviation)
 
-    mal_update = restoreWeight(std_dict, std_keys, mal_update)
-
     return mal_update
 
 
 
-def Grad_median(args, param_updates, n_attackers, dev_type='unit_vec', threshold=30):
+def Grad_median(args, param_updates, n_attackers, dev_type='unit_vec', threshold=5.0):
     ## model_re是params的均值 
     gpu_number = args.gpu_number
     device = torch.device(f'cuda:{gpu_number}' if args.gpu else 'cpu')
@@ -224,8 +222,9 @@ def Grad_median(args, param_updates, n_attackers, dev_type='unit_vec', threshold
     # std_dict = copy.deepcopy(param_updates[0])
     # std_keys = get_key_list(std_dict.keys())
     # all_updates = modifyWeight(std_keys, param_updates)
+    all_updates = torch.stack(param_updates,dim = 0)
 
-    model_re = torch.mean(param_updates, axis=0) # 计算均值
+    model_re = torch.mean(all_updates, axis=0) # 计算均值
 
 
 
@@ -247,7 +246,7 @@ def Grad_median(args, param_updates, n_attackers, dev_type='unit_vec', threshold
         mal_update = (model_re - lamda * deviation)
         mal_updates = torch.stack([mal_update] * n_attackers)
         # print("shape param_updates ",param_updates.shape)
-        mal_updates = torch.cat((mal_updates, param_updates), 0)
+        mal_updates = torch.cat((mal_updates, all_updates), 0)
 
         agg_grads = torch.median(mal_updates, 0)[0]
         
@@ -272,9 +271,10 @@ def compute_gradient(model_1, model_2, std_keys,  lr):
         param1 = model_1[key]
         param2 = model_2[key]
     #     # 根据公式计算梯度
-        tmp = (param1 - param2).view(-1)
+        # tmp = (param1 - param2)tmp = (param1 - param2)/lr.view(-1)
+        tmp = (param1 - param2)
         # tmp = (param1 - param2)
-        grad = tmp if len(grad)== 0 else torch.cat((grad,tmp),0)
+        grad = tmp.view(-1) if len(grad)== 0 else torch.cat((grad,tmp.view(-1)),0)
     print("grad,shape is",grad.shape)
     return grad
 
@@ -323,11 +323,12 @@ def LA_attack(args, param_updates, n_attackers,global_model,std_keys):
     # std_keys = get_key_list(std_dict.keys())
     # all_updates = getAllGraidients(args, param_updates,global_model,std_keys)
 
-    std_dict = copy.deepcopy(param_updates[0])
-    all_updates = modifyWeight(std_keys, param_updates)
+    # std_dict = copy.deepcopy(param_updates[0])
+    # all_updates = modifyWeight(std_keys, param_updates)
+    all_updates = torch.stack(param_updates,dim = 0)
 
-    print("all_updates shape is ",all_updates.shape)
-    print("n_attacker is ", n_attackers)
+    # print("all_updates shape is ",all_updates.shape)
+    # print("n_attacker is ", n_attackers)
 
     model_re = torch.mean(all_updates, 0)
     model_std = torch.std(all_updates, 0)
@@ -351,10 +352,8 @@ def LA_attack(args, param_updates, n_attackers,global_model,std_keys):
 
     print("mal_vec shape is ",mal_vec.shape)
 
-    mal_updates = []
-    for item in mal_vec:
-        mal_update = restoreWeight(std_dict, std_keys, item)
-        mal_updates.append(mal_update)
-    return mal_updates
+    
+    return mal_vec
 
 
+# def LA_attack_bulyan()

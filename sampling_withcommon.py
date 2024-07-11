@@ -1,5 +1,6 @@
 import numpy as np
 from torchvision import datasets, transforms
+import copy
 
 
 
@@ -102,11 +103,12 @@ def cifar_noniidcmm(dataset, num_users, num_commondata):
     num_shards, num_imgs = 200, 250
     idx_shard = [i for i in range(num_shards)]
     dict_users = {i:np.array([]) for i in range(num_users+1)}
+    print("type dict users[0]", type(dict_users[0]))
     idxs = np.arange(num_shards * num_imgs)
-    dict_users[0] = set(np.random.choice(idxs, num_commondata, replace=False))
+   
 
     # Exclude the public data from local device
-    idxs = list(set(idxs) - dict_users[0])
+    idxs = list(set(idxs))
     total_data = len(idxs)
     num_shards, num_imgs = 200, total_data//200
 
@@ -121,19 +123,41 @@ def cifar_noniidcmm(dataset, num_users, num_commondata):
     idxs_labels = idxs_labels[:, idxs_labels[1,:].argsort()]
     idxs = idxs_labels[0,:]
 
+    # common data
+    idx_set = set(range(101))
+    for rand in idx_set:
+        dict_users[0] = np.concatenate((dict_users[0], idxs[rand*num_imgs:(rand+1)*num_imgs]), axis=0)
+
+    print("type dict users[0]", type(dict_users[0]))
+    print("type dict idxs", type(idxs))
+    idxs = list(set(idxs) - set(dict_users[0]))
+    dict_common = copy.deepcopy(dict_users[0])
+    b = []
+    for i in idxs:
+        b.append(dataset[i][1])
 
 
-    for i in range(1,num_users+1):
-        rand_set = set(np.random.choice(idx_shard, 2, replace=False))
-        idx_shard = list(set(idx_shard) - rand_set)
-        for rand in rand_set:
-            dict_users[i] = np.concatenate((dict_users[i], idxs[rand*num_imgs:(rand+1)*num_imgs]), axis=0)
+    labels = np.array(b)
 
-    dict_common = dict_users[0]
+    # idxs_labels = np.vstack((idxs, labels))
+    # idxs_labels = idxs_labels[:, idxs_labels[1,:].argsort()]
+    # idxs = idxs_labels[0,:]
 
-    for i in range(num_users):
-        dict_users[i] = dict_users[i + 1]
-    del dict_users[num_users]
+
+    # for i in range(1,num_users+1):
+    #     rand_set = set(np.random.choice(idx_shard, 2, replace=False))
+    #     idx_shard = list(set(idx_shard) - rand_set)
+    #     for rand in rand_set:
+    #         dict_users[i] = np.concatenate((dict_users[i], idxs[rand*num_imgs:(rand+1)*num_imgs]), axis=0)
+
+    # dict_common = dict_users[0]
+
+    # for i in range(num_users):
+    #     dict_users[i] = dict_users[i + 1]
+    # del dict_users[num_users]
+    train_labels = labels
+    alpha = 1.0
+    dict_users = dirichlet_split_noniid(len(dataset.classes),train_labels, alpha, num_users)
 
 
     return dict_users, dict_common

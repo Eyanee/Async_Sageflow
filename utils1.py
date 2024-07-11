@@ -16,6 +16,7 @@ import math
 from torchvision.datasets import ImageFolder
 from torchvision.transforms import ToTensor,Resize,Normalize
 import pdb
+from adam import Adam
 
 def get_dataset(args):
 
@@ -36,8 +37,8 @@ def get_dataset(args):
 
             user_groups = cifar_iid(train_dataset, args.num_users)
 
-        elif args.iid == 2:
-
+        elif args.iid == 0:
+            # print("noniid here")
             user_groups = cifar_noniidcmm(train_dataset, args.num_users, args.num_commondata)
 
         else:
@@ -80,9 +81,12 @@ def get_dataset(args):
 def average_weights(w):
     w_avg = copy.deepcopy(w[0])
     for key in w_avg.keys():
-        for i in range(1, len(w)):
-            w_avg[key] += w[i][key]
-        w_avg[key] = torch.div(w_avg[key], len(w))
+        for i in range(0, len(w)):
+            if i == 0:
+                w_avg[key] = torch.div(copy.deepcopy(w[0][key]), len(w))
+            else:
+                w_avg[key] += torch.div(copy.deepcopy(w[i][key]), len(w))
+        # w_avg[key] = torch.div(w_avg[key], len(w))
     return w_avg
 
 def compute_gradient_norm(w1, w2):
@@ -112,7 +116,7 @@ def weighted_average(w, beta):
 
 def Sag(current_epoch, current_average, current_length, epoch_weights, global_weights):
     args = args_parser()
-
+   
     alpha = []
     weights_d = []
     num_device = []
@@ -187,7 +191,7 @@ def Sag(current_epoch, current_average, current_length, epoch_weights, global_we
     # w_semi_copy = copy.deepcopy(w_semi)
     for key in w_semi.keys():
         if args.dataset =='cifar':
-            alpha = 0.5 ** (current_epoch // 300)
+            alpha = 0.8 ** (current_epoch // 300)
         elif args.dataset =='fmnist':
             alpha = 0.8
 
@@ -199,6 +203,118 @@ def Sag(current_epoch, current_average, current_length, epoch_weights, global_we
     return w_semi
 
 
+# def Sag_LA(current_epoch, current_average, current_length, epoch_weights, global_model):
+#     global_weights = copy.deepcopy(global_model.state_dict())
+
+#     args = args_parser()
+
+#     alpha = []
+#     weights_d = []
+#     num_device = []
+
+#     alpha_for_attack = np.ones(args.staleness+1)
+
+#     comm = current_length
+#     print("curent length is ",current_length)
+#     print("the length of epoch_weights is ", len(epoch_weights))
+#     for i in epoch_weights:
+#         key = list(i.keys())[0]
+#         alpha.append(key)
+#         weights_d.append(i[key][0])
+#         num_device.append(i[key][1])
+#         comm = comm + i[key][1]
+
+#     # For empty staleness groups
+#     # You can ignore this part
+#     #########################################################################################
+#     if current_average is not None:
+#         w_semi = copy.deepcopy(current_average)
+
+#     else:
+#         for weigts_delay in weights_d:
+#             if weigts_delay is not None:
+#                 w_semi = copy.deepcopy(weigts_delay)
+#                 break
+            
+
+#     if len(weights_d) > 0 and current_epoch >=args.staleness:
+#         if current_average is None:
+#             alpha_for_attack[0] = 0
+#         print("the length of weights_d is ", len(weights_d))
+#         # for i in range(args.staleness + 1):
+#         #     print("i is ",i)
+#         #     if i != 0 and weights_d[i-1] is None:
+#         #         alpha_for_attack[i] = 0
+
+#     #########################################################################################
+
+#     #Staleness-based weight *#*****
+#     print("alpha 1 is",alpha)
+#     alphas = 1.0  /  ((current_epoch - np.array(alpha) + 1) )
+#     # alphas = ((current_epoch - np.array(alpha) + 1) )
+#     # print("alphas 1 is",alphas)
+
+#     # alphas = alphas * np.array(num_device)
+#     # alphas = alphas * alpha_for_attack[1:len(alpha) + 1]
+#     # print("alphas 2 is",alphas)
+
+#     if len(alphas) == 0:
+#         alphas = np.array([alpha_for_attack[0]])
+#     else:
+#         alphas = np.concatenate((np.array([1]), alphas), axis=0)
+
+#     print("alphas 3 is",alphas)
+
+#     sum_alphas = sum(alphas)
+#     alphas = alphas / sum_alphas
+#     print("alphas is ",alphas)
+
+#     # for key in w_semi.keys():
+#     #     for i in range(0, len(weights_d) + 1):
+#     #         if i == 0:
+#     #             w_semi[key] = w_semi[key] * (alphas[0])
+#     #         else:
+#     #             if weights_d[i-1] is None:
+#     #                 continue
+#     #             else:
+#     #                 w_semi[key] += weights_d[i - 1][key] * alphas[i]
+#     for i in range(0, len(weights_d) + 1):
+#         if i == 0:
+#             w_semi = w_semi * (alphas[0])
+#         else:
+#             if weights_d[i-1] is None:
+#                 continue
+#             else:
+#                 w_semi += weights_d[i - 1]* alphas[i]
+
+#     # w_semi_copy = copy.deepcopy(w_semi)
+#     # for key in w_semi.keys():
+#     if args.dataset =='cifar':
+#         alpha = 0.5 ** (current_epoch // 300)
+#     elif args.dataset =='fmnist':
+#         alpha = 0.8
+
+#     elif args.dataset =='mnist':
+#         alpha = 0.5 ** (current_epoch // 15)
+
+#     optimizer_fed = Adam(global_model.parameters(), lr=alpha)
+
+#     model_grads=[]
+#     start_idx = 0
+#     for i, param in enumerate(global_model.parameters()):
+#         param_=w_semi[start_idx:start_idx+len(param.data.view(-1))].reshape(param.data.shape)
+#         start_idx=start_idx+len(param.data.view(-1))
+#         param_=param_.cuda()
+#         model_grads.append(param_)
+
+
+#     optimizer_fed.step(model_grads)
+
+#     return global_model.state_dict()
+
+
+
+
 def Fedavg(args, current_epoch, all_weights, global_model):
     
     print("len all weights is", len(all_weights))
@@ -208,12 +324,12 @@ def Fedavg(args, current_epoch, all_weights, global_model):
     w_semi = copy.deepcopy(global_model.state_dict())
     for key in w_semi.keys():
         if args.dataset =='cifar':
-            alpha = 0.5 ** (current_epoch // 300)
+            alpha = 0.8
         elif args.dataset =='fmnist':
             alpha = 0.8
 
         elif args.dataset =='mnist':
-            alpha = 0.5 ** (current_epoch // 15)
+            alpha = 0.8
 
         w_semi[key] = w_semi[key] * (1 - alpha) + avg_weights[key] * (alpha)
 

@@ -83,7 +83,8 @@ class LocalUpdate(object):
                  # 修改点1：设置模型参数需要梯度
                 for param in model.parameters():
                     param.requires_grad_(True)
-                log_probs, _ = model(images)
+                log_probs, probs = model(images)
+                # print("prob shape is ",F.log_softmax(probs, dim=1).shape)
                 loss = self.criterion(log_probs, labels)
                 loss.backward()
                 optimizer.step()
@@ -153,14 +154,9 @@ def test_inference(args, model, test_dataset):
             images, labels = images.to(device), labels.to(device)
 
             model.zero_grad()
-            # # 修改点1：设置模型参数需要梯度
-            # for param in model.parameters():
-            #     param.requires_grad_(True)
 
 
-            output, out= model(images)
-            # # 构造[batches,categaries]的真实分布向量
-            # categaries = output.shape[1]
+            output, out = model(images)
 
             
             Information = F.softmax(out, dim=1) * F.log_softmax(out, dim=1)
@@ -181,20 +177,6 @@ def test_inference(args, model, test_dataset):
 
             correct += current_acc
             total += len(labels)
-            # for name, param in model.named_parameters():  
-            #     if param.grad is not None:  
-            #         print(f"{name}: {param.grad.norm(p=2).item()}")  # 计算并打印梯度的L2范数
-            # # 修改点3：获取并存储梯度
-            # grad = torch.cat([p.grad.view(-1) for p in model.parameters()])
-            # print(grad)
-            # batch_grad.append(grad)  
-
-            # 修改点3：清零梯度，为下一个batch做准备
-            # model.zero_grad()
-
-        # # 修改点5：恢复模型参数不需要梯度
-        # for param in model.parameters():
-        #     param.requires_grad_(False)
 
 
 
