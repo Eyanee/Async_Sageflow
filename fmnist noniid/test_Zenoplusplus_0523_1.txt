@@ -1,0 +1,3616 @@
+
+Experimental details:
+    Dataset     : fmnist
+    Model     : cnn
+    detailed Model     : resnet
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 100
+
+    Federated parameters:
+    IID
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.2
+     Model attack is done!
+attack user num is  12
+ t is  8
+attack_user is [48 49 50 51 52 53 54 55 56 57 58 59]
+
+ | Global Training Round : 1 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5253109335899353
+distance x is tensor(119.6460, device='cuda:3')
+benign distance is  tensor(119.6460, device='cuda:3')
+norm1 res is  tensor(539.9109, device='cuda:3')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.9488756060600281
+distance x is tensor(118.6084, device='cuda:3')
+benign distance is  tensor(118.6084, device='cuda:3')
+norm1 res is  tensor(553.8919, device='cuda:3')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.578363835811615
+distance x is tensor(123.0913, device='cuda:3')
+benign distance is  tensor(123.0913, device='cuda:3')
+norm1 res is  tensor(554.8562, device='cuda:3')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.3677523732185364
+distance x is tensor(117.0053, device='cuda:3')
+benign distance is  tensor(117.0053, device='cuda:3')
+norm1 res is  tensor(522.6083, device='cuda:3')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.7173665761947632
+distance x is tensor(99.1486, device='cuda:3')
+benign distance is  tensor(99.1486, device='cuda:3')
+norm1 res is  tensor(455.3398, device='cuda:3')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.23768654465675354
+distance x is tensor(127.7031, device='cuda:3')
+benign distance is  tensor(127.7031, device='cuda:3')
+norm1 res is  tensor(585.7729, device='cuda:3')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.928735613822937
+distance x is tensor(109.2772, device='cuda:3')
+benign distance is  tensor(109.2772, device='cuda:3')
+norm1 res is  tensor(487.4698, device='cuda:3')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.2857223451137543
+distance x is tensor(123.5626, device='cuda:3')
+benign distance is  tensor(123.5626, device='cuda:3')
+norm1 res is  tensor(575.6082, device='cuda:3')
+current submit client idx and staleness is  8 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.20580396056175232
+distance x is tensor(137.4217, device='cuda:3')
+benign distance is  tensor(137.4217, device='cuda:3')
+norm1 res is  tensor(624.7685, device='cuda:3')
+current submit client idx and staleness is  9 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.4676591753959656
+distance x is tensor(137.6387, device='cuda:3')
+benign distance is  tensor(137.6387, device='cuda:3')
+norm1 res is  tensor(624.3957, device='cuda:3')
+current submit client idx and staleness is  10 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.32660624384880066
+distance x is tensor(122.0000, device='cuda:3')
+benign distance is  tensor(122.0000, device='cuda:3')
+norm1 res is  tensor(564.9995, device='cuda:3')
+current submit client idx and staleness is  11 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.20711183547973633
+distance x is tensor(125.5990, device='cuda:3')
+benign distance is  tensor(125.5990, device='cuda:3')
+norm1 res is  tensor(571.3972, device='cuda:3')
+current submit client idx and staleness is  12 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.5693928003311157
+distance x is tensor(130.3777, device='cuda:3')
+benign distance is  tensor(130.3777, device='cuda:3')
+norm1 res is  tensor(587.9656, device='cuda:3')
+current submit client idx and staleness is  13 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.3449949622154236
+distance x is tensor(145.0424, device='cuda:3')
+benign distance is  tensor(145.0424, device='cuda:3')
+norm1 res is  tensor(664.4155, device='cuda:3')
+current submit client idx and staleness is  14 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.6447428464889526
+distance x is tensor(137.0772, device='cuda:3')
+benign distance is  tensor(137.0772, device='cuda:3')
+norm1 res is  tensor(623.9743, device='cuda:3')
+current submit client idx and staleness is  15 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.2729358375072479
+distance x is tensor(133.4677, device='cuda:3')
+benign distance is  tensor(133.4677, device='cuda:3')
+norm1 res is  tensor(599.9290, device='cuda:3')
+current submit client idx and staleness is  16 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.154993936419487
+distance x is tensor(123.9966, device='cuda:3')
+benign distance is  tensor(123.9966, device='cuda:3')
+norm1 res is  tensor(558.3463, device='cuda:3')
+current submit client idx and staleness is  17 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.8841882944107056
+distance x is tensor(142.0178, device='cuda:3')
+benign distance is  tensor(142.0178, device='cuda:3')
+norm1 res is  tensor(663.9482, device='cuda:3')
+current submit client idx and staleness is  18 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.39193499088287354
+distance x is tensor(130.1405, device='cuda:3')
+benign distance is  tensor(130.1405, device='cuda:3')
+norm1 res is  tensor(591.4977, device='cuda:3')
+current submit client idx and staleness is  19 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.681755542755127
+distance x is tensor(130.5031, device='cuda:3')
+benign distance is  tensor(130.5031, device='cuda:3')
+norm1 res is  tensor(601.9539, device='cuda:3')
+current submit client idx and staleness is  20 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.2071356326341629
+distance x is tensor(129.7891, device='cuda:3')
+benign distance is  tensor(129.7891, device='cuda:3')
+norm1 res is  tensor(582.0114, device='cuda:3')
+current submit client idx and staleness is  21 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.2175566405057907
+distance x is tensor(122.6400, device='cuda:3')
+benign distance is  tensor(122.6400, device='cuda:3')
+norm1 res is  tensor(554.2664, device='cuda:3')
+current submit client idx and staleness is  22 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.39217621088027954
+distance x is tensor(143.8835, device='cuda:3')
+benign distance is  tensor(143.8835, device='cuda:3')
+norm1 res is  tensor(644.2512, device='cuda:3')
+current submit client idx and staleness is  23 3
+grad,shape is torch.Size([215370])
+ benign loss is  1.2048096656799316
+distance x is tensor(132.0023, device='cuda:3')
+benign distance is  tensor(132.0023, device='cuda:3')
+norm1 res is  tensor(582.6979, device='cuda:3')
+current submit client idx and staleness is  24 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.6606320142745972
+distance x is tensor(145.5410, device='cuda:3')
+benign distance is  tensor(145.5410, device='cuda:3')
+norm1 res is  tensor(663.5011, device='cuda:3')
+current submit client idx and staleness is  25 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.5228440761566162
+distance x is tensor(122.7064, device='cuda:3')
+benign distance is  tensor(122.7064, device='cuda:3')
+norm1 res is  tensor(540.5209, device='cuda:3')
+current submit client idx and staleness is  26 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.4950982928276062
+distance x is tensor(141.2483, device='cuda:3')
+benign distance is  tensor(141.2483, device='cuda:3')
+norm1 res is  tensor(640.6015, device='cuda:3')
+current submit client idx and staleness is  27 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.26627570390701294
+distance x is tensor(145.1797, device='cuda:3')
+benign distance is  tensor(145.1797, device='cuda:3')
+norm1 res is  tensor(634.5424, device='cuda:3')
+current submit client idx and staleness is  28 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.6645340919494629
+distance x is tensor(123.6694, device='cuda:3')
+benign distance is  tensor(123.6694, device='cuda:3')
+norm1 res is  tensor(558.3214, device='cuda:3')
+current submit client idx and staleness is  29 4
+grad,shape is torch.Size([215370])
+ benign loss is  1.1166538000106812
+distance x is tensor(133.2777, device='cuda:3')
+benign distance is  tensor(133.2777, device='cuda:3')
+norm1 res is  tensor(612.5655, device='cuda:3')
+current submit client idx and staleness is  30 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.5344530940055847
+distance x is tensor(123.8080, device='cuda:3')
+benign distance is  tensor(123.8080, device='cuda:3')
+norm1 res is  tensor(560.7513, device='cuda:3')
+current submit client idx and staleness is  31 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.9288982152938843
+distance x is tensor(132.2556, device='cuda:3')
+benign distance is  tensor(132.2556, device='cuda:3')
+norm1 res is  tensor(616.2374, device='cuda:3')
+current submit client idx and staleness is  32 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.3390021026134491
+distance x is tensor(137.4619, device='cuda:3')
+benign distance is  tensor(137.4619, device='cuda:3')
+norm1 res is  tensor(622.2011, device='cuda:3')
+current submit client idx and staleness is  33 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.23820611834526062
+distance x is tensor(129.1683, device='cuda:3')
+benign distance is  tensor(129.1683, device='cuda:3')
+norm1 res is  tensor(586.7826, device='cuda:3')
+current submit client idx and staleness is  34 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.5547220706939697
+distance x is tensor(136.2660, device='cuda:3')
+benign distance is  tensor(136.2660, device='cuda:3')
+norm1 res is  tensor(629.3494, device='cuda:3')
+current submit client idx and staleness is  35 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.03763701766729355
+distance x is tensor(123.8777, device='cuda:3')
+benign distance is  tensor(123.8777, device='cuda:3')
+norm1 res is  tensor(559.0897, device='cuda:3')
+current submit client idx and staleness is  36 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.4714575707912445
+distance x is tensor(132.1786, device='cuda:3')
+benign distance is  tensor(132.1786, device='cuda:3')
+norm1 res is  tensor(602.4359, device='cuda:3')
+current submit client idx and staleness is  37 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.3839327096939087
+distance x is tensor(125.7545, device='cuda:3')
+benign distance is  tensor(125.7545, device='cuda:3')
+norm1 res is  tensor(563.8500, device='cuda:3')
+current submit client idx and staleness is  38 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.2813340723514557
+distance x is tensor(122.3578, device='cuda:3')
+benign distance is  tensor(122.3578, device='cuda:3')
+norm1 res is  tensor(562.0113, device='cuda:3')
+current submit client idx and staleness is  39 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.11618871986865997
+distance x is tensor(125.1884, device='cuda:3')
+benign distance is  tensor(125.1884, device='cuda:3')
+norm1 res is  tensor(555.1996, device='cuda:3')
+current submit client idx and staleness is  40 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.08979536592960358
+distance x is tensor(125.5108, device='cuda:3')
+benign distance is  tensor(125.5108, device='cuda:3')
+norm1 res is  tensor(575.6190, device='cuda:3')
+current submit client idx and staleness is  41 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.31575214862823486
+distance x is tensor(123.1251, device='cuda:3')
+benign distance is  tensor(123.1251, device='cuda:3')
+norm1 res is  tensor(557.5365, device='cuda:3')
+current submit client idx and staleness is  42 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.08910061419010162
+distance x is tensor(129.1222, device='cuda:3')
+benign distance is  tensor(129.1222, device='cuda:3')
+norm1 res is  tensor(587.6428, device='cuda:3')
+current submit client idx and staleness is  43 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.34457218647003174
+distance x is tensor(135.1987, device='cuda:3')
+benign distance is  tensor(135.1987, device='cuda:3')
+norm1 res is  tensor(602.4083, device='cuda:3')
+current submit client idx and staleness is  44 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.4294084906578064
+distance x is tensor(135.6887, device='cuda:3')
+benign distance is  tensor(135.6887, device='cuda:3')
+norm1 res is  tensor(614.7140, device='cuda:3')
+current submit client idx and staleness is  45 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.5187814235687256
+distance x is tensor(132.4038, device='cuda:3')
+benign distance is  tensor(132.4038, device='cuda:3')
+norm1 res is  tensor(589.5494, device='cuda:3')
+current submit client idx and staleness is  46 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.8603006601333618
+distance x is tensor(137.3652, device='cuda:3')
+benign distance is  tensor(137.3652, device='cuda:3')
+norm1 res is  tensor(619.0605, device='cuda:3')
+current submit client idx and staleness is  47 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.21192164719104767
+distance x is tensor(129.6603, device='cuda:3')
+benign distance is  tensor(129.6603, device='cuda:3')
+norm1 res is  tensor(589.9126, device='cuda:3')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+len of model dicts is  12
+distance x is tensor(110.0618, device='cuda:3')
+compute distance is  tensor(110.0618, device='cuda:3')
+compute norm is  tensor(45.4269, device='cuda:3', dtype=torch.float64)
+distance x is tensor(116.5161, device='cuda:3')
+compute distance is  tensor(116.5161, device='cuda:3')
+compute norm is  tensor(45.5500, device='cuda:3', dtype=torch.float64)
+distance x is tensor(139.9490, device='cuda:3')
+compute distance is  tensor(139.9490, device='cuda:3')
+compute norm is  tensor(46.3219, device='cuda:3', dtype=torch.float64)
+distance x is tensor(115.8646, device='cuda:3')
+compute distance is  tensor(115.8646, device='cuda:3')
+compute norm is  tensor(45.6705, device='cuda:3', dtype=torch.float64)
+distance x is tensor(115.2085, device='cuda:3')
+compute distance is  tensor(115.2085, device='cuda:3')
+compute norm is  tensor(45.6101, device='cuda:3', dtype=torch.float64)
+distance x is tensor(119.4492, device='cuda:3')
+compute distance is  tensor(119.4492, device='cuda:3')
+compute norm is  tensor(45.7995, device='cuda:3', dtype=torch.float64)
+distance x is tensor(123.1444, device='cuda:3')
+compute distance is  tensor(123.1444, device='cuda:3')
+compute norm is  tensor(45.8391, device='cuda:3', dtype=torch.float64)
+distance x is tensor(127.8880, device='cuda:3')
+compute distance is  tensor(127.8880, device='cuda:3')
+compute norm is  tensor(45.7798, device='cuda:3', dtype=torch.float64)
+distance x is tensor(121.2299, device='cuda:3')
+compute distance is  tensor(121.2299, device='cuda:3')
+compute norm is  tensor(45.6923, device='cuda:3', dtype=torch.float64)
+distance x is tensor(119.4137, device='cuda:3')
+compute distance is  tensor(119.4137, device='cuda:3')
+compute norm is  tensor(45.8525, device='cuda:3', dtype=torch.float64)
+distance x is tensor(133.6180, device='cuda:3')
+compute distance is  tensor(133.6180, device='cuda:3')
+compute norm is  tensor(46.1098, device='cuda:3', dtype=torch.float64)
+distance x is tensor(133.0411, device='cuda:3')
+compute distance is  tensor(133.0411, device='cuda:3')
+compute norm is  tensor(46.0524, device='cuda:3', dtype=torch.float64)
+batch acc is 0.1023166668229986
+mal_rand_acc is 0.10000000049999999
+mal_rand loss is 119521490763776.0
+len of model dicts is  12
+distance x is tensor(110.0618, device='cuda:3')
+compute distance is  tensor(110.0618, device='cuda:3')
+compute norm is  tensor(45.4269, device='cuda:3', dtype=torch.float64)
+distance x is tensor(116.5161, device='cuda:3')
+compute distance is  tensor(116.5161, device='cuda:3')
+compute norm is  tensor(45.5500, device='cuda:3', dtype=torch.float64)
+distance x is tensor(139.9490, device='cuda:3')
+compute distance is  tensor(139.9490, device='cuda:3')
+compute norm is  tensor(46.3219, device='cuda:3', dtype=torch.float64)
+distance x is tensor(115.8646, device='cuda:3')
+compute distance is  tensor(115.8646, device='cuda:3')
+compute norm is  tensor(45.6705, device='cuda:3', dtype=torch.float64)
+distance x is tensor(115.2085, device='cuda:3')
+compute distance is  tensor(115.2085, device='cuda:3')
+compute norm is  tensor(45.6101, device='cuda:3', dtype=torch.float64)
+distance x is tensor(119.4492, device='cuda:3')
+compute distance is  tensor(119.4492, device='cuda:3')
+compute norm is  tensor(45.7995, device='cuda:3', dtype=torch.float64)
+distance x is tensor(123.1444, device='cuda:3')
+compute distance is  tensor(123.1444, device='cuda:3')
+compute norm is  tensor(45.8391, device='cuda:3', dtype=torch.float64)
+distance x is tensor(127.8880, device='cuda:3')
+compute distance is  tensor(127.8880, device='cuda:3')
+compute norm is  tensor(45.7798, device='cuda:3', dtype=torch.float64)
+distance x is tensor(121.2299, device='cuda:3')
+compute distance is  tensor(121.2299, device='cuda:3')
+compute norm is  tensor(45.6923, device='cuda:3', dtype=torch.float64)
+distance x is tensor(119.4137, device='cuda:3')
+compute distance is  tensor(119.4137, device='cuda:3')
+compute norm is  tensor(45.8525, device='cuda:3', dtype=torch.float64)
+distance x is tensor(133.6180, device='cuda:3')
+compute distance is  tensor(133.6180, device='cuda:3')
+compute norm is  tensor(46.1098, device='cuda:3', dtype=torch.float64)
+distance x is tensor(133.0411, device='cuda:3')
+compute distance is  tensor(133.0411, device='cuda:3')
+compute norm is  tensor(46.0524, device='cuda:3', dtype=torch.float64)
+distance Threshold  is  tensor(139.9490, device='cuda:3')
+distance x is tensor(107710.2031, device='cuda:3')
+distance x is tensor(107710.2031, device='cuda:3')
+________________________________
+test distance is  tensor(107710.2031, device='cuda:3')
+test distance1 is  tensor(107710.2031, device='cuda:3')
+test similarity is  tensor(-0.1075, device='cuda:3')
+test acc is  0.10000000015633198
+test loss is 130124730965160.12
+test entropy is  0.0
+________________________________
+cal ratio is  0.035325033678188
+distance x is tensor(3804.8726, device='cuda:3')
+cal_distance is  tensor(3804.8726, device='cuda:3')
+cal ratio is  0.18794940443841426
+distance x is tensor(715.1277, device='cuda:3')
+cal_distance is  tensor(715.1277, device='cuda:3')
+cal ratio is  0.43353005614659734
+distance x is tensor(310.0323, device='cuda:3')
+cal_distance is  tensor(310.0323, device='cuda:3')
+cal ratio is  0.6584268280761296
+distance x is tensor(204.1353, device='cuda:3')
+cal_distance is  tensor(204.1353, device='cuda:3')
+cal ratio is  0.811431574787131
+distance x is tensor(165.6429, device='cuda:3')
+cal_distance is  tensor(165.6429, device='cuda:3')
+cal ratio is  0.9007922553575415
+distance x is tensor(149.2104, device='cuda:3')
+cal_distance is  tensor(149.2104, device='cuda:3')
+cal ratio is  0.9490990114521195
+distance x is tensor(141.6157, device='cuda:3')
+cal_distance is  tensor(141.6157, device='cuda:3')
+cal ratio is  0.9742162411557268
+distance x is tensor(137.9644, device='cuda:3')
+cal_distance is  tensor(137.9644, device='cuda:3')
+distance x is tensor(137.9644, device='cuda:3')
+return_distance is  tensor(137.9644, device='cuda:3')
+distance x is tensor(137.9540, device='cuda:3')
+distance x is tensor(137.9540, device='cuda:3')
+________________________________
+test distance is  tensor(137.9540, device='cuda:3')
+test distance1 is  tensor(137.9540, device='cuda:3')
+test similarity is  tensor(0.9368, device='cuda:3')
+test acc is  0.10006666682299865
+test loss is 379.58930497484675
+test entropy is  9.096205484830425e-06
+________________________________
+0
+distance x is tensor(137.9540, device='cuda:3')
+++++++++++++++++++++
+after training  0
+avg test entropy is  2.2009460316075573e-05
+avg test loss is  379.93629403510835
+avg accuracy is  0.2589500001563385
+solo acc is  0.10008333348966532
+compute similarity  is  tensor(0.9368, device='cuda:3')
+compute_distance is  tensor(137.9540, device='cuda:3')
+compute_norm is  tensor(44.4386, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+change alpha
+distance x is tensor(113.9664, device='cuda:3')
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.9501989783127425
+avg test loss is  1.4431984788065018
+avg accuracy is  0.8489833334896568
+solo acc is  0.3507666668230071
+compute similarity  is  tensor(0.9457, device='cuda:3')
+compute_distance is  tensor(113.9664, device='cuda:3')
+compute_norm is  tensor(43.2941, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+distillation for acc
+distance x is tensor(116.4626, device='cuda:3')
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.8697223709082045
+avg test loss is  1.5742612061724226
+avg accuracy is  0.8475000001563235
+solo acc is  0.2770500001563389
+compute similarity  is  tensor(0.9452, device='cuda:3')
+compute_distance is  tensor(116.4626, device='cuda:3')
+compute_norm is  tensor(42.9967, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+distillation for acc
+distance x is tensor(118.4933, device='cuda:3')
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.8816753633495079
+avg test loss is  1.5140553200677005
+avg accuracy is  0.8514833334896567
+solo acc is  0.27051666682300546
+compute similarity  is  tensor(0.9448, device='cuda:3')
+compute_distance is  tensor(118.4933, device='cuda:3')
+compute_norm is  tensor(42.7295, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+distillation for acc
+distance x is tensor(120.4520, device='cuda:3')
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.876504317974485
+avg test loss is  1.4617277698984532
+avg accuracy is  0.8540333334896566
+solo acc is  0.27558333348967223
+compute similarity  is  tensor(0.9444, device='cuda:3')
+compute_distance is  tensor(120.4520, device='cuda:3')
+compute_norm is  tensor(42.4795, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+distillation for acc
+distance x is tensor(122.3397, device='cuda:3')
+distance x is tensor(122.3397, device='cuda:3')
+________________________________
+test distance is  tensor(122.3397, device='cuda:3')
+test distance1 is  tensor(122.3397, device='cuda:3')
+test similarity is  tensor(0.9440, device='cuda:3')
+test acc is  0.27203333348967224
+test loss is 1.4382024955139485
+test entropy is  0.8734543985014023
+________________________________
+grad,shape is torch.Size([215370])
+mal_acc is 0.2500000005
+mal loss is 1.2779126167297363
+mal norm is  tensor(648.1696, device='cuda:3')
+distance x is tensor(122.3475, device='cuda:3')
+mal distance is  tensor(122.3475, device='cuda:3')
+len current grad  20
+len all grad 20
+index is  [0, 1, 2, 3, 4, 5, 6, 7, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]
+grad,shape is torch.Size([215370])
+global_param_square norm is    tensor(25.9314, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(539.9109, device='cuda:3')
+user_param_square tensor(118.3242, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(-49.1522, device='cuda:3')
+score : tensor(-0.5173, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(553.8919, device='cuda:3')
+user_param_square tensor(119.8465, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(-6.1464, device='cuda:3')
+score : tensor(-0.0872, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(554.8562, device='cuda:3')
+user_param_square tensor(119.9507, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(41.4946, device='cuda:3')
+score : tensor(0.3892, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(522.6083, device='cuda:3')
+user_param_square tensor(116.4128, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(30.4251, device='cuda:3')
+score : tensor(0.2785, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(455.3398, device='cuda:3')
+user_param_square tensor(108.6627, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(-31.7961, device='cuda:3')
+score : tensor(-0.3437, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(585.7729, device='cuda:3')
+user_param_square tensor(123.2473, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(-6.9868, device='cuda:3')
+score : tensor(-0.0956, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(487.4698, device='cuda:3')
+user_param_square tensor(112.4311, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(43.6318, device='cuda:3')
+score : tensor(0.4106, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(575.6082, device='cuda:3')
+user_param_square tensor(122.1732, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(39.4933, device='cuda:3')
+score : tensor(0.3692, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(648.1696, device='cuda:3')
+user_param_square tensor(129.6454, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(46.4136, device='cuda:3')
+score : tensor(0.4384, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(648.1696, device='cuda:3')
+user_param_square tensor(129.6454, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(46.4136, device='cuda:3')
+score : tensor(0.4384, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(648.1696, device='cuda:3')
+user_param_square tensor(129.6454, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(46.4136, device='cuda:3')
+score : tensor(0.4384, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(648.1696, device='cuda:3')
+user_param_square tensor(129.6454, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(46.4136, device='cuda:3')
+score : tensor(0.4384, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(648.1696, device='cuda:3')
+user_param_square tensor(129.6454, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(46.4136, device='cuda:3')
+score : tensor(0.4384, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(648.1696, device='cuda:3')
+user_param_square tensor(129.6454, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(46.4136, device='cuda:3')
+score : tensor(0.4384, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(648.1696, device='cuda:3')
+user_param_square tensor(129.6454, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(46.4136, device='cuda:3')
+score : tensor(0.4384, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(648.1696, device='cuda:3')
+user_param_square tensor(129.6454, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(46.4136, device='cuda:3')
+score : tensor(0.4384, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(648.1696, device='cuda:3')
+user_param_square tensor(129.6454, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(46.4136, device='cuda:3')
+score : tensor(0.4384, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(648.1696, device='cuda:3')
+user_param_square tensor(129.6454, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(46.4136, device='cuda:3')
+score : tensor(0.4384, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(648.1696, device='cuda:3')
+user_param_square tensor(129.6454, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(46.4136, device='cuda:3')
+score : tensor(0.4384, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(648.1696, device='cuda:3')
+user_param_square tensor(129.6454, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(46.4136, device='cuda:3')
+score : tensor(0.4384, device='cuda:3')
+accept
+len accept list 16
+len all weights is 16
+ 
+Avg Training Stats after 1 global rounds:
+Train Accuracy: 84.96% 
+
+Test Accuracy: 83.86% 
+
+
+ | Global Training Round : 2 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.3367600440979004
+distance x is tensor(150.5856, device='cuda:3')
+benign distance is  tensor(150.5856, device='cuda:3')
+norm1 res is  tensor(650.2129, device='cuda:3')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.9094237089157104
+distance x is tensor(135.8690, device='cuda:3')
+benign distance is  tensor(135.8690, device='cuda:3')
+norm1 res is  tensor(588.4625, device='cuda:3')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.15047715604305267
+distance x is tensor(142.0111, device='cuda:3')
+benign distance is  tensor(142.0111, device='cuda:3')
+norm1 res is  tensor(602.8729, device='cuda:3')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.48224514722824097
+distance x is tensor(138.5868, device='cuda:3')
+benign distance is  tensor(138.5868, device='cuda:3')
+norm1 res is  tensor(593.6008, device='cuda:3')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.7505327463150024
+distance x is tensor(137.5357, device='cuda:3')
+benign distance is  tensor(137.5357, device='cuda:3')
+norm1 res is  tensor(571.2376, device='cuda:3')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.0500380992889404
+distance x is tensor(135.1735, device='cuda:3')
+benign distance is  tensor(135.1735, device='cuda:3')
+norm1 res is  tensor(586.0953, device='cuda:3')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.434469610452652
+distance x is tensor(147.2534, device='cuda:3')
+benign distance is  tensor(147.2534, device='cuda:3')
+norm1 res is  tensor(625.8161, device='cuda:3')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.18496398627758026
+distance x is tensor(142.3344, device='cuda:3')
+benign distance is  tensor(142.3344, device='cuda:3')
+norm1 res is  tensor(603.8021, device='cuda:3')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+len of model dicts is  12
+distance x is tensor(138.0558, device='cuda:3')
+compute distance is  tensor(138.0558, device='cuda:3')
+compute norm is  tensor(44.6140, device='cuda:3', dtype=torch.float64)
+distance x is tensor(133.9530, device='cuda:3')
+compute distance is  tensor(133.9530, device='cuda:3')
+compute norm is  tensor(44.4791, device='cuda:3', dtype=torch.float64)
+distance x is tensor(159.6877, device='cuda:3')
+compute distance is  tensor(159.6877, device='cuda:3')
+compute norm is  tensor(45.3515, device='cuda:3', dtype=torch.float64)
+distance x is tensor(130.8069, device='cuda:3')
+compute distance is  tensor(130.8069, device='cuda:3')
+compute norm is  tensor(44.4712, device='cuda:3', dtype=torch.float64)
+distance x is tensor(138.3040, device='cuda:3')
+compute distance is  tensor(138.3040, device='cuda:3')
+compute norm is  tensor(44.5668, device='cuda:3', dtype=torch.float64)
+distance x is tensor(136.6859, device='cuda:3')
+compute distance is  tensor(136.6859, device='cuda:3')
+compute norm is  tensor(44.6989, device='cuda:3', dtype=torch.float64)
+distance x is tensor(154.6057, device='cuda:3')
+compute distance is  tensor(154.6057, device='cuda:3')
+compute norm is  tensor(44.9804, device='cuda:3', dtype=torch.float64)
+distance x is tensor(140.9665, device='cuda:3')
+compute distance is  tensor(140.9665, device='cuda:3')
+compute norm is  tensor(44.7853, device='cuda:3', dtype=torch.float64)
+distance x is tensor(152.5132, device='cuda:3')
+compute distance is  tensor(152.5132, device='cuda:3')
+compute norm is  tensor(44.8631, device='cuda:3', dtype=torch.float64)
+distance x is tensor(134.0088, device='cuda:3')
+compute distance is  tensor(134.0088, device='cuda:3')
+compute norm is  tensor(44.6317, device='cuda:3', dtype=torch.float64)
+distance x is tensor(152.5848, device='cuda:3')
+compute distance is  tensor(152.5848, device='cuda:3')
+compute norm is  tensor(45.0634, device='cuda:3', dtype=torch.float64)
+distance x is tensor(131.1844, device='cuda:3')
+compute distance is  tensor(131.1844, device='cuda:3')
+compute norm is  tensor(44.5385, device='cuda:3', dtype=torch.float64)
+distance Threshold  is  tensor(159.6877, device='cuda:3')
+distance x is tensor(107666.7969, device='cuda:3')
+distance x is tensor(107666.7969, device='cuda:3')
+________________________________
+test distance is  tensor(107666.7969, device='cuda:3')
+test distance1 is  tensor(107666.7969, device='cuda:3')
+test similarity is  tensor(0.0665, device='cuda:3')
+test acc is  0.10000000015633198
+test loss is 129999665932877.52
+test entropy is  0.0
+________________________________
+cal ratio is  0.037741652042717976
+distance x is tensor(4063.5286, device='cuda:3')
+cal_distance is  tensor(4063.5286, device='cuda:3')
+cal ratio is  0.19427197547599018
+distance x is tensor(789.4339, device='cuda:3')
+cal_distance is  tensor(789.4339, device='cuda:3')
+cal ratio is  0.44076177535092836
+distance x is tensor(347.9552, device='cuda:3')
+cal_distance is  tensor(347.9552, device='cuda:3')
+cal ratio is  0.6638961331823726
+distance x is tensor(231.0078, device='cuda:3')
+cal_distance is  tensor(231.0078, device='cuda:3')
+cal ratio is  0.8147951765496086
+distance x is tensor(188.2250, device='cuda:3')
+cal_distance is  tensor(188.2250, device='cuda:3')
+cal ratio is  0.9026577380806792
+distance x is tensor(169.9033, device='cuda:3')
+cal_distance is  tensor(169.9033, device='cuda:3')
+cal ratio is  0.9500816570122538
+distance x is tensor(161.4223, device='cuda:3')
+cal_distance is  tensor(161.4223, device='cuda:3')
+cal ratio is  0.9747204127110252
+distance x is tensor(157.3417, device='cuda:3')
+cal_distance is  tensor(157.3417, device='cuda:3')
+distance x is tensor(157.3417, device='cuda:3')
+return_distance is  tensor(157.3417, device='cuda:3')
+distance x is tensor(157.3314, device='cuda:3')
+distance x is tensor(157.3314, device='cuda:3')
+________________________________
+test distance is  tensor(157.3314, device='cuda:3')
+test distance1 is  tensor(157.3314, device='cuda:3')
+test similarity is  tensor(0.9250, device='cuda:3')
+test acc is  0.10000000015633198
+test loss is 787.7667400303171
+test entropy is  0.0
+________________________________
+0
+distance x is tensor(157.3314, device='cuda:3')
+++++++++++++++++++++
+after training  0
+avg test entropy is  0.0
+avg test loss is  787.9865155901227
+avg accuracy is  0.10000000015633198
+solo acc is  0.10000000015633198
+compute similarity  is  tensor(0.9250, device='cuda:3')
+compute_distance is  tensor(157.3314, device='cuda:3')
+compute_norm is  tensor(45.4792, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+change alpha
+distance x is tensor(152.6072, device='cuda:3')
+++++++++++++++++++++
+after training  1
+avg test entropy is  1.3933323000285671
+avg test loss is  2.2077532000124838
+avg accuracy is  0.3355833334896735
+solo acc is  0.17486666682300164
+compute similarity  is  tensor(0.9263, device='cuda:3')
+compute_distance is  tensor(152.6072, device='cuda:3')
+compute_norm is  tensor(45.9091, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+restore alpha
+distance x is tensor(153.8837, device='cuda:3')
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.7558361089814192
+avg test loss is  2.9487745683076283
+avg accuracy is  0.21945000015633717
+solo acc is  0.10938333348966528
+compute similarity  is  tensor(0.9258, device='cuda:3')
+compute_distance is  tensor(153.8837, device='cuda:3')
+compute_norm is  tensor(45.9687, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+change alpha
+distance x is tensor(154.8549, device='cuda:3')
+++++++++++++++++++++
+after training  3
+avg test entropy is  1.0644334163238753
+avg test loss is  1.7027876988402817
+avg accuracy is  0.36305000015634065
+solo acc is  0.24140000015633806
+compute similarity  is  tensor(0.9272, device='cuda:3')
+compute_distance is  tensor(154.8549, device='cuda:3')
+compute_norm is  tensor(45.5947, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+restore alpha
+distance x is tensor(155.4218, device='cuda:3')
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.6358028613428063
+avg test loss is  2.558967651843008
+avg accuracy is  0.24516666682300478
+solo acc is  0.11103333348966529
+compute similarity  is  tensor(0.9269, device='cuda:3')
+compute_distance is  tensor(155.4218, device='cuda:3')
+compute_norm is  tensor(45.4793, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+change alpha
+distance x is tensor(156.5006, device='cuda:3')
+distance x is tensor(156.5006, device='cuda:3')
+________________________________
+test distance is  tensor(156.5006, device='cuda:3')
+test distance1 is  tensor(156.5006, device='cuda:3')
+test similarity is  tensor(0.9271, device='cuda:3')
+test acc is  0.26865000015633883
+test loss is 1.5405936060683814
+test entropy is  0.9846628563744682
+________________________________
+grad,shape is torch.Size([215370])
+mal_acc is 0.3000000005
+mal loss is 1.2739979028701782
+mal norm is  tensor(770.3480, device='cuda:3')
+distance x is tensor(156.5078, device='cuda:3')
+mal distance is  tensor(156.5078, device='cuda:3')
+len current grad  20
+len all grad 28
+index is  [0, 1, 2, 3, 4, 5, 6, 7, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 8, 9, 10, 11, 12, 13, 14, 15]
+grad,shape is torch.Size([215370])
+global_param_square norm is    tensor(21.9133, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(650.2129, device='cuda:3')
+user_param_square tensor(119.3662, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(163.9715, device='cuda:3')
+score : tensor(1.6180, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(588.4625, device='cuda:3')
+user_param_square tensor(113.5568, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(166.2388, device='cuda:3')
+score : tensor(1.6407, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(602.8729, device='cuda:3')
+user_param_square tensor(114.9388, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(182.3770, device='cuda:3')
+score : tensor(1.8021, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(593.6008, device='cuda:3')
+user_param_square tensor(114.0515, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(152.7183, device='cuda:3')
+score : tensor(1.5055, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(571.2376, device='cuda:3')
+user_param_square tensor(111.8825, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(141.0940, device='cuda:3')
+score : tensor(1.3892, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(586.0953, device='cuda:3')
+user_param_square tensor(113.3281, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(157.8869, device='cuda:3')
+score : tensor(1.5572, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(625.8161, device='cuda:3')
+user_param_square tensor(117.1054, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(163.5094, device='cuda:3')
+score : tensor(1.6134, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(603.8021, device='cuda:3')
+user_param_square tensor(115.0273, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(211.4600, device='cuda:3')
+score : tensor(2.0929, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(770.3480, device='cuda:3')
+user_param_square tensor(129.9263, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(-180.7874, device='cuda:3')
+score : tensor(-1.8296, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(770.3480, device='cuda:3')
+user_param_square tensor(129.9263, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(-180.7874, device='cuda:3')
+score : tensor(-1.8296, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(770.3480, device='cuda:3')
+user_param_square tensor(129.9263, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(-180.7874, device='cuda:3')
+score : tensor(-1.8296, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(770.3480, device='cuda:3')
+user_param_square tensor(129.9263, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(-180.7874, device='cuda:3')
+score : tensor(-1.8296, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(770.3480, device='cuda:3')
+user_param_square tensor(129.9263, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(-180.7874, device='cuda:3')
+score : tensor(-1.8296, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(770.3480, device='cuda:3')
+user_param_square tensor(129.9263, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(-180.7874, device='cuda:3')
+score : tensor(-1.8296, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(770.3480, device='cuda:3')
+user_param_square tensor(129.9263, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(-180.7874, device='cuda:3')
+score : tensor(-1.8296, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(770.3480, device='cuda:3')
+user_param_square tensor(129.9263, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(-180.7874, device='cuda:3')
+score : tensor(-1.8296, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(770.3480, device='cuda:3')
+user_param_square tensor(129.9263, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(-180.7874, device='cuda:3')
+score : tensor(-1.8296, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(770.3480, device='cuda:3')
+user_param_square tensor(129.9263, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(-180.7874, device='cuda:3')
+score : tensor(-1.8296, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(770.3480, device='cuda:3')
+user_param_square tensor(129.9263, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(-180.7874, device='cuda:3')
+score : tensor(-1.8296, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(770.3480, device='cuda:3')
+user_param_square tensor(129.9263, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(-180.7874, device='cuda:3')
+score : tensor(-1.8296, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(733.4706, device='cuda:3')
+user_param_square tensor(126.7783, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(133.0447, device='cuda:3')
+score : tensor(1.3087, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(737.7484, device='cuda:3')
+user_param_square tensor(127.1475, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(147.7178, device='cuda:3')
+score : tensor(1.4555, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(689.8030, device='cuda:3')
+user_param_square tensor(122.9465, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(132.8799, device='cuda:3')
+score : tensor(1.3071, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(693.5624, device='cuda:3')
+user_param_square tensor(123.2811, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(166.4792, device='cuda:3')
+score : tensor(1.6431, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(704.8199, device='cuda:3')
+user_param_square tensor(124.2776, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(113.3862, device='cuda:3')
+score : tensor(1.1121, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(772.4280, device='cuda:3')
+user_param_square tensor(130.1016, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(160.0376, device='cuda:3')
+score : tensor(1.5787, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(740.1387, device='cuda:3')
+user_param_square tensor(127.3533, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(100.5406, device='cuda:3')
+score : tensor(0.9837, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(714.7663, device='cuda:3')
+user_param_square tensor(125.1514, device='cuda:3')
+global_param_square tensor(21.9133, device='cuda:3')
+part1 is  tensor(175.4405, device='cuda:3')
+score : tensor(1.7327, device='cuda:3')
+accept
+len accept list 16
+len all weights is 16
+ 
+Avg Training Stats after 2 global rounds:
+Train Accuracy: 89.41% 
+
+Test Accuracy: 88.46% 
+
+
+ | Global Training Round : 3 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.4848274290561676
+distance x is tensor(105.4592, device='cuda:3')
+benign distance is  tensor(105.4592, device='cuda:3')
+norm1 res is  tensor(481.9895, device='cuda:3')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.24123255908489227
+distance x is tensor(121.7982, device='cuda:3')
+benign distance is  tensor(121.7982, device='cuda:3')
+norm1 res is  tensor(546.9343, device='cuda:3')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6025511622428894
+distance x is tensor(121.1228, device='cuda:3')
+benign distance is  tensor(121.1228, device='cuda:3')
+norm1 res is  tensor(534.0668, device='cuda:3')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.159389853477478
+distance x is tensor(114.7268, device='cuda:3')
+benign distance is  tensor(114.7268, device='cuda:3')
+norm1 res is  tensor(509.0000, device='cuda:3')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.48252153396606445
+distance x is tensor(117.6765, device='cuda:3')
+benign distance is  tensor(117.6765, device='cuda:3')
+norm1 res is  tensor(513.5101, device='cuda:3')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.8607061505317688
+distance x is tensor(137.4778, device='cuda:3')
+benign distance is  tensor(137.4778, device='cuda:3')
+norm1 res is  tensor(614.2452, device='cuda:3')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.4191288948059082
+distance x is tensor(118.9284, device='cuda:3')
+benign distance is  tensor(118.9284, device='cuda:3')
+norm1 res is  tensor(516.9834, device='cuda:3')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.451687753200531
+distance x is tensor(121.7018, device='cuda:3')
+benign distance is  tensor(121.7018, device='cuda:3')
+norm1 res is  tensor(530.7784, device='cuda:3')
+current submit client idx and staleness is  8 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.47303658723831177
+distance x is tensor(146.1447, device='cuda:3')
+benign distance is  tensor(146.1447, device='cuda:3')
+norm1 res is  tensor(635.0406, device='cuda:3')
+current submit client idx and staleness is  9 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.2805705666542053
+distance x is tensor(142.4796, device='cuda:3')
+benign distance is  tensor(142.4796, device='cuda:3')
+norm1 res is  tensor(611.9241, device='cuda:3')
+current submit client idx and staleness is  10 2
+grad,shape is torch.Size([215370])
+ benign loss is  1.0679564476013184
+distance x is tensor(125.9195, device='cuda:3')
+benign distance is  tensor(125.9195, device='cuda:3')
+norm1 res is  tensor(547.3676, device='cuda:3')
+current submit client idx and staleness is  11 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.5743102431297302
+distance x is tensor(129.6397, device='cuda:3')
+benign distance is  tensor(129.6397, device='cuda:3')
+norm1 res is  tensor(572.7292, device='cuda:3')
+current submit client idx and staleness is  12 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.6148501634597778
+distance x is tensor(127.4020, device='cuda:3')
+benign distance is  tensor(127.4020, device='cuda:3')
+norm1 res is  tensor(567.2561, device='cuda:3')
+current submit client idx and staleness is  13 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.1715010553598404
+distance x is tensor(135.6913, device='cuda:3')
+benign distance is  tensor(135.6913, device='cuda:3')
+norm1 res is  tensor(592.6752, device='cuda:3')
+current submit client idx and staleness is  14 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.80707186460495
+distance x is tensor(135.3704, device='cuda:3')
+benign distance is  tensor(135.3704, device='cuda:3')
+norm1 res is  tensor(601.9995, device='cuda:3')
+current submit client idx and staleness is  15 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.448496013879776
+distance x is tensor(132.2861, device='cuda:3')
+benign distance is  tensor(132.2861, device='cuda:3')
+norm1 res is  tensor(586.1521, device='cuda:3')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+len of model dicts is  12
+distance x is tensor(114.6159, device='cuda:3')
+compute distance is  tensor(114.6159, device='cuda:3')
+compute norm is  tensor(45.1357, device='cuda:3', dtype=torch.float64)
+distance x is tensor(113.3495, device='cuda:3')
+compute distance is  tensor(113.3495, device='cuda:3')
+compute norm is  tensor(45.0077, device='cuda:3', dtype=torch.float64)
+distance x is tensor(136.3642, device='cuda:3')
+compute distance is  tensor(136.3642, device='cuda:3')
+compute norm is  tensor(45.6845, device='cuda:3', dtype=torch.float64)
+distance x is tensor(121.1591, device='cuda:3')
+compute distance is  tensor(121.1591, device='cuda:3')
+compute norm is  tensor(45.2816, device='cuda:3', dtype=torch.float64)
+distance x is tensor(130.0492, device='cuda:3')
+compute distance is  tensor(130.0492, device='cuda:3')
+compute norm is  tensor(45.3308, device='cuda:3', dtype=torch.float64)
+distance x is tensor(111.5751, device='cuda:3')
+compute distance is  tensor(111.5751, device='cuda:3')
+compute norm is  tensor(45.1421, device='cuda:3', dtype=torch.float64)
+distance x is tensor(115.5810, device='cuda:3')
+compute distance is  tensor(115.5810, device='cuda:3')
+compute norm is  tensor(45.2149, device='cuda:3', dtype=torch.float64)
+distance x is tensor(131.9934, device='cuda:3')
+compute distance is  tensor(131.9934, device='cuda:3')
+compute norm is  tensor(45.3937, device='cuda:3', dtype=torch.float64)
+distance x is tensor(116.6495, device='cuda:3')
+compute distance is  tensor(116.6495, device='cuda:3')
+compute norm is  tensor(45.1990, device='cuda:3', dtype=torch.float64)
+distance x is tensor(111.5643, device='cuda:3')
+compute distance is  tensor(111.5643, device='cuda:3')
+compute norm is  tensor(45.0642, device='cuda:3', dtype=torch.float64)
+distance x is tensor(147.9517, device='cuda:3')
+compute distance is  tensor(147.9517, device='cuda:3')
+compute norm is  tensor(46.1644, device='cuda:3', dtype=torch.float64)
+distance x is tensor(123.0999, device='cuda:3')
+compute distance is  tensor(123.0999, device='cuda:3')
+compute norm is  tensor(45.3411, device='cuda:3', dtype=torch.float64)
+distance Threshold  is  tensor(147.9517, device='cuda:3')
+distance x is tensor(107691.1094, device='cuda:3')
+distance x is tensor(107691.1094, device='cuda:3')
+________________________________
+test distance is  tensor(107691.1094, device='cuda:3')
+test distance1 is  tensor(107691.1094, device='cuda:3')
+test similarity is  tensor(-0.0219, device='cuda:3')
+test acc is  0.10000000015633198
+test loss is 130077570810170.4
+test entropy is  0.0
+________________________________
+cal ratio is  0.03632420427817653
+distance x is tensor(3911.7993, device='cuda:3')
+cal_distance is  tensor(3911.7993, device='cuda:3')
+cal ratio is  0.19058897248619575
+distance x is tensor(745.5498, device='cuda:3')
+cal_distance is  tensor(745.5498, device='cuda:3')
+cal ratio is  0.43656379198444306
+distance x is tensor(325.4830, device='cuda:3')
+cal_distance is  tensor(325.4830, device='cuda:3')
+cal ratio is  0.6607267049474642
+distance x is tensor(215.0571, device='cuda:3')
+cal_distance is  tensor(215.0571, device='cuda:3')
+cal ratio is  0.8128477047134772
+distance x is tensor(174.8096, device='cuda:3')
+cal_distance is  tensor(174.8096, device='cuda:3')
+cal ratio is  0.9015781705079535
+distance x is tensor(157.6051, device='cuda:3')
+cal_distance is  tensor(157.6051, device='cuda:3')
+cal ratio is  0.9495131299837087
+distance x is tensor(149.6483, device='cuda:3')
+cal_distance is  tensor(149.6483, device='cuda:3')
+cal ratio is  0.9744287211282238
+distance x is tensor(145.8218, device='cuda:3')
+cal_distance is  tensor(145.8218, device='cuda:3')
+distance x is tensor(145.8218, device='cuda:3')
+return_distance is  tensor(145.8218, device='cuda:3')
+distance x is tensor(145.8115, device='cuda:3')
+distance x is tensor(145.8115, device='cuda:3')
+________________________________
+test distance is  tensor(145.8115, device='cuda:3')
+test distance1 is  tensor(145.8115, device='cuda:3')
+test similarity is  tensor(0.9322, device='cuda:3')
+test acc is  0.10000000015633198
+test loss is 455.35247386289814
+test entropy is  6.811193065464576e-11
+________________________________
+0
+distance x is tensor(145.8115, device='cuda:3')
+++++++++++++++++++++
+after training  0
+avg test entropy is  1.210009465645544e-08
+avg test loss is  454.94881733648305
+avg accuracy is  0.12723333348966523
+solo acc is  0.10001666682299865
+compute similarity  is  tensor(0.9322, device='cuda:3')
+compute_distance is  tensor(145.8115, device='cuda:3')
+compute_norm is  tensor(45.1410, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+change alpha
+distance x is tensor(122.6265, device='cuda:3')
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.9216015754478064
+avg test loss is  1.4917908224469818
+avg accuracy is  0.8099333334896585
+solo acc is  0.31690000015633984
+compute similarity  is  tensor(0.9404, device='cuda:3')
+compute_distance is  tensor(122.6265, device='cuda:3')
+compute_norm is  tensor(44.3969, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+distillation for acc
+distance x is tensor(124.2291, device='cuda:3')
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.9000708441744482
+avg test loss is  1.521833728625576
+avg accuracy is  0.809050000156325
+solo acc is  0.27381666682300554
+compute similarity  is  tensor(0.9401, device='cuda:3')
+compute_distance is  tensor(124.2291, device='cuda:3')
+compute_norm is  tensor(44.1408, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+distillation for acc
+distance x is tensor(125.7056, device='cuda:3')
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.8869376655326469
+avg test loss is  1.5036421912565414
+avg accuracy is  0.8116833334896583
+solo acc is  0.26341666682300524
+compute similarity  is  tensor(0.9398, device='cuda:3')
+compute_distance is  tensor(125.7056, device='cuda:3')
+compute_norm is  tensor(43.9038, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+distillation for acc
+distance x is tensor(127.1036, device='cuda:3')
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.8783627772636251
+avg test loss is  1.4809660964937352
+avg accuracy is  0.8139833334896582
+solo acc is  0.2573500001563384
+compute similarity  is  tensor(0.9395, device='cuda:3')
+compute_distance is  tensor(127.1036, device='cuda:3')
+compute_norm is  tensor(43.6750, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+distillation for acc
+distance x is tensor(128.4878, device='cuda:3')
+distance x is tensor(128.4878, device='cuda:3')
+________________________________
+test distance is  tensor(128.4878, device='cuda:3')
+test distance1 is  tensor(128.4878, device='cuda:3')
+test similarity is  tensor(0.9392, device='cuda:3')
+test acc is  0.25678333348967175
+test loss is 1.450902726096131
+test entropy is  0.8758115155229182
+________________________________
+grad,shape is torch.Size([215370])
+mal_acc is 0.2500000005
+mal loss is 1.2461377382278442
+mal norm is  tensor(682.8047, device='cuda:3')
+distance x is tensor(128.4965, device='cuda:3')
+mal distance is  tensor(128.4965, device='cuda:3')
+len current grad  20
+len all grad 28
+index is  [0, 1, 2, 3, 4, 5, 6, 7, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 16, 17, 18, 19, 20, 21, 22, 23]
+grad,shape is torch.Size([215370])
+global_param_square norm is    tensor(20.0742, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(481.9895, device='cuda:3')
+user_param_square tensor(98.3643, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(6.0548, device='cuda:3')
+score : tensor(0.0407, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(546.9343, device='cuda:3')
+user_param_square tensor(104.7819, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(-16.2493, device='cuda:3')
+score : tensor(-0.1824, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(534.0668, device='cuda:3')
+user_param_square tensor(103.5420, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(46.7140, device='cuda:3')
+score : tensor(0.4473, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(509.0000, device='cuda:3')
+user_param_square tensor(101.0829, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(-28.9116, device='cuda:3')
+score : tensor(-0.3090, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(513.5101, device='cuda:3')
+user_param_square tensor(101.5297, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(21.3021, device='cuda:3')
+score : tensor(0.1931, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(614.2452, device='cuda:3')
+user_param_square tensor(111.0426, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(-18.0435, device='cuda:3')
+score : tensor(-0.2003, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(516.9834, device='cuda:3')
+user_param_square tensor(101.8725, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(21.8455, device='cuda:3')
+score : tensor(0.1986, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(530.7784, device='cuda:3')
+user_param_square tensor(103.2227, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(-16.0196, device='cuda:3')
+score : tensor(-0.1801, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(682.8047, device='cuda:3')
+user_param_square tensor(117.0757, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(-20.5226, device='cuda:3')
+score : tensor(-0.2251, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(682.8047, device='cuda:3')
+user_param_square tensor(117.0757, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(-20.5226, device='cuda:3')
+score : tensor(-0.2251, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(682.8047, device='cuda:3')
+user_param_square tensor(117.0757, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(-20.5226, device='cuda:3')
+score : tensor(-0.2251, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(682.8047, device='cuda:3')
+user_param_square tensor(117.0757, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(-20.5226, device='cuda:3')
+score : tensor(-0.2251, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(682.8047, device='cuda:3')
+user_param_square tensor(117.0757, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(-20.5226, device='cuda:3')
+score : tensor(-0.2251, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(682.8047, device='cuda:3')
+user_param_square tensor(117.0757, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(-20.5226, device='cuda:3')
+score : tensor(-0.2251, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(682.8047, device='cuda:3')
+user_param_square tensor(117.0757, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(-20.5226, device='cuda:3')
+score : tensor(-0.2251, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(682.8047, device='cuda:3')
+user_param_square tensor(117.0757, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(-20.5226, device='cuda:3')
+score : tensor(-0.2251, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(682.8047, device='cuda:3')
+user_param_square tensor(117.0757, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(-20.5226, device='cuda:3')
+score : tensor(-0.2251, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(682.8047, device='cuda:3')
+user_param_square tensor(117.0757, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(-20.5226, device='cuda:3')
+score : tensor(-0.2251, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(682.8047, device='cuda:3')
+user_param_square tensor(117.0757, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(-20.5226, device='cuda:3')
+score : tensor(-0.2251, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(682.8047, device='cuda:3')
+user_param_square tensor(117.0757, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(-20.5226, device='cuda:3')
+score : tensor(-0.2251, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(605.8900, device='cuda:3')
+user_param_square tensor(110.2848, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(15.7761, device='cuda:3')
+score : tensor(0.1379, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(701.7455, device='cuda:3')
+user_param_square tensor(118.6884, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(-24.3960, device='cuda:3')
+score : tensor(-0.2638, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(634.4048, device='cuda:3')
+user_param_square tensor(112.8501, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(25.2800, device='cuda:3')
+score : tensor(0.2329, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(643.5369, device='cuda:3')
+user_param_square tensor(113.6594, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(4.6806, device='cuda:3')
+score : tensor(0.0269, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(624.2399, device='cuda:3')
+user_param_square tensor(111.9423, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(38.7782, device='cuda:3')
+score : tensor(0.3679, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(599.8467, device='cuda:3')
+user_param_square tensor(109.7334, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(-27.1936, device='cuda:3')
+score : tensor(-0.2918, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(685.6335, device='cuda:3')
+user_param_square tensor(117.3180, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(16.6475, device='cuda:3')
+score : tensor(0.1466, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(629.2828, device='cuda:3')
+user_param_square tensor(112.3936, device='cuda:3')
+global_param_square tensor(20.0742, device='cuda:3')
+part1 is  tensor(-20.7311, device='cuda:3')
+score : tensor(-0.2272, device='cuda:3')
+len accept list 9
+len all weights is 9
+ 
+Avg Training Stats after 3 global rounds:
+Train Accuracy: 89.53% 
+
+Test Accuracy: 88.73% 
+
+
+ | Global Training Round : 4 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.0058318376541138
+distance x is tensor(111.9465, device='cuda:3')
+benign distance is  tensor(111.9465, device='cuda:3')
+norm1 res is  tensor(509.6371, device='cuda:3')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6343590617179871
+distance x is tensor(121.2726, device='cuda:3')
+benign distance is  tensor(121.2726, device='cuda:3')
+norm1 res is  tensor(539.0316, device='cuda:3')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.06639311462640762
+distance x is tensor(113.5782, device='cuda:3')
+benign distance is  tensor(113.5782, device='cuda:3')
+norm1 res is  tensor(509.9138, device='cuda:3')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.20780996978282928
+distance x is tensor(118.3062, device='cuda:3')
+benign distance is  tensor(118.3062, device='cuda:3')
+norm1 res is  tensor(513.6030, device='cuda:3')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.644130527973175
+distance x is tensor(90.8546, device='cuda:3')
+benign distance is  tensor(90.8546, device='cuda:3')
+norm1 res is  tensor(394.5632, device='cuda:3')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5769829750061035
+distance x is tensor(113.1638, device='cuda:3')
+benign distance is  tensor(113.1638, device='cuda:3')
+norm1 res is  tensor(512.5580, device='cuda:3')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.4027029573917389
+distance x is tensor(120.0239, device='cuda:3')
+benign distance is  tensor(120.0239, device='cuda:3')
+norm1 res is  tensor(533.3770, device='cuda:3')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.36781758069992065
+distance x is tensor(119.4169, device='cuda:3')
+benign distance is  tensor(119.4169, device='cuda:3')
+norm1 res is  tensor(544.3122, device='cuda:3')
+current submit client idx and staleness is  16 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.3459686040878296
+distance x is tensor(133.5118, device='cuda:3')
+benign distance is  tensor(133.5118, device='cuda:3')
+norm1 res is  tensor(590.0648, device='cuda:3')
+current submit client idx and staleness is  17 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.7477012872695923
+distance x is tensor(141.2639, device='cuda:3')
+benign distance is  tensor(141.2639, device='cuda:3')
+norm1 res is  tensor(644.4092, device='cuda:3')
+current submit client idx and staleness is  18 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.24913880228996277
+distance x is tensor(127.1159, device='cuda:3')
+benign distance is  tensor(127.1159, device='cuda:3')
+norm1 res is  tensor(565.3430, device='cuda:3')
+current submit client idx and staleness is  19 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.19109681248664856
+distance x is tensor(123.2439, device='cuda:3')
+benign distance is  tensor(123.2439, device='cuda:3')
+norm1 res is  tensor(569.8210, device='cuda:3')
+current submit client idx and staleness is  20 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.2558627724647522
+distance x is tensor(127.1112, device='cuda:3')
+benign distance is  tensor(127.1112, device='cuda:3')
+norm1 res is  tensor(573.7397, device='cuda:3')
+current submit client idx and staleness is  21 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.6879637241363525
+distance x is tensor(129.8123, device='cuda:3')
+benign distance is  tensor(129.8123, device='cuda:3')
+norm1 res is  tensor(578.5717, device='cuda:3')
+current submit client idx and staleness is  22 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.23244455456733704
+distance x is tensor(130.4290, device='cuda:3')
+benign distance is  tensor(130.4290, device='cuda:3')
+norm1 res is  tensor(590.8351, device='cuda:3')
+current submit client idx and staleness is  23 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.11452988535165787
+distance x is tensor(129.9512, device='cuda:3')
+benign distance is  tensor(129.9512, device='cuda:3')
+norm1 res is  tensor(566.9604, device='cuda:3')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+len of model dicts is  12
+distance x is tensor(107.0994, device='cuda:3')
+compute distance is  tensor(107.0994, device='cuda:3')
+compute norm is  tensor(45.5021, device='cuda:3', dtype=torch.float64)
+distance x is tensor(116.9612, device='cuda:3')
+compute distance is  tensor(116.9612, device='cuda:3')
+compute norm is  tensor(45.7928, device='cuda:3', dtype=torch.float64)
+distance x is tensor(131.5134, device='cuda:3')
+compute distance is  tensor(131.5134, device='cuda:3')
+compute norm is  tensor(46.0870, device='cuda:3', dtype=torch.float64)
+distance x is tensor(112.6055, device='cuda:3')
+compute distance is  tensor(112.6055, device='cuda:3')
+compute norm is  tensor(45.6833, device='cuda:3', dtype=torch.float64)
+distance x is tensor(122.1928, device='cuda:3')
+compute distance is  tensor(122.1928, device='cuda:3')
+compute norm is  tensor(45.9162, device='cuda:3', dtype=torch.float64)
+distance x is tensor(128.6569, device='cuda:3')
+compute distance is  tensor(128.6569, device='cuda:3')
+compute norm is  tensor(46.0614, device='cuda:3', dtype=torch.float64)
+distance x is tensor(122.0279, device='cuda:3')
+compute distance is  tensor(122.0279, device='cuda:3')
+compute norm is  tensor(45.9660, device='cuda:3', dtype=torch.float64)
+distance x is tensor(122.5352, device='cuda:3')
+compute distance is  tensor(122.5352, device='cuda:3')
+compute norm is  tensor(46.0147, device='cuda:3', dtype=torch.float64)
+distance x is tensor(121.8173, device='cuda:3')
+compute distance is  tensor(121.8173, device='cuda:3')
+compute norm is  tensor(45.8413, device='cuda:3', dtype=torch.float64)
+distance x is tensor(110.5296, device='cuda:3')
+compute distance is  tensor(110.5296, device='cuda:3')
+compute norm is  tensor(45.7793, device='cuda:3', dtype=torch.float64)
+distance x is tensor(131.8176, device='cuda:3')
+compute distance is  tensor(131.8176, device='cuda:3')
+compute norm is  tensor(46.1760, device='cuda:3', dtype=torch.float64)
+distance x is tensor(123.3523, device='cuda:3')
+compute distance is  tensor(123.3523, device='cuda:3')
+compute norm is  tensor(45.9357, device='cuda:3', dtype=torch.float64)
+distance Threshold  is  tensor(131.8176, device='cuda:3')
+distance x is tensor(107700.5781, device='cuda:3')
+distance x is tensor(107700.5781, device='cuda:3')
+________________________________
+test distance is  tensor(107700.5781, device='cuda:3')
+test distance1 is  tensor(107700.5781, device='cuda:3')
+test similarity is  tensor(-0.0642, device='cuda:3')
+test acc is  0.10000000015633198
+test loss is 130067166423245.23
+test entropy is  0.0
+________________________________
+cal ratio is  0.034284961868006524
+distance x is tensor(3692.5154, device='cuda:3')
+cal_distance is  tensor(3692.5154, device='cuda:3')
+cal ratio is  0.18516185914569108
+distance x is tensor(683.7172, device='cuda:3')
+cal_distance is  tensor(683.7172, device='cuda:3')
+cal ratio is  0.4303030638951816
+distance x is tensor(294.2086, device='cuda:3')
+cal_distance is  tensor(294.2086, device='cuda:3')
+cal ratio is  0.655971600353559
+distance x is tensor(192.9942, device='cuda:3')
+cal_distance is  tensor(192.9942, device='cuda:3')
+cal ratio is  0.8099170277184521
+distance x is tensor(156.3103, device='cuda:3')
+cal_distance is  tensor(156.3103, device='cuda:3')
+cal ratio is  0.8999510160997302
+distance x is tensor(140.6721, device='cuda:3')
+cal_distance is  tensor(140.6721, device='cuda:3')
+cal ratio is  0.9486557180000615
+distance x is tensor(133.4497, device='cuda:3')
+cal_distance is  tensor(133.4497, device='cuda:3')
+cal ratio is  0.9739885514955329
+distance x is tensor(129.9786, device='cuda:3')
+cal_distance is  tensor(129.9786, device='cuda:3')
+distance x is tensor(129.9786, device='cuda:3')
+return_distance is  tensor(129.9786, device='cuda:3')
+distance x is tensor(129.9683, device='cuda:3')
+distance x is tensor(129.9683, device='cuda:3')
+________________________________
+test distance is  tensor(129.9683, device='cuda:3')
+test distance1 is  tensor(129.9683, device='cuda:3')
+test similarity is  tensor(0.9453, device='cuda:3')
+test acc is  0.10005000015633199
+test loss is 315.7093394265246
+test entropy is  4.75267550345433e-05
+________________________________
+0
+distance x is tensor(129.9683, device='cuda:3')
+++++++++++++++++++++
+after training  0
+avg test entropy is  2.3847571939438576e-05
+avg test loss is  315.49190065753993
+avg accuracy is  0.26531666682300536
+solo acc is  0.10003333348966531
+compute similarity  is  tensor(0.9453, device='cuda:3')
+compute_distance is  tensor(129.9683, device='cuda:3')
+compute_norm is  tensor(44.9675, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+change alpha
+distance x is tensor(110.1505, device='cuda:3')
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.9083802846194838
+avg test loss is  1.4594248723882093
+avg accuracy is  0.8490666668229901
+solo acc is  0.3414833334896736
+compute similarity  is  tensor(0.9518, device='cuda:3')
+compute_distance is  tensor(110.1505, device='cuda:3')
+compute_norm is  tensor(43.9823, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+distillation for acc
+distance x is tensor(112.4468, device='cuda:3')
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.8743650762002859
+avg test loss is  1.5169280104037286
+avg accuracy is  0.8505333334896567
+solo acc is  0.2843666668230058
+compute similarity  is  tensor(0.9514, device='cuda:3')
+compute_distance is  tensor(112.4468, device='cuda:3')
+compute_norm is  tensor(43.6883, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+distillation for acc
+distance x is tensor(114.4616, device='cuda:3')
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.8821341580927753
+avg test loss is  1.4643097042020705
+avg accuracy is  0.8529000001563232
+solo acc is  0.27998333348967236
+compute similarity  is  tensor(0.9510, device='cuda:3')
+compute_distance is  tensor(114.4616, device='cuda:3')
+compute_norm is  tensor(43.4228, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+distillation for acc
+distance x is tensor(116.3062, device='cuda:3')
+exit early
+distance x is tensor(116.3062, device='cuda:3')
+distance x is tensor(116.3062, device='cuda:3')
+________________________________
+test distance is  tensor(116.3062, device='cuda:3')
+test distance1 is  tensor(116.3062, device='cuda:3')
+test similarity is  tensor(0.9507, device='cuda:3')
+test acc is  0.2702000001563388
+test loss is 1.4633874852520061
+test entropy is  0.8621907376531345
+________________________________
+grad,shape is torch.Size([215370])
+mal_acc is 0.3000000005
+mal loss is 1.247802972793579
+mal norm is  tensor(615.4313, device='cuda:3')
+distance x is tensor(116.3141, device='cuda:3')
+mal distance is  tensor(116.3141, device='cuda:3')
+len current grad  20
+len all grad 36
+index is  [0, 1, 2, 3, 4, 5, 6, 7, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 24, 25, 26, 27, 28, 29, 30, 31, 8, 9, 10, 11, 12, 13, 14, 15]
+grad,shape is torch.Size([215370])
+global_param_square norm is    tensor(16.5494, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(509.6371, device='cuda:3')
+user_param_square tensor(91.8380, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-2.4240, device='cuda:3')
+score : tensor(-0.0406, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(539.0316, device='cuda:3')
+user_param_square tensor(94.4493, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-14.6198, device='cuda:3')
+score : tensor(-0.1625, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(509.9138, device='cuda:3')
+user_param_square tensor(91.8629, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(54.3399, device='cuda:3')
+score : tensor(0.5270, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(513.6030, device='cuda:3')
+user_param_square tensor(92.1946, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(17.1044, device='cuda:3')
+score : tensor(0.1547, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(394.5632, device='cuda:3')
+user_param_square tensor(80.8072, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-25.5275, device='cuda:3')
+score : tensor(-0.2716, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(512.5580, device='cuda:3')
+user_param_square tensor(92.1008, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-2.8905, device='cuda:3')
+score : tensor(-0.0453, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(533.3770, device='cuda:3')
+user_param_square tensor(93.9526, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(28.5766, device='cuda:3')
+score : tensor(0.2694, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(544.3122, device='cuda:3')
+user_param_square tensor(94.9108, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-8.5434, device='cuda:3')
+score : tensor(-0.1018, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(615.4313, device='cuda:3')
+user_param_square tensor(100.9210, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-2.9578, device='cuda:3')
+score : tensor(-0.0459, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(615.4313, device='cuda:3')
+user_param_square tensor(100.9210, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-2.9578, device='cuda:3')
+score : tensor(-0.0459, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(615.4313, device='cuda:3')
+user_param_square tensor(100.9210, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-2.9578, device='cuda:3')
+score : tensor(-0.0459, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(615.4313, device='cuda:3')
+user_param_square tensor(100.9210, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-2.9578, device='cuda:3')
+score : tensor(-0.0459, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(615.4313, device='cuda:3')
+user_param_square tensor(100.9210, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-2.9578, device='cuda:3')
+score : tensor(-0.0459, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(615.4313, device='cuda:3')
+user_param_square tensor(100.9210, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-2.9578, device='cuda:3')
+score : tensor(-0.0459, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(615.4313, device='cuda:3')
+user_param_square tensor(100.9210, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-2.9578, device='cuda:3')
+score : tensor(-0.0459, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(615.4313, device='cuda:3')
+user_param_square tensor(100.9210, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-2.9578, device='cuda:3')
+score : tensor(-0.0459, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(615.4313, device='cuda:3')
+user_param_square tensor(100.9210, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-2.9578, device='cuda:3')
+score : tensor(-0.0459, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(615.4313, device='cuda:3')
+user_param_square tensor(100.9210, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-2.9578, device='cuda:3')
+score : tensor(-0.0459, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(615.4313, device='cuda:3')
+user_param_square tensor(100.9210, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-2.9578, device='cuda:3')
+score : tensor(-0.0459, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(615.4313, device='cuda:3')
+user_param_square tensor(100.9210, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-2.9578, device='cuda:3')
+score : tensor(-0.0459, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(687.1805, device='cuda:3')
+user_param_square tensor(106.6417, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-25.2812, device='cuda:3')
+score : tensor(-0.2692, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(572.7909, device='cuda:3')
+user_param_square tensor(97.3621, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-20.6011, device='cuda:3')
+score : tensor(-0.2224, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(666.6258, device='cuda:3')
+user_param_square tensor(105.0347, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-24.6012, device='cuda:3')
+score : tensor(-0.2624, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(659.7881, device='cuda:3')
+user_param_square tensor(104.4946, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-27.7322, device='cuda:3')
+score : tensor(-0.2937, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(589.1417, device='cuda:3')
+user_param_square tensor(98.7419, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-25.2312, device='cuda:3')
+score : tensor(-0.2687, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(642.2463, device='cuda:3')
+user_param_square tensor(103.0962, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(4.5782, device='cuda:3')
+score : tensor(0.0294, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(592.3212, device='cuda:3')
+user_param_square tensor(99.0080, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(1.2444, device='cuda:3')
+score : tensor(-0.0039, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(644.4284, device='cuda:3')
+user_param_square tensor(103.2712, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(19.1140, device='cuda:3')
+score : tensor(0.1748, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(657.5627, device='cuda:3')
+user_param_square tensor(104.3182, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-10.0732, device='cuda:3')
+score : tensor(-0.1171, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(633.2919, device='cuda:3')
+user_param_square tensor(102.3749, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(18.8647, device='cuda:3')
+score : tensor(0.1723, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(576.0261, device='cuda:3')
+user_param_square tensor(97.6366, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-10.3257, device='cuda:3')
+score : tensor(-0.1196, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(597.0224, device='cuda:3')
+user_param_square tensor(99.4001, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-10.7921, device='cuda:3')
+score : tensor(-0.1243, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(592.1074, device='cuda:3')
+user_param_square tensor(98.9901, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-1.0294, device='cuda:3')
+score : tensor(-0.0266, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(617.0925, device='cuda:3')
+user_param_square tensor(101.0571, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(6.3582, device='cuda:3')
+score : tensor(0.0472, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(627.6486, device='cuda:3')
+user_param_square tensor(101.9178, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-24.5273, device='cuda:3')
+score : tensor(-0.2616, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(611.4594, device='cuda:3')
+user_param_square tensor(100.5948, device='cuda:3')
+global_param_square tensor(16.5494, device='cuda:3')
+part1 is  tensor(-0.1206, device='cuda:3')
+score : tensor(-0.0176, device='cuda:3')
+len accept list 7
+len all weights is 7
+ 
+Avg Training Stats after 4 global rounds:
+Train Accuracy: 89.53% 
+
+Test Accuracy: 88.87% 
+
+
+ | Global Training Round : 5 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.3813041150569916
+distance x is tensor(99.3344, device='cuda:3')
+benign distance is  tensor(99.3344, device='cuda:3')
+norm1 res is  tensor(458.1400, device='cuda:3')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.8392783403396606
+distance x is tensor(124.7303, device='cuda:3')
+benign distance is  tensor(124.7303, device='cuda:3')
+norm1 res is  tensor(566.5302, device='cuda:3')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.10782003402709961
+distance x is tensor(117.9971, device='cuda:3')
+benign distance is  tensor(117.9971, device='cuda:3')
+norm1 res is  tensor(525.1590, device='cuda:3')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.46814021468162537
+distance x is tensor(105.0569, device='cuda:3')
+benign distance is  tensor(105.0569, device='cuda:3')
+norm1 res is  tensor(469.8980, device='cuda:3')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6817008852958679
+distance x is tensor(117.5486, device='cuda:3')
+benign distance is  tensor(117.5486, device='cuda:3')
+norm1 res is  tensor(513.5019, device='cuda:3')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.2087721824645996
+distance x is tensor(126.0822, device='cuda:3')
+benign distance is  tensor(126.0822, device='cuda:3')
+norm1 res is  tensor(569.3278, device='cuda:3')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.15378746390342712
+distance x is tensor(136.8818, device='cuda:3')
+benign distance is  tensor(136.8818, device='cuda:3')
+norm1 res is  tensor(594.7826, device='cuda:3')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5343600511550903
+distance x is tensor(119.3891, device='cuda:3')
+benign distance is  tensor(119.3891, device='cuda:3')
+norm1 res is  tensor(539.6756, device='cuda:3')
+current submit client idx and staleness is  8 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.040626607835292816
+distance x is tensor(132.9765, device='cuda:3')
+benign distance is  tensor(132.9765, device='cuda:3')
+norm1 res is  tensor(597.0717, device='cuda:3')
+current submit client idx and staleness is  9 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.831161618232727
+distance x is tensor(129.5704, device='cuda:3')
+benign distance is  tensor(129.5704, device='cuda:3')
+norm1 res is  tensor(585.9472, device='cuda:3')
+current submit client idx and staleness is  10 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.508793294429779
+distance x is tensor(127.6569, device='cuda:3')
+benign distance is  tensor(127.6569, device='cuda:3')
+norm1 res is  tensor(573.8896, device='cuda:3')
+current submit client idx and staleness is  11 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.4739914834499359
+distance x is tensor(134.9170, device='cuda:3')
+benign distance is  tensor(134.9170, device='cuda:3')
+norm1 res is  tensor(605.7930, device='cuda:3')
+current submit client idx and staleness is  12 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.47904855012893677
+distance x is tensor(130.0867, device='cuda:3')
+benign distance is  tensor(130.0867, device='cuda:3')
+norm1 res is  tensor(588.8514, device='cuda:3')
+current submit client idx and staleness is  13 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.785298228263855
+distance x is tensor(125.9238, device='cuda:3')
+benign distance is  tensor(125.9238, device='cuda:3')
+norm1 res is  tensor(566.0950, device='cuda:3')
+current submit client idx and staleness is  14 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.5876197218894958
+distance x is tensor(127.7339, device='cuda:3')
+benign distance is  tensor(127.7339, device='cuda:3')
+norm1 res is  tensor(577.8030, device='cuda:3')
+current submit client idx and staleness is  15 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.6297910213470459
+distance x is tensor(132.6125, device='cuda:3')
+benign distance is  tensor(132.6125, device='cuda:3')
+norm1 res is  tensor(593.3572, device='cuda:3')
+current submit client idx and staleness is  24 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.26332998275756836
+distance x is tensor(138.0129, device='cuda:3')
+benign distance is  tensor(138.0129, device='cuda:3')
+norm1 res is  tensor(621.8524, device='cuda:3')
+current submit client idx and staleness is  25 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.5270780324935913
+distance x is tensor(128.2789, device='cuda:3')
+benign distance is  tensor(128.2789, device='cuda:3')
+norm1 res is  tensor(560.3072, device='cuda:3')
+current submit client idx and staleness is  26 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.3751458525657654
+distance x is tensor(144.8764, device='cuda:3')
+benign distance is  tensor(144.8764, device='cuda:3')
+norm1 res is  tensor(656.6842, device='cuda:3')
+current submit client idx and staleness is  27 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.5766483545303345
+distance x is tensor(128.4323, device='cuda:3')
+benign distance is  tensor(128.4323, device='cuda:3')
+norm1 res is  tensor(574.1527, device='cuda:3')
+current submit client idx and staleness is  28 4
+grad,shape is torch.Size([215370])
+ benign loss is  1.0871264934539795
+distance x is tensor(128.0632, device='cuda:3')
+benign distance is  tensor(128.0632, device='cuda:3')
+norm1 res is  tensor(561.4468, device='cuda:3')
+current submit client idx and staleness is  29 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.4252142310142517
+distance x is tensor(125.2515, device='cuda:3')
+benign distance is  tensor(125.2515, device='cuda:3')
+norm1 res is  tensor(561.4977, device='cuda:3')
+current submit client idx and staleness is  30 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.5520641803741455
+distance x is tensor(123.1801, device='cuda:3')
+benign distance is  tensor(123.1801, device='cuda:3')
+norm1 res is  tensor(556.6257, device='cuda:3')
+current submit client idx and staleness is  31 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.7374164462089539
+distance x is tensor(126.2496, device='cuda:3')
+benign distance is  tensor(126.2496, device='cuda:3')
+norm1 res is  tensor(573.0228, device='cuda:3')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+len of model dicts is  12
+distance x is tensor(114.3350, device='cuda:3')
+compute distance is  tensor(114.3350, device='cuda:3')
+compute norm is  tensor(45.8393, device='cuda:3', dtype=torch.float64)
+distance x is tensor(111.0837, device='cuda:3')
+compute distance is  tensor(111.0837, device='cuda:3')
+compute norm is  tensor(45.9203, device='cuda:3', dtype=torch.float64)
+distance x is tensor(128.9531, device='cuda:3')
+compute distance is  tensor(128.9531, device='cuda:3')
+compute norm is  tensor(46.4308, device='cuda:3', dtype=torch.float64)
+distance x is tensor(113.3387, device='cuda:3')
+compute distance is  tensor(113.3387, device='cuda:3')
+compute norm is  tensor(45.9321, device='cuda:3', dtype=torch.float64)
+distance x is tensor(125.4133, device='cuda:3')
+compute distance is  tensor(125.4133, device='cuda:3')
+compute norm is  tensor(46.2813, device='cuda:3', dtype=torch.float64)
+distance x is tensor(134.2607, device='cuda:3')
+compute distance is  tensor(134.2607, device='cuda:3')
+compute norm is  tensor(46.5379, device='cuda:3', dtype=torch.float64)
+distance x is tensor(118.9947, device='cuda:3')
+compute distance is  tensor(118.9947, device='cuda:3')
+compute norm is  tensor(46.1524, device='cuda:3', dtype=torch.float64)
+distance x is tensor(120.4295, device='cuda:3')
+compute distance is  tensor(120.4295, device='cuda:3')
+compute norm is  tensor(46.1460, device='cuda:3', dtype=torch.float64)
+distance x is tensor(120.9578, device='cuda:3')
+compute distance is  tensor(120.9578, device='cuda:3')
+compute norm is  tensor(46.1015, device='cuda:3', dtype=torch.float64)
+distance x is tensor(116.4269, device='cuda:3')
+compute distance is  tensor(116.4269, device='cuda:3')
+compute norm is  tensor(46.1808, device='cuda:3', dtype=torch.float64)
+distance x is tensor(120.4603, device='cuda:3')
+compute distance is  tensor(120.4603, device='cuda:3')
+compute norm is  tensor(46.1883, device='cuda:3', dtype=torch.float64)
+distance x is tensor(122.9245, device='cuda:3')
+compute distance is  tensor(122.9245, device='cuda:3')
+compute norm is  tensor(46.1573, device='cuda:3', dtype=torch.float64)
+distance Threshold  is  tensor(134.2607, device='cuda:3')
+distance x is tensor(107702.8125, device='cuda:3')
+distance x is tensor(107702.8125, device='cuda:3')
+________________________________
+test distance is  tensor(107702.8125, device='cuda:3')
+test distance1 is  tensor(107702.8125, device='cuda:3')
+test similarity is  tensor(-0.0687, device='cuda:3')
+test acc is  0.10000000015633198
+test loss is 130105136589878.58
+test entropy is  0.0
+________________________________
+cal ratio is  0.034600864584665526
+distance x is tensor(3726.6155, device='cuda:3')
+cal_distance is  tensor(3726.6155, device='cuda:3')
+cal ratio is  0.18601294781946467
+distance x is tensor(693.2029, device='cuda:3')
+cal_distance is  tensor(693.2029, device='cuda:3')
+cal ratio is  0.4312908771947635
+distance x is tensor(298.9750, device='cuda:3')
+cal_distance is  tensor(298.9750, device='cuda:3')
+cal ratio is  0.6567241906724204
+distance x is tensor(196.3459, device='cuda:3')
+cal_distance is  tensor(196.3459, device='cuda:3')
+cal ratio is  0.8103815043616589
+distance x is tensor(159.1161, device='cuda:3')
+cal_distance is  tensor(159.1161, device='cuda:3')
+cal ratio is  0.9002090377439959
+distance x is tensor(143.2383, device='cuda:3')
+cal_distance is  tensor(143.2383, device='cuda:3')
+cal ratio is  0.9487918108496256
+distance x is tensor(135.9036, device='cuda:3')
+cal_distance is  tensor(135.9036, device='cuda:3')
+cal ratio is  0.9740584595577774
+distance x is tensor(132.3782, device='cuda:3')
+cal_distance is  tensor(132.3782, device='cuda:3')
+distance x is tensor(132.3782, device='cuda:3')
+return_distance is  tensor(132.3782, device='cuda:3')
+distance x is tensor(132.3679, device='cuda:3')
+distance x is tensor(132.3679, device='cuda:3')
+________________________________
+test distance is  tensor(132.3679, device='cuda:3')
+test distance1 is  tensor(132.3679, device='cuda:3')
+test similarity is  tensor(0.9439, device='cuda:3')
+test acc is  0.10005000015633199
+test loss is 331.3423197732043
+test entropy is  5.998536400901342e-06
+________________________________
+0
+distance x is tensor(132.3679, device='cuda:3')
+++++++++++++++++++++
+after training  0
+avg test entropy is  2.4308124376073817e-05
+avg test loss is  331.3904055857709
+avg accuracy is  0.2490833334896715
+solo acc is  0.10005000015633199
+compute similarity  is  tensor(0.9439, device='cuda:3')
+compute_distance is  tensor(132.3679, device='cuda:3')
+compute_norm is  tensor(45.2590, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+change alpha
+distance x is tensor(111.6366, device='cuda:3')
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.9080320969065115
+avg test loss is  1.4809456501942453
+avg accuracy is  0.85066666682299
+solo acc is  0.33096666682300674
+compute similarity  is  tensor(0.9508, device='cuda:3')
+compute_distance is  tensor(111.6366, device='cuda:3')
+compute_norm is  tensor(44.2798, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+distillation for acc
+distance x is tensor(114.0475, device='cuda:3')
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.8810191375614483
+avg test loss is  1.5181173733048348
+avg accuracy is  0.8508333334896567
+solo acc is  0.2853000001563392
+compute similarity  is  tensor(0.9503, device='cuda:3')
+compute_distance is  tensor(114.0475, device='cuda:3')
+compute_norm is  tensor(43.9839, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+distillation for acc
+distance x is tensor(116.0328, device='cuda:3')
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.87817297396121
+avg test loss is  1.4756259920754666
+avg accuracy is  0.8529000001563234
+solo acc is  0.2836000001563392
+compute similarity  is  tensor(0.9499, device='cuda:3')
+compute_distance is  tensor(116.0328, device='cuda:3')
+compute_norm is  tensor(43.7173, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+distillation for acc
+distance x is tensor(117.9595, device='cuda:3')
+exit early
+distance x is tensor(117.9595, device='cuda:3')
+distance x is tensor(117.9595, device='cuda:3')
+________________________________
+test distance is  tensor(117.9595, device='cuda:3')
+test distance1 is  tensor(117.9595, device='cuda:3')
+test similarity is  tensor(0.9496, device='cuda:3')
+test acc is  0.2675666668230054
+test loss is 1.4741837584387774
+test entropy is  0.8585674404970872
+________________________________
+grad,shape is torch.Size([215370])
+mal_acc is 0.3500000005
+mal loss is 1.3964412212371826
+mal norm is  tensor(625.8622, device='cuda:3')
+distance x is tensor(117.9674, device='cuda:3')
+mal distance is  tensor(117.9674, device='cuda:3')
+len current grad  20
+len all grad 28
+index is  [0, 1, 2, 3, 4, 5, 6, 7, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 32, 33, 34, 35, 36, 37, 38, 39]
+grad,shape is torch.Size([215370])
+global_param_square norm is    tensor(11.6101, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(458.1400, device='cuda:3')
+user_param_square tensor(72.9318, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(1.5021, device='cuda:3')
+score : tensor(0.0036, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(566.5302, device='cuda:3')
+user_param_square tensor(81.1016, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(-25.2328, device='cuda:3')
+score : tensor(-0.2637, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(525.1590, device='cuda:3')
+user_param_square tensor(78.0842, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(21.6372, device='cuda:3')
+score : tensor(0.2050, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(469.8980, device='cuda:3')
+user_param_square tensor(73.8617, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(4.2305, device='cuda:3')
+score : tensor(0.0309, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(513.5019, device='cuda:3')
+user_param_square tensor(77.2127, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(-34.2321, device='cuda:3')
+score : tensor(-0.3537, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(569.3278, device='cuda:3')
+user_param_square tensor(81.3016, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(-16.4013, device='cuda:3')
+score : tensor(-0.1754, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(594.7826, device='cuda:3')
+user_param_square tensor(83.0992, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(10.4467, device='cuda:3')
+score : tensor(0.0931, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(539.6756, device='cuda:3')
+user_param_square tensor(79.1560, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(-13.7288, device='cuda:3')
+score : tensor(-0.1487, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(625.8622, device='cuda:3')
+user_param_square tensor(85.2427, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(-10.0134, device='cuda:3')
+score : tensor(-0.1115, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(625.8622, device='cuda:3')
+user_param_square tensor(85.2427, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(-10.0134, device='cuda:3')
+score : tensor(-0.1115, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(625.8622, device='cuda:3')
+user_param_square tensor(85.2427, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(-10.0134, device='cuda:3')
+score : tensor(-0.1115, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(625.8622, device='cuda:3')
+user_param_square tensor(85.2427, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(-10.0134, device='cuda:3')
+score : tensor(-0.1115, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(625.8622, device='cuda:3')
+user_param_square tensor(85.2427, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(-10.0134, device='cuda:3')
+score : tensor(-0.1115, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(625.8622, device='cuda:3')
+user_param_square tensor(85.2427, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(-10.0134, device='cuda:3')
+score : tensor(-0.1115, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(625.8622, device='cuda:3')
+user_param_square tensor(85.2427, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(-10.0134, device='cuda:3')
+score : tensor(-0.1115, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(625.8622, device='cuda:3')
+user_param_square tensor(85.2427, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(-10.0134, device='cuda:3')
+score : tensor(-0.1115, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(625.8622, device='cuda:3')
+user_param_square tensor(85.2427, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(-10.0134, device='cuda:3')
+score : tensor(-0.1115, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(625.8622, device='cuda:3')
+user_param_square tensor(85.2427, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(-10.0134, device='cuda:3')
+score : tensor(-0.1115, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(625.8622, device='cuda:3')
+user_param_square tensor(85.2427, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(-10.0134, device='cuda:3')
+score : tensor(-0.1115, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(625.8622, device='cuda:3')
+user_param_square tensor(85.2427, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(-10.0134, device='cuda:3')
+score : tensor(-0.1115, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(660.7005, device='cuda:3')
+user_param_square tensor(87.5830, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(0.0963, device='cuda:3')
+score : tensor(-0.0104, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(625.3170, device='cuda:3')
+user_param_square tensor(85.2055, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(7.4150, device='cuda:3')
+score : tensor(0.0627, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(666.5687, device='cuda:3')
+user_param_square tensor(87.9711, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(8.2253, device='cuda:3')
+score : tensor(0.0708, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(603.1687, device='cuda:3')
+user_param_square tensor(83.6830, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(43.3286, device='cuda:3')
+score : tensor(0.4219, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(641.2291, device='cuda:3')
+user_param_square tensor(86.2828, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(-0.6254, device='cuda:3')
+score : tensor(-0.0177, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(608.6227, device='cuda:3')
+user_param_square tensor(84.0605, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(-13.2611, device='cuda:3')
+score : tensor(-0.1440, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(604.5944, device='cuda:3')
+user_param_square tensor(83.7818, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(-6.2217, device='cuda:3')
+score : tensor(-0.0736, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(598.4676, device='cuda:3')
+user_param_square tensor(83.3562, device='cuda:3')
+global_param_square tensor(11.6101, device='cuda:3')
+part1 is  tensor(0.6229, device='cuda:3')
+score : tensor(-0.0052, device='cuda:3')
+len accept list 7
+len all weights is 7
+ 
+Avg Training Stats after 5 global rounds:
+Train Accuracy: 89.55% 
+
+Test Accuracy: 89.00% 
+
+
+ | Global Training Round : 6 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.321707546710968
+distance x is tensor(123.1101, device='cuda:3')
+benign distance is  tensor(123.1101, device='cuda:3')
+norm1 res is  tensor(559.9490, device='cuda:3')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5705716013908386
+distance x is tensor(117.7000, device='cuda:3')
+benign distance is  tensor(117.7000, device='cuda:3')
+norm1 res is  tensor(539.8511, device='cuda:3')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.3697955012321472
+distance x is tensor(115.4395, device='cuda:3')
+benign distance is  tensor(115.4395, device='cuda:3')
+norm1 res is  tensor(508.2446, device='cuda:3')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.4674299359321594
+distance x is tensor(124.8990, device='cuda:3')
+benign distance is  tensor(124.8990, device='cuda:3')
+norm1 res is  tensor(568.8259, device='cuda:3')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.21410994231700897
+distance x is tensor(104.5252, device='cuda:3')
+benign distance is  tensor(104.5252, device='cuda:3')
+norm1 res is  tensor(465.4503, device='cuda:3')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.7409970164299011
+distance x is tensor(127.9128, device='cuda:3')
+benign distance is  tensor(127.9128, device='cuda:3')
+norm1 res is  tensor(576.8612, device='cuda:3')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.34132322669029236
+distance x is tensor(110.0776, device='cuda:3')
+benign distance is  tensor(110.0776, device='cuda:3')
+norm1 res is  tensor(493.2332, device='cuda:3')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.7841143012046814
+distance x is tensor(120.3326, device='cuda:3')
+benign distance is  tensor(120.3326, device='cuda:3')
+norm1 res is  tensor(542.7958, device='cuda:3')
+current submit client idx and staleness is  32 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.4700795114040375
+distance x is tensor(134.1002, device='cuda:3')
+benign distance is  tensor(134.1002, device='cuda:3')
+norm1 res is  tensor(614.5347, device='cuda:3')
+current submit client idx and staleness is  33 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.13821753859519958
+distance x is tensor(121.3027, device='cuda:3')
+benign distance is  tensor(121.3027, device='cuda:3')
+norm1 res is  tensor(561.8278, device='cuda:3')
+current submit client idx and staleness is  34 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.17968633770942688
+distance x is tensor(133.7146, device='cuda:3')
+benign distance is  tensor(133.7146, device='cuda:3')
+norm1 res is  tensor(599.8652, device='cuda:3')
+current submit client idx and staleness is  35 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.307819664478302
+distance x is tensor(122.3300, device='cuda:3')
+benign distance is  tensor(122.3300, device='cuda:3')
+norm1 res is  tensor(547.6672, device='cuda:3')
+current submit client idx and staleness is  36 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.287269651889801
+distance x is tensor(125.2496, device='cuda:3')
+benign distance is  tensor(125.2496, device='cuda:3')
+norm1 res is  tensor(583.4975, device='cuda:3')
+current submit client idx and staleness is  37 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.32515186071395874
+distance x is tensor(132.7516, device='cuda:3')
+benign distance is  tensor(132.7516, device='cuda:3')
+norm1 res is  tensor(586.2021, device='cuda:3')
+current submit client idx and staleness is  38 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.32651469111442566
+distance x is tensor(122.5051, device='cuda:3')
+benign distance is  tensor(122.5051, device='cuda:3')
+norm1 res is  tensor(553.4567, device='cuda:3')
+current submit client idx and staleness is  39 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.14702877402305603
+distance x is tensor(132.0000, device='cuda:3')
+benign distance is  tensor(132.0000, device='cuda:3')
+norm1 res is  tensor(584.7213, device='cuda:3')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+len of model dicts is  12
+distance x is tensor(121.1934, device='cuda:3')
+compute distance is  tensor(121.1934, device='cuda:3')
+compute norm is  tensor(46.3534, device='cuda:3', dtype=torch.float64)
+distance x is tensor(119.9378, device='cuda:3')
+compute distance is  tensor(119.9378, device='cuda:3')
+compute norm is  tensor(46.4218, device='cuda:3', dtype=torch.float64)
+distance x is tensor(138.6696, device='cuda:3')
+compute distance is  tensor(138.6696, device='cuda:3')
+compute norm is  tensor(47.0916, device='cuda:3', dtype=torch.float64)
+distance x is tensor(122.0881, device='cuda:3')
+compute distance is  tensor(122.0881, device='cuda:3')
+compute norm is  tensor(46.4644, device='cuda:3', dtype=torch.float64)
+distance x is tensor(121.3267, device='cuda:3')
+compute distance is  tensor(121.3267, device='cuda:3')
+compute norm is  tensor(46.3980, device='cuda:3', dtype=torch.float64)
+distance x is tensor(126.3512, device='cuda:3')
+compute distance is  tensor(126.3512, device='cuda:3')
+compute norm is  tensor(46.6815, device='cuda:3', dtype=torch.float64)
+distance x is tensor(113.2732, device='cuda:3')
+compute distance is  tensor(113.2732, device='cuda:3')
+compute norm is  tensor(46.3085, device='cuda:3', dtype=torch.float64)
+distance x is tensor(132.0096, device='cuda:3')
+compute distance is  tensor(132.0096, device='cuda:3')
+compute norm is  tensor(46.7155, device='cuda:3', dtype=torch.float64)
+distance x is tensor(129.9951, device='cuda:3')
+compute distance is  tensor(129.9951, device='cuda:3')
+compute norm is  tensor(46.6871, device='cuda:3', dtype=torch.float64)
+distance x is tensor(125.1320, device='cuda:3')
+compute distance is  tensor(125.1320, device='cuda:3')
+compute norm is  tensor(46.5932, device='cuda:3', dtype=torch.float64)
+distance x is tensor(134.3831, device='cuda:3')
+compute distance is  tensor(134.3831, device='cuda:3')
+compute norm is  tensor(46.9327, device='cuda:3', dtype=torch.float64)
+distance x is tensor(120.0060, device='cuda:3')
+compute distance is  tensor(120.0060, device='cuda:3')
+compute norm is  tensor(46.3633, device='cuda:3', dtype=torch.float64)
+distance Threshold  is  tensor(138.6696, device='cuda:3')
+distance x is tensor(107705.5781, device='cuda:3')
+distance x is tensor(107705.5781, device='cuda:3')
+________________________________
+test distance is  tensor(107705.5781, device='cuda:3')
+test distance1 is  tensor(107705.5781, device='cuda:3')
+test similarity is  tensor(-0.0819, device='cuda:3')
+test acc is  0.10000000015633198
+test loss is 130110050078396.86
+test entropy is  0.0
+________________________________
+cal ratio is  0.035163951823548346
+distance x is tensor(3787.3589, device='cuda:3')
+cal_distance is  tensor(3787.3589, device='cuda:3')
+cal ratio is  0.18752040928787148
+distance x is tensor(710.2112, device='cuda:3')
+cal_distance is  tensor(710.2112, device='cuda:3')
+cal ratio is  0.4330350110464046
+distance x is tensor(307.5493, device='cuda:3')
+cal_distance is  tensor(307.5493, device='cuda:3')
+cal ratio is  0.6580507877183258
+distance x is tensor(202.3848, device='cuda:3')
+cal_distance is  tensor(202.3848, device='cuda:3')
+cal ratio is  0.8111997585432881
+distance x is tensor(164.1755, device='cuda:3')
+cal_distance is  tensor(164.1755, device='cuda:3')
+cal ratio is  0.900663527988901
+distance x is tensor(147.8674, device='cuda:3')
+cal_distance is  tensor(147.8674, device='cuda:3')
+cal ratio is  0.9490312458477844
+distance x is tensor(140.3311, device='cuda:3')
+cal_distance is  tensor(140.3311, device='cuda:3')
+cal ratio is  0.9741814256261998
+distance x is tensor(136.7081, device='cuda:3')
+cal_distance is  tensor(136.7081, device='cuda:3')
+distance x is tensor(136.7081, device='cuda:3')
+return_distance is  tensor(136.7081, device='cuda:3')
+distance x is tensor(136.6978, device='cuda:3')
+distance x is tensor(136.6978, device='cuda:3')
+________________________________
+test distance is  tensor(136.6978, device='cuda:3')
+test distance1 is  tensor(136.6978, device='cuda:3')
+test similarity is  tensor(0.9407, device='cuda:3')
+test acc is  0.10008333348966532
+test loss is 381.3746477464623
+test entropy is  1.8834957377690034e-05
+________________________________
+0
+distance x is tensor(136.6978, device='cuda:3')
+++++++++++++++++++++
+after training  0
+avg test entropy is  1.7846126183496342e-05
+avg test loss is  381.49551921917686
+avg accuracy is  0.2349500001563378
+solo acc is  0.10010000015633198
+compute similarity  is  tensor(0.9407, device='cuda:3')
+compute_distance is  tensor(136.6978, device='cuda:3')
+compute_norm is  tensor(45.5145, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+change alpha
+distance x is tensor(113.5665, device='cuda:3')
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.9190511695865883
+avg test loss is  1.4699869303306792
+avg accuracy is  0.8497000001563233
+solo acc is  0.340266666823007
+compute similarity  is  tensor(0.9490, device='cuda:3')
+compute_distance is  tensor(113.5665, device='cuda:3')
+compute_norm is  tensor(44.4020, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+distillation for acc
+distance x is tensor(116.2328, device='cuda:3')
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.8870580997040023
+avg test loss is  1.512500709053804
+avg accuracy is  0.8485666668229901
+solo acc is  0.29285000015633933
+compute similarity  is  tensor(0.9485, device='cuda:3')
+compute_distance is  tensor(116.2328, device='cuda:3')
+compute_norm is  tensor(44.0971, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+distillation for acc
+
+Experimental details:
+    Dataset     : fmnist
+    Model     : cnn
+    detailed Model     : resnet
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 100
+
+    Federated parameters:
+    IID
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.2
+     Model attack is done!
+attack user num is  12
+ t is  8
+attack_user is [48 49 50 51 52 53 54 55 56 57 58 59]
+
+ | Global Training Round : 1 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5162386894226074
+distance x is tensor(103.9692, device='cuda:3')
+benign distance is  tensor(103.9692, device='cuda:3')
+norm1 res is  tensor(473.7944, device='cuda:3')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.3560662269592285
+distance x is tensor(122.9965, device='cuda:3')
+benign distance is  tensor(122.9965, device='cuda:3')
+norm1 res is  tensor(571.4252, device='cuda:3')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.48453646898269653
+distance x is tensor(131.6280, device='cuda:3')
+benign distance is  tensor(131.6280, device='cuda:3')
+norm1 res is  tensor(595.1238, device='cuda:3')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6843010187149048
+distance x is tensor(117.5912, device='cuda:3')
+benign distance is  tensor(117.5912, device='cuda:3')
+norm1 res is  tensor(529.9870, device='cuda:3')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6794329881668091
+distance x is tensor(105.9013, device='cuda:3')
+benign distance is  tensor(105.9013, device='cuda:3')
+norm1 res is  tensor(481.8449, device='cuda:3')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.3502071797847748
+distance x is tensor(121.3308, device='cuda:3')
+benign distance is  tensor(121.3308, device='cuda:3')
+norm1 res is  tensor(556.8107, device='cuda:3')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.32558590173721313
+distance x is tensor(99.7457, device='cuda:3')
+benign distance is  tensor(99.7457, device='cuda:3')
+norm1 res is  tensor(446.8813, device='cuda:3')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.1844867765903473
+distance x is tensor(124.4377, device='cuda:3')
+benign distance is  tensor(124.4377, device='cuda:3')
+norm1 res is  tensor(576.0906, device='cuda:3')
+current submit client idx and staleness is  8 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.31735387444496155
+distance x is tensor(137.6034, device='cuda:3')
+benign distance is  tensor(137.6034, device='cuda:3')
+norm1 res is  tensor(623.6793, device='cuda:3')
+current submit client idx and staleness is  9 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.4863235354423523
+distance x is tensor(137.4988, device='cuda:3')
+benign distance is  tensor(137.4988, device='cuda:3')
+norm1 res is  tensor(621.3293, device='cuda:3')
+current submit client idx and staleness is  10 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.406633198261261
+distance x is tensor(126.5439, device='cuda:3')
+benign distance is  tensor(126.5439, device='cuda:3')
+norm1 res is  tensor(582.7556, device='cuda:3')
+current submit client idx and staleness is  11 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.3791540265083313
+distance x is tensor(126.5559, device='cuda:3')
+benign distance is  tensor(126.5559, device='cuda:3')
+norm1 res is  tensor(576.9620, device='cuda:3')
+current submit client idx and staleness is  12 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.5193154215812683
+distance x is tensor(131.3311, device='cuda:3')
+benign distance is  tensor(131.3311, device='cuda:3')
+norm1 res is  tensor(587.6929, device='cuda:3')
+current submit client idx and staleness is  13 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.4052024781703949
+distance x is tensor(147.5495, device='cuda:3')
+benign distance is  tensor(147.5495, device='cuda:3')
+norm1 res is  tensor(677.0132, device='cuda:3')
+current submit client idx and staleness is  14 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.8843610882759094
+distance x is tensor(135.8507, device='cuda:3')
+benign distance is  tensor(135.8507, device='cuda:3')
+norm1 res is  tensor(625.7983, device='cuda:3')
+current submit client idx and staleness is  15 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.24680928885936737
+distance x is tensor(133.3515, device='cuda:3')
+benign distance is  tensor(133.3515, device='cuda:3')
+norm1 res is  tensor(602.6013, device='cuda:3')
+current submit client idx and staleness is  16 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.18518708646297455
+distance x is tensor(127.5456, device='cuda:3')
+benign distance is  tensor(127.5456, device='cuda:3')
+norm1 res is  tensor(573.9427, device='cuda:3')
+current submit client idx and staleness is  17 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.618910551071167
+distance x is tensor(147.2814, device='cuda:3')
+benign distance is  tensor(147.2814, device='cuda:3')
+norm1 res is  tensor(674.5807, device='cuda:3')
+current submit client idx and staleness is  18 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.47206711769104004
+distance x is tensor(126.3170, device='cuda:3')
+benign distance is  tensor(126.3170, device='cuda:3')
+norm1 res is  tensor(575.3914, device='cuda:3')
+current submit client idx and staleness is  19 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.5553510189056396
+distance x is tensor(129.4329, device='cuda:3')
+benign distance is  tensor(129.4329, device='cuda:3')
+norm1 res is  tensor(599.2556, device='cuda:3')
+current submit client idx and staleness is  20 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.114462710916996
+distance x is tensor(128.0875, device='cuda:3')
+benign distance is  tensor(128.0875, device='cuda:3')
+norm1 res is  tensor(575.3365, device='cuda:3')
+current submit client idx and staleness is  21 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.5574489235877991
+distance x is tensor(125.8935, device='cuda:3')
+benign distance is  tensor(125.8935, device='cuda:3')
+norm1 res is  tensor(567.5010, device='cuda:3')
+current submit client idx and staleness is  22 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.4759218692779541
+distance x is tensor(139.9728, device='cuda:3')
+benign distance is  tensor(139.9728, device='cuda:3')
+norm1 res is  tensor(645.0911, device='cuda:3')
+current submit client idx and staleness is  23 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.9208019375801086
+distance x is tensor(129.9085, device='cuda:3')
+benign distance is  tensor(129.9085, device='cuda:3')
+norm1 res is  tensor(571.9158, device='cuda:3')
+current submit client idx and staleness is  24 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.5534985661506653
+distance x is tensor(146.6979, device='cuda:3')
+benign distance is  tensor(146.6979, device='cuda:3')
+norm1 res is  tensor(670.3458, device='cuda:3')
+current submit client idx and staleness is  25 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.5673989057540894
+distance x is tensor(123.3662, device='cuda:3')
+benign distance is  tensor(123.3662, device='cuda:3')
+norm1 res is  tensor(539.0179, device='cuda:3')
+current submit client idx and staleness is  26 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.8759239912033081
+distance x is tensor(141.3619, device='cuda:3')
+benign distance is  tensor(141.3619, device='cuda:3')
+norm1 res is  tensor(643.0713, device='cuda:3')
+current submit client idx and staleness is  27 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.17828229069709778
+distance x is tensor(142.7561, device='cuda:3')
+benign distance is  tensor(142.7561, device='cuda:3')
+norm1 res is  tensor(625.7934, device='cuda:3')
+current submit client idx and staleness is  28 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.7990292906761169
+distance x is tensor(129.1840, device='cuda:3')
+benign distance is  tensor(129.1840, device='cuda:3')
+norm1 res is  tensor(575.4579, device='cuda:3')
+current submit client idx and staleness is  29 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.47507548332214355
+distance x is tensor(138.2469, device='cuda:3')
+benign distance is  tensor(138.2469, device='cuda:3')
+norm1 res is  tensor(636.1524, device='cuda:3')
+current submit client idx and staleness is  30 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.3483835756778717
+distance x is tensor(124.8846, device='cuda:3')
+benign distance is  tensor(124.8846, device='cuda:3')
+norm1 res is  tensor(575.3298, device='cuda:3')
+current submit client idx and staleness is  31 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.8829144239425659
+distance x is tensor(131.3602, device='cuda:3')
+benign distance is  tensor(131.3602, device='cuda:3')
+norm1 res is  tensor(610.6409, device='cuda:3')
+current submit client idx and staleness is  32 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.26439088582992554
+distance x is tensor(132.5432, device='cuda:3')
+benign distance is  tensor(132.5432, device='cuda:3')
+norm1 res is  tensor(603.5233, device='cuda:3')
+current submit client idx and staleness is  33 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.17685283720493317
+distance x is tensor(126.2958, device='cuda:3')
+benign distance is  tensor(126.2958, device='cuda:3')
+norm1 res is  tensor(572.3284, device='cuda:3')
+current submit client idx and staleness is  34 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.1862725466489792
+distance x is tensor(140.2372, device='cuda:3')
+benign distance is  tensor(140.2372, device='cuda:3')
+norm1 res is  tensor(644.1785, device='cuda:3')
+current submit client idx and staleness is  35 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.14710786938667297
+distance x is tensor(130.8152, device='cuda:3')
+benign distance is  tensor(130.8152, device='cuda:3')
+norm1 res is  tensor(591.2888, device='cuda:3')
+current submit client idx and staleness is  36 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.3035068213939667
+distance x is tensor(130.4020, device='cuda:3')
+benign distance is  tensor(130.4020, device='cuda:3')
+norm1 res is  tensor(596.3120, device='cuda:3')
+current submit client idx and staleness is  37 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.37009960412979126
+distance x is tensor(129.4633, device='cuda:3')
+benign distance is  tensor(129.4633, device='cuda:3')
+norm1 res is  tensor(579.0262, device='cuda:3')
+current submit client idx and staleness is  38 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.305960088968277
+distance x is tensor(130.3654, device='cuda:3')
+benign distance is  tensor(130.3654, device='cuda:3')
+norm1 res is  tensor(593.3162, device='cuda:3')
+current submit client idx and staleness is  39 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.31384357810020447
+distance x is tensor(128.6671, device='cuda:3')
+benign distance is  tensor(128.6671, device='cuda:3')
+norm1 res is  tensor(572.8675, device='cuda:3')
+current submit client idx and staleness is  40 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.13402295112609863
+distance x is tensor(129.7575, device='cuda:3')
+benign distance is  tensor(129.7575, device='cuda:3')
+norm1 res is  tensor(596.8137, device='cuda:3')
+current submit client idx and staleness is  41 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.30408498644828796
+distance x is tensor(121.8800, device='cuda:3')
+benign distance is  tensor(121.8800, device='cuda:3')
+norm1 res is  tensor(550.6038, device='cuda:3')
+current submit client idx and staleness is  42 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.13345880806446075
+distance x is tensor(126.4725, device='cuda:3')
+benign distance is  tensor(126.4725, device='cuda:3')
+norm1 res is  tensor(568.0731, device='cuda:3')
+current submit client idx and staleness is  43 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.29167014360427856
+distance x is tensor(135.1693, device='cuda:3')
+benign distance is  tensor(135.1693, device='cuda:3')
+norm1 res is  tensor(607.8354, device='cuda:3')
+current submit client idx and staleness is  44 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.3424593508243561
+distance x is tensor(133.0562, device='cuda:3')
+benign distance is  tensor(133.0562, device='cuda:3')
+norm1 res is  tensor(608.5637, device='cuda:3')
+current submit client idx and staleness is  45 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.46011337637901306
+distance x is tensor(131.2876, device='cuda:3')
+benign distance is  tensor(131.2876, device='cuda:3')
+norm1 res is  tensor(585.1025, device='cuda:3')
+current submit client idx and staleness is  46 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.8255268931388855
+distance x is tensor(137.5745, device='cuda:3')
+benign distance is  tensor(137.5745, device='cuda:3')
+norm1 res is  tensor(615.5684, device='cuda:3')
+current submit client idx and staleness is  47 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.34935832023620605
+distance x is tensor(130.4641, device='cuda:3')
+benign distance is  tensor(130.4641, device='cuda:3')
+norm1 res is  tensor(599.3263, device='cuda:3')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+len of model dicts is  12
+distance x is tensor(115.6327, device='cuda:3')
+compute distance is  tensor(115.6327, device='cuda:3')
+compute norm is  tensor(45.6122, device='cuda:3', dtype=torch.float64)
+distance x is tensor(114.5651, device='cuda:3')
+compute distance is  tensor(114.5651, device='cuda:3')
+compute norm is  tensor(45.5878, device='cuda:3', dtype=torch.float64)
+distance x is tensor(124.2113, device='cuda:3')
+compute distance is  tensor(124.2113, device='cuda:3')
+compute norm is  tensor(46.0376, device='cuda:3', dtype=torch.float64)
+distance x is tensor(111.9567, device='cuda:3')
+compute distance is  tensor(111.9567, device='cuda:3')
+compute norm is  tensor(45.6255, device='cuda:3', dtype=torch.float64)
+distance x is tensor(120.3235, device='cuda:3')
+compute distance is  tensor(120.3235, device='cuda:3')
+compute norm is  tensor(45.7064, device='cuda:3', dtype=torch.float64)
+distance x is tensor(124.8621, device='cuda:3')
+compute distance is  tensor(124.8621, device='cuda:3')
+compute norm is  tensor(46.0073, device='cuda:3', dtype=torch.float64)
+distance x is tensor(120.7137, device='cuda:3')
+compute distance is  tensor(120.7137, device='cuda:3')
+compute norm is  tensor(45.7115, device='cuda:3', dtype=torch.float64)
+distance x is tensor(119.7111, device='cuda:3')
+compute distance is  tensor(119.7111, device='cuda:3')
+compute norm is  tensor(45.6793, device='cuda:3', dtype=torch.float64)
+distance x is tensor(115.2054, device='cuda:3')
+compute distance is  tensor(115.2054, device='cuda:3')
+compute norm is  tensor(45.6015, device='cuda:3', dtype=torch.float64)
+distance x is tensor(116.0949, device='cuda:3')
+compute distance is  tensor(116.0949, device='cuda:3')
+compute norm is  tensor(45.7054, device='cuda:3', dtype=torch.float64)
+distance x is tensor(127.0238, device='cuda:3')
+compute distance is  tensor(127.0238, device='cuda:3')
+compute norm is  tensor(46.0327, device='cuda:3', dtype=torch.float64)
+distance x is tensor(128.9407, device='cuda:3')
+compute distance is  tensor(128.9407, device='cuda:3')
+compute norm is  tensor(45.9977, device='cuda:3', dtype=torch.float64)
+batch acc is 0.1023166668229986
+mal_rand_acc is 0.10000000049999999
+mal_rand loss is 119521490763776.0
+len of model dicts is  12
+distance x is tensor(115.6327, device='cuda:3')
+compute distance is  tensor(115.6327, device='cuda:3')
+compute norm is  tensor(45.6122, device='cuda:3', dtype=torch.float64)
+distance x is tensor(114.5651, device='cuda:3')
+compute distance is  tensor(114.5651, device='cuda:3')
+compute norm is  tensor(45.5878, device='cuda:3', dtype=torch.float64)
+distance x is tensor(124.2113, device='cuda:3')
+compute distance is  tensor(124.2113, device='cuda:3')
+compute norm is  tensor(46.0376, device='cuda:3', dtype=torch.float64)
+distance x is tensor(111.9567, device='cuda:3')
+compute distance is  tensor(111.9567, device='cuda:3')
+compute norm is  tensor(45.6255, device='cuda:3', dtype=torch.float64)
+distance x is tensor(120.3235, device='cuda:3')
+compute distance is  tensor(120.3235, device='cuda:3')
+compute norm is  tensor(45.7064, device='cuda:3', dtype=torch.float64)
+distance x is tensor(124.8621, device='cuda:3')
+compute distance is  tensor(124.8621, device='cuda:3')
+compute norm is  tensor(46.0073, device='cuda:3', dtype=torch.float64)
+distance x is tensor(120.7137, device='cuda:3')
+compute distance is  tensor(120.7137, device='cuda:3')
+compute norm is  tensor(45.7115, device='cuda:3', dtype=torch.float64)
+distance x is tensor(119.7111, device='cuda:3')
+compute distance is  tensor(119.7111, device='cuda:3')
+compute norm is  tensor(45.6793, device='cuda:3', dtype=torch.float64)
+distance x is tensor(115.2054, device='cuda:3')
+compute distance is  tensor(115.2054, device='cuda:3')
+compute norm is  tensor(45.6015, device='cuda:3', dtype=torch.float64)
+distance x is tensor(116.0949, device='cuda:3')
+compute distance is  tensor(116.0949, device='cuda:3')
+compute norm is  tensor(45.7054, device='cuda:3', dtype=torch.float64)
+distance x is tensor(127.0238, device='cuda:3')
+compute distance is  tensor(127.0238, device='cuda:3')
+compute norm is  tensor(46.0327, device='cuda:3', dtype=torch.float64)
+distance x is tensor(128.9407, device='cuda:3')
+compute distance is  tensor(128.9407, device='cuda:3')
+compute norm is  tensor(45.9977, device='cuda:3', dtype=torch.float64)
+distance Threshold  is  tensor(128.9407, device='cuda:3')
+distance x is tensor(107710.2031, device='cuda:3')
+distance x is tensor(107710.2031, device='cuda:3')
+________________________________
+test distance is  tensor(107710.2031, device='cuda:3')
+test distance1 is  tensor(107710.2031, device='cuda:3')
+test similarity is  tensor(-0.1075, device='cuda:3')
+test acc is  0.10000000015633198
+test loss is 130124731322883.28
+test entropy is  0.0
+________________________________
+cal ratio is  0.03390725134324604
+distance x is tensor(3652.1621, device='cuda:3')
+cal_distance is  tensor(3652.1621, device='cuda:3')
+cal ratio is  0.18413909267731537
+distance x is tensor(672.5101, device='cuda:3')
+cal_distance is  tensor(672.5101, device='cuda:3')
+cal ratio is  0.42911295548300143
+distance x is tensor(288.5857, device='cuda:3')
+cal_distance is  tensor(288.5857, device='cuda:3')
+cal ratio is  0.6550637940014677
+distance x is tensor(189.0439, device='cuda:3')
+cal_distance is  tensor(189.0439, device='cuda:3')
+cal ratio is  0.8093562413696646
+distance x is tensor(153.0048, device='cuda:3')
+cal_distance is  tensor(153.0048, device='cuda:3')
+cal ratio is  0.8996393771748683
+distance x is tensor(137.6497, device='cuda:3')
+cal_distance is  tensor(137.6497, device='cuda:3')
+cal ratio is  0.9484913608396887
+distance x is tensor(130.5598, device='cuda:3')
+cal_distance is  tensor(130.5598, device='cuda:3')
+cal ratio is  0.9739041790939437
+distance x is tensor(127.1529, device='cuda:3')
+cal_distance is  tensor(127.1529, device='cuda:3')
+distance x is tensor(127.1529, device='cuda:3')
+return_distance is  tensor(127.1529, device='cuda:3')
+distance x is tensor(127.1425, device='cuda:3')
+distance x is tensor(127.1425, device='cuda:3')
+________________________________
+test distance is  tensor(127.1425, device='cuda:3')
+test distance1 is  tensor(127.1425, device='cuda:3')
+test similarity is  tensor(0.9459, device='cuda:3')
+test acc is  0.10010000015633198
+test loss is 282.7555324334834
+test entropy is  1.822609190861789e-05
+________________________________
+0
+distance x is tensor(127.1425, device='cuda:3')
+++++++++++++++++++++
+after training  0
+avg test entropy is  6.11990349426711e-05
+avg test loss is  283.03702397132986
+avg accuracy is  0.3840833334896743
+solo acc is  0.10020000015633199
+compute similarity  is  tensor(0.9459, device='cuda:3')
+compute_distance is  tensor(127.1425, device='cuda:3')
+compute_norm is  tensor(44.2499, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+change alpha
+distance x is tensor(107.1549, device='cuda:3')
+++++++++++++++++++++
+after training  1
+avg test entropy is  0.95650357783222
+avg test loss is  1.4085279963672288
+avg accuracy is  0.8551666668229899
+solo acc is  0.36050000015634065
+compute similarity  is  tensor(0.9530, device='cuda:3')
+compute_distance is  tensor(107.1549, device='cuda:3')
+compute_norm is  tensor(43.0882, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+distillation for acc
+distance x is tensor(109.6993, device='cuda:3')
+++++++++++++++++++++
+after training  2
+avg test entropy is  0.8665187647983209
+avg test loss is  1.5599267447172707
+avg accuracy is  0.8547500001563232
+solo acc is  0.27688333348967226
+compute similarity  is  tensor(0.9525, device='cuda:3')
+compute_distance is  tensor(109.6993, device='cuda:3')
+compute_norm is  tensor(42.7902, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+distillation for acc
+distance x is tensor(111.8228, device='cuda:3')
+++++++++++++++++++++
+after training  3
+avg test entropy is  0.8767385893284894
+avg test loss is  1.496722806618412
+avg accuracy is  0.8581666668229898
+solo acc is  0.2745666668230055
+compute similarity  is  tensor(0.9520, device='cuda:3')
+compute_distance is  tensor(111.8228, device='cuda:3')
+compute_norm is  tensor(42.5222, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+distillation for acc
+distance x is tensor(113.8331, device='cuda:3')
+++++++++++++++++++++
+after training  4
+avg test entropy is  0.8697873513454567
+avg test loss is  1.4521483345580761
+avg accuracy is  0.8600166668229896
+solo acc is  0.27603333348967224
+compute similarity  is  tensor(0.9516, device='cuda:3')
+compute_distance is  tensor(113.8331, device='cuda:3')
+compute_norm is  tensor(42.2716, device='cuda:3', dtype=torch.float64)
+++++++++++++++++++++
+distillation for acc
+distance x is tensor(115.7283, device='cuda:3')
+distance x is tensor(115.7283, device='cuda:3')
+________________________________
+test distance is  tensor(115.7283, device='cuda:3')
+test distance1 is  tensor(115.7283, device='cuda:3')
+test similarity is  tensor(0.9513, device='cuda:3')
+test acc is  0.2776666668230057
+test loss is 1.4205066401567032
+test entropy is  0.8690462524194453
+________________________________
+grad,shape is torch.Size([215370])
+mal_acc is 0.2500000005
+mal loss is 1.27799391746521
+mal norm is  tensor(604.6048, device='cuda:3')
+distance x is tensor(115.7359, device='cuda:3')
+mal distance is  tensor(115.7359, device='cuda:3')
+len current grad  20
+len all grad 20
+index is  [0, 1, 2, 3, 4, 5, 6, 7, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]
+grad,shape is torch.Size([215370])
+global_param_square norm is    tensor(25.9314, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(473.7944, device='cuda:3')
+user_param_square tensor(110.8428, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(7.4479, device='cuda:3')
+score : tensor(0.0487, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(571.4252, device='cuda:3')
+user_param_square tensor(121.7285, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(-16.2935, device='cuda:3')
+score : tensor(-0.1887, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(595.1238, device='cuda:3')
+user_param_square tensor(124.2271, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(80.3858, device='cuda:3')
+score : tensor(0.7781, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(529.9870, device='cuda:3')
+user_param_square tensor(117.2318, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(7.5195, device='cuda:3')
+score : tensor(0.0495, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(481.8449, device='cuda:3')
+user_param_square tensor(111.7806, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(-30.1159, device='cuda:3')
+score : tensor(-0.3269, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(556.8107, device='cuda:3')
+user_param_square tensor(120.1618, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(-13.9223, device='cuda:3')
+score : tensor(-0.1650, device='cuda:3')
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(446.8813, device='cuda:3')
+user_param_square tensor(107.6487, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(54.6270, device='cuda:3')
+score : tensor(0.5205, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(576.0906, device='cuda:3')
+user_param_square tensor(122.2244, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(19.8460, device='cuda:3')
+score : tensor(0.1727, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(604.6048, device='cuda:3')
+user_param_square tensor(125.2127, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(50.1266, device='cuda:3')
+score : tensor(0.4755, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(604.6048, device='cuda:3')
+user_param_square tensor(125.2127, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(50.1266, device='cuda:3')
+score : tensor(0.4755, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(604.6048, device='cuda:3')
+user_param_square tensor(125.2127, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(50.1266, device='cuda:3')
+score : tensor(0.4755, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(604.6048, device='cuda:3')
+user_param_square tensor(125.2127, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(50.1266, device='cuda:3')
+score : tensor(0.4755, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(604.6048, device='cuda:3')
+user_param_square tensor(125.2127, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(50.1266, device='cuda:3')
+score : tensor(0.4755, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(604.6048, device='cuda:3')
+user_param_square tensor(125.2127, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(50.1266, device='cuda:3')
+score : tensor(0.4755, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(604.6048, device='cuda:3')
+user_param_square tensor(125.2127, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(50.1266, device='cuda:3')
+score : tensor(0.4755, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(604.6048, device='cuda:3')
+user_param_square tensor(125.2127, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(50.1266, device='cuda:3')
+score : tensor(0.4755, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(604.6048, device='cuda:3')
+user_param_square tensor(125.2127, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(50.1266, device='cuda:3')
+score : tensor(0.4755, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(604.6048, device='cuda:3')
+user_param_square tensor(125.2127, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(50.1266, device='cuda:3')
+score : tensor(0.4755, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(604.6048, device='cuda:3')
+user_param_square tensor(125.2127, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(50.1266, device='cuda:3')
+score : tensor(0.4755, device='cuda:3')
+accept
+grad,shape is torch.Size([215370])
+user_param_square norm is    tensor(604.6048, device='cuda:3')
+user_param_square tensor(125.2127, device='cuda:3')
+global_param_square tensor(25.9314, device='cuda:3')
+part1 is  tensor(50.1266, device='cuda:3')
+score : tensor(0.4755, device='cuda:3')
+accept
+len accept list 17
+len all weights is 17
+ 
+Avg Training Stats after 1 global rounds:
+Train Accuracy: 86.28% 
+
+Test Accuracy: 85.51% 
+
+
+ | Global Training Round : 2 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5556642413139343
+distance x is tensor(144.5313, device='cuda:3')
+benign distance is  tensor(144.5313, device='cuda:3')
+norm1 res is  tensor(643.1950, device='cuda:3')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.4295997619628906
+distance x is tensor(139.8890, device='cuda:3')
+benign distance is  tensor(139.8890, device='cuda:3')
+norm1 res is  tensor(608.3777, device='cuda:3')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.14916354417800903
+distance x is tensor(145.5648, device='cuda:3')
+benign distance is  tensor(145.5648, device='cuda:3')
+norm1 res is  tensor(618.3884, device='cuda:3')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.8054672479629517
+distance x is tensor(126.6025, device='cuda:3')
+benign distance is  tensor(126.6025, device='cuda:3')
+norm1 res is  tensor(550.0906, device='cuda:3')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.7230241298675537
+distance x is tensor(135.9379, device='cuda:3')
+benign distance is  tensor(135.9379, device='cuda:3')
+norm1 res is  tensor(566.5953, device='cuda:3')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.1130030155181885
+distance x is tensor(127.0004, device='cuda:3')
+benign distance is  tensor(127.0004, device='cuda:3')
+norm1 res is  tensor(566.3447, device='cuda:3')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.7129950523376465
+distance x is tensor(122.3401, device='cuda:3')
+benign distance is  tensor(122.3401, device='cuda:3')
+norm1 res is  tensor(524.9409, device='cuda:3')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5477306246757507
+distance x is tensor(138.7611, device='cuda:3')
+benign distance is  tensor(138.7611, device='cuda:3')
+norm1 res is  tensor(586.9471, device='cuda:3')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1

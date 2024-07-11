@@ -1,0 +1,4040 @@
+
+Experimental details:
+    Dataset     : fmnist
+    Model     : cnn
+    detailed Model     : resnet
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 50
+
+    Federated parameters:
+    IID
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.2
+     Model attack is done!
+attack user num is  12
+ t is  8
+attack_user is [48 49 50 51 52 53 54 55 56 57 58 59]
+
+ | Global Training Round : 1 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.4895342290401459
+distance x is tensor(104.7486, device='cuda:2')
+benign distance is  tensor(104.7486, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.996910572052002
+distance x is tensor(123.1765, device='cuda:2')
+benign distance is  tensor(123.1765, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.4885362684726715
+distance x is tensor(122.8906, device='cuda:2')
+benign distance is  tensor(122.8906, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5778442621231079
+distance x is tensor(109.1344, device='cuda:2')
+benign distance is  tensor(109.1344, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.7088237404823303
+distance x is tensor(102.9156, device='cuda:2')
+benign distance is  tensor(102.9156, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.8119441866874695
+distance x is tensor(122.2273, device='cuda:2')
+benign distance is  tensor(122.2273, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6258147358894348
+distance x is tensor(111.2537, device='cuda:2')
+benign distance is  tensor(111.2537, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5150576233863831
+distance x is tensor(125.8794, device='cuda:2')
+benign distance is  tensor(125.8794, device='cuda:2')
+current submit client idx and staleness is  8 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.07071106135845184
+distance x is tensor(135.8500, device='cuda:2')
+benign distance is  tensor(135.8500, device='cuda:2')
+current submit client idx and staleness is  9 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.5547044277191162
+distance x is tensor(139.9045, device='cuda:2')
+benign distance is  tensor(139.9045, device='cuda:2')
+current submit client idx and staleness is  10 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.7274839282035828
+distance x is tensor(118.1873, device='cuda:2')
+benign distance is  tensor(118.1873, device='cuda:2')
+current submit client idx and staleness is  11 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.3636923134326935
+distance x is tensor(133.1937, device='cuda:2')
+benign distance is  tensor(133.1937, device='cuda:2')
+current submit client idx and staleness is  12 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.4395371973514557
+distance x is tensor(129.2478, device='cuda:2')
+benign distance is  tensor(129.2478, device='cuda:2')
+current submit client idx and staleness is  13 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.13604414463043213
+distance x is tensor(140.3182, device='cuda:2')
+benign distance is  tensor(140.3182, device='cuda:2')
+current submit client idx and staleness is  14 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.7129309773445129
+distance x is tensor(137.0827, device='cuda:2')
+benign distance is  tensor(137.0827, device='cuda:2')
+current submit client idx and staleness is  15 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.16828766465187073
+distance x is tensor(134.2994, device='cuda:2')
+benign distance is  tensor(134.2994, device='cuda:2')
+current submit client idx and staleness is  16 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.29018527269363403
+distance x is tensor(126.5159, device='cuda:2')
+benign distance is  tensor(126.5159, device='cuda:2')
+current submit client idx and staleness is  17 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.7818027138710022
+distance x is tensor(147.9928, device='cuda:2')
+benign distance is  tensor(147.9928, device='cuda:2')
+current submit client idx and staleness is  18 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.3917232155799866
+distance x is tensor(125.2536, device='cuda:2')
+benign distance is  tensor(125.2536, device='cuda:2')
+current submit client idx and staleness is  19 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.7996848821640015
+distance x is tensor(125.5326, device='cuda:2')
+benign distance is  tensor(125.5326, device='cuda:2')
+current submit client idx and staleness is  20 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.2174985706806183
+distance x is tensor(125.1985, device='cuda:2')
+benign distance is  tensor(125.1985, device='cuda:2')
+current submit client idx and staleness is  21 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.3857596218585968
+distance x is tensor(122.7966, device='cuda:2')
+benign distance is  tensor(122.7966, device='cuda:2')
+current submit client idx and staleness is  22 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.40238767862319946
+distance x is tensor(145.1421, device='cuda:2')
+benign distance is  tensor(145.1421, device='cuda:2')
+current submit client idx and staleness is  23 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.8943037986755371
+distance x is tensor(131.8196, device='cuda:2')
+benign distance is  tensor(131.8196, device='cuda:2')
+current submit client idx and staleness is  24 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.3981139361858368
+distance x is tensor(145.3111, device='cuda:2')
+benign distance is  tensor(145.3111, device='cuda:2')
+current submit client idx and staleness is  25 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.7869343757629395
+distance x is tensor(130.0198, device='cuda:2')
+benign distance is  tensor(130.0198, device='cuda:2')
+current submit client idx and staleness is  26 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.84373939037323
+distance x is tensor(141.6081, device='cuda:2')
+benign distance is  tensor(141.6081, device='cuda:2')
+current submit client idx and staleness is  27 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.38894185423851013
+distance x is tensor(134.6332, device='cuda:2')
+benign distance is  tensor(134.6332, device='cuda:2')
+current submit client idx and staleness is  28 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.7225099802017212
+distance x is tensor(128.1959, device='cuda:2')
+benign distance is  tensor(128.1959, device='cuda:2')
+current submit client idx and staleness is  29 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.6676245927810669
+distance x is tensor(130.8332, device='cuda:2')
+benign distance is  tensor(130.8332, device='cuda:2')
+current submit client idx and staleness is  30 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.6439784169197083
+distance x is tensor(125.6590, device='cuda:2')
+benign distance is  tensor(125.6590, device='cuda:2')
+current submit client idx and staleness is  31 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.8675709962844849
+distance x is tensor(132.9639, device='cuda:2')
+benign distance is  tensor(132.9639, device='cuda:2')
+current submit client idx and staleness is  32 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.29522982239723206
+distance x is tensor(139.0720, device='cuda:2')
+benign distance is  tensor(139.0720, device='cuda:2')
+current submit client idx and staleness is  33 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.3092601001262665
+distance x is tensor(129.6417, device='cuda:2')
+benign distance is  tensor(129.6417, device='cuda:2')
+current submit client idx and staleness is  34 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.4683167338371277
+distance x is tensor(136.7962, device='cuda:2')
+benign distance is  tensor(136.7962, device='cuda:2')
+current submit client idx and staleness is  35 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.1399875283241272
+distance x is tensor(127.1365, device='cuda:2')
+benign distance is  tensor(127.1365, device='cuda:2')
+current submit client idx and staleness is  36 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.25110116600990295
+distance x is tensor(131.7707, device='cuda:2')
+benign distance is  tensor(131.7707, device='cuda:2')
+current submit client idx and staleness is  37 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.30564215779304504
+distance x is tensor(125.3119, device='cuda:2')
+benign distance is  tensor(125.3119, device='cuda:2')
+current submit client idx and staleness is  38 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.5677503347396851
+distance x is tensor(123.7729, device='cuda:2')
+benign distance is  tensor(123.7729, device='cuda:2')
+current submit client idx and staleness is  39 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.17688460648059845
+distance x is tensor(126.5162, device='cuda:2')
+benign distance is  tensor(126.5162, device='cuda:2')
+current submit client idx and staleness is  40 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.16778048872947693
+distance x is tensor(126.4028, device='cuda:2')
+benign distance is  tensor(126.4028, device='cuda:2')
+current submit client idx and staleness is  41 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.6510701775550842
+distance x is tensor(124.1404, device='cuda:2')
+benign distance is  tensor(124.1404, device='cuda:2')
+current submit client idx and staleness is  42 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.0423680916428566
+distance x is tensor(130.4592, device='cuda:2')
+benign distance is  tensor(130.4592, device='cuda:2')
+current submit client idx and staleness is  43 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.20919577777385712
+distance x is tensor(134.1648, device='cuda:2')
+benign distance is  tensor(134.1648, device='cuda:2')
+current submit client idx and staleness is  44 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.4706290364265442
+distance x is tensor(135.6125, device='cuda:2')
+benign distance is  tensor(135.6125, device='cuda:2')
+current submit client idx and staleness is  45 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.5340046882629395
+distance x is tensor(129.4895, device='cuda:2')
+benign distance is  tensor(129.4895, device='cuda:2')
+current submit client idx and staleness is  46 6
+grad,shape is torch.Size([215370])
+ benign loss is  1.1110941171646118
+distance x is tensor(135.0431, device='cuda:2')
+benign distance is  tensor(135.0431, device='cuda:2')
+current submit client idx and staleness is  47 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.17414428293704987
+distance x is tensor(137.9973, device='cuda:2')
+benign distance is  tensor(137.9973, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.9000000005000001
+mal_loss is 0.24911347031593323
+mal_entropy is 0.1792651265859604
+loss origin is 0.23568515479564667
+index is 0  loss diff is 0.22786979377269745
+index is 1  loss diff is 0.2251354157924652
+index is 2  loss diff is 0.2432469129562378
+index is 3  loss diff is 0.23547637462615967
+index is 4  loss diff is 0.22637435793876648
+index is 5  loss diff is 0.22024643421173096
+index is 6  loss diff is 0.2408590316772461
+index is 7  loss diff is 0.24546515941619873
+index is 8  loss diff is 0.23741742968559265
+index is 9  loss diff is 0.23741742968559265
+index is 10  loss diff is 0.23741742968559265
+index is 11  loss diff is 0.23741742968559265
+index is 12  loss diff is 0.23741742968559265
+index is 13  loss diff is 0.23741742968559265
+index is 14  loss diff is 0.23741742968559265
+index is 15  loss diff is 0.23741742968559265
+index is 16  loss diff is 0.23741742968559265
+index is 17  loss diff is 0.23741742968559265
+index is 18  loss diff is 0.23741742968559265
+index is 19  loss diff is 0.23741742968559265
+ 
+Avg Training Stats after 1 global rounds:
+Train Accuracy: 89.15% 
+
+Test Accuracy: 88.13% 
+
+
+ | Global Training Round : 2 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.6014055013656616
+distance x is tensor(116.2042, device='cuda:2')
+benign distance is  tensor(116.2042, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.7778427004814148
+distance x is tensor(111.4243, device='cuda:2')
+benign distance is  tensor(111.4243, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.9171243906021118
+distance x is tensor(105.1169, device='cuda:2')
+benign distance is  tensor(105.1169, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.2016466856002808
+distance x is tensor(108.8662, device='cuda:2')
+benign distance is  tensor(108.8662, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5839816331863403
+distance x is tensor(118.2502, device='cuda:2')
+benign distance is  tensor(118.2502, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.8022276759147644
+distance x is tensor(134.0750, device='cuda:2')
+benign distance is  tensor(134.0750, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.1028270497918129
+distance x is tensor(116.0317, device='cuda:2')
+benign distance is  tensor(116.0317, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.32170432806015015
+distance x is tensor(121.0717, device='cuda:2')
+benign distance is  tensor(121.0717, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.9000000005000001
+mal_loss is 0.4479077458381653
+mal_entropy is 0.1905607432126999
+loss origin is 0.2083575278520584
+index is 0  loss diff is 0.2083604335784912
+index is 1  loss diff is 0.20631852746009827
+index is 2  loss diff is 0.2194218933582306
+index is 3  loss diff is 0.20753955841064453
+index is 4  loss diff is 0.2011934220790863
+index is 5  loss diff is 0.20197956264019012
+index is 6  loss diff is 0.22343793511390686
+index is 7  loss diff is 0.21142061054706573
+index is 8  loss diff is 0.208172008395195
+index is 9  loss diff is 0.208172008395195
+index is 10  loss diff is 0.208172008395195
+index is 11  loss diff is 0.208172008395195
+index is 12  loss diff is 0.208172008395195
+index is 13  loss diff is 0.208172008395195
+index is 14  loss diff is 0.208172008395195
+index is 15  loss diff is 0.208172008395195
+index is 16  loss diff is 0.208172008395195
+index is 17  loss diff is 0.208172008395195
+index is 18  loss diff is 0.208172008395195
+index is 19  loss diff is 0.208172008395195
+index is 20  loss diff is 0.21524746716022491
+index is 21  loss diff is 0.207881897687912
+index is 22  loss diff is 0.20620718598365784
+index is 23  loss diff is 0.20240357518196106
+index is 24  loss diff is 0.20671674609184265
+index is 25  loss diff is 0.21057090163230896
+index is 26  loss diff is 0.202213853597641
+index is 27  loss diff is 0.20739269256591797
+ 
+Avg Training Stats after 2 global rounds:
+Train Accuracy: 88.87% 
+
+Test Accuracy: 87.94% 
+
+
+ | Global Training Round : 3 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.4996907114982605
+distance x is tensor(107.9634, device='cuda:2')
+benign distance is  tensor(107.9634, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6876795887947083
+distance x is tensor(113.8546, device='cuda:2')
+benign distance is  tensor(113.8546, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.19639188051223755
+distance x is tensor(126.4484, device='cuda:2')
+benign distance is  tensor(126.4484, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.31549668312072754
+distance x is tensor(129.3253, device='cuda:2')
+benign distance is  tensor(129.3253, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.4037088453769684
+distance x is tensor(111.1522, device='cuda:2')
+benign distance is  tensor(111.1522, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.8824298977851868
+distance x is tensor(118.0884, device='cuda:2')
+benign distance is  tensor(118.0884, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.1747928112745285
+distance x is tensor(128.0939, device='cuda:2')
+benign distance is  tensor(128.0939, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.8826097249984741
+distance x is tensor(120.1250, device='cuda:2')
+benign distance is  tensor(120.1250, device='cuda:2')
+current submit client idx and staleness is  8 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.5648795962333679
+distance x is tensor(140.7522, device='cuda:2')
+benign distance is  tensor(140.7522, device='cuda:2')
+current submit client idx and staleness is  9 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.46391788125038147
+distance x is tensor(130.8378, device='cuda:2')
+benign distance is  tensor(130.8378, device='cuda:2')
+current submit client idx and staleness is  10 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.5105612874031067
+distance x is tensor(127.7984, device='cuda:2')
+benign distance is  tensor(127.7984, device='cuda:2')
+current submit client idx and staleness is  11 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.5342006087303162
+distance x is tensor(130.6140, device='cuda:2')
+benign distance is  tensor(130.6140, device='cuda:2')
+current submit client idx and staleness is  12 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.4259921908378601
+distance x is tensor(123.0591, device='cuda:2')
+benign distance is  tensor(123.0591, device='cuda:2')
+current submit client idx and staleness is  13 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.1132964938879013
+distance x is tensor(137.6855, device='cuda:2')
+benign distance is  tensor(137.6855, device='cuda:2')
+current submit client idx and staleness is  14 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.28685253858566284
+distance x is tensor(131.3959, device='cuda:2')
+benign distance is  tensor(131.3959, device='cuda:2')
+current submit client idx and staleness is  15 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.4101533889770508
+distance x is tensor(137.6385, device='cuda:2')
+benign distance is  tensor(137.6385, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.8000000005000001
+mal_loss is 0.6800394058227539
+mal_entropy is 0.25130245089530945
+loss origin is 0.24456696212291718
+index is 0  loss diff is 0.24725082516670227
+index is 1  loss diff is 0.24105536937713623
+index is 2  loss diff is 0.2673134207725525
+index is 3  loss diff is 0.25212743878364563
+index is 4  loss diff is 0.24464333057403564
+index is 5  loss diff is 0.23808851838111877
+index is 6  loss diff is 0.2523576319217682
+index is 7  loss diff is 0.23868384957313538
+index is 8  loss diff is 0.24083948135375977
+index is 9  loss diff is 0.24083948135375977
+index is 10  loss diff is 0.24083948135375977
+index is 11  loss diff is 0.24083948135375977
+index is 12  loss diff is 0.24083948135375977
+index is 13  loss diff is 0.24083948135375977
+index is 14  loss diff is 0.24083948135375977
+index is 15  loss diff is 0.24083948135375977
+index is 16  loss diff is 0.24083948135375977
+index is 17  loss diff is 0.24083948135375977
+index is 18  loss diff is 0.24083948135375977
+index is 19  loss diff is 0.24083948135375977
+index is 20  loss diff is 0.24711081385612488
+index is 21  loss diff is 0.2459026277065277
+index is 22  loss diff is 0.25318804383277893
+index is 23  loss diff is 0.25026169419288635
+index is 24  loss diff is 0.24845413863658905
+index is 25  loss diff is 0.2334437370300293
+index is 26  loss diff is 0.251314640045166
+index is 27  loss diff is 0.2430022656917572
+ 
+Avg Training Stats after 3 global rounds:
+Train Accuracy: 88.54% 
+
+Test Accuracy: 87.55% 
+
+
+ | Global Training Round : 4 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5613901019096375
+distance x is tensor(106.7822, device='cuda:2')
+benign distance is  tensor(106.7822, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6012811660766602
+distance x is tensor(113.9998, device='cuda:2')
+benign distance is  tensor(113.9998, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.22782984375953674
+distance x is tensor(117.1531, device='cuda:2')
+benign distance is  tensor(117.1531, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.8022910952568054
+distance x is tensor(114.7069, device='cuda:2')
+benign distance is  tensor(114.7069, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.8528415560722351
+distance x is tensor(96.4026, device='cuda:2')
+benign distance is  tensor(96.4026, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.43784624338150024
+distance x is tensor(125.8496, device='cuda:2')
+benign distance is  tensor(125.8496, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.21509869396686554
+distance x is tensor(117.6667, device='cuda:2')
+benign distance is  tensor(117.6667, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.2685810923576355
+distance x is tensor(114.0305, device='cuda:2')
+benign distance is  tensor(114.0305, device='cuda:2')
+current submit client idx and staleness is  16 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.3751299977302551
+distance x is tensor(132.8388, device='cuda:2')
+benign distance is  tensor(132.8388, device='cuda:2')
+current submit client idx and staleness is  17 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.6021713018417358
+distance x is tensor(146.5407, device='cuda:2')
+benign distance is  tensor(146.5407, device='cuda:2')
+current submit client idx and staleness is  18 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.9613676071166992
+distance x is tensor(129.7268, device='cuda:2')
+benign distance is  tensor(129.7268, device='cuda:2')
+current submit client idx and staleness is  19 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.4024525284767151
+distance x is tensor(129.7614, device='cuda:2')
+benign distance is  tensor(129.7614, device='cuda:2')
+current submit client idx and staleness is  20 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.3158762454986572
+distance x is tensor(123.0029, device='cuda:2')
+benign distance is  tensor(123.0029, device='cuda:2')
+current submit client idx and staleness is  21 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.8756637573242188
+distance x is tensor(132.1633, device='cuda:2')
+benign distance is  tensor(132.1633, device='cuda:2')
+current submit client idx and staleness is  22 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.5313878059387207
+distance x is tensor(133.7514, device='cuda:2')
+benign distance is  tensor(133.7514, device='cuda:2')
+current submit client idx and staleness is  23 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.4485488533973694
+distance x is tensor(126.8021, device='cuda:2')
+benign distance is  tensor(126.8021, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.8500000005
+mal_loss is 0.5942772030830383
+mal_entropy is 0.27033570408821106
+loss origin is 0.31233638525009155
+index is 0  loss diff is 0.3111804723739624
+index is 1  loss diff is 0.3054211437702179
+index is 2  loss diff is 0.3188604712486267
+index is 3  loss diff is 0.310916543006897
+index is 4  loss diff is 0.3115639090538025
+index is 5  loss diff is 0.3200805187225342
+index is 6  loss diff is 0.32238778471946716
+index is 7  loss diff is 0.3108251094818115
+index is 8  loss diff is 0.3083781898021698
+index is 9  loss diff is 0.3083781898021698
+index is 10  loss diff is 0.3083781898021698
+index is 11  loss diff is 0.3083781898021698
+index is 12  loss diff is 0.3083781898021698
+index is 13  loss diff is 0.3083781898021698
+index is 14  loss diff is 0.3083781898021698
+index is 15  loss diff is 0.3083781898021698
+index is 16  loss diff is 0.3083781898021698
+index is 17  loss diff is 0.3083781898021698
+index is 18  loss diff is 0.3083781898021698
+index is 19  loss diff is 0.3083781898021698
+index is 20  loss diff is 0.3103710114955902
+index is 21  loss diff is 0.3111441135406494
+index is 22  loss diff is 0.3120712637901306
+index is 23  loss diff is 0.31441348791122437
+index is 24  loss diff is 0.3102305829524994
+index is 25  loss diff is 0.31682997941970825
+index is 26  loss diff is 0.31752732396125793
+index is 27  loss diff is 0.31248801946640015
+index is 28  loss diff is 0.3144029676914215
+index is 29  loss diff is 0.32041552662849426
+index is 30  loss diff is 0.3139282763004303
+index is 31  loss diff is 0.3119649887084961
+index is 32  loss diff is 0.3109523355960846
+index is 33  loss diff is 0.3214309811592102
+index is 34  loss diff is 0.3223438858985901
+index is 35  loss diff is 0.3085451126098633
+ 
+Avg Training Stats after 4 global rounds:
+Train Accuracy: 88.50% 
+
+Test Accuracy: 87.45% 
+
+
+ | Global Training Round : 5 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.7632680535316467
+distance x is tensor(107.0211, device='cuda:2')
+benign distance is  tensor(107.0211, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.0629470348358154
+distance x is tensor(122.2863, device='cuda:2')
+benign distance is  tensor(122.2863, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.18288938701152802
+distance x is tensor(132.6452, device='cuda:2')
+benign distance is  tensor(132.6452, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.384657859802246
+distance x is tensor(120.8445, device='cuda:2')
+benign distance is  tensor(120.8445, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.8537423014640808
+distance x is tensor(116.0129, device='cuda:2')
+benign distance is  tensor(116.0129, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5060027837753296
+distance x is tensor(128.4727, device='cuda:2')
+benign distance is  tensor(128.4727, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.19550544023513794
+distance x is tensor(122.2859, device='cuda:2')
+benign distance is  tensor(122.2859, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.3377405107021332
+distance x is tensor(125.7444, device='cuda:2')
+benign distance is  tensor(125.7444, device='cuda:2')
+current submit client idx and staleness is  8 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.2541911005973816
+distance x is tensor(139.1486, device='cuda:2')
+benign distance is  tensor(139.1486, device='cuda:2')
+current submit client idx and staleness is  9 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.7286852598190308
+distance x is tensor(126.0853, device='cuda:2')
+benign distance is  tensor(126.0853, device='cuda:2')
+current submit client idx and staleness is  10 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.5923861265182495
+distance x is tensor(126.5558, device='cuda:2')
+benign distance is  tensor(126.5558, device='cuda:2')
+current submit client idx and staleness is  11 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.6759903430938721
+distance x is tensor(127.4949, device='cuda:2')
+benign distance is  tensor(127.4949, device='cuda:2')
+current submit client idx and staleness is  12 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.42777204513549805
+distance x is tensor(133.1123, device='cuda:2')
+benign distance is  tensor(133.1123, device='cuda:2')
+current submit client idx and staleness is  13 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.04498925060033798
+distance x is tensor(130.1711, device='cuda:2')
+benign distance is  tensor(130.1711, device='cuda:2')
+current submit client idx and staleness is  14 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.7145849466323853
+distance x is tensor(133.8605, device='cuda:2')
+benign distance is  tensor(133.8605, device='cuda:2')
+current submit client idx and staleness is  15 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.6103331446647644
+distance x is tensor(132.0818, device='cuda:2')
+benign distance is  tensor(132.0818, device='cuda:2')
+current submit client idx and staleness is  24 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.5432430505752563
+distance x is tensor(148.6924, device='cuda:2')
+benign distance is  tensor(148.6924, device='cuda:2')
+current submit client idx and staleness is  25 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.9148311614990234
+distance x is tensor(127.2161, device='cuda:2')
+benign distance is  tensor(127.2161, device='cuda:2')
+current submit client idx and staleness is  26 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.49204960465431213
+distance x is tensor(141.2693, device='cuda:2')
+benign distance is  tensor(141.2693, device='cuda:2')
+current submit client idx and staleness is  27 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.6066153049468994
+distance x is tensor(144.2890, device='cuda:2')
+benign distance is  tensor(144.2890, device='cuda:2')
+current submit client idx and staleness is  28 4
+grad,shape is torch.Size([215370])
+ benign loss is  1.0494279861450195
+distance x is tensor(130.3219, device='cuda:2')
+benign distance is  tensor(130.3219, device='cuda:2')
+current submit client idx and staleness is  29 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.5439220070838928
+distance x is tensor(146.8569, device='cuda:2')
+benign distance is  tensor(146.8569, device='cuda:2')
+current submit client idx and staleness is  30 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.12860581278800964
+distance x is tensor(130.8814, device='cuda:2')
+benign distance is  tensor(130.8814, device='cuda:2')
+current submit client idx and staleness is  31 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.4683777391910553
+distance x is tensor(128.6412, device='cuda:2')
+benign distance is  tensor(128.6412, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.7500000005
+mal_loss is 0.8875568509101868
+mal_entropy is 0.3025040030479431
+loss origin is 0.32581374049186707
+index is 0  loss diff is 0.32094651460647583
+index is 1  loss diff is 0.3177495002746582
+index is 2  loss diff is 0.3323928415775299
+index is 3  loss diff is 0.3203587532043457
+index is 4  loss diff is 0.32670554518699646
+index is 5  loss diff is 0.3188607096672058
+index is 6  loss diff is 0.33679166436195374
+index is 7  loss diff is 0.3236636817455292
+index is 8  loss diff is 0.3195551931858063
+index is 9  loss diff is 0.3195551931858063
+index is 10  loss diff is 0.3195551931858063
+index is 11  loss diff is 0.3195551931858063
+index is 12  loss diff is 0.3195551931858063
+index is 13  loss diff is 0.3195551931858063
+index is 14  loss diff is 0.3195551931858063
+index is 15  loss diff is 0.3195551931858063
+index is 16  loss diff is 0.3195551931858063
+index is 17  loss diff is 0.3195551931858063
+index is 18  loss diff is 0.3195551931858063
+index is 19  loss diff is 0.3195551931858063
+index is 20  loss diff is 0.3427914083003998
+index is 21  loss diff is 0.332242488861084
+index is 22  loss diff is 0.3393303155899048
+index is 23  loss diff is 0.36101946234703064
+index is 24  loss diff is 0.3295309543609619
+index is 25  loss diff is 0.326362669467926
+index is 26  loss diff is 0.32502055168151855
+index is 27  loss diff is 0.3350324034690857
+ 
+Avg Training Stats after 5 global rounds:
+Train Accuracy: 87.60% 
+
+Test Accuracy: 86.90% 
+
+
+ | Global Training Round : 6 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.29332929849624634
+distance x is tensor(116.4693, device='cuda:2')
+benign distance is  tensor(116.4693, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.40831536054611206
+distance x is tensor(131.5544, device='cuda:2')
+benign distance is  tensor(131.5544, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.2558303475379944
+distance x is tensor(128.9601, device='cuda:2')
+benign distance is  tensor(128.9601, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.70181804895401
+distance x is tensor(112.2193, device='cuda:2')
+benign distance is  tensor(112.2193, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.7672744989395142
+distance x is tensor(110.5281, device='cuda:2')
+benign distance is  tensor(110.5281, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5893459916114807
+distance x is tensor(137.4461, device='cuda:2')
+benign distance is  tensor(137.4461, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.8603177070617676
+distance x is tensor(151.0332, device='cuda:2')
+benign distance is  tensor(151.0332, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5315419435501099
+distance x is tensor(125.5966, device='cuda:2')
+benign distance is  tensor(125.5966, device='cuda:2')
+current submit client idx and staleness is  32 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.3780749440193176
+distance x is tensor(140.6102, device='cuda:2')
+benign distance is  tensor(140.6102, device='cuda:2')
+current submit client idx and staleness is  33 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.28808289766311646
+distance x is tensor(145.1875, device='cuda:2')
+benign distance is  tensor(145.1875, device='cuda:2')
+current submit client idx and staleness is  34 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.692509651184082
+distance x is tensor(135.5412, device='cuda:2')
+benign distance is  tensor(135.5412, device='cuda:2')
+current submit client idx and staleness is  35 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.20670346915721893
+distance x is tensor(133.7987, device='cuda:2')
+benign distance is  tensor(133.7987, device='cuda:2')
+current submit client idx and staleness is  36 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.59455806016922
+distance x is tensor(135.1959, device='cuda:2')
+benign distance is  tensor(135.1959, device='cuda:2')
+current submit client idx and staleness is  37 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.6381295323371887
+distance x is tensor(136.0355, device='cuda:2')
+benign distance is  tensor(136.0355, device='cuda:2')
+current submit client idx and staleness is  38 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.4388751983642578
+distance x is tensor(128.2785, device='cuda:2')
+benign distance is  tensor(128.2785, device='cuda:2')
+current submit client idx and staleness is  39 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.19299426674842834
+distance x is tensor(129.8138, device='cuda:2')
+benign distance is  tensor(129.8138, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.5500000005000001
+mal_loss is 2.87091064453125
+mal_entropy is 0.21725963056087494
+loss origin is 0.36444488167762756
+index is 0  loss diff is 0.3632510006427765
+index is 1  loss diff is 0.3665209412574768
+index is 2  loss diff is 0.380909264087677
+index is 3  loss diff is 0.36914095282554626
+index is 4  loss diff is 0.36596304178237915
+index is 5  loss diff is 0.36698657274246216
+index is 6  loss diff is 0.37015271186828613
+index is 7  loss diff is 0.36497458815574646
+index is 8  loss diff is 0.357453852891922
+index is 9  loss diff is 0.357453852891922
+index is 10  loss diff is 0.357453852891922
+index is 11  loss diff is 0.357453852891922
+index is 12  loss diff is 0.357453852891922
+index is 13  loss diff is 0.357453852891922
+index is 14  loss diff is 0.357453852891922
+index is 15  loss diff is 0.357453852891922
+index is 16  loss diff is 0.357453852891922
+index is 17  loss diff is 0.357453852891922
+index is 18  loss diff is 0.357453852891922
+index is 19  loss diff is 0.357453852891922
+index is 20  loss diff is 0.3726525604724884
+index is 21  loss diff is 0.3642231822013855
+index is 22  loss diff is 0.3730830252170563
+index is 23  loss diff is 0.36563077569007874
+index is 24  loss diff is 0.36645063757896423
+index is 25  loss diff is 0.3671204447746277
+index is 26  loss diff is 0.3598940968513489
+index is 27  loss diff is 0.36419910192489624
+index is 28  loss diff is 0.368755578994751
+index is 29  loss diff is 0.36407390236854553
+index is 30  loss diff is 0.36336129903793335
+index is 31  loss diff is 0.3679424226284027
+index is 32  loss diff is 0.3676922619342804
+index is 33  loss diff is 0.36374443769454956
+index is 34  loss diff is 0.3664168417453766
+index is 35  loss diff is 0.364611953496933
+index is 36  loss diff is 0.372403621673584
+index is 37  loss diff is 0.3629687428474426
+index is 38  loss diff is 0.3618704080581665
+index is 39  loss diff is 0.36046868562698364
+index is 40  loss diff is 0.3711390197277069
+index is 41  loss diff is 0.3727836012840271
+index is 42  loss diff is 0.3683631420135498
+index is 43  loss diff is 0.3663027882575989
+ 
+Avg Training Stats after 6 global rounds:
+Train Accuracy: 88.49% 
+
+Test Accuracy: 87.48% 
+
+
+ | Global Training Round : 7 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.2697681784629822
+distance x is tensor(119.5154, device='cuda:2')
+benign distance is  tensor(119.5154, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5943317413330078
+distance x is tensor(121.8694, device='cuda:2')
+benign distance is  tensor(121.8694, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.018448946997523308
+distance x is tensor(126.1642, device='cuda:2')
+benign distance is  tensor(126.1642, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5578869581222534
+distance x is tensor(109.4182, device='cuda:2')
+benign distance is  tensor(109.4182, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5547032356262207
+distance x is tensor(104.8253, device='cuda:2')
+benign distance is  tensor(104.8253, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.7112352252006531
+distance x is tensor(121.7400, device='cuda:2')
+benign distance is  tensor(121.7400, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.31677913665771484
+distance x is tensor(114.2624, device='cuda:2')
+benign distance is  tensor(114.2624, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.42115968465805054
+distance x is tensor(120.7719, device='cuda:2')
+benign distance is  tensor(120.7719, device='cuda:2')
+current submit client idx and staleness is  8 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.07185077667236328
+distance x is tensor(144.0241, device='cuda:2')
+benign distance is  tensor(144.0241, device='cuda:2')
+current submit client idx and staleness is  9 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.5418961048126221
+distance x is tensor(137.8534, device='cuda:2')
+benign distance is  tensor(137.8534, device='cuda:2')
+current submit client idx and staleness is  10 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.10154624283313751
+distance x is tensor(140.8347, device='cuda:2')
+benign distance is  tensor(140.8347, device='cuda:2')
+current submit client idx and staleness is  11 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.6283979415893555
+distance x is tensor(138.1973, device='cuda:2')
+benign distance is  tensor(138.1973, device='cuda:2')
+current submit client idx and staleness is  12 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.4179448187351227
+distance x is tensor(121.5848, device='cuda:2')
+benign distance is  tensor(121.5848, device='cuda:2')
+current submit client idx and staleness is  13 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.13439595699310303
+distance x is tensor(139.6073, device='cuda:2')
+benign distance is  tensor(139.6073, device='cuda:2')
+current submit client idx and staleness is  14 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.37870851159095764
+distance x is tensor(132.0019, device='cuda:2')
+benign distance is  tensor(132.0019, device='cuda:2')
+current submit client idx and staleness is  15 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.7749918103218079
+distance x is tensor(135.7734, device='cuda:2')
+benign distance is  tensor(135.7734, device='cuda:2')
+current submit client idx and staleness is  16 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.44155868887901306
+distance x is tensor(129.1436, device='cuda:2')
+benign distance is  tensor(129.1436, device='cuda:2')
+current submit client idx and staleness is  17 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.7253082990646362
+distance x is tensor(138.3675, device='cuda:2')
+benign distance is  tensor(138.3675, device='cuda:2')
+current submit client idx and staleness is  18 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.6555211544036865
+distance x is tensor(124.3884, device='cuda:2')
+benign distance is  tensor(124.3884, device='cuda:2')
+current submit client idx and staleness is  19 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.20851841568946838
+distance x is tensor(133.8687, device='cuda:2')
+benign distance is  tensor(133.8687, device='cuda:2')
+current submit client idx and staleness is  20 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.46137675642967224
+distance x is tensor(138.9827, device='cuda:2')
+benign distance is  tensor(138.9827, device='cuda:2')
+current submit client idx and staleness is  21 3
+grad,shape is torch.Size([215370])
+ benign loss is  1.0473188161849976
+distance x is tensor(128.4424, device='cuda:2')
+benign distance is  tensor(128.4424, device='cuda:2')
+current submit client idx and staleness is  22 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.1435116082429886
+distance x is tensor(133.4158, device='cuda:2')
+benign distance is  tensor(133.4158, device='cuda:2')
+current submit client idx and staleness is  23 3
+grad,shape is torch.Size([215370])
+ benign loss is  1.0492873191833496
+distance x is tensor(141.9606, device='cuda:2')
+benign distance is  tensor(141.9606, device='cuda:2')
+current submit client idx and staleness is  40 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.17022714018821716
+distance x is tensor(133.5044, device='cuda:2')
+benign distance is  tensor(133.5044, device='cuda:2')
+current submit client idx and staleness is  41 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.20736661553382874
+distance x is tensor(129.4904, device='cuda:2')
+benign distance is  tensor(129.4904, device='cuda:2')
+current submit client idx and staleness is  42 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.6946318745613098
+distance x is tensor(136.0753, device='cuda:2')
+benign distance is  tensor(136.0753, device='cuda:2')
+current submit client idx and staleness is  43 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.35739678144454956
+distance x is tensor(142.9173, device='cuda:2')
+benign distance is  tensor(142.9173, device='cuda:2')
+current submit client idx and staleness is  44 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.46103399991989136
+distance x is tensor(129.1210, device='cuda:2')
+benign distance is  tensor(129.1210, device='cuda:2')
+current submit client idx and staleness is  45 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.38310614228248596
+distance x is tensor(131.0620, device='cuda:2')
+benign distance is  tensor(131.0620, device='cuda:2')
+current submit client idx and staleness is  46 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.5021716356277466
+distance x is tensor(145.2686, device='cuda:2')
+benign distance is  tensor(145.2686, device='cuda:2')
+current submit client idx and staleness is  47 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.3655509650707245
+distance x is tensor(138.9830, device='cuda:2')
+benign distance is  tensor(138.9830, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.7000000005
+mal_loss is 2.604214906692505
+mal_entropy is 0.36664387583732605
+loss origin is 0.5424710512161255
+index is 0  loss diff is 0.5545912384986877
+index is 1  loss diff is 0.5617439150810242
+index is 2  loss diff is 0.5853487849235535
+index is 3  loss diff is 0.5746053457260132
+index is 4  loss diff is 0.5494441986083984
+index is 5  loss diff is 0.5471140742301941
+index is 6  loss diff is 0.5659411549568176
+index is 7  loss diff is 0.5585651993751526
+index is 8  loss diff is 0.5297465324401855
+index is 9  loss diff is 0.5297465324401855
+index is 10  loss diff is 0.5297465324401855
+index is 11  loss diff is 0.5297465324401855
+index is 12  loss diff is 0.5297465324401855
+index is 13  loss diff is 0.5297465324401855
+index is 14  loss diff is 0.5297465324401855
+index is 15  loss diff is 0.5297465324401855
+index is 16  loss diff is 0.5297465324401855
+index is 17  loss diff is 0.5297465324401855
+index is 18  loss diff is 0.5297465324401855
+index is 19  loss diff is 0.5297465324401855
+ 
+Avg Training Stats after 7 global rounds:
+Train Accuracy: 84.59% 
+
+Test Accuracy: 83.54% 
+
+
+ | Global Training Round : 8 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.30605900287628174
+distance x is tensor(125.9022, device='cuda:2')
+benign distance is  tensor(125.9022, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6430509686470032
+distance x is tensor(138.6155, device='cuda:2')
+benign distance is  tensor(138.6155, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.06241840124130249
+distance x is tensor(134.0580, device='cuda:2')
+benign distance is  tensor(134.0580, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5813013315200806
+distance x is tensor(135.3684, device='cuda:2')
+benign distance is  tensor(135.3684, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5682698488235474
+distance x is tensor(121.9550, device='cuda:2')
+benign distance is  tensor(121.9550, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.5102638006210327
+distance x is tensor(137.0307, device='cuda:2')
+benign distance is  tensor(137.0307, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.3222954273223877
+distance x is tensor(144.1509, device='cuda:2')
+benign distance is  tensor(144.1509, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.42002496123313904
+distance x is tensor(135.0171, device='cuda:2')
+benign distance is  tensor(135.0171, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.2000000005
+mal_loss is 21.95156478881836
+mal_entropy is 0.056532006710767746
+loss origin is 0.5377487540245056
+index is 0  loss diff is 0.5428431630134583
+index is 1  loss diff is 0.545813262462616
+index is 2  loss diff is 0.5621875524520874
+index is 3  loss diff is 0.5517387986183167
+index is 4  loss diff is 0.5445323586463928
+index is 5  loss diff is 0.5436578392982483
+index is 6  loss diff is 0.5514609217643738
+index is 7  loss diff is 0.5431521534919739
+index is 8  loss diff is 0.5178757905960083
+index is 9  loss diff is 0.5178757905960083
+index is 10  loss diff is 0.5178757905960083
+index is 11  loss diff is 0.5178757905960083
+index is 12  loss diff is 0.5178757905960083
+index is 13  loss diff is 0.5178757905960083
+index is 14  loss diff is 0.5178757905960083
+index is 15  loss diff is 0.5178757905960083
+index is 16  loss diff is 0.5178757905960083
+index is 17  loss diff is 0.5178757905960083
+index is 18  loss diff is 0.5178757905960083
+index is 19  loss diff is 0.5178757905960083
+index is 20  loss diff is 0.5469492673873901
+index is 21  loss diff is 0.5413914918899536
+index is 22  loss diff is 0.5532189011573792
+index is 23  loss diff is 0.5380774140357971
+index is 24  loss diff is 0.5415606498718262
+index is 25  loss diff is 0.5440276861190796
+index is 26  loss diff is 0.5505141019821167
+index is 27  loss diff is 0.5573713779449463
+index is 28  loss diff is 0.5502728223800659
+index is 29  loss diff is 0.5471773147583008
+index is 30  loss diff is 0.5489227175712585
+index is 31  loss diff is 0.5437213778495789
+index is 32  loss diff is 0.5485515594482422
+index is 33  loss diff is 0.5544490218162537
+index is 34  loss diff is 0.552054762840271
+index is 35  loss diff is 0.5457937717437744
+ 
+Avg Training Stats after 8 global rounds:
+Train Accuracy: 87.25% 
+
+Test Accuracy: 86.34% 
+
+
+ | Global Training Round : 9 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.44102734327316284
+distance x is tensor(112.4366, device='cuda:2')
+benign distance is  tensor(112.4366, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6768465638160706
+distance x is tensor(124.7638, device='cuda:2')
+benign distance is  tensor(124.7638, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.1560724675655365
+distance x is tensor(143.8806, device='cuda:2')
+benign distance is  tensor(143.8806, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.8306453824043274
+distance x is tensor(104.7303, device='cuda:2')
+benign distance is  tensor(104.7303, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.7716246843338013
+distance x is tensor(102.5314, device='cuda:2')
+benign distance is  tensor(102.5314, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6505845189094543
+distance x is tensor(133.8026, device='cuda:2')
+benign distance is  tensor(133.8026, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.4880189299583435
+distance x is tensor(125.3151, device='cuda:2')
+benign distance is  tensor(125.3151, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5954359769821167
+distance x is tensor(129.4282, device='cuda:2')
+benign distance is  tensor(129.4282, device='cuda:2')
+current submit client idx and staleness is  8 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.6432701349258423
+distance x is tensor(136.7901, device='cuda:2')
+benign distance is  tensor(136.7901, device='cuda:2')
+current submit client idx and staleness is  9 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.6986901760101318
+distance x is tensor(143.9029, device='cuda:2')
+benign distance is  tensor(143.9029, device='cuda:2')
+current submit client idx and staleness is  10 2
+grad,shape is torch.Size([215370])
+ benign loss is  1.1061567068099976
+distance x is tensor(146.5496, device='cuda:2')
+benign distance is  tensor(146.5496, device='cuda:2')
+current submit client idx and staleness is  11 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.7317079305648804
+distance x is tensor(148.7269, device='cuda:2')
+benign distance is  tensor(148.7269, device='cuda:2')
+current submit client idx and staleness is  12 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.4967735707759857
+distance x is tensor(142.5872, device='cuda:2')
+benign distance is  tensor(142.5872, device='cuda:2')
+current submit client idx and staleness is  13 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.3397120535373688
+distance x is tensor(139.7241, device='cuda:2')
+benign distance is  tensor(139.7241, device='cuda:2')
+current submit client idx and staleness is  14 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.37222781777381897
+distance x is tensor(139.6612, device='cuda:2')
+benign distance is  tensor(139.6612, device='cuda:2')
+current submit client idx and staleness is  15 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.496837317943573
+distance x is tensor(159.8432, device='cuda:2')
+benign distance is  tensor(159.8432, device='cuda:2')
+current submit client idx and staleness is  24 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.16897039115428925
+distance x is tensor(146.0613, device='cuda:2')
+benign distance is  tensor(146.0613, device='cuda:2')
+current submit client idx and staleness is  25 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.8610497713088989
+distance x is tensor(139.2355, device='cuda:2')
+benign distance is  tensor(139.2355, device='cuda:2')
+current submit client idx and staleness is  26 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.26073217391967773
+distance x is tensor(150.5076, device='cuda:2')
+benign distance is  tensor(150.5076, device='cuda:2')
+current submit client idx and staleness is  27 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.47022590041160583
+distance x is tensor(138.4182, device='cuda:2')
+benign distance is  tensor(138.4182, device='cuda:2')
+current submit client idx and staleness is  28 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.7287709712982178
+distance x is tensor(148.2786, device='cuda:2')
+benign distance is  tensor(148.2786, device='cuda:2')
+current submit client idx and staleness is  29 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.48375359177589417
+distance x is tensor(139.2331, device='cuda:2')
+benign distance is  tensor(139.2331, device='cuda:2')
+current submit client idx and staleness is  30 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.577613115310669
+distance x is tensor(143.2961, device='cuda:2')
+benign distance is  tensor(143.2961, device='cuda:2')
+current submit client idx and staleness is  31 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.2620697319507599
+distance x is tensor(139.1703, device='cuda:2')
+benign distance is  tensor(139.1703, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.3500000005
+mal_loss is 9.262853622436523
+mal_entropy is 0.15631155669689178
+loss origin is 0.5874724984169006
+index is 0  loss diff is 0.5993945598602295
+index is 1  loss diff is 0.6043291091918945
+index is 2  loss diff is 0.6247793436050415
+index is 3  loss diff is 0.6026477813720703
+index is 4  loss diff is 0.5978237390518188
+index is 5  loss diff is 0.6015985608100891
+index is 6  loss diff is 0.6172910928726196
+index is 7  loss diff is 0.5959014892578125
+index is 8  loss diff is 0.5666272044181824
+index is 9  loss diff is 0.5666272044181824
+index is 10  loss diff is 0.5666272044181824
+index is 11  loss diff is 0.5666272044181824
+index is 12  loss diff is 0.5666272044181824
+index is 13  loss diff is 0.5666272044181824
+index is 14  loss diff is 0.5666272044181824
+index is 15  loss diff is 0.5666272044181824
+index is 16  loss diff is 0.5666272044181824
+index is 17  loss diff is 0.5666272044181824
+index is 18  loss diff is 0.5666272044181824
+index is 19  loss diff is 0.5666272044181824
+index is 20  loss diff is 0.6070683002471924
+index is 21  loss diff is 0.5982500910758972
+index is 22  loss diff is 0.6016777753829956
+index is 23  loss diff is 0.6073238253593445
+index is 24  loss diff is 0.6054589748382568
+index is 25  loss diff is 0.5913569331169128
+index is 26  loss diff is 0.6051913499832153
+index is 27  loss diff is 0.5912826061248779
+ 
+Avg Training Stats after 9 global rounds:
+Train Accuracy: 86.57% 
+
+Test Accuracy: 85.36% 
+
+
+ | Global Training Round : 10 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.7830132246017456
+distance x is tensor(131.5203, device='cuda:2')
+benign distance is  tensor(131.5203, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.323174238204956
+distance x is tensor(142.0429, device='cuda:2')
+benign distance is  tensor(142.0429, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.06182175874710083
+distance x is tensor(139.6876, device='cuda:2')
+benign distance is  tensor(139.6876, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.37750309705734253
+distance x is tensor(120.7232, device='cuda:2')
+benign distance is  tensor(120.7232, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5235108137130737
+distance x is tensor(120.8535, device='cuda:2')
+benign distance is  tensor(120.8535, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6638398170471191
+distance x is tensor(147.1847, device='cuda:2')
+benign distance is  tensor(147.1847, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.19277267158031464
+distance x is tensor(140.6971, device='cuda:2')
+benign distance is  tensor(140.6971, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.0246710777282715
+distance x is tensor(157.6618, device='cuda:2')
+benign distance is  tensor(157.6618, device='cuda:2')
+current submit client idx and staleness is  16 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.14533106982707977
+distance x is tensor(150.2661, device='cuda:2')
+benign distance is  tensor(150.2661, device='cuda:2')
+current submit client idx and staleness is  17 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.9403973817825317
+distance x is tensor(159.0146, device='cuda:2')
+benign distance is  tensor(159.0146, device='cuda:2')
+current submit client idx and staleness is  18 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.565700113773346
+distance x is tensor(168.1962, device='cuda:2')
+benign distance is  tensor(168.1962, device='cuda:2')
+current submit client idx and staleness is  19 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.15803317725658417
+distance x is tensor(135.0259, device='cuda:2')
+benign distance is  tensor(135.0259, device='cuda:2')
+current submit client idx and staleness is  20 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.07356478273868561
+distance x is tensor(151.0089, device='cuda:2')
+benign distance is  tensor(151.0089, device='cuda:2')
+current submit client idx and staleness is  21 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.6510560512542725
+distance x is tensor(152.1875, device='cuda:2')
+benign distance is  tensor(152.1875, device='cuda:2')
+current submit client idx and staleness is  22 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.2486327588558197
+distance x is tensor(156.5545, device='cuda:2')
+benign distance is  tensor(156.5545, device='cuda:2')
+current submit client idx and staleness is  23 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.7526653409004211
+distance x is tensor(142.8922, device='cuda:2')
+benign distance is  tensor(142.8922, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.3500000005
+mal_loss is 19.29632568359375
+mal_entropy is 0.03080574981868267
+loss origin is 0.4748570919036865
+index is 0  loss diff is 0.4765946865081787
+index is 1  loss diff is 0.4723629057407379
+index is 2  loss diff is 0.4955217242240906
+index is 3  loss diff is 0.4871099591255188
+index is 4  loss diff is 0.477594792842865
+index is 5  loss diff is 0.47846728563308716
+index is 6  loss diff is 0.4916806221008301
+index is 7  loss diff is 0.4797734320163727
+index is 8  loss diff is 0.4571618437767029
+index is 9  loss diff is 0.4571618437767029
+index is 10  loss diff is 0.4571618437767029
+index is 11  loss diff is 0.4571618437767029
+index is 12  loss diff is 0.4571618437767029
+index is 13  loss diff is 0.4571618437767029
+index is 14  loss diff is 0.4571618437767029
+index is 15  loss diff is 0.4571618437767029
+index is 16  loss diff is 0.4571618437767029
+index is 17  loss diff is 0.4571618437767029
+index is 18  loss diff is 0.4571618437767029
+index is 19  loss diff is 0.4571618437767029
+index is 20  loss diff is 0.49374666810035706
+index is 21  loss diff is 0.48726359009742737
+index is 22  loss diff is 0.4860355854034424
+index is 23  loss diff is 0.5129953622817993
+index is 24  loss diff is 0.48882418870925903
+index is 25  loss diff is 0.4759767949581146
+index is 26  loss diff is 0.48334914445877075
+index is 27  loss diff is 0.49224573373794556
+index is 28  loss diff is 0.48590150475502014
+index is 29  loss diff is 0.477288156747818
+index is 30  loss diff is 0.47604209184646606
+index is 31  loss diff is 0.47352224588394165
+index is 32  loss diff is 0.4801088869571686
+index is 33  loss diff is 0.4890347421169281
+index is 34  loss diff is 0.48127812147140503
+index is 35  loss diff is 0.48372387886047363
+ 
+Avg Training Stats after 10 global rounds:
+Train Accuracy: 87.79% 
+
+Test Accuracy: 86.51% 
+
+
+ | Global Training Round : 11 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.808447003364563
+distance x is tensor(130.8032, device='cuda:2')
+benign distance is  tensor(130.8032, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.9142511487007141
+distance x is tensor(144.5832, device='cuda:2')
+benign distance is  tensor(144.5832, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.09496830403804779
+distance x is tensor(136.2772, device='cuda:2')
+benign distance is  tensor(136.2772, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.49882441759109497
+distance x is tensor(130.5541, device='cuda:2')
+benign distance is  tensor(130.5541, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.22013957798480988
+distance x is tensor(126.9326, device='cuda:2')
+benign distance is  tensor(126.9326, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6575258374214172
+distance x is tensor(143.2391, device='cuda:2')
+benign distance is  tensor(143.2391, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5566390156745911
+distance x is tensor(130.0152, device='cuda:2')
+benign distance is  tensor(130.0152, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.24787645041942596
+distance x is tensor(137.1296, device='cuda:2')
+benign distance is  tensor(137.1296, device='cuda:2')
+current submit client idx and staleness is  8 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.5978716611862183
+distance x is tensor(157.1241, device='cuda:2')
+benign distance is  tensor(157.1241, device='cuda:2')
+current submit client idx and staleness is  9 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.30384382605552673
+distance x is tensor(149.6393, device='cuda:2')
+benign distance is  tensor(149.6393, device='cuda:2')
+current submit client idx and staleness is  10 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.4481107294559479
+distance x is tensor(136.6755, device='cuda:2')
+benign distance is  tensor(136.6755, device='cuda:2')
+current submit client idx and staleness is  11 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.8244978189468384
+distance x is tensor(139.3546, device='cuda:2')
+benign distance is  tensor(139.3546, device='cuda:2')
+current submit client idx and staleness is  12 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.3597968816757202
+distance x is tensor(136.4262, device='cuda:2')
+benign distance is  tensor(136.4262, device='cuda:2')
+current submit client idx and staleness is  13 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.4503746032714844
+distance x is tensor(150.4589, device='cuda:2')
+benign distance is  tensor(150.4589, device='cuda:2')
+current submit client idx and staleness is  14 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.8934160470962524
+distance x is tensor(146.1781, device='cuda:2')
+benign distance is  tensor(146.1781, device='cuda:2')
+current submit client idx and staleness is  15 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.355098694562912
+distance x is tensor(153.8781, device='cuda:2')
+benign distance is  tensor(153.8781, device='cuda:2')
+current submit client idx and staleness is  32 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.29477769136428833
+distance x is tensor(144.3613, device='cuda:2')
+benign distance is  tensor(144.3613, device='cuda:2')
+current submit client idx and staleness is  33 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.23580077290534973
+distance x is tensor(147.4070, device='cuda:2')
+benign distance is  tensor(147.4070, device='cuda:2')
+current submit client idx and staleness is  34 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.39337319135665894
+distance x is tensor(151.6340, device='cuda:2')
+benign distance is  tensor(151.6340, device='cuda:2')
+current submit client idx and staleness is  35 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.20911073684692383
+distance x is tensor(149.6477, device='cuda:2')
+benign distance is  tensor(149.6477, device='cuda:2')
+current submit client idx and staleness is  36 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.8405691385269165
+distance x is tensor(145.4218, device='cuda:2')
+benign distance is  tensor(145.4218, device='cuda:2')
+current submit client idx and staleness is  37 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.7535414099693298
+distance x is tensor(142.7128, device='cuda:2')
+benign distance is  tensor(142.7128, device='cuda:2')
+current submit client idx and staleness is  38 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.34180358052253723
+distance x is tensor(142.0718, device='cuda:2')
+benign distance is  tensor(142.0718, device='cuda:2')
+current submit client idx and staleness is  39 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.26600903272628784
+distance x is tensor(137.8149, device='cuda:2')
+benign distance is  tensor(137.8149, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.3500000005
+mal_loss is 13.816896438598633
+mal_entropy is 0.11730712652206421
+loss origin is 0.8064066171646118
+index is 0  loss diff is 0.8442870378494263
+index is 1  loss diff is 0.8784393072128296
+index is 2  loss diff is 0.8870447874069214
+index is 3  loss diff is 0.873367428779602
+index is 4  loss diff is 0.8824080228805542
+index is 5  loss diff is 0.8509035110473633
+index is 6  loss diff is 0.881483256816864
+index is 7  loss diff is 0.8816583752632141
+index is 8  loss diff is 0.7710514664649963
+index is 9  loss diff is 0.7710514664649963
+index is 10  loss diff is 0.7710514664649963
+index is 11  loss diff is 0.7710514664649963
+index is 12  loss diff is 0.7710514664649963
+index is 13  loss diff is 0.7710514664649963
+index is 14  loss diff is 0.7710514664649963
+index is 15  loss diff is 0.7710514664649963
+index is 16  loss diff is 0.7710514664649963
+index is 17  loss diff is 0.7710514664649963
+index is 18  loss diff is 0.7710514664649963
+index is 19  loss diff is 0.7710514664649963
+ 
+Avg Training Stats after 11 global rounds:
+Train Accuracy: 69.79% 
+
+Test Accuracy: 68.83% 
+
+
+ | Global Training Round : 12 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.21295392513275146
+distance x is tensor(167.9868, device='cuda:2')
+benign distance is  tensor(167.9868, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.4758511483669281
+distance x is tensor(168.3252, device='cuda:2')
+benign distance is  tensor(168.3252, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.10834570229053497
+distance x is tensor(175.7767, device='cuda:2')
+benign distance is  tensor(175.7767, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5969759225845337
+distance x is tensor(156.7604, device='cuda:2')
+benign distance is  tensor(156.7604, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.4134245812892914
+distance x is tensor(144.9924, device='cuda:2')
+benign distance is  tensor(144.9924, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.4873628616333008
+distance x is tensor(158.1181, device='cuda:2')
+benign distance is  tensor(158.1181, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.7811802625656128
+distance x is tensor(165.5356, device='cuda:2')
+benign distance is  tensor(165.5356, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.9582144618034363
+distance x is tensor(174.3499, device='cuda:2')
+benign distance is  tensor(174.3499, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.2000000005
+mal_loss is 50.7787971496582
+mal_entropy is 0.016398021951317787
+loss origin is 0.45243048667907715
+index is 0  loss diff is 0.45958489179611206
+index is 1  loss diff is 0.4599202573299408
+index is 2  loss diff is 0.462827205657959
+index is 3  loss diff is 0.46183308959007263
+index is 4  loss diff is 0.4547176957130432
+index is 5  loss diff is 0.45422759652137756
+index is 6  loss diff is 0.4642114043235779
+index is 7  loss diff is 0.4567705988883972
+index is 8  loss diff is 0.43959474563598633
+index is 9  loss diff is 0.43959474563598633
+index is 10  loss diff is 0.43959474563598633
+index is 11  loss diff is 0.43959474563598633
+index is 12  loss diff is 0.43959474563598633
+index is 13  loss diff is 0.43959474563598633
+index is 14  loss diff is 0.43959474563598633
+index is 15  loss diff is 0.43959474563598633
+index is 16  loss diff is 0.43959474563598633
+index is 17  loss diff is 0.43959474563598633
+index is 18  loss diff is 0.43959474563598633
+index is 19  loss diff is 0.43959474563598633
+index is 20  loss diff is 0.462618350982666
+index is 21  loss diff is 0.4584878087043762
+index is 22  loss diff is 0.4535345435142517
+index is 23  loss diff is 0.4545966684818268
+index is 24  loss diff is 0.4578939974308014
+index is 25  loss diff is 0.45295238494873047
+index is 26  loss diff is 0.45542797446250916
+index is 27  loss diff is 0.45772480964660645
+index is 28  loss diff is 0.45687761902809143
+index is 29  loss diff is 0.4521179795265198
+index is 30  loss diff is 0.4540136456489563
+index is 31  loss diff is 0.457368940114975
+index is 32  loss diff is 0.4489280581474304
+index is 33  loss diff is 0.4625932574272156
+index is 34  loss diff is 0.4602659344673157
+index is 35  loss diff is 0.4562458097934723
+index is 36  loss diff is 0.4581531882286072
+index is 37  loss diff is 0.45217737555503845
+index is 38  loss diff is 0.45979228615760803
+index is 39  loss diff is 0.46094560623168945
+index is 40  loss diff is 0.4592711329460144
+index is 41  loss diff is 0.45254629850387573
+index is 42  loss diff is 0.45499253273010254
+index is 43  loss diff is 0.4488610327243805
+index is 44  loss diff is 0.4554564356803894
+index is 45  loss diff is 0.45390620827674866
+index is 46  loss diff is 0.4552832543849945
+index is 47  loss diff is 0.45002642273902893
+index is 48  loss diff is 0.4575382173061371
+index is 49  loss diff is 0.4626178741455078
+index is 50  loss diff is 0.4543842375278473
+index is 51  loss diff is 0.4549825191497803
+ 
+Avg Training Stats after 12 global rounds:
+Train Accuracy: 88.17% 
+
+Test Accuracy: 86.99% 
+
+
+ | Global Training Round : 13 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.12647442519664764
+distance x is tensor(151.1612, device='cuda:2')
+benign distance is  tensor(151.1612, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.213036298751831
+distance x is tensor(144.6855, device='cuda:2')
+benign distance is  tensor(144.6855, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.4010571539402008
+distance x is tensor(135.1980, device='cuda:2')
+benign distance is  tensor(135.1980, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6797944903373718
+distance x is tensor(127.0744, device='cuda:2')
+benign distance is  tensor(127.0744, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6394525170326233
+distance x is tensor(127.2052, device='cuda:2')
+benign distance is  tensor(127.2052, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6245037317276001
+distance x is tensor(130.4514, device='cuda:2')
+benign distance is  tensor(130.4514, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.30775848031044006
+distance x is tensor(139.0530, device='cuda:2')
+benign distance is  tensor(139.0530, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.44841426610946655
+distance x is tensor(154.2203, device='cuda:2')
+benign distance is  tensor(154.2203, device='cuda:2')
+current submit client idx and staleness is  8 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.5901525020599365
+distance x is tensor(158.5098, device='cuda:2')
+benign distance is  tensor(158.5098, device='cuda:2')
+current submit client idx and staleness is  9 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.40922921895980835
+distance x is tensor(149.7771, device='cuda:2')
+benign distance is  tensor(149.7771, device='cuda:2')
+current submit client idx and staleness is  10 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.7409119009971619
+distance x is tensor(144.0209, device='cuda:2')
+benign distance is  tensor(144.0209, device='cuda:2')
+current submit client idx and staleness is  11 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.4376312792301178
+distance x is tensor(135.0895, device='cuda:2')
+benign distance is  tensor(135.0895, device='cuda:2')
+current submit client idx and staleness is  12 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.8976723551750183
+distance x is tensor(149.1093, device='cuda:2')
+benign distance is  tensor(149.1093, device='cuda:2')
+current submit client idx and staleness is  13 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.062190890312194824
+distance x is tensor(145.9545, device='cuda:2')
+benign distance is  tensor(145.9545, device='cuda:2')
+current submit client idx and staleness is  14 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.2027398645877838
+distance x is tensor(145.9217, device='cuda:2')
+benign distance is  tensor(145.9217, device='cuda:2')
+current submit client idx and staleness is  15 2
+grad,shape is torch.Size([215370])
+ benign loss is  1.3723738193511963
+distance x is tensor(157.3098, device='cuda:2')
+benign distance is  tensor(157.3098, device='cuda:2')
+current submit client idx and staleness is  16 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.10148008912801743
+distance x is tensor(148.0350, device='cuda:2')
+benign distance is  tensor(148.0350, device='cuda:2')
+current submit client idx and staleness is  17 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.5185030102729797
+distance x is tensor(153.7059, device='cuda:2')
+benign distance is  tensor(153.7059, device='cuda:2')
+current submit client idx and staleness is  18 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.1500413417816162
+distance x is tensor(155.8917, device='cuda:2')
+benign distance is  tensor(155.8917, device='cuda:2')
+current submit client idx and staleness is  19 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.5634485483169556
+distance x is tensor(142.4977, device='cuda:2')
+benign distance is  tensor(142.4977, device='cuda:2')
+current submit client idx and staleness is  20 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.4346601068973541
+distance x is tensor(137.1442, device='cuda:2')
+benign distance is  tensor(137.1442, device='cuda:2')
+current submit client idx and staleness is  21 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.28711238503456116
+distance x is tensor(138.0688, device='cuda:2')
+benign distance is  tensor(138.0688, device='cuda:2')
+current submit client idx and staleness is  22 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.2961181700229645
+distance x is tensor(146.1732, device='cuda:2')
+benign distance is  tensor(146.1732, device='cuda:2')
+current submit client idx and staleness is  23 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.5110830068588257
+distance x is tensor(148.0104, device='cuda:2')
+benign distance is  tensor(148.0104, device='cuda:2')
+current submit client idx and staleness is  24 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.28129079937934875
+distance x is tensor(156.7994, device='cuda:2')
+benign distance is  tensor(156.7994, device='cuda:2')
+current submit client idx and staleness is  25 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.7819958925247192
+distance x is tensor(140.5712, device='cuda:2')
+benign distance is  tensor(140.5712, device='cuda:2')
+current submit client idx and staleness is  26 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.10862312465906143
+distance x is tensor(147.7086, device='cuda:2')
+benign distance is  tensor(147.7086, device='cuda:2')
+current submit client idx and staleness is  27 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.5413295030593872
+distance x is tensor(141.9651, device='cuda:2')
+benign distance is  tensor(141.9651, device='cuda:2')
+current submit client idx and staleness is  28 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.6995452046394348
+distance x is tensor(142.1071, device='cuda:2')
+benign distance is  tensor(142.1071, device='cuda:2')
+current submit client idx and staleness is  29 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.47163230180740356
+distance x is tensor(150.1251, device='cuda:2')
+benign distance is  tensor(150.1251, device='cuda:2')
+current submit client idx and staleness is  30 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.28074634075164795
+distance x is tensor(154.3931, device='cuda:2')
+benign distance is  tensor(154.3931, device='cuda:2')
+current submit client idx and staleness is  31 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.18888334929943085
+distance x is tensor(144.4135, device='cuda:2')
+benign distance is  tensor(144.4135, device='cuda:2')
+current submit client idx and staleness is  40 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.15032915771007538
+distance x is tensor(153.5913, device='cuda:2')
+benign distance is  tensor(153.5913, device='cuda:2')
+current submit client idx and staleness is  41 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.8663736581802368
+distance x is tensor(143.3506, device='cuda:2')
+benign distance is  tensor(143.3506, device='cuda:2')
+current submit client idx and staleness is  42 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.347591370344162
+distance x is tensor(133.2271, device='cuda:2')
+benign distance is  tensor(133.2271, device='cuda:2')
+current submit client idx and staleness is  43 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.13583144545555115
+distance x is tensor(146.2891, device='cuda:2')
+benign distance is  tensor(146.2891, device='cuda:2')
+current submit client idx and staleness is  44 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.45573481917381287
+distance x is tensor(140.5450, device='cuda:2')
+benign distance is  tensor(140.5450, device='cuda:2')
+current submit client idx and staleness is  45 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.6644231081008911
+distance x is tensor(149.9244, device='cuda:2')
+benign distance is  tensor(149.9244, device='cuda:2')
+current submit client idx and staleness is  46 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.9499362111091614
+distance x is tensor(148.8203, device='cuda:2')
+benign distance is  tensor(148.8203, device='cuda:2')
+current submit client idx and staleness is  47 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.33685970306396484
+distance x is tensor(158.4167, device='cuda:2')
+benign distance is  tensor(158.4167, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.5000000005
+mal_loss is 5.3181376457214355
+mal_entropy is 0.2195066213607788
+loss origin is 0.6359652280807495
+index is 0  loss diff is 0.687765896320343
+index is 1  loss diff is 0.643909215927124
+index is 2  loss diff is 0.6629824042320251
+index is 3  loss diff is 0.6697651743888855
+index is 4  loss diff is 0.6517575979232788
+index is 5  loss diff is 0.6397355794906616
+index is 6  loss diff is 0.6739884614944458
+index is 7  loss diff is 0.6653119325637817
+index is 8  loss diff is 0.620418906211853
+index is 9  loss diff is 0.620418906211853
+index is 10  loss diff is 0.620418906211853
+index is 11  loss diff is 0.620418906211853
+index is 12  loss diff is 0.620418906211853
+index is 13  loss diff is 0.620418906211853
+index is 14  loss diff is 0.620418906211853
+index is 15  loss diff is 0.620418906211853
+index is 16  loss diff is 0.620418906211853
+index is 17  loss diff is 0.620418906211853
+index is 18  loss diff is 0.620418906211853
+index is 19  loss diff is 0.620418906211853
+ 
+Avg Training Stats after 13 global rounds:
+Train Accuracy: 81.04% 
+
+Test Accuracy: 80.20% 
+
+
+ | Global Training Round : 14 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.40257376432418823
+distance x is tensor(165.6127, device='cuda:2')
+benign distance is  tensor(165.6127, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.4512917399406433
+distance x is tensor(155.5870, device='cuda:2')
+benign distance is  tensor(155.5870, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.31529584527015686
+distance x is tensor(166.7010, device='cuda:2')
+benign distance is  tensor(166.7010, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.8398571014404297
+distance x is tensor(158.1318, device='cuda:2')
+benign distance is  tensor(158.1318, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.544946014881134
+distance x is tensor(149.4551, device='cuda:2')
+benign distance is  tensor(149.4551, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.7802474498748779
+distance x is tensor(182.2664, device='cuda:2')
+benign distance is  tensor(182.2664, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.18790563941001892
+distance x is tensor(171.5459, device='cuda:2')
+benign distance is  tensor(171.5459, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.9108184576034546
+distance x is tensor(169.6497, device='cuda:2')
+benign distance is  tensor(169.6497, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.2500000005
+mal_loss is 38.10690689086914
+mal_entropy is 0.09081839770078659
+loss origin is 0.6728042960166931
+index is 0  loss diff is 0.6967894434928894
+index is 1  loss diff is 0.7031705379486084
+index is 2  loss diff is 0.6970614194869995
+index is 3  loss diff is 0.6951323747634888
+index is 4  loss diff is 0.6937180757522583
+index is 5  loss diff is 0.6819115281105042
+index is 6  loss diff is 0.7018390893936157
+index is 7  loss diff is 0.6993126273155212
+index is 8  loss diff is 0.6442843079566956
+index is 9  loss diff is 0.6442843079566956
+index is 10  loss diff is 0.6442843079566956
+index is 11  loss diff is 0.6442843079566956
+index is 12  loss diff is 0.6442843079566956
+index is 13  loss diff is 0.6442843079566956
+index is 14  loss diff is 0.6442843079566956
+index is 15  loss diff is 0.6442843079566956
+index is 16  loss diff is 0.6442843079566956
+index is 17  loss diff is 0.6442843079566956
+index is 18  loss diff is 0.6442843079566956
+index is 19  loss diff is 0.6442843079566956
+index is 20  loss diff is 0.7060876488685608
+index is 21  loss diff is 0.6986650824546814
+index is 22  loss diff is 0.6929668188095093
+index is 23  loss diff is 0.6858601570129395
+index is 24  loss diff is 0.692441999912262
+index is 25  loss diff is 0.7027869820594788
+index is 26  loss diff is 0.7021313905715942
+index is 27  loss diff is 0.6853928565979004
+ 
+Avg Training Stats after 14 global rounds:
+Train Accuracy: 79.01% 
+
+Test Accuracy: 78.01% 
+
+
+ | Global Training Round : 15 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.24040670692920685
+distance x is tensor(181.3049, device='cuda:2')
+benign distance is  tensor(181.3049, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.278449535369873
+distance x is tensor(166.0144, device='cuda:2')
+benign distance is  tensor(166.0144, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.410554975271225
+distance x is tensor(170.7727, device='cuda:2')
+benign distance is  tensor(170.7727, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6232718229293823
+distance x is tensor(167.3508, device='cuda:2')
+benign distance is  tensor(167.3508, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.31138014793396
+distance x is tensor(173.6620, device='cuda:2')
+benign distance is  tensor(173.6620, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.4407579898834229
+distance x is tensor(150.5720, device='cuda:2')
+benign distance is  tensor(150.5720, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.15187986195087433
+distance x is tensor(187.0753, device='cuda:2')
+benign distance is  tensor(187.0753, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6371347308158875
+distance x is tensor(186.2971, device='cuda:2')
+benign distance is  tensor(186.2971, device='cuda:2')
+current submit client idx and staleness is  8 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.4629502296447754
+distance x is tensor(173.7398, device='cuda:2')
+benign distance is  tensor(173.7398, device='cuda:2')
+current submit client idx and staleness is  9 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.8886507153511047
+distance x is tensor(179.0824, device='cuda:2')
+benign distance is  tensor(179.0824, device='cuda:2')
+current submit client idx and staleness is  10 2
+grad,shape is torch.Size([215370])
+ benign loss is  1.0809224843978882
+distance x is tensor(178.9113, device='cuda:2')
+benign distance is  tensor(178.9113, device='cuda:2')
+current submit client idx and staleness is  11 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.2477790117263794
+distance x is tensor(182.4905, device='cuda:2')
+benign distance is  tensor(182.4905, device='cuda:2')
+current submit client idx and staleness is  12 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.6182352304458618
+distance x is tensor(161.3000, device='cuda:2')
+benign distance is  tensor(161.3000, device='cuda:2')
+current submit client idx and staleness is  13 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.3783000707626343
+distance x is tensor(173.7997, device='cuda:2')
+benign distance is  tensor(173.7997, device='cuda:2')
+current submit client idx and staleness is  14 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.8780428767204285
+distance x is tensor(171.2804, device='cuda:2')
+benign distance is  tensor(171.2804, device='cuda:2')
+current submit client idx and staleness is  15 2
+grad,shape is torch.Size([215370])
+ benign loss is  1.077000379562378
+distance x is tensor(182.5352, device='cuda:2')
+benign distance is  tensor(182.5352, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.2000000005
+mal_loss is 48.03697967529297
+mal_entropy is 0.055912524461746216
+loss origin is 0.5157279372215271
+index is 0  loss diff is 0.51845782995224
+index is 1  loss diff is 0.5123961567878723
+index is 2  loss diff is 0.5329926013946533
+index is 3  loss diff is 0.5244106650352478
+index is 4  loss diff is 0.5181889533996582
+index is 5  loss diff is 0.5086847543716431
+index is 6  loss diff is 0.5291184186935425
+index is 7  loss diff is 0.5245267152786255
+index is 8  loss diff is 0.4968383312225342
+index is 9  loss diff is 0.4968383312225342
+index is 10  loss diff is 0.4968383312225342
+index is 11  loss diff is 0.4968383312225342
+index is 12  loss diff is 0.4968383312225342
+index is 13  loss diff is 0.4968383312225342
+index is 14  loss diff is 0.4968383312225342
+index is 15  loss diff is 0.4968383312225342
+index is 16  loss diff is 0.4968383312225342
+index is 17  loss diff is 0.4968383312225342
+index is 18  loss diff is 0.4968383312225342
+index is 19  loss diff is 0.4968383312225342
+index is 20  loss diff is 0.533413290977478
+index is 21  loss diff is 0.5345882177352905
+index is 22  loss diff is 0.5308913588523865
+index is 23  loss diff is 0.5486040115356445
+index is 24  loss diff is 0.5239181518554688
+index is 25  loss diff is 0.5257450938224792
+index is 26  loss diff is 0.5217834711074829
+index is 27  loss diff is 0.5274602174758911
+index is 28  loss diff is 0.5293903350830078
+index is 29  loss diff is 0.5203834772109985
+index is 30  loss diff is 0.5311788320541382
+index is 31  loss diff is 0.5265266299247742
+index is 32  loss diff is 0.5229285955429077
+index is 33  loss diff is 0.5220845341682434
+index is 34  loss diff is 0.5270196199417114
+index is 35  loss diff is 0.5193155407905579
+ 
+Avg Training Stats after 15 global rounds:
+Train Accuracy: 86.60% 
+
+Test Accuracy: 85.40% 
+
+
+ | Global Training Round : 16 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.4295744001865387
+distance x is tensor(141.4784, device='cuda:2')
+benign distance is  tensor(141.4784, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.3564655780792236
+distance x is tensor(161.0965, device='cuda:2')
+benign distance is  tensor(161.0965, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.2929958701133728
+distance x is tensor(153.7901, device='cuda:2')
+benign distance is  tensor(153.7901, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5165964365005493
+distance x is tensor(153.5691, device='cuda:2')
+benign distance is  tensor(153.5691, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.4458407759666443
+distance x is tensor(154.6145, device='cuda:2')
+benign distance is  tensor(154.6145, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.071061372756958
+distance x is tensor(144.2045, device='cuda:2')
+benign distance is  tensor(144.2045, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.22274823486804962
+distance x is tensor(158.7015, device='cuda:2')
+benign distance is  tensor(158.7015, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.151370644569397
+distance x is tensor(158.7988, device='cuda:2')
+benign distance is  tensor(158.7988, device='cuda:2')
+current submit client idx and staleness is  16 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.35178065299987793
+distance x is tensor(161.7551, device='cuda:2')
+benign distance is  tensor(161.7551, device='cuda:2')
+current submit client idx and staleness is  17 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.7977150082588196
+distance x is tensor(169.7220, device='cuda:2')
+benign distance is  tensor(169.7220, device='cuda:2')
+current submit client idx and staleness is  18 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.32034167647361755
+distance x is tensor(160.1794, device='cuda:2')
+benign distance is  tensor(160.1794, device='cuda:2')
+current submit client idx and staleness is  19 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.512073814868927
+distance x is tensor(172.0602, device='cuda:2')
+benign distance is  tensor(172.0602, device='cuda:2')
+current submit client idx and staleness is  20 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.41131192445755005
+distance x is tensor(153.1170, device='cuda:2')
+benign distance is  tensor(153.1170, device='cuda:2')
+current submit client idx and staleness is  21 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.39367160201072693
+distance x is tensor(152.7336, device='cuda:2')
+benign distance is  tensor(152.7336, device='cuda:2')
+current submit client idx and staleness is  22 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.07358071953058243
+distance x is tensor(169.6484, device='cuda:2')
+benign distance is  tensor(169.6484, device='cuda:2')
+current submit client idx and staleness is  23 3
+grad,shape is torch.Size([215370])
+ benign loss is  1.3722476959228516
+distance x is tensor(163.6950, device='cuda:2')
+benign distance is  tensor(163.6950, device='cuda:2')
+current submit client idx and staleness is  32 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.29756835103034973
+distance x is tensor(167.3380, device='cuda:2')
+benign distance is  tensor(167.3380, device='cuda:2')
+current submit client idx and staleness is  33 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.16987712681293488
+distance x is tensor(167.1042, device='cuda:2')
+benign distance is  tensor(167.1042, device='cuda:2')
+current submit client idx and staleness is  34 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.21438677608966827
+distance x is tensor(157.6937, device='cuda:2')
+benign distance is  tensor(157.6937, device='cuda:2')
+current submit client idx and staleness is  35 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.13925324380397797
+distance x is tensor(156.8471, device='cuda:2')
+benign distance is  tensor(156.8471, device='cuda:2')
+current submit client idx and staleness is  36 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.49981409311294556
+distance x is tensor(154.3870, device='cuda:2')
+benign distance is  tensor(154.3870, device='cuda:2')
+current submit client idx and staleness is  37 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.16540227830410004
+distance x is tensor(160.6274, device='cuda:2')
+benign distance is  tensor(160.6274, device='cuda:2')
+current submit client idx and staleness is  38 5
+grad,shape is torch.Size([215370])
+ benign loss is  1.0121233463287354
+distance x is tensor(155.4129, device='cuda:2')
+benign distance is  tensor(155.4129, device='cuda:2')
+current submit client idx and staleness is  39 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.45146065950393677
+distance x is tensor(163.8323, device='cuda:2')
+benign distance is  tensor(163.8323, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.3500000005
+mal_loss is 20.080951690673828
+mal_entropy is 0.06772156804800034
+loss origin is 0.4670182168483734
+index is 0  loss diff is 0.4686523973941803
+index is 1  loss diff is 0.4691593050956726
+index is 2  loss diff is 0.4832351803779602
+index is 3  loss diff is 0.47697940468788147
+index is 4  loss diff is 0.47175663709640503
+index is 5  loss diff is 0.46466702222824097
+index is 6  loss diff is 0.4772966802120209
+index is 7  loss diff is 0.4701288342475891
+index is 8  loss diff is 0.4546125531196594
+index is 9  loss diff is 0.4546125531196594
+index is 10  loss diff is 0.4546125531196594
+index is 11  loss diff is 0.4546125531196594
+index is 12  loss diff is 0.4546125531196594
+index is 13  loss diff is 0.4546125531196594
+index is 14  loss diff is 0.4546125531196594
+index is 15  loss diff is 0.4546125531196594
+index is 16  loss diff is 0.4546125531196594
+index is 17  loss diff is 0.4546125531196594
+index is 18  loss diff is 0.4546125531196594
+index is 19  loss diff is 0.4546125531196594
+index is 20  loss diff is 0.47367697954177856
+index is 21  loss diff is 0.4691523015499115
+index is 22  loss diff is 0.47901201248168945
+index is 23  loss diff is 0.4710707664489746
+index is 24  loss diff is 0.46514201164245605
+index is 25  loss diff is 0.47981518507003784
+index is 26  loss diff is 0.4818706512451172
+index is 27  loss diff is 0.47827547788619995
+index is 28  loss diff is 0.4824012815952301
+index is 29  loss diff is 0.4726422429084778
+index is 30  loss diff is 0.4601506292819977
+index is 31  loss diff is 0.4778541028499603
+index is 32  loss diff is 0.47224894165992737
+index is 33  loss diff is 0.48134690523147583
+index is 34  loss diff is 0.4703095853328705
+index is 35  loss diff is 0.46889743208885193
+ 
+Avg Training Stats after 16 global rounds:
+Train Accuracy: 87.59% 
+
+Test Accuracy: 86.47% 
+
+
+ | Global Training Round : 17 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.2484005242586136
+distance x is tensor(155.7279, device='cuda:2')
+benign distance is  tensor(155.7279, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5193984508514404
+distance x is tensor(135.7681, device='cuda:2')
+benign distance is  tensor(135.7681, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.13346858322620392
+distance x is tensor(137.5707, device='cuda:2')
+benign distance is  tensor(137.5707, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5976909399032593
+distance x is tensor(145.9306, device='cuda:2')
+benign distance is  tensor(145.9306, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6903489828109741
+distance x is tensor(145.4098, device='cuda:2')
+benign distance is  tensor(145.4098, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.36435866355896
+distance x is tensor(148.5028, device='cuda:2')
+benign distance is  tensor(148.5028, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.3538603186607361
+distance x is tensor(163.1940, device='cuda:2')
+benign distance is  tensor(163.1940, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.12035020440816879
+distance x is tensor(151.0398, device='cuda:2')
+benign distance is  tensor(151.0398, device='cuda:2')
+current submit client idx and staleness is  8 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.1872102916240692
+distance x is tensor(170.5338, device='cuda:2')
+benign distance is  tensor(170.5338, device='cuda:2')
+current submit client idx and staleness is  9 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.6096383929252625
+distance x is tensor(151.4683, device='cuda:2')
+benign distance is  tensor(151.4683, device='cuda:2')
+current submit client idx and staleness is  10 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.9258583188056946
+distance x is tensor(146.9891, device='cuda:2')
+benign distance is  tensor(146.9891, device='cuda:2')
+current submit client idx and staleness is  11 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.6137218475341797
+distance x is tensor(156.4389, device='cuda:2')
+benign distance is  tensor(156.4389, device='cuda:2')
+current submit client idx and staleness is  12 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.4279569685459137
+distance x is tensor(151.2059, device='cuda:2')
+benign distance is  tensor(151.2059, device='cuda:2')
+current submit client idx and staleness is  13 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.6117398142814636
+distance x is tensor(149.3307, device='cuda:2')
+benign distance is  tensor(149.3307, device='cuda:2')
+current submit client idx and staleness is  14 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.9892281293869019
+distance x is tensor(159.5018, device='cuda:2')
+benign distance is  tensor(159.5018, device='cuda:2')
+current submit client idx and staleness is  15 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.5042351484298706
+distance x is tensor(156.6830, device='cuda:2')
+benign distance is  tensor(156.6830, device='cuda:2')
+current submit client idx and staleness is  24 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.4275858402252197
+distance x is tensor(166.9730, device='cuda:2')
+benign distance is  tensor(166.9730, device='cuda:2')
+current submit client idx and staleness is  25 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.34121084213256836
+distance x is tensor(152.1459, device='cuda:2')
+benign distance is  tensor(152.1459, device='cuda:2')
+current submit client idx and staleness is  26 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.30755218863487244
+distance x is tensor(153.5001, device='cuda:2')
+benign distance is  tensor(153.5001, device='cuda:2')
+current submit client idx and staleness is  27 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.2506099343299866
+distance x is tensor(167.6691, device='cuda:2')
+benign distance is  tensor(167.6691, device='cuda:2')
+current submit client idx and staleness is  28 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.6435961723327637
+distance x is tensor(153.1491, device='cuda:2')
+benign distance is  tensor(153.1491, device='cuda:2')
+current submit client idx and staleness is  29 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.2449605017900467
+distance x is tensor(161.1468, device='cuda:2')
+benign distance is  tensor(161.1468, device='cuda:2')
+current submit client idx and staleness is  30 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.13029219210147858
+distance x is tensor(154.4188, device='cuda:2')
+benign distance is  tensor(154.4188, device='cuda:2')
+current submit client idx and staleness is  31 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.33932942152023315
+distance x is tensor(147.4612, device='cuda:2')
+benign distance is  tensor(147.4612, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.45000000050000005
+mal_loss is 11.207467079162598
+mal_entropy is 0.1879107505083084
+loss origin is 0.7481865882873535
+index is 0  loss diff is 0.7990471720695496
+index is 1  loss diff is 0.787166178226471
+index is 2  loss diff is 0.8169326782226562
+index is 3  loss diff is 0.7763538360595703
+index is 4  loss diff is 0.7770334482192993
+index is 5  loss diff is 0.754064679145813
+index is 6  loss diff is 0.804408073425293
+index is 7  loss diff is 0.7750617861747742
+index is 8  loss diff is 0.7256543636322021
+index is 9  loss diff is 0.7256543636322021
+index is 10  loss diff is 0.7256543636322021
+index is 11  loss diff is 0.7256543636322021
+index is 12  loss diff is 0.7256543636322021
+index is 13  loss diff is 0.7256543636322021
+index is 14  loss diff is 0.7256543636322021
+index is 15  loss diff is 0.7256543636322021
+index is 16  loss diff is 0.7256543636322021
+index is 17  loss diff is 0.7256543636322021
+index is 18  loss diff is 0.7256543636322021
+index is 19  loss diff is 0.7256543636322021
+ 
+Avg Training Stats after 17 global rounds:
+Train Accuracy: 76.65% 
+
+Test Accuracy: 75.78% 
+
+
+ | Global Training Round : 18 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.44466739892959595
+distance x is tensor(175.2336, device='cuda:2')
+benign distance is  tensor(175.2336, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5022708177566528
+distance x is tensor(185.3963, device='cuda:2')
+benign distance is  tensor(185.3963, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5682419538497925
+distance x is tensor(181.3404, device='cuda:2')
+benign distance is  tensor(181.3404, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  2.072340488433838
+distance x is tensor(179.4346, device='cuda:2')
+benign distance is  tensor(179.4346, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.4391012191772461
+distance x is tensor(162.7826, device='cuda:2')
+benign distance is  tensor(162.7826, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.3312860131263733
+distance x is tensor(188.8853, device='cuda:2')
+benign distance is  tensor(188.8853, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.2921191155910492
+distance x is tensor(189.3739, device='cuda:2')
+benign distance is  tensor(189.3739, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6223819851875305
+distance x is tensor(203.9740, device='cuda:2')
+benign distance is  tensor(203.9740, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.1500000005
+mal_loss is 66.03317260742188
+mal_entropy is 0.060952987521886826
+loss origin is 0.5592536330223083
+index is 0  loss diff is 0.5637396574020386
+index is 1  loss diff is 0.5666350722312927
+index is 2  loss diff is 0.5701490640640259
+index is 3  loss diff is 0.557070255279541
+index is 4  loss diff is 0.5635295510292053
+index is 5  loss diff is 0.5596271753311157
+index is 6  loss diff is 0.5664541721343994
+index is 7  loss diff is 0.567286491394043
+index is 8  loss diff is 0.5415823459625244
+index is 9  loss diff is 0.5415823459625244
+index is 10  loss diff is 0.5415823459625244
+index is 11  loss diff is 0.5415823459625244
+index is 12  loss diff is 0.5415823459625244
+index is 13  loss diff is 0.5415823459625244
+index is 14  loss diff is 0.5415823459625244
+index is 15  loss diff is 0.5415823459625244
+index is 16  loss diff is 0.5415823459625244
+index is 17  loss diff is 0.5415823459625244
+index is 18  loss diff is 0.5415823459625244
+index is 19  loss diff is 0.5415823459625244
+index is 20  loss diff is 0.5742858648300171
+index is 21  loss diff is 0.5622768402099609
+index is 22  loss diff is 0.570461630821228
+index is 23  loss diff is 0.5685486197471619
+index is 24  loss diff is 0.567337691783905
+index is 25  loss diff is 0.5647727251052856
+index is 26  loss diff is 0.5538700222969055
+index is 27  loss diff is 0.5634178519248962
+index is 28  loss diff is 0.5702787637710571
+index is 29  loss diff is 0.5609787702560425
+index is 30  loss diff is 0.5753097534179688
+index is 31  loss diff is 0.5778669118881226
+index is 32  loss diff is 0.5713242292404175
+index is 33  loss diff is 0.5587421655654907
+index is 34  loss diff is 0.5678417682647705
+index is 35  loss diff is 0.5631090998649597
+index is 36  loss diff is 0.5832451581954956
+index is 37  loss diff is 0.5605500936508179
+index is 38  loss diff is 0.5676652193069458
+index is 39  loss diff is 0.561829686164856
+index is 40  loss diff is 0.568306565284729
+index is 41  loss diff is 0.5675532817840576
+index is 42  loss diff is 0.5539690256118774
+index is 43  loss diff is 0.5718883872032166
+ 
+Avg Training Stats after 18 global rounds:
+Train Accuracy: 87.37% 
+
+Test Accuracy: 86.19% 
+
+
+ | Global Training Round : 19 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.8352252244949341
+distance x is tensor(171.1047, device='cuda:2')
+benign distance is  tensor(171.1047, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.517029881477356
+distance x is tensor(146.1153, device='cuda:2')
+benign distance is  tensor(146.1153, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.34509435296058655
+distance x is tensor(154.9970, device='cuda:2')
+benign distance is  tensor(154.9970, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6762033700942993
+distance x is tensor(134.1897, device='cuda:2')
+benign distance is  tensor(134.1897, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5885503888130188
+distance x is tensor(143.4044, device='cuda:2')
+benign distance is  tensor(143.4044, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.3598365783691406
+distance x is tensor(144.7407, device='cuda:2')
+benign distance is  tensor(144.7407, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.247880220413208
+distance x is tensor(142.2901, device='cuda:2')
+benign distance is  tensor(142.2901, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.8355129957199097
+distance x is tensor(148.9261, device='cuda:2')
+benign distance is  tensor(148.9261, device='cuda:2')
+current submit client idx and staleness is  8 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.41999727487564087
+distance x is tensor(159.7433, device='cuda:2')
+benign distance is  tensor(159.7433, device='cuda:2')
+current submit client idx and staleness is  9 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.633895754814148
+distance x is tensor(156.3490, device='cuda:2')
+benign distance is  tensor(156.3490, device='cuda:2')
+current submit client idx and staleness is  10 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.7619301676750183
+distance x is tensor(156.2602, device='cuda:2')
+benign distance is  tensor(156.2602, device='cuda:2')
+current submit client idx and staleness is  11 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.9148843884468079
+distance x is tensor(149.8494, device='cuda:2')
+benign distance is  tensor(149.8494, device='cuda:2')
+current submit client idx and staleness is  12 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.3824319541454315
+distance x is tensor(155.2969, device='cuda:2')
+benign distance is  tensor(155.2969, device='cuda:2')
+current submit client idx and staleness is  13 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.6398721933364868
+distance x is tensor(158.4510, device='cuda:2')
+benign distance is  tensor(158.4510, device='cuda:2')
+current submit client idx and staleness is  14 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.19813594222068787
+distance x is tensor(162.5319, device='cuda:2')
+benign distance is  tensor(162.5319, device='cuda:2')
+current submit client idx and staleness is  15 2
+grad,shape is torch.Size([215370])
+ benign loss is  1.0258668661117554
+distance x is tensor(164.7254, device='cuda:2')
+benign distance is  tensor(164.7254, device='cuda:2')
+current submit client idx and staleness is  16 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.46454939246177673
+distance x is tensor(157.2366, device='cuda:2')
+benign distance is  tensor(157.2366, device='cuda:2')
+current submit client idx and staleness is  17 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.4814126491546631
+distance x is tensor(161.1644, device='cuda:2')
+benign distance is  tensor(161.1644, device='cuda:2')
+current submit client idx and staleness is  18 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.1633639633655548
+distance x is tensor(154.9344, device='cuda:2')
+benign distance is  tensor(154.9344, device='cuda:2')
+current submit client idx and staleness is  19 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.5853866934776306
+distance x is tensor(168.6909, device='cuda:2')
+benign distance is  tensor(168.6909, device='cuda:2')
+current submit client idx and staleness is  20 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.6167651414871216
+distance x is tensor(156.5318, device='cuda:2')
+benign distance is  tensor(156.5318, device='cuda:2')
+current submit client idx and staleness is  21 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.8435643911361694
+distance x is tensor(163.4636, device='cuda:2')
+benign distance is  tensor(163.4636, device='cuda:2')
+current submit client idx and staleness is  22 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.28561830520629883
+distance x is tensor(170.3356, device='cuda:2')
+benign distance is  tensor(170.3356, device='cuda:2')
+current submit client idx and staleness is  23 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.23587843775749207
+distance x is tensor(157.7029, device='cuda:2')
+benign distance is  tensor(157.7029, device='cuda:2')
+current submit client idx and staleness is  40 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.3709102272987366
+distance x is tensor(161.0693, device='cuda:2')
+benign distance is  tensor(161.0693, device='cuda:2')
+current submit client idx and staleness is  41 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.9300463795661926
+distance x is tensor(162.2246, device='cuda:2')
+benign distance is  tensor(162.2246, device='cuda:2')
+current submit client idx and staleness is  42 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.1084664911031723
+distance x is tensor(145.2813, device='cuda:2')
+benign distance is  tensor(145.2813, device='cuda:2')
+current submit client idx and staleness is  43 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.9116073846817017
+distance x is tensor(177.0287, device='cuda:2')
+benign distance is  tensor(177.0287, device='cuda:2')
+current submit client idx and staleness is  44 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.24232086539268494
+distance x is tensor(143.1801, device='cuda:2')
+benign distance is  tensor(143.1801, device='cuda:2')
+current submit client idx and staleness is  45 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.5200971364974976
+distance x is tensor(153.9341, device='cuda:2')
+benign distance is  tensor(153.9341, device='cuda:2')
+current submit client idx and staleness is  46 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.4484226107597351
+distance x is tensor(165.9317, device='cuda:2')
+benign distance is  tensor(165.9317, device='cuda:2')
+current submit client idx and staleness is  47 6
+grad,shape is torch.Size([215370])
+ benign loss is  0.8326200246810913
+distance x is tensor(164.9182, device='cuda:2')
+benign distance is  tensor(164.9182, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.40000000050000006
+mal_loss is 14.75232982635498
+mal_entropy is 0.1631854921579361
+loss origin is 0.8061162829399109
+index is 0  loss diff is 0.8598947525024414
+index is 1  loss diff is 0.8600743412971497
+index is 2  loss diff is 0.8792832493782043
+index is 3  loss diff is 0.8488444089889526
+index is 4  loss diff is 0.853057861328125
+index is 5  loss diff is 0.8569855690002441
+index is 6  loss diff is 0.8771886825561523
+index is 7  loss diff is 0.8542170524597168
+index is 8  loss diff is 0.7748630046844482
+index is 9  loss diff is 0.7748630046844482
+index is 10  loss diff is 0.7748630046844482
+index is 11  loss diff is 0.7748630046844482
+index is 12  loss diff is 0.7748630046844482
+index is 13  loss diff is 0.7748630046844482
+index is 14  loss diff is 0.7748630046844482
+index is 15  loss diff is 0.7748630046844482
+index is 16  loss diff is 0.7748630046844482
+index is 17  loss diff is 0.7748630046844482
+index is 18  loss diff is 0.7748630046844482
+index is 19  loss diff is 0.7748630046844482
+ 
+Avg Training Stats after 19 global rounds:
+Train Accuracy: 73.33% 
+
+Test Accuracy: 72.50% 
+
+
+ | Global Training Round : 20 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.4604710042476654
+distance x is tensor(202.8242, device='cuda:2')
+benign distance is  tensor(202.8242, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6888265609741211
+distance x is tensor(217.6325, device='cuda:2')
+benign distance is  tensor(217.6325, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.3266633450984955
+distance x is tensor(191.1677, device='cuda:2')
+benign distance is  tensor(191.1677, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.3089560270309448
+distance x is tensor(188.0938, device='cuda:2')
+benign distance is  tensor(188.0938, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6108354330062866
+distance x is tensor(183.9655, device='cuda:2')
+benign distance is  tensor(183.9655, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5807992219924927
+distance x is tensor(188.2090, device='cuda:2')
+benign distance is  tensor(188.2090, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.23025314509868622
+distance x is tensor(195.8697, device='cuda:2')
+benign distance is  tensor(195.8697, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.2912282943725586
+distance x is tensor(176.2534, device='cuda:2')
+benign distance is  tensor(176.2534, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.2500000005
+mal_loss is 68.14371490478516
+mal_entropy is 0.05895699933171272
+loss origin is 0.5213316679000854
+index is 0  loss diff is 0.5250319242477417
+index is 1  loss diff is 0.5318310260772705
+index is 2  loss diff is 0.5383483171463013
+index is 3  loss diff is 0.5245077610015869
+index is 4  loss diff is 0.5207083821296692
+index is 5  loss diff is 0.5211377739906311
+index is 6  loss diff is 0.5387800931930542
+index is 7  loss diff is 0.5171149969100952
+index is 8  loss diff is 0.49899107217788696
+index is 9  loss diff is 0.49899107217788696
+index is 10  loss diff is 0.49899107217788696
+index is 11  loss diff is 0.49899107217788696
+index is 12  loss diff is 0.49899107217788696
+index is 13  loss diff is 0.49899107217788696
+index is 14  loss diff is 0.49899107217788696
+index is 15  loss diff is 0.49899107217788696
+index is 16  loss diff is 0.49899107217788696
+index is 17  loss diff is 0.49899107217788696
+index is 18  loss diff is 0.49899107217788696
+index is 19  loss diff is 0.49899107217788696
+index is 20  loss diff is 0.5355740785598755
+index is 21  loss diff is 0.5379959344863892
+index is 22  loss diff is 0.5353150367736816
+index is 23  loss diff is 0.5455564260482788
+index is 24  loss diff is 0.5316663384437561
+index is 25  loss diff is 0.5330571532249451
+index is 26  loss diff is 0.5258560180664062
+index is 27  loss diff is 0.5309730768203735
+index is 28  loss diff is 0.5336185693740845
+index is 29  loss diff is 0.527803897857666
+index is 30  loss diff is 0.5348064303398132
+index is 31  loss diff is 0.5317500829696655
+index is 32  loss diff is 0.5257602334022522
+index is 33  loss diff is 0.5241004824638367
+index is 34  loss diff is 0.5291010141372681
+index is 35  loss diff is 0.5421704053878784
+index is 36  loss diff is 0.534814715385437
+index is 37  loss diff is 0.5296705365180969
+index is 38  loss diff is 0.5219226479530334
+index is 39  loss diff is 0.5214425325393677
+index is 40  loss diff is 0.528786301612854
+index is 41  loss diff is 0.5295987129211426
+index is 42  loss diff is 0.5301007032394409
+index is 43  loss diff is 0.5179635286331177
+ 
+Avg Training Stats after 20 global rounds:
+Train Accuracy: 87.53% 
+
+Test Accuracy: 86.30% 
+
+
+ | Global Training Round : 21 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.8399537801742554
+distance x is tensor(166.8965, device='cuda:2')
+benign distance is  tensor(166.8965, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6118185520172119
+distance x is tensor(142.9530, device='cuda:2')
+benign distance is  tensor(142.9530, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.21119609475135803
+distance x is tensor(142.8491, device='cuda:2')
+benign distance is  tensor(142.8491, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6447305679321289
+distance x is tensor(163.8868, device='cuda:2')
+benign distance is  tensor(163.8868, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.2455036640167236
+distance x is tensor(133.0956, device='cuda:2')
+benign distance is  tensor(133.0956, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.3474122881889343
+distance x is tensor(158.1138, device='cuda:2')
+benign distance is  tensor(158.1138, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5804611444473267
+distance x is tensor(144.7998, device='cuda:2')
+benign distance is  tensor(144.7998, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.672783374786377
+distance x is tensor(148.3968, device='cuda:2')
+benign distance is  tensor(148.3968, device='cuda:2')
+current submit client idx and staleness is  8 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.3752071261405945
+distance x is tensor(163.9805, device='cuda:2')
+benign distance is  tensor(163.9805, device='cuda:2')
+current submit client idx and staleness is  9 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.7171632051467896
+distance x is tensor(158.9315, device='cuda:2')
+benign distance is  tensor(158.9315, device='cuda:2')
+current submit client idx and staleness is  10 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.4896875321865082
+distance x is tensor(147.5987, device='cuda:2')
+benign distance is  tensor(147.5987, device='cuda:2')
+current submit client idx and staleness is  11 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.7902551889419556
+distance x is tensor(175.5043, device='cuda:2')
+benign distance is  tensor(175.5043, device='cuda:2')
+current submit client idx and staleness is  12 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.40468722581863403
+distance x is tensor(158.7901, device='cuda:2')
+benign distance is  tensor(158.7901, device='cuda:2')
+current submit client idx and staleness is  13 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.4971768856048584
+distance x is tensor(151.7392, device='cuda:2')
+benign distance is  tensor(151.7392, device='cuda:2')
+current submit client idx and staleness is  14 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.16139724850654602
+distance x is tensor(168.5738, device='cuda:2')
+benign distance is  tensor(168.5738, device='cuda:2')
+current submit client idx and staleness is  15 2
+grad,shape is torch.Size([215370])
+ benign loss is  1.0041519403457642
+distance x is tensor(168.2764, device='cuda:2')
+benign distance is  tensor(168.2764, device='cuda:2')
+current submit client idx and staleness is  24 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.2033485621213913
+distance x is tensor(168.7379, device='cuda:2')
+benign distance is  tensor(168.7379, device='cuda:2')
+current submit client idx and staleness is  25 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.8793388605117798
+distance x is tensor(154.6897, device='cuda:2')
+benign distance is  tensor(154.6897, device='cuda:2')
+current submit client idx and staleness is  26 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.41558408737182617
+distance x is tensor(162.4685, device='cuda:2')
+benign distance is  tensor(162.4685, device='cuda:2')
+current submit client idx and staleness is  27 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.6813720464706421
+distance x is tensor(153.0616, device='cuda:2')
+benign distance is  tensor(153.0616, device='cuda:2')
+current submit client idx and staleness is  28 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.9355705380439758
+distance x is tensor(163.7246, device='cuda:2')
+benign distance is  tensor(163.7246, device='cuda:2')
+current submit client idx and staleness is  29 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.29197070002555847
+distance x is tensor(165.7556, device='cuda:2')
+benign distance is  tensor(165.7556, device='cuda:2')
+current submit client idx and staleness is  30 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.3322124183177948
+distance x is tensor(165.2911, device='cuda:2')
+benign distance is  tensor(165.2911, device='cuda:2')
+current submit client idx and staleness is  31 4
+grad,shape is torch.Size([215370])
+ benign loss is  0.4417525827884674
+distance x is tensor(157.9353, device='cuda:2')
+benign distance is  tensor(157.9353, device='cuda:2')
+current submit client idx and staleness is  32 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.5108140707015991
+distance x is tensor(164.0604, device='cuda:2')
+benign distance is  tensor(164.0604, device='cuda:2')
+current submit client idx and staleness is  33 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.15092486143112183
+distance x is tensor(178.5034, device='cuda:2')
+benign distance is  tensor(178.5034, device='cuda:2')
+current submit client idx and staleness is  34 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.6195269823074341
+distance x is tensor(156.5087, device='cuda:2')
+benign distance is  tensor(156.5087, device='cuda:2')
+current submit client idx and staleness is  35 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.2088029831647873
+distance x is tensor(160.9648, device='cuda:2')
+benign distance is  tensor(160.9648, device='cuda:2')
+current submit client idx and staleness is  36 5
+grad,shape is torch.Size([215370])
+ benign loss is  1.110015630722046
+distance x is tensor(163.4671, device='cuda:2')
+benign distance is  tensor(163.4671, device='cuda:2')
+current submit client idx and staleness is  37 5
+grad,shape is torch.Size([215370])
+ benign loss is  1.0007227659225464
+distance x is tensor(156.2351, device='cuda:2')
+benign distance is  tensor(156.2351, device='cuda:2')
+current submit client idx and staleness is  38 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.7361449599266052
+distance x is tensor(156.2898, device='cuda:2')
+benign distance is  tensor(156.2898, device='cuda:2')
+current submit client idx and staleness is  39 5
+grad,shape is torch.Size([215370])
+ benign loss is  0.18133403360843658
+distance x is tensor(155.4106, device='cuda:2')
+benign distance is  tensor(155.4106, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.5500000005000001
+mal_loss is 8.353492736816406
+mal_entropy is 0.21386376023292542
+loss origin is 0.5763615369796753
+index is 0  loss diff is 0.5792018175125122
+index is 1  loss diff is 0.5893189907073975
+index is 2  loss diff is 0.6009248495101929
+index is 3  loss diff is 0.5803893208503723
+index is 4  loss diff is 0.5864264369010925
+index is 5  loss diff is 0.5842685103416443
+index is 6  loss diff is 0.5934931039810181
+index is 7  loss diff is 0.579955518245697
+index is 8  loss diff is 0.5594499707221985
+index is 9  loss diff is 0.5594499707221985
+index is 10  loss diff is 0.5594499707221985
+index is 11  loss diff is 0.5594499707221985
+index is 12  loss diff is 0.5594499707221985
+index is 13  loss diff is 0.5594499707221985
+index is 14  loss diff is 0.5594499707221985
+index is 15  loss diff is 0.5594499707221985
+index is 16  loss diff is 0.5594499707221985
+index is 17  loss diff is 0.5594499707221985
+index is 18  loss diff is 0.5594499707221985
+index is 19  loss diff is 0.5594499707221985
+index is 20  loss diff is 0.5897646546363831
+index is 21  loss diff is 0.5997028946876526
+index is 22  loss diff is 0.5948372483253479
+index is 23  loss diff is 0.5945398211479187
+index is 24  loss diff is 0.594944953918457
+index is 25  loss diff is 0.5855205059051514
+index is 26  loss diff is 0.6020423769950867
+index is 27  loss diff is 0.5965560078620911
+ 
+Avg Training Stats after 21 global rounds:
+Train Accuracy: 86.33% 
+
+Test Accuracy: 85.32% 
+
+
+ | Global Training Round : 22 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.45273905992507935
+distance x is tensor(186.1517, device='cuda:2')
+benign distance is  tensor(186.1517, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.7121033668518066
+distance x is tensor(171.5488, device='cuda:2')
+benign distance is  tensor(171.5488, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.45295605063438416
+distance x is tensor(162.2412, device='cuda:2')
+benign distance is  tensor(162.2412, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.329506516456604
+distance x is tensor(146.1538, device='cuda:2')
+benign distance is  tensor(146.1538, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.2404724359512329
+distance x is tensor(166.7612, device='cuda:2')
+benign distance is  tensor(166.7612, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.6931658983230591
+distance x is tensor(171.0625, device='cuda:2')
+benign distance is  tensor(171.0625, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.3964783549308777
+distance x is tensor(164.9852, device='cuda:2')
+benign distance is  tensor(164.9852, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5336322784423828
+distance x is tensor(158.3883, device='cuda:2')
+benign distance is  tensor(158.3883, device='cuda:2')
+current submit client idx and staleness is  16 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.519607424736023
+distance x is tensor(173.0562, device='cuda:2')
+benign distance is  tensor(173.0562, device='cuda:2')
+current submit client idx and staleness is  17 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.4919075071811676
+distance x is tensor(173.8905, device='cuda:2')
+benign distance is  tensor(173.8905, device='cuda:2')
+current submit client idx and staleness is  18 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.33098259568214417
+distance x is tensor(173.3919, device='cuda:2')
+benign distance is  tensor(173.3919, device='cuda:2')
+current submit client idx and staleness is  19 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.3868250846862793
+distance x is tensor(171.1799, device='cuda:2')
+benign distance is  tensor(171.1799, device='cuda:2')
+current submit client idx and staleness is  20 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.3470986485481262
+distance x is tensor(171.3454, device='cuda:2')
+benign distance is  tensor(171.3454, device='cuda:2')
+current submit client idx and staleness is  21 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.796420693397522
+distance x is tensor(165.5116, device='cuda:2')
+benign distance is  tensor(165.5116, device='cuda:2')
+current submit client idx and staleness is  22 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.34467849135398865
+distance x is tensor(168.7442, device='cuda:2')
+benign distance is  tensor(168.7442, device='cuda:2')
+current submit client idx and staleness is  23 3
+grad,shape is torch.Size([215370])
+ benign loss is  0.7075846791267395
+distance x is tensor(164.3028, device='cuda:2')
+benign distance is  tensor(164.3028, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.3000000005
+mal_loss is 24.728551864624023
+mal_entropy is 0.2042076140642166
+loss origin is 0.6519542336463928
+index is 0  loss diff is 0.6740584373474121
+index is 1  loss diff is 0.6785544157028198
+index is 2  loss diff is 0.6790298223495483
+index is 3  loss diff is 0.671714186668396
+index is 4  loss diff is 0.667925238609314
+index is 5  loss diff is 0.6703135967254639
+index is 6  loss diff is 0.6879323720932007
+index is 7  loss diff is 0.6701350808143616
+index is 8  loss diff is 0.6229524612426758
+index is 9  loss diff is 0.6229524612426758
+index is 10  loss diff is 0.6229524612426758
+index is 11  loss diff is 0.6229524612426758
+index is 12  loss diff is 0.6229524612426758
+index is 13  loss diff is 0.6229524612426758
+index is 14  loss diff is 0.6229524612426758
+index is 15  loss diff is 0.6229524612426758
+index is 16  loss diff is 0.6229524612426758
+index is 17  loss diff is 0.6229524612426758
+index is 18  loss diff is 0.6229524612426758
+index is 19  loss diff is 0.6229524612426758
+index is 20  loss diff is 0.6767064332962036
+index is 21  loss diff is 0.6836530566215515
+index is 22  loss diff is 0.6683362722396851
+index is 23  loss diff is 0.6677190065383911
+index is 24  loss diff is 0.6774544715881348
+index is 25  loss diff is 0.6845492124557495
+index is 26  loss diff is 0.6823173761367798
+index is 27  loss diff is 0.6600268483161926
+ 
+Avg Training Stats after 22 global rounds:
+Train Accuracy: 85.52% 
+
+Test Accuracy: 84.38% 
+
+
+ | Global Training Round : 23 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.2426738739013672
+distance x is tensor(169.6304, device='cuda:2')
+benign distance is  tensor(169.6304, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.8836044073104858
+distance x is tensor(172.0087, device='cuda:2')
+benign distance is  tensor(172.0087, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.1666872203350067
+distance x is tensor(168.5857, device='cuda:2')
+benign distance is  tensor(168.5857, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.0644608736038208
+distance x is tensor(176.7203, device='cuda:2')
+benign distance is  tensor(176.7203, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.47008591890335083
+distance x is tensor(155.6578, device='cuda:2')
+benign distance is  tensor(155.6578, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.8745707273483276
+distance x is tensor(187.5512, device='cuda:2')
+benign distance is  tensor(187.5512, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.8750470876693726
+distance x is tensor(183.0770, device='cuda:2')
+benign distance is  tensor(183.0770, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.1547011137008667
+distance x is tensor(173.9908, device='cuda:2')
+benign distance is  tensor(173.9908, device='cuda:2')
+current submit client idx and staleness is  8 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.18359246850013733
+distance x is tensor(178.3695, device='cuda:2')
+benign distance is  tensor(178.3695, device='cuda:2')
+current submit client idx and staleness is  9 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.7660015821456909
+distance x is tensor(175.5961, device='cuda:2')
+benign distance is  tensor(175.5961, device='cuda:2')
+current submit client idx and staleness is  10 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.8345537185668945
+distance x is tensor(182.3889, device='cuda:2')
+benign distance is  tensor(182.3889, device='cuda:2')
+current submit client idx and staleness is  11 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.8493224382400513
+distance x is tensor(164.9868, device='cuda:2')
+benign distance is  tensor(164.9868, device='cuda:2')
+current submit client idx and staleness is  12 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.8452450633049011
+distance x is tensor(174.9799, device='cuda:2')
+benign distance is  tensor(174.9799, device='cuda:2')
+current submit client idx and staleness is  13 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.6422284245491028
+distance x is tensor(178.6025, device='cuda:2')
+benign distance is  tensor(178.6025, device='cuda:2')
+current submit client idx and staleness is  14 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.5224517583847046
+distance x is tensor(178.7936, device='cuda:2')
+benign distance is  tensor(178.7936, device='cuda:2')
+current submit client idx and staleness is  15 2
+grad,shape is torch.Size([215370])
+ benign loss is  0.8123992681503296
+distance x is tensor(172.9955, device='cuda:2')
+benign distance is  tensor(172.9955, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.2500000005
+mal_loss is 37.336368560791016
+mal_entropy is 0.047893889248371124
+loss origin is 1.6073787212371826
+index is 0  loss diff is 2.026465892791748
+index is 1  loss diff is 2.1219520568847656
+index is 2  loss diff is 2.0112853050231934
+index is 3  loss diff is 2.0063865184783936
+index is 4  loss diff is 1.962933897972107
+index is 5  loss diff is 2.0663750171661377
+index is 6  loss diff is 2.1521358489990234
+index is 7  loss diff is 2.0253167152404785
+index is 8  loss diff is 1.3753029108047485
+index is 9  loss diff is 1.3753029108047485
+index is 10  loss diff is 1.3753029108047485
+index is 11  loss diff is 1.3753029108047485
+index is 12  loss diff is 1.3753029108047485
+index is 13  loss diff is 1.3753029108047485
+index is 14  loss diff is 1.3753029108047485
+index is 15  loss diff is 1.3753029108047485
+index is 16  loss diff is 1.3753029108047485
+index is 17  loss diff is 1.3753029108047485
+index is 18  loss diff is 1.3753029108047485
+index is 19  loss diff is 1.3753029108047485
+ 
+Avg Training Stats after 23 global rounds:
+Train Accuracy: 46.68% 
+
+Test Accuracy: 46.81% 
+
+
+ | Global Training Round : 24 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5862801671028137
+distance x is tensor(244.1470, device='cuda:2')
+benign distance is  tensor(244.1470, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.659262478351593
+distance x is tensor(231.7926, device='cuda:2')
+benign distance is  tensor(231.7926, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.2715238928794861
+distance x is tensor(237.7320, device='cuda:2')
+benign distance is  tensor(237.7320, device='cuda:2')
+current submit client idx and staleness is  3 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.8563861846923828
+distance x is tensor(275.2800, device='cuda:2')
+benign distance is  tensor(275.2800, device='cuda:2')
+current submit client idx and staleness is  4 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.37498801946640015
+distance x is tensor(250.4479, device='cuda:2')
+benign distance is  tensor(250.4479, device='cuda:2')
+current submit client idx and staleness is  5 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.029900312423706
+distance x is tensor(253.1970, device='cuda:2')
+benign distance is  tensor(253.1970, device='cuda:2')
+current submit client idx and staleness is  6 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.3124660849571228
+distance x is tensor(324.2645, device='cuda:2')
+benign distance is  tensor(324.2645, device='cuda:2')
+current submit client idx and staleness is  7 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.3345136344432831
+distance x is tensor(258.5193, device='cuda:2')
+benign distance is  tensor(258.5193, device='cuda:2')
+current submit client idx and staleness is  48 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  49 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  50 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  51 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  52 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  53 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  54 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  55 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  56 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  57 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  58 1
+grad,shape is torch.Size([215370])
+current submit client idx and staleness is  59 1
+grad,shape is torch.Size([215370])
+mal_acc is 0.10000000049999999
+mal_loss is 131.62033081054688
+mal_entropy is 0.033229149878025055
+loss origin is 0.5359290838241577
+index is 0  loss diff is 0.5433301329612732
+index is 1  loss diff is 0.5434108972549438
+index is 2  loss diff is 0.5488788485527039
+index is 3  loss diff is 0.5426791310310364
+index is 4  loss diff is 0.5427389740943909
+index is 5  loss diff is 0.5347439050674438
+index is 6  loss diff is 0.5509465932846069
+index is 7  loss diff is 0.5472662448883057
+index is 8  loss diff is 0.5172203183174133
+index is 9  loss diff is 0.5172203183174133
+index is 10  loss diff is 0.5172203183174133
+index is 11  loss diff is 0.5172203183174133
+index is 12  loss diff is 0.5172203183174133
+index is 13  loss diff is 0.5172203183174133
+index is 14  loss diff is 0.5172203183174133
+index is 15  loss diff is 0.5172203183174133
+index is 16  loss diff is 0.5172203183174133
+index is 17  loss diff is 0.5172203183174133
+index is 18  loss diff is 0.5172203183174133
+index is 19  loss diff is 0.5172203183174133
+index is 20  loss diff is 0.5460003614425659
+index is 21  loss diff is 0.533840537071228
+index is 22  loss diff is 0.5453577041625977
+index is 23  loss diff is 0.5431275963783264
+index is 24  loss diff is 0.5396019220352173
+index is 25  loss diff is 0.5356786847114563
+index is 26  loss diff is 0.534796953201294
+index is 27  loss diff is 0.540946900844574
+index is 28  loss diff is 0.5408024787902832
+index is 29  loss diff is 0.5404361486434937
+index is 30  loss diff is 0.5457898378372192
+index is 31  loss diff is 0.5384388566017151
+index is 32  loss diff is 0.5320038199424744
+index is 33  loss diff is 0.5468840003013611
+index is 34  loss diff is 0.5491950511932373
+index is 35  loss diff is 0.5469774603843689
+index is 36  loss diff is 0.5528627634048462
+index is 37  loss diff is 0.5399461388587952
+index is 38  loss diff is 0.545563817024231
+index is 39  loss diff is 0.5399223566055298
+index is 40  loss diff is 0.5428814888000488
+index is 41  loss diff is 0.5332471132278442
+index is 42  loss diff is 0.5415030717849731
+index is 43  loss diff is 0.5379693508148193
+index is 44  loss diff is 0.54764723777771
+index is 45  loss diff is 0.5404537916183472
+index is 46  loss diff is 0.534968912601471
+index is 47  loss diff is 0.5361195802688599
+index is 48  loss diff is 0.5402503609657288
+index is 49  loss diff is 0.5473949909210205
+index is 50  loss diff is 0.5405696034431458
+index is 51  loss diff is 0.534360945224762
+ 
+Avg Training Stats after 24 global rounds:
+Train Accuracy: 87.86% 
+
+Test Accuracy: 86.43% 
+
+
+ | Global Training Round : 25 | 
+
+current submit client idx and staleness is  0 1
+grad,shape is torch.Size([215370])
+ benign loss is  1.0724213123321533
+distance x is tensor(152.1836, device='cuda:2')
+benign distance is  tensor(152.1836, device='cuda:2')
+current submit client idx and staleness is  1 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.5154515504837036
+distance x is tensor(142.3606, device='cuda:2')
+benign distance is  tensor(142.3606, device='cuda:2')
+current submit client idx and staleness is  2 1
+grad,shape is torch.Size([215370])
+ benign loss is  0.19580459594726562
+distance x is tensor(159.9596, device='cuda:2')
+benign distance is  tensor(159.9596, device='cuda:2')
+current submit client idx and staleness is  3 1

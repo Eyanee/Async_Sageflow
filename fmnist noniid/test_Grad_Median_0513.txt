@@ -1,0 +1,3408 @@
+
+Experimental details:
+    Dataset     : fmnist
+    Model     : cnn
+    detailed Model     : resnet
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 30
+
+    Federated parameters:
+    IID
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.2
+     Model attack is done!
+attack user num is  12
+ t is  8
+attack_user is [48 49 50 51 52 53 54 55 56 57 58 59]
+
+ | Global Training Round : 1 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.9395092129707336
+benign distance is  tensor(116.7726, device='cuda:3')
+norm1 res is  tensor(0.1387, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.5939205884933472
+benign distance is  tensor(116.9337, device='cuda:3')
+norm1 res is  tensor(0.1364, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.5112170577049255
+benign distance is  tensor(123.8997, device='cuda:3')
+norm1 res is  tensor(0.1419, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.5183010101318359
+benign distance is  tensor(118.5777, device='cuda:3')
+norm1 res is  tensor(0.1382, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.3142591416835785
+benign distance is  tensor(109.3984, device='cuda:3')
+norm1 res is  tensor(0.1282, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.34807106852531433
+benign distance is  tensor(115.4427, device='cuda:3')
+norm1 res is  tensor(0.1358, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.8385525941848755
+benign distance is  tensor(122.5500, device='cuda:3')
+norm1 res is  tensor(0.1405, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.37241119146347046
+benign distance is  tensor(127.1617, device='cuda:3')
+norm1 res is  tensor(0.1492, device='cuda:3')
+current submit client idx and staleness is  8 2
+ benign loss is  0.4321921765804291
+benign distance is  tensor(137.7780, device='cuda:3')
+norm1 res is  tensor(0.1588, device='cuda:3')
+current submit client idx and staleness is  9 2
+ benign loss is  0.5040947198867798
+benign distance is  tensor(141.8684, device='cuda:3')
+norm1 res is  tensor(0.1617, device='cuda:3')
+current submit client idx and staleness is  10 2
+ benign loss is  0.38206392526626587
+benign distance is  tensor(123.7556, device='cuda:3')
+norm1 res is  tensor(0.1443, device='cuda:3')
+current submit client idx and staleness is  11 2
+ benign loss is  0.5189234018325806
+benign distance is  tensor(133.4908, device='cuda:3')
+norm1 res is  tensor(0.1527, device='cuda:3')
+current submit client idx and staleness is  12 2
+ benign loss is  0.352971613407135
+benign distance is  tensor(131.1620, device='cuda:3')
+norm1 res is  tensor(0.1490, device='cuda:3')
+current submit client idx and staleness is  13 2
+ benign loss is  0.27950963377952576
+benign distance is  tensor(145.2741, device='cuda:3')
+norm1 res is  tensor(0.1671, device='cuda:3')
+current submit client idx and staleness is  14 2
+ benign loss is  0.6691258549690247
+benign distance is  tensor(135.6244, device='cuda:3')
+norm1 res is  tensor(0.1574, device='cuda:3')
+current submit client idx and staleness is  15 2
+ benign loss is  0.24592792987823486
+benign distance is  tensor(132.7600, device='cuda:3')
+norm1 res is  tensor(0.1541, device='cuda:3')
+current submit client idx and staleness is  16 3
+ benign loss is  0.39435455203056335
+benign distance is  tensor(125.3434, device='cuda:3')
+norm1 res is  tensor(0.1433, device='cuda:3')
+current submit client idx and staleness is  17 3
+ benign loss is  0.48323264718055725
+benign distance is  tensor(148.8711, device='cuda:3')
+norm1 res is  tensor(0.1726, device='cuda:3')
+current submit client idx and staleness is  18 3
+ benign loss is  0.4373786449432373
+benign distance is  tensor(128.8819, device='cuda:3')
+norm1 res is  tensor(0.1535, device='cuda:3')
+current submit client idx and staleness is  19 3
+ benign loss is  0.34632644057273865
+benign distance is  tensor(134.9772, device='cuda:3')
+norm1 res is  tensor(0.1562, device='cuda:3')
+current submit client idx and staleness is  20 3
+ benign loss is  0.0872146487236023
+benign distance is  tensor(129.6646, device='cuda:3')
+norm1 res is  tensor(0.1503, device='cuda:3')
+current submit client idx and staleness is  21 3
+ benign loss is  0.21823593974113464
+benign distance is  tensor(121.1647, device='cuda:3')
+norm1 res is  tensor(0.1399, device='cuda:3')
+current submit client idx and staleness is  22 3
+ benign loss is  0.20689401030540466
+benign distance is  tensor(141.6015, device='cuda:3')
+norm1 res is  tensor(0.1630, device='cuda:3')
+current submit client idx and staleness is  23 3
+ benign loss is  1.03701913356781
+benign distance is  tensor(136.0845, device='cuda:3')
+norm1 res is  tensor(0.1536, device='cuda:3')
+current submit client idx and staleness is  24 4
+ benign loss is  0.42748135328292847
+benign distance is  tensor(142.4412, device='cuda:3')
+norm1 res is  tensor(0.1639, device='cuda:3')
+current submit client idx and staleness is  25 4
+ benign loss is  0.750599205493927
+benign distance is  tensor(120.2337, device='cuda:3')
+norm1 res is  tensor(0.1352, device='cuda:3')
+current submit client idx and staleness is  26 4
+ benign loss is  0.5231961011886597
+benign distance is  tensor(140.0818, device='cuda:3')
+norm1 res is  tensor(0.1612, device='cuda:3')
+current submit client idx and staleness is  27 4
+ benign loss is  0.27718570828437805
+benign distance is  tensor(135.8604, device='cuda:3')
+norm1 res is  tensor(0.1517, device='cuda:3')
+current submit client idx and staleness is  28 4
+ benign loss is  0.9368101358413696
+benign distance is  tensor(124.0128, device='cuda:3')
+norm1 res is  tensor(0.1419, device='cuda:3')
+current submit client idx and staleness is  29 4
+ benign loss is  0.8780501484870911
+benign distance is  tensor(138.0106, device='cuda:3')
+norm1 res is  tensor(0.1618, device='cuda:3')
+current submit client idx and staleness is  30 4
+ benign loss is  0.40297049283981323
+benign distance is  tensor(124.4126, device='cuda:3')
+norm1 res is  tensor(0.1457, device='cuda:3')
+current submit client idx and staleness is  31 4
+ benign loss is  0.7352688908576965
+benign distance is  tensor(130.4620, device='cuda:3')
+norm1 res is  tensor(0.1562, device='cuda:3')
+current submit client idx and staleness is  32 5
+ benign loss is  0.41609787940979004
+benign distance is  tensor(136.1165, device='cuda:3')
+norm1 res is  tensor(0.1565, device='cuda:3')
+current submit client idx and staleness is  33 5
+ benign loss is  0.5010719895362854
+benign distance is  tensor(126.6870, device='cuda:3')
+norm1 res is  tensor(0.1461, device='cuda:3')
+current submit client idx and staleness is  34 5
+ benign loss is  0.3850417733192444
+benign distance is  tensor(137.5505, device='cuda:3')
+norm1 res is  tensor(0.1609, device='cuda:3')
+current submit client idx and staleness is  35 5
+ benign loss is  0.057233840227127075
+benign distance is  tensor(126.8438, device='cuda:3')
+norm1 res is  tensor(0.1449, device='cuda:3')
+current submit client idx and staleness is  36 5
+ benign loss is  0.605672299861908
+benign distance is  tensor(129.8708, device='cuda:3')
+norm1 res is  tensor(0.1522, device='cuda:3')
+current submit client idx and staleness is  37 5
+ benign loss is  0.298145592212677
+benign distance is  tensor(124.2039, device='cuda:3')
+norm1 res is  tensor(0.1408, device='cuda:3')
+current submit client idx and staleness is  38 5
+ benign loss is  0.3852643072605133
+benign distance is  tensor(126.6276, device='cuda:3')
+norm1 res is  tensor(0.1459, device='cuda:3')
+current submit client idx and staleness is  39 5
+ benign loss is  0.25072091817855835
+benign distance is  tensor(127.7558, device='cuda:3')
+norm1 res is  tensor(0.1461, device='cuda:3')
+current submit client idx and staleness is  40 6
+ benign loss is  0.23226597905158997
+benign distance is  tensor(125.1508, device='cuda:3')
+norm1 res is  tensor(0.1444, device='cuda:3')
+current submit client idx and staleness is  41 6
+ benign loss is  0.2787633538246155
+benign distance is  tensor(124.2198, device='cuda:3')
+norm1 res is  tensor(0.1420, device='cuda:3')
+current submit client idx and staleness is  42 6
+ benign loss is  0.09089306741952896
+benign distance is  tensor(126.4925, device='cuda:3')
+norm1 res is  tensor(0.1450, device='cuda:3')
+current submit client idx and staleness is  43 6
+ benign loss is  0.3669930398464203
+benign distance is  tensor(138.8691, device='cuda:3')
+norm1 res is  tensor(0.1583, device='cuda:3')
+current submit client idx and staleness is  44 6
+ benign loss is  0.2524116635322571
+benign distance is  tensor(142.5956, device='cuda:3')
+norm1 res is  tensor(0.1629, device='cuda:3')
+current submit client idx and staleness is  45 6
+ benign loss is  0.6753549575805664
+benign distance is  tensor(127.8971, device='cuda:3')
+norm1 res is  tensor(0.1449, device='cuda:3')
+current submit client idx and staleness is  46 6
+ benign loss is  0.9650644063949585
+benign distance is  tensor(132.8835, device='cuda:3')
+norm1 res is  tensor(0.1505, device='cuda:3')
+current submit client idx and staleness is  47 6
+ benign loss is  0.29104405641555786
+benign distance is  tensor(135.9785, device='cuda:3')
+norm1 res is  tensor(0.1567, device='cuda:3')
+current submit client idx and staleness is  48 1
+ benign loss is  0.2447047233581543
+benign distance is  tensor(114.0206, device='cuda:3')
+norm1 res is  tensor(0.1327, device='cuda:3')
+current submit client idx and staleness is  49 1
+ benign loss is  0.803498387336731
+benign distance is  tensor(112.2900, device='cuda:3')
+norm1 res is  tensor(0.1311, device='cuda:3')
+current submit client idx and staleness is  50 1
+ benign loss is  0.5969299077987671
+benign distance is  tensor(125.4533, device='cuda:3')
+norm1 res is  tensor(0.1449, device='cuda:3')
+current submit client idx and staleness is  51 1
+ benign loss is  0.19414541125297546
+benign distance is  tensor(114.1620, device='cuda:3')
+norm1 res is  tensor(0.1326, device='cuda:3')
+current submit client idx and staleness is  52 1
+ benign loss is  0.4159708023071289
+benign distance is  tensor(115.6300, device='cuda:3')
+norm1 res is  tensor(0.1367, device='cuda:3')
+current submit client idx and staleness is  53 1
+ benign loss is  0.40045467019081116
+benign distance is  tensor(117.8174, device='cuda:3')
+norm1 res is  tensor(0.1392, device='cuda:3')
+current submit client idx and staleness is  54 1
+ benign loss is  0.058233629912137985
+benign distance is  tensor(120.9189, device='cuda:3')
+norm1 res is  tensor(0.1413, device='cuda:3')
+current submit client idx and staleness is  55 1
+ benign loss is  0.4206911027431488
+benign distance is  tensor(121.9173, device='cuda:3')
+norm1 res is  tensor(0.1395, device='cuda:3')
+current submit client idx and staleness is  56 1
+ benign loss is  0.3353502154350281
+benign distance is  tensor(133.2512, device='cuda:3')
+norm1 res is  tensor(0.1542, device='cuda:3')
+current submit client idx and staleness is  57 1
+ benign loss is  0.6916255354881287
+benign distance is  tensor(109.8487, device='cuda:3')
+norm1 res is  tensor(0.1248, device='cuda:3')
+current submit client idx and staleness is  58 1
+ benign loss is  0.4644041061401367
+benign distance is  tensor(120.7846, device='cuda:3')
+norm1 res is  tensor(0.1424, device='cuda:3')
+current submit client idx and staleness is  59 1
+ benign loss is  0.08655193448066711
+benign distance is  tensor(130.9806, device='cuda:3')
+norm1 res is  tensor(0.1487, device='cuda:3')
+curent length is  20
+the length of epoch_weights is  0
+alpha 1 is []
+alphas 3 is [1.]
+alphas is  [1.]
+median_weights acc is  0.8778000001569995
+ 
+Avg Training Stats after 1 global rounds:
+Train Accuracy: 89.18% 
+
+Test Accuracy: 88.60% 
+
+
+ | Global Training Round : 2 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.5631917715072632
+benign distance is  tensor(111.3615, device='cuda:3')
+norm1 res is  tensor(0.1314, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.4033602178096771
+benign distance is  tensor(111.7097, device='cuda:3')
+norm1 res is  tensor(0.1347, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.1848348081111908
+benign distance is  tensor(141.3941, device='cuda:3')
+norm1 res is  tensor(0.1608, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.7093472480773926
+benign distance is  tensor(109.3770, device='cuda:3')
+norm1 res is  tensor(0.1258, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.3015161454677582
+benign distance is  tensor(109.8305, device='cuda:3')
+norm1 res is  tensor(0.1263, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.7193958759307861
+benign distance is  tensor(124.4013, device='cuda:3')
+norm1 res is  tensor(0.1431, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.3274543285369873
+benign distance is  tensor(102.2758, device='cuda:3')
+norm1 res is  tensor(0.1186, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.27594268321990967
+benign distance is  tensor(123.6709, device='cuda:3')
+norm1 res is  tensor(0.1430, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+curent length is  8
+the length of epoch_weights is  1
+alpha 1 is [0]
+alphas 3 is [1.  0.5]
+alphas is  [0.66666667 0.33333333]
+median_weights acc is  0.8723000001569995
+ 
+Avg Training Stats after 2 global rounds:
+Train Accuracy: 89.01% 
+
+Test Accuracy: 88.16% 
+
+
+ | Global Training Round : 3 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.596394419670105
+benign distance is  tensor(107.7686, device='cuda:3')
+norm1 res is  tensor(0.1243, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.325392484664917
+benign distance is  tensor(120.5317, device='cuda:3')
+norm1 res is  tensor(0.1390, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.29819586873054504
+benign distance is  tensor(115.7586, device='cuda:3')
+norm1 res is  tensor(0.1336, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.2641681134700775
+benign distance is  tensor(109.1369, device='cuda:3')
+norm1 res is  tensor(0.1225, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.3223310112953186
+benign distance is  tensor(96.8277, device='cuda:3')
+norm1 res is  tensor(0.1086, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.4758778512477875
+benign distance is  tensor(120.4346, device='cuda:3')
+norm1 res is  tensor(0.1435, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.09692646563053131
+benign distance is  tensor(119.1552, device='cuda:3')
+norm1 res is  tensor(0.1372, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.4277469515800476
+benign distance is  tensor(109.4729, device='cuda:3')
+norm1 res is  tensor(0.1282, device='cuda:3')
+current submit client idx and staleness is  8 2
+ benign loss is  0.28747081756591797
+benign distance is  tensor(137.6122, device='cuda:3')
+norm1 res is  tensor(0.1593, device='cuda:3')
+current submit client idx and staleness is  9 2
+ benign loss is  0.4578172564506531
+benign distance is  tensor(138.2912, device='cuda:3')
+norm1 res is  tensor(0.1552, device='cuda:3')
+current submit client idx and staleness is  10 2
+ benign loss is  0.23517045378684998
+benign distance is  tensor(124.5697, device='cuda:3')
+norm1 res is  tensor(0.1425, device='cuda:3')
+current submit client idx and staleness is  11 2
+ benign loss is  0.6016427278518677
+benign distance is  tensor(121.2047, device='cuda:3')
+norm1 res is  tensor(0.1406, device='cuda:3')
+current submit client idx and staleness is  12 2
+ benign loss is  0.8084070086479187
+benign distance is  tensor(122.2541, device='cuda:3')
+norm1 res is  tensor(0.1411, device='cuda:3')
+current submit client idx and staleness is  13 2
+ benign loss is  0.21778590977191925
+benign distance is  tensor(129.6871, device='cuda:3')
+norm1 res is  tensor(0.1473, device='cuda:3')
+current submit client idx and staleness is  14 2
+ benign loss is  0.31592676043510437
+benign distance is  tensor(121.4177, device='cuda:3')
+norm1 res is  tensor(0.1406, device='cuda:3')
+current submit client idx and staleness is  15 2
+ benign loss is  0.630957305431366
+benign distance is  tensor(135.5179, device='cuda:3')
+norm1 res is  tensor(0.1564, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+curent length is  8
+the length of epoch_weights is  1
+alpha 1 is [0]
+alphas 3 is [1.         0.33333333]
+alphas is  [0.75 0.25]
+median_weights acc is  0.8679000001569995
+ 
+Avg Training Stats after 3 global rounds:
+Train Accuracy: 88.93% 
+
+Test Accuracy: 88.14% 
+
+
+ | Global Training Round : 4 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.5444275736808777
+benign distance is  tensor(89.9681, device='cuda:3')
+norm1 res is  tensor(0.1068, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.8928554654121399
+benign distance is  tensor(124.1563, device='cuda:3')
+norm1 res is  tensor(0.1469, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.23296336829662323
+benign distance is  tensor(114.2342, device='cuda:3')
+norm1 res is  tensor(0.1317, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.5732772946357727
+benign distance is  tensor(101.3467, device='cuda:3')
+norm1 res is  tensor(0.1158, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.2763960361480713
+benign distance is  tensor(107.1276, device='cuda:3')
+norm1 res is  tensor(0.1247, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  1.0929899215698242
+benign distance is  tensor(127.3906, device='cuda:3')
+norm1 res is  tensor(0.1460, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.31164345145225525
+benign distance is  tensor(114.7781, device='cuda:3')
+norm1 res is  tensor(0.1308, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.7870299220085144
+benign distance is  tensor(119.3935, device='cuda:3')
+norm1 res is  tensor(0.1404, device='cuda:3')
+current submit client idx and staleness is  16 3
+ benign loss is  0.5840147137641907
+benign distance is  tensor(126.3519, device='cuda:3')
+norm1 res is  tensor(0.1430, device='cuda:3')
+current submit client idx and staleness is  17 3
+ benign loss is  0.5720895528793335
+benign distance is  tensor(143.8928, device='cuda:3')
+norm1 res is  tensor(0.1677, device='cuda:3')
+current submit client idx and staleness is  18 3
+ benign loss is  0.6841264963150024
+benign distance is  tensor(123.0294, device='cuda:3')
+norm1 res is  tensor(0.1414, device='cuda:3')
+current submit client idx and staleness is  19 3
+ benign loss is  0.3645835518836975
+benign distance is  tensor(124.8365, device='cuda:3')
+norm1 res is  tensor(0.1465, device='cuda:3')
+current submit client idx and staleness is  20 3
+ benign loss is  0.32964465022087097
+benign distance is  tensor(136.2684, device='cuda:3')
+norm1 res is  tensor(0.1555, device='cuda:3')
+current submit client idx and staleness is  21 3
+ benign loss is  0.4516676962375641
+benign distance is  tensor(115.5747, device='cuda:3')
+norm1 res is  tensor(0.1346, device='cuda:3')
+current submit client idx and staleness is  22 3
+ benign loss is  0.13852672278881073
+benign distance is  tensor(130.5038, device='cuda:3')
+norm1 res is  tensor(0.1547, device='cuda:3')
+current submit client idx and staleness is  23 3
+ benign loss is  0.46881207823753357
+benign distance is  tensor(125.9358, device='cuda:3')
+norm1 res is  tensor(0.1430, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+curent length is  8
+the length of epoch_weights is  2
+alpha 1 is [0, 2]
+alphas 3 is [1.   0.25 0.5 ]
+alphas is  [0.57142857 0.14285714 0.28571429]
+median_weights acc is  0.8731000001569995
+ 
+Avg Training Stats after 4 global rounds:
+Train Accuracy: 88.90% 
+
+Test Accuracy: 88.27% 
+
+
+ | Global Training Round : 5 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.707005500793457
+benign distance is  tensor(98.9239, device='cuda:3')
+norm1 res is  tensor(0.1186, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  1.0260297060012817
+benign distance is  tensor(112.2812, device='cuda:3')
+norm1 res is  tensor(0.1318, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.2509504556655884
+benign distance is  tensor(117.0776, device='cuda:3')
+norm1 res is  tensor(0.1354, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.24754759669303894
+benign distance is  tensor(94.7317, device='cuda:3')
+norm1 res is  tensor(0.1081, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.5783771276473999
+benign distance is  tensor(97.8149, device='cuda:3')
+norm1 res is  tensor(0.1125, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  1.2406343221664429
+benign distance is  tensor(108.5643, device='cuda:3')
+norm1 res is  tensor(0.1269, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.4246574938297272
+benign distance is  tensor(109.6042, device='cuda:3')
+norm1 res is  tensor(0.1244, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.29191726446151733
+benign distance is  tensor(114.1420, device='cuda:3')
+norm1 res is  tensor(0.1316, device='cuda:3')
+current submit client idx and staleness is  8 2
+ benign loss is  0.5022028684616089
+benign distance is  tensor(136.3363, device='cuda:3')
+norm1 res is  tensor(0.1544, device='cuda:3')
+current submit client idx and staleness is  9 2
+ benign loss is  0.218257337808609
+benign distance is  tensor(135.8523, device='cuda:3')
+norm1 res is  tensor(0.1530, device='cuda:3')
+current submit client idx and staleness is  10 2
+ benign loss is  0.4759064316749573
+benign distance is  tensor(128.3388, device='cuda:3')
+norm1 res is  tensor(0.1454, device='cuda:3')
+current submit client idx and staleness is  11 2
+ benign loss is  0.945534348487854
+benign distance is  tensor(126.3779, device='cuda:3')
+norm1 res is  tensor(0.1470, device='cuda:3')
+current submit client idx and staleness is  12 2
+ benign loss is  0.7354379892349243
+benign distance is  tensor(124.9510, device='cuda:3')
+norm1 res is  tensor(0.1446, device='cuda:3')
+current submit client idx and staleness is  13 2
+ benign loss is  0.29633456468582153
+benign distance is  tensor(128.6396, device='cuda:3')
+norm1 res is  tensor(0.1523, device='cuda:3')
+current submit client idx and staleness is  14 2
+ benign loss is  0.5447269082069397
+benign distance is  tensor(124.2122, device='cuda:3')
+norm1 res is  tensor(0.1487, device='cuda:3')
+current submit client idx and staleness is  15 2
+ benign loss is  1.0950210094451904
+benign distance is  tensor(130.1869, device='cuda:3')
+norm1 res is  tensor(0.1474, device='cuda:3')
+current submit client idx and staleness is  24 4
+ benign loss is  0.276813805103302
+benign distance is  tensor(130.2395, device='cuda:3')
+norm1 res is  tensor(0.1559, device='cuda:3')
+current submit client idx and staleness is  25 4
+ benign loss is  1.0222233533859253
+benign distance is  tensor(114.1943, device='cuda:3')
+norm1 res is  tensor(0.1289, device='cuda:3')
+current submit client idx and staleness is  26 4
+ benign loss is  0.3907445967197418
+benign distance is  tensor(132.7582, device='cuda:3')
+norm1 res is  tensor(0.1544, device='cuda:3')
+current submit client idx and staleness is  27 4
+ benign loss is  0.9905526041984558
+benign distance is  tensor(131.0809, device='cuda:3')
+norm1 res is  tensor(0.1515, device='cuda:3')
+current submit client idx and staleness is  28 4
+ benign loss is  1.418752670288086
+benign distance is  tensor(122.8180, device='cuda:3')
+norm1 res is  tensor(0.1368, device='cuda:3')
+current submit client idx and staleness is  29 4
+ benign loss is  0.8237711787223816
+benign distance is  tensor(118.7685, device='cuda:3')
+norm1 res is  tensor(0.1368, device='cuda:3')
+current submit client idx and staleness is  30 4
+ benign loss is  0.44210511445999146
+benign distance is  tensor(123.1430, device='cuda:3')
+norm1 res is  tensor(0.1407, device='cuda:3')
+current submit client idx and staleness is  31 4
+ benign loss is  0.2204793244600296
+benign distance is  tensor(131.0004, device='cuda:3')
+norm1 res is  tensor(0.1533, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+curent length is  8
+the length of epoch_weights is  1
+alpha 1 is [0]
+alphas 3 is [1.  0.2]
+alphas is  [0.83333333 0.16666667]
+median_weights acc is  0.8740000001569995
+ 
+Avg Training Stats after 5 global rounds:
+Train Accuracy: 88.99% 
+
+Test Accuracy: 88.11% 
+
+
+ | Global Training Round : 6 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.4316554665565491
+benign distance is  tensor(107.3777, device='cuda:3')
+norm1 res is  tensor(0.1260, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.7657662630081177
+benign distance is  tensor(118.1804, device='cuda:3')
+norm1 res is  tensor(0.1384, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.48992419242858887
+benign distance is  tensor(116.5757, device='cuda:3')
+norm1 res is  tensor(0.1350, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.5403032302856445
+benign distance is  tensor(112.3504, device='cuda:3')
+norm1 res is  tensor(0.1274, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  1.008423089981079
+benign distance is  tensor(96.7951, device='cuda:3')
+norm1 res is  tensor(0.1091, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  1.1964819431304932
+benign distance is  tensor(111.5529, device='cuda:3')
+norm1 res is  tensor(0.1303, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.6635919809341431
+benign distance is  tensor(108.4236, device='cuda:3')
+norm1 res is  tensor(0.1224, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.5267479419708252
+benign distance is  tensor(104.7005, device='cuda:3')
+norm1 res is  tensor(0.1217, device='cuda:3')
+current submit client idx and staleness is  32 5
+ benign loss is  0.7789941430091858
+benign distance is  tensor(130.3901, device='cuda:3')
+norm1 res is  tensor(0.1524, device='cuda:3')
+current submit client idx and staleness is  33 5
+ benign loss is  0.04753097891807556
+benign distance is  tensor(135.1131, device='cuda:3')
+norm1 res is  tensor(0.1583, device='cuda:3')
+current submit client idx and staleness is  34 5
+ benign loss is  0.6557604074478149
+benign distance is  tensor(144.3920, device='cuda:3')
+norm1 res is  tensor(0.1669, device='cuda:3')
+current submit client idx and staleness is  35 5
+ benign loss is  0.04612984135746956
+benign distance is  tensor(123.3138, device='cuda:3')
+norm1 res is  tensor(0.1416, device='cuda:3')
+current submit client idx and staleness is  36 5
+ benign loss is  0.9168087840080261
+benign distance is  tensor(128.1052, device='cuda:3')
+norm1 res is  tensor(0.1481, device='cuda:3')
+current submit client idx and staleness is  37 5
+ benign loss is  0.3152649998664856
+benign distance is  tensor(117.3370, device='cuda:3')
+norm1 res is  tensor(0.1355, device='cuda:3')
+current submit client idx and staleness is  38 5
+ benign loss is  0.7303247451782227
+benign distance is  tensor(117.6663, device='cuda:3')
+norm1 res is  tensor(0.1375, device='cuda:3')
+current submit client idx and staleness is  39 5
+ benign loss is  0.019399644806981087
+benign distance is  tensor(116.2356, device='cuda:3')
+norm1 res is  tensor(0.1342, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+curent length is  8
+the length of epoch_weights is  3
+alpha 1 is [0, 3, 4]
+alphas 3 is [1.         0.16666667 0.33333333 0.5       ]
+alphas is  [0.5        0.08333333 0.16666667 0.25      ]
+median_weights acc is  0.8720000001569995
+ 
+Avg Training Stats after 6 global rounds:
+Train Accuracy: 89.02% 
+
+Test Accuracy: 88.11% 
+
+
+ | Global Training Round : 7 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.29158833622932434
+benign distance is  tensor(111.5332, device='cuda:3')
+norm1 res is  tensor(0.1318, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.7174774408340454
+benign distance is  tensor(126.8635, device='cuda:3')
+norm1 res is  tensor(0.1474, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.12891104817390442
+benign distance is  tensor(122.6169, device='cuda:3')
+norm1 res is  tensor(0.1403, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.4724070429801941
+benign distance is  tensor(100.1702, device='cuda:3')
+norm1 res is  tensor(0.1142, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.1767970621585846
+benign distance is  tensor(108.3352, device='cuda:3')
+norm1 res is  tensor(0.1329, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.5409978628158569
+benign distance is  tensor(106.7784, device='cuda:3')
+norm1 res is  tensor(0.1227, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.38165482878685
+benign distance is  tensor(94.1308, device='cuda:3')
+norm1 res is  tensor(0.1064, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.4058128297328949
+benign distance is  tensor(119.0297, device='cuda:3')
+norm1 res is  tensor(0.1387, device='cuda:3')
+current submit client idx and staleness is  8 2
+ benign loss is  0.12218308448791504
+benign distance is  tensor(128.0890, device='cuda:3')
+norm1 res is  tensor(0.1460, device='cuda:3')
+current submit client idx and staleness is  9 2
+ benign loss is  0.5068000555038452
+benign distance is  tensor(129.1935, device='cuda:3')
+norm1 res is  tensor(0.1476, device='cuda:3')
+current submit client idx and staleness is  10 2
+ benign loss is  0.14201372861862183
+benign distance is  tensor(122.7029, device='cuda:3')
+norm1 res is  tensor(0.1431, device='cuda:3')
+current submit client idx and staleness is  11 2
+ benign loss is  0.7076627016067505
+benign distance is  tensor(136.7789, device='cuda:3')
+norm1 res is  tensor(0.1563, device='cuda:3')
+current submit client idx and staleness is  12 2
+ benign loss is  0.43111833930015564
+benign distance is  tensor(113.6896, device='cuda:3')
+norm1 res is  tensor(0.1330, device='cuda:3')
+current submit client idx and staleness is  13 2
+ benign loss is  0.5553434491157532
+benign distance is  tensor(129.7300, device='cuda:3')
+norm1 res is  tensor(0.1490, device='cuda:3')
+current submit client idx and staleness is  14 2
+ benign loss is  0.09478576481342316
+benign distance is  tensor(124.6536, device='cuda:3')
+norm1 res is  tensor(0.1449, device='cuda:3')
+current submit client idx and staleness is  15 2
+ benign loss is  0.5002391338348389
+benign distance is  tensor(134.3513, device='cuda:3')
+norm1 res is  tensor(0.1534, device='cuda:3')
+current submit client idx and staleness is  16 3
+ benign loss is  0.06515685468912125
+benign distance is  tensor(131.1903, device='cuda:3')
+norm1 res is  tensor(0.1519, device='cuda:3')
+current submit client idx and staleness is  17 3
+ benign loss is  0.460517019033432
+benign distance is  tensor(141.0007, device='cuda:3')
+norm1 res is  tensor(0.1652, device='cuda:3')
+current submit client idx and staleness is  18 3
+ benign loss is  0.22628934681415558
+benign distance is  tensor(119.8095, device='cuda:3')
+norm1 res is  tensor(0.1401, device='cuda:3')
+current submit client idx and staleness is  19 3
+ benign loss is  0.21838876605033875
+benign distance is  tensor(119.7813, device='cuda:3')
+norm1 res is  tensor(0.1418, device='cuda:3')
+current submit client idx and staleness is  20 3
+ benign loss is  0.28203779458999634
+benign distance is  tensor(134.3601, device='cuda:3')
+norm1 res is  tensor(0.1557, device='cuda:3')
+current submit client idx and staleness is  21 3
+ benign loss is  0.6497327089309692
+benign distance is  tensor(118.7107, device='cuda:3')
+norm1 res is  tensor(0.1354, device='cuda:3')
+current submit client idx and staleness is  22 3
+ benign loss is  0.34167030453681946
+benign distance is  tensor(131.4530, device='cuda:3')
+norm1 res is  tensor(0.1537, device='cuda:3')
+current submit client idx and staleness is  23 3
+ benign loss is  0.3541267514228821
+benign distance is  tensor(129.3016, device='cuda:3')
+norm1 res is  tensor(0.1495, device='cuda:3')
+current submit client idx and staleness is  40 6
+ benign loss is  0.15978603065013885
+benign distance is  tensor(125.8154, device='cuda:3')
+norm1 res is  tensor(0.1461, device='cuda:3')
+current submit client idx and staleness is  41 6
+ benign loss is  0.1767960488796234
+benign distance is  tensor(132.0625, device='cuda:3')
+norm1 res is  tensor(0.1526, device='cuda:3')
+current submit client idx and staleness is  42 6
+ benign loss is  0.15748368203639984
+benign distance is  tensor(126.9314, device='cuda:3')
+norm1 res is  tensor(0.1476, device='cuda:3')
+current submit client idx and staleness is  43 6
+ benign loss is  0.22186514735221863
+benign distance is  tensor(131.9276, device='cuda:3')
+norm1 res is  tensor(0.1531, device='cuda:3')
+current submit client idx and staleness is  44 6
+ benign loss is  0.30515435338020325
+benign distance is  tensor(123.7405, device='cuda:3')
+norm1 res is  tensor(0.1423, device='cuda:3')
+current submit client idx and staleness is  45 6
+ benign loss is  0.8087905049324036
+benign distance is  tensor(127.0002, device='cuda:3')
+norm1 res is  tensor(0.1472, device='cuda:3')
+current submit client idx and staleness is  46 6
+ benign loss is  0.64630526304245
+benign distance is  tensor(128.8642, device='cuda:3')
+norm1 res is  tensor(0.1518, device='cuda:3')
+current submit client idx and staleness is  47 6
+ benign loss is  0.39174777269363403
+benign distance is  tensor(130.2693, device='cuda:3')
+norm1 res is  tensor(0.1551, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 0.9000000005000001
+mal_loss is 0.2673931419849396
+mal_entropy is 0.34992262721061707
+curent length is  20
+the length of epoch_weights is  0
+alpha 1 is []
+alphas 3 is [1.]
+alphas is  [1.]
+median_weights acc is  0.8467000001569992
+ 
+Avg Training Stats after 7 global rounds:
+Train Accuracy: 86.74% 
+
+Test Accuracy: 85.88% 
+
+
+ | Global Training Round : 8 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  1.2700166702270508
+benign distance is  tensor(98.4496, device='cuda:3')
+norm1 res is  tensor(0.1156, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.44164401292800903
+benign distance is  tensor(121.8665, device='cuda:3')
+norm1 res is  tensor(0.1405, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.16360720992088318
+benign distance is  tensor(110.9364, device='cuda:3')
+norm1 res is  tensor(0.1272, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.6865958571434021
+benign distance is  tensor(105.5680, device='cuda:3')
+norm1 res is  tensor(0.1198, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.914559006690979
+benign distance is  tensor(101.7122, device='cuda:3')
+norm1 res is  tensor(0.1160, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.43301963806152344
+benign distance is  tensor(107.2750, device='cuda:3')
+norm1 res is  tensor(0.1222, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.1310461461544037
+benign distance is  tensor(104.4307, device='cuda:3')
+norm1 res is  tensor(0.1249, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.26233041286468506
+benign distance is  tensor(117.8421, device='cuda:3')
+norm1 res is  tensor(0.1386, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 0.9500000005
+mal_loss is 0.5057164430618286
+mal_entropy is 0.9774572253227234
+curent length is  20
+the length of epoch_weights is  2
+the length of weights_d is  2
+alpha 1 is [4, 6]
+alphas 3 is [1.   0.25 0.5 ]
+alphas is  [0.57142857 0.14285714 0.28571429]
+median_weights acc is  0.8259000001569988
+ 
+Avg Training Stats after 8 global rounds:
+Train Accuracy: 84.74% 
+
+Test Accuracy: 83.70% 
+
+
+ | Global Training Round : 9 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.48585787415504456
+benign distance is  tensor(100.1635, device='cuda:3')
+norm1 res is  tensor(0.1200, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.382643461227417
+benign distance is  tensor(104.9451, device='cuda:3')
+norm1 res is  tensor(0.1265, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.3295390009880066
+benign distance is  tensor(105.8018, device='cuda:3')
+norm1 res is  tensor(0.1252, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.5161608457565308
+benign distance is  tensor(105.2376, device='cuda:3')
+norm1 res is  tensor(0.1213, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.6471714973449707
+benign distance is  tensor(97.6421, device='cuda:3')
+norm1 res is  tensor(0.1092, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.9986292719841003
+benign distance is  tensor(114.7858, device='cuda:3')
+norm1 res is  tensor(0.1329, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.36780470609664917
+benign distance is  tensor(111.3914, device='cuda:3')
+norm1 res is  tensor(0.1265, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.5518883466720581
+benign distance is  tensor(112.4678, device='cuda:3')
+norm1 res is  tensor(0.1305, device='cuda:3')
+current submit client idx and staleness is  8 2
+ benign loss is  0.59801185131073
+benign distance is  tensor(138.1673, device='cuda:3')
+norm1 res is  tensor(0.1581, device='cuda:3')
+current submit client idx and staleness is  9 2
+ benign loss is  0.5236077308654785
+benign distance is  tensor(122.6805, device='cuda:3')
+norm1 res is  tensor(0.1431, device='cuda:3')
+current submit client idx and staleness is  10 2
+ benign loss is  0.6052068471908569
+benign distance is  tensor(114.8679, device='cuda:3')
+norm1 res is  tensor(0.1377, device='cuda:3')
+current submit client idx and staleness is  11 2
+ benign loss is  0.5506919622421265
+benign distance is  tensor(120.5434, device='cuda:3')
+norm1 res is  tensor(0.1386, device='cuda:3')
+current submit client idx and staleness is  12 2
+ benign loss is  0.5905236005783081
+benign distance is  tensor(114.8113, device='cuda:3')
+norm1 res is  tensor(0.1334, device='cuda:3')
+current submit client idx and staleness is  13 2
+ benign loss is  0.20874428749084473
+benign distance is  tensor(121.0062, device='cuda:3')
+norm1 res is  tensor(0.1434, device='cuda:3')
+current submit client idx and staleness is  14 2
+ benign loss is  0.2262282371520996
+benign distance is  tensor(119.5223, device='cuda:3')
+norm1 res is  tensor(0.1421, device='cuda:3')
+current submit client idx and staleness is  15 2
+ benign loss is  0.7015995979309082
+benign distance is  tensor(125.6631, device='cuda:3')
+norm1 res is  tensor(0.1484, device='cuda:3')
+current submit client idx and staleness is  24 4
+ benign loss is  0.18178579211235046
+benign distance is  tensor(131.6324, device='cuda:3')
+norm1 res is  tensor(0.1561, device='cuda:3')
+current submit client idx and staleness is  25 4
+ benign loss is  0.7166818380355835
+benign distance is  tensor(114.0287, device='cuda:3')
+norm1 res is  tensor(0.1273, device='cuda:3')
+current submit client idx and staleness is  26 4
+ benign loss is  0.5376613140106201
+benign distance is  tensor(129.7247, device='cuda:3')
+norm1 res is  tensor(0.1499, device='cuda:3')
+current submit client idx and staleness is  27 4
+ benign loss is  0.31966352462768555
+benign distance is  tensor(128.8801, device='cuda:3')
+norm1 res is  tensor(0.1493, device='cuda:3')
+current submit client idx and staleness is  28 4
+ benign loss is  0.4189651608467102
+benign distance is  tensor(127.2598, device='cuda:3')
+norm1 res is  tensor(0.1475, device='cuda:3')
+current submit client idx and staleness is  29 4
+ benign loss is  0.521649956703186
+benign distance is  tensor(117.3925, device='cuda:3')
+norm1 res is  tensor(0.1351, device='cuda:3')
+current submit client idx and staleness is  30 4
+ benign loss is  0.4140346050262451
+benign distance is  tensor(114.1140, device='cuda:3')
+norm1 res is  tensor(0.1308, device='cuda:3')
+current submit client idx and staleness is  31 4
+ benign loss is  0.40585464239120483
+benign distance is  tensor(120.0529, device='cuda:3')
+norm1 res is  tensor(0.1412, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 0.6500000005000001
+mal_loss is 0.9694268107414246
+mal_entropy is 1.3259130716323853
+curent length is  20
+the length of epoch_weights is  1
+the length of weights_d is  1
+alpha 1 is [6]
+alphas 3 is [1.         0.33333333]
+alphas is  [0.75 0.25]
+median_weights acc is  0.7489000001569986
+ 
+Avg Training Stats after 9 global rounds:
+Train Accuracy: 77.98% 
+
+Test Accuracy: 76.66% 
+
+
+ | Global Training Round : 10 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.3461522161960602
+benign distance is  tensor(116.7758, device='cuda:3')
+norm1 res is  tensor(0.1375, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.8724466562271118
+benign distance is  tensor(116.8323, device='cuda:3')
+norm1 res is  tensor(0.1370, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.051225822418928146
+benign distance is  tensor(129.6633, device='cuda:3')
+norm1 res is  tensor(0.1497, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.48581838607788086
+benign distance is  tensor(107.1240, device='cuda:3')
+norm1 res is  tensor(0.1216, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.6887675523757935
+benign distance is  tensor(103.2316, device='cuda:3')
+norm1 res is  tensor(0.1178, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.5241986513137817
+benign distance is  tensor(111.7689, device='cuda:3')
+norm1 res is  tensor(0.1348, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.22866129875183105
+benign distance is  tensor(112.4089, device='cuda:3')
+norm1 res is  tensor(0.1263, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.2397335022687912
+benign distance is  tensor(123.3527, device='cuda:3')
+norm1 res is  tensor(0.1444, device='cuda:3')
+current submit client idx and staleness is  16 3
+ benign loss is  0.29290297627449036
+benign distance is  tensor(118.5848, device='cuda:3')
+norm1 res is  tensor(0.1356, device='cuda:3')
+current submit client idx and staleness is  17 3
+ benign loss is  0.44033780694007874
+benign distance is  tensor(142.0378, device='cuda:3')
+norm1 res is  tensor(0.1668, device='cuda:3')
+current submit client idx and staleness is  18 3
+ benign loss is  0.2386067658662796
+benign distance is  tensor(126.0701, device='cuda:3')
+norm1 res is  tensor(0.1486, device='cuda:3')
+current submit client idx and staleness is  19 3
+ benign loss is  0.4998050332069397
+benign distance is  tensor(123.3356, device='cuda:3')
+norm1 res is  tensor(0.1466, device='cuda:3')
+current submit client idx and staleness is  20 3
+ benign loss is  0.43153825402259827
+benign distance is  tensor(124.3925, device='cuda:3')
+norm1 res is  tensor(0.1447, device='cuda:3')
+current submit client idx and staleness is  21 3
+ benign loss is  0.4399067759513855
+benign distance is  tensor(121.5131, device='cuda:3')
+norm1 res is  tensor(0.1404, device='cuda:3')
+current submit client idx and staleness is  22 3
+ benign loss is  0.420645534992218
+benign distance is  tensor(129.7591, device='cuda:3')
+norm1 res is  tensor(0.1541, device='cuda:3')
+current submit client idx and staleness is  23 3
+ benign loss is  0.43152791261672974
+benign distance is  tensor(127.5672, device='cuda:3')
+norm1 res is  tensor(0.1459, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 0.40000000050000006
+mal_loss is 1.7290035486221313
+mal_entropy is 1.6915867328643799
+curent length is  20
+the length of epoch_weights is  2
+the length of weights_d is  2
+alpha 1 is [5, 8]
+alphas 3 is [1.  0.2 0.5]
+alphas is  [0.58823529 0.11764706 0.29411765]
+median_weights acc is  0.6743000001569986
+ 
+Avg Training Stats after 10 global rounds:
+Train Accuracy: 70.36% 
+
+Test Accuracy: 69.52% 
+
+
+ | Global Training Round : 11 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.6380147933959961
+benign distance is  tensor(115.6005, device='cuda:3')
+norm1 res is  tensor(0.1324, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.8188789486885071
+benign distance is  tensor(121.7825, device='cuda:3')
+norm1 res is  tensor(0.1458, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.6306580305099487
+benign distance is  tensor(128.1200, device='cuda:3')
+norm1 res is  tensor(0.1462, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  1.4225900173187256
+benign distance is  tensor(125.8971, device='cuda:3')
+norm1 res is  tensor(0.1409, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.3813527524471283
+benign distance is  tensor(118.0034, device='cuda:3')
+norm1 res is  tensor(0.1316, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.545818030834198
+benign distance is  tensor(126.8081, device='cuda:3')
+norm1 res is  tensor(0.1494, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.6776989698410034
+benign distance is  tensor(116.5246, device='cuda:3')
+norm1 res is  tensor(0.1324, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.3113907277584076
+benign distance is  tensor(130.2347, device='cuda:3')
+norm1 res is  tensor(0.1510, device='cuda:3')
+current submit client idx and staleness is  8 2
+ benign loss is  0.39124172925949097
+benign distance is  tensor(140.3997, device='cuda:3')
+norm1 res is  tensor(0.1578, device='cuda:3')
+current submit client idx and staleness is  9 2
+ benign loss is  0.23957419395446777
+benign distance is  tensor(142.0081, device='cuda:3')
+norm1 res is  tensor(0.1621, device='cuda:3')
+current submit client idx and staleness is  10 2
+ benign loss is  1.1426780223846436
+benign distance is  tensor(125.5428, device='cuda:3')
+norm1 res is  tensor(0.1445, device='cuda:3')
+current submit client idx and staleness is  11 2
+ benign loss is  0.9221437573432922
+benign distance is  tensor(132.1718, device='cuda:3')
+norm1 res is  tensor(0.1499, device='cuda:3')
+current submit client idx and staleness is  12 2
+ benign loss is  0.8103294372558594
+benign distance is  tensor(129.8954, device='cuda:3')
+norm1 res is  tensor(0.1529, device='cuda:3')
+current submit client idx and staleness is  13 2
+ benign loss is  0.3687969446182251
+benign distance is  tensor(132.6714, device='cuda:3')
+norm1 res is  tensor(0.1512, device='cuda:3')
+current submit client idx and staleness is  14 2
+ benign loss is  0.37200674414634705
+benign distance is  tensor(130.0319, device='cuda:3')
+norm1 res is  tensor(0.1510, device='cuda:3')
+current submit client idx and staleness is  15 2
+ benign loss is  0.36013227701187134
+benign distance is  tensor(140.8849, device='cuda:3')
+norm1 res is  tensor(0.1674, device='cuda:3')
+current submit client idx and staleness is  32 5
+ benign loss is  0.6316879987716675
+benign distance is  tensor(128.9362, device='cuda:3')
+norm1 res is  tensor(0.1493, device='cuda:3')
+current submit client idx and staleness is  33 5
+ benign loss is  0.2618708908557892
+benign distance is  tensor(137.5857, device='cuda:3')
+norm1 res is  tensor(0.1623, device='cuda:3')
+current submit client idx and staleness is  34 5
+ benign loss is  0.5838620066642761
+benign distance is  tensor(136.4087, device='cuda:3')
+norm1 res is  tensor(0.1624, device='cuda:3')
+current submit client idx and staleness is  35 5
+ benign loss is  0.5107396245002747
+benign distance is  tensor(135.3292, device='cuda:3')
+norm1 res is  tensor(0.1560, device='cuda:3')
+current submit client idx and staleness is  36 5
+ benign loss is  0.656765341758728
+benign distance is  tensor(124.2341, device='cuda:3')
+norm1 res is  tensor(0.1462, device='cuda:3')
+current submit client idx and staleness is  37 5
+ benign loss is  0.4272891879081726
+benign distance is  tensor(127.7796, device='cuda:3')
+norm1 res is  tensor(0.1443, device='cuda:3')
+current submit client idx and staleness is  38 5
+ benign loss is  0.2848951518535614
+benign distance is  tensor(120.9975, device='cuda:3')
+norm1 res is  tensor(0.1405, device='cuda:3')
+current submit client idx and staleness is  39 5
+ benign loss is  0.7147773504257202
+benign distance is  tensor(127.6176, device='cuda:3')
+norm1 res is  tensor(0.1455, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 0.1500000005
+mal_loss is 3.5866177082061768
+mal_entropy is 1.0458711385726929
+curent length is  20
+the length of epoch_weights is  0
+alpha 1 is []
+alphas 3 is [1.]
+alphas is  [1.]
+median_weights acc is  0.10410000015700006
+ 
+Avg Training Stats after 11 global rounds:
+Train Accuracy: 10.28% 
+
+Test Accuracy: 10.50% 
+
+
+ | Global Training Round : 12 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.36282259225845337
+benign distance is  tensor(150.5944, device='cuda:3')
+norm1 res is  tensor(0.1736, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.659337043762207
+benign distance is  tensor(147.2414, device='cuda:3')
+norm1 res is  tensor(0.1675, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.03693979233503342
+benign distance is  tensor(146.0681, device='cuda:3')
+norm1 res is  tensor(0.1646, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.4300123155117035
+benign distance is  tensor(142.5912, device='cuda:3')
+norm1 res is  tensor(0.1601, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.39267271757125854
+benign distance is  tensor(145.1822, device='cuda:3')
+norm1 res is  tensor(0.1665, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.45236364006996155
+benign distance is  tensor(145.0921, device='cuda:3')
+norm1 res is  tensor(0.1639, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.18534809350967407
+benign distance is  tensor(148.7429, device='cuda:3')
+norm1 res is  tensor(0.1699, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.661263644695282
+benign distance is  tensor(158.0089, device='cuda:3')
+norm1 res is  tensor(0.1819, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 0.1500000005
+mal_loss is 11.586019515991211
+mal_entropy is 0.1167922392487526
+curent length is  20
+the length of epoch_weights is  4
+the length of weights_d is  4
+alpha 1 is [6, 8, 9, 10]
+alphas 3 is [1.         0.16666667 0.25       0.33333333 0.5       ]
+alphas is  [0.44444444 0.07407407 0.11111111 0.14814815 0.22222222]
+median_weights acc is  0.27460000015699904
+ 
+Avg Training Stats after 12 global rounds:
+Train Accuracy: 27.88% 
+
+Test Accuracy: 27.76% 
+
+
+ | Global Training Round : 13 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.58835369348526
+benign distance is  tensor(141.7113, device='cuda:3')
+norm1 res is  tensor(0.1618, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.5742959380149841
+benign distance is  tensor(138.0552, device='cuda:3')
+norm1 res is  tensor(0.1577, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.03317935764789581
+benign distance is  tensor(138.4096, device='cuda:3')
+norm1 res is  tensor(0.1569, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.5345732569694519
+benign distance is  tensor(132.1256, device='cuda:3')
+norm1 res is  tensor(0.1515, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.5896371006965637
+benign distance is  tensor(131.9810, device='cuda:3')
+norm1 res is  tensor(0.1473, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.7985639572143555
+benign distance is  tensor(137.6602, device='cuda:3')
+norm1 res is  tensor(0.1583, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.41359394788742065
+benign distance is  tensor(139.4048, device='cuda:3')
+norm1 res is  tensor(0.1572, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.33042222261428833
+benign distance is  tensor(148.9747, device='cuda:3')
+norm1 res is  tensor(0.1677, device='cuda:3')
+current submit client idx and staleness is  8 2
+ benign loss is  0.6619744896888733
+benign distance is  tensor(152.7856, device='cuda:3')
+norm1 res is  tensor(0.1734, device='cuda:3')
+current submit client idx and staleness is  9 2
+ benign loss is  0.2881012558937073
+benign distance is  tensor(149.5299, device='cuda:3')
+norm1 res is  tensor(0.1695, device='cuda:3')
+current submit client idx and staleness is  10 2
+ benign loss is  1.4783036708831787
+benign distance is  tensor(140.7851, device='cuda:3')
+norm1 res is  tensor(0.1613, device='cuda:3')
+current submit client idx and staleness is  11 2
+ benign loss is  0.4854203164577484
+benign distance is  tensor(135.0556, device='cuda:3')
+norm1 res is  tensor(0.1511, device='cuda:3')
+current submit client idx and staleness is  12 2
+ benign loss is  0.31542935967445374
+benign distance is  tensor(137.7104, device='cuda:3')
+norm1 res is  tensor(0.1564, device='cuda:3')
+current submit client idx and staleness is  13 2
+ benign loss is  0.11524844169616699
+benign distance is  tensor(137.8904, device='cuda:3')
+norm1 res is  tensor(0.1583, device='cuda:3')
+current submit client idx and staleness is  14 2
+ benign loss is  0.8108600378036499
+benign distance is  tensor(136.7027, device='cuda:3')
+norm1 res is  tensor(0.1568, device='cuda:3')
+current submit client idx and staleness is  15 2
+ benign loss is  0.45068007707595825
+benign distance is  tensor(146.8726, device='cuda:3')
+norm1 res is  tensor(0.1666, device='cuda:3')
+current submit client idx and staleness is  16 3
+ benign loss is  0.24533383548259735
+benign distance is  tensor(139.9597, device='cuda:3')
+norm1 res is  tensor(0.1599, device='cuda:3')
+current submit client idx and staleness is  17 3
+ benign loss is  0.6279227137565613
+benign distance is  tensor(150.7093, device='cuda:3')
+norm1 res is  tensor(0.1738, device='cuda:3')
+current submit client idx and staleness is  18 3
+ benign loss is  0.2721509635448456
+benign distance is  tensor(143.9976, device='cuda:3')
+norm1 res is  tensor(0.1654, device='cuda:3')
+current submit client idx and staleness is  19 3
+ benign loss is  0.49703627824783325
+benign distance is  tensor(143.1704, device='cuda:3')
+norm1 res is  tensor(0.1622, device='cuda:3')
+current submit client idx and staleness is  20 3
+ benign loss is  0.22941644489765167
+benign distance is  tensor(145.8690, device='cuda:3')
+norm1 res is  tensor(0.1676, device='cuda:3')
+current submit client idx and staleness is  21 3
+ benign loss is  0.3335080146789551
+benign distance is  tensor(133.8382, device='cuda:3')
+norm1 res is  tensor(0.1538, device='cuda:3')
+current submit client idx and staleness is  22 3
+ benign loss is  0.19866237044334412
+benign distance is  tensor(149.1530, device='cuda:3')
+norm1 res is  tensor(0.1726, device='cuda:3')
+current submit client idx and staleness is  23 3
+ benign loss is  0.5055453181266785
+benign distance is  tensor(138.0133, device='cuda:3')
+norm1 res is  tensor(0.1580, device='cuda:3')
+current submit client idx and staleness is  24 4
+ benign loss is  0.09645973145961761
+benign distance is  tensor(153.4574, device='cuda:3')
+norm1 res is  tensor(0.1710, device='cuda:3')
+current submit client idx and staleness is  25 4
+ benign loss is  0.7744964957237244
+benign distance is  tensor(141.3452, device='cuda:3')
+norm1 res is  tensor(0.1582, device='cuda:3')
+current submit client idx and staleness is  26 4
+ benign loss is  0.6536008715629578
+benign distance is  tensor(143.8039, device='cuda:3')
+norm1 res is  tensor(0.1658, device='cuda:3')
+current submit client idx and staleness is  27 4
+ benign loss is  0.41857537627220154
+benign distance is  tensor(145.9645, device='cuda:3')
+norm1 res is  tensor(0.1625, device='cuda:3')
+current submit client idx and staleness is  28 4
+ benign loss is  0.6475246548652649
+benign distance is  tensor(145.5588, device='cuda:3')
+norm1 res is  tensor(0.1628, device='cuda:3')
+current submit client idx and staleness is  29 4
+ benign loss is  0.6120980978012085
+benign distance is  tensor(142.8238, device='cuda:3')
+norm1 res is  tensor(0.1667, device='cuda:3')
+current submit client idx and staleness is  30 4
+ benign loss is  0.29177671670913696
+benign distance is  tensor(145.2674, device='cuda:3')
+norm1 res is  tensor(0.1650, device='cuda:3')
+current submit client idx and staleness is  31 4
+ benign loss is  0.7205521464347839
+benign distance is  tensor(135.7839, device='cuda:3')
+norm1 res is  tensor(0.1562, device='cuda:3')
+current submit client idx and staleness is  40 6
+ benign loss is  0.15668390691280365
+benign distance is  tensor(143.2349, device='cuda:3')
+norm1 res is  tensor(0.1637, device='cuda:3')
+current submit client idx and staleness is  41 6
+ benign loss is  0.17547127604484558
+benign distance is  tensor(139.8038, device='cuda:3')
+norm1 res is  tensor(0.1592, device='cuda:3')
+current submit client idx and staleness is  42 6
+ benign loss is  0.09884648025035858
+benign distance is  tensor(148.3422, device='cuda:3')
+norm1 res is  tensor(0.1704, device='cuda:3')
+current submit client idx and staleness is  43 6
+ benign loss is  0.6283618211746216
+benign distance is  tensor(149.3092, device='cuda:3')
+norm1 res is  tensor(0.1712, device='cuda:3')
+current submit client idx and staleness is  44 6
+ benign loss is  0.29954952001571655
+benign distance is  tensor(147.8745, device='cuda:3')
+norm1 res is  tensor(0.1686, device='cuda:3')
+current submit client idx and staleness is  45 6
+ benign loss is  0.9835473299026489
+benign distance is  tensor(146.4820, device='cuda:3')
+norm1 res is  tensor(0.1657, device='cuda:3')
+current submit client idx and staleness is  46 6
+ benign loss is  1.0978773832321167
+benign distance is  tensor(144.4467, device='cuda:3')
+norm1 res is  tensor(0.1622, device='cuda:3')
+current submit client idx and staleness is  47 6
+ benign loss is  0.2579546272754669
+benign distance is  tensor(150.0146, device='cuda:3')
+norm1 res is  tensor(0.1772, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 0.1500000005
+mal_loss is 7.400996208190918
+mal_entropy is 0.25076910853385925
+curent length is  20
+the length of epoch_weights is  0
+alpha 1 is []
+alphas 3 is [1.]
+alphas is  [1.]
+median_weights acc is  0.0968000001570001
+ 
+Avg Training Stats after 13 global rounds:
+Train Accuracy: 9.86% 
+
+Test Accuracy: 10.00% 
+
+
+ | Global Training Round : 14 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.36660057306289673
+benign distance is  tensor(178.8818, device='cuda:3')
+norm1 res is  tensor(0.2054, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.6050359010696411
+benign distance is  tensor(169.2223, device='cuda:3')
+norm1 res is  tensor(0.1957, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.2757737636566162
+benign distance is  tensor(173.5484, device='cuda:3')
+norm1 res is  tensor(0.2010, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.4023190438747406
+benign distance is  tensor(173.7525, device='cuda:3')
+norm1 res is  tensor(0.1980, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.4992794096469879
+benign distance is  tensor(165.8255, device='cuda:3')
+norm1 res is  tensor(0.1923, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.5997273921966553
+benign distance is  tensor(170.4125, device='cuda:3')
+norm1 res is  tensor(0.1989, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.17840391397476196
+benign distance is  tensor(170.3738, device='cuda:3')
+norm1 res is  tensor(0.1955, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.31748533248901367
+benign distance is  tensor(163.3761, device='cuda:3')
+norm1 res is  tensor(0.1883, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 0.1500000005
+mal_loss is 26.261188507080078
+mal_entropy is 0.008607504889369011
+curent length is  20
+the length of epoch_weights is  1
+the length of weights_d is  1
+alpha 1 is [12]
+alphas 3 is [1.  0.5]
+alphas is  [0.66666667 0.33333333]
+median_weights acc is  0.07290000015700009
+ 
+Avg Training Stats after 14 global rounds:
+Train Accuracy: 8.49% 
+
+Test Accuracy: 8.69% 
+
+
+ | Global Training Round : 15 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.8000720739364624
+benign distance is  tensor(177.8191, device='cuda:3')
+norm1 res is  tensor(0.1989, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.7688647508621216
+benign distance is  tensor(166.6178, device='cuda:3')
+norm1 res is  tensor(0.1891, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.38731497526168823
+benign distance is  tensor(166.3329, device='cuda:3')
+norm1 res is  tensor(0.1885, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  1.0769175291061401
+benign distance is  tensor(165.7707, device='cuda:3')
+norm1 res is  tensor(0.1884, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.5873035192489624
+benign distance is  tensor(159.6206, device='cuda:3')
+norm1 res is  tensor(0.1775, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.31635916233062744
+benign distance is  tensor(190.1702, device='cuda:3')
+norm1 res is  tensor(0.2146, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.14306914806365967
+benign distance is  tensor(179.6549, device='cuda:3')
+norm1 res is  tensor(0.1991, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.6251686811447144
+benign distance is  tensor(172.7298, device='cuda:3')
+norm1 res is  tensor(0.1972, device='cuda:3')
+current submit client idx and staleness is  8 2
+ benign loss is  0.34388479590415955
+benign distance is  tensor(171.7377, device='cuda:3')
+norm1 res is  tensor(0.1932, device='cuda:3')
+current submit client idx and staleness is  9 2
+ benign loss is  0.4169960916042328
+benign distance is  tensor(179.1782, device='cuda:3')
+norm1 res is  tensor(0.1984, device='cuda:3')
+current submit client idx and staleness is  10 2
+ benign loss is  1.0939254760742188
+benign distance is  tensor(175.4046, device='cuda:3')
+norm1 res is  tensor(0.1966, device='cuda:3')
+current submit client idx and staleness is  11 2
+ benign loss is  0.5850369334220886
+benign distance is  tensor(166.7248, device='cuda:3')
+norm1 res is  tensor(0.1854, device='cuda:3')
+current submit client idx and staleness is  12 2
+ benign loss is  0.25224021077156067
+benign distance is  tensor(169.6277, device='cuda:3')
+norm1 res is  tensor(0.1891, device='cuda:3')
+current submit client idx and staleness is  13 2
+ benign loss is  0.17507889866828918
+benign distance is  tensor(175.3112, device='cuda:3')
+norm1 res is  tensor(0.1957, device='cuda:3')
+current submit client idx and staleness is  14 2
+ benign loss is  0.4102177023887634
+benign distance is  tensor(172.5815, device='cuda:3')
+norm1 res is  tensor(0.1938, device='cuda:3')
+current submit client idx and staleness is  15 2
+ benign loss is  0.5182086825370789
+benign distance is  tensor(169.9677, device='cuda:3')
+norm1 res is  tensor(0.1874, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 0.1500000005
+mal_loss is 28.158742904663086
+mal_entropy is 0.027223676443099976
+curent length is  20
+the length of epoch_weights is  2
+the length of weights_d is  2
+alpha 1 is [10, 12]
+alphas 3 is [1.         0.2        0.33333333]
+alphas is  [0.65217391 0.13043478 0.2173913 ]
+median_weights acc is  0.050000000157000075
+ 
+Avg Training Stats after 15 global rounds:
+Train Accuracy: 4.84% 
+
+Test Accuracy: 4.97% 
+
+
+ | Global Training Round : 16 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  1.1795064210891724
+benign distance is  tensor(177.8633, device='cuda:3')
+norm1 res is  tensor(0.2029, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  1.4585199356079102
+benign distance is  tensor(179.2309, device='cuda:3')
+norm1 res is  tensor(0.2015, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.7976082563400269
+benign distance is  tensor(175.6040, device='cuda:3')
+norm1 res is  tensor(0.1945, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.24383127689361572
+benign distance is  tensor(171.6955, device='cuda:3')
+norm1 res is  tensor(0.1923, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  1.1976217031478882
+benign distance is  tensor(173.9710, device='cuda:3')
+norm1 res is  tensor(0.1947, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  1.0406720638275146
+benign distance is  tensor(176.1546, device='cuda:3')
+norm1 res is  tensor(0.2011, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.17030677199363708
+benign distance is  tensor(193.9242, device='cuda:3')
+norm1 res is  tensor(0.2147, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.4680383801460266
+benign distance is  tensor(177.8533, device='cuda:3')
+norm1 res is  tensor(0.1987, device='cuda:3')
+current submit client idx and staleness is  16 3
+ benign loss is  0.19600094854831696
+benign distance is  tensor(179.9715, device='cuda:3')
+norm1 res is  tensor(0.1964, device='cuda:3')
+current submit client idx and staleness is  17 3
+ benign loss is  0.41544055938720703
+benign distance is  tensor(177.7410, device='cuda:3')
+norm1 res is  tensor(0.1972, device='cuda:3')
+current submit client idx and staleness is  18 3
+ benign loss is  0.1056583896279335
+benign distance is  tensor(170.1876, device='cuda:3')
+norm1 res is  tensor(0.1886, device='cuda:3')
+current submit client idx and staleness is  19 3
+ benign loss is  0.28134074807167053
+benign distance is  tensor(176.7861, device='cuda:3')
+norm1 res is  tensor(0.2026, device='cuda:3')
+current submit client idx and staleness is  20 3
+ benign loss is  0.35669147968292236
+benign distance is  tensor(172.3472, device='cuda:3')
+norm1 res is  tensor(0.1941, device='cuda:3')
+current submit client idx and staleness is  21 3
+ benign loss is  0.6748946309089661
+benign distance is  tensor(167.3431, device='cuda:3')
+norm1 res is  tensor(0.1853, device='cuda:3')
+current submit client idx and staleness is  22 3
+ benign loss is  0.5890172719955444
+benign distance is  tensor(177.6628, device='cuda:3')
+norm1 res is  tensor(0.1991, device='cuda:3')
+current submit client idx and staleness is  23 3
+ benign loss is  0.678648829460144
+benign distance is  tensor(179.5357, device='cuda:3')
+norm1 res is  tensor(0.2020, device='cuda:3')
+current submit client idx and staleness is  32 5
+ benign loss is  0.3690740466117859
+benign distance is  tensor(177.2931, device='cuda:3')
+norm1 res is  tensor(0.1953, device='cuda:3')
+current submit client idx and staleness is  33 5
+ benign loss is  0.1153227686882019
+benign distance is  tensor(176.7375, device='cuda:3')
+norm1 res is  tensor(0.1953, device='cuda:3')
+current submit client idx and staleness is  34 5
+ benign loss is  0.28098011016845703
+benign distance is  tensor(173.3766, device='cuda:3')
+norm1 res is  tensor(0.1970, device='cuda:3')
+current submit client idx and staleness is  35 5
+ benign loss is  0.12984535098075867
+benign distance is  tensor(173.7782, device='cuda:3')
+norm1 res is  tensor(0.1935, device='cuda:3')
+current submit client idx and staleness is  36 5
+ benign loss is  0.2157856523990631
+benign distance is  tensor(169.0237, device='cuda:3')
+norm1 res is  tensor(0.1900, device='cuda:3')
+current submit client idx and staleness is  37 5
+ benign loss is  0.7116719484329224
+benign distance is  tensor(165.8464, device='cuda:3')
+norm1 res is  tensor(0.1824, device='cuda:3')
+current submit client idx and staleness is  38 5
+ benign loss is  0.37336358428001404
+benign distance is  tensor(167.4281, device='cuda:3')
+norm1 res is  tensor(0.1910, device='cuda:3')
+current submit client idx and staleness is  39 5
+ benign loss is  0.25243672728538513
+benign distance is  tensor(180.1532, device='cuda:3')
+norm1 res is  tensor(0.2007, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 0.1500000005
+mal_loss is 29.57390785217285
+mal_entropy is 0.01496401708573103
+curent length is  20
+the length of epoch_weights is  2
+the length of weights_d is  2
+alpha 1 is [12, 14]
+alphas 3 is [1.   0.25 0.5 ]
+alphas is  [0.57142857 0.14285714 0.28571429]
+median_weights acc is  0.16210000015699944
+ 
+Avg Training Stats after 16 global rounds:
+Train Accuracy: 16.54% 
+
+Test Accuracy: 16.06% 
+
+
+ | Global Training Round : 17 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.9525885581970215
+benign distance is  tensor(152.0584, device='cuda:3')
+norm1 res is  tensor(0.1841, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.8388850092887878
+benign distance is  tensor(146.0418, device='cuda:3')
+norm1 res is  tensor(0.1800, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.5129600167274475
+benign distance is  tensor(150.5488, device='cuda:3')
+norm1 res is  tensor(0.1827, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.5015149116516113
+benign distance is  tensor(148.1656, device='cuda:3')
+norm1 res is  tensor(0.1764, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.2798468768596649
+benign distance is  tensor(147.2186, device='cuda:3')
+norm1 res is  tensor(0.1782, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  1.0130993127822876
+benign distance is  tensor(145.2801, device='cuda:3')
+norm1 res is  tensor(0.1814, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.8361339569091797
+benign distance is  tensor(146.8684, device='cuda:3')
+norm1 res is  tensor(0.1792, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.45989078283309937
+benign distance is  tensor(152.9650, device='cuda:3')
+norm1 res is  tensor(0.1910, device='cuda:3')
+current submit client idx and staleness is  8 2
+ benign loss is  0.34261369705200195
+benign distance is  tensor(149.5607, device='cuda:3')
+norm1 res is  tensor(0.1848, device='cuda:3')
+current submit client idx and staleness is  9 2
+ benign loss is  0.31973913311958313
+benign distance is  tensor(152.4561, device='cuda:3')
+norm1 res is  tensor(0.1879, device='cuda:3')
+current submit client idx and staleness is  10 2
+ benign loss is  0.9017606973648071
+benign distance is  tensor(144.5755, device='cuda:3')
+norm1 res is  tensor(0.1768, device='cuda:3')
+current submit client idx and staleness is  11 2
+ benign loss is  1.0029665231704712
+benign distance is  tensor(146.9846, device='cuda:3')
+norm1 res is  tensor(0.1807, device='cuda:3')
+current submit client idx and staleness is  12 2
+ benign loss is  0.5094184875488281
+benign distance is  tensor(144.2714, device='cuda:3')
+norm1 res is  tensor(0.1738, device='cuda:3')
+current submit client idx and staleness is  13 2
+ benign loss is  0.31254664063453674
+benign distance is  tensor(148.9537, device='cuda:3')
+norm1 res is  tensor(0.1813, device='cuda:3')
+current submit client idx and staleness is  14 2
+ benign loss is  0.6496368646621704
+benign distance is  tensor(147.0042, device='cuda:3')
+norm1 res is  tensor(0.1796, device='cuda:3')
+current submit client idx and staleness is  15 2
+ benign loss is  0.27028098702430725
+benign distance is  tensor(147.4828, device='cuda:3')
+norm1 res is  tensor(0.1816, device='cuda:3')
+current submit client idx and staleness is  24 4
+ benign loss is  0.4273719787597656
+benign distance is  tensor(149.7514, device='cuda:3')
+norm1 res is  tensor(0.1833, device='cuda:3')
+current submit client idx and staleness is  25 4
+ benign loss is  0.8940703272819519
+benign distance is  tensor(144.5592, device='cuda:3')
+norm1 res is  tensor(0.1738, device='cuda:3')
+current submit client idx and staleness is  26 4
+ benign loss is  0.5865444540977478
+benign distance is  tensor(155.0358, device='cuda:3')
+norm1 res is  tensor(0.1903, device='cuda:3')
+current submit client idx and staleness is  27 4
+ benign loss is  0.6306695938110352
+benign distance is  tensor(151.3040, device='cuda:3')
+norm1 res is  tensor(0.1813, device='cuda:3')
+current submit client idx and staleness is  28 4
+ benign loss is  1.3130462169647217
+benign distance is  tensor(145.1169, device='cuda:3')
+norm1 res is  tensor(0.1765, device='cuda:3')
+current submit client idx and staleness is  29 4
+ benign loss is  0.38233527541160583
+benign distance is  tensor(151.9341, device='cuda:3')
+norm1 res is  tensor(0.1856, device='cuda:3')
+current submit client idx and staleness is  30 4
+ benign loss is  0.36650413274765015
+benign distance is  tensor(143.8018, device='cuda:3')
+norm1 res is  tensor(0.1760, device='cuda:3')
+current submit client idx and staleness is  31 4
+ benign loss is  0.527969479560852
+benign distance is  tensor(149.3912, device='cuda:3')
+norm1 res is  tensor(0.1781, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 5e-10
+mal_loss is 9.728987693786621
+mal_entropy is 0.5749534964561462
+curent length is  20
+the length of epoch_weights is  0
+alpha 1 is []
+alphas 3 is [1.]
+alphas is  [1.]
+median_weights acc is  0.00560000015700001
+ 
+Avg Training Stats after 17 global rounds:
+Train Accuracy: 0.34% 
+
+Test Accuracy: 0.40% 
+
+
+ | Global Training Round : 18 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  1.0732638835906982
+benign distance is  tensor(185.8027, device='cuda:3')
+norm1 res is  tensor(0.2181, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.9119547605514526
+benign distance is  tensor(185.7918, device='cuda:3')
+norm1 res is  tensor(0.2160, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.3916221857070923
+benign distance is  tensor(194.1886, device='cuda:3')
+norm1 res is  tensor(0.2231, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.4238955080509186
+benign distance is  tensor(185.2341, device='cuda:3')
+norm1 res is  tensor(0.2150, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.6750059723854065
+benign distance is  tensor(192.0787, device='cuda:3')
+norm1 res is  tensor(0.2226, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.5760541558265686
+benign distance is  tensor(188.1450, device='cuda:3')
+norm1 res is  tensor(0.2177, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.7859296798706055
+benign distance is  tensor(179.9885, device='cuda:3')
+norm1 res is  tensor(0.2110, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.584658145904541
+benign distance is  tensor(183.0503, device='cuda:3')
+norm1 res is  tensor(0.2183, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 5e-10
+mal_loss is 29.125385284423828
+mal_entropy is 0.11800437420606613
+curent length is  20
+the length of epoch_weights is  3
+the length of weights_d is  3
+alpha 1 is [12, 15, 16]
+alphas 3 is [1.         0.16666667 0.33333333 0.5       ]
+alphas is  [0.5        0.08333333 0.16666667 0.25      ]
+median_weights acc is  0.11640000015699989
+ 
+Avg Training Stats after 18 global rounds:
+Train Accuracy: 11.97% 
+
+Test Accuracy: 11.43% 
+
+
+ | Global Training Round : 19 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.29426875710487366
+benign distance is  tensor(148.6289, device='cuda:3')
+norm1 res is  tensor(0.1849, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.2349574863910675
+benign distance is  tensor(155.7758, device='cuda:3')
+norm1 res is  tensor(0.1923, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.15269015729427338
+benign distance is  tensor(156.6593, device='cuda:3')
+norm1 res is  tensor(0.1910, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.3368799388408661
+benign distance is  tensor(146.0707, device='cuda:3')
+norm1 res is  tensor(0.1783, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.5173705816268921
+benign distance is  tensor(152.2152, device='cuda:3')
+norm1 res is  tensor(0.1866, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.9747816324234009
+benign distance is  tensor(160.0757, device='cuda:3')
+norm1 res is  tensor(0.1942, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.2560356557369232
+benign distance is  tensor(150.5870, device='cuda:3')
+norm1 res is  tensor(0.1863, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  1.4050226211547852
+benign distance is  tensor(159.3247, device='cuda:3')
+norm1 res is  tensor(0.1982, device='cuda:3')
+current submit client idx and staleness is  8 2
+ benign loss is  0.7175610661506653
+benign distance is  tensor(161.1076, device='cuda:3')
+norm1 res is  tensor(0.1952, device='cuda:3')
+current submit client idx and staleness is  9 2
+ benign loss is  0.6694346070289612
+benign distance is  tensor(153.0587, device='cuda:3')
+norm1 res is  tensor(0.1850, device='cuda:3')
+current submit client idx and staleness is  10 2
+ benign loss is  1.3815221786499023
+benign distance is  tensor(157.5424, device='cuda:3')
+norm1 res is  tensor(0.1887, device='cuda:3')
+current submit client idx and staleness is  11 2
+ benign loss is  0.3191268742084503
+benign distance is  tensor(149.9792, device='cuda:3')
+norm1 res is  tensor(0.1821, device='cuda:3')
+current submit client idx and staleness is  12 2
+ benign loss is  0.3178068995475769
+benign distance is  tensor(156.0455, device='cuda:3')
+norm1 res is  tensor(0.1907, device='cuda:3')
+current submit client idx and staleness is  13 2
+ benign loss is  0.40093135833740234
+benign distance is  tensor(150.3826, device='cuda:3')
+norm1 res is  tensor(0.1824, device='cuda:3')
+current submit client idx and staleness is  14 2
+ benign loss is  0.15011422336101532
+benign distance is  tensor(148.7003, device='cuda:3')
+norm1 res is  tensor(0.1820, device='cuda:3')
+current submit client idx and staleness is  15 2
+ benign loss is  0.6040698885917664
+benign distance is  tensor(155.5154, device='cuda:3')
+norm1 res is  tensor(0.1891, device='cuda:3')
+current submit client idx and staleness is  16 3
+ benign loss is  0.2417219579219818
+benign distance is  tensor(151.6589, device='cuda:3')
+norm1 res is  tensor(0.1813, device='cuda:3')
+current submit client idx and staleness is  17 3
+ benign loss is  0.1948535144329071
+benign distance is  tensor(153.4884, device='cuda:3')
+norm1 res is  tensor(0.1885, device='cuda:3')
+current submit client idx and staleness is  18 3
+ benign loss is  0.4805922508239746
+benign distance is  tensor(157.8015, device='cuda:3')
+norm1 res is  tensor(0.1882, device='cuda:3')
+current submit client idx and staleness is  19 3
+ benign loss is  0.4045965075492859
+benign distance is  tensor(151.2787, device='cuda:3')
+norm1 res is  tensor(0.1855, device='cuda:3')
+current submit client idx and staleness is  20 3
+ benign loss is  0.493767112493515
+benign distance is  tensor(154.0596, device='cuda:3')
+norm1 res is  tensor(0.1828, device='cuda:3')
+current submit client idx and staleness is  21 3
+ benign loss is  0.7677688002586365
+benign distance is  tensor(154.2690, device='cuda:3')
+norm1 res is  tensor(0.1876, device='cuda:3')
+current submit client idx and staleness is  22 3
+ benign loss is  0.1341080367565155
+benign distance is  tensor(155.4512, device='cuda:3')
+norm1 res is  tensor(0.1920, device='cuda:3')
+current submit client idx and staleness is  23 3
+ benign loss is  0.7934800386428833
+benign distance is  tensor(154.1268, device='cuda:3')
+norm1 res is  tensor(0.1885, device='cuda:3')
+current submit client idx and staleness is  40 6
+ benign loss is  0.24763524532318115
+benign distance is  tensor(164.3926, device='cuda:3')
+norm1 res is  tensor(0.1961, device='cuda:3')
+current submit client idx and staleness is  41 6
+ benign loss is  0.6421286463737488
+benign distance is  tensor(150.6450, device='cuda:3')
+norm1 res is  tensor(0.1824, device='cuda:3')
+current submit client idx and staleness is  42 6
+ benign loss is  0.3598063886165619
+benign distance is  tensor(148.5602, device='cuda:3')
+norm1 res is  tensor(0.1796, device='cuda:3')
+current submit client idx and staleness is  43 6
+ benign loss is  0.5259662866592407
+benign distance is  tensor(157.5744, device='cuda:3')
+norm1 res is  tensor(0.1903, device='cuda:3')
+current submit client idx and staleness is  44 6
+ benign loss is  0.5101202130317688
+benign distance is  tensor(147.0638, device='cuda:3')
+norm1 res is  tensor(0.1790, device='cuda:3')
+current submit client idx and staleness is  45 6
+ benign loss is  0.2088482826948166
+benign distance is  tensor(161.6122, device='cuda:3')
+norm1 res is  tensor(0.1934, device='cuda:3')
+current submit client idx and staleness is  46 6
+ benign loss is  0.6162384748458862
+benign distance is  tensor(160.0888, device='cuda:3')
+norm1 res is  tensor(0.1918, device='cuda:3')
+current submit client idx and staleness is  47 6
+ benign loss is  0.4589962065219879
+benign distance is  tensor(163.2891, device='cuda:3')
+norm1 res is  tensor(0.1960, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 5e-10
+mal_loss is 14.365440368652344
+mal_entropy is 0.29818812012672424
+curent length is  20
+the length of epoch_weights is  0
+alpha 1 is []
+alphas 3 is [1.]
+alphas is  [1.]
+median_weights acc is  0.004700000157000009
+ 
+Avg Training Stats after 19 global rounds:
+Train Accuracy: 0.26% 
+
+Test Accuracy: 0.30% 
+
+
+ | Global Training Round : 20 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.3324585258960724
+benign distance is  tensor(221.2171, device='cuda:3')
+norm1 res is  tensor(0.2415, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.6959925889968872
+benign distance is  tensor(206.0777, device='cuda:3')
+norm1 res is  tensor(0.2298, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.8796442747116089
+benign distance is  tensor(209.3025, device='cuda:3')
+norm1 res is  tensor(0.2359, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.7607513666152954
+benign distance is  tensor(200.5432, device='cuda:3')
+norm1 res is  tensor(0.2246, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.8595516085624695
+benign distance is  tensor(214.4901, device='cuda:3')
+norm1 res is  tensor(0.2341, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.5821858644485474
+benign distance is  tensor(209.1833, device='cuda:3')
+norm1 res is  tensor(0.2296, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.316709965467453
+benign distance is  tensor(208.4866, device='cuda:3')
+norm1 res is  tensor(0.2328, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.4778214991092682
+benign distance is  tensor(205.2349, device='cuda:3')
+norm1 res is  tensor(0.2271, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 5e-10
+mal_loss is 54.13569259643555
+mal_entropy is 0.06275884062051773
+curent length is  20
+the length of epoch_weights is  3
+the length of weights_d is  3
+alpha 1 is [15, 16, 18]
+alphas 3 is [1.   0.2  0.25 0.5 ]
+alphas is  [0.51282051 0.1025641  0.12820513 0.25641026]
+median_weights acc is  0.08620000015700009
+ 
+Avg Training Stats after 20 global rounds:
+Train Accuracy: 9.23% 
+
+Test Accuracy: 8.88% 
+
+
+ | Global Training Round : 21 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.8118529319763184
+benign distance is  tensor(171.6507, device='cuda:3')
+norm1 res is  tensor(0.2097, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.4920376241207123
+benign distance is  tensor(164.0428, device='cuda:3')
+norm1 res is  tensor(0.2000, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.20485293865203857
+benign distance is  tensor(157.2937, device='cuda:3')
+norm1 res is  tensor(0.1916, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.2990449368953705
+benign distance is  tensor(160.1415, device='cuda:3')
+norm1 res is  tensor(0.1920, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  1.159583330154419
+benign distance is  tensor(159.7558, device='cuda:3')
+norm1 res is  tensor(0.1878, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.5852729678153992
+benign distance is  tensor(162.6193, device='cuda:3')
+norm1 res is  tensor(0.1949, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.9682632684707642
+benign distance is  tensor(161.4811, device='cuda:3')
+norm1 res is  tensor(0.1959, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  1.3923490047454834
+benign distance is  tensor(172.3162, device='cuda:3')
+norm1 res is  tensor(0.2150, device='cuda:3')
+current submit client idx and staleness is  8 2
+ benign loss is  0.46565985679626465
+benign distance is  tensor(169.1667, device='cuda:3')
+norm1 res is  tensor(0.2074, device='cuda:3')
+current submit client idx and staleness is  9 2
+ benign loss is  0.3828597664833069
+benign distance is  tensor(165.9637, device='cuda:3')
+norm1 res is  tensor(0.1998, device='cuda:3')
+current submit client idx and staleness is  10 2
+ benign loss is  0.8578776121139526
+benign distance is  tensor(164.8788, device='cuda:3')
+norm1 res is  tensor(0.1974, device='cuda:3')
+current submit client idx and staleness is  11 2
+ benign loss is  0.6787882447242737
+benign distance is  tensor(163.7824, device='cuda:3')
+norm1 res is  tensor(0.2003, device='cuda:3')
+current submit client idx and staleness is  12 2
+ benign loss is  0.4476091265678406
+benign distance is  tensor(156.5749, device='cuda:3')
+norm1 res is  tensor(0.1866, device='cuda:3')
+current submit client idx and staleness is  13 2
+ benign loss is  0.3453747034072876
+benign distance is  tensor(160.6442, device='cuda:3')
+norm1 res is  tensor(0.1959, device='cuda:3')
+current submit client idx and staleness is  14 2
+ benign loss is  0.5040841698646545
+benign distance is  tensor(165.7972, device='cuda:3')
+norm1 res is  tensor(0.1950, device='cuda:3')
+current submit client idx and staleness is  15 2
+ benign loss is  0.31381911039352417
+benign distance is  tensor(163.5337, device='cuda:3')
+norm1 res is  tensor(0.1967, device='cuda:3')
+current submit client idx and staleness is  24 4
+ benign loss is  0.22579903900623322
+benign distance is  tensor(169.7033, device='cuda:3')
+norm1 res is  tensor(0.2036, device='cuda:3')
+current submit client idx and staleness is  25 4
+ benign loss is  0.6286324858665466
+benign distance is  tensor(167.1861, device='cuda:3')
+norm1 res is  tensor(0.1957, device='cuda:3')
+current submit client idx and staleness is  26 4
+ benign loss is  0.7557700872421265
+benign distance is  tensor(177.1234, device='cuda:3')
+norm1 res is  tensor(0.2040, device='cuda:3')
+current submit client idx and staleness is  27 4
+ benign loss is  0.23175549507141113
+benign distance is  tensor(163.0585, device='cuda:3')
+norm1 res is  tensor(0.1925, device='cuda:3')
+current submit client idx and staleness is  28 4
+ benign loss is  0.9672142863273621
+benign distance is  tensor(158.1872, device='cuda:3')
+norm1 res is  tensor(0.1905, device='cuda:3')
+current submit client idx and staleness is  29 4
+ benign loss is  1.0204269886016846
+benign distance is  tensor(160.2951, device='cuda:3')
+norm1 res is  tensor(0.1902, device='cuda:3')
+current submit client idx and staleness is  30 4
+ benign loss is  0.557350218296051
+benign distance is  tensor(167.3441, device='cuda:3')
+norm1 res is  tensor(0.2018, device='cuda:3')
+current submit client idx and staleness is  31 4
+ benign loss is  0.48830652236938477
+benign distance is  tensor(160.7951, device='cuda:3')
+norm1 res is  tensor(0.1946, device='cuda:3')
+current submit client idx and staleness is  32 5
+ benign loss is  0.47692400217056274
+benign distance is  tensor(168.9095, device='cuda:3')
+norm1 res is  tensor(0.1978, device='cuda:3')
+current submit client idx and staleness is  33 5
+ benign loss is  0.2862503230571747
+benign distance is  tensor(165.1287, device='cuda:3')
+norm1 res is  tensor(0.1987, device='cuda:3')
+current submit client idx and staleness is  34 5
+ benign loss is  0.7471885681152344
+benign distance is  tensor(163.3875, device='cuda:3')
+norm1 res is  tensor(0.1966, device='cuda:3')
+current submit client idx and staleness is  35 5
+ benign loss is  0.15807101130485535
+benign distance is  tensor(165.2964, device='cuda:3')
+norm1 res is  tensor(0.1962, device='cuda:3')
+current submit client idx and staleness is  36 5
+ benign loss is  0.8285576105117798
+benign distance is  tensor(160.4547, device='cuda:3')
+norm1 res is  tensor(0.1899, device='cuda:3')
+current submit client idx and staleness is  37 5
+ benign loss is  0.48123669624328613
+benign distance is  tensor(164.1810, device='cuda:3')
+norm1 res is  tensor(0.1932, device='cuda:3')
+current submit client idx and staleness is  38 5
+ benign loss is  0.49589237570762634
+benign distance is  tensor(165.7366, device='cuda:3')
+norm1 res is  tensor(0.1938, device='cuda:3')
+current submit client idx and staleness is  39 5
+ benign loss is  0.19278426468372345
+benign distance is  tensor(164.6947, device='cuda:3')
+norm1 res is  tensor(0.1977, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 5e-10
+mal_loss is 24.45218276977539
+mal_entropy is 0.15498261153697968
+curent length is  20
+the length of epoch_weights is  1
+the length of weights_d is  1
+alpha 1 is [18]
+alphas 3 is [1.         0.33333333]
+alphas is  [0.75 0.25]
+median_weights acc is  0.04310000015700007
+ 
+Avg Training Stats after 21 global rounds:
+Train Accuracy: 4.63% 
+
+Test Accuracy: 4.01% 
+
+
+ | Global Training Round : 22 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.6249353289604187
+benign distance is  tensor(195.5680, device='cuda:3')
+norm1 res is  tensor(0.2247, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.2560613453388214
+benign distance is  tensor(192.9175, device='cuda:3')
+norm1 res is  tensor(0.2202, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.4533912241458893
+benign distance is  tensor(182.4563, device='cuda:3')
+norm1 res is  tensor(0.2041, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  1.242933988571167
+benign distance is  tensor(191.8237, device='cuda:3')
+norm1 res is  tensor(0.2207, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.9271062612533569
+benign distance is  tensor(192.2558, device='cuda:3')
+norm1 res is  tensor(0.2189, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.9534991979598999
+benign distance is  tensor(187.3716, device='cuda:3')
+norm1 res is  tensor(0.2139, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.6968267560005188
+benign distance is  tensor(186.5354, device='cuda:3')
+norm1 res is  tensor(0.2116, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.5064588785171509
+benign distance is  tensor(188.3091, device='cuda:3')
+norm1 res is  tensor(0.2169, device='cuda:3')
+current submit client idx and staleness is  16 3
+ benign loss is  0.5957017540931702
+benign distance is  tensor(177.6052, device='cuda:3')
+norm1 res is  tensor(0.1990, device='cuda:3')
+current submit client idx and staleness is  17 3
+ benign loss is  0.6376104354858398
+benign distance is  tensor(185.3831, device='cuda:3')
+norm1 res is  tensor(0.2138, device='cuda:3')
+current submit client idx and staleness is  18 3
+ benign loss is  0.42428508400917053
+benign distance is  tensor(182.1779, device='cuda:3')
+norm1 res is  tensor(0.2078, device='cuda:3')
+current submit client idx and staleness is  19 3
+ benign loss is  0.4534231126308441
+benign distance is  tensor(185.5896, device='cuda:3')
+norm1 res is  tensor(0.2049, device='cuda:3')
+current submit client idx and staleness is  20 3
+ benign loss is  0.2001611888408661
+benign distance is  tensor(191.9685, device='cuda:3')
+norm1 res is  tensor(0.2106, device='cuda:3')
+current submit client idx and staleness is  21 3
+ benign loss is  0.5904744863510132
+benign distance is  tensor(190.5333, device='cuda:3')
+norm1 res is  tensor(0.2120, device='cuda:3')
+current submit client idx and staleness is  22 3
+ benign loss is  0.42673587799072266
+benign distance is  tensor(181.5314, device='cuda:3')
+norm1 res is  tensor(0.2050, device='cuda:3')
+current submit client idx and staleness is  23 3
+ benign loss is  0.39616864919662476
+benign distance is  tensor(178.1668, device='cuda:3')
+norm1 res is  tensor(0.2008, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 5e-10
+mal_loss is 38.46836471557617
+mal_entropy is 0.12458019703626633
+curent length is  20
+the length of epoch_weights is  1
+the length of weights_d is  1
+alpha 1 is [20]
+alphas 3 is [1.  0.5]
+alphas is  [0.66666667 0.33333333]
+median_weights acc is  0.06490000015700009
+ 
+Avg Training Stats after 22 global rounds:
+Train Accuracy: 6.81% 
+
+Test Accuracy: 6.76% 
+
+
+ | Global Training Round : 23 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.2416134774684906
+benign distance is  tensor(184.9066, device='cuda:3')
+norm1 res is  tensor(0.2113, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.5321972966194153
+benign distance is  tensor(186.2904, device='cuda:3')
+norm1 res is  tensor(0.2071, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.8468363881111145
+benign distance is  tensor(192.5748, device='cuda:3')
+norm1 res is  tensor(0.2143, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.441925585269928
+benign distance is  tensor(183.9996, device='cuda:3')
+norm1 res is  tensor(0.2024, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.42332202196121216
+benign distance is  tensor(182.6999, device='cuda:3')
+norm1 res is  tensor(0.2026, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.7949894666671753
+benign distance is  tensor(181.9910, device='cuda:3')
+norm1 res is  tensor(0.2130, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.2889811098575592
+benign distance is  tensor(189.5878, device='cuda:3')
+norm1 res is  tensor(0.2080, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.2478504478931427
+benign distance is  tensor(183.5689, device='cuda:3')
+norm1 res is  tensor(0.2058, device='cuda:3')
+current submit client idx and staleness is  8 2
+ benign loss is  0.48257774114608765
+benign distance is  tensor(193.6843, device='cuda:3')
+norm1 res is  tensor(0.2139, device='cuda:3')
+current submit client idx and staleness is  9 2
+ benign loss is  0.4043099880218506
+benign distance is  tensor(185.9799, device='cuda:3')
+norm1 res is  tensor(0.2092, device='cuda:3')
+current submit client idx and staleness is  10 2
+ benign loss is  0.40970152616500854
+benign distance is  tensor(184.4684, device='cuda:3')
+norm1 res is  tensor(0.2066, device='cuda:3')
+current submit client idx and staleness is  11 2
+ benign loss is  0.2909400463104248
+benign distance is  tensor(184.0457, device='cuda:3')
+norm1 res is  tensor(0.1989, device='cuda:3')
+current submit client idx and staleness is  12 2
+ benign loss is  0.7905596494674683
+benign distance is  tensor(182.1024, device='cuda:3')
+norm1 res is  tensor(0.2035, device='cuda:3')
+current submit client idx and staleness is  13 2
+ benign loss is  0.780356764793396
+benign distance is  tensor(187.6883, device='cuda:3')
+norm1 res is  tensor(0.2123, device='cuda:3')
+current submit client idx and staleness is  14 2
+ benign loss is  0.5322446823120117
+benign distance is  tensor(176.5195, device='cuda:3')
+norm1 res is  tensor(0.1995, device='cuda:3')
+current submit client idx and staleness is  15 2
+ benign loss is  0.39023643732070923
+benign distance is  tensor(187.9334, device='cuda:3')
+norm1 res is  tensor(0.2077, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 5e-10
+mal_loss is 49.770992279052734
+mal_entropy is 0.062124140560626984
+curent length is  20
+the length of epoch_weights is  0
+alpha 1 is []
+alphas 3 is [1.]
+alphas is  [1.]
+median_weights acc is  0.020300000157000023
+ 
+Avg Training Stats after 23 global rounds:
+Train Accuracy: 0.26% 
+
+Test Accuracy: 0.14% 
+
+
+ | Global Training Round : 24 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.6430627107620239
+benign distance is  tensor(295.9903, device='cuda:3')
+norm1 res is  tensor(0.2894, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.6116673350334167
+benign distance is  tensor(260.5832, device='cuda:3')
+norm1 res is  tensor(0.2519, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.9476113319396973
+benign distance is  tensor(279.5269, device='cuda:3')
+norm1 res is  tensor(0.2831, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.9336684942245483
+benign distance is  tensor(299.9411, device='cuda:3')
+norm1 res is  tensor(0.2962, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.6429853439331055
+benign distance is  tensor(284.1693, device='cuda:3')
+norm1 res is  tensor(0.2667, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.5538172721862793
+benign distance is  tensor(301.6287, device='cuda:3')
+norm1 res is  tensor(0.2959, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.9412127733230591
+benign distance is  tensor(262.8240, device='cuda:3')
+norm1 res is  tensor(0.2523, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.8809912800788879
+benign distance is  tensor(275.7223, device='cuda:3')
+norm1 res is  tensor(0.2594, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 0.050000000499999996
+mal_loss is 144.35531616210938
+mal_entropy is 0.017781972885131836
+curent length is  20
+the length of epoch_weights is  4
+the length of weights_d is  4
+alpha 1 is [18, 20, 21, 22]
+alphas 3 is [1.         0.16666667 0.25       0.33333333 0.5       ]
+alphas is  [0.44444444 0.07407407 0.11111111 0.14814815 0.22222222]
+median_weights acc is  0.21380000015699915
+ 
+Avg Training Stats after 24 global rounds:
+Train Accuracy: 21.69% 
+
+Test Accuracy: 21.53% 
+
+
+ | Global Training Round : 25 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.7144344449043274
+benign distance is  tensor(168.4805, device='cuda:3')
+norm1 res is  tensor(0.2066, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.534175455570221
+benign distance is  tensor(159.0096, device='cuda:3')
+norm1 res is  tensor(0.1947, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.314607709646225
+benign distance is  tensor(157.4624, device='cuda:3')
+norm1 res is  tensor(0.1922, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.6952020525932312
+benign distance is  tensor(145.6022, device='cuda:3')
+norm1 res is  tensor(0.1771, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.5283487439155579
+benign distance is  tensor(157.3223, device='cuda:3')
+norm1 res is  tensor(0.1856, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.7013958096504211
+benign distance is  tensor(160.1269, device='cuda:3')
+norm1 res is  tensor(0.1976, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.3087231516838074
+benign distance is  tensor(160.6161, device='cuda:3')
+norm1 res is  tensor(0.1958, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.3663240075111389
+benign distance is  tensor(152.3098, device='cuda:3')
+norm1 res is  tensor(0.1871, device='cuda:3')
+current submit client idx and staleness is  8 2
+ benign loss is  0.5199069976806641
+benign distance is  tensor(165.5059, device='cuda:3')
+norm1 res is  tensor(0.1983, device='cuda:3')
+current submit client idx and staleness is  9 2
+ benign loss is  0.37735360860824585
+benign distance is  tensor(157.1436, device='cuda:3')
+norm1 res is  tensor(0.1911, device='cuda:3')
+current submit client idx and staleness is  10 2
+ benign loss is  0.6938306093215942
+benign distance is  tensor(161.7435, device='cuda:3')
+norm1 res is  tensor(0.1961, device='cuda:3')
+current submit client idx and staleness is  11 2
+ benign loss is  0.5442860722541809
+benign distance is  tensor(155.2283, device='cuda:3')
+norm1 res is  tensor(0.1846, device='cuda:3')
+current submit client idx and staleness is  12 2
+ benign loss is  0.9530989527702332
+benign distance is  tensor(153.2202, device='cuda:3')
+norm1 res is  tensor(0.1845, device='cuda:3')
+current submit client idx and staleness is  13 2
+ benign loss is  0.37504085898399353
+benign distance is  tensor(158.4009, device='cuda:3')
+norm1 res is  tensor(0.1884, device='cuda:3')
+current submit client idx and staleness is  14 2
+ benign loss is  0.3686983287334442
+benign distance is  tensor(161.3403, device='cuda:3')
+norm1 res is  tensor(0.1907, device='cuda:3')
+current submit client idx and staleness is  15 2
+ benign loss is  0.9378310441970825
+benign distance is  tensor(151.7825, device='cuda:3')
+norm1 res is  tensor(0.1910, device='cuda:3')
+current submit client idx and staleness is  16 3
+ benign loss is  1.05363929271698
+benign distance is  tensor(157.6163, device='cuda:3')
+norm1 res is  tensor(0.1867, device='cuda:3')
+current submit client idx and staleness is  17 3
+ benign loss is  0.33286258578300476
+benign distance is  tensor(152.2357, device='cuda:3')
+norm1 res is  tensor(0.1879, device='cuda:3')
+current submit client idx and staleness is  18 3
+ benign loss is  0.34024715423583984
+benign distance is  tensor(162.4610, device='cuda:3')
+norm1 res is  tensor(0.1966, device='cuda:3')
+current submit client idx and staleness is  19 3
+ benign loss is  0.3689175546169281
+benign distance is  tensor(152.3020, device='cuda:3')
+norm1 res is  tensor(0.1862, device='cuda:3')
+current submit client idx and staleness is  20 3
+ benign loss is  0.2738223373889923
+benign distance is  tensor(153.2444, device='cuda:3')
+norm1 res is  tensor(0.1816, device='cuda:3')
+current submit client idx and staleness is  21 3
+ benign loss is  0.25533121824264526
+benign distance is  tensor(155.8571, device='cuda:3')
+norm1 res is  tensor(0.1835, device='cuda:3')
+current submit client idx and staleness is  22 3
+ benign loss is  0.6300066709518433
+benign distance is  tensor(158.1888, device='cuda:3')
+norm1 res is  tensor(0.1928, device='cuda:3')
+current submit client idx and staleness is  23 3
+ benign loss is  0.7210776209831238
+benign distance is  tensor(159.6838, device='cuda:3')
+norm1 res is  tensor(0.1918, device='cuda:3')
+current submit client idx and staleness is  24 4
+ benign loss is  0.3045000731945038
+benign distance is  tensor(165.6828, device='cuda:3')
+norm1 res is  tensor(0.1994, device='cuda:3')
+current submit client idx and staleness is  25 4
+ benign loss is  0.6871194243431091
+benign distance is  tensor(155.9852, device='cuda:3')
+norm1 res is  tensor(0.1863, device='cuda:3')
+current submit client idx and staleness is  26 4
+ benign loss is  0.11949475109577179
+benign distance is  tensor(158.8090, device='cuda:3')
+norm1 res is  tensor(0.1921, device='cuda:3')
+current submit client idx and staleness is  27 4
+ benign loss is  0.7646788954734802
+benign distance is  tensor(159.6321, device='cuda:3')
+norm1 res is  tensor(0.1933, device='cuda:3')
+current submit client idx and staleness is  28 4
+ benign loss is  1.1973148584365845
+benign distance is  tensor(163.5218, device='cuda:3')
+norm1 res is  tensor(0.1930, device='cuda:3')
+current submit client idx and staleness is  29 4
+ benign loss is  1.0792988538742065
+benign distance is  tensor(163.1859, device='cuda:3')
+norm1 res is  tensor(0.1987, device='cuda:3')
+current submit client idx and staleness is  30 4
+ benign loss is  0.42178183794021606
+benign distance is  tensor(156.2018, device='cuda:3')
+norm1 res is  tensor(0.1892, device='cuda:3')
+current submit client idx and staleness is  31 4
+ benign loss is  0.28788238763809204
+benign distance is  tensor(159.5402, device='cuda:3')
+norm1 res is  tensor(0.1888, device='cuda:3')
+current submit client idx and staleness is  40 6
+ benign loss is  0.32320696115493774
+benign distance is  tensor(155.2968, device='cuda:3')
+norm1 res is  tensor(0.1867, device='cuda:3')
+current submit client idx and staleness is  41 6
+ benign loss is  0.20835259556770325
+benign distance is  tensor(158.9280, device='cuda:3')
+norm1 res is  tensor(0.1912, device='cuda:3')
+current submit client idx and staleness is  42 6
+ benign loss is  0.21548402309417725
+benign distance is  tensor(154.7003, device='cuda:3')
+norm1 res is  tensor(0.1853, device='cuda:3')
+current submit client idx and staleness is  43 6
+ benign loss is  0.5773552060127258
+benign distance is  tensor(166.4437, device='cuda:3')
+norm1 res is  tensor(0.1963, device='cuda:3')
+current submit client idx and staleness is  44 6
+ benign loss is  0.2637661397457123
+benign distance is  tensor(164.6239, device='cuda:3')
+norm1 res is  tensor(0.1954, device='cuda:3')
+current submit client idx and staleness is  45 6
+ benign loss is  0.5029035806655884
+benign distance is  tensor(159.7601, device='cuda:3')
+norm1 res is  tensor(0.1872, device='cuda:3')
+current submit client idx and staleness is  46 6
+ benign loss is  0.43933767080307007
+benign distance is  tensor(159.1581, device='cuda:3')
+norm1 res is  tensor(0.1934, device='cuda:3')
+current submit client idx and staleness is  47 6
+ benign loss is  0.6374619007110596
+benign distance is  tensor(156.9071, device='cuda:3')
+norm1 res is  tensor(0.1899, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 0.10000000049999999
+mal_loss is 29.859766006469727
+mal_entropy is 0.20692597329616547
+curent length is  20
+the length of epoch_weights is  1
+the length of weights_d is  1
+alpha 1 is [20]
+alphas 3 is [1.  0.2]
+alphas is  [0.83333333 0.16666667]
+median_weights acc is  0.06570000015700009
+ 
+Avg Training Stats after 25 global rounds:
+Train Accuracy: 7.40% 
+
+Test Accuracy: 7.40% 
+
+
+ | Global Training Round : 26 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.49511271715164185
+benign distance is  tensor(217.5825, device='cuda:3')
+norm1 res is  tensor(0.2312, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  1.1649718284606934
+benign distance is  tensor(216.1410, device='cuda:3')
+norm1 res is  tensor(0.2278, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.06049279496073723
+benign distance is  tensor(216.0797, device='cuda:3')
+norm1 res is  tensor(0.2336, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.6373863220214844
+benign distance is  tensor(202.2618, device='cuda:3')
+norm1 res is  tensor(0.2200, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.484346866607666
+benign distance is  tensor(202.6011, device='cuda:3')
+norm1 res is  tensor(0.2184, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.6733063459396362
+benign distance is  tensor(203.8203, device='cuda:3')
+norm1 res is  tensor(0.2194, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.3527333438396454
+benign distance is  tensor(209.3132, device='cuda:3')
+norm1 res is  tensor(0.2223, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.44710034132003784
+benign distance is  tensor(202.1915, device='cuda:3')
+norm1 res is  tensor(0.2245, device='cuda:3')
+current submit client idx and staleness is  32 5
+ benign loss is  0.5353865027427673
+benign distance is  tensor(220.9447, device='cuda:3')
+norm1 res is  tensor(0.2354, device='cuda:3')
+current submit client idx and staleness is  33 5
+ benign loss is  0.41820207238197327
+benign distance is  tensor(208.5897, device='cuda:3')
+norm1 res is  tensor(0.2288, device='cuda:3')
+current submit client idx and staleness is  34 5
+ benign loss is  0.758532702922821
+benign distance is  tensor(202.5546, device='cuda:3')
+norm1 res is  tensor(0.2166, device='cuda:3')
+current submit client idx and staleness is  35 5
+ benign loss is  0.6029043793678284
+benign distance is  tensor(204.8697, device='cuda:3')
+norm1 res is  tensor(0.2174, device='cuda:3')
+current submit client idx and staleness is  36 5
+ benign loss is  0.7942004799842834
+benign distance is  tensor(215.4141, device='cuda:3')
+norm1 res is  tensor(0.2290, device='cuda:3')
+current submit client idx and staleness is  37 5
+ benign loss is  0.5429571270942688
+benign distance is  tensor(211.7438, device='cuda:3')
+norm1 res is  tensor(0.2274, device='cuda:3')
+current submit client idx and staleness is  38 5
+ benign loss is  0.7562235593795776
+benign distance is  tensor(213.7429, device='cuda:3')
+norm1 res is  tensor(0.2284, device='cuda:3')
+current submit client idx and staleness is  39 5
+ benign loss is  0.4662698209285736
+benign distance is  tensor(203.7175, device='cuda:3')
+norm1 res is  tensor(0.2219, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 0.050000000499999996
+mal_loss is 72.37743377685547
+mal_entropy is 0.012643083930015564
+curent length is  20
+the length of epoch_weights is  1
+the length of weights_d is  1
+alpha 1 is [24]
+alphas 3 is [1.  0.5]
+alphas is  [0.66666667 0.33333333]
+median_weights acc is  0.0768000001570001
+ 
+Avg Training Stats after 26 global rounds:
+Train Accuracy: 8.42% 
+
+Test Accuracy: 8.43% 
+
+
+ | Global Training Round : 27 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.2673039436340332
+benign distance is  tensor(248.5885, device='cuda:3')
+norm1 res is  tensor(0.2587, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.6462593078613281
+benign distance is  tensor(272.3869, device='cuda:3')
+norm1 res is  tensor(0.2784, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.24419519305229187
+benign distance is  tensor(234.3138, device='cuda:3')
+norm1 res is  tensor(0.2368, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.4466829299926758
+benign distance is  tensor(234.6456, device='cuda:3')
+norm1 res is  tensor(0.2389, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.5185129046440125
+benign distance is  tensor(206.4509, device='cuda:3')
+norm1 res is  tensor(0.2170, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.43111783266067505
+benign distance is  tensor(235.1535, device='cuda:3')
+norm1 res is  tensor(0.2419, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.40365687012672424
+benign distance is  tensor(221.0067, device='cuda:3')
+norm1 res is  tensor(0.2226, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.873363196849823
+benign distance is  tensor(240.3276, device='cuda:3')
+norm1 res is  tensor(0.2463, device='cuda:3')
+current submit client idx and staleness is  8 2
+ benign loss is  0.5695573687553406
+benign distance is  tensor(230.3130, device='cuda:3')
+norm1 res is  tensor(0.2345, device='cuda:3')
+current submit client idx and staleness is  9 2
+ benign loss is  0.5267619490623474
+benign distance is  tensor(242.4291, device='cuda:3')
+norm1 res is  tensor(0.2481, device='cuda:3')
+current submit client idx and staleness is  10 2
+ benign loss is  1.246782898902893
+benign distance is  tensor(230.4771, device='cuda:3')
+norm1 res is  tensor(0.2408, device='cuda:3')
+current submit client idx and staleness is  11 2
+ benign loss is  1.1875898838043213
+benign distance is  tensor(218.1154, device='cuda:3')
+norm1 res is  tensor(0.2235, device='cuda:3')
+current submit client idx and staleness is  12 2
+ benign loss is  0.6248310208320618
+benign distance is  tensor(214.3059, device='cuda:3')
+norm1 res is  tensor(0.2203, device='cuda:3')
+current submit client idx and staleness is  13 2
+ benign loss is  0.7050731778144836
+benign distance is  tensor(243.5430, device='cuda:3')
+norm1 res is  tensor(0.2464, device='cuda:3')
+current submit client idx and staleness is  14 2
+ benign loss is  0.5057307481765747
+benign distance is  tensor(216.3194, device='cuda:3')
+norm1 res is  tensor(0.2236, device='cuda:3')
+current submit client idx and staleness is  15 2
+ benign loss is  1.343814492225647
+benign distance is  tensor(232.1012, device='cuda:3')
+norm1 res is  tensor(0.2381, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 0.050000000499999996
+mal_loss is 87.5156021118164
+mal_entropy is 0.07042098045349121
+curent length is  20
+the length of epoch_weights is  1
+the length of weights_d is  1
+alpha 1 is [24]
+alphas 3 is [1.         0.33333333]
+alphas is  [0.75 0.25]
+median_weights acc is  0.07300000015700009
+ 
+Avg Training Stats after 27 global rounds:
+Train Accuracy: 8.88% 
+
+Test Accuracy: 8.94% 
+
+
+ | Global Training Round : 28 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  0.5295014381408691
+benign distance is  tensor(374.8760, device='cuda:3')
+norm1 res is  tensor(0.3967, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  1.1381477117538452
+benign distance is  tensor(283.8315, device='cuda:3')
+norm1 res is  tensor(0.2786, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.32155323028564453
+benign distance is  tensor(275.5045, device='cuda:3')
+norm1 res is  tensor(0.2751, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.5460454821586609
+benign distance is  tensor(324.8652, device='cuda:3')
+norm1 res is  tensor(0.3266, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.44515570998191833
+benign distance is  tensor(296.2347, device='cuda:3')
+norm1 res is  tensor(0.2925, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.7318659424781799
+benign distance is  tensor(315.4601, device='cuda:3')
+norm1 res is  tensor(0.3115, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.5804647207260132
+benign distance is  tensor(301.7274, device='cuda:3')
+norm1 res is  tensor(0.2983, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  1.340322494506836
+benign distance is  tensor(311.1461, device='cuda:3')
+norm1 res is  tensor(0.3084, device='cuda:3')
+current submit client idx and staleness is  16 3
+ benign loss is  0.5815762281417847
+benign distance is  tensor(303.4944, device='cuda:3')
+norm1 res is  tensor(0.2961, device='cuda:3')
+current submit client idx and staleness is  17 3
+ benign loss is  0.6661475896835327
+benign distance is  tensor(274.7573, device='cuda:3')
+norm1 res is  tensor(0.2670, device='cuda:3')
+current submit client idx and staleness is  18 3
+ benign loss is  0.5348912477493286
+benign distance is  tensor(294.7552, device='cuda:3')
+norm1 res is  tensor(0.2970, device='cuda:3')
+current submit client idx and staleness is  19 3
+ benign loss is  0.2669570744037628
+benign distance is  tensor(299.2641, device='cuda:3')
+norm1 res is  tensor(0.2976, device='cuda:3')
+current submit client idx and staleness is  20 3
+ benign loss is  0.3920500874519348
+benign distance is  tensor(248.7793, device='cuda:3')
+norm1 res is  tensor(0.2449, device='cuda:3')
+current submit client idx and staleness is  21 3
+ benign loss is  1.6611953973770142
+benign distance is  tensor(278.6889, device='cuda:3')
+norm1 res is  tensor(0.2662, device='cuda:3')
+current submit client idx and staleness is  22 3
+ benign loss is  0.2881062626838684
+benign distance is  tensor(279.3773, device='cuda:3')
+norm1 res is  tensor(0.2741, device='cuda:3')
+current submit client idx and staleness is  23 3
+ benign loss is  0.8279290199279785
+benign distance is  tensor(278.6257, device='cuda:3')
+norm1 res is  tensor(0.2786, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 0.050000000499999996
+mal_loss is 144.1380157470703
+mal_entropy is 0.03000856749713421
+curent length is  20
+the length of epoch_weights is  2
+the length of weights_d is  2
+alpha 1 is [24, 26]
+alphas 3 is [1.   0.25 0.5 ]
+alphas is  [0.57142857 0.14285714 0.28571429]
+median_weights acc is  0.272200000156999
+ 
+Avg Training Stats after 28 global rounds:
+Train Accuracy: 29.30% 
+
+Test Accuracy: 28.62% 
+
+
+ | Global Training Round : 29 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  1.080204725265503
+benign distance is  tensor(160.8921, device='cuda:3')
+norm1 res is  tensor(0.1973, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.4735867381095886
+benign distance is  tensor(150.4323, device='cuda:3')
+norm1 res is  tensor(0.1846, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.17115823924541473
+benign distance is  tensor(157.5867, device='cuda:3')
+norm1 res is  tensor(0.1911, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.8359983563423157
+benign distance is  tensor(148.9768, device='cuda:3')
+norm1 res is  tensor(0.1858, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.6817387938499451
+benign distance is  tensor(162.6841, device='cuda:3')
+norm1 res is  tensor(0.1946, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.5012879967689514
+benign distance is  tensor(156.3068, device='cuda:3')
+norm1 res is  tensor(0.1934, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.421400249004364
+benign distance is  tensor(151.4622, device='cuda:3')
+norm1 res is  tensor(0.1881, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.7228497266769409
+benign distance is  tensor(161.6855, device='cuda:3')
+norm1 res is  tensor(0.2015, device='cuda:3')
+current submit client idx and staleness is  8 2
+ benign loss is  0.41503676772117615
+benign distance is  tensor(155.3503, device='cuda:3')
+norm1 res is  tensor(0.1867, device='cuda:3')
+current submit client idx and staleness is  9 2
+ benign loss is  0.356014609336853
+benign distance is  tensor(156.0343, device='cuda:3')
+norm1 res is  tensor(0.1906, device='cuda:3')
+current submit client idx and staleness is  10 2
+ benign loss is  0.536465048789978
+benign distance is  tensor(158.8253, device='cuda:3')
+norm1 res is  tensor(0.1943, device='cuda:3')
+current submit client idx and staleness is  11 2
+ benign loss is  0.8855831027030945
+benign distance is  tensor(153.4592, device='cuda:3')
+norm1 res is  tensor(0.1926, device='cuda:3')
+current submit client idx and staleness is  12 2
+ benign loss is  1.352461814880371
+benign distance is  tensor(145.2431, device='cuda:3')
+norm1 res is  tensor(0.1777, device='cuda:3')
+current submit client idx and staleness is  13 2
+ benign loss is  0.2547615170478821
+benign distance is  tensor(160.0537, device='cuda:3')
+norm1 res is  tensor(0.1908, device='cuda:3')
+current submit client idx and staleness is  14 2
+ benign loss is  0.2690277099609375
+benign distance is  tensor(155.7573, device='cuda:3')
+norm1 res is  tensor(0.1892, device='cuda:3')
+current submit client idx and staleness is  15 2
+ benign loss is  0.6936826109886169
+benign distance is  tensor(155.8612, device='cuda:3')
+norm1 res is  tensor(0.1920, device='cuda:3')
+current submit client idx and staleness is  24 4
+ benign loss is  0.4342065453529358
+benign distance is  tensor(166.1915, device='cuda:3')
+norm1 res is  tensor(0.1996, device='cuda:3')
+current submit client idx and staleness is  25 4
+ benign loss is  0.6368324160575867
+benign distance is  tensor(156.4301, device='cuda:3')
+norm1 res is  tensor(0.1878, device='cuda:3')
+current submit client idx and staleness is  26 4
+ benign loss is  1.1843998432159424
+benign distance is  tensor(162.8618, device='cuda:3')
+norm1 res is  tensor(0.1976, device='cuda:3')
+current submit client idx and staleness is  27 4
+ benign loss is  0.8516327142715454
+benign distance is  tensor(152.0901, device='cuda:3')
+norm1 res is  tensor(0.1863, device='cuda:3')
+current submit client idx and staleness is  28 4
+ benign loss is  0.4551190733909607
+benign distance is  tensor(157.5089, device='cuda:3')
+norm1 res is  tensor(0.1935, device='cuda:3')
+current submit client idx and staleness is  29 4
+ benign loss is  0.25263944268226624
+benign distance is  tensor(151.5101, device='cuda:3')
+norm1 res is  tensor(0.1856, device='cuda:3')
+current submit client idx and staleness is  30 4
+ benign loss is  0.7640973329544067
+benign distance is  tensor(160.5030, device='cuda:3')
+norm1 res is  tensor(0.1914, device='cuda:3')
+current submit client idx and staleness is  31 4
+ benign loss is  0.5937883853912354
+benign distance is  tensor(154.0512, device='cuda:3')
+norm1 res is  tensor(0.1865, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 0.050000000499999996
+mal_loss is 18.846355438232422
+mal_entropy is 0.3725644052028656
+curent length is  20
+the length of epoch_weights is  0
+alpha 1 is []
+alphas 3 is [1.]
+alphas is  [1.]
+median_weights acc is  0.05130000015700008
+ 
+Avg Training Stats after 29 global rounds:
+Train Accuracy: 5.89% 
+
+Test Accuracy: 6.05% 
+
+
+ | Global Training Round : 30 | 
+
+current submit client idx and staleness is  0 1
+ benign loss is  1.3300122022628784
+benign distance is  tensor(239.6871, device='cuda:3')
+norm1 res is  tensor(0.2404, device='cuda:3')
+current submit client idx and staleness is  1 1
+ benign loss is  0.45476946234703064
+benign distance is  tensor(214.4642, device='cuda:3')
+norm1 res is  tensor(0.2186, device='cuda:3')
+current submit client idx and staleness is  2 1
+ benign loss is  0.5087320804595947
+benign distance is  tensor(213.8634, device='cuda:3')
+norm1 res is  tensor(0.2314, device='cuda:3')
+current submit client idx and staleness is  3 1
+ benign loss is  0.8156732320785522
+benign distance is  tensor(237.0431, device='cuda:3')
+norm1 res is  tensor(0.2447, device='cuda:3')
+current submit client idx and staleness is  4 1
+ benign loss is  0.9565426111221313
+benign distance is  tensor(215.3779, device='cuda:3')
+norm1 res is  tensor(0.2250, device='cuda:3')
+current submit client idx and staleness is  5 1
+ benign loss is  0.5272452235221863
+benign distance is  tensor(215.7070, device='cuda:3')
+norm1 res is  tensor(0.2295, device='cuda:3')
+current submit client idx and staleness is  6 1
+ benign loss is  0.5768839120864868
+benign distance is  tensor(217.9926, device='cuda:3')
+norm1 res is  tensor(0.2274, device='cuda:3')
+current submit client idx and staleness is  7 1
+ benign loss is  0.4142710268497467
+benign distance is  tensor(221.7324, device='cuda:3')
+norm1 res is  tensor(0.2306, device='cuda:3')
+current submit client idx and staleness is  48 1
+current submit client idx and staleness is  49 1
+current submit client idx and staleness is  50 1
+current submit client idx and staleness is  51 1
+current submit client idx and staleness is  52 1
+current submit client idx and staleness is  53 1
+current submit client idx and staleness is  54 1
+current submit client idx and staleness is  55 1
+current submit client idx and staleness is  56 1
+current submit client idx and staleness is  57 1
+current submit client idx and staleness is  58 1
+current submit client idx and staleness is  59 1
+mal_acc is 0.10000000049999999
+mal_loss is 74.48001098632812
+mal_entropy is 0.04990893229842186
+curent length is  20
+the length of epoch_weights is  4
+the length of weights_d is  4
+alpha 1 is [24, 25, 27, 28]
+alphas 3 is [1.         0.16666667 0.2        0.33333333 0.5       ]
+alphas is  [0.45454545 0.07575758 0.09090909 0.15151515 0.22727273]
+median_weights acc is  0.3964000001569988
+ 
+Avg Training Stats after 30 global rounds:
+Train Accuracy: 45.66% 
+
+Test Accuracy: 45.46% 
+
+ 
+ Results after 30 global rounds of training:
+|---- Avg testing Accuracy across each device's data: 45.66%
+|----0th round Training Accuracy : 89.18%
+|----1th round Training Accuracy : 89.01%
+|----2th round Training Accuracy : 88.93%
+|----3th round Training Accuracy : 88.90%
+|----4th round Training Accuracy : 88.99%
+|----5th round Training Accuracy : 89.02%
+|----6th round Training Accuracy : 86.74%
+|----7th round Training Accuracy : 84.74%
+|----8th round Training Accuracy : 77.98%
+|----9th round Training Accuracy : 70.36%
+|----10th round Training Accuracy : 10.28%
+|----11th round Training Accuracy : 27.88%
+|----12th round Training Accuracy : 9.86%
+|----13th round Training Accuracy : 8.49%
+|----14th round Training Accuracy : 4.84%
+|----15th round Training Accuracy : 16.54%
+|----16th round Training Accuracy : 0.34%
+|----17th round Training Accuracy : 11.97%
+|----18th round Training Accuracy : 0.26%
+|----19th round Training Accuracy : 9.23%
+|----20th round Training Accuracy : 4.63%
+|----21th round Training Accuracy : 6.81%
+|----22th round Training Accuracy : 0.26%
+|----23th round Training Accuracy : 21.69%
+|----24th round Training Accuracy : 7.40%
+|----25th round Training Accuracy : 8.42%
+|----26th round Training Accuracy : 8.88%
+|----27th round Training Accuracy : 29.30%
+|----28th round Training Accuracy : 5.89%
+|----29th round Training Accuracy : 45.66%
+|----Final Test Accuracy: 45.46%
+|----0th round Final Test Accuracy : 88.60%
+|----1th round Final Test Accuracy : 88.16%
+|----2th round Final Test Accuracy : 88.14%
+|----3th round Final Test Accuracy : 88.27%
+|----4th round Final Test Accuracy : 88.11%
+|----5th round Final Test Accuracy : 88.11%
+|----6th round Final Test Accuracy : 85.88%
+|----7th round Final Test Accuracy : 83.70%
+|----8th round Final Test Accuracy : 76.66%
+|----9th round Final Test Accuracy : 69.52%
+|----10th round Final Test Accuracy : 10.50%
+|----11th round Final Test Accuracy : 27.76%
+|----12th round Final Test Accuracy : 10.00%
+|----13th round Final Test Accuracy : 8.69%
+|----14th round Final Test Accuracy : 4.97%
+|----15th round Final Test Accuracy : 16.06%
+|----16th round Final Test Accuracy : 0.40%
+|----17th round Final Test Accuracy : 11.43%
+|----18th round Final Test Accuracy : 0.30%
+|----19th round Final Test Accuracy : 8.88%
+|----20th round Final Test Accuracy : 4.01%
+|----21th round Final Test Accuracy : 6.76%
+|----22th round Final Test Accuracy : 0.14%
+|----23th round Final Test Accuracy : 21.53%
+|----24th round Final Test Accuracy : 7.40%
+|----25th round Final Test Accuracy : 8.43%
+|----26th round Final Test Accuracy : 8.94%
+|----27th round Final Test Accuracy : 28.62%
+|----28th round Final Test Accuracy : 6.05%
+|----29th round Final Test Accuracy : 45.46%
+
+Experimental details:
+    Dataset     : fmnist
+    Model     : cnn
+    detailed Model     : resnet
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 30
+
+    Federated parameters:
+    IID
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 5
+
+    Attack ratio : 0.2
+     Model attack is done!
+
+ Total Run Time: 1840.0079

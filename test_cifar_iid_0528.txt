@@ -1,0 +1,291 @@
+
+Experimental details:
+    Dataset     : cifar
+    Model     : cnn
+    detailed Model     : resnet
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 50
+
+    Federated parameters:
+    IID
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 15
+
+    Attack ratio : 0.2
+     Model attack is done!
+Files already downloaded and verified
+Files already downloaded and verified
+attack user num is  12
+ t is  8
+attack_user is [48 49 50 51 52 53 54 55 56 57 58 59]
+
+ | Global Training Round : 1 | 
+
+
+Experimental details:
+    Dataset     : cifar
+    Model     : cnn
+    detailed Model     : resnet
+    Optimizer : sgd
+    Learning  : 0.01
+    Global Rounds   : 50
+
+    Federated parameters:
+    IID
+    balanced
+    Fraction of users  : 0.2
+    Local Batch size   : 10
+    Local Epochs       : 15
+
+    Attack ratio : 0.2
+     Model attack is done!
+Files already downloaded and verified
+Files already downloaded and verified
+attack user num is  12
+ t is  8
+attack_user is [48 49 50 51 52 53 54 55 56 57 58 59]
+
+ | Global Training Round : 1 | 
+
+current submit client idx and staleness is  0 1
+distance 2 is tensor(39715.3270, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(39715.3270, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1., device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.3310340213087889
+ benign acc is  0.9206349207936508
+current submit client idx and staleness is  1 1
+distance 2 is tensor(40008.4772, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(40008.4772, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.7845239157860096
+ benign acc is  0.7973137974725275
+current submit client idx and staleness is  2 1
+distance 2 is tensor(40000.2006, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(40000.2006, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.6490852339909627
+ benign acc is  0.8327228328815629
+current submit client idx and staleness is  3 1
+distance 2 is tensor(39994.1402, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(39994.1402, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1., device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.7220847033537351
+ benign acc is  0.8229548231135531
+current submit client idx and staleness is  4 1
+distance 2 is tensor(40003.4464, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(40003.4464, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1., device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.8477183419924516
+ benign acc is  0.8070818072405372
+current submit client idx and staleness is  5 1
+distance 2 is tensor(40000.8526, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(40000.8526, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.5708805964543269
+ benign acc is  0.8498168499755799
+current submit client idx and staleness is  6 1
+distance 2 is tensor(40057.5462, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(40057.5462, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.7332709248249347
+ benign acc is  0.8095238096825397
+current submit client idx and staleness is  7 1
+distance 2 is tensor(40046.9278, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(40046.9278, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1., device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.6972947693788089
+ benign acc is  0.8437118438705739
+current submit client idx and staleness is  8 2
+distance 2 is tensor(40026.0487, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(40026.0487, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.5991312288320981
+ benign acc is  0.8461538463125763
+current submit client idx and staleness is  9 2
+distance 2 is tensor(40057.8999, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(40057.8999, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.8097418638376089
+ benign acc is  0.8070818072405372
+current submit client idx and staleness is  10 2
+distance 2 is tensor(39954.9686, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(39954.9686, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1., device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.6432651808628669
+ benign acc is  0.8461538463125763
+current submit client idx and staleness is  11 2
+distance 2 is tensor(40060.2448, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(40060.2448, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.6124652968003199
+ benign acc is  0.8241758243345543
+current submit client idx and staleness is  12 2
+distance 2 is tensor(39985.9918, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(39985.9918, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.7596230197411317
+ benign acc is  0.8144078145665445
+current submit client idx and staleness is  13 2
+distance 2 is tensor(40074.4729, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(40074.4729, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1., device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.7259812515515548
+ benign acc is  0.8241758243345543
+current submit client idx and staleness is  14 2
+distance 2 is tensor(40036.6774, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(40036.6774, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.9035290456735171
+ benign acc is  0.7741147742735043
+current submit client idx and staleness is  15 2
+distance 2 is tensor(39993.8393, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(39993.8393, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.752075711121926
+ benign acc is  0.8351648353235653
+current submit client idx and staleness is  16 3
+distance 2 is tensor(39955.3126, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(39955.3126, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.6699809179856226
+ benign acc is  0.827838827997558
+current submit client idx and staleness is  17 3
+distance 2 is tensor(40052.6808, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(40052.6808, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.6049110637261317
+ benign acc is  0.8351648353235653
+current submit client idx and staleness is  18 3
+distance 2 is tensor(40072.3662, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(40072.3662, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.7036542537120672
+ benign acc is  0.8156288157875458
+current submit client idx and staleness is  19 3
+distance 2 is tensor(40027.2262, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(40027.2262, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.6728970798162314
+ benign acc is  0.8205128206715506
+current submit client idx and staleness is  20 3
+distance 2 is tensor(39988.1733, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(39988.1733, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.5704407840967178
+ benign acc is  0.8534798536385836
+current submit client idx and staleness is  21 3
+distance 2 is tensor(39975.5884, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(39975.5884, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1., device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.7461812312786396
+ benign acc is  0.8290598292185593
+current submit client idx and staleness is  22 3
+distance 2 is tensor(39959.5404, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(39959.5404, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.6723303577074637
+ benign acc is  0.8302808304395605
+current submit client idx and staleness is  23 3
+distance 2 is tensor(40008.4618, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(40008.4618, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1., device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.7781366614195017
+ benign acc is  0.8021978023565324
+current submit client idx and staleness is  24 4
+distance 2 is tensor(39998.8180, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(39998.8180, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1., device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.6815568609879568
+ benign acc is  0.8241758243345543
+current submit client idx and staleness is  25 4
+distance 2 is tensor(40053.9624, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(40053.9624, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.7685335324360774
+ benign acc is  0.8144078145665445
+current submit client idx and staleness is  26 4
+distance 2 is tensor(40000.9589, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(40000.9589, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1., device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.6566427304194524
+ benign acc is  0.8253968255555555
+current submit client idx and staleness is  27 4
+distance 2 is tensor(40040.2188, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(40040.2188, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.7542748428308047
+ benign acc is  0.805860806019536
+current submit client idx and staleness is  28 4
+distance 2 is tensor(39980.7335, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(39980.7335, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.6794495651355157
+ benign acc is  0.8253968255555555
+current submit client idx and staleness is  29 4
+distance 2 is tensor(39997.7867, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(39997.7867, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.8365575894713402
+ benign acc is  0.8046398047985348
+current submit client idx and staleness is  30 4
+distance 2 is tensor(39995.0011, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(39995.0011, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.6014376385853841
+ benign acc is  0.8290598292185593
+current submit client idx and staleness is  31 4
+distance 2 is tensor(40017.5575, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(40017.5575, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1., device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.6960159184841009
+ benign acc is  0.8156288157875458
+current submit client idx and staleness is  32 5
+distance 2 is tensor(40066.8154, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(40066.8154, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.8008626791147085
+ benign acc is  0.7826617828205128
+current submit client idx and staleness is  33 5
+distance 2 is tensor(39977.4246, device='cuda:3', dtype=torch.float64)
+check distance is  tensor(39977.4246, device='cuda:3', dtype=torch.float64)
+benign similarity is  tensor(1.0000, device='cuda:3')
+grad,shape is torch.Size([11183582])
+ benign loss is  0.7904578584891099
+ benign acc is  0.8034188035775336
+current submit client idx and staleness is  34 5
