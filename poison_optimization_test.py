@@ -385,22 +385,23 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
             return True, student_model.state_dict()
         elif avg_entropy <= entropy_threshold and loss > 2:
             print("change alpha")
-            # alpha = 0.1
-            # beta = 0.1
-            alpha = 0.5
-            beta = 0.4
+            # alpha = 0.57
+            # beta = 0.43
+            alpha = 0.7
+
+            beta = 0.3
         # elif 
         elif acc_1<= accuracy_threshold:
             #  loss <= 1:  #0.7 0.3 for fmnist
             print("restore alpha")
             # alpha = 0.7
             # beta = 0.3 #0.88 0.12 for fmnist
-            alpha = 0.45
-            beta = 0.1
+            alpha = 0.8
+            beta = 0.2
         else:
             print("distillation for acc")
-            alpha = 0.3 # 改了0.9  ——0422
-            beta = 0.2#0.88 0.12 for fmnist
+            alpha = 0.75 # 改了0.9  ——0422
+            beta = 0.25#0.88 0.12 for fmnist
         #     w_seed = student_model.state_dict()
         #     for key in w_seed.keys():
         #         w_seed[key] = -w_seed[key]
@@ -480,7 +481,8 @@ def add_small_perturbation(original_model, args, pinned_accuracy, train_dataset,
     criterion = nn.NLLLoss().to(device)
     testloader = DataLoader(train_dataset, batch_size=64, shuffle=False)
     optimizer = torch.optim.Adam(test_model.parameters(), lr=args.lr, weight_decay=1e-4)
-    for round in range(1):
+    # optimizer = MyPOptimizer(test_model.parameters(),lr=args.lr)
+    for round in range(15):
         for batch_idx, (images, labels) in enumerate(testloader):
             images, labels = images.to(device), labels.to(device)
 
@@ -601,7 +603,7 @@ def computeTargetDistance(model_dicts, global_model, ratio):
 
     max_idx = int(len(model_dicts))-1
 
-    target_distance = res_distance[max_idx]
+    target_distance = res_distance[max_idx] 
 
     return target_distance
 
