@@ -65,8 +65,14 @@ class LocalUpdate(object):
             lr = self.args.lr
             lr = lr * (0.5) ** (global_round // self.args.lrdecay)
             optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=1e-4)
+        
+        if self.delay == False:
+            local_ep = self.args.local_ep
+        else:
+            print("local_ep *2")
+            local_ep = self.args.local_ep *6
 
-        for iter in range(self.args.local_ep):
+        for iter in range(local_ep):
             batch_loss = []
             batch_grad = []
             for batch_idx, (images, labels) in enumerate(self.trainloader):
@@ -83,7 +89,7 @@ class LocalUpdate(object):
                  # 修改点1：设置模型参数需要梯度
                 for param in model.parameters():
                     param.requires_grad_(True)
-                log_probs, probs = model(images)
+                log_probs, probs,PLR = model(images)
                 # print("prob shape is ",F.log_softmax(probs, dim=1).shape)
                 loss = self.criterion(log_probs, labels)
                 loss.backward()
@@ -125,7 +131,7 @@ class LocalUpdate(object):
         with torch.no_grad():
             for batch_idx, (images, labels) in enumerate(self.testloader):
                 images, labels = images.to(self.device), labels.to(self.device)
-                outputs,_= model(images)
+                outputs,_,PLR= model(images)
                 batch_loss = self.criterion(outputs, labels)
                 loss += batch_loss.item()
 
@@ -156,7 +162,7 @@ def test_inference(args, model, test_dataset):
             model.zero_grad()
 
 
-            output, out = model(images)
+            output, out,PLR = model(images)
 
             
             Information = F.softmax(out, dim=1) * F.log_softmax(out, dim=1)

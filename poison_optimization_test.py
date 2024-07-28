@@ -385,11 +385,12 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
             return True, student_model.state_dict()
         elif avg_entropy <= entropy_threshold and loss > 2:
             print("change alpha")
-            # alpha = 0.57
-            # beta = 0.43
             alpha = 0.7
-
             beta = 0.3
+            # alpha = 0.5
+            # beta = 0.4
+
+
         # elif 
         elif acc_1<= accuracy_threshold:
             #  loss <= 1:  #0.7 0.3 for fmnist
@@ -400,8 +401,10 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
             beta = 0.2
         else:
             print("distillation for acc")
-            alpha = 0.75 # 改了0.9  ——0422
-            beta = 0.25#0.88 0.12 for fmnist
+            # alpha = 0.9 # 改了0.9  ——0422
+            # beta = 0.1#0.88 0.12 for fmnist
+            alpha = 0.8 # 改了0.9  ——0422
+            beta = 0.2#
         #     w_seed = student_model.state_dict()
         #     for key in w_seed.keys():
         #         w_seed[key] = -w_seed[key]
@@ -416,16 +419,16 @@ def self_distillation(args, teacher_model, student_model, train_dataset, entropy
                 param.requires_grad_(True)
 
             teacher_labels = list()
-            _ , teacher_outputs = teacher_model(images)
+            _ , teacher_outputs,PLR = teacher_model(images)
             for item in teacher_outputs:
                 pred_label = int(torch.max(item, 0)[1])
                 teacher_labels.append(pred_label)
 
             pred_is = torch.tensor(teacher_labels)
             pred_is = pred_is.to(device)
-            stu_out, student_outputs = student_model(images)
+            stu_out, student_outputs,PLR = student_model(images)
             # ref_out, ref_outputs, PLR= ref_model(images)
-            _ , teacher_outputs = teacher_model(images)
+            _ , teacher_outputs,PLR= teacher_model(images)
             l_loss = criterion1(stu_out, pred_is)
             t_loss = criterion1(stu_out,  labels) #  增加了正常的loss
             loss =  alpha * l_loss + beta * t_loss
@@ -492,7 +495,7 @@ def add_small_perturbation(original_model, args, pinned_accuracy, train_dataset,
                 param.requires_grad_(True)
 
 
-            output, out= test_model(images)
+            output, out,PLR= test_model(images)
             # # 构造[batches,categaries]的真实分布向量
             _, pred_labels = torch.max(output,1)
             pred_labels = pred_labels.view(-1)

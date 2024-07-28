@@ -64,7 +64,7 @@ class CNNFashion_Mnist(nn.Module):
             nn.MaxPool2d(2))
         # self.fc = nn.Linear(7*7*32, 10)
         self.dropout = nn.Dropout(p=0.25)  # 在两个卷积层后添加Dropout层
-        self.flatten = nn.Flatten()  # Flatten层将特征图展平
+        self.flatten = nn.Flatten()  
         self.fc1 = nn.Linear(32*7*7, 128)  # 全连接层1
         self.fc2 = nn.Linear(128, 10)  # 全连接层2
 
@@ -75,11 +75,11 @@ class CNNFashion_Mnist(nn.Module):
         # out = self.fc(out)
         out = self.dropout(out)  # Dropout层
         out = self.flatten(out)  # Flatten层
-        out = F.relu(self.fc1(out))  # 全连接层1
-        out1 = self.dropout(out)  # Dropout层
-        out = self.fc2(out1)  # 全连接层2
+        out1 = F.relu(self.fc1(out))  # 全连接层1
+        out2 = self.dropout(out1)  # Dropout层
+        out = self.fc2(out2)  # 全连接层2
         ### 单独返回out1层
-        return F.log_softmax(out, dim=1), out
+        return F.log_softmax(out, dim=1), out,out1
 
 
 
@@ -177,7 +177,7 @@ class CNNCifar(nn.Module):
 
         x = self.fc1(x)
 
-        return F.log_softmax(x, dim=1),
+        return F.log_softmax(x, dim=1),x
 
 
 

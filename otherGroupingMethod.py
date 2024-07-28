@@ -101,9 +101,9 @@ def Trimmed_mean(para_updates, n_attackers):
 
 def pre_Trimmed_mean(std_dict, std_keys, current_epoch_updates):
     weight_updates = modifyWeight(std_keys, current_epoch_updates)
-    Median_avg = Trimmed_mean(weight_updates, 4)
+    Median_avg = Trimmed_mean(weight_updates, 2)
     Median_avg = restoreWeight(std_dict, std_keys, Median_avg)
-    return Median_avg, len(weight_updates) - 8
+    return Median_avg, len(weight_updates) - 4
 
 '''
 对于每个样本，m个clients都会生成对应的的logits，把这些logits求其中位数，作为全局的agg_logits；
@@ -306,7 +306,7 @@ def test_inference_clone(args, model, test_dataset):
             param.requires_grad_(True)
 
 
-        output, out = model(images)
+        output, out,PLR = model(images)
         # # 构造[batches,categaries]的真实分布向量
         # categaries = output.shape[1]
         Information = F.softmax(out, dim=1) * F.log_softmax(out, dim=1)
@@ -446,7 +446,7 @@ def update_weights_zeno(args, model, global_round,test_dataset):
                 # 修改点1：设置模型参数需要梯度
             for param in model.parameters():
                 param.requires_grad_(True)
-            log_probs, _ = model(images)
+            log_probs, _ ,PLR= model(images)
             loss = criterion(log_probs, labels)
             loss.backward()
             optimizer.step()
@@ -491,7 +491,7 @@ def scale_updates(param_updates,c):
 def Zenoplusplus(args, global_state_dict, param_updates,global_update_param, std_keys, indexes):
     print("index is ", indexes)
     # parameters for zeno++
-    zeno_rho = 0.001 #
+    zeno_rho = 0.0001 #
     zeno_epsilon = 0.02 # 0.02
 
     accept_list = []
@@ -762,7 +762,7 @@ def AFLGuard(param_updates, global_model, global_test_model, epoch, std_keys, lr
         param_i =compute_gradient(param,copy.deepcopy(global_model.state_dict()),std_keys,lr)
         
         norm_1 = torch.norm(torch.subtract(param_i, param_g))
-        norm_1 = torch.norm(param_i,p =2)
+        # norm_1 = torch.norm(param_i,p =2)
         print("norm_1 is ", norm_1)
         print("norm_2 is ", norm_2)
         print("norm_2 * lamda is",norm_2 * lamda )
@@ -771,14 +771,14 @@ def AFLGuard(param_updates, global_model, global_test_model, epoch, std_keys, lr
             # 满足条件则更新全局模型
             print("satisfying", idx)
             # global_weights = copy.deepcopy(global_model.state_dict())
-            update_param = restoregradients(global_weights,std_keys,param_i*lr)
+            update_param = restoregradients(global_weights,std_keys,param_i)
             update_params.append(update_param)
             
         else:
             print("do  not satisfying", idx)
         
     update_res =average_weights(update_params)
-    global_weights = update_weights(global_model,update_res)
+    global_weights = update_weights(global_model.state_dict(),update_res)
     global_model.load_state_dict(global_weights)
     return global_model.state_dict()
 
@@ -808,7 +808,7 @@ def norm_clipping(global_model, local_weights_delay ,local_delay_ew,std_keys,lr)
     print("used idx is ", used_idx)
     avg_grad =  torch.mean(weight_updates[used_idx,: ],dim = 0)
     print("weight size is ", avg_grad.shape)
-    weight_res = restoregradients(copy.deepcopy(global_model.state_dict()),std_keys,avg_grad * lr)
+    weight_res = restoregradients(copy.deepcopy(global_model.state_dict()),std_keys,avg_grad )
 
     return weight_res
 

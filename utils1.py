@@ -72,6 +72,13 @@ def get_dataset(args):
         elif args.iid == 0:
 
             user_groups = mnist_noniidcmm(train_dataset, args.num_users, args.num_commondata, args.alpha)
+    
+    elif args.dataset == 'GTSRB':
+        data_dir = '../data/mnist'
+        train_dataset = datasets.MNIST(data_dir, train=True, download=True,
+                                        transform=apply_transform)
+        test_dataset = datasets.MNIST(data_dir, train=False, download=True,
+                                        transform=apply_transform)
 
     return train_dataset, test_dataset, user_groups
 

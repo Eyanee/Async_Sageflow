@@ -79,7 +79,7 @@ if __name__ == '__main__':
     # 加载参数  
 
     params = torch.load('./global_model_parameters.pth')  
-    # params = torch.load('./cifar_Sageflow_150_iid_model_parameters_1.pth')  
+    # params = torch.load('./fmnist_AFL_model_parameters.pth')  
 
     # 使用加载的参数更新模型  
 
@@ -123,7 +123,7 @@ if __name__ == '__main__':
     # 其他参数
     distance_ratio = 1
     adaptive_accuracy_threshold = 0.8 ## 需要调整
-    pinned_accuracy_threshold = 0.
+    pinned_accuracy_threshold = 0.8
      ## 需要调整
 
  
@@ -320,16 +320,16 @@ if __name__ == '__main__':
 
                 
             
-        if args.model_poison == True and epoch >=0 :
+        if args.model_poison == True and epoch >=6 :
             if args.poison_methods == 'ourpoisonMethod':
-                # malicious_models = list(mal_parameters_list[MAX_STALENESS - 1].values()) #本地模拟的陈旧度上限
-                malicious_models = list(mal_parameters_list[0].values())
+                malicious_models = list(mal_parameters_list[MAX_STALENESS - 1].values()) #本地模拟的陈旧度上限
+                # malicious_models = list(mal_parameters_list[0].values())
                 # local_dict = mal_parameters_list[0][attack_users[0]]s
                 # previous_dict = mal_parameters_list[1][attack_users[0]]
                 
-                pinned_accuracy_threshold = 0.5 # 
+                pinned_accuracy_threshold = 0.8 # 
                 adaptive_accuracy_threshold = pinned_accuracy_threshold
-                if epoch ==  0:
+                if epoch ==  6:
                     distance_threshold = cal_ref_distance(malicious_models,copy.deepcopy(global_model), 0.8) 
                     mal_rand = add_small_perturbation(global_model, args, pinned_accuracy_threshold, train_dataset, distance_threshold,perturbation_range=(-0.1, 0.1))
                     test_model.load_state_dict(mal_rand)
@@ -384,7 +384,7 @@ if __name__ == '__main__':
                             param_=param_.to(device)
                             model_grads.append(param_)
 
-                        optimizer_fed.step(mal_dict)
+                        optimizer_fed.step(model_grads)
                         # test_model.load_state_dict(malicious_dicts[num])
                         mal_acc, mal_loss_sync, mal_entropy_sample = test_inference(args, test_model,
                                                                                                     DatasetSplit(train_dataset,
@@ -550,10 +550,12 @@ if __name__ == '__main__':
                     if len(local_weights_delay[i]) > 0:
                         pre_weights[i].append(local_weights_delay[i])
                 else:
-                    # if len(local_weights_delay[i]) > 0:F
-                    #     pre_weights[i].append(local_weights_delay[i])
                     if len(local_weights_delay[i]) > 0:
-                        pre_weights[i].append(local_weights_delay[i])
+                        w_avg_delay = average_weights(local_weights_delay[i])
+                        len_delay = len(local_weights_delay[i])   
+                        pre_weights[i].append({epoch: [w_avg_delay, len_delay]})
+                    # if len(local_weights_delay[i]) > 0:
+                    #     pre_weights[i].append(local_weights_delay[i])
                         
         if args.update_rule == 'Sageflow':
             sync_weights, len_sync = Eflow(local_weights_delay[0], loss_on_public[0], entropy_on_public[0], epoch)
@@ -583,13 +585,7 @@ if __name__ == '__main__':
                 current_param.extend(k)
             sync_weights, len_sync = pre_Median(copy.deepcopy(global_model.state_dict()), std_keys, current_param)
             global_weights = update_weights(global_model.state_dict(),sync_weights)
-            # global_weights = Sag(epoch, sync_weights, len_sync, local_delay_ew,
-            #                                          copy.deepcopy(global_weights))
-            # test_model.load_state_dict(global_weights)
-            # avg_acc, mal_loss_sync, mal_entropy_sample = test_inference(args, test_model,
-            #                                                                             test_dataset)
-            # print("median_weights acc is ", avg_acc)
-        
+
 
         elif args.update_rule == 'Trimmed_mean': # ?有问题需要重新考虑
             std_keys = get_key_list(global_model.state_dict().keys())
@@ -599,6 +595,7 @@ if __name__ == '__main__':
             for k in local_delay_ew:
                 current_param.extend(k)
             sync_weights, len_sync = pre_Trimmed_mean(copy.deepcopy(global_model.state_dict()), std_keys, current_param)
+            print("Trimmed mean")
             global_weights = update_weights(global_model.state_dict(),sync_weights)
         elif args.update_rule == 'norm_bounding':
             avg_weights = norm_clipping(global_model, local_weights_delay[0],local_delay_ew,std_keys,  args.lr)
@@ -614,7 +611,7 @@ if __name__ == '__main__':
         elif args.update_rule == 'AFLGuard':
             current_param = []
             global_test_model = LocalUpdate(args=args, dataset=train_dataset, idxs=dict_common, idx=idx,
-                                              data_poison=False)
+                                              data_poison=False, delay = False)
 
             # for j in range(len(local_weights_delay[0])):
                 # current_param.append([local_weights_delay[0][j], local_grad_delay[0][j]])
@@ -623,7 +620,7 @@ if __name__ == '__main__':
             for k in local_delay_ew:
                 current_param.extend(k)
             # print("len current param", len(current_param))
-            global_weights = AFLGuard(current_param, global_model, global_test_model, epoch, std_keys, args.lr, lamda = 2.0 )
+            global_weights = AFLGuard(current_param, global_model, global_test_model, epoch, std_keys, args.lr, lamda = 3.0 )
         
         elif args.update_rule == 'Zenoplusplus':
             # current_grad = copy.deepcopy(local_grad_delay[0])
@@ -672,21 +669,23 @@ if __name__ == '__main__':
             benign_number = len(update_params) - m
             global_weights = Krum(update_params,std_keys,benign_number )
         else:
-            # def Fedavg(args, current_epoch, all_weights, global_model):
-            
-            
             # Fedavg
-            all_weights = copy.deepcopy(local_weights_delay[0])
-            # all_weights.extend(local_delay_ew)
-            for item in local_delay_ew:
-                all_weights.extend(item)
-            global_weights , avg_weights= Fedavg(args, epoch, all_weights, global_model)
-            # test_model.load_state_dict(avg_weights)
-            # avg_acc, mal_loss_sync, mal_entropy_sample, mal_grad = test_inference(args, test_model,
+            # all_weights = copy.deepcopy(local_weights_delay[0])
+            # # all_weights.extend(local_delay_ew)
+            # for item in local_delay_ew:
+            #     all_weights.extend(item)
+            # global_weights , avg_weights= Fedavg(args, epoch, all_weights, global_model)
+            # test_model.load_state_dict(global_weights)
+            # avg_acc, mal_loss_sync, mal_entropy_sample = test_inference(args, test_model,
             #                                                                             test_dataset)
-            # print("w_avg acc is ", mal_acc)
-            # mal_distance = model_dist_norm(w_avg,copy.deepcopy(global_model.state_dict()))
-            # print("w_avg distance is ", mal_distance)
+            # print("w_avg acc is ", avg_acc)
+            sync_weights = average_weights(local_weights_delay[0])
+            len_sync = len(local_weights_delay[0])
+            # Staleness-aware grouping
+            
+            test_model.load_state_dict(sync_weights)
+            global_weights = Sag(epoch, sync_weights, len_sync, local_delay_ew,
+                                                     copy.deepcopy(global_weights))
     
 
             

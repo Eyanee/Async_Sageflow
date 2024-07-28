@@ -477,7 +477,7 @@ def add_small_perturbation(original_model, args, pinned_accuracy, train_dataset,
     criterion = nn.NLLLoss().to(device)
     testloader = DataLoader(train_dataset, batch_size=64, shuffle=False)
     optimizer = torch.optim.Adam(test_model.parameters(), lr=args.lr, weight_decay=1e-4)
-    for round in range(5):
+    for round in range(10):
         for batch_idx, (images, labels) in enumerate(testloader):
             images, labels = images.to(device), labels.to(device)
 

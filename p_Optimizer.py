@@ -48,7 +48,7 @@ class FEDLOptimizer(Optimizer):
 
 class MyPOptimizer(Optimizer):
     # def __init__(self, params, lr=0.01, lamda=0.1, mu = 0.001): cifar
-    def __init__(self, params, lr=0.01, lamda=0.0, mu = 0.001):
+    def __init__(self, params, lr=0.01, lamda=0.0, mu = 0.000):
         #self.local_weight_updated = local_weight # w_i,K
         if lr < 0.0:
             raise ValueError("Invalid learning rate: {}".format(lr))
